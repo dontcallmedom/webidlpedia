@@ -20,7 +20,7 @@ fetch("results.json")
         const paramValue = params.split("=")[1] || null;
         switch(paramName) {
         case "idlname":
-            body.appendChild(interfaceDetails(data, paramValue));
+            body.appendChild(interfaceDetails(data, paramValue, used_by));
             break;
         case "enums":
             body.appendChild(enumNames(data, paramValue));
@@ -64,12 +64,12 @@ function fullList(data, used_by) {
     return section;
 }
 
-function interfaceDetails(data, name) {
+function interfaceDetails(data, name, used_by) {
     const section = document.createElement("section");
     const h2 = document.createElement("h2");
     h2.textContent = name;
     section.appendChild(h2);
-    
+
     data.filter(hasIdlDef)
         .filter(spec => spec.idl.idlNames[name])
         .forEach(spec => {
@@ -79,6 +79,25 @@ function interfaceDetails(data, name) {
             section.appendChild(link);
 
         });
+
+    const usedByHeading = document.createElement("h3");
+    usedByHeading.textContent = "Refering IDL interfaces/dictionaries";
+    const usedByList = document.createElement("ol");
+    (used_by[name] || []).forEach(n => {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.textContent = n;
+        link.href = "?idlname=" + n;
+        item.appendChild(link);
+        usedByList.appendChild(item);
+    });
+    if (usedByList.childNodes.length) {
+        section.appendChild(usedByHeading);
+        section.appendChild(usedByList);
+    }
+
+    const h3 = document.createElement("h3");
+    h3.textContent = "Refering specifications";
     const ol = document.createElement("ol");
     data.filter(s => s.idl && s.idl.externalDependencies && s.idl.externalDependencies.indexOf(name) !== -1)
         .forEach(spec => {
@@ -90,6 +109,7 @@ function interfaceDetails(data, name) {
             ol.appendChild(item);
         });
     if (ol.childNodes.length) {
+        section.appendChild(h3);
         section.appendChild(ol);
     }
     return section;
