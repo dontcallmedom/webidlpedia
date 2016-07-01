@@ -1290,6 +1290,8 @@
           "Location": [],
           "PopStateEvent": [
             "Event",
+            "Window",
+            "Worker",
             "PopStateEventInit"
           ],
           "PopStateEventInit": [
@@ -1297,6 +1299,8 @@
           ],
           "HashChangeEvent": [
             "Event",
+            "Window",
+            "Worker",
             "HashChangeEventInit"
           ],
           "HashChangeEventInit": [
@@ -1304,6 +1308,8 @@
           ],
           "PageTransitionEvent": [
             "Event",
+            "Window",
+            "Worker",
             "PageTransitionEventInit"
           ],
           "PageTransitionEventInit": [
@@ -1312,9 +1318,14 @@
           "BeforeUnloadEvent": [
             "Event"
           ],
-          "NavigatorOnLine": [],
+          "NavigatorOnLine": [
+            "Window",
+            "Worker"
+          ],
           "ErrorEvent": [
             "Event",
+            "Window",
+            "Worker",
             "ErrorEventInit"
           ],
           "ErrorEventInit": [
@@ -1322,6 +1333,8 @@
           ],
           "PromiseRejectionEvent": [
             "Event",
+            "Window",
+            "Worker",
             "PromiseRejectionEventInit"
           ],
           "PromiseRejectionEventInit": [
@@ -1338,13 +1351,19 @@
           "DocumentAndElementEventHandlers": [
             "EventHandler"
           ],
-          "WindowBase64": [],
+          "WindowBase64": [
+            "Window",
+            "Worker"
+          ],
           "WorkerGlobalScope": [
             "WindowBase64",
             "WindowTimers",
             "ImageBitmapFactories"
           ],
-          "WindowTimers": [],
+          "WindowTimers": [
+            "Window",
+            "Worker"
+          ],
           "WindowModal": [],
           "Navigator": [
             "NavigatorID",
@@ -1354,8 +1373,14 @@
             "NavigatorCookies",
             "NavigatorPlugins"
           ],
-          "NavigatorID": [],
-          "NavigatorLanguage": [],
+          "NavigatorID": [
+            "Window",
+            "Worker"
+          ],
+          "NavigatorLanguage": [
+            "Window",
+            "Worker"
+          ],
           "NavigatorContentUtils": [],
           "NavigatorCookies": [],
           "NavigatorPlugins": [
@@ -1374,8 +1399,13 @@
           "MimeType": [
             "Plugin"
           ],
-          "ImageBitmap": [],
+          "ImageBitmap": [
+            "Window",
+            "Worker"
+          ],
           "ImageBitmapFactories": [
+            "Window",
+            "Worker",
             "ImageBitmap",
             "ImageBitmapSource"
           ],
@@ -25270,6 +25300,7 @@
         "File",
         "MouseEventInit",
         "DOMHighResTimeStamp",
+        "Worker",
         "ImageData"
       ]
     }
@@ -29776,6 +29807,8 @@
         "_dependencies": {
           "MessageEvent": [
             "Event",
+            "Window",
+            "Worker",
             "MessageEventInit",
             "WindowProxy",
             "MessagePort"
@@ -29786,10 +29819,14 @@
             "MessagePort"
           ],
           "MessageChannel": [
+            "Window",
+            "Worker",
             "MessagePort"
           ],
           "MessagePort": [
             "EventTarget",
+            "Window",
+            "Worker",
             "Transferable",
             "EventHandler"
           ]
@@ -30415,6 +30452,8 @@
       "localNames": {},
       "externalDependencies": [
         "Event",
+        "Window",
+        "Worker",
         "WindowProxy",
         "EventInit",
         "EventTarget",
@@ -31723,6 +31762,8 @@
         "_dependencies": {
           "IDBRequest": [
             "EventTarget",
+            "Window",
+            "Worker",
             "IDBObjectStore",
             "IDBIndex",
             "IDBCursor",
@@ -31732,10 +31773,14 @@
           ],
           "IDBOpenDBRequest": [
             "IDBRequest",
+            "Window",
+            "Worker",
             "EventHandler"
           ],
           "IDBVersionChangeEvent": [
             "Event",
+            "Window",
+            "Worker",
             "IDBVersionChangeEventInit"
           ],
           "IDBVersionChangeEventInit": [
@@ -31751,10 +31796,14 @@
             "IDBEnvironment"
           ],
           "IDBFactory": [
+            "Window",
+            "Worker",
             "IDBOpenDBRequest"
           ],
           "IDBDatabase": [
             "EventTarget",
+            "Window",
+            "Worker",
             "DOMStringList",
             "IDBTransaction",
             "IDBTransactionMode",
@@ -31764,6 +31813,8 @@
           ],
           "IDBObjectStoreParameters": [],
           "IDBObjectStore": [
+            "Window",
+            "Worker",
             "DOMStringList",
             "IDBTransaction",
             "IDBRequest",
@@ -31773,24 +31824,34 @@
           ],
           "IDBIndexParameters": [],
           "IDBIndex": [
+            "Window",
+            "Worker",
             "IDBObjectStore",
             "IDBRequest",
             "IDBCursorDirection"
           ],
           "IDBKeyRange": [
+            "Window",
+            "Worker",
             "IDBKeyRange"
           ],
           "IDBCursor": [
+            "Window",
+            "Worker",
             "IDBObjectStore",
             "IDBIndex",
             "IDBCursorDirection",
             "IDBRequest"
           ],
           "IDBCursorWithValue": [
-            "IDBCursor"
+            "IDBCursor",
+            "Window",
+            "Worker"
           ],
           "IDBTransaction": [
             "EventTarget",
+            "Window",
+            "Worker",
             "DOMStringList",
             "IDBTransactionMode",
             "IDBDatabase",
@@ -34877,6 +34938,8 @@
       "localNames": {},
       "externalDependencies": [
         "EventTarget",
+        "Window",
+        "Worker",
         "EventHandler",
         "Event",
         "EventInit",
@@ -38051,12 +38114,14 @@
         "_dependencies": {
           "MediaStream": [
             "EventTarget",
+            "Window",
             "MediaStream",
             "MediaStreamTrack",
             "EventHandler"
           ],
           "MediaStreamTrack": [
             "EventTarget",
+            "Window",
             "EventHandler",
             "MediaStreamTrackState",
             "MediaStreamTrack",
@@ -38081,6 +38146,7 @@
           "MediaTrackSettings": [],
           "MediaStreamTrackEvent": [
             "Event",
+            "Window",
             "MediaStreamTrackEventInit",
             "MediaStreamTrack"
           ],
@@ -38090,6 +38156,7 @@
           ],
           "OverconstrainedErrorEvent": [
             "Event",
+            "Window",
             "OverconstrainedErrorEventInit",
             "OverconstrainedError"
           ],
@@ -38098,6 +38165,7 @@
             "OverconstrainedError"
           ],
           "NavigatorUserMedia": [
+            "Window",
             "MediaDevices",
             "MediaStreamConstraints",
             "NavigatorUserMediaSuccessCallback",
@@ -38108,6 +38176,7 @@
           ],
           "MediaDevices": [
             "EventTarget",
+            "Window",
             "EventHandler",
             "MediaDeviceInfo",
             "MediaTrackSupportedConstraints",
@@ -38115,6 +38184,7 @@
             "MediaStreamConstraints"
           ],
           "MediaDeviceInfo": [
+            "Window",
             "MediaDeviceKind"
           ],
           "InputDeviceInfo": [
@@ -41208,6 +41278,7 @@
       },
       "externalDependencies": [
         "EventTarget",
+        "Window",
         "EventHandler",
         "Event",
         "EventInit",
@@ -43117,14 +43188,20 @@
             "GlobalCrypto"
           ],
           "Crypto": [
+            "Window",
+            "Worker",
             "SubtleCrypto"
           ],
           "Algorithm": [],
           "KeyAlgorithm": [],
           "CryptoKey": [
+            "Window",
+            "Worker",
             "KeyType"
           ],
           "SubtleCrypto": [
+            "Window",
+            "Worker",
             "AlgorithmIdentifier",
             "CryptoKey",
             "KeyUsage",
@@ -45708,7 +45785,10 @@
       },
       "idlExtendedNames": {},
       "localNames": {},
-      "externalDependencies": []
+      "externalDependencies": [
+        "Window",
+        "Worker"
+      ]
     }
   },
   {
@@ -47014,6 +47094,7 @@
           ],
           "ErrorEvent": [
             "Event",
+            "Window",
             "ErrorEventInit"
           ],
           "ErrorEventInit": [
@@ -47684,6 +47765,7 @@
         "EventHandler",
         "Event",
         "Blob",
+        "Window",
         "EventInit"
       ]
     }
@@ -60416,6 +60498,8 @@
         "_dependencies": {
           "PerformanceResourceTiming": [
             "PerformanceEntry",
+            "Window",
+            "Worker",
             "DOMHighResTimeStamp"
           ],
           "Performance": [
@@ -60831,6 +60915,8 @@
       "localNames": {},
       "externalDependencies": [
         "PerformanceEntry",
+        "Window",
+        "Worker",
         "DOMHighResTimeStamp",
         "Performance",
         "EventHandler"
@@ -60927,8 +61013,12 @@
             "DOMHighResTimeStamp",
             "NavigationType"
           ],
-          "PerformanceTiming": [],
-          "PerformanceNavigation": [],
+          "PerformanceTiming": [
+            "Window"
+          ],
+          "PerformanceNavigation": [
+            "Window"
+          ],
           "Performance": [
             "PerformanceTiming",
             "PerformanceNavigation"
@@ -61690,6 +61780,7 @@
       "externalDependencies": [
         "PerformanceResourceTiming",
         "DOMHighResTimeStamp",
+        "Window",
         "Performance"
       ]
     }
@@ -62562,6 +62653,8 @@
       "idlNames": {
         "_dependencies": {
           "PerformanceEntry": [
+            "Window",
+            "Worker",
             "DOMHighResTimeStamp"
           ],
           "PerformanceEntryFilterOptions": [],
@@ -62571,10 +62664,14 @@
           ],
           "PerformanceObserverInit": [],
           "PerformanceObserverEntryList": [
+            "Window",
+            "Worker",
             "PerformanceEntryList",
             "PerformanceEntryFilterOptions"
           ],
           "PerformanceObserver": [
+            "Window",
+            "Worker",
             "PerformanceObserverCallback",
             "PerformanceObserverInit"
           ]
@@ -63199,6 +63296,8 @@
         }
       },
       "externalDependencies": [
+        "Window",
+        "Worker",
         "DOMHighResTimeStamp",
         "Performance"
       ]
@@ -64087,13 +64186,15 @@
         "_dependencies": {
           "Performance": [
             "EventTarget",
-            "DOMHighResTimeStamp",
             "Window",
             "Worker",
+            "DOMHighResTimeStamp",
             "SharedWorker",
             "ServiceWorker"
           ],
           "GlobalPerformance": [
+            "Window",
+            "Worker",
             "Performance"
           ],
           "Window": [
@@ -64794,6 +64895,7 @@
             "PushEncryptionKeyName"
           ],
           "PushMessageData": [
+            "ServiceWorker",
             "Blob",
             "JSON"
           ],
@@ -64802,6 +64904,7 @@
           ],
           "PushEvent": [
             "ExtendableEvent",
+            "ServiceWorker",
             "PushEventInit",
             "PushMessageData"
           ],
@@ -65475,6 +65578,7 @@
       "localNames": {},
       "externalDependencies": [
         "ServiceWorkerRegistration",
+        "ServiceWorker",
         "Blob",
         "ServiceWorkerGlobalScope",
         "EventHandler",
@@ -71446,6 +71550,7 @@
         "_dependencies": {
           "WorkerGlobalScope": [
             "EventTarget",
+            "Worker",
             "WorkerGlobalScope",
             "WorkerLocation",
             "WorkerNavigator",
@@ -71454,18 +71559,24 @@
           ],
           "DedicatedWorkerGlobalScope": [
             "WorkerGlobalScope",
+            "DedicatedWorker",
             "EventHandler"
           ],
           "SharedWorkerGlobalScope": [
             "WorkerGlobalScope",
+            "SharedWorker",
             "ApplicationCache",
             "EventHandler"
           ],
           "AbstractWorker": [
+            "Window",
+            "Worker",
             "EventHandler"
           ],
           "Worker": [
             "EventTarget",
+            "Window",
+            "Worker",
             "WorkerOptions",
             "EventHandler",
             "AbstractWorker"
@@ -71476,18 +71587,26 @@
           ],
           "SharedWorker": [
             "EventTarget",
+            "Window",
+            "Worker",
             "WorkerOptions",
             "MessagePort",
             "AbstractWorker"
           ],
-          "NavigatorConcurrentHardware": [],
+          "NavigatorConcurrentHardware": [
+            "Window",
+            "Worker"
+          ],
           "WorkerNavigator": [
+            "Worker",
             "NavigatorID",
             "NavigatorLanguage",
             "NavigatorOnLine",
             "NavigatorConcurrentHardware"
           ],
-          "WorkerLocation": []
+          "WorkerLocation": [
+            "Worker"
+          ]
         },
         "WorkerGlobalScope": {
           "type": "interface",
@@ -72500,7 +72619,9 @@
         "EventTarget",
         "OnErrorEventHandler",
         "EventHandler",
+        "DedicatedWorker",
         "ApplicationCache",
+        "Window",
         "RequestCredentials",
         "MessagePort"
       ]
@@ -72863,12 +72984,16 @@
         "_dependencies": {
           "ServiceWorker": [
             "EventTarget",
+            "Window",
+            "Worker",
             "ServiceWorkerState",
             "EventHandler",
             "AbstractWorker"
           ],
           "ServiceWorkerRegistration": [
             "EventTarget",
+            "Window",
+            "Worker",
             "ServiceWorker",
             "EventHandler"
           ],
@@ -72880,6 +73005,8 @@
           ],
           "ServiceWorkerContainer": [
             "EventTarget",
+            "Window",
+            "Worker",
             "ServiceWorker",
             "ServiceWorkerRegistration",
             "RegistrationOptions",
@@ -72890,6 +73017,8 @@
           ],
           "ServiceWorkerMessageEvent": [
             "Event",
+            "Window",
+            "Worker",
             "ServiceWorkerMessageEventInit",
             "ServiceWorker",
             "MessagePort"
@@ -72901,19 +73030,23 @@
           ],
           "ServiceWorkerGlobalScope": [
             "WorkerGlobalScope",
+            "ServiceWorker",
             "Clients",
             "ServiceWorkerRegistration",
             "EventHandler"
           ],
           "Client": [
+            "ServiceWorker",
             "FrameType"
           ],
           "WindowClient": [
             "Client",
+            "ServiceWorker",
             "VisibilityState",
             "WindowClient"
           ],
           "Clients": [
+            "ServiceWorker",
             "Client",
             "ClientQueryOptions",
             "WindowClient"
@@ -72923,6 +73056,7 @@
           ],
           "ExtendableEvent": [
             "Event",
+            "ServiceWorker",
             "ExtendableEventInit"
           ],
           "ExtendableEventInit": [
@@ -72930,12 +73064,14 @@
           ],
           "InstallEvent": [
             "ExtendableEvent",
+            "ServiceWorker",
             "ExtendableEventInit",
             "ForeignFetchOptions"
           ],
           "ForeignFetchOptions": [],
           "FetchEvent": [
             "ExtendableEvent",
+            "ServiceWorker",
             "FetchEventInit",
             "Request",
             "Response"
@@ -72946,6 +73082,7 @@
           ],
           "ForeignFetchEvent": [
             "ExtendableEvent",
+            "ServiceWorker",
             "ForeignFetchEventInit",
             "Request",
             "ForeignFetchResponse"
@@ -72959,9 +73096,9 @@
           ],
           "ExtendableMessageEvent": [
             "ExtendableEvent",
+            "ServiceWorker",
             "ExtendableMessageEventInit",
             "Client",
-            "ServiceWorker",
             "MessagePort"
           ],
           "ExtendableMessageEventInit": [
@@ -72980,6 +73117,8 @@
             "CacheStorage"
           ],
           "Cache": [
+            "Window",
+            "Worker",
             "RequestInfo",
             "CacheQueryOptions",
             "Response",
@@ -72992,6 +73131,8 @@
             "CacheQueryOptions"
           ],
           "CacheStorage": [
+            "Window",
+            "Worker",
             "RequestInfo",
             "CacheQueryOptions",
             "Cache"
@@ -76646,6 +76787,8 @@
       "localNames": {},
       "externalDependencies": [
         "EventTarget",
+        "Window",
+        "Worker",
         "EventHandler",
         "Navigator",
         "WorkerNavigator",
@@ -76658,7 +76801,6 @@
         "Request",
         "Response",
         "HTMLLinkElement",
-        "Window",
         "RequestInfo"
       ]
     }
@@ -76810,6 +76952,8 @@
       "idlNames": {
         "_dependencies": {
           "Blob": [
+            "Window",
+            "Worker",
             "BlobPart",
             "BlobPropertyBag",
             "Blob"
@@ -76817,6 +76961,8 @@
           "BlobPropertyBag": [],
           "File": [
             "Blob",
+            "Window",
+            "Worker",
             "BlobPart",
             "FilePropertyBag"
           ],
@@ -76824,15 +76970,20 @@
             "BlobPropertyBag"
           ],
           "FileList": [
+            "Window",
+            "Worker",
             "File"
           ],
           "FileReader": [
             "EventTarget",
+            "Window",
+            "Worker",
             "Blob",
             "DOMError",
             "EventHandler"
           ],
           "FileReaderSync": [
+            "Worker",
             "Blob"
           ],
           "URL": [
@@ -77982,6 +78133,8 @@
       },
       "localNames": {},
       "externalDependencies": [
+        "Window",
+        "Worker",
         "EventTarget",
         "DOMError",
         "EventHandler",
@@ -78110,9 +78263,13 @@
       "idlNames": {
         "_dependencies": {
           "URL": [
+            "Window",
+            "Worker",
             "URLSearchParams"
           ],
           "URLSearchParams": [
+            "Window",
+            "Worker",
             "URLSearchParams"
           ]
         },
@@ -78794,7 +78951,10 @@
       },
       "idlExtendedNames": {},
       "localNames": {},
-      "externalDependencies": []
+      "externalDependencies": [
+        "Window",
+        "Worker"
+      ]
     }
   },
   {
@@ -78901,13 +79061,22 @@
         "_dependencies": {
           "XMLHttpRequestEventTarget": [
             "EventTarget",
+            "Window",
+            "DedicatedWorker",
+            "SharedWorker",
             "EventHandler"
           ],
           "XMLHttpRequestUpload": [
-            "XMLHttpRequestEventTarget"
+            "XMLHttpRequestEventTarget",
+            "Window",
+            "DedicatedWorker",
+            "SharedWorker"
           ],
           "XMLHttpRequest": [
             "XMLHttpRequestEventTarget",
+            "Window",
+            "DedicatedWorker",
+            "SharedWorker",
             "EventHandler",
             "XMLHttpRequestUpload",
             "Document",
@@ -78915,12 +79084,17 @@
             "XMLHttpRequestResponseType"
           ],
           "FormData": [
+            "Window",
+            "Worker",
             "HTMLFormElement",
             "Blob",
             "FormDataEntryValue"
           ],
           "ProgressEvent": [
             "Event",
+            "Window",
+            "DedicatedWorker",
+            "SharedWorker",
             "ProgressEventInit"
           ],
           "ProgressEventInit": [
@@ -80410,10 +80584,14 @@
       "localNames": {},
       "externalDependencies": [
         "EventTarget",
+        "Window",
+        "DedicatedWorker",
+        "SharedWorker",
         "EventHandler",
         "Document",
         "BodyInit",
         "File",
+        "Worker",
         "HTMLFormElement",
         "Blob",
         "Event",
@@ -85648,6 +85826,8 @@
       "idlNames": {
         "_dependencies": {
           "DOMPointReadOnly": [
+            "Window",
+            "Worker",
             "DOMPointReadOnly",
             "DOMPointInit",
             "DOMPoint",
@@ -85655,21 +85835,29 @@
           ],
           "DOMPoint": [
             "DOMPointReadOnly",
+            "Window",
+            "Worker",
             "DOMPoint",
             "DOMPointInit"
           ],
           "DOMPointInit": [],
           "DOMRectReadOnly": [
+            "Window",
+            "Worker",
             "DOMRectReadOnly",
             "DOMRectInit"
           ],
           "DOMRect": [
             "DOMRectReadOnly",
+            "Window",
+            "Worker",
             "DOMRect",
             "DOMRectInit"
           ],
           "DOMRectInit": [],
           "DOMQuad": [
+            "Window",
+            "Worker",
             "DOMPointInit",
             "DOMQuad",
             "DOMRectInit",
@@ -85681,6 +85869,8 @@
             "DOMPointInit"
           ],
           "DOMMatrixReadOnly": [
+            "Window",
+            "Worker",
             "DOMMatrixReadOnly",
             "DOMMatrixInit",
             "DOMMatrix",
@@ -85689,6 +85879,8 @@
           ],
           "DOMMatrix": [
             "DOMMatrixReadOnly",
+            "Window",
+            "Worker",
             "DOMMatrix",
             "DOMMatrixInit"
           ],
@@ -90214,7 +90406,10 @@
       },
       "idlExtendedNames": {},
       "localNames": {},
-      "externalDependencies": []
+      "externalDependencies": [
+        "Window",
+        "Worker"
+      ]
     }
   },
   {
@@ -93711,18 +93906,24 @@
       "idlNames": {
         "_dependencies": {
           "Event": [
+            "Window",
+            "Worker",
             "EventInit",
             "EventTarget"
           ],
           "EventInit": [],
           "CustomEvent": [
             "Event",
+            "Window",
+            "Worker",
             "CustomEventInit"
           ],
           "CustomEventInit": [
             "EventInit"
           ],
           "EventTarget": [
+            "Window",
+            "Worker",
             "EventListener",
             "AddEventListenerOptions",
             "EventListenerOptions",
@@ -93736,6 +93937,7 @@
             "EventListenerOptions"
           ],
           "NonElementParentNode": [
+            "Window",
             "Element"
           ],
           "Document": [
@@ -93743,6 +93945,7 @@
             "DocumentOrShadowRoot",
             "ParentNode",
             "Node",
+            "Window",
             "DOMImplementation",
             "DocumentType",
             "Element",
@@ -93762,16 +93965,21 @@
           "DocumentFragment": [
             "NonElementParentNode",
             "ParentNode",
-            "Node"
+            "Node",
+            "Window"
           ],
-          "DocumentOrShadowRoot": [],
+          "DocumentOrShadowRoot": [
+            "Window"
+          ],
           "ShadowRoot": [
             "DocumentOrShadowRoot",
             "DocumentFragment",
+            "Window",
             "ShadowRootMode",
             "Element"
           ],
           "ParentNode": [
+            "Window",
             "HTMLCollection",
             "Element",
             "Node",
@@ -93783,6 +93991,7 @@
             "ChildNode",
             "Slotable",
             "Node",
+            "Window",
             "DOMTokenList",
             "NamedNodeMap",
             "Attr",
@@ -93792,32 +94001,40 @@
             "HTMLCollection"
           ],
           "NonDocumentTypeChildNode": [
+            "Window",
             "Element"
           ],
           "CharacterData": [
             "NonDocumentTypeChildNode",
             "ChildNode",
-            "Node"
+            "Node",
+            "Window"
           ],
           "ChildNode": [
+            "Window",
             "Node"
           ],
           "DocumentType": [
             "ChildNode",
-            "Node"
+            "Node",
+            "Window"
           ],
           "Slotable": [
+            "Window",
             "HTMLSlotElement"
           ],
           "Text": [
             "Slotable",
             "CharacterData",
+            "Window",
             "Text"
           ],
           "NodeList": [
+            "Window",
             "Node"
           ],
           "HTMLCollection": [
+            "Window",
             "Element"
           ],
           "MutationObserver": [
@@ -93828,11 +94045,13 @@
           ],
           "MutationObserverInit": [],
           "MutationRecord": [
+            "Window",
             "Node",
             "NodeList"
           ],
           "Node": [
             "EventTarget",
+            "Window",
             "Document",
             "Node",
             "GetRootNodeOptions",
@@ -93841,10 +94060,12 @@
           ],
           "GetRootNodeOptions": [],
           "XMLDocument": [
-            "Document"
+            "Document",
+            "Window"
           ],
           "ElementCreationOptions": [],
           "DOMImplementation": [
+            "Window",
             "DocumentType",
             "XMLDocument",
             "Document"
@@ -93853,31 +94074,39 @@
             "ShadowRootMode"
           ],
           "NamedNodeMap": [
+            "Window",
             "Attr"
           ],
           "Attr": [
+            "Window",
             "Element"
           ],
           "ProcessingInstruction": [
-            "CharacterData"
+            "CharacterData",
+            "Window"
           ],
           "Comment": [
-            "CharacterData"
+            "CharacterData",
+            "Window"
           ],
           "Range": [
+            "Window",
             "Node",
             "Range",
             "DocumentFragment"
           ],
           "NodeIterator": [
+            "Window",
             "Node",
             "NodeFilter"
           ],
           "TreeWalker": [
+            "Window",
             "Node",
             "NodeFilter"
           ],
           "NodeFilter": [
+            "Window",
             "Node"
           ],
           "DOMTokenList": []
@@ -103070,6 +103299,8 @@
         }
       },
       "externalDependencies": [
+        "Window",
+        "Worker",
         "HTMLSlotElement"
       ]
     }
@@ -103765,10 +103996,13 @@
           "TextDecoderOptions": [],
           "TextDecodeOptions": [],
           "TextDecoder": [
+            "Window",
             "TextDecoderOptions",
             "TextDecodeOptions"
           ],
-          "TextEncoder": []
+          "TextEncoder": [
+            "Window"
+          ]
         },
         "TextDecoderOptions": {
           "type": "dictionary",
@@ -104093,7 +104327,9 @@
       },
       "idlExtendedNames": {},
       "localNames": {},
-      "externalDependencies": []
+      "externalDependencies": [
+        "Window"
+      ]
     }
   },
   {
@@ -104229,14 +104465,20 @@
       "idlNames": {
         "_dependencies": {
           "Headers": [
+            "Window",
+            "Worker",
             "HeadersInit"
           ],
           "Body": [
+            "Window",
+            "Worker",
             "Blob",
             "FormData",
             "JSON"
           ],
           "Request": [
+            "Window",
+            "Worker",
             "RequestInfo",
             "RequestInit",
             "Headers",
@@ -104260,6 +104502,8 @@
             "RequestRedirect"
           ],
           "Response": [
+            "Window",
+            "Worker",
             "ResponseBodyInit",
             "ResponseInit",
             "Response",
@@ -105949,6 +106193,8 @@
       },
       "localNames": {},
       "externalDependencies": [
+        "Window",
+        "Worker",
         "Blob",
         "FormData",
         "URLSearchParams",
@@ -121987,6 +122233,8 @@
       "idlNames": {
         "_dependencies": {
           "NavigatorStorage": [
+            "Window",
+            "Worker",
             "StorageManager"
           ],
           "Navigator": [
@@ -121996,6 +122244,8 @@
             "NavigatorStorage"
           ],
           "StorageManager": [
+            "Window",
+            "Worker",
             "StorageEstimate"
           ],
           "StorageEstimate": []
@@ -122204,7 +122454,10 @@
       },
       "idlExtendedNames": {},
       "localNames": {},
-      "externalDependencies": []
+      "externalDependencies": [
+        "Window",
+        "Worker"
+      ]
     }
   },
   {
