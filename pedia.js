@@ -1,6 +1,19 @@
 fetch("results.json")
     .then(r => r.json())
     .then(data => {
+        var used_by = {};
+        data.forEach(s => {
+            if (s.idl && s.idl.idlNames) {
+                Object.keys(s.idl.idlNames._dependencies).forEach( n => {
+                    s.idl.idlNames._dependencies[n].forEach(d => {
+                        if (!used_by[d]) {
+                            used_by[d] = [];
+                        }
+                        used_by[d].push(n);
+                    });
+                });
+            }
+        });
         const body = document.querySelector("body");
         const params = location.search.slice(1);
         const paramName = params.split("=")[0] || null;
@@ -13,11 +26,11 @@ fetch("results.json")
             body.appendChild(enumNames(data, paramValue));
             break;
         default:
-            body.appendChild(fullList(data));
+            body.appendChild(fullList(data, used_by));
         }
     });
 
-function fullList(data) {
+function fullList(data, used_by) {
     const section = document.createElement("section");
     [{type:"interface", title: "Interfaces"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}].forEach(
         type => {
@@ -39,6 +52,11 @@ function fullList(data) {
                 link.href= "?idlname=" + name;
                 link.textContent = name;
                 item.appendChild(link);
+                const annotation = document.createElement("span");
+                const usage = used_by[name] ? used_by[name].length : 0;
+                annotation.title = "used by " + usage + " other IDL items";
+                annotation.textContent = " (" + usage + ")";
+                item.appendChild(annotation);
                 ol.appendChild(item);
             });
             section.appendChild(ol);
