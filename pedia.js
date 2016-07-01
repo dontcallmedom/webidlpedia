@@ -37,6 +37,12 @@ function fullList(data, used_by, sort) {
     const sortFn = sort === "popularity" ? ((a,b) => used_by[b].length - used_by[a].length) : defaultSort;
 
     const section = document.createElement("section");
+    const p = document.createElement("p");
+    var linkToGraph = document.createElement("a");
+    linkToGraph.href = "graph-cyto.html";
+    linkToGraph.textContent = "Graph of IDL inter-dependencies";
+    p.appendChild(linkToGraph);
+    section.appendChild(p);
     section.appendChild(sorterLink("full", sort));
 
     [{type:"interface", title: "Interfaces"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}].forEach(
