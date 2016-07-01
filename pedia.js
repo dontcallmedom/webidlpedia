@@ -83,15 +83,40 @@ function interfaceDetails(data, name, used_by) {
     h2.textContent = name;
     section.appendChild(h2);
 
+    const defHeading = document.createElement("h3");
+    defHeading.textContent = "Definition";
+    section.appendChild(defHeading);
+    let type;
     data.filter(hasIdlDef)
         .filter(spec => spec.idl.idlNames[name])
         .forEach(spec => {
+            const mainDef = document.createElement("p");
             const link = document.createElement("a");
-            link.textContent = spec.title + " defines " + name;
+            link.textContent = spec.title;
             link.href= spec.url;
-            section.appendChild(link);
-
+            type = spec.idl.idlNames[name].type;
+            mainDef.appendChild(link);
+            mainDef.appendChild(document.createTextNode(" defines " + name));
+            section.appendChild(mainDef);
         });
+
+    const partialDef = document.createElement("p");
+    partialDef.textContent = "This " + type + " is extended in the following specifications:";
+    const partialDefList = document.createElement("ol");
+    data.filter(hasIdlDef)
+        .filter(spec => spec.idl.idlExtendedNames[name])
+        .forEach(spec => {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = spec.url;
+            link.textContent = spec.title;
+            item.appendChild(link);
+            partialDefList.appendChild(item);
+        });
+    if (partialDefList.childNodes.length) {
+        section.appendChild(partialDef);
+        section.appendChild(partialDefList);
+    }
 
     const usedByHeading = document.createElement("h3");
     usedByHeading.textContent = "Refering IDL interfaces/dictionaries";
