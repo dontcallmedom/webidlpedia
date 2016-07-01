@@ -4,6 +4,7 @@ fetch("results.json")
         var used_by = {};
         data.forEach(s => {
             if (s.idl && s.idl.idlNames) {
+                Object.keys(s.idl.idlNames).forEach(n => used_by[n] = []);
                 Object.keys(s.idl.idlNames._dependencies).forEach( n => {
                     s.idl.idlNames._dependencies[n].forEach(d => {
                         if (!used_by[d]) {
@@ -25,13 +26,19 @@ fetch("results.json")
         case "enums":
             body.appendChild(enumNames(data, paramValue));
             break;
+        case "full":
         default:
-            body.appendChild(fullList(data, used_by));
+            body.appendChild(fullList(data, used_by, paramValue));
         }
     });
 
-function fullList(data, used_by) {
+function fullList(data, used_by, sort) {
+
+    const sortFn = sort === "popularity" ? ((a,b) => used_by[b].length - used_by[a].length) : defaultSort;
+
     const section = document.createElement("section");
+    section.appendChild(sorterLink("full", sort));
+
     [{type:"interface", title: "Interfaces"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}].forEach(
         type => {
             const h2 = document.createElement("h2");
@@ -45,7 +52,7 @@ function fullList(data, used_by) {
                        .filter(n => n!=="_dependencies")
                        .filter(n => spec.idl.idlNames[n].type === type.type)
                       ).reduce((a,b) => a.concat(b), [])
-                  .sort();
+                  .sort(sortFn);
             names.forEach(name => {
                 const item = document.createElement("li");
                 const link = document.createElement("a");
@@ -123,10 +130,7 @@ function enumNames(data, sort) {
 
     const sortFn = sort === "popularity" ? ((e1, e2) => e2.specs.length - e1.specs.length) : ((e1,e2) => -1);
 
-    const sorter = document.createElement("a");
-    sorter.href = "?enums=" + (sort === "popularity" ? "" : "popularity");
-    sorter.textContent = "Sort by " + (sort === "popularity" ? "name" : "popularity");
-    section.appendChild(sorter);
+    section.appendChild(sorterLink("enums", sort));
 
     const ol = document.createElement("ol");
     data.filter(hasIdlDef)
@@ -140,7 +144,7 @@ function enumNames(data, sort) {
                     .reduce((a,b) => a.concat(b), [])))
           .reduce((a,b) => a.concat(b), [])
           .reduce((a,b) => a.concat(b), [])
-          .sort((a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0));
+          .sort(defaultSort);
     const uniqueNames = enumValues.map(e => e.value);
     const uniqueEnumValues = enumValues.filter((e, i) => i === uniqueNames.indexOf(e.value))
           .map(e => {
@@ -172,4 +176,12 @@ function enumNames(data, sort) {
 
 }
 
+function sorterLink(paramName, sort) {
+    const sorter = document.createElement("a");
+    sorter.href = "?" + paramName + "=" + (sort === "popularity" ? "" : "popularity");
+    sorter.textContent = "Sort by " + (sort === "popularity" ? "name" : "popularity");
+    return sorter;
+}
+
 var hasIdlDef = s => s.idl && s.idl.idlNames;
+var defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
