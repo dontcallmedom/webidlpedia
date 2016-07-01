@@ -115,7 +115,7 @@ function enumNames(data, sort) {
     console.log(uniqueNames);
     uniqueEnumValues.forEach(e => {
         const item = document.createElement("li");
-        item.appendChild(document.createTextNode(e.value));
+        item.appendChild(document.createTextNode('"'+ e.value + '"'));
         const specList = document.createElement("ol");
         e.specs.forEach(s => {
             const spec = document.createElement("li");
