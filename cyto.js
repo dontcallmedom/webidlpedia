@@ -56,7 +56,7 @@ fetch('results.json').then(r => r.json()).then(data => {
             {
                 selector: 'edge',
                 style: {
-                    'width': 5,
+                    'width': 2,
                     'line-color': '#ccc',
                     'target-arrow-color': '#ccc',
                     'target-arrow-shape': 'triangle'
