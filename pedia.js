@@ -4,7 +4,7 @@ fetch("results.json")
         var used_by = {};
         data.forEach(s => {
             if (s.idl && s.idl.idlNames) {
-                Object.keys(s.idl.idlNames).forEach(n => used_by[n] = []);
+                Object.keys(s.idl.idlNames).forEach(n => { if (!used_by[n]) used_by[n] = [];});
                 Object.keys(s.idl.idlNames._dependencies).forEach( n => {
                     s.idl.idlNames._dependencies[n].forEach(d => {
                         if (!used_by[d]) {
