@@ -852,17 +852,22 @@
       "idlNames": {
         "_dependencies": {
           "HTMLAllCollection": [
-            "Element"
+            "Element",
+            "HTMLCollection"
           ],
           "HTMLFormControlsCollection": [
-            "HTMLCollection"
+            "HTMLCollection",
+            "RadioNodeList",
+            "Element"
           ],
           "RadioNodeList": [
             "NodeList"
           ],
           "HTMLOptionsCollection": [
             "HTMLCollection",
-            "HTMLOptionElement"
+            "HTMLOptionElement",
+            "HTMLOptGroupElement",
+            "HTMLElement"
           ],
           "DOMStringMap": [],
           "DOMElementMap": [
@@ -1064,10 +1069,17 @@
           ],
           "TimeRanges": [],
           "TrackEvent": [
-            "Event"
+            "Event",
+            "TrackEventInit",
+            "VideoTrack",
+            "AudioTrack",
+            "TextTrack"
           ],
           "TrackEventInit": [
-            "EventInit"
+            "EventInit",
+            "VideoTrack",
+            "AudioTrack",
+            "TextTrack"
           ],
           "HTMLMapElement": [
             "HTMLElement",
@@ -1113,7 +1125,8 @@
           "HTMLFormElement": [
             "HTMLElement",
             "HTMLFormControlsCollection",
-            "Element"
+            "Element",
+            "RadioNodeList"
           ],
           "HTMLLabelElement": [
             "HTMLElement",
@@ -1140,6 +1153,7 @@
             "HTMLOptionsCollection",
             "Element",
             "HTMLOptionElement",
+            "HTMLOptGroupElement",
             "HTMLCollection",
             "ValidityState",
             "NodeList"
@@ -1205,6 +1219,7 @@
           ],
           "RelatedEvent": [
             "Event",
+            "RelatedEventInit",
             "EventTarget"
           ],
           "RelatedEventInit": [
@@ -1212,7 +1227,9 @@
             "EventTarget"
           ],
           "HTMLDialogElement": [
-            "HTMLElement"
+            "HTMLElement",
+            "MouseEvent",
+            "Element"
           ],
           "HTMLScriptElement": [
             "HTMLElement"
@@ -1242,6 +1259,7 @@
           ],
           "DragEvent": [
             "MouseEvent",
+            "DragEventInit",
             "DataTransfer"
           ],
           "DragEventInit": [
@@ -1271,19 +1289,22 @@
           ],
           "Location": [],
           "PopStateEvent": [
-            "Event"
+            "Event",
+            "PopStateEventInit"
           ],
           "PopStateEventInit": [
             "EventInit"
           ],
           "HashChangeEvent": [
-            "Event"
+            "Event",
+            "HashChangeEventInit"
           ],
           "HashChangeEventInit": [
             "EventInit"
           ],
           "PageTransitionEvent": [
-            "Event"
+            "Event",
+            "PageTransitionEventInit"
           ],
           "PageTransitionEventInit": [
             "EventInit"
@@ -1293,13 +1314,15 @@
           ],
           "NavigatorOnLine": [],
           "ErrorEvent": [
-            "Event"
+            "Event",
+            "ErrorEventInit"
           ],
           "ErrorEventInit": [
             "EventInit"
           ],
           "PromiseRejectionEvent": [
-            "Event"
+            "Event",
+            "PromiseRejectionEventInit"
           ],
           "PromiseRejectionEventInit": [
             "EventInit"
@@ -1353,6 +1376,7 @@
           ],
           "ImageBitmap": [],
           "ImageBitmapFactories": [
+            "ImageBitmap",
             "ImageBitmapSource"
           ],
           "HTMLAppletElement": [
@@ -28710,6 +28734,7 @@
           ],
           "StorageEvent": [
             "Event",
+            "StorageEventInit",
             "Storage"
           ],
           "StorageEventInit": [
@@ -29252,6 +29277,7 @@
         "_dependencies": {
           "Notification": [
             "EventTarget",
+            "NotificationOptions",
             "NotificationPermission",
             "NotificationPermissionCallback",
             "EventHandler",
@@ -29749,16 +29775,22 @@
       "idlNames": {
         "_dependencies": {
           "MessageEvent": [
-            "Event"
+            "Event",
+            "MessageEventInit",
+            "WindowProxy",
+            "MessagePort"
           ],
           "MessageEventInit": [
-            "EventInit"
+            "EventInit",
+            "WindowProxy",
+            "MessagePort"
           ],
           "MessageChannel": [
             "MessagePort"
           ],
           "MessagePort": [
             "EventTarget",
+            "Transferable",
             "EventHandler"
           ]
         },
@@ -30447,7 +30479,8 @@
       "idlNames": {
         "_dependencies": {
           "PointerEvent": [
-            "MouseEvent"
+            "MouseEvent",
+            "PointerEventInit"
           ],
           "PointerEventInit": [
             "MouseEventInit"
@@ -31365,6 +31398,7 @@
         "_dependencies": {
           "EventSource": [
             "EventTarget",
+            "EventSourceInit",
             "EventHandler"
           ],
           "EventSourceInit": []
@@ -31689,6 +31723,9 @@
         "_dependencies": {
           "IDBRequest": [
             "EventTarget",
+            "IDBObjectStore",
+            "IDBIndex",
+            "IDBCursor",
             "IDBTransaction",
             "IDBRequestReadyState",
             "EventHandler"
@@ -31698,7 +31735,8 @@
             "EventHandler"
           ],
           "IDBVersionChangeEvent": [
-            "Event"
+            "Event",
+            "IDBVersionChangeEventInit"
           ],
           "IDBVersionChangeEventInit": [
             "EventInit"
@@ -31743,6 +31781,8 @@
             "IDBKeyRange"
           ],
           "IDBCursor": [
+            "IDBObjectStore",
+            "IDBIndex",
             "IDBCursorDirection",
             "IDBRequest"
           ],
@@ -34983,7 +35023,8 @@
       "idlNames": {
         "_dependencies": {
           "ProgressEvent": [
-            "Event"
+            "Event",
+            "ProgressEventInit"
           ],
           "ProgressEventInit": [
             "EventInit"
@@ -36152,6 +36193,7 @@
       "idlNames": {
         "_dependencies": {
           "Touch": [
+            "TouchInit",
             "EventTarget"
           ],
           "TouchInit": [
@@ -36162,10 +36204,12 @@
           ],
           "TouchEvent": [
             "UIEvent",
+            "TouchEventInit",
             "TouchList"
           ],
           "TouchEventInit": [
-            "EventModifierInit"
+            "EventModifierInit",
+            "Touch"
           ],
           "GlobalEventHandlers": [
             "EventHandler"
@@ -37711,7 +37755,9 @@
       },
       "idlNames": {
         "_dependencies": {
-          "Navigator": [],
+          "Navigator": [
+            "BatteryManager"
+          ],
           "BatteryManager": [
             "EventTarget",
             "EventHandler"
@@ -38005,8 +38051,8 @@
         "_dependencies": {
           "MediaStream": [
             "EventTarget",
-            "MediaStreamTrack",
             "MediaStream",
+            "MediaStreamTrack",
             "EventHandler"
           ],
           "MediaStreamTrack": [
@@ -38019,7 +38065,10 @@
             "MediaTrackSettings"
           ],
           "MediaTrackSupportedConstraints": [],
-          "MediaTrackCapabilities": [],
+          "MediaTrackCapabilities": [
+            "LongRange",
+            "DoubleRange"
+          ],
           "MediaTrackConstraints": [
             "MediaTrackConstraintSet"
           ],
@@ -38032,6 +38081,7 @@
           "MediaTrackSettings": [],
           "MediaStreamTrackEvent": [
             "Event",
+            "MediaStreamTrackEventInit",
             "MediaStreamTrack"
           ],
           "MediaStreamTrackEventInit": [
@@ -38040,6 +38090,7 @@
           ],
           "OverconstrainedErrorEvent": [
             "Event",
+            "OverconstrainedErrorEventInit",
             "OverconstrainedError"
           ],
           "OverconstrainedErrorEventInit": [
@@ -38058,7 +38109,9 @@
           "MediaDevices": [
             "EventTarget",
             "EventHandler",
+            "MediaDeviceInfo",
             "MediaTrackSupportedConstraints",
+            "MediaStream",
             "MediaStreamConstraints"
           ],
           "MediaDeviceInfo": [
@@ -38068,7 +38121,9 @@
             "MediaDeviceInfo",
             "MediaTrackCapabilities"
           ],
-          "MediaStreamConstraints": [],
+          "MediaStreamConstraints": [
+            "MediaTrackConstraints"
+          ],
           "ConstrainablePattern": [
             "Capabilities",
             "Constraints",
@@ -43072,10 +43127,14 @@
           "SubtleCrypto": [
             "AlgorithmIdentifier",
             "CryptoKey",
-            "KeyFormat"
+            "KeyUsage",
+            "KeyFormat",
+            "JsonWebKey"
           ],
           "RsaOtherPrimesInfo": [],
-          "JsonWebKey": [],
+          "JsonWebKey": [
+            "RsaOtherPrimesInfo"
+          ],
           "CryptoKeyPair": [
             "CryptoKey"
           ],
@@ -46074,7 +46133,8 @@
             "Blob"
           ],
           "CloseEvent": [
-            "Event"
+            "Event",
+            "CloseEventInit"
           ],
           "CloseEventInit": [
             "EventInit"
@@ -46939,19 +46999,22 @@
           "MediaRecorder": [
             "EventTarget",
             "MediaStream",
+            "MediaRecorderOptions",
             "RecordingState",
             "EventHandler"
           ],
           "MediaRecorderOptions": [],
           "BlobEvent": [
             "Event",
+            "BlobEventInit",
             "Blob"
           ],
           "BlobEventInit": [
             "Blob"
           ],
           "ErrorEvent": [
-            "Event"
+            "Event",
+            "ErrorEventInit"
           ],
           "ErrorEventInit": [
             "EventInit"
@@ -47873,6 +47936,7 @@
       "idlNames": {
         "_dependencies": {
           "NavigatorUserMedia": [
+            "MediaStream",
             "MediaStreamConstraints"
           ],
           "MediaTrackConstraintSet": [
@@ -48590,9 +48654,11 @@
       "idlNames": {
         "_dependencies": {
           "RTCConfiguration": [
+            "RTCIceServer",
             "RTCIceTransportPolicy",
             "RTCBundlePolicy",
-            "RTCRtcpMuxPolicy"
+            "RTCRtcpMuxPolicy",
+            "RTCCertificate"
           ],
           "RTCIceServer": [
             "RTCIceCredentialType"
@@ -48606,36 +48672,45 @@
           ],
           "RTCPeerConnection": [
             "EventTarget",
+            "RTCConfiguration",
+            "RTCSessionDescriptionInit",
             "RTCOfferOptions",
             "RTCAnswerOptions",
-            "RTCSessionDescriptionInit",
             "RTCSessionDescription",
+            "RTCIceCandidateInit",
+            "RTCIceCandidate",
             "RTCSignalingState",
             "RTCIceGatheringState",
             "RTCIceConnectionState",
             "RTCPeerConnectionState",
-            "RTCConfiguration",
+            "RTCIceServer",
             "EventHandler",
             "RTCSessionDescriptionCallback",
             "RTCPeerConnectionErrorCallback",
             "MediaStreamTrack",
             "RTCStatsCallback",
+            "RTCCertificate",
             "AlgorithmIdentifier",
             "RTCRtpSender",
-            "MediaStream",
+            "RTCRtpReceiver",
             "RTCRtpTransceiver",
+            "MediaStream",
             "RTCRtpTransceiverInit",
             "RTCSctpTransport",
             "RTCDataChannel",
-            "RTCDataChannelInit"
+            "RTCDataChannelInit",
+            "RTCStatsReport",
+            "RTCIdentityAssertion"
           ],
           "RTCSessionDescription": [
+            "RTCSessionDescriptionInit",
             "RTCSdpType"
           ],
           "RTCSessionDescriptionInit": [
             "RTCSdpType"
           ],
           "RTCIceCandidate": [
+            "RTCIceCandidateInit",
             "RTCIceProtocol",
             "RTCIceCandidateType",
             "RTCIceTcpCandidateType"
@@ -48643,6 +48718,7 @@
           "RTCIceCandidateInit": [],
           "RTCPeerConnectionIceEvent": [
             "Event",
+            "RTCPeerConnectionIceEventInit",
             "RTCIceCandidate"
           ],
           "RTCPeerConnectionIceEventInit": [
@@ -48650,7 +48726,8 @@
             "RTCIceCandidate"
           ],
           "RTCPeerConnectionIceErrorEvent": [
-            "Event"
+            "Event",
+            "RTCPeerConnectionIceErrorEventInit"
           ],
           "RTCPeerConnectionIceErrorEventInit": [
             "EventInit"
@@ -48659,7 +48736,9 @@
             "AlgorithmIdentifier"
           ],
           "RTCRtpTransceiverInit": [
-            "RTCRtpTransceiverDirection"
+            "RTCRtpTransceiverDirection",
+            "MediaStream",
+            "RTCRtpEncodingParameters"
           ],
           "RTCRtpSender": [
             "MediaStreamTrack",
@@ -48669,7 +48748,10 @@
             "RTCDTMFSender"
           ],
           "RTCRtpParameters": [
+            "RTCRtpEncodingParameters",
+            "RTCRtpHeaderExtensionParameters",
             "RTCRtcpParameters",
+            "RTCRtpCodecParameters",
             "RTCDegradationPreference"
           ],
           "RTCRtpEncodingParameters": [
@@ -48682,14 +48764,18 @@
           "RTCRtcpParameters": [],
           "RTCRtpHeaderExtensionParameters": [],
           "RTCRtpCodecParameters": [],
-          "RTCRtpCapabilities": [],
+          "RTCRtpCapabilities": [
+            "RTCRtpCodecCapability",
+            "RTCRtpHeaderExtensionCapability"
+          ],
           "RTCRtpCodecCapability": [],
           "RTCRtpHeaderExtensionCapability": [],
           "RTCRtpReceiver": [
             "MediaStreamTrack",
             "RTCDtlsTransport",
             "RTCRtpCapabilities",
-            "RTCRtpParameters"
+            "RTCRtpParameters",
+            "RTCRtpContributingSource"
           ],
           "RTCRtpContributingSource": [
             "DOMHighResTimeStamp"
@@ -48697,7 +48783,8 @@
           "RTCRtpTransceiver": [
             "RTCRtpSender",
             "RTCRtpReceiver",
-            "RTCRtpTransceiverDirection"
+            "RTCRtpTransceiverDirection",
+            "RTCRtpCodecCapability"
           ],
           "RTCDtlsTransport": [
             "RTCIceTransport",
@@ -48709,6 +48796,7 @@
             "RTCIceComponent",
             "RTCIceTransportState",
             "RTCIceGatheringState",
+            "RTCIceCandidate",
             "RTCIceCandidatePair",
             "RTCIceParameters",
             "EventHandler"
@@ -48719,14 +48807,17 @@
           ],
           "RTCTrackEvent": [
             "Event",
+            "RTCTrackEventInit",
             "RTCRtpReceiver",
             "MediaStreamTrack",
+            "MediaStream",
             "RTCRtpTransceiver"
           ],
           "RTCTrackEventInit": [
             "EventInit",
             "RTCRtpReceiver",
             "MediaStreamTrack",
+            "MediaStream",
             "RTCRtpTransceiver"
           ],
           "RTCSctpTransport": [
@@ -48741,6 +48832,7 @@
           "RTCDataChannelInit": [],
           "RTCDataChannelEvent": [
             "Event",
+            "RTCDataChannelEventInit",
             "RTCDataChannel"
           ],
           "RTCDataChannelEventInit": [
@@ -48751,7 +48843,8 @@
             "EventHandler"
           ],
           "RTCDTMFToneChangeEvent": [
-            "Event"
+            "Event",
+            "RTCDTMFToneChangeEventInit"
           ],
           "RTCDTMFToneChangeEventInit": [
             "EventInit"
@@ -55408,7 +55501,10 @@
           "ImageCapture": [
             "MediaStreamTrack",
             "MediaStream",
-            "PhotoSettings"
+            "PhotoCapabilities",
+            "PhotoSettings",
+            "Blob",
+            "ImageBitmap"
           ],
           "ImageCaptureError": [],
           "PhotoCapabilities": [
@@ -56331,14 +56427,20 @@
       },
       "idlNames": {
         "_dependencies": {
-          "MediaStreamConstraints": [],
-          "MediaStream": [],
+          "MediaStreamConstraints": [
+            "MediaTrackConstraints"
+          ],
+          "MediaStream": [
+            "MediaStreamTrack"
+          ],
           "MediaTrackSettings": [],
           "MediaTrackConstraintSet": [
             "ConstrainDouble"
           ],
           "MediaTrackSupportedConstraints": [],
-          "MediaTrackCapabilities": []
+          "MediaTrackCapabilities": [
+            "DoubleRange"
+          ]
         }
       },
       "idlExtendedNames": {
@@ -59074,6 +59176,10 @@
     "refs": {
       "normative": [
         {
+          "name": "DOM",
+          "url": "https://www.w3.org/TR/dom/"
+        },
+        {
           "name": "FILEAPI",
           "url": "https://www.w3.org/TR/FileAPI/"
         },
@@ -59180,6 +59286,8 @@
           ],
           "PresentationRequest": [
             "EventTarget",
+            "PresentationConnection",
+            "PresentationAvailability",
             "EventHandler"
           ],
           "PresentationAvailability": [
@@ -59188,6 +59296,7 @@
           ],
           "PresentationConnectionAvailableEvent": [
             "Event",
+            "PresentationConnectionAvailableEventInit",
             "PresentationConnection"
           ],
           "PresentationConnectionAvailableEventInit": [
@@ -59203,15 +59312,19 @@
           ],
           "PresentationConnectionClosedEvent": [
             "Event",
+            "PresentationConnectionClosedEventInit",
             "PresentationConnectionClosedReason"
           ],
           "PresentationConnectionClosedEventInit": [
             "EventInit",
             "PresentationConnectionClosedReason"
           ],
-          "PresentationReceiver": [],
+          "PresentationReceiver": [
+            "PresentationConnectionList"
+          ],
           "PresentationConnectionList": [
             "EventTarget",
+            "PresentationConnection",
             "EventHandler"
           ]
         },
@@ -62462,6 +62575,7 @@
             "PerformanceEntryFilterOptions"
           ],
           "PerformanceObserver": [
+            "PerformanceObserverCallback",
             "PerformanceObserverInit"
           ]
         },
@@ -63147,6 +63261,7 @@
           ],
           "ClipboardEvent": [
             "Event",
+            "ClipboardEventInit",
             "DataTransfer"
           ]
         },
@@ -63292,10 +63407,12 @@
         "_dependencies": {
           "AmbientLightSensor": [
             "Sensor",
+            "SensorOptions",
             "AmbientLightSensorReading"
           ],
           "AmbientLightSensorReading": [
-            "SensorReading"
+            "SensorReading",
+            "AmbientLightSensorReadingInit"
           ],
           "AmbientLightSensorReadingInit": []
         },
@@ -63427,7 +63544,7 @@
   {
     "url": "http://www.w3.org/TR/2016/WD-generic-sensor-20160324/",
     "shortname": "generic-sensor",
-    "latest": "http://www.w3.org/TR/2016/WD-generic-sensor-20160324/",
+    "latest": "https://w3c.github.io/sensors/",
     "title": "Generic Sensor API",
     "refs": {
       "normative": [
@@ -63445,7 +63562,7 @@
         },
         {
           "name": "PERMISSIONS",
-          "url": "http://www.w3.org/TR/permissions/"
+          "url": "https://w3c.github.io/permissions/"
         },
         {
           "name": "POWERFUL-FEATURES",
@@ -63475,7 +63592,7 @@
         },
         {
           "name": "geolocation-API",
-          "url": "http://www.w3.org/TR/geolocation-API/"
+          "url": "http://dev.w3.org/geo/api/spec-source.html"
         },
         {
           "name": "ORIENTATION-EVENT",
@@ -63495,14 +63612,14 @@
       "jsNames": {
         "constructors": {
           "Window": [
-            "SensorReading",
             "SensorReadingEvent",
             "SensorErrorEvent"
           ]
         },
         "functions": {
           "Window": [
-            "Sensor"
+            "Sensor",
+            "SensorReading"
           ]
         },
         "objects": {}
@@ -63521,6 +63638,7 @@
           ],
           "SensorReadingEvent": [
             "Event",
+            "SensorReadingEventInit",
             "SensorReading"
           ],
           "SensorReadingEventInit": [
@@ -63528,7 +63646,8 @@
             "SensorReading"
           ],
           "SensorErrorEvent": [
-            "Event"
+            "Event",
+            "SensorErrorEventInit"
           ],
           "SensorErrorEventInit": [
             "EventInit"
@@ -63728,12 +63847,7 @@
             }
           ],
           "inheritance": null,
-          "extAttrs": [
-            {
-              "name": "Constructor",
-              "arguments": []
-            }
-          ]
+          "extAttrs": []
         },
         "SensorReadingEvent": {
           "type": "interface",
@@ -63973,7 +64087,11 @@
         "_dependencies": {
           "Performance": [
             "EventTarget",
-            "DOMHighResTimeStamp"
+            "DOMHighResTimeStamp",
+            "Window",
+            "Worker",
+            "SharedWorker",
+            "ServiceWorker"
           ],
           "GlobalPerformance": [
             "Performance"
@@ -64251,9 +64369,12 @@
             "GamepadMappingType"
           ],
           "GamepadButton": [],
-          "Navigator": [],
+          "Navigator": [
+            "Gamepad"
+          ],
           "GamepadEvent": [
             "Event",
+            "GamepadEventInit",
             "Gamepad"
           ],
           "GamepadEventInit": [
@@ -64662,7 +64783,9 @@
             "PushManager"
           ],
           "PushManager": [
-            "PushSubscriptionOptionsInit"
+            "PushSubscription",
+            "PushSubscriptionOptionsInit",
+            "PushPermissionState"
           ],
           "PushSubscriptionOptionsInit": [],
           "PushSubscriptionOptions": [],
@@ -64679,6 +64802,7 @@
           ],
           "PushEvent": [
             "ExtendableEvent",
+            "PushEventInit",
             "PushMessageData"
           ],
           "PushEventInit": [
@@ -65544,6 +65668,7 @@
             "DecodeSuccessCallback",
             "DecodeErrorCallback",
             "AudioBufferSourceNode",
+            "AudioWorker",
             "ScriptProcessorNode",
             "AnalyserNode",
             "GainNode",
@@ -65563,6 +65688,7 @@
           ],
           "AudioContext": [
             "BaseAudioContext",
+            "AudioContextOptions",
             "AudioTimestamp",
             "MediaElementAudioSourceNode",
             "HTMLMediaElement",
@@ -65570,12 +65696,15 @@
             "MediaStream",
             "MediaStreamAudioDestinationNode"
           ],
-          "AudioContextOptions": [],
+          "AudioContextOptions": [
+            "AudioContextLatencyCategory"
+          ],
           "AudioTimestamp": [
             "DOMHighResTimeStamp"
           ],
           "OfflineAudioContext": [
             "BaseAudioContext",
+            "AudioBuffer",
             "EventHandler"
           ],
           "OfflineAudioCompletionEvent": [
@@ -65616,6 +65745,7 @@
           ],
           "AudioWorker": [
             "Worker",
+            "Transferable",
             "EventHandler",
             "AudioWorkerNode",
             "int",
@@ -65623,6 +65753,7 @@
           ],
           "AudioWorkerNode": [
             "AudioNode",
+            "Transferable",
             "EventHandler"
           ],
           "AudioWorkerParamDescriptor": [],
@@ -65633,6 +65764,7 @@
           ],
           "AudioWorkerNodeProcessor": [
             "EventTarget",
+            "Transferable",
             "EventHandler"
           ],
           "ScriptProcessorNode": [
@@ -71334,6 +71466,7 @@
           ],
           "Worker": [
             "EventTarget",
+            "WorkerOptions",
             "EventHandler",
             "AbstractWorker"
           ],
@@ -71343,6 +71476,7 @@
           ],
           "SharedWorker": [
             "EventTarget",
+            "WorkerOptions",
             "MessagePort",
             "AbstractWorker"
           ],
@@ -72405,10 +72539,12 @@
         "_dependencies": {
           "ProximitySensor": [
             "Sensor",
+            "SensorOptions",
             "ProximitySensorReading"
           ],
           "ProximitySensorReading": [
-            "SensorReading"
+            "SensorReading",
+            "ProximitySensorReadingInit"
           ],
           "ProximitySensorReadingInit": []
         },
@@ -72745,6 +72881,7 @@
           "ServiceWorkerContainer": [
             "EventTarget",
             "ServiceWorker",
+            "ServiceWorkerRegistration",
             "RegistrationOptions",
             "EventHandler"
           ],
@@ -72752,10 +72889,15 @@
             "WorkerType"
           ],
           "ServiceWorkerMessageEvent": [
-            "Event"
+            "Event",
+            "ServiceWorkerMessageEventInit",
+            "ServiceWorker",
+            "MessagePort"
           ],
           "ServiceWorkerMessageEventInit": [
-            "EventInit"
+            "EventInit",
+            "ServiceWorker",
+            "MessagePort"
           ],
           "ServiceWorkerGlobalScope": [
             "WorkerGlobalScope",
@@ -72768,28 +72910,35 @@
           ],
           "WindowClient": [
             "Client",
-            "VisibilityState"
+            "VisibilityState",
+            "WindowClient"
           ],
           "Clients": [
-            "ClientQueryOptions"
+            "Client",
+            "ClientQueryOptions",
+            "WindowClient"
           ],
           "ClientQueryOptions": [
             "ClientType"
           ],
           "ExtendableEvent": [
-            "Event"
+            "Event",
+            "ExtendableEventInit"
           ],
           "ExtendableEventInit": [
             "EventInit"
           ],
           "InstallEvent": [
             "ExtendableEvent",
+            "ExtendableEventInit",
             "ForeignFetchOptions"
           ],
           "ForeignFetchOptions": [],
           "FetchEvent": [
             "ExtendableEvent",
-            "Request"
+            "FetchEventInit",
+            "Request",
+            "Response"
           ],
           "FetchEventInit": [
             "ExtendableEventInit",
@@ -72797,7 +72946,9 @@
           ],
           "ForeignFetchEvent": [
             "ExtendableEvent",
-            "Request"
+            "ForeignFetchEventInit",
+            "Request",
+            "ForeignFetchResponse"
           ],
           "ForeignFetchEventInit": [
             "ExtendableEventInit",
@@ -72807,10 +72958,17 @@
             "Response"
           ],
           "ExtendableMessageEvent": [
-            "ExtendableEvent"
+            "ExtendableEvent",
+            "ExtendableMessageEventInit",
+            "Client",
+            "ServiceWorker",
+            "MessagePort"
           ],
           "ExtendableMessageEventInit": [
-            "ExtendableEventInit"
+            "ExtendableEventInit",
+            "Client",
+            "ServiceWorker",
+            "MessagePort"
           ],
           "HTMLLinkElement": [
             "WorkerType"
@@ -72824,7 +72982,8 @@
           "Cache": [
             "RequestInfo",
             "CacheQueryOptions",
-            "Response"
+            "Response",
+            "Request"
           ],
           "CacheQueryOptions": [],
           "CacheBatchOperation": [
@@ -72834,7 +72993,8 @@
           ],
           "CacheStorage": [
             "RequestInfo",
-            "CacheQueryOptions"
+            "CacheQueryOptions",
+            "Cache"
           ]
         },
         "ServiceWorker": {
@@ -76650,11 +76810,15 @@
       "idlNames": {
         "_dependencies": {
           "Blob": [
+            "BlobPart",
+            "BlobPropertyBag",
             "Blob"
           ],
           "BlobPropertyBag": [],
           "File": [
-            "Blob"
+            "Blob",
+            "BlobPart",
+            "FilePropertyBag"
           ],
           "FilePropertyBag": [
             "BlobPropertyBag"
@@ -77948,7 +78112,9 @@
           "URL": [
             "URLSearchParams"
           ],
-          "URLSearchParams": []
+          "URLSearchParams": [
+            "URLSearchParams"
+          ]
         },
         "URL": {
           "type": "interface",
@@ -78744,15 +78910,18 @@
             "XMLHttpRequestEventTarget",
             "EventHandler",
             "XMLHttpRequestUpload",
-            "XMLHttpRequestResponseType",
-            "Document"
+            "Document",
+            "BodyInit",
+            "XMLHttpRequestResponseType"
           ],
           "FormData": [
+            "HTMLFormElement",
             "Blob",
             "FormDataEntryValue"
           ],
           "ProgressEvent": [
-            "Event"
+            "Event",
+            "ProgressEventInit"
           ],
           "ProgressEventInit": [
             "EventInit"
@@ -80464,6 +80633,7 @@
         "_dependencies": {
           "UIEvent": [
             "Event",
+            "UIEventInit",
             "Window"
           ],
           "UIEventInit": [
@@ -80472,6 +80642,7 @@
           ],
           "FocusEvent": [
             "UIEvent",
+            "FocusEventInit",
             "EventTarget"
           ],
           "FocusEventInit": [
@@ -80480,6 +80651,7 @@
           ],
           "MouseEvent": [
             "UIEvent",
+            "MouseEventInit",
             "EventTarget"
           ],
           "MouseEventInit": [
@@ -80490,25 +80662,29 @@
             "UIEventInit"
           ],
           "WheelEvent": [
-            "MouseEvent"
+            "MouseEvent",
+            "WheelEventInit"
           ],
           "WheelEventInit": [
             "MouseEventInit"
           ],
           "InputEvent": [
-            "UIEvent"
+            "UIEvent",
+            "InputEventInit"
           ],
           "InputEventInit": [
             "UIEventInit"
           ],
           "KeyboardEvent": [
-            "UIEvent"
+            "UIEvent",
+            "KeyboardEventInit"
           ],
           "KeyboardEventInit": [
             "EventModifierInit"
           ],
           "CompositionEvent": [
-            "UIEvent"
+            "UIEvent",
+            "CompositionEventInit"
           ],
           "CompositionEventInit": [
             "UIEventInit"
@@ -82394,7 +82570,8 @@
             "EventHandler"
           ],
           "MediaQueryListEvent": [
-            "Event"
+            "Event",
+            "MediaQueryListEventInit"
           ],
           "MediaQueryListEventInit": [
             "EventInit"
@@ -82435,8 +82612,8 @@
             "CSSBoxType"
           ],
           "GeometryUtils": [
-            "BoxQuadOptions",
             "DOMQuad",
+            "BoxQuadOptions",
             "DOMQuadInit",
             "GeometryNode",
             "ConvertCoordinateOptions",
@@ -85493,6 +85670,7 @@
           ],
           "DOMRectInit": [],
           "DOMQuad": [
+            "DOMPointInit",
             "DOMQuad",
             "DOMRectInit",
             "DOMQuadInit",
@@ -90478,11 +90656,14 @@
           ],
           "HTMLSlotElement": [
             "HTMLElement",
+            "Node",
             "AssignedNodesOptions"
           ],
           "AssignedNodesOptions": [],
           "EventInit": [],
-          "Event": []
+          "Event": [
+            "EventTarget"
+          ]
         },
         "ShadowRoot": {
           "type": "interface",
@@ -91274,6 +91455,8 @@
         "_dependencies": {
           "MediaList": [],
           "StyleSheet": [
+            "Element",
+            "ProcessingInstruction",
             "StyleSheet",
             "MediaList"
           ],
@@ -93528,17 +93711,21 @@
       "idlNames": {
         "_dependencies": {
           "Event": [
+            "EventInit",
             "EventTarget"
           ],
           "EventInit": [],
           "CustomEvent": [
-            "Event"
+            "Event",
+            "CustomEventInit"
           ],
           "CustomEventInit": [
             "EventInit"
           ],
           "EventTarget": [
             "EventListener",
+            "AddEventListenerOptions",
+            "EventListenerOptions",
             "Event"
           ],
           "EventListener": [
@@ -93587,6 +93774,7 @@
           "ParentNode": [
             "HTMLCollection",
             "Element",
+            "Node",
             "NodeList"
           ],
           "Element": [
@@ -93611,7 +93799,9 @@
             "ChildNode",
             "Node"
           ],
-          "ChildNode": [],
+          "ChildNode": [
+            "Node"
+          ],
           "DocumentType": [
             "ChildNode",
             "Node"
@@ -93631,8 +93821,10 @@
             "Element"
           ],
           "MutationObserver": [
+            "MutationCallback",
             "Node",
-            "MutationObserverInit"
+            "MutationObserverInit",
+            "MutationRecord"
           ],
           "MutationObserverInit": [],
           "MutationRecord": [
@@ -103168,7 +103360,9 @@
             "MediaSessionKind",
             "MediaMetadata"
           ],
-          "MediaMetadata": [],
+          "MediaMetadata": [
+            "MediaMetadataInit"
+          ],
           "MediaMetadataInit": [],
           "HTMLMediaElement": [
             "MediaSession"
@@ -103571,6 +103765,7 @@
           "TextDecoderOptions": [],
           "TextDecodeOptions": [],
           "TextDecoder": [
+            "TextDecoderOptions",
             "TextDecodeOptions"
           ],
           "TextEncoder": []
@@ -104033,9 +104228,17 @@
       },
       "idlNames": {
         "_dependencies": {
-          "Headers": [],
-          "Body": [],
+          "Headers": [
+            "HeadersInit"
+          ],
+          "Body": [
+            "Blob",
+            "FormData",
+            "JSON"
+          ],
           "Request": [
+            "RequestInfo",
+            "RequestInit",
             "Headers",
             "RequestType",
             "RequestDestination",
@@ -104057,6 +104260,8 @@
             "RequestRedirect"
           ],
           "Response": [
+            "ResponseBodyInit",
+            "ResponseInit",
             "Response",
             "ResponseType",
             "Headers",
@@ -104067,6 +104272,7 @@
             "HeadersInit"
           ],
           "WindowOrWorkerGlobalScope": [
+            "Response",
             "RequestInfo",
             "RequestInit"
           ]
@@ -105951,7 +106157,8 @@
             "WebGLRenderingContextBase"
           ],
           "WebGLContextEvent": [
-            "Event"
+            "Event",
+            "WebGLContextEventInit"
           ],
           "WebGLContextEventInit": [
             "EventInit"
@@ -118621,13 +118828,15 @@
         "_dependencies": {
           "AnimationTimeline": [],
           "DocumentTimeline": [
-            "AnimationTimeline"
+            "AnimationTimeline",
+            "DOMHighResTimeStamp"
           ],
           "Animation": [
             "EventTarget",
             "AnimationEffectReadOnly",
             "AnimationTimeline",
             "AnimationPlayState",
+            "Animation",
             "EventHandler"
           ],
           "AnimationEffectReadOnly": [
@@ -118653,12 +118862,15 @@
           "KeyframeEffectReadOnly": [
             "AnimationEffectReadOnly",
             "Animatable",
+            "KeyframeEffectOptions",
+            "KeyframeEffectReadOnly",
             "IterationCompositeOperation",
             "CompositeOperation"
           ],
           "KeyframeEffect": [
             "KeyframeEffectReadOnly",
             "Animatable",
+            "KeyframeEffectOptions",
             "IterationCompositeOperation",
             "CompositeOperation"
           ],
@@ -118678,13 +118890,15 @@
           ],
           "SharedKeyframeList": [],
           "Animatable": [
-            "Animation"
+            "Animation",
+            "KeyframeAnimationOptions"
           ],
           "KeyframeAnimationOptions": [
             "KeyframeEffectOptions"
           ],
           "Document": [
-            "DocumentTimeline"
+            "DocumentTimeline",
+            "Animation"
           ],
           "Element": [
             "Animatable"
@@ -118693,7 +118907,8 @@
             "Animatable"
           ],
           "AnimationPlaybackEvent": [
-            "Event"
+            "Event",
+            "AnimationPlaybackEventInit"
           ],
           "AnimationPlaybackEventInit": [
             "EventInit"
@@ -120806,7 +121021,8 @@
       "idlNames": {
         "_dependencies": {
           "PointerEvent": [
-            "MouseEvent"
+            "MouseEvent",
+            "PointerEventInit"
           ],
           "PointerEventInit": [
             "MouseEventInit"
@@ -121779,7 +121995,9 @@
           "WorkerNavigator": [
             "NavigatorStorage"
           ],
-          "StorageManager": [],
+          "StorageManager": [
+            "StorageEstimate"
+          ],
           "StorageEstimate": []
         },
         "NavigatorStorage": {
