@@ -26,6 +26,9 @@ fetch("results.json")
         case "enums":
             body.appendChild(enumNames(data, paramValue));
             break;
+        case "extattr":
+            body.appendChild(extAttrUsage(data, paramValue));
+            break;
         case "full":
         default:
             body.appendChild(fullList(data, used_by, paramValue));
@@ -206,6 +209,51 @@ function enumNames(data, sort) {
 
 }
 
+    function extAttrUsage(data, sort) {
+        const section = document.createElement("section");
+        const h2 = document.createElement("h2");
+        h2.textContent = "Extended attributes usage";
+        section.appendChild(h2);
+
+        section.appendChild(sorterLink("extattr", sort));
+        const extAttr = data.filter(hasIdlDef)
+              .map(spec =>
+                   Object.keys(spec.idl.idlNames)
+                   .filter(n => n!=="_dependencies")
+                   .map(n => (spec.idl.idlNames[n].extAttrs || []).map(
+                       e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: n, type: spec.idl.idlNames[n].type} };}
+                   )
+                        .concat((spec.idl.idlNames[n].members || []).map(
+                            m => (m.extAttrs || []).map( e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: n + '.' + m.name, type: m.type}};}).reduce((a,b) => a.concat(b), [])))
+                        .reduce((a,b) => a.concat(b), []))
+                  ).reduce((a,b) => a.concat(b), [])
+              .reduce((a,b) => a.concat(b), [])
+              .reduce((a,b) => {a[b.extAttr] = a[b.extAttr] ? a[b.extAttr].concat(b) : [b]; return a;}, {});
+        const ol = document.createElement("ol");
+
+        const sortFn = sort === "popularity" ? ((e1, e2) => extAttr[e2].length - extAttr[e1].length) : undefined;
+
+        Object.keys(extAttr).sort(sortFn).forEach(
+            e => {
+                const li = document.createElement("li");
+                li.textContent = e;
+                const applyList = document.createElement("ol");
+                extAttr[e].forEach(a => {
+                    const item = document.createElement("li");
+                    item.appendChild(document.createTextNode(" used on " + a.applyTo.type + " " + a.applyTo.name + " in "));
+                    const link = document.createElement("a");
+                    link.href=a.url;
+                    link.textContent = a.title;
+                    item.appendChild(link)
+                    applyList.appendChild(item);
+                });
+                li.appendChild(applyList);
+                ol.appendChild(li);
+            });
+        section.appendChild(ol);
+        return section;
+    }
+    
 function sorterLink(paramName, sort) {
     const sorter = document.createElement("a");
     sorter.href = "?" + paramName + "=" + (sort === "popularity" ? "" : "popularity");
@@ -213,5 +261,5 @@ function sorterLink(paramName, sort) {
     return sorter;
 }
 
-var hasIdlDef = s => s.idl && s.idl.idlNames;
-var defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
+const hasIdlDef = s => s.idl && s.idl.idlNames;
+const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
