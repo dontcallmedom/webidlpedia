@@ -185,7 +185,6 @@ function enumNames(data, sort) {
                      };
           }).
           sort(sortFn);
-    console.log(uniqueNames);
     uniqueEnumValues.forEach(e => {
         const item = document.createElement("li");
         item.appendChild(document.createTextNode('"'+ e.value + '"'));
