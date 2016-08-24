@@ -235,8 +235,16 @@ function enumNames(data, sort) {
 
         Object.keys(extAttr).sort(sortFn).forEach(
             e => {
+                const notInWebIdlSpec = {"CEReactions": "https://www.w3.org/TR/custom-elements/#cereactions", "WebGLHandlesContextLoss": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14"};
                 const li = document.createElement("li");
-                li.textContent = e;
+                const deflink = document.createElement("a");
+                deflink.textContent = e;
+                if (notInWebIdlSpec[e]) {
+                    deflink.href = notInWebIdlSpec[e];
+                } else {
+                    deflink.href = "http://heycam.github.io/webidl/#" + e;
+                }
+                li.appendChild(deflink);
                 const applyList = document.createElement("ol");
                 extAttr[e].forEach(a => {
                     const item = document.createElement("li");
