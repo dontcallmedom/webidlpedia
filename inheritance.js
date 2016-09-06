@@ -1,4 +1,5 @@
-
+// a simple adaptation of http://bl.ocks.org/d3noob/8375092 for displaying
+// inherited DOM interfaces
 var width = 960,
     height = 1200
 
