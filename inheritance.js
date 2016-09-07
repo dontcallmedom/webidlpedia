@@ -1,11 +1,13 @@
 // a simple adaptation of http://bl.ocks.org/d3noob/8375092 for displaying
 // inherited DOM interfaces
 var width = 960,
-    height = 1200
-
+    height = 1200;
+var margin = {top: 20, right: 120, bottom: 20, left: 120};
 var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var tree = d3.layout.tree()
     .size([width, height]);
