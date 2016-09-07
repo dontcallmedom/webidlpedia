@@ -46,6 +46,12 @@ function fullList(data, used_by, sort) {
     linkToGraph.textContent = "Graph of IDL inter-dependencies";
     p.appendChild(linkToGraph);
     section.appendChild(p);
+    const p2 = document.createElement("p");
+    var linkToGraph2 = document.createElement("a");
+    linkToGraph2.href = "inheritance.html";
+    linkToGraph2.textContent = "Tree of interface inheritance";
+    p2.appendChild(linkToGraph2);
+    section.appendChild(p2);
     section.appendChild(sorterLink("full", sort));
 
     [{type:"interface", title: "Interfaces"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}, {type:"callback", title: "Callbacks"}].forEach(
