@@ -25,7 +25,7 @@ d3.json("results.json", function(json) {
     var interfaces = json.filter(s=> s.idl && s.idl.idlNames)
         .map(s => s.idl.idlNames)
         .reduce((a,b) => { Object.keys(b).forEach(k => { if (b[k].type === "interface") { a[k] = b[k];} }); return a;},{});
-    var rootName = "Node";
+    var rootName = "EventTarget";
     var domInheritance = [{
         name: rootName,
         parent: null,
