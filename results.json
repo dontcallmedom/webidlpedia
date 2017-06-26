@@ -30195,8 +30195,814 @@
     "latest": "https://dvcs.w3.org/hg/pointerevents/raw-file/tip/pointerEvents.html",
     "title": "Pointer Events - Level 2",
     "date": "18 August 2016",
-    "refs": {},
-    "idl": {}
+    "refs": {
+      "normative": [
+        {
+          "name": "DOM-LEVEL-3-EVENTS",
+          "url": "https://www.w3.org/TR/uievents/"
+        },
+        {
+          "name": "DOM4",
+          "url": "http://www.w3.org/TR/dom/"
+        },
+        {
+          "name": "HTML5",
+          "url": "https://www.w3.org/TR/html5/"
+        },
+        {
+          "name": "RFC2119",
+          "url": "https://tools.ietf.org/html/rfc2119"
+        },
+        {
+          "name": "WHATWG-DOM",
+          "url": "https://dom.spec.whatwg.org/"
+        }
+      ],
+      "informative": [
+        {
+          "name": "CSS21",
+          "url": "https://www.w3.org/TR/CSS2"
+        },
+        {
+          "name": "CSSOM-VIEW",
+          "url": "https://www.w3.org/TR/cssom-view-1/"
+        },
+        {
+          "name": "PointerEvents",
+          "url": "https://www.w3.org/TR/pointerevents/"
+        },
+        {
+          "name": "TOUCH-EVENTS",
+          "url": "https://www.w3.org/TR/touch-events/"
+        }
+      ]
+    },
+    "idl": {
+      "jsNames": {
+        "constructors": {
+          "Window": [
+            "PointerEvent"
+          ]
+        },
+        "functions": {},
+        "objects": {}
+      },
+      "idlNames": {
+        "_dependencies": {
+          "PointerEventInit": [
+            "MouseEventInit"
+          ],
+          "PointerEvent": [
+            "MouseEvent",
+            "PointerEventInit"
+          ],
+          "Element": [
+            "EventHandler"
+          ],
+          "GlobalEventHandlers": [
+            "EventHandler"
+          ],
+          "Navigator": []
+        },
+        "PointerEventInit": {
+          "type": "dictionary",
+          "name": "PointerEventInit",
+          "partial": false,
+          "members": [
+            {
+              "type": "field",
+              "name": "pointerId",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "width",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "double"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "type": "field",
+              "name": "height",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "double"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            {
+              "type": "field",
+              "name": "pressure",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "float"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "tangentialPressure",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "float"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "tiltX",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "tiltY",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "twist",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            {
+              "type": "field",
+              "name": "pointerType",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "DOMString"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            {
+              "type": "field",
+              "name": "isPrimary",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "boolean"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ],
+          "inheritance": "MouseEventInit",
+          "extAttrs": []
+        },
+        "PointerEvent": {
+          "type": "interface",
+          "name": "PointerEvent",
+          "partial": false,
+          "members": [
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "name": "pointerId",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "double"
+              },
+              "name": "width",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "double"
+              },
+              "name": "height",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "float"
+              },
+              "name": "pressure",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "float"
+              },
+              "name": "tangentialPressure",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "name": "tiltX",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "name": "tiltY",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "long"
+              },
+              "name": "twist",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "DOMString"
+              },
+              "name": "pointerType",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "boolean"
+              },
+              "name": "isPrimary",
+              "extAttrs": []
+            }
+          ],
+          "inheritance": "MouseEvent",
+          "extAttrs": [
+            {
+              "name": "Constructor",
+              "arguments": [
+                {
+                  "optional": false,
+                  "variadic": false,
+                  "extAttrs": [],
+                  "idlType": {
+                    "sequence": false,
+                    "generic": null,
+                    "nullable": false,
+                    "array": false,
+                    "union": false,
+                    "idlType": "DOMString"
+                  },
+                  "name": "type"
+                },
+                {
+                  "optional": true,
+                  "variadic": false,
+                  "extAttrs": [],
+                  "idlType": {
+                    "sequence": false,
+                    "generic": null,
+                    "nullable": false,
+                    "array": false,
+                    "union": false,
+                    "idlType": "PointerEventInit"
+                  },
+                  "name": "eventInitDict"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "idlExtendedNames": {
+        "Element": [
+          {
+            "type": "interface",
+            "name": "Element",
+            "partial": true,
+            "members": [
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "ongotpointercapture",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onlostpointercapture",
+                "extAttrs": []
+              },
+              {
+                "type": "operation",
+                "getter": false,
+                "setter": false,
+                "creator": false,
+                "deleter": false,
+                "legacycaller": false,
+                "static": false,
+                "stringifier": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "void"
+                },
+                "name": "setPointerCapture",
+                "arguments": [
+                  {
+                    "optional": false,
+                    "variadic": false,
+                    "extAttrs": [],
+                    "idlType": {
+                      "sequence": false,
+                      "generic": null,
+                      "nullable": false,
+                      "array": false,
+                      "union": false,
+                      "idlType": "long"
+                    },
+                    "name": "pointerId"
+                  }
+                ],
+                "extAttrs": []
+              },
+              {
+                "type": "operation",
+                "getter": false,
+                "setter": false,
+                "creator": false,
+                "deleter": false,
+                "legacycaller": false,
+                "static": false,
+                "stringifier": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "void"
+                },
+                "name": "releasePointerCapture",
+                "arguments": [
+                  {
+                    "optional": false,
+                    "variadic": false,
+                    "extAttrs": [],
+                    "idlType": {
+                      "sequence": false,
+                      "generic": null,
+                      "nullable": false,
+                      "array": false,
+                      "union": false,
+                      "idlType": "long"
+                    },
+                    "name": "pointerId"
+                  }
+                ],
+                "extAttrs": []
+              },
+              {
+                "type": "operation",
+                "getter": false,
+                "setter": false,
+                "creator": false,
+                "deleter": false,
+                "legacycaller": false,
+                "static": false,
+                "stringifier": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "boolean"
+                },
+                "name": "hasPointerCapture",
+                "arguments": [
+                  {
+                    "optional": false,
+                    "variadic": false,
+                    "extAttrs": [],
+                    "idlType": {
+                      "sequence": false,
+                      "generic": null,
+                      "nullable": false,
+                      "array": false,
+                      "union": false,
+                      "idlType": "long"
+                    },
+                    "name": "pointerId"
+                  }
+                ],
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": []
+          }
+        ],
+        "GlobalEventHandlers": [
+          {
+            "type": "interface",
+            "name": "GlobalEventHandlers",
+            "partial": true,
+            "members": [
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerdown",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointermove",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerup",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointercancel",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerover",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerout",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerenter",
+                "extAttrs": []
+              },
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "EventHandler"
+                },
+                "name": "onpointerleave",
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": []
+          }
+        ],
+        "Navigator": [
+          {
+            "type": "interface",
+            "name": "Navigator",
+            "partial": true,
+            "members": [
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": true,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "long"
+                },
+                "name": "maxTouchPoints",
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": []
+          }
+        ]
+      },
+      "externalDependencies": [
+        "MouseEventInit",
+        "MouseEvent",
+        "Element",
+        "EventHandler",
+        "GlobalEventHandlers",
+        "Navigator"
+      ]
+    }
   },
   {
     "url": "https://www.w3.org/TR/vibration/",
@@ -30209,8 +31015,135 @@
     "latest": "https://w3c.github.io/vibration/",
     "title": "Vibration API",
     "date": "12 July 2016",
-    "refs": {},
-    "idl": {}
+    "refs": {
+      "normative": [
+        {
+          "name": "HTML5",
+          "url": "https://www.w3.org/TR/html5/"
+        },
+        {
+          "name": "PAGE-VISIBILITY-2",
+          "url": "https://www.w3.org/TR/page-visibility-2/"
+        },
+        {
+          "name": "RFC2119",
+          "url": "https://tools.ietf.org/html/rfc2119"
+        },
+        {
+          "name": "WEBIDL-1",
+          "url": "https://www.w3.org/TR/2016/REC-WebIDL-1-20161215/"
+        }
+      ],
+      "informative": [
+        {
+          "name": "NOTIFICATIONS",
+          "url": "https://notifications.spec.whatwg.org/"
+        }
+      ]
+    },
+    "idl": {
+      "jsNames": {
+        "constructors": {},
+        "functions": {},
+        "objects": {}
+      },
+      "idlNames": {
+        "_dependencies": {
+          "Navigator": [
+            "VibratePattern"
+          ]
+        },
+        "VibratePattern": {
+          "type": "typedef",
+          "typeExtAttrs": [],
+          "idlType": {
+            "sequence": false,
+            "generic": null,
+            "nullable": false,
+            "array": false,
+            "union": true,
+            "idlType": [
+              {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": "unsigned long"
+              },
+              {
+                "sequence": true,
+                "generic": "sequence",
+                "nullable": false,
+                "array": false,
+                "union": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "unsigned long"
+                }
+              }
+            ]
+          },
+          "name": "VibratePattern",
+          "extAttrs": []
+        }
+      },
+      "idlExtendedNames": {
+        "Navigator": [
+          {
+            "type": "interface",
+            "name": "Navigator",
+            "partial": true,
+            "members": [
+              {
+                "type": "operation",
+                "getter": false,
+                "setter": false,
+                "creator": false,
+                "deleter": false,
+                "legacycaller": false,
+                "static": false,
+                "stringifier": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "array": false,
+                  "union": false,
+                  "idlType": "boolean"
+                },
+                "name": "vibrate",
+                "arguments": [
+                  {
+                    "optional": false,
+                    "variadic": false,
+                    "extAttrs": [],
+                    "idlType": {
+                      "sequence": false,
+                      "generic": null,
+                      "nullable": false,
+                      "array": false,
+                      "union": false,
+                      "idlType": "VibratePattern"
+                    },
+                    "name": "pattern"
+                  }
+                ],
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": []
+          }
+        ]
+      },
+      "externalDependencies": [
+        "Navigator"
+      ]
+    }
   },
   {
     "url": "https://www.w3.org/TR/eventsource/",
@@ -35210,7 +36143,7 @@
       "normative": [
         {
           "name": "CSS-VALUES",
-          "url": "https://www.w3.org/TR/css-values/"
+          "url": "https://www.w3.org/TR/css-values-3/"
         },
         {
           "name": "DOM-LEVEL-2-EVENTS",
@@ -35226,7 +36159,7 @@
         },
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HTML5",
@@ -35238,7 +36171,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "WHATWG-DOM",
@@ -36823,7 +37756,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": []
@@ -44309,7 +45242,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -44388,7 +45321,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "RFC2119",
@@ -44400,21 +45333,21 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
         {
           "name": "FULLSCREEN",
-          "url": "https://www.w3.org/TR/fullscreen/"
+          "url": "https://fullscreen.spec.whatwg.org/"
         },
         {
           "name": "MDN-SETCAPTURE",
-          "url": "https://developer.mozilla.org/en/DOM/element.setCapture"
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setCapture"
         },
         {
           "name": "MSDN-SETCAPTURE",
-          "url": "http://msdn.microsoft.com/en-us/library/ms536742.aspx"
+          "url": "https://msdn.microsoft.com/en-us/library/ms536742.aspx"
         }
       ]
     },
@@ -46171,7 +47104,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HTML51",
@@ -46296,7 +47229,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "FILE-API",
@@ -46308,7 +47241,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": []
@@ -47055,7 +47988,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -48637,15 +49570,15 @@
         },
         {
           "name": "RTCWEB-SECURITY",
-          "url": "http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security/"
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security/"
         },
         {
           "name": "RTCWEB-SECURITY-ARCH",
-          "url": "http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"
+          "url": "https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -48830,7 +49763,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -49041,7 +49974,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": []
@@ -57182,7 +58115,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "XDM",
@@ -57767,7 +58700,7 @@
         },
         {
           "name": "FULLSCREEN",
-          "url": "https://www.w3.org/TR/fullscreen/"
+          "url": "https://fullscreen.spec.whatwg.org/"
         },
         {
           "name": "HTML",
@@ -57783,7 +58716,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -59546,7 +60479,7 @@
         },
         {
           "name": "CSS3-VALUES",
-          "url": "https://www.w3.org/TR/css-values/"
+          "url": "https://www.w3.org/TR/css-values-3/"
         },
         {
           "name": "CSSOM",
@@ -59558,7 +60491,7 @@
         },
         {
           "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "DOM-PARSING",
@@ -59642,11 +60575,11 @@
         },
         {
           "name": "URL",
-          "url": "https://www.w3.org/TR/url-1/"
+          "url": "https://url.spec.whatwg.org/"
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "XPATH",
@@ -59993,7 +60926,7 @@
       "normative": [
         {
           "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "FILEAPI",
@@ -60029,11 +60962,11 @@
         },
         {
           "name": "SERVICE-WORKERS",
-          "url": "https://www.w3.org/TR/service-workers/"
+          "url": "https://www.w3.org/TR/service-workers-1/"
         },
         {
           "name": "URL",
-          "url": "https://www.w3.org/TR/url-1/"
+          "url": "https://url.spec.whatwg.org/"
         },
         {
           "name": "WEBIDL",
@@ -61142,7 +62075,7 @@
         },
         {
           "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HR-TIME-2",
@@ -61186,7 +62119,7 @@
         },
         {
           "name": "SERVICE-WORKERS",
-          "url": "https://www.w3.org/TR/service-workers/"
+          "url": "https://www.w3.org/TR/service-workers-1/"
         },
         {
           "name": "WORKERS",
@@ -61194,7 +62127,7 @@
         },
         {
           "name": "WebIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "XMLHttpRequest",
@@ -61716,11 +62649,11 @@
         },
         {
           "name": "SERVICE-WORKERS",
-          "url": "https://www.w3.org/TR/service-workers/"
+          "url": "https://www.w3.org/TR/service-workers-1/"
         },
         {
           "name": "WebIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -62547,7 +63480,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HTML5",
@@ -62559,7 +63492,7 @@
         },
         {
           "name": "WEBIDL-1",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://www.w3.org/TR/2016/REC-WebIDL-1-20161215/"
         }
       ],
       "informative": []
@@ -63380,7 +64313,7 @@
         },
         {
           "name": "WebIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -64094,7 +65027,7 @@
       "normative": [
         {
           "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HTML5",
@@ -64939,7 +65872,7 @@
         },
         {
           "name": "SERVICE-WORKERS",
-          "url": "https://www.w3.org/TR/service-workers/"
+          "url": "https://www.w3.org/TR/service-workers-1/"
         },
         {
           "name": "WORKERS",
@@ -64947,7 +65880,7 @@
         },
         {
           "name": "WebIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
@@ -65224,7 +66157,7 @@
         },
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HIGHRES-TIME",
@@ -65244,7 +66177,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": []
@@ -65620,7 +66553,7 @@
       "normative": [
         {
           "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "ECMASCRIPT",
@@ -65628,7 +66561,7 @@
         },
         {
           "name": "ENCODING",
-          "url": "https://www.w3.org/TR/encoding/"
+          "url": "https://encoding.spec.whatwg.org/"
         },
         {
           "name": "FILEAPI",
@@ -65656,11 +66589,11 @@
         },
         {
           "name": "SERVICE-WORKERS",
-          "url": "https://www.w3.org/TR/service-workers/"
+          "url": "https://www.w3.org/TR/service-workers-1/"
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "WEBPUSH-ENCRYPTION",
@@ -66478,80 +67411,7 @@
     "latest": "https://webaudio.github.io/web-audio-api/",
     "title": "Web Audio API",
     "date": "22 August 2016",
-    "refs": {
-      "normative": [
-        {
-          "name": "DOM",
-          "url": "https://www.w3.org/TR/dom/"
-        },
-        {
-          "name": "ECMASCRIPT",
-          "url": "https://tc39.github.io/ecma262/"
-        },
-        {
-          "name": "HTML",
-          "url": "https://html.spec.whatwg.org/multipage/"
-        },
-        {
-          "name": "RFC2119",
-          "url": "https://tools.ietf.org/html/rfc2119"
-        },
-        {
-          "name": "TYPED-ARRAYS",
-          "url": "https://www.khronos.org/registry/typedarray/specs/latest/"
-        },
-        {
-          "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
-        },
-        {
-          "name": "Workers",
-          "url": "https://www.w3.org/TR/workers/"
-        },
-        {
-          "name": "hr-time-2",
-          "url": "https://www.w3.org/TR/hr-time-2/"
-        },
-        {
-          "name": "mediacapture-streams",
-          "url": "https://www.w3.org/TR/mediacapture-streams/"
-        },
-        {
-          "name": "webrtc",
-          "url": "https://www.w3.org/TR/webrtc/"
-        },
-        {
-          "name": "worklets-1",
-          "url": "https://www.w3.org/TR/worklets-1/"
-        }
-      ],
-      "informative": [
-        {
-          "name": "2dcontext",
-          "url": "https://www.w3.org/TR/2dcontext/"
-        },
-        {
-          "name": "WEBGL",
-          "url": "https://www.khronos.org/registry/webgl/specs/1.0/"
-        },
-        {
-          "name": "XHR",
-          "url": "https://xhr.spec.whatwg.org/"
-        },
-        {
-          "name": "mediastream-recording",
-          "url": "https://www.w3.org/TR/mediastream-recording/"
-        },
-        {
-          "name": "mimesniff",
-          "url": "https://mimesniff.spec.whatwg.org/"
-        },
-        {
-          "name": "webaudio-usecases",
-          "url": "https://www.w3.org/TR/webaudio-usecases/"
-        }
-      ]
-    },
+    "refs": {},
     "idl": {
       "jsNames": {
         "constructors": {
@@ -74523,7 +75383,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "ECMASCRIPT",
@@ -74547,7 +75407,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         },
         {
           "name": "charmod-norm",
@@ -125674,7 +126534,7 @@
       "normative": [
         {
           "name": "DOM4",
-          "url": "https://www.w3.org/TR/dom/"
+          "url": "https://dom.spec.whatwg.org/"
         },
         {
           "name": "HTML5",
@@ -125686,7 +126546,7 @@
         },
         {
           "name": "WEBIDL",
-          "url": "https://www.w3.org/TR/WebIDL-1/"
+          "url": "https://heycam.github.io/webidl/"
         }
       ],
       "informative": [
