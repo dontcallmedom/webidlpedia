@@ -62638,7 +62638,8 @@
       "https://www.w3.org/TR/2016/WD-resource-timing-2-20161103/",
       "https://www.w3.org/TR/resource-timing-2/",
       "https://w3c.github.io/resource-timing/",
-      "https://www.w3.org/TR/resource-timing/"
+      "https://www.w3.org/TR/resource-timing/",
+      "https://www.w3.org/TR/2017/CR-resource-timing-1-20170330/"
     ],
     "latest": "https://w3c.github.io/resource-timing/",
     "title": "Resource Timing Level 3",
@@ -130523,6 +130524,663 @@
       },
       "idlNames": {
         "_dependencies": {}
+      },
+      "idlExtendedNames": {},
+      "externalDependencies": []
+    }
+  },
+  {
+    "url": "https://www.w3.org/TR/permissions/",
+    "shortname": "permissions",
+    "versions": [
+      "http://www.w3.org/TR/2015/WD-permissions-20150407/",
+      "https://www.w3.org/TR/permissions/",
+      "https://w3c.github.io/permissions/"
+    ],
+    "latest": "https://w3c.github.io/permissions/",
+    "title": "Permissions",
+    "date": "23 June 2017",
+    "refs": {
+      "normative": [
+        {
+          "name": "DOM",
+          "url": "https://dom.spec.whatwg.org/"
+        },
+        {
+          "name": "ECMASCRIPT",
+          "url": "https://tc39.github.io/ecma262/"
+        },
+        {
+          "name": "HTML",
+          "url": "https://html.spec.whatwg.org/multipage/"
+        },
+        {
+          "name": "PROMISES-GUIDE",
+          "url": "https://www.w3.org/2001/tag/doc/promises-guide"
+        },
+        {
+          "name": "RFC2119",
+          "url": "https://tools.ietf.org/html/rfc2119"
+        },
+        {
+          "name": "SECURE-CONTEXTS",
+          "url": "https://www.w3.org/TR/secure-contexts/"
+        },
+        {
+          "name": "UIEVENTS",
+          "url": "https://www.w3.org/TR/uievents/"
+        },
+        {
+          "name": "WebIDL",
+          "url": "https://heycam.github.io/webidl/"
+        }
+      ],
+      "informative": [
+        {
+          "name": "ACCELEROMETER",
+          "url": "https://www.w3.org/TR/accelerometer/"
+        },
+        {
+          "name": "AMBIENT-LIGHT",
+          "url": "https://www.w3.org/TR/ambient-light/"
+        },
+        {
+          "name": "AUDIO-OUTPUT",
+          "url": "https://www.w3.org/TR/audio-output/"
+        },
+        {
+          "name": "CLIPBOARD-APIS",
+          "url": "https://www.w3.org/TR/clipboard-apis/"
+        },
+        {
+          "name": "geolocation-API",
+          "url": "https://www.w3.org/TR/geolocation-API/"
+        },
+        {
+          "name": "GETUSERMEDIA",
+          "url": "https://www.w3.org/TR/mediacapture-streams/"
+        },
+        {
+          "name": "GYROSCOPE",
+          "url": "https://www.w3.org/TR/gyroscope/"
+        },
+        {
+          "name": "MAGNETOMETER",
+          "url": "https://www.w3.org/TR/magnetometer/"
+        },
+        {
+          "name": "NOTIFICATIONS",
+          "url": "https://notifications.spec.whatwg.org/"
+        },
+        {
+          "name": "PUSH-API",
+          "url": "https://www.w3.org/TR/push-api/"
+        },
+        {
+          "name": "WEB-BACKGROUND-SYNC",
+          "url": "https://wicg.github.io/BackgroundSync/spec/"
+        },
+        {
+          "name": "WEB-BLUETOOTH",
+          "url": "https://webbluetoothcg.github.io/web-bluetooth/"
+        },
+        {
+          "name": "WEBMIDI",
+          "url": "https://www.w3.org/TR/webmidi/"
+        }
+      ]
+    },
+    "idl": {
+      "jsNames": {
+        "constructors": {},
+        "functions": {
+          "Window": [
+            "PermissionStatus",
+            "Permissions"
+          ],
+          "Worker": [
+            "PermissionStatus",
+            "Permissions"
+          ]
+        },
+        "objects": {}
+      },
+      "idlNames": {
+        "_dependencies": {
+          "PermissionDescriptor": [
+            "PermissionName"
+          ],
+          "PermissionStatus": [
+            "EventTarget",
+            "Window",
+            "Worker",
+            "PermissionState",
+            "EventHandler"
+          ],
+          "Navigator": [
+            "Permissions"
+          ],
+          "WorkerNavigator": [
+            "Permissions"
+          ],
+          "Permissions": [
+            "Window",
+            "Worker",
+            "PermissionStatus"
+          ],
+          "PushPermissionDescriptor": [
+            "PermissionDescriptor"
+          ],
+          "MidiPermissionDescriptor": [
+            "PermissionDescriptor"
+          ],
+          "DevicePermissionDescriptor": [
+            "PermissionDescriptor"
+          ]
+        },
+        "PermissionDescriptor": {
+          "type": "dictionary",
+          "name": "PermissionDescriptor",
+          "partial": false,
+          "members": [
+            {
+              "type": "field",
+              "name": "name",
+              "required": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "PermissionName"
+              },
+              "extAttrs": []
+            }
+          ],
+          "inheritance": null,
+          "extAttrs": []
+        },
+        "PermissionState": {
+          "type": "enum",
+          "name": "PermissionState",
+          "values": [
+            "granted",
+            "denied",
+            "prompt"
+          ],
+          "extAttrs": []
+        },
+        "PermissionStatus": {
+          "type": "interface",
+          "name": "PermissionStatus",
+          "partial": false,
+          "members": [
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": true,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "PermissionState"
+              },
+              "name": "state",
+              "extAttrs": []
+            },
+            {
+              "type": "attribute",
+              "static": false,
+              "stringifier": false,
+              "inherit": false,
+              "readonly": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "EventHandler"
+              },
+              "name": "onchange",
+              "extAttrs": []
+            }
+          ],
+          "inheritance": "EventTarget",
+          "extAttrs": [
+            {
+              "name": "Exposed",
+              "arguments": null,
+              "rhs": {
+                "type": "identifier-list",
+                "value": [
+                  "Window",
+                  "Worker"
+                ]
+              }
+            }
+          ]
+        },
+        "Permissions": {
+          "type": "interface",
+          "name": "Permissions",
+          "partial": false,
+          "members": [
+            {
+              "type": "operation",
+              "getter": false,
+              "setter": false,
+              "creator": false,
+              "deleter": false,
+              "legacycaller": false,
+              "static": false,
+              "stringifier": false,
+              "idlType": {
+                "sequence": false,
+                "generic": "Promise",
+                "nullable": false,
+                "union": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "union": false,
+                  "idlType": "PermissionStatus"
+                }
+              },
+              "name": "query",
+              "arguments": [
+                {
+                  "optional": false,
+                  "variadic": false,
+                  "extAttrs": [],
+                  "idlType": {
+                    "sequence": false,
+                    "generic": null,
+                    "nullable": false,
+                    "union": false,
+                    "idlType": "object"
+                  },
+                  "name": "permissionDesc"
+                }
+              ],
+              "extAttrs": []
+            },
+            {
+              "type": "operation",
+              "getter": false,
+              "setter": false,
+              "creator": false,
+              "deleter": false,
+              "legacycaller": false,
+              "static": false,
+              "stringifier": false,
+              "idlType": {
+                "sequence": false,
+                "generic": "Promise",
+                "nullable": false,
+                "union": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "union": false,
+                  "idlType": "PermissionStatus"
+                }
+              },
+              "name": "request",
+              "arguments": [
+                {
+                  "optional": false,
+                  "variadic": false,
+                  "extAttrs": [],
+                  "idlType": {
+                    "sequence": false,
+                    "generic": null,
+                    "nullable": false,
+                    "union": false,
+                    "idlType": "object"
+                  },
+                  "name": "permissionDesc"
+                }
+              ],
+              "extAttrs": []
+            },
+            {
+              "type": "operation",
+              "getter": false,
+              "setter": false,
+              "creator": false,
+              "deleter": false,
+              "legacycaller": false,
+              "static": false,
+              "stringifier": false,
+              "idlType": {
+                "sequence": false,
+                "generic": "Promise",
+                "nullable": false,
+                "union": false,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "union": false,
+                  "idlType": "PermissionStatus"
+                }
+              },
+              "name": "revoke",
+              "arguments": [
+                {
+                  "optional": false,
+                  "variadic": false,
+                  "extAttrs": [],
+                  "idlType": {
+                    "sequence": false,
+                    "generic": null,
+                    "nullable": false,
+                    "union": false,
+                    "idlType": "object"
+                  },
+                  "name": "permissionDesc"
+                }
+              ],
+              "extAttrs": []
+            }
+          ],
+          "inheritance": null,
+          "extAttrs": [
+            {
+              "name": "Exposed",
+              "arguments": null,
+              "rhs": {
+                "type": "identifier-list",
+                "value": [
+                  "Window",
+                  "Worker"
+                ]
+              }
+            }
+          ]
+        },
+        "PermissionName": {
+          "type": "enum",
+          "name": "PermissionName",
+          "values": [
+            "geolocation",
+            "notifications",
+            "push",
+            "midi",
+            "camera",
+            "microphone",
+            "speaker",
+            "device-info",
+            "background-sync",
+            "bluetooth",
+            "persistent-storage",
+            "ambient-light-sensor",
+            "accelerometer",
+            "gyroscope",
+            "magnetometer",
+            "clipboard"
+          ],
+          "extAttrs": []
+        },
+        "PushPermissionDescriptor": {
+          "type": "dictionary",
+          "name": "PushPermissionDescriptor",
+          "partial": false,
+          "members": [
+            {
+              "type": "field",
+              "name": "userVisibleOnly",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "boolean"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ],
+          "inheritance": "PermissionDescriptor",
+          "extAttrs": []
+        },
+        "MidiPermissionDescriptor": {
+          "type": "dictionary",
+          "name": "MidiPermissionDescriptor",
+          "partial": false,
+          "members": [
+            {
+              "type": "field",
+              "name": "sysex",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "boolean"
+              },
+              "extAttrs": [],
+              "default": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          ],
+          "inheritance": "PermissionDescriptor",
+          "extAttrs": []
+        },
+        "DevicePermissionDescriptor": {
+          "type": "dictionary",
+          "name": "DevicePermissionDescriptor",
+          "partial": false,
+          "members": [
+            {
+              "type": "field",
+              "name": "deviceId",
+              "required": false,
+              "idlType": {
+                "sequence": false,
+                "generic": null,
+                "nullable": false,
+                "union": false,
+                "idlType": "DOMString"
+              },
+              "extAttrs": []
+            }
+          ],
+          "inheritance": "PermissionDescriptor",
+          "extAttrs": []
+        }
+      },
+      "idlExtendedNames": {
+        "Navigator": [
+          {
+            "type": "interface",
+            "name": "Navigator",
+            "partial": true,
+            "members": [
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": true,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "union": false,
+                  "idlType": "Permissions"
+                },
+                "name": "permissions",
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": [
+              {
+                "name": "Exposed",
+                "arguments": null,
+                "rhs": {
+                  "type": "identifier-list",
+                  "value": [
+                    "Window"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "WorkerNavigator": [
+          {
+            "type": "interface",
+            "name": "WorkerNavigator",
+            "partial": true,
+            "members": [
+              {
+                "type": "attribute",
+                "static": false,
+                "stringifier": false,
+                "inherit": false,
+                "readonly": true,
+                "idlType": {
+                  "sequence": false,
+                  "generic": null,
+                  "nullable": false,
+                  "union": false,
+                  "idlType": "Permissions"
+                },
+                "name": "permissions",
+                "extAttrs": []
+              }
+            ],
+            "extAttrs": [
+              {
+                "name": "Exposed",
+                "arguments": null,
+                "rhs": {
+                  "type": "identifier-list",
+                  "value": [
+                    "Worker"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "externalDependencies": [
+        "EventTarget",
+        "Window",
+        "Worker",
+        "EventHandler",
+        "Navigator",
+        "WorkerNavigator"
+      ]
+    }
+  },
+  {
+    "url": "https://www.w3.org/TR/referrer-policy/",
+    "shortname": "referrer-policy",
+    "versions": [
+      "https://www.w3.org/TR/2017/CR-referrer-policy-20170126/",
+      "https://www.w3.org/TR/2016/WD-referrer-policy-20161222/",
+      "https://www.w3.org/TR/2016/WD-referrer-policy-20161016/",
+      "http://www.w3.org/TR/2016/WD-referrer-policy-20160601/",
+      "http://www.w3.org/TR/2014/WD-referrer-policy-20140807/",
+      "https://www.w3.org/TR/referrer-policy/",
+      "https://w3c.github.io/webappsec-referrer-policy/"
+    ],
+    "latest": "https://w3c.github.io/webappsec-referrer-policy/",
+    "title": "Referrer Policy",
+    "date": "20 April 2017",
+    "refs": {
+      "normative": [
+        {
+          "name": "CSSOM-1",
+          "url": "https://www.w3.org/TR/cssom-1/"
+        },
+        {
+          "name": "DOM",
+          "url": "https://dom.spec.whatwg.org/"
+        },
+        {
+          "name": "FETCH",
+          "url": "https://fetch.spec.whatwg.org/"
+        },
+        {
+          "name": "HTML",
+          "url": "https://html.spec.whatwg.org/multipage/"
+        },
+        {
+          "name": "RFC2119",
+          "url": "https://tools.ietf.org/html/rfc2119"
+        },
+        {
+          "name": "RFC5234",
+          "url": "https://tools.ietf.org/html/rfc5234"
+        },
+        {
+          "name": "RFC7230",
+          "url": "https://tools.ietf.org/html/rfc7230"
+        },
+        {
+          "name": "RFC7231",
+          "url": "https://tools.ietf.org/html/rfc7231"
+        },
+        {
+          "name": "SECURE-CONTEXTS",
+          "url": "https://www.w3.org/TR/secure-contexts/"
+        },
+        {
+          "name": "URL",
+          "url": "https://url.spec.whatwg.org/"
+        },
+        {
+          "name": "WSC-UI",
+          "url": "https://www.w3.org/TR/wsc-ui/"
+        }
+      ],
+      "informative": [
+        {
+          "name": "CAPABILITY-URLS",
+          "url": "https://www.w3.org/TR/capability-urls/"
+        }
+      ]
+    },
+    "idl": {
+      "jsNames": {
+        "constructors": {},
+        "functions": {},
+        "objects": {}
+      },
+      "idlNames": {
+        "_dependencies": {},
+        "ReferrerPolicy": {
+          "type": "enum",
+          "name": "ReferrerPolicy",
+          "values": [
+            "",
+            "no-referrer",
+            "no-referrer-when-downgrade",
+            "same-origin",
+            "origin",
+            "strict-origin",
+            "origin-when-cross-origin",
+            "strict-origin-when-cross-origin",
+            "unsafe-url"
+          ],
+          "extAttrs": []
+        }
       },
       "idlExtendedNames": {},
       "externalDependencies": []
