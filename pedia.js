@@ -1,8 +1,8 @@
 fetch("results.json")
     .then(r => r.json())
-    .then(data => {
+    .then(({results}) => {
         var used_by = {};
-        data.forEach(s => {
+        results.forEach(s => {
             if (s.idl && s.idl.idlNames) {
                 Object.keys(s.idl.idlNames).forEach(n => { if (!used_by[n]) used_by[n] = [];});
                 Object.keys(s.idl.idlNames._dependencies).forEach( n => {
@@ -21,17 +21,17 @@ fetch("results.json")
         const paramValue = params.split("=")[1] || null;
         switch(paramName) {
         case "idlname":
-            body.appendChild(interfaceDetails(data, paramValue, used_by));
+            body.appendChild(interfaceDetails(results, paramValue, used_by));
             break;
         case "enums":
-            body.appendChild(enumNames(data, paramValue));
+            body.appendChild(enumNames(results, paramValue));
             break;
         case "extattr":
-            body.appendChild(extAttrUsage(data, paramValue));
+            body.appendChild(extAttrUsage(results, paramValue));
             break;
         case "full":
         default:
-            body.appendChild(fullList(data, used_by, paramValue));
+            body.appendChild(fullList(results, used_by, paramValue));
         }
     });
 
