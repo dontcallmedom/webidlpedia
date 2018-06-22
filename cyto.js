@@ -1,6 +1,7 @@
-fetch('results.json').then(r => r.json()).then(data => {
+fetch('/webidlpedia/results.json').then(r => r.json()).then(data => {
+    var results = data.results;
     var used_by = {};
-    data.forEach(s => {
+    results.forEach(s => {
         if (s.idl && s.idl.idlNames) {
             Object.keys(s.idl.idlNames).forEach(n => { if (!used_by[n]) used_by[n] = [];});
             Object.keys(s.idl.idlNames._dependencies).forEach( n => {
@@ -18,14 +19,14 @@ fetch('results.json').then(r => r.json()).then(data => {
     var nodes = [];
     var typeColors = {"interface": "#00F", "dictionary": "#0F0", "typedef": "#666", "enum": "#000"};
     var color = t => { return typeColors[t] || "#666";}
-    data.forEach(s => {
+    results.forEach(s => {
         if (s.idl && s.idl.idlNames) {
             nodes = nodes.concat(Object.keys(s.idl.idlNames).filter(n => n!=="_dependencies").map(n => {return {data: {id:n, type: color(s.idl.idlNames[n].type), size: used_by[n] ? used_by[n].length + 1 : 1}, selectable: true};}));
         }
     });
     var names = nodes.map( n => n.data.id);
     var edges = [];
-    data.forEach(s => {
+    results.forEach(s => {
         if (s.idl && s.idl.idlNames) {
             Object.keys(s.idl.idlNames._dependencies).forEach( n => {
                 s.idl.idlNames._dependencies[n].forEach(d => {

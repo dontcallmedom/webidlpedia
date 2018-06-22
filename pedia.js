@@ -1,4 +1,4 @@
-fetch("results.json")
+fetch("/webidlpedia/results.json")
     .then(r => r.json())
     .then(({results}) => {
         var used_by = {};
