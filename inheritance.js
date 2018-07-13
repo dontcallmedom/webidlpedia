@@ -22,7 +22,7 @@ function listChildren(parentName, interfaces) {
 d3.json("results.json", function(json) {
     var links = [];
     var nodes = [];
-    var interfaces = json.filter(s=> s.idl && s.idl.idlNames)
+    var interfaces = json.results.filter(s=> s.idl && s.idl.idlNames)
         .map(s => s.idl.idlNames)
         .reduce((a,b) => { Object.keys(b).forEach(k => { if (b[k].type === "interface") { a[k] = b[k];} }); return a;},{});
     var rootName = "EventTarget";
