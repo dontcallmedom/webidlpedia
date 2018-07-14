@@ -180,7 +180,7 @@ function enumNames(data, sort) {
                .filter(n => n!=="_dependencies")
                .filter(n => spec.idl.idlNames[n].type === "enum")
                .map(n => spec.idl.idlNames[n].values.map(v =>
-                                                         {return {url: spec.url,title: spec.title, enumName: n, value: v};})
+                                                         {return {url: spec.url,title: spec.title, enumName: n, value: v.value};})
                     .reduce((a,b) => a.concat(b), [])))
           .reduce((a,b) => a.concat(b), [])
           .reduce((a,b) => a.concat(b), [])
