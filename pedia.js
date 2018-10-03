@@ -309,7 +309,16 @@ function memberNames(data, sort) {
         const specList = document.createElement("ol");
         e.specs.forEach(s => {
             const spec = document.createElement("li");
-            spec.appendChild(document.createTextNode(" used as " + s.type + " in " + s.containerType + " " + s.containerName + " in "));
+            spec.appendChild(document.createTextNode(" used as "));
+            const type = document.createElement("strong");
+            type.textContent = s.type;
+            spec.appendChild(type);
+            spec.appendChild(document.createTextNode(" in " + s.containerType + " "));
+            const idlLink = document.createElement("a");
+            idlLink.href= "./?idlname=" + s.containerName;
+            idlLink.textContent = s.containerName;
+            spec.appendChild(idlLink)
+            spec.appendChild(document.createTextNode(" in "));
             const link = document.createElement("a");
             link.href=s.url;
             link.textContent = s.title;
