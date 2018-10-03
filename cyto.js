@@ -1,4 +1,4 @@
-fetch('results.json').then(r => r.json()).then(data => {
+fetch('results.json').then(r => r.json()).then(({results:data}) => {
     var used_by = {};
     data.forEach(s => {
         if (s.idl && s.idl.idlNames) {
