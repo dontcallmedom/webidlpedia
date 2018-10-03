@@ -29,6 +29,9 @@ fetch("results.json")
         case "extattr":
             body.appendChild(extAttrUsage(results, paramValue));
             break;
+        case "members":
+            body.appendChild(memberNames(results, paramValue));
+            break;
         case "full":
         default:
             body.appendChild(fullList(results, used_by, paramValue));
@@ -267,7 +270,60 @@ function enumNames(data, sort) {
         section.appendChild(ol);
         return section;
     }
-    
+
+function memberNames(data, sort) {
+    const section = document.createElement("section");
+    const h2 = document.createElement("h2");
+    h2.textContent = "Names used for attributes/members/methods";
+    section.appendChild(h2);
+
+    const sortFn = sort === "popularity" ? ((e1, e2) => e2.specs.length - e1.specs.length) : defaultSort;
+
+    section.appendChild(sorterLink("members", sort));
+
+    const ol = document.createElement("ol");
+    data.filter(hasIdlDef)
+    const memberNames = data.filter(hasIdlDef)
+          .map(spec =>
+               Object.keys(spec.idl.idlNames)
+               .filter(n => n!=="_dependencies")
+               .filter(n => ["interface", "dictionary"].includes(spec.idl.idlNames[n].type))
+               .map(n => spec.idl.idlNames[n].members.map(v =>
+                                                          {return {url: spec.url,title: spec.title, containerType: spec.idl.idlNames[n].type, containerName: n, value: v.name, type: v.type};})
+                    .reduce((a,b) => a.concat(b), [])))
+          .reduce((a,b) => a.concat(b), [])
+          .reduce((a,b) => a.concat(b), [])
+          .sort(defaultSort);
+    const uniqueNames = memberNames.map(e => e.value);
+    const uniqueMemberNames = memberNames.filter((e, i) => i === uniqueNames.indexOf(e.value))
+          .map(e => {
+              const matchingNames = memberNames.filter(f => f.value === e.value);
+              return {value: e.value,
+                      specs: matchingNames.map(f => { return {containerName: f.containerName, containerType: f.containerType, type: f.type, title: f.title, url: f.url};})
+                     };
+          }).
+          sort(sortFn);
+    uniqueMemberNames.forEach(e => {
+        const item = document.createElement("li");
+        item.appendChild(document.createTextNode('"'+ e.value + '"'));
+        const specList = document.createElement("ol");
+        e.specs.forEach(s => {
+            const spec = document.createElement("li");
+            spec.appendChild(document.createTextNode(" used as " + s.type + " in " + s.containerType + " " + s.containerName + " in "));
+            const link = document.createElement("a");
+            link.href=s.url;
+            link.textContent = s.title;
+            spec.appendChild(link)
+            specList.appendChild(spec);
+        });
+        item.appendChild(specList);
+        ol.appendChild(item);
+    });
+    section.appendChild(ol);
+    return section;
+}
+
+
 function sorterLink(paramName, sort) {
     const sorter = document.createElement("a");
     sorter.href = "?" + paramName + "=" + (sort === "popularity" ? "" : "popularity");
