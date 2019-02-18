@@ -199,6 +199,7 @@ function enumNames(data, sort) {
           sort(sortFn);
     uniqueEnumValues.forEach(e => {
         const item = document.createElement("li");
+        item.id = "x-" + e.value;
         item.appendChild(document.createTextNode('"'+ e.value + '"'));
         const specList = document.createElement("ol");
         e.specs.forEach(s => {
