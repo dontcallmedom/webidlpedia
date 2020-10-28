@@ -1,4 +1,4 @@
-fetch("https://tidoust.github.io/reffy-reports/ed/crawl.json", {mode:"cors"})
+fetch("https://w3c.github.io/webref/ed/crawl.json", {mode:"cors"})
     .then(r => r.json())
     .then(({results}) => {
         var used_by = {};
