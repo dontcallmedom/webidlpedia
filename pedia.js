@@ -57,7 +57,7 @@ function fullList(data, used_by, sort) {
     section.appendChild(p2);
     section.appendChild(sorterLink("full", sort));
 
-    [{type:"interface", title: "Interfaces"}, {type:"interface mixin", title: "Interface Mixins"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}, {type:"callback", title: "Callbacks"}].forEach(
+    [{type:"interface", title: "Interfaces"}, {type:"interface mixin", title: "Interface Mixins"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}, {type:"callback", title: "Callbacks"}, {type: "namespace", title: "Namespaces"}].forEach(
         type => {
             const h2 = document.createElement("h2");
             h2.textContent = type.title;
