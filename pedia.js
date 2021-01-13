@@ -1,3 +1,5 @@
+hljs.registerLanguage("webidl", hljsWEBIDL);
+
 const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 
 function formatIDLValue(def) {
@@ -219,6 +221,7 @@ function interfaceDetails(data, name, used_by) {
             const idlFragment = document.createElement("pre");
             idlFragment.className = "webidl";
             idlFragment.textContent = fromIDLParsedToIDL(spec.idl.idlNames[name]);
+            hljs.highlightBlock(idlFragment);
             section.appendChild(mainDef);
             section.appendChild(idlFragment);
         });
@@ -238,6 +241,7 @@ function interfaceDetails(data, name, used_by) {
             link.textContent = spec.title;
             partialIDLFragment.textContent = spec.idl.idlExtendedNames[name].map(fromIDLParsedToIDL).join("\n");
             item.appendChild(link);
+            hljs.highlightBlock(partialIDLFragment);
             item.appendChild(partialIDLFragment);
             partialDefList.appendChild(item);
 
