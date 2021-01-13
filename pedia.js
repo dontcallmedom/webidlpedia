@@ -1,3 +1,78 @@
+const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
+
+function formatIDLValue(def) {
+  switch(def.type) {
+  case "dictionary":
+    return '{}';
+  case "sequence":
+    return '[]';
+  case "null":
+    return 'null';
+  case "string":
+    return `"${def.value}"`;
+  case "boolean":
+  case "number":
+    return "" + def.value;
+  }
+}
+
+function formatExtendedAttribute(extAttr) {
+  return `${extAttr.name}${extAttr.rhs ? '=' + arrayify(extAttr.rhs.value).map(r => r.value).join(',') : ''}${extAttr.arguments.length ? '(' + extAttr.arguments.map(formatIDLItem).join(', ') + ')' : ''}`;
+}
+
+function formatIDLItem(item) {
+  let idl = `${item.extAttrs && item.extAttrs.length ? '[' + item.extAttrs.map(formatExtendedAttribute).join(', ') + '] ' : ''}`;
+  switch (item.type) {
+  case "operation":
+    idl += `${item.special ? item.special + ' ' : ''}${formatIDLType(item.idlType)} ${item.name}(${item.arguments.map(formatIDLItem).join(', ')})`;
+    break;
+  case "constructor":
+    idl += `${item.type}(${item.arguments.map(formatIDLItem).join(', ')})`;
+    break;
+  case "attribute":
+    idl += `${item.special ? item.special + ' ' : ''}${item.readonly ? "readonly " : ""}${item.type} ${formatIDLType(item.idlType)} ${item.name}`;
+    break;
+  case "maplike":
+  case "setlike":
+  case "iterable":
+    idl += `${item.readonly ? "readonly " : ""}${item.async ? "async " : ""}${item.type}<${item.idlType.map(formatIDLType).join(', ')}>`;
+    break;
+  case "argument":
+    idl += `${item.extAttrs.length ? '[' + item.extAttrs.map(formatExtendedAttribute).join(', ') + '] ' : ''}${item.optional ? "optional " : ""}${formatIDLType(item.idlType)}${item.variadic ? '...' : ''} ${item.name}${item.default ? ` = ${formatIDLValue(item.default)}` : ''}`;
+    break;
+  case "const":
+    idl += `const ${formatIDLType(item.idlType)} ${item.name}`;
+    break;
+  case "value":
+  case "member":
+    idl += `${formatIDLType(item.idlType)} ${item.name}`;
+  default:
+    console.error(`Unhandled IDL item type ${item.type}`);
+  }
+  return idl;
+}
+
+function formatIDLType(idlType) {
+  let idl = "${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''}";
+  if (typeof idlType.idlType === "string") {
+    idl = `${idlType.idlType}`;
+  } else if (idlType.generic) {
+    idl = `${idlType.generic}<${idlType.idlType.map(formatIDLType).join(', ')}>`;
+  } else if (idlType.union) {
+    idl = `(${idlType.idlType.map(formatIDLType).join(' or ')})`;
+  }
+  return idl + (idlType.nullable ? '?' : '');
+}
+
+function fromIDLParsedToIDL(obj) {
+  let idl = `${obj.extAttrs && obj.extAttrs.length ? '[' + obj.extAttrs.map(formatExtendedAttribute).join(', ') + ']\n' : ''}${obj.partial ? 'partial ' : ''}${obj.type} ${obj.name} ${obj.inheritance ? ": " + obj.inheritance + " " : ''}{\n`;
+  for (let m of (obj.members || obj.values || [])) {
+    idl += `  ${formatIDLItem(m)};\n`;
+  }
+  idl += `};`;
+  return idl;
+}
+
 fetch("https://w3c.github.io/webref/ed/crawl.json", {mode:"cors"})
     .then(r => r.json())
     .then(({results}) => {
@@ -108,7 +183,6 @@ function extendedIdlDfnLink(name, spec) {
   // Look for anchor among definitions to give more specific link if possible
   // we use the first member of the object since partials aren't dfn'd
   const firstMember = (spec.idl.idlExtendedNames[name][0].members || [])[0];
-  console.log(spec.idl.idlExtendedNames[name][0].members, firstMember);
   if (spec.dfns && firstMember) {
     const dfn = spec.dfns.find(dfn => dfn.type === firstMember.type.replace("operation", "method") && dfn.for.includes(name) && (dfn.linkingText.includes(firstMember.name) || dfn.localLinkingText.includes(firstMember.name)));
     if (dfn) {
@@ -138,8 +212,15 @@ function interfaceDetails(data, name, used_by) {
             type = spec.idl.idlNames[name].type;
             link.href= idlDfnLink(name, spec);
             mainDef.appendChild(link);
-            mainDef.appendChild(document.createTextNode(" defines " + name));
+            const code = document.createElement("code");
+            code.textContent = name;
+            mainDef.appendChild(document.createTextNode(" defines "));
+            mainDef.appendChild(code);
+            const idlFragment = document.createElement("pre");
+            idlFragment.className = "webidl";
+            idlFragment.textContent = fromIDLParsedToIDL(spec.idl.idlNames[name]);
             section.appendChild(mainDef);
+            section.appendChild(idlFragment);
         });
 
     const partialDef = document.createElement("p");
@@ -150,10 +231,17 @@ function interfaceDetails(data, name, used_by) {
         .forEach(spec => {
             const item = document.createElement("li");
             const link = document.createElement("a");
+            const partialIDLFragment = document.createElement("pre");
+            partialIDLFragment.className = "webidl";
+
             link.href = extendedIdlDfnLink(name, spec);
             link.textContent = spec.title;
+            partialIDLFragment.textContent = spec.idl.idlExtendedNames[name].map(fromIDLParsedToIDL).join("\n");
             item.appendChild(link);
+            item.appendChild(partialIDLFragment);
             partialDefList.appendChild(item);
+
+
         });
     if (partialDefList.childNodes.length) {
         section.appendChild(partialDef);
