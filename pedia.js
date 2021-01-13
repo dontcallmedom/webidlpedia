@@ -89,6 +89,36 @@ function fullList(data, used_by, sort) {
     return section;
 }
 
+function idlDfnLink(name, spec) {
+  let url = spec.url;
+  const type = (spec.idl.idlNames[name] || {}).type;
+  // Look for anchor among definitions to give more specific link if possible
+  if (spec.dfns && type) {
+    const dfn = spec.dfns.find(dfn => dfn.type === type && dfn.linkingText.includes(name));
+    if (dfn) {
+      url = dfn.href;
+    }
+  }
+  return url;
+}
+
+function extendedIdlDfnLink(name, spec) {
+  let url = spec.url;
+  if (!spec.idl.idlExtendedNames[name] || !spec.idl.idlExtendedNames[name].length) return url;
+  // Look for anchor among definitions to give more specific link if possible
+  // we use the first member of the object since partials aren't dfn'd
+  const firstMember = (spec.idl.idlExtendedNames[name][0].members || [])[0];
+  console.log(spec.idl.idlExtendedNames[name][0].members, firstMember);
+  if (spec.dfns && firstMember) {
+    const dfn = spec.dfns.find(dfn => dfn.type === firstMember.type.replace("operation", "method") && dfn.for.includes(name) && (dfn.linkingText.includes(firstMember.name) || dfn.localLinkingText.includes(firstMember.name)));
+    if (dfn) {
+      url = dfn.heading.id ? spec.url + "#" + dfn.heading.id : dfn.href;
+    }
+  }
+  return url;
+}
+
+
 function interfaceDetails(data, name, used_by) {
     const section = document.createElement("section");
     const h2 = document.createElement("h2");
@@ -105,8 +135,8 @@ function interfaceDetails(data, name, used_by) {
             const mainDef = document.createElement("p");
             const link = document.createElement("a");
             link.textContent = spec.title;
-            link.href= spec.url;
             type = spec.idl.idlNames[name].type;
+            link.href= idlDfnLink(name, spec);
             mainDef.appendChild(link);
             mainDef.appendChild(document.createTextNode(" defines " + name));
             section.appendChild(mainDef);
@@ -120,7 +150,7 @@ function interfaceDetails(data, name, used_by) {
         .forEach(spec => {
             const item = document.createElement("li");
             const link = document.createElement("a");
-            link.href = spec.url;
+            link.href = extendedIdlDfnLink(name, spec);
             link.textContent = spec.title;
             item.appendChild(link);
             partialDefList.appendChild(item);
