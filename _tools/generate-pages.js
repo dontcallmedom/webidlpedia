@@ -74,12 +74,16 @@ function formatIDLType(idlType) {
 }
 
 function fromIDLParsedToIDL(obj) {
-  let idl = `${obj.extAttrs && obj.extAttrs.length ? '[' + obj.extAttrs.map(formatExtendedAttribute).join(', ') + ']\n' : ''}${obj.partial ? 'partial ' : ''}${obj.type} ${obj.name} ${obj.inheritance ? ": " + obj.inheritance + " " : ''}{\n`;
-  for (let m of (obj.members || obj.values || [])) {
-    idl += `  ${formatIDLItem(m)};\n`;
+  if (obj.includes) {
+    return `${obj.name} includes ${obj.includes};`;
+  } else {
+    let idl = `${obj.extAttrs && obj.extAttrs.length ? '[' + obj.extAttrs.map(formatExtendedAttribute).join(', ') + ']\n' : ''}${obj.partial ? 'partial ' : ''}${obj.type} ${obj.name} ${obj.inheritance ? ": " + obj.inheritance + " " : ''}{\n`;
+    for (let m of (obj.members || obj.values || [])) {
+      idl += `  ${formatIDLItem(m)};\n`;
+    }
+    idl += `};`;
+    return idl;
   }
-  idl += `};`;
-  return idl;
 }
 
 function generatePage(path, title, content) {
