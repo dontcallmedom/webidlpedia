@@ -1,0 +1,36 @@
+---
+title: PannerNode
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#pannernode">Web Audio API</a> defines <code>PannerNode</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface PannerNode : AudioNode {
+  constructor(BaseAudioContext context, optional PannerOptions options = {});
+  attribute PanningModelType panningModel;
+  readonly attribute AudioParam positionX;
+  readonly attribute AudioParam positionY;
+  readonly attribute AudioParam positionZ;
+  readonly attribute AudioParam orientationX;
+  readonly attribute AudioParam orientationY;
+  readonly attribute AudioParam orientationZ;
+  attribute DistanceModelType distanceModel;
+  attribute double refDistance;
+  attribute double maxDistance;
+  attribute double rolloffFactor;
+  attribute double coneInnerAngle;
+  attribute double coneOuterAngle;
+  attribute double coneOuterGain;
+  undefined setPosition(float x, float y, float z);
+  undefined setOrientation(float x, float y, float z);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="BaseAudioContext.html">BaseAudioContext</a></li></ul>
+</section>
+  

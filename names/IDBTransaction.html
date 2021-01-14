@@ -1,0 +1,30 @@
+---
+title: IDBTransaction
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/IndexedDB/#idbtransaction">Indexed Database API 3.0</a> defines <code>IDBTransaction</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface IDBTransaction : EventTarget {
+  readonly attribute DOMStringList objectStoreNames;
+  readonly attribute IDBTransactionMode mode;
+  readonly attribute IDBTransactionDurability durability;
+  [SameObject] readonly attribute IDBDatabase db;
+  readonly attribute DOMException? error;
+  IDBObjectStore objectStore(DOMString name);
+  undefined commit();
+  undefined abort();
+  attribute EventHandler onabort;
+  attribute EventHandler oncomplete;
+  attribute EventHandler onerror;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="IDBRequest.html">IDBRequest</a></li><li><a href="IDBDatabase.html">IDBDatabase</a></li><li><a href="IDBObjectStore.html">IDBObjectStore</a></li></ul>
+</section>
+  

@@ -1,0 +1,25 @@
+---
+title: HTMLPortalElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/portals/#htmlportalelement">Portals</a> defines <code>HTMLPortalElement</code></p>
+<pre class=webidl><code>[Exposed=Window, HTMLConstructor]
+interface HTMLPortalElement : HTMLElement {
+  [CEReactions] attribute USVString src;
+  [CEReactions] attribute DOMString referrerPolicy;
+  [NewObject] Promise<undefined> activate(optional PortalActivateOptions options = {});
+  undefined postMessage(any message, optional PostMessageOptions options = {});
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PortalActivateEvent.html">PortalActivateEvent</a></li></ul>
+</section>
+  

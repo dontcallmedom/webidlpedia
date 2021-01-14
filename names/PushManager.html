@@ -1,0 +1,23 @@
+---
+title: PushManager
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/push-api/#dom-pushmanager">Push API</a> defines <code>PushManager</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker, SecureContext]
+interface PushManager {
+  [SameObject] static readonly attribute FrozenArray<DOMString> supportedContentEncodings;
+  Promise<PushSubscription> subscribe(optional PushSubscriptionOptionsInit options = {});
+  Promise<PushSubscription?> getSubscription();
+  Promise<PushPermissionState> permissionState(optional PushSubscriptionOptionsInit options = {});
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li></ul>
+</section>
+  

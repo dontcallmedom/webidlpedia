@@ -1,0 +1,24 @@
+---
+title: FetchEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/ServiceWorker/#fetchevent">Service Workers Nightly</a> defines <code>FetchEvent</code></p>
+<pre class=webidl><code>[Exposed=ServiceWorker]
+interface FetchEvent : ExtendableEvent {
+  constructor(DOMString type, FetchEventInit eventInitDict);
+  [SameObject] readonly attribute Request request;
+  readonly attribute Promise<any> preloadResponse;
+  readonly attribute DOMString clientId;
+  readonly attribute DOMString resultingClientId;
+  readonly attribute DOMString replacesClientId;
+  readonly attribute Promise<undefined> handled;
+  undefined respondWith(Promise<Response> r);
+};</code></pre>
+  
+</section>
+
+  

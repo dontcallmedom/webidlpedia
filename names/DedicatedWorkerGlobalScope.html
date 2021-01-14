@@ -1,0 +1,24 @@
+---
+title: DedicatedWorkerGlobalScope
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/workers.html#dedicatedworkerglobalscope">HTML Standard</a> defines <code>DedicatedWorkerGlobalScope</code></p>
+<pre class=webidl><code>[Global=Worker,DedicatedWorker, Exposed=DedicatedWorker]
+interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
+  [Replaceable] readonly attribute DOMString name;
+  undefined postMessage(any message, sequence<object> transfer);
+  undefined postMessage(any message, optional PostMessageOptions options = {});
+  undefined close();
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface DedicatedWorkerGlobalScope {
+};</code></pre></li></ol>
+</section>
+
+  

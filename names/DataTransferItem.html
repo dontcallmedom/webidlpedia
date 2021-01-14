@@ -1,0 +1,30 @@
+---
+title: DataTransferItem
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransferitem">HTML Standard</a> defines <code>DataTransferItem</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface DataTransferItem {
+  readonly attribute DOMString kind;
+  readonly attribute DOMString type;
+  undefined getAsString(FunctionStringCallback? callback);
+  File? getAsFile();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>
+<pre class=webidl><code>partial interface DataTransferItem {
+  FileSystemEntry? webkitGetAsEntry();
+};</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
+<pre class=webidl><code>partial interface DataTransferItem {
+  Promise<FileSystemHandle?> getAsFileSystemHandle();
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="DataTransferItemList.html">DataTransferItemList</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a> refers to <code>DataTransferItem</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>DataTransferItem</code></li></ul>
+</section>

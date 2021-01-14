@@ -1,0 +1,29 @@
+---
+title: SVGNumberList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGNumberList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGNumberList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SVGNumberList {
+  readonly attribute unsigned long length;
+  readonly attribute unsigned long numberOfItems;
+  void clear();
+  SVGNumber initialize(SVGNumber newItem);
+  getter SVGNumber getItem(unsigned long index);
+  SVGNumber insertItemBefore(SVGNumber newItem, unsigned long index);
+  SVGNumber replaceItem(SVGNumber newItem, unsigned long index);
+  SVGNumber removeItem(unsigned long index);
+  SVGNumber appendItem(SVGNumber newItem);
+  setter void (unsigned long index, SVGNumber newItem);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="SVGAnimatedNumberList.html">SVGAnimatedNumberList</a></li></ul>
+</section>
+  

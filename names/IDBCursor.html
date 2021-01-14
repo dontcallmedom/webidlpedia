@@ -1,0 +1,29 @@
+---
+title: IDBCursor
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/IndexedDB/#idbcursor">Indexed Database API 3.0</a> defines <code>IDBCursor</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface IDBCursor {
+  readonly attribute (IDBObjectStore or IDBIndex) source;
+  readonly attribute IDBCursorDirection direction;
+  readonly attribute any key;
+  readonly attribute any primaryKey;
+  [SameObject] readonly attribute IDBRequest request;
+  undefined advance([EnforceRange] [EnforceRange] unsigned long count);
+  undefined continue(optional any key);
+  undefined continuePrimaryKey(any key, any primaryKey);
+  [NewObject] IDBRequest update(any value);
+  [NewObject] IDBRequest delete();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="IDBRequest.html">IDBRequest</a></li><li><a href="IDBCursorWithValue.html">IDBCursorWithValue</a></li></ul>
+</section>
+  

@@ -1,0 +1,30 @@
+---
+title: TreeWalker
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/#treewalker">DOM Standard</a> defines <code>TreeWalker</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface TreeWalker {
+  [SameObject] readonly attribute Node root;
+  readonly attribute unsigned long whatToShow;
+  readonly attribute NodeFilter? filter;
+  attribute Node currentNode;
+  Node? parentNode();
+  Node? firstChild();
+  Node? lastChild();
+  Node? previousSibling();
+  Node? nextSibling();
+  Node? previousNode();
+  Node? nextNode();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li></ul>
+</section>
+  

@@ -1,0 +1,42 @@
+---
+title: XMLHttpRequest
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://xhr.spec.whatwg.org/#xmlhttprequest">XMLHttpRequest Standard</a> defines <code>XMLHttpRequest</code></p>
+<pre class=webidl><code>[Exposed=Window,DedicatedWorker,SharedWorker]
+interface XMLHttpRequest : XMLHttpRequestEventTarget {
+  constructor();
+  attribute EventHandler onreadystatechange;
+  const unsigned short UNSENT;
+  const unsigned short OPENED;
+  const unsigned short HEADERS_RECEIVED;
+  const unsigned short LOADING;
+  const unsigned short DONE;
+  readonly attribute unsigned short readyState;
+  undefined open(ByteString method, USVString url);
+  undefined open(ByteString method, USVString url, boolean async, optional USVString? username = null, optional USVString? password = null);
+  undefined setRequestHeader(ByteString name, ByteString value);
+  attribute unsigned long timeout;
+  attribute boolean withCredentials;
+  [SameObject] readonly attribute XMLHttpRequestUpload upload;
+  undefined send(optional (Document or XMLHttpRequestBodyInit)? body = null);
+  undefined abort();
+  readonly attribute USVString responseURL;
+  readonly attribute unsigned short status;
+  readonly attribute ByteString statusText;
+  ByteString? getResponseHeader(ByteString name);
+  ByteString getAllResponseHeaders();
+  undefined overrideMimeType(DOMString mime);
+  attribute XMLHttpRequestResponseType responseType;
+  readonly attribute any response;
+  readonly attribute USVString responseText;
+  [Exposed=Window] readonly attribute Document? responseXML;
+};</code></pre>
+  
+</section>
+
+  

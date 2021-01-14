@@ -1,0 +1,35 @@
+---
+title: ElementInternals
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#elementinternals">HTML Standard</a> defines <code>ElementInternals</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface ElementInternals {
+  readonly attribute ShadowRoot? shadowRoot;
+  undefined setFormValue((File or USVString or FormData)? value, optional (File or USVString or FormData)? state);
+  readonly attribute HTMLFormElement? form;
+  undefined setValidity(optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor);
+  readonly attribute boolean willValidate;
+  readonly attribute ValidityState validity;
+  readonly attribute DOMString validationMessage;
+  boolean checkValidity();
+  boolean reportValidity();
+  readonly attribute NodeList labels;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface ElementInternals {
+};</code></pre></li><li><a href="https://wicg.github.io/custom-state-pseudo-class/#exposing">Custom State Pseudo Class</a>
+<pre class=webidl><code>partial interface ElementInternals {
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList states;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLElement.html">HTMLElement</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/custom-state-pseudo-class/">Custom State Pseudo Class</a> refers to <code>ElementInternals</code></li></ul>
+</section>

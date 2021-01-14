@@ -1,0 +1,27 @@
+---
+title: StorageManager
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://storage.spec.whatwg.org/#storagemanager">Storage Standard</a> defines <code>StorageManager</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+interface StorageManager {
+  Promise<boolean> persisted();
+  [Exposed=Window] Promise<boolean> persist();
+  Promise<StorageEstimate> estimate();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
+<pre class=webidl><code>[SecureContext]
+partial interface StorageManager {
+  Promise<FileSystemDirectoryHandle> getDirectory();
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NavigatorStorage.html">NavigatorStorage</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>StorageManager</code></li></ul>
+</section>

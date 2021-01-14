@@ -1,0 +1,27 @@
+---
+title: NetworkInformation
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/netinfo/#dom-networkinformation">Network Information API</a> defines <code>NetworkInformation</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface NetworkInformation : EventTarget {
+  readonly attribute ConnectionType type;
+  readonly attribute EffectiveConnectionType effectiveType;
+  readonly attribute Megabit downlinkMax;
+  readonly attribute Megabit downlink;
+  readonly attribute Millisecond rtt;
+  attribute EventHandler onchange;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/savedata/">Save Data API</a>
+<pre class=webidl><code>interface NetworkInformation {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NavigatorNetworkInformation.html">NavigatorNetworkInformation</a></li></ul>
+</section>
+  

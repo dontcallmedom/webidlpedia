@@ -1,0 +1,35 @@
+---
+title: RTCIceCandidate
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCIceCandidate</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCIceCandidate {
+  constructor(optional RTCIceCandidateInit candidateInitDict = {});
+  readonly attribute DOMString candidate;
+  readonly attribute DOMString? sdpMid;
+  readonly attribute unsigned short? sdpMLineIndex;
+  readonly attribute DOMString? foundation;
+  readonly attribute RTCIceComponent? component;
+  readonly attribute unsigned long? priority;
+  readonly attribute DOMString? address;
+  readonly attribute RTCIceProtocol? protocol;
+  readonly attribute unsigned short? port;
+  readonly attribute RTCIceCandidateType? type;
+  readonly attribute RTCIceTcpCandidateType? tcpType;
+  readonly attribute DOMString? relatedAddress;
+  readonly attribute unsigned short? relatedPort;
+  readonly attribute DOMString? usernameFragment;
+  RTCIceCandidateInit toJSON();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></li><li><a href="RTCPeerConnectionIceEventInit.html">RTCPeerConnectionIceEventInit</a></li><li><a href="RTCIceTransport.html">RTCIceTransport</a></li><li><a href="RTCIceCandidatePair.html">RTCIceCandidatePair</a></li></ul>
+</section>
+  

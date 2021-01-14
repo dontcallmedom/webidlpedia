@@ -1,0 +1,50 @@
+---
+title: XRSession
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://immersive-web.github.io/webxr/#xrsession">WebXR Device API</a> defines <code>XRSession</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface XRSession : EventTarget {
+  readonly attribute XRVisibilityState visibilityState;
+  [SameObject] readonly attribute XRRenderState renderState;
+  [SameObject] readonly attribute XRInputSourceArray inputSources;
+  undefined updateRenderState(optional XRRenderStateInit state = {});
+  [NewObject] Promise<XRReferenceSpace> requestReferenceSpace(XRReferenceSpaceType type);
+  unsigned long requestAnimationFrame(XRFrameRequestCallback callback);
+  undefined cancelAnimationFrame(unsigned long handle);
+  Promise<undefined> end();
+  attribute EventHandler onend;
+  attribute EventHandler oninputsourceschange;
+  attribute EventHandler onselect;
+  attribute EventHandler onselectstart;
+  attribute EventHandler onselectend;
+  attribute EventHandler onsqueeze;
+  attribute EventHandler onsqueezestart;
+  attribute EventHandler onsqueezeend;
+  attribute EventHandler onvisibilitychange;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://immersive-web.github.io/dom-overlays/#xrsession">WebXR DOM Overlays Module</a>
+<pre class=webidl><code>partial interface XRSession {
+  readonly attribute XRDOMOverlayState? domOverlayState;
+};</code></pre></li><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a>
+<pre class=webidl><code>partial interface XRSession {
+  Promise<XRHitTestSource> requestHitTestSource(XRHitTestOptionsInit options);
+  Promise<XRTransientInputHitTestSource> requestHitTestSourceForTransientInput(XRTransientInputHitTestOptionsInit options);
+};</code></pre></li><li><a href="https://www.w3.org/TR/webxr-ar-module-1/#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a>
+<pre class=webidl><code>partial interface XRSession {
+  readonly attribute XREnvironmentBlendMode environmentBlendMode;
+};
+partial interface XRSession {
+  readonly attribute XRInteractionMode interactionMode;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="XRSystem.html">XRSystem</a></li><li><a href="XRFrame.html">XRFrame</a></li><li><a href="XRWebGLLayer.html">XRWebGLLayer</a></li><li><a href="XRSessionEvent.html">XRSessionEvent</a></li><li><a href="XRSessionEventInit.html">XRSessionEventInit</a></li><li><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li><li><a href="XRInputSourcesChangeEventInit.html">XRInputSourcesChangeEventInit</a></li><li><a href="XRWebGLBinding.html">XRWebGLBinding</a></li><li><a href="XRMediaBinding.html">XRMediaBinding</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://immersive-web.github.io/dom-overlays/">WebXR DOM Overlays Module</a> refers to <code>XRSession</code></li><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a> refers to <code>XRSession</code></li><li><a href="https://www.w3.org/TR/webxr-ar-module-1/">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRSession</code></li><li><a href="https://www.w3.org/TR/webxrlayers-1/">WebXR Layers API Level 1</a> refers to <code>XRSession</code></li></ul>
+</section>

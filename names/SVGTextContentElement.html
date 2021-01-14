@@ -1,0 +1,33 @@
+---
+title: SVGTextContentElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SVGTextContentElement : SVGGraphicsElement {
+  const unsigned short LENGTHADJUST_UNKNOWN;
+  const unsigned short LENGTHADJUST_SPACING;
+  const unsigned short LENGTHADJUST_SPACINGANDGLYPHS;
+  [SameObject] readonly attribute SVGAnimatedLength textLength;
+  [SameObject] readonly attribute SVGAnimatedEnumeration lengthAdjust;
+  long getNumberOfChars();
+  float getComputedTextLength();
+  float getSubStringLength(unsigned long charnum, unsigned long nchars);
+  DOMPoint getStartPositionOfChar(unsigned long charnum);
+  DOMPoint getEndPositionOfChar(unsigned long charnum);
+  DOMRect getExtentOfChar(unsigned long charnum);
+  float getRotationOfChar(unsigned long charnum);
+  long getCharNumAtPosition(optional DOMPointInit point = {});
+  void selectSubString(unsigned long charnum, unsigned long nchars);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li></ul>
+</section>
+  

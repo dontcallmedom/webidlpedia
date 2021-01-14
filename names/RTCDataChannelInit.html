@@ -1,0 +1,28 @@
+---
+title: RTCDataChannelInit
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannelinit">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCDataChannelInit</code></p>
+<pre class=webidl><code>dictionary RTCDataChannelInit {
+  boolean ordered;
+  [EnforceRange] unsigned short maxPacketLifeTime;
+  [EnforceRange] unsigned short maxRetransmits;
+  USVString protocol;
+  boolean negotiated;
+  [EnforceRange] unsigned short id;
+};</code></pre>
+  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-priority/">WebRTC Priority Control API</a>
+<pre class=webidl><code>partial dictionary RTCDataChannelInit {
+  RTCPriorityType priority;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/webrtc-priority/">WebRTC Priority Control API</a> refers to <code>RTCDataChannelInit</code></li></ul>
+</section>

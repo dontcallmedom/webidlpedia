@@ -1,0 +1,25 @@
+---
+title: NamedFlow
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/css-regions/#namedflow">CSS Regions Module Level 1</a> defines <code>NamedFlow</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface NamedFlow : EventTarget {
+  readonly attribute CSSOMString name;
+  readonly attribute boolean overset;
+  sequence<Region> getRegions();
+  readonly attribute short firstEmptyRegionIndex;
+  sequence<Node> getContent();
+  sequence<Region> getRegionsByContent(Node node);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NamedFlowMap.html">NamedFlowMap</a></li></ul>
+</section>
+  

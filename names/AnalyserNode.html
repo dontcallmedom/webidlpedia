@@ -1,0 +1,29 @@
+---
+title: AnalyserNode
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#analysernode">Web Audio API</a> defines <code>AnalyserNode</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface AnalyserNode : AudioNode {
+  constructor(BaseAudioContext context, optional AnalyserOptions options = {});
+  undefined getFloatFrequencyData(Float32Array array);
+  undefined getByteFrequencyData(Uint8Array array);
+  undefined getFloatTimeDomainData(Float32Array array);
+  undefined getByteTimeDomainData(Uint8Array array);
+  attribute unsigned long fftSize;
+  readonly attribute unsigned long frequencyBinCount;
+  attribute double minDecibels;
+  attribute double maxDecibels;
+  attribute double smoothingTimeConstant;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="BaseAudioContext.html">BaseAudioContext</a></li></ul>
+</section>
+  

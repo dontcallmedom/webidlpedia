@@ -1,0 +1,45 @@
+---
+title: HTMLObjectElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlobjectelement">HTML Standard</a> defines <code>HTMLObjectElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLObjectElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute USVString data;
+  [CEReactions] attribute DOMString type;
+  [CEReactions] attribute DOMString name;
+  [CEReactions] attribute DOMString useMap;
+  readonly attribute HTMLFormElement? form;
+  [CEReactions] attribute DOMString width;
+  [CEReactions] attribute DOMString height;
+  readonly attribute Document? contentDocument;
+  readonly attribute WindowProxy? contentWindow;
+  Document? getSVGDocument();
+  readonly attribute boolean willValidate;
+  readonly attribute ValidityState validity;
+  readonly attribute DOMString validationMessage;
+  boolean checkValidity();
+  boolean reportValidity();
+  undefined setCustomValidity(DOMString error);
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
+<pre class=webidl><code>partial interface HTMLObjectElement {
+  [CEReactions] attribute DOMString align;
+  [CEReactions] attribute DOMString archive;
+  [CEReactions] attribute DOMString code;
+  [CEReactions] attribute boolean declare;
+  [CEReactions] attribute unsigned long hspace;
+  [CEReactions] attribute DOMString standby;
+  [CEReactions] attribute unsigned long vspace;
+  [CEReactions] attribute DOMString codeBase;
+  [CEReactions] attribute DOMString codeType;
+  [CEReactions] attribute DOMString border;
+};</code></pre></li></ol>
+</section>
+
+  

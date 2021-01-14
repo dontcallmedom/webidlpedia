@@ -1,0 +1,23 @@
+---
+title: HID
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/webhid/#dom-hid">WebHID API</a> defines <code>HID</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface HID : EventTarget {
+  attribute EventHandler onconnect;
+  attribute EventHandler ondisconnect;
+  Promise<sequence<HIDDevice>> getDevices();
+  Promise<sequence<HIDDevice>> requestDevice(HIDDeviceRequestOptions options);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Navigator.html">Navigator</a></li></ul>
+</section>
+  

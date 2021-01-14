@@ -1,0 +1,41 @@
+---
+title: Selection
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/selection-api/#dom-selection">Selection API</a> defines <code>Selection</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Selection {
+  readonly attribute Node? anchorNode;
+  readonly attribute unsigned long anchorOffset;
+  readonly attribute Node? focusNode;
+  readonly attribute unsigned long focusOffset;
+  readonly attribute boolean isCollapsed;
+  readonly attribute unsigned long rangeCount;
+  readonly attribute DOMString type;
+  Range getRangeAt(unsigned long index);
+  undefined addRange(Range range);
+  undefined removeRange(Range range);
+  undefined removeAllRanges();
+  undefined empty();
+  undefined collapse(Node? node, optional unsigned long offset = 0);
+  undefined setPosition(Node? node, optional unsigned long offset = 0);
+  undefined collapseToStart();
+  undefined collapseToEnd();
+  undefined extend(Node node, optional unsigned long offset = 0);
+  undefined setBaseAndExtent(Node anchorNode, unsigned long anchorOffset, Node focusNode, unsigned long focusOffset);
+  undefined selectAllChildren(Node node);
+  [CEReactions] undefined deleteFromDocument();
+  boolean containsNode(Node node, optional boolean allowPartialContainment = false);
+  stringifier DOMString ();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="Window.html">Window</a></li></ul>
+</section>
+  

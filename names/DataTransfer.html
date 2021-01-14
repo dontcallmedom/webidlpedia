@@ -1,0 +1,30 @@
+---
+title: DataTransfer
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransfer">HTML Standard</a> defines <code>DataTransfer</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface DataTransfer {
+  constructor();
+  attribute DOMString dropEffect;
+  attribute DOMString effectAllowed;
+  [SameObject] readonly attribute DataTransferItemList items;
+  undefined setDragImage(Element image, long x, long y);
+  readonly attribute FrozenArray<DOMString> types;
+  DOMString getData(DOMString format);
+  undefined setData(DOMString format, DOMString data);
+  undefined clearData(optional DOMString format);
+  [SameObject] readonly attribute FileList files;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="DragEvent.html">DragEvent</a></li><li><a href="DragEventInit.html">DragEventInit</a></li><li><a href="ClipboardEventInit.html">ClipboardEventInit</a></li><li><a href="ClipboardEvent.html">ClipboardEvent</a></li><li><a href="InputEvent.html">InputEvent</a></li><li><a href="InputEventInit.html">InputEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/clipboard-apis/">Clipboard API and events</a> refers to <code>DataTransfer</code></li><li><a href="https://www.w3.org/TR/input-events-2/">Input Events Level 2</a> refers to <code>DataTransfer</code></li></ul>
+</section>

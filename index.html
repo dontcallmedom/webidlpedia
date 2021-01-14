@@ -1,27 +1,30 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset=utf-8>
-    <title>WebIDLPedia</title>
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-    <script src="webidl.js"></script>
-    <style>
-      ol { list-style: none;}
-      nav ul { display: flex; list-style: none; flex-flow: row; justify-content: space-around;}
-      nav ul li { flex: none; margin: auto;}
-    </style>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="?">List of referenceable IDL names</a></li>
-        <li><a href="?enums=">List of strings used in enums</a></li>
-        <li><a href="?members=">List of names for attributes/members/methods</a></li>
-        <li><a href="?extattr=">Extended attributes usage</a></li>
-      </ul>
-    </nav>
-  <script src="pedia.js"></script>
-  </body>
-</html>
+---
+layout: base
+title: Homepage
+---
+<p>WebIDLpedia provides information on all the IDL definitions used by specifications for the Web Platform (as identified in <a href="">browser-specs</a> and published in <a href="">webref</a>).</p>
+
+<p>It aims to facilitate coordination across the various groups and organizations involved in developing these specifications.</p>
+<script>
+  // Redirects for previously used query-string parameters for WebIDL pedia
+  const params = location.search.slice(1);
+  const paramName = params.split("=")[0] || null;
+  const paramValue = params.split("=")[1] || null;
+  switch(paramName) {
+  case "idlname":
+    window.location.href = "names/" + paramValue + ".html";
+    break;
+  case "enums":
+    window.location.href = "enum.html";
+    break;
+  case "extattr":
+    window.location.href = "extended-attributes.html";
+    break;
+  case "members":
+    window.location.href = "members.html";
+    break;
+  case "full":
+    window.location.href = "names/index.html";
+    break;
+  }
+</script>

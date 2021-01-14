@@ -1,0 +1,27 @@
+---
+title: PaymentRequest
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/payment-request/#dom-paymentrequest">Payment Request API</a> defines <code>PaymentRequest</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface PaymentRequest : EventTarget {
+  constructor(sequence<PaymentMethodData> methodData, PaymentDetailsInit details, optional PaymentOptions options = {});
+  [NewObject] Promise<PaymentResponse> show(optional Promise<PaymentDetailsUpdate> detailsPromise);
+  [NewObject] Promise<undefined> abort();
+  [NewObject] Promise<boolean> canMakePayment();
+  readonly attribute DOMString id;
+  readonly attribute PaymentAddress? shippingAddress;
+  readonly attribute DOMString? shippingOption;
+  readonly attribute PaymentShippingType? shippingType;
+  attribute EventHandler onshippingaddresschange;
+  attribute EventHandler onshippingoptionchange;
+  attribute EventHandler onpaymentmethodchange;
+};</code></pre>
+  
+</section>
+
+  

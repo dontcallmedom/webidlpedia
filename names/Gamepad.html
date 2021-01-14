@@ -1,0 +1,33 @@
+---
+title: Gamepad
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/gamepad/#dom-gamepad">Gamepad</a> defines <code>Gamepad</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface Gamepad {
+  readonly attribute DOMString id;
+  readonly attribute long index;
+  readonly attribute boolean connected;
+  readonly attribute DOMHighResTimeStamp timestamp;
+  readonly attribute GamepadMappingType mapping;
+  readonly attribute FrozenArray<double> axes;
+  readonly attribute FrozenArray<GamepadButton> buttons;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface">Gamepad Extensions</a>
+<pre class=webidl><code>partial interface Gamepad {
+  readonly attribute GamepadHand hand;
+  readonly attribute FrozenArray<GamepadHapticActuator> hapticActuators;
+  readonly attribute GamepadPose? pose;
+  readonly attribute FrozenArray<GamepadTouch>? touchEvents;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="GamepadEvent.html">GamepadEvent</a></li><li><a href="GamepadEventInit.html">GamepadEventInit</a></li><li><a href="XRInputSource.html">XRInputSource</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/gamepad/extensions.html">Gamepad Extensions</a> refers to <code>Gamepad</code></li><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/">WebXR Gamepads Module - Level 1</a> refers to <code>Gamepad</code></li></ul>
+</section>

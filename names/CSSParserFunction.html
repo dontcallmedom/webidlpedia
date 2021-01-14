@@ -1,0 +1,19 @@
+---
+title: CSSParserFunction
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/css-parser-api/#cssparserfunction">CSS Parser API</a> defines <code>CSSParserFunction</code></p>
+<pre class=webidl><code>[Constructor(DOMString name, sequence<sequence<CSSParserValue>> args)]
+interface CSSParserFunction : CSSParserValue {
+  readonly attribute DOMString name;
+  readonly attribute FrozenArray<FrozenArray<CSSParserValue>> args;
+  stringifier ${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''} ();
+};</code></pre>
+  
+</section>
+
+  

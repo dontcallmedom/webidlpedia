@@ -1,0 +1,26 @@
+---
+title: WebAssembly
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webassembly.github.io/spec/js-api/#namespacedef-webassembly">WebAssembly JavaScript Interface</a> defines <code>WebAssembly</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+namespace WebAssembly {
+  boolean validate(BufferSource bytes);
+  Promise<Module> compile(BufferSource bytes);
+  Promise<WebAssemblyInstantiatedSource> instantiate(BufferSource bytes, optional object importObject);
+  Promise<Instance> instantiate(Module moduleObject, optional object importObject);
+};</code></pre>
+  <p>This namespace is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a>
+<pre class=webidl><code>[Exposed=Window,Worker]
+partial namespace WebAssembly {
+  Promise<Module> compileStreaming(Promise<Response> source);
+  Promise<WebAssemblyInstantiatedSource> instantiateStreaming(Promise<Response> source, optional object importObject);
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a> refers to <code>WebAssembly</code></li></ul>
+</section>

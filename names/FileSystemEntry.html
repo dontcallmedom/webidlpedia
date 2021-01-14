@@ -1,0 +1,25 @@
+---
+title: FileSystemEntry
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/entries-api/#filesystementry">File and Directory Entries API</a> defines <code>FileSystemEntry</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface FileSystemEntry {
+  readonly attribute boolean isFile;
+  readonly attribute boolean isDirectory;
+  readonly attribute USVString name;
+  readonly attribute USVString fullPath;
+  readonly attribute FileSystem filesystem;
+  undefined getParent(optional FileSystemEntryCallback successCallback, optional ErrorCallback errorCallback);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLInputElement.html">HTMLInputElement</a></li><li><a href="DataTransferItem.html">DataTransferItem</a></li><li><a href="FileSystemDirectoryEntry.html">FileSystemDirectoryEntry</a></li><li><a href="FileSystemFileEntry.html">FileSystemFileEntry</a></li></ul>
+</section>
+  

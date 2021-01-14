@@ -1,0 +1,33 @@
+---
+title: Screen
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/cssom-view/#screen">CSSOM View Module</a> defines <code>Screen</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Screen {
+  readonly attribute long availWidth;
+  readonly attribute long availHeight;
+  readonly attribute long width;
+  readonly attribute long height;
+  readonly attribute unsigned long colorDepth;
+  readonly attribute unsigned long pixelDepth;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/screen-fold/#extensions-to-the-screen-interface">The Screen Fold API</a>
+<pre class=webidl><code>[SecureContext]
+partial interface Screen {
+  [SameObject] readonly attribute ScreenFold fold;
+};</code></pre></li><li><a href="https://www.w3.org/TR/screen-orientation/#orientation-attribute">The Screen Orientation API</a>
+<pre class=webidl><code>partial interface Screen {
+  [SameObject] readonly attribute ScreenOrientation orientation;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Window.html">Window</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/screen-fold/">The Screen Fold API</a> refers to <code>Screen</code></li><li><a href="https://www.w3.org/TR/screen-orientation/">The Screen Orientation API</a> refers to <code>Screen</code></li></ul>
+</section>

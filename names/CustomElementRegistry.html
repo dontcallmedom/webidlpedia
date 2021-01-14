@@ -1,0 +1,23 @@
+---
+title: CustomElementRegistry
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#customelementregistry">HTML Standard</a> defines <code>CustomElementRegistry</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface CustomElementRegistry {
+  [CEReactions] undefined define(DOMString name, CustomElementConstructor constructor, optional ElementDefinitionOptions options = {});
+  (CustomElementConstructor or undefined) get(DOMString name);
+  Promise<CustomElementConstructor> whenDefined(DOMString name);
+  [CEReactions] undefined upgrade(Node root);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Window.html">Window</a></li></ul>
+</section>
+  

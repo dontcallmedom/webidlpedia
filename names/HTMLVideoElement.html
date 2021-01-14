@@ -1,0 +1,41 @@
+---
+title: HTMLVideoElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement">HTML Standard</a> defines <code>HTMLVideoElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLVideoElement : HTMLMediaElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute unsigned long width;
+  [CEReactions] attribute unsigned long height;
+  readonly attribute unsigned long videoWidth;
+  readonly attribute unsigned long videoHeight;
+  [CEReactions] attribute USVString poster;
+  [CEReactions] attribute boolean playsInline;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/media-playback-quality/#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a>
+<pre class=webidl><code>partial interface HTMLVideoElement {
+  VideoPlaybackQuality getVideoPlaybackQuality();
+};</code></pre></li><li><a href="https://wicg.github.io/video-rvfc/">HTMLVideoElement.requestVideoFrameCallback()</a>
+<pre class=webidl><code>partial interface HTMLVideoElement {
+  unsigned long requestVideoFrameCallback(VideoFrameRequestCallback callback);
+  undefined cancelVideoFrameCallback(unsigned long handle);
+};</code></pre></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a>
+<pre class=webidl><code>partial interface HTMLVideoElement {
+  [NewObject] Promise<PictureInPictureWindow> requestPictureInPicture();
+  attribute EventHandler onenterpictureinpicture;
+  attribute EventHandler onleavepictureinpicture;
+  [CEReactions] attribute boolean autoPictureInPicture;
+  [CEReactions] attribute boolean disablePictureInPicture;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="XRMediaBinding.html">XRMediaBinding</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/media-playback-quality/">Media Playback Quality</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://wicg.github.io/video-rvfc/">HTMLVideoElement.requestVideoFrameCallback()</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.w3.org/TR/webxrlayers-1/">WebXR Layers API Level 1</a> refers to <code>HTMLVideoElement</code></li></ul>
+</section>

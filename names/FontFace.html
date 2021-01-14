@@ -1,0 +1,35 @@
+---
+title: FontFace
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/css-font-loading/#fontface">CSS Font Loading Module Level 3</a> defines <code>FontFace</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface FontFace {
+  constructor(CSSOMString family, (CSSOMString or BinaryData) source, optional FontFaceDescriptors descriptors = {});
+  attribute CSSOMString family;
+  attribute CSSOMString style;
+  attribute CSSOMString weight;
+  attribute CSSOMString stretch;
+  attribute CSSOMString unicodeRange;
+  attribute CSSOMString variant;
+  attribute CSSOMString featureSettings;
+  attribute CSSOMString variationSettings;
+  attribute CSSOMString display;
+  attribute CSSOMString ascentOverride;
+  attribute CSSOMString descentOverride;
+  attribute CSSOMString lineGapOverride;
+  readonly attribute FontFaceLoadStatus status;
+  Promise<FontFace> load();
+  readonly attribute Promise<FontFace> loaded;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="FontFace.html">FontFace</a></li><li><a href="FontFaceSetLoadEventInit.html">FontFaceSetLoadEventInit</a></li><li><a href="FontFaceSetLoadEvent.html">FontFaceSetLoadEvent</a></li><li><a href="FontFaceSet.html">FontFaceSet</a></li></ul>
+</section>
+  

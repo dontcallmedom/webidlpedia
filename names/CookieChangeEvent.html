@@ -1,0 +1,19 @@
+---
+title: CookieChangeEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/cookie-store/#cookiechangeevent">Cookie Store API</a> defines <code>CookieChangeEvent</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface CookieChangeEvent : Event {
+  constructor(DOMString type, optional CookieChangeEventInit eventInitDict = {});
+  [SameObject] readonly attribute FrozenArray<CookieListItem> changed;
+  [SameObject] readonly attribute FrozenArray<CookieListItem> deleted;
+};</code></pre>
+  
+</section>
+
+  

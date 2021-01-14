@@ -1,0 +1,36 @@
+---
+title: SourceBuffer
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/media-source/#dom-sourcebuffer">Media Source Extensions™</a> defines <code>SourceBuffer</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SourceBuffer : EventTarget {
+  attribute AppendMode mode;
+  readonly attribute boolean updating;
+  readonly attribute TimeRanges buffered;
+  attribute double timestampOffset;
+  readonly attribute AudioTrackList audioTracks;
+  readonly attribute VideoTrackList videoTracks;
+  readonly attribute TextTrackList textTracks;
+  attribute double appendWindowStart;
+  attribute unrestricted double appendWindowEnd;
+  attribute EventHandler onupdatestart;
+  attribute EventHandler onupdate;
+  attribute EventHandler onupdateend;
+  attribute EventHandler onerror;
+  attribute EventHandler onabort;
+  undefined appendBuffer(BufferSource data);
+  undefined abort();
+  undefined remove(double start, unrestricted double end);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MediaSource.html">MediaSource</a></li><li><a href="SourceBufferList.html">SourceBufferList</a></li><li><a href="AudioTrack.html">AudioTrack</a></li><li><a href="VideoTrack.html">VideoTrack</a></li><li><a href="TextTrack.html">TextTrack</a></li></ul>
+</section>
+  

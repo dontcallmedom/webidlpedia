@@ -1,0 +1,21 @@
+---
+title: AuthenticatorAttestationResponse
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse">Web Authentication: An API for accessing Public Key Credentials - Level 2</a> defines <code>AuthenticatorAttestationResponse</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface AuthenticatorAttestationResponse : AuthenticatorResponse {
+  [SameObject] readonly attribute ArrayBuffer attestationObject;
+  sequence<DOMString> getTransports();
+  ArrayBuffer getAuthenticatorData();
+  ArrayBuffer? getPublicKey();
+  COSEAlgorithmIdentifier getPublicKeyAlgorithm();
+};</code></pre>
+  
+</section>
+
+  

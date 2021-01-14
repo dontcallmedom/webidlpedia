@@ -1,0 +1,23 @@
+---
+title: PermissionsPolicy
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webappsec-permissions-policy/#permissionspolicy">Permissions Policy</a> defines <code>PermissionsPolicy</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface PermissionsPolicy {
+  boolean allowsFeature(DOMString feature, optional DOMString origin);
+  sequence<DOMString> features();
+  sequence<DOMString> allowedFeatures();
+  sequence<DOMString> getAllowlistForFeature(DOMString feature);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li></ul>
+</section>
+  

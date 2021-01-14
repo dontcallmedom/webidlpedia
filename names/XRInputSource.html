@@ -1,0 +1,31 @@
+---
+title: XRInputSource
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://immersive-web.github.io/webxr/#xrinputsource">WebXR Device API</a> defines <code>XRInputSource</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface XRInputSource {
+  readonly attribute XRHandedness handedness;
+  readonly attribute XRTargetRayMode targetRayMode;
+  [SameObject] readonly attribute XRSpace targetRaySpace;
+  [SameObject] readonly attribute XRSpace? gripSpace;
+  [SameObject] readonly attribute FrozenArray<DOMString> profiles;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/#xrinputsource-interface">WebXR Gamepads Module - Level 1</a>
+<pre class=webidl><code>partial interface XRInputSource {
+  [SameObject] readonly attribute Gamepad? gamepad;
+};</code></pre></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/#xrinputsource-interface">WebXR Hand Input Module - Level 1</a>
+<pre class=webidl><code>partial interface XRInputSource {
+  readonly attribute XRHand? hand;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></li><li><a href="XRInputSourceArray.html">XRInputSourceArray</a></li><li><a href="XRInputSourceEvent.html">XRInputSourceEvent</a></li><li><a href="XRInputSourceEventInit.html">XRInputSourceEventInit</a></li><li><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li><li><a href="XRInputSourcesChangeEventInit.html">XRInputSourcesChangeEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a> refers to <code>XRInputSource</code></li><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/">WebXR Gamepads Module - Level 1</a> refers to <code>XRInputSource</code></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/">WebXR Hand Input Module - Level 1</a> refers to <code>XRInputSource</code></li></ul>
+</section>

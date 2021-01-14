@@ -1,0 +1,36 @@
+---
+title: VideoFrame
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/web-codecs/#videoframe">WebCodecs</a> defines <code>VideoFrame</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface VideoFrame {
+  constructor(ImageBitmap imageBitmap, VideoFrameInit frameInit);
+  constructor(PixelFormat pixelFormat, sequence<(Plane or PlaneInit)> planes, VideoFrameInit frameInit);
+  readonly attribute PixelFormat format;
+  readonly attribute FrozenArray<Plane> planes;
+  readonly attribute unsigned long codedWidth;
+  readonly attribute unsigned long codedHeight;
+  readonly attribute unsigned long cropLeft;
+  readonly attribute unsigned long cropTop;
+  readonly attribute unsigned long cropWidth;
+  readonly attribute unsigned long cropHeight;
+  readonly attribute unsigned long displayWidth;
+  readonly attribute unsigned long displayHeight;
+  readonly attribute unsigned long long? duration;
+  readonly attribute unsigned long long? timestamp;
+  undefined destroy();
+  VideoFrame clone();
+  Promise<ImageBitmap> createImageBitmap(optional ImageBitmapOptions options = {});
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="VideoEncoder.html">VideoEncoder</a></li><li><a href="VideoFrame.html">VideoFrame</a></li></ul>
+</section>
+  

@@ -1,0 +1,22 @@
+---
+title: NavigatorUAData
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/ua-client-hints/#navigatoruadata">User-Agent Client Hints</a> defines <code>NavigatorUAData</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface NavigatorUAData {
+  readonly attribute FrozenArray<NavigatorUABrandVersion> brands;
+  readonly attribute boolean mobile;
+  Promise<UADataValues> getHighEntropyValues(sequence<DOMString> hints);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NavigatorUA.html">NavigatorUA</a></li></ul>
+</section>
+  

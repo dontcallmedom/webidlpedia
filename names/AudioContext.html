@@ -1,0 +1,30 @@
+---
+title: AudioContext
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#audiocontext">Web Audio API</a> defines <code>AudioContext</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface AudioContext : BaseAudioContext {
+  constructor(optional AudioContextOptions contextOptions = {});
+  readonly attribute double baseLatency;
+  readonly attribute double outputLatency;
+  AudioTimestamp getOutputTimestamp();
+  Promise<undefined> resume();
+  Promise<undefined> suspend();
+  Promise<undefined> close();
+  MediaElementAudioSourceNode createMediaElementSource(HTMLMediaElement mediaElement);
+  MediaStreamAudioSourceNode createMediaStreamSource(MediaStream mediaStream);
+  MediaStreamTrackAudioSourceNode createMediaStreamTrackSource(MediaStreamTrack mediaStreamTrack);
+  MediaStreamAudioDestinationNode createMediaStreamDestination();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li></ul>
+</section>
+  

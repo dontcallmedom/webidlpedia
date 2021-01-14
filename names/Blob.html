@@ -1,0 +1,27 @@
+---
+title: Blob
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/FileAPI/#dfn-Blob">File API</a> defines <code>Blob</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+interface Blob {
+  constructor(optional sequence<BlobPart> blobParts, optional BlobPropertyBag options = {});
+  readonly attribute unsigned long long size;
+  readonly attribute DOMString type;
+  Blob slice(optional long long start, optional long long end, optional DOMString contentType);
+  [NewObject] ReadableStream stream();
+  [NewObject] Promise<USVString> text();
+  [NewObject] Promise<ArrayBuffer> arrayBuffer();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Body.html">Body</a></li><li><a href="OffscreenCanvas.html">OffscreenCanvas</a></li><li><a href="WebSocket.html">WebSocket</a></li><li><a href="ContactInfo.html">ContactInfo</a></li><li><a href="WriteParams.html">WriteParams</a></li><li><a href="FontMetadata.html">FontMetadata</a></li><li><a href="ClipboardItem.html">ClipboardItem</a></li><li><a href="Blob.html">Blob</a></li><li><a href="File.html">File</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileReaderSync.html">FileReaderSync</a></li><li><a href="URL.html">URL</a></li><li><a href="ImageCapture.html">ImageCapture</a></li><li><a href="BlobEvent.html">BlobEvent</a></li><li><a href="BlobEventInit.html">BlobEventInit</a></li><li><a href="PresentationConnection.html">PresentationConnection</a></li><li><a href="PushMessageData.html">PushMessageData</a></li><li><a href="RTCDataChannel.html">RTCDataChannel</a></li><li><a href="FormData.html">FormData</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a> refers to <code>Blob</code></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>Blob</code></li><li><a href="https://wicg.github.io/contact-api/spec/">Contact Picker API</a> refers to <code>Blob</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>Blob</code></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/clipboard-apis/">Clipboard API and events</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/mediastream-recording/">MediaStream Recording</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/presentation-api/">Presentation API</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/push-api/">Push API</a> refers to <code>Blob</code></li><li><a href="https://www.w3.org/TR/webrtc/">WebRTC 1.0: Real-Time Communication Between Browsers</a> refers to <code>Blob</code></li><li><a href="https://xhr.spec.whatwg.org/">XMLHttpRequest Standard</a> refers to <code>Blob</code></li></ul>
+</section>

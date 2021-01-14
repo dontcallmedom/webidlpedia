@@ -1,0 +1,23 @@
+---
+title: USBConfiguration
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/webusb/#usbconfiguration">WebUSB API</a> defines <code>USBConfiguration</code></p>
+<pre class=webidl><code>[Exposed=DedicatedWorker,SharedWorker,Window, SecureContext]
+interface USBConfiguration {
+  constructor(USBDevice device, octet configurationValue);
+  readonly attribute octet configurationValue;
+  readonly attribute DOMString? configurationName;
+  readonly attribute FrozenArray<USBInterface> interfaces;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="USBDevice.html">USBDevice</a></li><li><a href="USBInterface.html">USBInterface</a></li></ul>
+</section>
+  

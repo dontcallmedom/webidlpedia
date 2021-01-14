@@ -1,0 +1,27 @@
+---
+title: Permissions
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/permissions/#permissions">Permissions</a> defines <code>Permissions</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface Permissions {
+  Promise<PermissionStatus> query(object permissionDesc);
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/permissions-request/">Requesting Permissions</a>
+<pre class=webidl><code>partial interface Permissions {
+  Promise<PermissionStatus> request(object permissionDesc);
+};</code></pre></li><li><a href="https://wicg.github.io/permissions-revoke/">Relinquishing Permissions</a>
+<pre class=webidl><code>partial interface Permissions {
+  Promise<PermissionStatus> revoke(object permissionDesc);
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/permissions-request/">Requesting Permissions</a> refers to <code>Permissions</code></li><li><a href="https://wicg.github.io/permissions-revoke/">Relinquishing Permissions</a> refers to <code>Permissions</code></li></ul>
+</section>

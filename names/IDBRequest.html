@@ -1,0 +1,26 @@
+---
+title: IDBRequest
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/IndexedDB/#idbrequest">Indexed Database API 3.0</a> defines <code>IDBRequest</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface IDBRequest : EventTarget {
+  readonly attribute any result;
+  readonly attribute DOMException? error;
+  readonly attribute (IDBObjectStore or IDBIndex or IDBCursor)? source;
+  readonly attribute IDBTransaction? transaction;
+  readonly attribute IDBRequestReadyState readyState;
+  attribute EventHandler onsuccess;
+  attribute EventHandler onerror;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="IDBOpenDBRequest.html">IDBOpenDBRequest</a></li><li><a href="IDBObjectStore.html">IDBObjectStore</a></li><li><a href="IDBIndex.html">IDBIndex</a></li><li><a href="IDBCursor.html">IDBCursor</a></li></ul>
+</section>
+  

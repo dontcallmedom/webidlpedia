@@ -1,0 +1,30 @@
+---
+title: BluetoothDevice
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice">Web Bluetooth</a> defines <code>BluetoothDevice</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface BluetoothDevice : EventTarget {
+  readonly attribute DOMString id;
+  readonly attribute DOMString? name;
+  readonly attribute BluetoothRemoteGATTServer? gatt;
+  Promise<void> watchAdvertisements(optional WatchAdvertisementsOptions options = {});
+  readonly attribute boolean watchingAdvertisements;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
+<pre class=webidl><code>interface BluetoothDevice {
+};
+interface BluetoothDevice {
+};
+interface BluetoothDevice {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Bluetooth.html">Bluetooth</a></li><li><a href="BluetoothPermissionResult.html">BluetoothPermissionResult</a></li><li><a href="BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></li><li><a href="BluetoothAdvertisingEventInit.html">BluetoothAdvertisingEventInit</a></li><li><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li><li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li></ul>
+</section>
+  

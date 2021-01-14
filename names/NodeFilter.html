@@ -1,0 +1,36 @@
+---
+title: NodeFilter
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/">DOM Standard</a> defines <code>NodeFilter</code></p>
+<pre class=webidl><code>[Exposed=Window]
+callback interface NodeFilter {
+  const unsigned short FILTER_ACCEPT;
+  const unsigned short FILTER_REJECT;
+  const unsigned short FILTER_SKIP;
+  const unsigned long SHOW_ALL;
+  const unsigned long SHOW_ELEMENT;
+  const unsigned long SHOW_ATTRIBUTE;
+  const unsigned long SHOW_TEXT;
+  const unsigned long SHOW_CDATA_SECTION;
+  const unsigned long SHOW_ENTITY_REFERENCE;
+  const unsigned long SHOW_ENTITY;
+  const unsigned long SHOW_PROCESSING_INSTRUCTION;
+  const unsigned long SHOW_COMMENT;
+  const unsigned long SHOW_DOCUMENT;
+  const unsigned long SHOW_DOCUMENT_TYPE;
+  const unsigned long SHOW_DOCUMENT_FRAGMENT;
+  const unsigned long SHOW_NOTATION;
+  unsigned short acceptNode(Node node);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="NodeIterator.html">NodeIterator</a></li><li><a href="TreeWalker.html">TreeWalker</a></li></ul>
+</section>
+  

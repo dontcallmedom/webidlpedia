@@ -1,0 +1,31 @@
+---
+title: PaymentResponse
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/payment-request/#dom-paymentresponse">Payment Request API</a> defines <code>PaymentResponse</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface PaymentResponse : EventTarget {
+  [Default] object toJSON();
+  readonly attribute DOMString requestId;
+  readonly attribute DOMString methodName;
+  readonly attribute object details;
+  readonly attribute PaymentAddress? shippingAddress;
+  readonly attribute DOMString? shippingOption;
+  readonly attribute DOMString? payerName;
+  readonly attribute DOMString? payerEmail;
+  readonly attribute DOMString? payerPhone;
+  [NewObject] Promise<undefined> complete(optional PaymentComplete result = "unknown");
+  [NewObject] Promise<undefined> retry(optional PaymentValidationErrors errorFields = {});
+  attribute EventHandler onpayerdetailchange;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PaymentRequest.html">PaymentRequest</a></li></ul>
+</section>
+  

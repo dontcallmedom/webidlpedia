@@ -1,0 +1,24 @@
+---
+title: RTCDtlsTransport
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCDtlsTransport</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCDtlsTransport : EventTarget {
+  [SameObject] readonly attribute RTCIceTransport iceTransport;
+  readonly attribute RTCDtlsTransportState state;
+  sequence<ArrayBuffer> getRemoteCertificates();
+  attribute EventHandler onstatechange;
+  attribute EventHandler onerror;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCRtpSender.html">RTCRtpSender</a></li><li><a href="RTCRtpReceiver.html">RTCRtpReceiver</a></li><li><a href="RTCSctpTransport.html">RTCSctpTransport</a></li></ul>
+</section>
+  

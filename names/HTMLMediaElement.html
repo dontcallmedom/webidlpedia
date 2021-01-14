@@ -1,0 +1,82 @@
+---
+title: HTMLMediaElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlmediaelement">HTML Standard</a> defines <code>HTMLMediaElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLMediaElement : HTMLElement {
+  readonly attribute MediaError? error;
+  [CEReactions] attribute USVString src;
+  attribute MediaProvider? srcObject;
+  readonly attribute USVString currentSrc;
+  [CEReactions] attribute DOMString? crossOrigin;
+  const unsigned short NETWORK_EMPTY;
+  const unsigned short NETWORK_IDLE;
+  const unsigned short NETWORK_LOADING;
+  const unsigned short NETWORK_NO_SOURCE;
+  readonly attribute unsigned short networkState;
+  [CEReactions] attribute DOMString preload;
+  readonly attribute TimeRanges buffered;
+  undefined load();
+  CanPlayTypeResult canPlayType(DOMString type);
+  const unsigned short HAVE_NOTHING;
+  const unsigned short HAVE_METADATA;
+  const unsigned short HAVE_CURRENT_DATA;
+  const unsigned short HAVE_FUTURE_DATA;
+  const unsigned short HAVE_ENOUGH_DATA;
+  readonly attribute unsigned short readyState;
+  readonly attribute boolean seeking;
+  attribute double currentTime;
+  undefined fastSeek(double time);
+  readonly attribute unrestricted double duration;
+  object getStartDate();
+  readonly attribute boolean paused;
+  attribute double defaultPlaybackRate;
+  attribute double playbackRate;
+  attribute boolean preservesPitch;
+  readonly attribute TimeRanges played;
+  readonly attribute TimeRanges seekable;
+  readonly attribute boolean ended;
+  [CEReactions] attribute boolean autoplay;
+  [CEReactions] attribute boolean loop;
+  Promise<undefined> play();
+  undefined pause();
+  [CEReactions] attribute boolean controls;
+  attribute double volume;
+  attribute boolean muted;
+  [CEReactions] attribute boolean defaultMuted;
+  [SameObject] readonly attribute AudioTrackList audioTracks;
+  [SameObject] readonly attribute VideoTrackList videoTracks;
+  [SameObject] readonly attribute TextTrackList textTracks;
+  TextTrack addTextTrack(TextTrackKind kind, optional DOMString label = "", optional DOMString language = "");
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#attributes">Audio Output Devices API</a>
+<pre class=webidl><code>partial interface HTMLMediaElement {
+  [SecureContext] readonly attribute DOMString sinkId;
+  [SecureContext] Promise<undefined> setSinkId(DOMString sinkId);
+};</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#attributes-3">Encrypted Media Extensions</a>
+<pre class=webidl><code>[Exposed=Window]
+partial interface HTMLMediaElement {
+  [SecureContext] readonly attribute MediaKeys? mediaKeys;
+  attribute EventHandler onencrypted;
+  attribute EventHandler onwaitingforkey;
+  [SecureContext] Promise<undefined> setMediaKeys(MediaKeys? mediaKeys);
+};</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/#methods">Media Capture from DOM Elements</a>
+<pre class=webidl><code>partial interface HTMLMediaElement {
+  MediaStream captureStream();
+};</code></pre></li><li><a href="https://www.w3.org/TR/remote-playback/#extensions-to-htmlmediaelement">Remote Playback API</a>
+<pre class=webidl><code>partial interface HTMLMediaElement {
+  [SameObject] readonly attribute RemotePlayback remote;
+  [CEReactions] attribute boolean disableRemotePlayback;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLVideoElement.html">HTMLVideoElement</a></li><li><a href="HTMLAudioElement.html">HTMLAudioElement</a></li><li><a href="AudioContext.html">AudioContext</a></li><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaElementAudioSourceOptions.html">MediaElementAudioSourceOptions</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/audio-output/">Audio Output Devices API</a> refers to <code>HTMLMediaElement</code></li><li><a href="https://www.w3.org/TR/encrypted-media/">Encrypted Media Extensions</a> refers to <code>HTMLMediaElement</code></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/">Media Capture from DOM Elements</a> refers to <code>HTMLMediaElement</code></li><li><a href="https://www.w3.org/TR/remote-playback/">Remote Playback API</a> refers to <code>HTMLMediaElement</code></li><li><a href="https://www.w3.org/TR/webaudio/">Web Audio API</a> refers to <code>HTMLMediaElement</code></li></ul>
+</section>

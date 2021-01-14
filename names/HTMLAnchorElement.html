@@ -1,0 +1,40 @@
+---
+title: HTMLAnchorElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement">HTML Standard</a> defines <code>HTMLAnchorElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLAnchorElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute DOMString target;
+  [CEReactions] attribute DOMString download;
+  [CEReactions] attribute USVString ping;
+  [CEReactions] attribute DOMString rel;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
+  [CEReactions] attribute DOMString hreflang;
+  [CEReactions] attribute DOMString type;
+  [CEReactions] attribute DOMString text;
+  [CEReactions] attribute DOMString referrerPolicy;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface HTMLAnchorElement {
+};
+partial interface HTMLAnchorElement {
+  [CEReactions] attribute DOMString coords;
+  [CEReactions] attribute DOMString charset;
+  [CEReactions] attribute DOMString name;
+  [CEReactions] attribute DOMString rev;
+  [CEReactions] attribute DOMString shape;
+};</code></pre></li><li><a href="https://privacycg.github.io/private-click-measurement/#linkformat">Private Click Measurement</a>
+<pre class=webidl><code>partial interface HTMLAnchorElement {
+  [CEReactions] attribute DOMString adCampaignId;
+  [CEReactions] attribute USVString adDestination;
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://privacycg.github.io/private-click-measurement/">Private Click Measurement</a> refers to <code>HTMLAnchorElement</code></li></ul>
+</section>

@@ -1,0 +1,28 @@
+---
+title: DOMPointReadOnly
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.fxtf.org/geometry/#dompointreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMPointReadOnly</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+interface DOMPointReadOnly {
+  constructor(optional unrestricted double x = 0, optional unrestricted double y = 0, optional unrestricted double z = 0, optional unrestricted double w = 1);
+  [NewObject] static DOMPointReadOnly fromPoint(optional DOMPointInit other = {});
+  readonly attribute unrestricted double x;
+  readonly attribute unrestricted double y;
+  readonly attribute unrestricted double z;
+  readonly attribute unrestricted double w;
+  [NewObject] DOMPoint matrixTransform(optional DOMMatrixInit matrix = {});
+  [Default] object toJSON();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="XRRay.html">XRRay</a></li><li><a href="DOMPointReadOnly.html">DOMPointReadOnly</a></li><li><a href="DOMPoint.html">DOMPoint</a></li><li><a href="SVGMarkerInstance.html">SVGMarkerInstance</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li><li><a href="XRBoundedReferenceSpace.html">XRBoundedReferenceSpace</a></li><li><a href="XRRigidTransform.html">XRRigidTransform</a></li><li><a href="XRCubeLayer.html">XRCubeLayer</a></li><li><a href="XRCubeLayerInit.html">XRCubeLayerInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a> refers to <code>DOMPointReadOnly</code></li><li><a href="https://www.w3.org/TR/svg-markers/">SVG Markers</a> refers to <code>DOMPointReadOnly</code></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a> refers to <code>DOMPointReadOnly</code></li><li><a href="https://www.w3.org/TR/webxr/">WebXR Device API</a> refers to <code>DOMPointReadOnly</code></li><li><a href="https://www.w3.org/TR/webxrlayers-1/">WebXR Layers API Level 1</a> refers to <code>DOMPointReadOnly</code></li></ul>
+</section>

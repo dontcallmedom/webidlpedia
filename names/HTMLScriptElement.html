@@ -1,0 +1,35 @@
+---
+title: HTMLScriptElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement">HTML Standard</a> defines <code>HTMLScriptElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLScriptElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute USVString src;
+  [CEReactions] attribute DOMString type;
+  [CEReactions] attribute boolean noModule;
+  [CEReactions] attribute boolean async;
+  [CEReactions] attribute boolean defer;
+  [CEReactions] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString text;
+  [CEReactions] attribute DOMString integrity;
+  [CEReactions] attribute DOMString referrerPolicy;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
+<pre class=webidl><code>partial interface HTMLScriptElement {
+  [CEReactions] attribute DOMString charset;
+  [CEReactions] attribute DOMString event;
+  [CEReactions] attribute DOMString htmlFor;
+};</code></pre></li><li><a href="https://www.w3.org/TR/SRI/#HTMLScriptElement">Subresource Integrity</a>
+<pre class=webidl><code>partial interface HTMLScriptElement {
+  attribute DOMString integrity;
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/SRI/">Subresource Integrity</a> refers to <code>HTMLScriptElement</code></li></ul>
+</section>

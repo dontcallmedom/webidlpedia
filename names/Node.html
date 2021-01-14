@@ -1,0 +1,67 @@
+---
+title: Node
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/#node">DOM Standard</a> defines <code>Node</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Node : EventTarget {
+  const unsigned short ELEMENT_NODE;
+  const unsigned short ATTRIBUTE_NODE;
+  const unsigned short TEXT_NODE;
+  const unsigned short CDATA_SECTION_NODE;
+  const unsigned short ENTITY_REFERENCE_NODE;
+  const unsigned short ENTITY_NODE;
+  const unsigned short PROCESSING_INSTRUCTION_NODE;
+  const unsigned short COMMENT_NODE;
+  const unsigned short DOCUMENT_NODE;
+  const unsigned short DOCUMENT_TYPE_NODE;
+  const unsigned short DOCUMENT_FRAGMENT_NODE;
+  const unsigned short NOTATION_NODE;
+  readonly attribute unsigned short nodeType;
+  readonly attribute DOMString nodeName;
+  readonly attribute USVString baseURI;
+  readonly attribute boolean isConnected;
+  readonly attribute Document? ownerDocument;
+  Node getRootNode(optional GetRootNodeOptions options = {});
+  readonly attribute Node? parentNode;
+  readonly attribute Element? parentElement;
+  boolean hasChildNodes();
+  [SameObject] readonly attribute NodeList childNodes;
+  readonly attribute Node? firstChild;
+  readonly attribute Node? lastChild;
+  readonly attribute Node? previousSibling;
+  readonly attribute Node? nextSibling;
+  [CEReactions] attribute DOMString? nodeValue;
+  [CEReactions] attribute DOMString? textContent;
+  [CEReactions] undefined normalize();
+  [CEReactions, NewObject] Node cloneNode(optional boolean deep = false);
+  boolean isEqualNode(Node? otherNode);
+  boolean isSameNode(Node? otherNode);
+  const unsigned short DOCUMENT_POSITION_DISCONNECTED;
+  const unsigned short DOCUMENT_POSITION_PRECEDING;
+  const unsigned short DOCUMENT_POSITION_FOLLOWING;
+  const unsigned short DOCUMENT_POSITION_CONTAINS;
+  const unsigned short DOCUMENT_POSITION_CONTAINED_BY;
+  const unsigned short DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC;
+  unsigned short compareDocumentPosition(Node other);
+  boolean contains(Node? other);
+  DOMString? lookupPrefix(DOMString? namespace);
+  DOMString? lookupNamespaceURI(DOMString? prefix);
+  boolean isDefaultNamespace(DOMString? namespace);
+  [CEReactions] Node insertBefore(Node node, Node? child);
+  [CEReactions] Node appendChild(Node node);
+  [CEReactions] Node replaceChild(Node node, Node child);
+  [CEReactions] Node removeChild(Node child);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="DocumentFragment.html">DocumentFragment</a></li><li><a href="ParentNode.html">ParentNode</a></li><li><a href="Element.html">Element</a></li><li><a href="CharacterData.html">CharacterData</a></li><li><a href="ChildNode.html">ChildNode</a></li><li><a href="DocumentType.html">DocumentType</a></li><li><a href="NodeList.html">NodeList</a></li><li><a href="MutationObserver.html">MutationObserver</a></li><li><a href="MutationRecord.html">MutationRecord</a></li><li><a href="Node.html">Node</a></li><li><a href="Attr.html">Attr</a></li><li><a href="AbstractRange.html">AbstractRange</a></li><li><a href="StaticRangeInit.html">StaticRangeInit</a></li><li><a href="Range.html">Range</a></li><li><a href="NodeIterator.html">NodeIterator</a></li><li><a href="TreeWalker.html">TreeWalker</a></li><li><a href="NodeFilter.html">NodeFilter</a></li><li><a href="XPathResult.html">XPathResult</a></li><li><a href="XPathExpression.html">XPathExpression</a></li><li><a href="XPathEvaluatorBase.html">XPathEvaluatorBase</a></li><li><a href="HTMLSlotElement.html">HTMLSlotElement</a></li><li><a href="CustomElementRegistry.html">CustomElementRegistry</a></li><li><a href="PerformanceEventTiming.html">PerformanceEventTiming</a></li><li><a href="LayoutShiftAttribution.html">LayoutShiftAttribution</a></li><li><a href="SpatialNavigationSearchOptions.html">SpatialNavigationSearchOptions</a></li><li><a href="Element.html">Element</a></li><li><a href="NamedFlow.html">NamedFlow</a></li><li><a href="CaretPosition.html">CaretPosition</a></li><li><a href="XMLSerializer.html">XMLSerializer</a></li><li><a href="Selection.html">Selection</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>Node</code></li><li><a href="https://wicg.github.io/event-timing/">Event Timing API</a> refers to <code>Node</code></li><li><a href="https://wicg.github.io/layout-instability/">Layout Instability API</a> refers to <code>Node</code></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a> refers to <code>Node</code></li><li><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module Level 1</a> refers to <code>Node</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>Node</code></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a> refers to <code>Node</code></li><li><a href="https://www.w3.org/TR/selection-api/">Selection API</a> refers to <code>Node</code></li></ul>
+</section>

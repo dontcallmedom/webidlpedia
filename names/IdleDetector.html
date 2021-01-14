@@ -1,0 +1,22 @@
+---
+title: IdleDetector
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/idle-detection/#idledetector">Idle Detection API</a> defines <code>IdleDetector</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window,DedicatedWorker]
+interface IdleDetector : EventTarget {
+  constructor();
+  readonly attribute UserIdleState? userState;
+  readonly attribute ScreenIdleState? screenState;
+  attribute EventHandler onchange;
+  [Exposed=Window] static Promise<PermissionState> requestPermission();
+  Promise<void> start(optional IdleOptions options = {});
+};</code></pre>
+  
+</section>
+
+  

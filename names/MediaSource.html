@@ -1,0 +1,34 @@
+---
+title: MediaSource
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/media-source/#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface MediaSource : EventTarget {
+  constructor();
+  readonly attribute SourceBufferList sourceBuffers;
+  readonly attribute SourceBufferList activeSourceBuffers;
+  readonly attribute ReadyState readyState;
+  attribute unrestricted double duration;
+  attribute EventHandler onsourceopen;
+  attribute EventHandler onsourceended;
+  attribute EventHandler onsourceclose;
+  SourceBuffer addSourceBuffer(DOMString type);
+  undefined removeSourceBuffer(SourceBuffer sourceBuffer);
+  undefined endOfStream(optional EndOfStreamError error);
+  undefined setLiveSeekableRange(double start, double end);
+  undefined clearLiveSeekableRange();
+  static boolean isTypeSupported(DOMString type);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="URL.html">URL</a></li><li><a href="URL.html">URL</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>MediaSource</code></li><li><a href="https://www.w3.org/TR/FileAPI/">File API</a> refers to <code>MediaSource</code></li></ul>
+</section>

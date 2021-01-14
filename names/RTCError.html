@@ -1,0 +1,29 @@
+---
+title: RTCError
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcerror">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCError</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCError : DOMException {
+  constructor(RTCErrorInit init, optional DOMString message = "");
+  readonly attribute RTCErrorDetailType errorDetail;
+  readonly attribute long? sdpLineNumber;
+  readonly attribute long? sctpCauseCode;
+  readonly attribute unsigned long? receivedAlert;
+  readonly attribute unsigned long? sentAlert;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
+<pre class=webidl><code>partial interface RTCError {
+  readonly attribute long? httpRequestStatusCode;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCErrorEvent.html">RTCErrorEvent</a></li><li><a href="RTCErrorEventInit.html">RTCErrorEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a> refers to <code>RTCError</code></li></ul>
+</section>

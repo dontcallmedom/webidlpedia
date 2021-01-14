@@ -1,0 +1,54 @@
+---
+title: Range
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/#range">DOM Standard</a> defines <code>Range</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Range : AbstractRange {
+  constructor();
+  readonly attribute Node commonAncestorContainer;
+  undefined setStart(Node node, unsigned long offset);
+  undefined setEnd(Node node, unsigned long offset);
+  undefined setStartBefore(Node node);
+  undefined setStartAfter(Node node);
+  undefined setEndBefore(Node node);
+  undefined setEndAfter(Node node);
+  undefined collapse(optional boolean toStart = false);
+  undefined selectNode(Node node);
+  undefined selectNodeContents(Node node);
+  const unsigned short START_TO_START;
+  const unsigned short START_TO_END;
+  const unsigned short END_TO_END;
+  const unsigned short END_TO_START;
+  short compareBoundaryPoints(unsigned short how, Range sourceRange);
+  [CEReactions] undefined deleteContents();
+  [CEReactions, NewObject] DocumentFragment extractContents();
+  [CEReactions, NewObject] DocumentFragment cloneContents();
+  [CEReactions] undefined insertNode(Node node);
+  [CEReactions] undefined surroundContents(Node newParent);
+  [NewObject] Range cloneRange();
+  undefined detach();
+  boolean isPointInRange(Node node, unsigned long offset);
+  short comparePoint(Node node, unsigned long offset);
+  boolean intersectsNode(Node node);
+  stringifier ${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''} ();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
+<pre class=webidl><code>partial interface Range {
+  DOMRectList getClientRects();
+  [NewObject] DOMRect getBoundingClientRect();
+};</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/#extensions-to-the-range-interface">DOM Parsing and Serialization</a>
+<pre class=webidl><code>partial interface Range {
+  [CEReactions, NewObject] DocumentFragment createContextualFragment(DOMString fragment);
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="Range.html">Range</a></li><li><a href="Region.html">Region</a></li><li><a href="Selection.html">Selection</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module Level 1</a> refers to <code>Range</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>Range</code></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a> refers to <code>Range</code></li><li><a href="https://www.w3.org/TR/selection-api/">Selection API</a> refers to <code>Range</code></li></ul>
+</section>

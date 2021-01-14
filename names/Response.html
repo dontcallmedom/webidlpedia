@@ -1,0 +1,33 @@
+---
+title: Response
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://fetch.spec.whatwg.org/#response">Fetch Standard</a> defines <code>Response</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface Response {
+  constructor(optional BodyInit? body = null, optional ResponseInit init = {});
+  [NewObject] static Response error();
+  [NewObject] static Response redirect(USVString url, optional unsigned short status = 302);
+  readonly attribute ResponseType type;
+  readonly attribute USVString url;
+  readonly attribute boolean redirected;
+  readonly attribute unsigned short status;
+  readonly attribute boolean ok;
+  readonly attribute ByteString statusText;
+  [SameObject] readonly attribute Headers headers;
+  [NewObject] Response clone();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
+<pre class=webidl><code>interface Response {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Response.html">Response</a></li><li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li><li><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></li><li><a href="FetchEvent.html">FetchEvent</a></li><li><a href="Cache.html">Cache</a></li><li><a href="WebAssembly.html">WebAssembly</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/background-fetch/">Background Fetch</a> refers to <code>Response</code></li><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a> refers to <code>Response</code></li><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a> refers to <code>Response</code></li></ul>
+</section>

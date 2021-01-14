@@ -1,0 +1,123 @@
+---
+title: GlobalEventHandlers
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>GlobalEventHandlers</code></p>
+<pre class=webidl><code>interface mixin GlobalEventHandlers {
+  attribute EventHandler onabort;
+  attribute EventHandler onauxclick;
+  attribute EventHandler onblur;
+  attribute EventHandler oncancel;
+  attribute EventHandler oncanplay;
+  attribute EventHandler oncanplaythrough;
+  attribute EventHandler onchange;
+  attribute EventHandler onclick;
+  attribute EventHandler onclose;
+  attribute EventHandler oncontextmenu;
+  attribute EventHandler oncuechange;
+  attribute EventHandler ondblclick;
+  attribute EventHandler ondrag;
+  attribute EventHandler ondragend;
+  attribute EventHandler ondragenter;
+  attribute EventHandler ondragleave;
+  attribute EventHandler ondragover;
+  attribute EventHandler ondragstart;
+  attribute EventHandler ondrop;
+  attribute EventHandler ondurationchange;
+  attribute EventHandler onemptied;
+  attribute EventHandler onended;
+  attribute OnErrorEventHandler onerror;
+  attribute EventHandler onfocus;
+  attribute EventHandler onformdata;
+  attribute EventHandler oninput;
+  attribute EventHandler oninvalid;
+  attribute EventHandler onkeydown;
+  attribute EventHandler onkeypress;
+  attribute EventHandler onkeyup;
+  attribute EventHandler onload;
+  attribute EventHandler onloadeddata;
+  attribute EventHandler onloadedmetadata;
+  attribute EventHandler onloadstart;
+  attribute EventHandler onmousedown;
+  [LegacyLenientThis] attribute EventHandler onmouseenter;
+  [LegacyLenientThis] attribute EventHandler onmouseleave;
+  attribute EventHandler onmousemove;
+  attribute EventHandler onmouseout;
+  attribute EventHandler onmouseover;
+  attribute EventHandler onmouseup;
+  attribute EventHandler onpause;
+  attribute EventHandler onplay;
+  attribute EventHandler onplaying;
+  attribute EventHandler onprogress;
+  attribute EventHandler onratechange;
+  attribute EventHandler onreset;
+  attribute EventHandler onresize;
+  attribute EventHandler onscroll;
+  attribute EventHandler onsecuritypolicyviolation;
+  attribute EventHandler onseeked;
+  attribute EventHandler onseeking;
+  attribute EventHandler onselect;
+  attribute EventHandler onslotchange;
+  attribute EventHandler onstalled;
+  attribute EventHandler onsubmit;
+  attribute EventHandler onsuspend;
+  attribute EventHandler ontimeupdate;
+  attribute EventHandler ontoggle;
+  attribute EventHandler onvolumechange;
+  attribute EventHandler onwaiting;
+  attribute EventHandler onwebkitanimationend;
+  attribute EventHandler onwebkitanimationiteration;
+  attribute EventHandler onwebkitanimationstart;
+  attribute EventHandler onwebkittransitionend;
+  attribute EventHandler onwheel;
+};</code></pre>
+  <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://immersive-web.github.io/dom-overlays/#onbeforexrselect">WebXR DOM Overlays Module</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onbeforexrselect;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-animations-1/#interface-globaleventhandlers-idl">CSS Animations Level 1</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onanimationstart;
+  attribute EventHandler onanimationiteration;
+  attribute EventHandler onanimationend;
+  attribute EventHandler onanimationcancel;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-transitions-1/#interface-globaleventhandlers-idl">CSS Transitions</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler ontransitionrun;
+  attribute EventHandler ontransitionstart;
+  attribute EventHandler ontransitionend;
+  attribute EventHandler ontransitioncancel;
+};</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-globaleventhandlers-mixin">Pointer Events</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler ongotpointercapture;
+  attribute EventHandler onlostpointercapture;
+  attribute EventHandler onpointerdown;
+  attribute EventHandler onpointermove;
+  [SecureContext] attribute EventHandler onpointerrawupdate;
+  attribute EventHandler onpointerup;
+  attribute EventHandler onpointercancel;
+  attribute EventHandler onpointerover;
+  attribute EventHandler onpointerout;
+  attribute EventHandler onpointerenter;
+  attribute EventHandler onpointerleave;
+};</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-globaleventhandlers-interface">Selection API</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onselectstart;
+  attribute EventHandler onselectionchange;
+};</code></pre></li><li><a href="https://www.w3.org/TR/touch-events/#extensions-to-the-globaleventhandlers-mixin">Touch Events - Level 2</a>
+<pre class=webidl><code>partial interface mixin GlobalEventHandlers {
+  attribute EventHandler ontouchstart;
+  attribute EventHandler ontouchend;
+  attribute EventHandler ontouchmove;
+  attribute EventHandler ontouchcancel;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="HTMLElement.html">HTMLElement</a></li><li><a href="Window.html">Window</a></li><li><a href="MathMLElement.html">MathMLElement</a></li><li><a href="SVGElement.html">SVGElement</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://immersive-web.github.io/dom-overlays/">WebXR DOM Overlays Module</a> refers to <code>GlobalEventHandlers</code></li><li><a href="https://www.w3.org/TR/css-animations-1/">CSS Animations Level 1</a> refers to <code>GlobalEventHandlers</code></li><li><a href="https://www.w3.org/TR/css-transitions-1/">CSS Transitions</a> refers to <code>GlobalEventHandlers</code></li><li><a href="https://www.w3.org/TR/pointerevents3/">Pointer Events</a> refers to <code>GlobalEventHandlers</code></li><li><a href="https://www.w3.org/TR/selection-api/">Selection API</a> refers to <code>GlobalEventHandlers</code></li><li><a href="https://www.w3.org/TR/touch-events/">Touch Events - Level 2</a> refers to <code>GlobalEventHandlers</code></li></ul>
+</section>

@@ -1,0 +1,39 @@
+---
+title: Request
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://fetch.spec.whatwg.org/#request">Fetch Standard</a> defines <code>Request</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface Request {
+  constructor(RequestInfo input, optional RequestInit init = {});
+  readonly attribute ByteString method;
+  readonly attribute USVString url;
+  [SameObject] readonly attribute Headers headers;
+  readonly attribute RequestDestination destination;
+  readonly attribute USVString referrer;
+  readonly attribute ReferrerPolicy referrerPolicy;
+  readonly attribute RequestMode mode;
+  readonly attribute RequestCredentials credentials;
+  readonly attribute RequestCache cache;
+  readonly attribute RequestRedirect redirect;
+  readonly attribute DOMString integrity;
+  readonly attribute boolean keepalive;
+  readonly attribute boolean isReloadNavigation;
+  readonly attribute boolean isHistoryNavigation;
+  readonly attribute AbortSignal signal;
+  [NewObject] Request clone();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
+<pre class=webidl><code>interface Request {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Request.html">Request</a></li><li><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></li><li><a href="FetchEvent.html">FetchEvent</a></li><li><a href="FetchEventInit.html">FetchEventInit</a></li><li><a href="Cache.html">Cache</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/background-fetch/">Background Fetch</a> refers to <code>Request</code></li><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a> refers to <code>Request</code></li></ul>
+</section>

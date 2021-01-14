@@ -1,0 +1,31 @@
+---
+title: AudioParam
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#AudioParam">Web Audio API</a> defines <code>AudioParam</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface AudioParam {
+  attribute float value;
+  attribute AutomationRate automationRate;
+  readonly attribute float defaultValue;
+  readonly attribute float minValue;
+  readonly attribute float maxValue;
+  AudioParam setValueAtTime(float value, double startTime);
+  AudioParam linearRampToValueAtTime(float value, double endTime);
+  AudioParam exponentialRampToValueAtTime(float value, double endTime);
+  AudioParam setTargetAtTime(float target, double startTime, float timeConstant);
+  AudioParam setValueCurveAtTime(sequence<float> values, double startTime, double duration);
+  AudioParam cancelScheduledValues(double cancelTime);
+  AudioParam cancelAndHoldAtTime(double cancelTime);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioParam.html">AudioParam</a></li><li><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></li><li><a href="AudioListener.html">AudioListener</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ConstantSourceNode.html">ConstantSourceNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="OscillatorNode.html">OscillatorNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="AudioParamMap.html">AudioParamMap</a></li></ul>
+</section>
+  

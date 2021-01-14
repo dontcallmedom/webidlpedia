@@ -1,0 +1,29 @@
+---
+title: SVGPointList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGPointList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGPointList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SVGPointList {
+  readonly attribute unsigned long length;
+  readonly attribute unsigned long numberOfItems;
+  void clear();
+  DOMPoint initialize(DOMPoint newItem);
+  getter DOMPoint getItem(unsigned long index);
+  DOMPoint insertItemBefore(DOMPoint newItem, unsigned long index);
+  DOMPoint replaceItem(DOMPoint newItem, unsigned long index);
+  DOMPoint removeItem(unsigned long index);
+  DOMPoint appendItem(DOMPoint newItem);
+  setter void (unsigned long index, DOMPoint newItem);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="SVGAnimatedPoints.html">SVGAnimatedPoints</a></li></ul>
+</section>
+  

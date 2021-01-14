@@ -1,0 +1,29 @@
+---
+title: SVGStringList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGStringList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGStringList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SVGStringList {
+  readonly attribute unsigned long length;
+  readonly attribute unsigned long numberOfItems;
+  void clear();
+  DOMString initialize(DOMString newItem);
+  getter DOMString getItem(unsigned long index);
+  DOMString insertItemBefore(DOMString newItem, unsigned long index);
+  DOMString replaceItem(DOMString newItem, unsigned long index);
+  DOMString removeItem(unsigned long index);
+  DOMString appendItem(DOMString newItem);
+  setter void (unsigned long index, DOMString newItem);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="SVGTests.html">SVGTests</a></li></ul>
+</section>
+  

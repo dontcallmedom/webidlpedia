@@ -1,0 +1,31 @@
+---
+title: PaymentAddress
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/payment-request/#dom-paymentaddress">Payment Request API</a> defines <code>PaymentAddress</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface PaymentAddress {
+  [Default] object toJSON();
+  readonly attribute DOMString city;
+  readonly attribute DOMString country;
+  readonly attribute DOMString dependentLocality;
+  readonly attribute DOMString organization;
+  readonly attribute DOMString phone;
+  readonly attribute DOMString postalCode;
+  readonly attribute DOMString recipient;
+  readonly attribute DOMString region;
+  readonly attribute DOMString sortingCode;
+  readonly attribute FrozenArray<DOMString> addressLine;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="ContactAddress.html">ContactAddress</a></li><li><a href="BasicCardChangeDetails.html">BasicCardChangeDetails</a></li><li><a href="BasicCardResponse.html">BasicCardResponse</a></li><li><a href="PaymentRequest.html">PaymentRequest</a></li><li><a href="PaymentResponse.html">PaymentResponse</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/contact-api/spec/">Contact Picker API</a> refers to <code>PaymentAddress</code></li><li><a href="https://www.w3.org/TR/payment-method-basic-card/">Payment Method: Basic Card</a> refers to <code>PaymentAddress</code></li></ul>
+</section>

@@ -1,0 +1,29 @@
+---
+title: GPUComputePassEncoder
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://gpuweb.github.io/gpuweb/#gpucomputepassencoder">WebGPU</a> defines <code>GPUComputePassEncoder</code></p>
+<pre class=webidl><code>interface GPUComputePassEncoder {
+  undefined setPipeline(GPUComputePipeline pipeline);
+  undefined dispatch(GPUSize32 x, optional GPUSize32 y = 1, optional GPUSize32 z = 1);
+  undefined dispatchIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
+  undefined beginPipelineStatisticsQuery(GPUQuerySet querySet, GPUSize32 queryIndex);
+  undefined endPipelineStatisticsQuery();
+  undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
+  undefined endPass();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>
+<pre class=webidl><code>interface GPUComputePassEncoder {
+};
+interface GPUComputePassEncoder {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></li></ul>
+</section>
+  

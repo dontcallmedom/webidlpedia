@@ -1,0 +1,23 @@
+---
+title: OfflineAudioContext
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#offlineaudiocontext">Web Audio API</a> defines <code>OfflineAudioContext</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface OfflineAudioContext : BaseAudioContext {
+  constructor(OfflineAudioContextOptions contextOptions);
+  constructor(unsigned long numberOfChannels, unsigned long length, float sampleRate);
+  Promise<AudioBuffer> startRendering();
+  Promise<undefined> resume();
+  Promise<undefined> suspend(double suspendTime);
+  readonly attribute unsigned long length;
+  attribute EventHandler oncomplete;
+};</code></pre>
+  
+</section>
+
+  

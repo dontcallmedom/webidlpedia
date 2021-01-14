@@ -1,0 +1,60 @@
+---
+title: ServiceWorkerGlobalScope
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope">Service Workers Nightly</a> defines <code>ServiceWorkerGlobalScope</code></p>
+<pre class=webidl><code>[Global=Worker,ServiceWorker, Exposed=ServiceWorker]
+interface ServiceWorkerGlobalScope : WorkerGlobalScope {
+  [SameObject] readonly attribute Clients clients;
+  [SameObject] readonly attribute ServiceWorkerRegistration registration;
+  [SameObject] readonly attribute ServiceWorker serviceWorker;
+  [NewObject] Promise<undefined> skipWaiting();
+  attribute EventHandler oninstall;
+  attribute EventHandler onactivate;
+  attribute EventHandler onfetch;
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://notifications.spec.whatwg.org/#service-worker-api">Notifications API Standard</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onnotificationclick;
+  attribute EventHandler onnotificationclose;
+};</code></pre></li><li><a href="https://wicg.github.io/background-fetch/#extensions-to-service-worker-global">Background Fetch</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onbackgroundfetchsuccess;
+  attribute EventHandler onbackgroundfetchfail;
+  attribute EventHandler onbackgroundfetchabort;
+  attribute EventHandler onbackgroundfetchclick;
+};</code></pre></li><li><a href="https://wicg.github.io/background-sync/spec/#sync-event">Web Background Synchronization</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onsync;
+};</code></pre></li><li><a href="https://wicg.github.io/content-index/spec/#extensions-to-service-worker-global">Content Index</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler oncontentdelete;
+};</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#ServiceWorkerGlobalScope">Cookie Store API</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  [SameObject] readonly attribute CookieStore cookieStore;
+  attribute EventHandler oncookiechange;
+};</code></pre></li><li><a href="https://wicg.github.io/periodic-background-sync/#extensions-to-serviceworkerglobalscope">Web Periodic Background Synchronization</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onperiodicsync;
+};</code></pre></li><li><a href="https://www.w3.org/TR/payment-handler/#oncanmakepayment-attribute">Payment Handler API</a>
+<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler oncanmakepayment;
+};
+partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onpaymentrequest;
+};</code></pre></li><li><a href="https://www.w3.org/TR/push-api/#extensions-to-the-serviceworkerglobalscope-interface">Push API</a>
+<pre class=webidl><code>[Exposed=ServiceWorker, SecureContext]
+partial interface ServiceWorkerGlobalScope {
+  attribute EventHandler onpush;
+  attribute EventHandler onpushsubscriptionchange;
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://notifications.spec.whatwg.org/">Notifications API Standard</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/background-fetch/">Background Fetch</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/background-sync/spec/">Web Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/content-index/spec/">Content Index</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/cookie-store/">Cookie Store API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/periodic-background-sync/">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/payment-handler/">Payment Handler API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/push-api/">Push API</a> refers to <code>ServiceWorkerGlobalScope</code></li></ul>
+</section>

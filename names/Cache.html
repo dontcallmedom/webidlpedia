@@ -1,0 +1,26 @@
+---
+title: Cache
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/ServiceWorker/#cache">Service Workers Nightly</a> defines <code>Cache</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+interface Cache {
+  [NewObject] Promise<any> match(RequestInfo request, optional CacheQueryOptions options = {});
+  [NewObject] Promise<FrozenArray<Response>> matchAll(optional RequestInfo request, optional CacheQueryOptions options = {});
+  [NewObject] Promise<undefined> add(RequestInfo request);
+  [NewObject] Promise<undefined> addAll(sequence<RequestInfo> requests);
+  [NewObject] Promise<undefined> put(RequestInfo request, Response response);
+  [NewObject] Promise<boolean> delete(RequestInfo request, optional CacheQueryOptions options = {});
+  [NewObject] Promise<FrozenArray<Request>> keys(optional RequestInfo request, optional CacheQueryOptions options = {});
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="CacheStorage.html">CacheStorage</a></li></ul>
+</section>
+  
