@@ -1,0 +1,29 @@
+---
+title: MIDIPort
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-midi-api/#dom-midiport">Web MIDI API</a> defines <code>MIDIPort</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface MIDIPort : EventTarget {
+  readonly attribute DOMString id;
+  readonly attribute DOMString? manufacturer;
+  readonly attribute DOMString? name;
+  readonly attribute MIDIPortType type;
+  readonly attribute DOMString? version;
+  readonly attribute MIDIPortDeviceState state;
+  readonly attribute MIDIPortConnectionState connection;
+  attribute EventHandler onstatechange;
+  Promise<MIDIPort> open();
+  Promise<MIDIPort> close();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MIDIPort.html">MIDIPort</a></li><li><a href="MIDIInput.html">MIDIInput</a></li><li><a href="MIDIOutput.html">MIDIOutput</a></li><li><a href="MIDIConnectionEvent.html">MIDIConnectionEvent</a></li><li><a href="MIDIConnectionEventInit.html">MIDIConnectionEventInit</a></li></ul>
+</section>
+  

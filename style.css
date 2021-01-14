@@ -1,0 +1,422 @@
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #fafafa;
+}
+
+html {
+  /*font-size: 14px;*/
+  padding: .5em;
+}
+
+body {
+  border-radius: .6em;
+  color: #333;
+  font: 1.1em/1.3 Helvetica, Arial, Verdana, sans-serif;
+  hyphens: none;
+  margin: 0 auto;
+  max-width: 65em;
+  padding: .5em;
+}
+
+.header :first-child {
+  margin-top: 0;
+}
+
+header #logo {
+  height: 72px;
+}
+
+header #logo img {
+  float: left;
+}
+
+header #translations {
+  float: right;
+}
+
+/*
+#top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 454px;
+  color: white;
+  position: relative;
+}
+
+#top.small {
+    background-color: black;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100px;
+  position: relative;
+}
+
+#top h1,
+#top h2 {
+  padding: 1rem;
+  color: white;
+  text-shadow: 4px 4px 20px black;
+}
+@media all and (min-width: 787px) {
+  #top h1,
+  #top h2 {
+    margin-left: 450px;
+  }
+}
+
+#top.small h1 {
+    text-shadow: none;
+    margin-left: 100px;
+}
+
+
+#top h1 a:link, #top h1 a:visited { color: white;}
+
+#top a.credit { position: absolute; bottom:0; right:0;}
+*/
+
+.footer :last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+ul,
+ol {
+  margin: .5rem 0;
+}
+
+ul, ol { margin-left: 3em;}
+
+a,
+h1,
+h2,
+.menu a.active-tab {
+  color: #005a9c;
+}
+
+a:hover {
+  color: #111;
+}
+
+a.ref,
+.has-ref {
+  cursor: pointer;
+  display: inline;
+}
+
+a.ref {
+  color: inherit;
+  display: none;
+  font-size: 1em;
+  left: 0;
+  opacity: .25;
+  position: absolute;
+  text-decoration: none;
+}
+
+.has-ref:hover > a.ref {
+  display: block;
+}
+
+.has-ref:target > a.ref {
+  display: block;
+  opacity: .5;
+}
+
+.has-ref {
+  margin-left: -1em;
+  padding-left: 1em;
+  position: relative;
+}
+
+.graphic {
+  height: 13em;
+  margin: 0 -1.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.graphic img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.box,
+.type {
+  box-shadow: .3em .3em 0 rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+}
+
+/* If you rather clip than squeeze the image, remove `height: 100%`. */
+.box {
+  clear: right;
+  color: #666;
+  float: right;
+  font-size: 1rem;
+  margin-left: 3rem;
+  padding: 1em;
+  width: 19em;
+  z-index: 2;
+  background-color: #f2fdff;
+  margin-bottom: 1em;
+}
+
+.box + .box {
+  margin-top: 2rem;
+}
+
+.box h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.box *:last-child {
+  margin-bottom: 0;
+}
+
+.image-paragraph-host {
+  margin-bottom: .75em;
+}
+
+.image-paragraph {
+  margin: 0;
+}
+
+.image-link {
+  display: block;
+}
+
+.image-link img {
+  max-width: 225px;
+  padding: 2.5vmin 0;
+  width: 100%;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  clear: both;
+  color: #777;
+  font-size: 1rem;
+  margin: 2rem 0;
+  padding-top: .5rem;
+}
+
+.menu {
+  background: #005a9c;
+  font-size: 1rem;
+  margin: 0 0 2em;
+}
+
+.menu,
+.menu ul,
+.menu li {
+  width: 100%;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li + li a {
+  border-left: 2px solid #fff;
+}
+
+.menu a {
+  color: #eee;
+  display: block;
+  font-size: .95rem;
+  height: 100%;
+  padding: .6rem;
+  text-align: center;
+  text-decoration: none;
+  transition: .05s background ease-in-out, .05s color ease-in-out;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.menu a:active {
+  opacity: .75;
+}
+
+.menu a.active-tab {
+  background: #fff;
+  font-weight: bold;
+  border-top: solid thin #005a9c;
+  border-bottom: solid thin #005a9c;
+}
+
+.menu a:link:hover {
+  background: #111;
+  color: #fff;
+}
+
+ul {
+  list-style: square;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+blockquote {
+  margin-left: 1em;
+}
+
+.main {
+  margin-top: 3rem;
+}
+
+dd {
+  margin: 0 0 .6em;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.main dt {
+  margin-top: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  break-after: avoid;
+}
+
+.main h2 {
+  margin-top: 1.5em;
+}
+
+address {
+  line-height: .25em;
+}
+
+@media all and (min-width: 699px) {
+  html {
+    background: #005a9c;
+  }
+}
+
+@media all and (max-width: 860px) {
+  html {
+    padding: 0;
+  }
+
+  body {
+    border-radius: 0;
+  }
+
+  .menu ul {
+    display: block;
+  }
+
+  .menu li + li a {
+    border-top: 2px solid #fff;
+    border-left: 0;
+  }
+
+  .menu li + li a {
+    margin-left: 0;
+  }
+
+  .graphic {
+    height: 10em;
+    margin: 0;
+  }
+
+  /* The right-floating boxes become normal blocks. */
+  .box {
+    float: none;
+    margin-left: 0;
+    width: auto;
+  }
+}
+
+@page {
+  margin: 2cm;
+}
+
+@media print {
+  html {
+    background: none;
+    padding: 0;
+  }
+
+  body {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+@media print {
+  h1 {
+    background: none;
+    color: #111;
+  }
+
+  nav, aside {
+    display: none;
+  }
+
+  body,
+  article {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  article {
+    page-break-before: always;
+  }
+
+  ul, img {
+    page-break-inside: avoid;
+  }
+
+  #dates {
+    display: none;
+  }
+}
+
+
+pre { white-space: pre-wrap;}

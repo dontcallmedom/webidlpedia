@@ -1,0 +1,26 @@
+---
+title: MessagePort
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#messageport">HTML Standard</a> defines <code>MessagePort</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker,AudioWorklet, Transferable]
+interface MessagePort : EventTarget {
+  undefined postMessage(any message, sequence<object> transfer);
+  undefined postMessage(any message, optional PostMessageOptions options = {});
+  undefined start();
+  undefined close();
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="MessageEventInit.html">MessageEventInit</a></li><li><a href="MessageChannel.html">MessageChannel</a></li><li><a href="SharedWorker.html">SharedWorker</a></li><li><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></li><li><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></li><li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li><li><a href="AudioWorkletProcessor.html">AudioWorkletProcessor</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/portals/">Portals</a> refers to <code>MessagePort</code></li><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a> refers to <code>MessagePort</code></li><li><a href="https://www.w3.org/TR/webaudio/">Web Audio API</a> refers to <code>MessagePort</code></li></ul>
+</section>

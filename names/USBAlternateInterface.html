@@ -1,0 +1,26 @@
+---
+title: USBAlternateInterface
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/webusb/#usbalternateinterface">WebUSB API</a> defines <code>USBAlternateInterface</code></p>
+<pre class=webidl><code>[Exposed=DedicatedWorker,SharedWorker,Window, SecureContext]
+interface USBAlternateInterface {
+  constructor(USBInterface deviceInterface, octet alternateSetting);
+  readonly attribute octet alternateSetting;
+  readonly attribute octet interfaceClass;
+  readonly attribute octet interfaceSubclass;
+  readonly attribute octet interfaceProtocol;
+  readonly attribute DOMString? interfaceName;
+  readonly attribute FrozenArray<USBEndpoint> endpoints;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="USBInterface.html">USBInterface</a></li><li><a href="USBEndpoint.html">USBEndpoint</a></li></ul>
+</section>
+  

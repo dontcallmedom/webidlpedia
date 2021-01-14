@@ -1,0 +1,22 @@
+---
+title: BackgroundFetchManager
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/background-fetch/#backgroundfetchmanager">Background Fetch</a> defines <code>BackgroundFetchManager</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface BackgroundFetchManager {
+  Promise<BackgroundFetchRegistration> fetch(DOMString id, (RequestInfo or sequence<RequestInfo>) requests, optional BackgroundFetchOptions options = {});
+  Promise<BackgroundFetchRegistration?> get(DOMString id);
+  Promise<sequence<DOMString>> getIds();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li></ul>
+</section>
+  

@@ -1,0 +1,20 @@
+---
+title: CSSNestingRule
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/css-nesting-1/#cssnestingrule">CSS Nesting Module</a> defines <code>CSSNestingRule</code></p>
+<pre class=webidl><code>interface CSSNestingRule : CSSRule {
+  attribute CSSOMString selectorText;
+  [SameObject] readonly attribute CSSRuleList cssRules;
+  [SameObject, PutForwards=cssText] readonly attribute CSSStyleDeclaration style;
+  unsigned long insertRule(CSSOMString rule, optional unsigned long index = 0);
+  undefined deleteRule(unsigned long index);
+};</code></pre>
+  
+</section>
+
+  

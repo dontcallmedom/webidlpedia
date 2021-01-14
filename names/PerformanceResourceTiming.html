@@ -1,0 +1,42 @@
+---
+title: PerformanceResourceTiming
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming">Resource Timing Level 2</a> defines <code>PerformanceResourceTiming</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface PerformanceResourceTiming : PerformanceEntry {
+  readonly attribute DOMString initiatorType;
+  readonly attribute DOMString nextHopProtocol;
+  readonly attribute DOMHighResTimeStamp workerStart;
+  readonly attribute DOMHighResTimeStamp redirectStart;
+  readonly attribute DOMHighResTimeStamp redirectEnd;
+  readonly attribute DOMHighResTimeStamp fetchStart;
+  readonly attribute DOMHighResTimeStamp domainLookupStart;
+  readonly attribute DOMHighResTimeStamp domainLookupEnd;
+  readonly attribute DOMHighResTimeStamp connectStart;
+  readonly attribute DOMHighResTimeStamp connectEnd;
+  readonly attribute DOMHighResTimeStamp secureConnectionStart;
+  readonly attribute DOMHighResTimeStamp requestStart;
+  readonly attribute DOMHighResTimeStamp responseStart;
+  readonly attribute DOMHighResTimeStamp responseEnd;
+  readonly attribute unsigned long long transferSize;
+  readonly attribute unsigned long long encodedBodySize;
+  readonly attribute unsigned long long decodedBodySize;
+  [Default] object toJSON();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/server-timing/#servertiming-attribute">Server Timing</a>
+<pre class=webidl><code>[Exposed=Window,Worker]
+partial interface PerformanceResourceTiming {
+  readonly attribute FrozenArray<PerformanceServerTiming> serverTiming;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PerformanceNavigationTiming.html">PerformanceNavigationTiming</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/navigation-timing-2/">Navigation Timing Level 2</a> refers to <code>PerformanceResourceTiming</code></li><li><a href="https://www.w3.org/TR/server-timing/">Server Timing</a> refers to <code>PerformanceResourceTiming</code></li></ul>
+</section>

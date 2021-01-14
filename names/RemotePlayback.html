@@ -1,0 +1,26 @@
+---
+title: RemotePlayback
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/remote-playback/#dom-remoteplayback">Remote Playback API</a> defines <code>RemotePlayback</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RemotePlayback : EventTarget {
+  Promise<long> watchAvailability(RemotePlaybackAvailabilityCallback callback);
+  Promise<undefined> cancelWatchAvailability(optional long id);
+  readonly attribute RemotePlaybackState state;
+  attribute EventHandler onconnecting;
+  attribute EventHandler onconnect;
+  attribute EventHandler ondisconnect;
+  Promise<undefined> prompt();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li></ul>
+</section>
+  

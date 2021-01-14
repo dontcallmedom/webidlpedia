@@ -1,0 +1,22 @@
+---
+title: LockManager
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/web-locks/#lockmanager">Web Locks API</a> defines <code>LockManager</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+interface LockManager {
+  Promise<any> request(DOMString name, LockGrantedCallback callback);
+  Promise<any> request(DOMString name, LockOptions options, LockGrantedCallback callback);
+  Promise<LockManagerSnapshot> query();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NavigatorLocks.html">NavigatorLocks</a></li></ul>
+</section>
+  

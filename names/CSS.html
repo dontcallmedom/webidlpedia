@@ -1,0 +1,51 @@
+---
+title: CSS
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/cssom/#namespacedef-css">CSS Object Model (CSSOM)</a> defines <code>CSS</code></p>
+<pre class=webidl><code>[Exposed=Window]
+namespace CSS {
+  CSSOMString escape(CSSOMString ident);
+};</code></pre>
+  <p>This namespace is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/css-parser-api/">CSS Parser API</a>
+<pre class=webidl><code>partial namespace CSS {
+  Promise<sequence<CSSParserRule>> parseStylesheet(CSSStringSource css, optional CSSParserOptions options);
+  Promise<sequence<CSSParserRule>> parseRuleList(CSSStringSource css, optional CSSParserOptions options);
+  Promise<CSSParserRule> parseRule(CSSStringSource css, optional CSSParserOptions options);
+  Promise<sequence<CSSParserRule>> parseDeclarationList(CSSStringSource css, optional CSSParserOptions options);
+  CSSParserDeclaration parseDeclaration(DOMString css, optional CSSParserOptions options);
+  CSSToken parseValue(DOMString css);
+  sequence<CSSToken> parseValueList(DOMString css);
+  sequence<sequence<CSSToken>> parseCommaValueList(DOMString css);
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-animation-worklet-1/#animation-worklet-desc">CSS Animation Worklet API</a>
+<pre class=webidl><code>[Exposed=Window]
+partial namespace CSS {
+  [SameObject] readonly attribute Worklet animationWorklet;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-conditional-3/">CSS Conditional Rules Module Level 3</a>
+<pre class=webidl><code>partial namespace CSS {
+  boolean supports(CSSOMString property, CSSOMString value);
+  boolean supports(CSSOMString conditionText);
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-highlight-api-1/#registration">CSS Custom Highlight API Module Level 1</a>
+<pre class=webidl><code>partial namespace CSS {
+  readonly attribute HighlightsRegister highlights;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-images-4/#elementsources">CSS Images Module Level 4</a>
+<pre class=webidl><code>partial namespace CSS {
+  [SameObject] readonly attribute any elementSources;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-layout-api-1/#layout-worklet">CSS Layout API Level 1</a>
+<pre class=webidl><code>partial namespace CSS {
+  [SameObject] readonly attribute Worklet layoutWorklet;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-paint-api-1/#paint-worklet">CSS Painting API Level 1</a>
+<pre class=webidl><code>partial namespace CSS {
+  [SameObject] readonly attribute Worklet paintWorklet;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API Level 1</a>
+<pre class=webidl><code>partial namespace CSS {
+  undefined registerProperty(PropertyDefinition definition);
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/css-parser-api/">CSS Parser API</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-animation-worklet-1/">CSS Animation Worklet API</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-conditional-3/">CSS Conditional Rules Module Level 3</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-highlight-api-1/">CSS Custom Highlight API Module Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-images-4/">CSS Images Module Level 4</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-layout-api-1/">CSS Layout API Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-paint-api-1/">CSS Painting API Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API Level 1</a> refers to <code>CSS</code></li></ul>
+</section>

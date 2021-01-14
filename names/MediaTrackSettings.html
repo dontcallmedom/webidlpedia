@@ -1,0 +1,61 @@
+---
+title: MediaTrackSettings
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings">Media Capture and Streams</a> defines <code>MediaTrackSettings</code></p>
+<pre class=webidl><code>dictionary MediaTrackSettings {
+  long width;
+  long height;
+  double aspectRatio;
+  double frameRate;
+  DOMString facingMode;
+  DOMString resizeMode;
+  long sampleRate;
+  long sampleSize;
+  boolean echoCancellation;
+  boolean autoGainControl;
+  boolean noiseSuppression;
+  double latency;
+  long channelCount;
+  DOMString deviceId;
+  DOMString groupId;
+};</code></pre>
+  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
+<pre class=webidl><code>partial dictionary MediaTrackSettings {
+  DOMString whiteBalanceMode;
+  DOMString exposureMode;
+  DOMString focusMode;
+  sequence<Point2D> pointsOfInterest;
+  double exposureCompensation;
+  double exposureTime;
+  double colorTemperature;
+  double iso;
+  double brightness;
+  double contrast;
+  double saturation;
+  double sharpness;
+  double focusDistance;
+  double pan;
+  double tilt;
+  double zoom;
+  boolean torch;
+};</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
+<pre class=webidl><code>partial dictionary MediaTrackSettings {
+  DOMString videoKind;
+};</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
+<pre class=webidl><code>partial dictionary MediaTrackSettings {
+  DOMString displaySurface;
+  boolean logicalSurface;
+  DOMString cursor;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a> refers to <code>MediaTrackSettings</code></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a> refers to <code>MediaTrackSettings</code></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a> refers to <code>MediaTrackSettings</code></li></ul>
+</section>

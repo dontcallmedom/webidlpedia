@@ -1,0 +1,24 @@
+---
+title: IntersectionObserver
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/IntersectionObserver/#intersectionobserver">Intersection Observer</a> defines <code>IntersectionObserver</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface IntersectionObserver {
+  constructor(IntersectionObserverCallback callback, optional IntersectionObserverInit options = {});
+  readonly attribute (Element or Document)? root;
+  readonly attribute DOMString rootMargin;
+  readonly attribute FrozenArray<double> thresholds;
+  undefined observe(Element target);
+  undefined unobserve(Element target);
+  undefined disconnect();
+  sequence<IntersectionObserverEntry> takeRecords();
+};</code></pre>
+  
+</section>
+
+  

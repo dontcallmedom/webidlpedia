@@ -1,0 +1,36 @@
+---
+title: WebSocket
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface WebSocket : EventTarget {
+  constructor(USVString url, optional (DOMString or sequence<DOMString>) protocols = []);
+  readonly attribute USVString url;
+  const unsigned short CONNECTING;
+  const unsigned short OPEN;
+  const unsigned short CLOSING;
+  const unsigned short CLOSED;
+  readonly attribute unsigned short readyState;
+  readonly attribute unsigned long long bufferedAmount;
+  attribute EventHandler onopen;
+  attribute EventHandler onerror;
+  attribute EventHandler onclose;
+  readonly attribute DOMString extensions;
+  readonly attribute DOMString protocol;
+  undefined close(optional unsigned short code, optional USVString reason);
+  attribute EventHandler onmessage;
+  attribute BinaryType binaryType;
+  undefined send(USVString data);
+  undefined send(Blob data);
+  undefined send(ArrayBuffer data);
+  undefined send(ArrayBufferView data);
+};</code></pre>
+  
+</section>
+
+  

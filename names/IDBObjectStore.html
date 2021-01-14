@@ -1,0 +1,38 @@
+---
+title: IDBObjectStore
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/IndexedDB/#idbobjectstore">Indexed Database API 3.0</a> defines <code>IDBObjectStore</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface IDBObjectStore {
+  attribute DOMString name;
+  readonly attribute any keyPath;
+  readonly attribute DOMStringList indexNames;
+  [SameObject] readonly attribute IDBTransaction transaction;
+  readonly attribute boolean autoIncrement;
+  [NewObject] IDBRequest put(any value, optional any key);
+  [NewObject] IDBRequest add(any value, optional any key);
+  [NewObject] IDBRequest delete(any query);
+  [NewObject] IDBRequest clear();
+  [NewObject] IDBRequest get(any query);
+  [NewObject] IDBRequest getKey(any query);
+  [NewObject] IDBRequest getAll(optional any query, optional unsigned long count);
+  [NewObject] IDBRequest getAllKeys(optional any query, optional unsigned long count);
+  [NewObject] IDBRequest count(optional any query);
+  [NewObject] IDBRequest openCursor(optional any query, optional IDBCursorDirection direction = "next");
+  [NewObject] IDBRequest openKeyCursor(optional any query, optional IDBCursorDirection direction = "next");
+  IDBIndex index(DOMString name);
+  [NewObject] IDBIndex createIndex(DOMString name, (DOMString or sequence<DOMString>) keyPath, optional IDBIndexParameters options = {});
+  undefined deleteIndex(DOMString name);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="IDBRequest.html">IDBRequest</a></li><li><a href="IDBDatabase.html">IDBDatabase</a></li><li><a href="IDBIndex.html">IDBIndex</a></li><li><a href="IDBCursor.html">IDBCursor</a></li><li><a href="IDBTransaction.html">IDBTransaction</a></li></ul>
+</section>
+  

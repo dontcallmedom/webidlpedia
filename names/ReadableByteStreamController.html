@@ -1,0 +1,21 @@
+---
+title: ReadableByteStreamController
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://streams.spec.whatwg.org/#readablebytestreamcontroller">Streams Standard</a> defines <code>ReadableByteStreamController</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+interface ReadableByteStreamController {
+  readonly attribute ReadableStreamBYOBRequest? byobRequest;
+  readonly attribute unrestricted double? desiredSize;
+  undefined close();
+  undefined enqueue(ArrayBufferView chunk);
+  undefined error(optional any e);
+};</code></pre>
+  
+</section>
+
+  

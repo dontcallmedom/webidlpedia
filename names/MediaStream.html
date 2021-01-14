@@ -1,0 +1,34 @@
+---
+title: MediaStream
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediastream">Media Capture and Streams</a> defines <code>MediaStream</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface MediaStream : EventTarget {
+  constructor();
+  constructor(MediaStream stream);
+  constructor(sequence<MediaStreamTrack> tracks);
+  readonly attribute DOMString id;
+  sequence<MediaStreamTrack> getAudioTracks();
+  sequence<MediaStreamTrack> getVideoTracks();
+  sequence<MediaStreamTrack> getTracks();
+  MediaStreamTrack? getTrackById(DOMString trackId);
+  undefined addTrack(MediaStreamTrack track);
+  undefined removeTrack(MediaStreamTrack track);
+  MediaStream clone();
+  readonly attribute boolean active;
+  attribute EventHandler onaddtrack;
+  attribute EventHandler onremovetrack;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></li><li><a href="MediaStream.html">MediaStream</a></li><li><a href="MediaDevices.html">MediaDevices</a></li><li><a href="MediaRecorder.html">MediaRecorder</a></li><li><a href="MediaDevices.html">MediaDevices</a></li><li><a href="AudioContext.html">AudioContext</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamAudioSourceOptions.html">MediaStreamAudioSourceOptions</a></li><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCRtpTransceiverInit.html">RTCRtpTransceiverInit</a></li><li><a href="RTCRtpSender.html">RTCRtpSender</a></li><li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li><li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>MediaStream</code></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/">Media Capture from DOM Elements</a> refers to <code>MediaStream</code></li><li><a href="https://www.w3.org/TR/mediastream-recording/">MediaStream Recording</a> refers to <code>MediaStream</code></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a> refers to <code>MediaStream</code></li><li><a href="https://www.w3.org/TR/webaudio/">Web Audio API</a> refers to <code>MediaStream</code></li><li><a href="https://www.w3.org/TR/webrtc/">WebRTC 1.0: Real-Time Communication Between Browsers</a> refers to <code>MediaStream</code></li></ul>
+</section>

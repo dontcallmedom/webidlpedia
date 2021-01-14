@@ -1,0 +1,31 @@
+---
+title: SVGTransformList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTransformList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface SVGTransformList {
+  readonly attribute unsigned long length;
+  readonly attribute unsigned long numberOfItems;
+  void clear();
+  SVGTransform initialize(SVGTransform newItem);
+  getter SVGTransform getItem(unsigned long index);
+  SVGTransform insertItemBefore(SVGTransform newItem, unsigned long index);
+  SVGTransform replaceItem(SVGTransform newItem, unsigned long index);
+  SVGTransform removeItem(unsigned long index);
+  SVGTransform appendItem(SVGTransform newItem);
+  setter void (unsigned long index, SVGTransform newItem);
+  SVGTransform createSVGTransformFromMatrix(optional DOMMatrix2DInit matrix);
+  SVGTransform? consolidate();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="SVGAnimatedTransformList.html">SVGAnimatedTransformList</a></li></ul>
+</section>
+  

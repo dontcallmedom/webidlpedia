@@ -1,0 +1,34 @@
+---
+title: AudioNode
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#audionode">Web Audio API</a> defines <code>AudioNode</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface AudioNode : EventTarget {
+  AudioNode connect(AudioNode destinationNode, optional unsigned long output = 0, optional unsigned long input = 0);
+  undefined connect(AudioParam destinationParam, optional unsigned long output = 0);
+  undefined disconnect();
+  undefined disconnect(unsigned long output);
+  undefined disconnect(AudioNode destinationNode);
+  undefined disconnect(AudioNode destinationNode, unsigned long output);
+  undefined disconnect(AudioNode destinationNode, unsigned long output, unsigned long input);
+  undefined disconnect(AudioParam destinationParam);
+  undefined disconnect(AudioParam destinationParam, unsigned long output);
+  readonly attribute BaseAudioContext context;
+  readonly attribute unsigned long numberOfInputs;
+  readonly attribute unsigned long numberOfOutputs;
+  attribute unsigned long channelCount;
+  attribute ChannelCountMode channelCountMode;
+  attribute ChannelInterpretation channelInterpretation;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></li><li><a href="AnalyserNode.html">AnalyserNode</a></li><li><a href="AudioDestinationNode.html">AudioDestinationNode</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ChannelMergerNode.html">ChannelMergerNode</a></li><li><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></li><li><a href="ConvolverNode.html">ConvolverNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="IIRFilterNode.html">IIRFilterNode</a></li><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="ScriptProcessorNode.html">ScriptProcessorNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="WaveShaperNode.html">WaveShaperNode</a></li><li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li></ul>
+</section>
+  

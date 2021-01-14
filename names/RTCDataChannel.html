@@ -1,0 +1,45 @@
+---
+title: RTCDataChannel
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCDataChannel</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCDataChannel : EventTarget {
+  readonly attribute USVString label;
+  readonly attribute boolean ordered;
+  readonly attribute unsigned short? maxPacketLifeTime;
+  readonly attribute unsigned short? maxRetransmits;
+  readonly attribute USVString protocol;
+  readonly attribute boolean negotiated;
+  readonly attribute unsigned short? id;
+  readonly attribute RTCDataChannelState readyState;
+  readonly attribute unsigned long bufferedAmount;
+  [EnforceRange] attribute unsigned long bufferedAmountLowThreshold;
+  attribute EventHandler onopen;
+  attribute EventHandler onbufferedamountlow;
+  attribute EventHandler onerror;
+  attribute EventHandler onclosing;
+  attribute EventHandler onclose;
+  undefined close();
+  attribute EventHandler onmessage;
+  attribute BinaryType binaryType;
+  undefined send(USVString data);
+  undefined send(Blob data);
+  undefined send(ArrayBuffer data);
+  undefined send(ArrayBufferView data);
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-priority/#new-rtcdatachannel-attribute">WebRTC Priority Control API</a>
+<pre class=webidl><code>partial interface RTCDataChannel {
+  readonly attribute RTCPriorityType priority;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></li><li><a href="RTCDataChannelEventInit.html">RTCDataChannelEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/webrtc-priority/">WebRTC Priority Control API</a> refers to <code>RTCDataChannel</code></li></ul>
+</section>

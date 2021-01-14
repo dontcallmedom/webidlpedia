@@ -1,0 +1,30 @@
+---
+title: FormData
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://xhr.spec.whatwg.org/#formdata">XMLHttpRequest Standard</a> defines <code>FormData</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface FormData {
+  constructor(optional HTMLFormElement form);
+  undefined append(USVString name, USVString value);
+  undefined append(USVString name, Blob blobValue, optional USVString filename);
+  undefined delete(USVString name);
+  FormDataEntryValue? get(USVString name);
+  sequence<FormDataEntryValue> getAll(USVString name);
+  boolean has(USVString name);
+  undefined set(USVString name, USVString value);
+  undefined set(USVString name, Blob blobValue, optional USVString filename);
+  iterable<USVString, FormDataEntryValue>;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Body.html">Body</a></li><li><a href="FormDataEvent.html">FormDataEvent</a></li><li><a href="FormDataEventInit.html">FormDataEventInit</a></li><li><a href="ElementInternals.html">ElementInternals</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a> refers to <code>FormData</code></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>FormData</code></li></ul>
+</section>

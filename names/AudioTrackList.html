@@ -1,0 +1,26 @@
+---
+title: AudioTrackList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist">HTML Standard</a> defines <code>AudioTrackList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface AudioTrackList : EventTarget {
+  readonly attribute unsigned long length;
+  getter AudioTrack (unsigned long index);
+  AudioTrack? getTrackById(DOMString id);
+  attribute EventHandler onchange;
+  attribute EventHandler onaddtrack;
+  attribute EventHandler onremovetrack;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="SourceBuffer.html">SourceBuffer</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>AudioTrackList</code></li></ul>
+</section>

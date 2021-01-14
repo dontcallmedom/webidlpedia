@@ -1,0 +1,24 @@
+---
+title: BluetoothRemoteGATTDescriptor
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattdescriptor">Web Bluetooth</a> defines <code>BluetoothRemoteGATTDescriptor</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface BluetoothRemoteGATTDescriptor {
+  [SameObject] readonly attribute BluetoothRemoteGATTCharacteristic characteristic;
+  readonly attribute UUID uuid;
+  readonly attribute DataView? value;
+  Promise<DataView> readValue();
+  Promise<void> writeValue(BufferSource value);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li></ul>
+</section>
+  

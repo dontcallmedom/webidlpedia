@@ -1,0 +1,42 @@
+---
+title: HTMLLinkElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/semantics.html#htmllinkelement">HTML Standard</a> defines <code>HTMLLinkElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLLinkElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute USVString href;
+  [CEReactions] attribute DOMString? crossOrigin;
+  [CEReactions] attribute DOMString rel;
+  [CEReactions] attribute DOMString as;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
+  [CEReactions] attribute DOMString media;
+  [CEReactions] attribute DOMString integrity;
+  [CEReactions] attribute DOMString hreflang;
+  [CEReactions] attribute DOMString type;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList sizes;
+  [CEReactions] attribute USVString imageSrcset;
+  [CEReactions] attribute DOMString imageSizes;
+  [CEReactions] attribute DOMString referrerPolicy;
+  [CEReactions] attribute boolean disabled;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface HTMLLinkElement {
+};
+partial interface HTMLLinkElement {
+  [CEReactions] attribute DOMString charset;
+  [CEReactions] attribute DOMString rev;
+  [CEReactions] attribute DOMString target;
+};</code></pre></li><li><a href="https://www.w3.org/TR/SRI/#HTMLLinkElement">Subresource Integrity</a>
+<pre class=webidl><code>partial interface HTMLLinkElement {
+  attribute DOMString integrity;
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/SRI/">Subresource Integrity</a> refers to <code>HTMLLinkElement</code></li></ul>
+</section>

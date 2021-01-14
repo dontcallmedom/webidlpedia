@@ -1,0 +1,31 @@
+---
+title: EXT_disjoint_timer_query
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/">WebGL EXT_disjoint_timer_query Extension Specification</a> defines <code>EXT_disjoint_timer_query</code></p>
+<pre class=webidl><code>[LegacyNoInterfaceObject]
+interface EXT_disjoint_timer_query {
+  const GLenum QUERY_COUNTER_BITS_EXT;
+  const GLenum CURRENT_QUERY_EXT;
+  const GLenum QUERY_RESULT_EXT;
+  const GLenum QUERY_RESULT_AVAILABLE_EXT;
+  const GLenum TIME_ELAPSED_EXT;
+  const GLenum TIMESTAMP_EXT;
+  const GLenum GPU_DISJOINT_EXT;
+  WebGLTimerQueryEXT? createQueryEXT();
+  void deleteQueryEXT(WebGLTimerQueryEXT? query);
+  [WebGLHandlesContextLoss] boolean isQueryEXT(WebGLTimerQueryEXT? query);
+  void beginQueryEXT(GLenum target, WebGLTimerQueryEXT query);
+  void endQueryEXT(GLenum target);
+  void queryCounterEXT(WebGLTimerQueryEXT query, GLenum target);
+  any getQueryEXT(GLenum target, GLenum pname);
+  any getQueryObjectEXT(WebGLTimerQueryEXT query, GLenum pname);
+};</code></pre>
+  
+</section>
+
+  

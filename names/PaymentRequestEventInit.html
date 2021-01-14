@@ -1,0 +1,27 @@
+---
+title: PaymentRequestEventInit
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/payment-handler/#dom-paymentrequesteventinit">Payment Handler API</a> defines <code>PaymentRequestEventInit</code></p>
+<pre class=webidl><code>dictionary PaymentRequestEventInit : ExtendableEventInit {
+  USVString topOrigin;
+  USVString paymentRequestOrigin;
+  DOMString paymentRequestId;
+  sequence<PaymentMethodData> methodData;
+  PaymentCurrencyAmount total;
+  sequence<PaymentDetailsModifier> modifiers;
+  DOMString instrumentKey;
+  PaymentOptions paymentOptions;
+  sequence<PaymentShippingOption> shippingOptions;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PaymentRequestEvent.html">PaymentRequestEvent</a></li></ul>
+</section>
+  

@@ -1,0 +1,33 @@
+---
+title: BluetoothRemoteGATTCharacteristic
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattcharacteristic">Web Bluetooth</a> defines <code>BluetoothRemoteGATTCharacteristic</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface BluetoothRemoteGATTCharacteristic : EventTarget {
+  [SameObject] readonly attribute BluetoothRemoteGATTService service;
+  readonly attribute UUID uuid;
+  readonly attribute BluetoothCharacteristicProperties properties;
+  readonly attribute DataView? value;
+  Promise<BluetoothRemoteGATTDescriptor> getDescriptor(BluetoothDescriptorUUID descriptor);
+  Promise<sequence<BluetoothRemoteGATTDescriptor>> getDescriptors(optional BluetoothDescriptorUUID descriptor);
+  Promise<DataView> readValue();
+  Promise<void> writeValue(BufferSource value);
+  Promise<void> writeValueWithResponse(BufferSource value);
+  Promise<void> writeValueWithoutResponse(BufferSource value);
+  Promise<BluetoothRemoteGATTCharacteristic> startNotifications();
+  Promise<BluetoothRemoteGATTCharacteristic> stopNotifications();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
+<pre class=webidl><code>interface BluetoothRemoteGATTCharacteristic {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li><li><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li><li><a href="BluetoothRemoteGATTDescriptor.html">BluetoothRemoteGATTDescriptor</a></li></ul>
+</section>
+  

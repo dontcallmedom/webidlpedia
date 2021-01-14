@@ -1,0 +1,21 @@
+---
+title: Table
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webassembly.github.io/spec/js-api/#table">WebAssembly JavaScript Interface</a> defines <code>Table</code></p>
+<pre class=webidl><code>[LegacyNamespace=WebAssembly, Exposed=Window,Worker,Worklet]
+interface Table {
+  constructor(TableDescriptor descriptor);
+  unsigned long grow([EnforceRange] [EnforceRange] unsigned long delta);
+  Function? get([EnforceRange] [EnforceRange] unsigned long index);
+  undefined set([EnforceRange] [EnforceRange] unsigned long index, Function? value);
+  readonly attribute unsigned long length;
+};</code></pre>
+  
+</section>
+
+  

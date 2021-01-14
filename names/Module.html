@@ -1,0 +1,24 @@
+---
+title: Module
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webassembly.github.io/spec/js-api/#module">WebAssembly JavaScript Interface</a> defines <code>Module</code></p>
+<pre class=webidl><code>[LegacyNamespace=WebAssembly, Exposed=Window,Worker,Worklet]
+interface Module {
+  constructor(BufferSource bytes);
+  static sequence<ModuleExportDescriptor> exports(Module moduleObject);
+  static sequence<ModuleImportDescriptor> imports(Module moduleObject);
+  static sequence<ArrayBuffer> customSections(Module moduleObject, DOMString sectionName);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="WebAssemblyInstantiatedSource.html">WebAssemblyInstantiatedSource</a></li><li><a href="WebAssembly.html">WebAssembly</a></li><li><a href="Module.html">Module</a></li><li><a href="Instance.html">Instance</a></li><li><a href="WebAssembly.html">WebAssembly</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a> refers to <code>Module</code></li></ul>
+</section>

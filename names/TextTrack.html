@@ -1,0 +1,34 @@
+---
+title: TextTrack
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/media.html#texttrack">HTML Standard</a> defines <code>TextTrack</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface TextTrack : EventTarget {
+  readonly attribute TextTrackKind kind;
+  readonly attribute DOMString label;
+  readonly attribute DOMString language;
+  readonly attribute DOMString id;
+  readonly attribute DOMString inBandMetadataTrackDispatchType;
+  attribute TextTrackMode mode;
+  readonly attribute TextTrackCueList? cues;
+  readonly attribute TextTrackCueList? activeCues;
+  undefined addCue(TextTrackCue cue);
+  undefined removeCue(TextTrackCue cue);
+  attribute EventHandler oncuechange;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/media-source/#attributes-4">Media Source Extensions™</a>
+<pre class=webidl><code>partial interface TextTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLTrackElement.html">HTMLTrackElement</a></li><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="TextTrackList.html">TextTrackList</a></li><li><a href="TextTrackCue.html">TextTrackCue</a></li><li><a href="TrackEvent.html">TrackEvent</a></li><li><a href="TrackEventInit.html">TrackEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>TextTrack</code></li></ul>
+</section>

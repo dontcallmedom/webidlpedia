@@ -1,0 +1,42 @@
+---
+title: RTCIceTransport
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCIceTransport</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCIceTransport : EventTarget {
+  readonly attribute RTCIceRole role;
+  readonly attribute RTCIceComponent component;
+  readonly attribute RTCIceTransportState state;
+  readonly attribute RTCIceGathererState gatheringState;
+  sequence<RTCIceCandidate> getLocalCandidates();
+  sequence<RTCIceCandidate> getRemoteCandidates();
+  RTCIceCandidatePair? getSelectedCandidatePair();
+  RTCIceParameters? getLocalParameters();
+  RTCIceParameters? getRemoteParameters();
+  attribute EventHandler onstatechange;
+  attribute EventHandler ongatheringstatechange;
+  attribute EventHandler onselectedcandidatepairchange;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-ice/">IceTransport Extensions for WebRTC</a>
+<pre class=webidl><code>[Exposed=Window]
+partial interface RTCIceTransport {
+  constructor();
+  undefined gather(optional RTCIceGatherOptions options = {});
+  undefined start(RTCIceParameters remoteParameters, optional RTCIceRole role = "controlled");
+  undefined stop();
+  undefined addRemoteCandidate(RTCIceCandidateInit remoteCandidate);
+  attribute EventHandler onerror;
+  attribute EventHandler onicecandidate;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCDtlsTransport.html">RTCDtlsTransport</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/webrtc-ice/">IceTransport Extensions for WebRTC</a> refers to <code>RTCIceTransport</code></li></ul>
+</section>

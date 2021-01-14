@@ -1,0 +1,25 @@
+---
+title: InputEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/uievents/#inputevent">UI Events</a> defines <code>InputEvent</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface InputEvent : UIEvent {
+  constructor(DOMString type, optional InputEventInit eventInitDict);
+  readonly attribute DOMString? data;
+  readonly attribute boolean isComposing;
+  readonly attribute DOMString inputType;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/input-events-2/#interface-InputEvent-Attributes">Input Events Level 2</a>
+<pre class=webidl><code>partial interface InputEvent {
+  readonly attribute DataTransfer? dataTransfer;
+  sequence<StaticRange> getTargetRanges();
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/input-events-2/">Input Events Level 2</a> refers to <code>InputEvent</code></li></ul>
+</section>

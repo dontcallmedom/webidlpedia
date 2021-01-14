@@ -1,0 +1,22 @@
+---
+title: CookieStoreManager
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/cookie-store/#cookiestoremanager">Cookie Store API</a> defines <code>CookieStoreManager</code></p>
+<pre class=webidl><code>[Exposed=ServiceWorker,Window, SecureContext]
+interface CookieStoreManager {
+  Promise<undefined> subscribe(sequence<CookieStoreGetOptions> subscriptions);
+  Promise<sequence<CookieStoreGetOptions>> getSubscriptions();
+  Promise<undefined> unsubscribe(sequence<CookieStoreGetOptions> subscriptions);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li></ul>
+</section>
+  

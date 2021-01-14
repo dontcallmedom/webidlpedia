@@ -1,0 +1,31 @@
+---
+title: FontFaceSet
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/css-font-loading/#fontfaceset">CSS Font Loading Module Level 3</a> defines <code>FontFaceSet</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface FontFaceSet : EventTarget {
+  constructor(sequence<FontFace> initialFaces);
+  setlike<FontFace>;
+  FontFaceSet add(FontFace font);
+  boolean delete(FontFace font);
+  undefined clear();
+  attribute EventHandler onloading;
+  attribute EventHandler onloadingdone;
+  attribute EventHandler onloadingerror;
+  Promise<sequence<FontFace>> load(CSSOMString font, optional CSSOMString text = " ");
+  boolean check(CSSOMString font, optional CSSOMString text = " ");
+  readonly attribute Promise<FontFaceSet> ready;
+  readonly attribute FontFaceSetLoadStatus status;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="FontFaceSet.html">FontFaceSet</a></li><li><a href="FontFaceSource.html">FontFaceSource</a></li></ul>
+</section>
+  

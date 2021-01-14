@@ -1,0 +1,22 @@
+---
+title: DeviceOrientationEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/deviceorientation/#deviceorientationevent">DeviceOrientation Event Specification</a> defines <code>DeviceOrientationEvent</code></p>
+<pre class=webidl><code>[Exposed=Window, SecureContext]
+interface DeviceOrientationEvent : Event {
+  constructor(DOMString type, optional DeviceOrientationEventInit eventInitDict = {});
+  readonly attribute double? alpha;
+  readonly attribute double? beta;
+  readonly attribute double? gamma;
+  readonly attribute boolean absolute;
+  static Promise<PermissionState> requestPermission();
+};</code></pre>
+  
+</section>
+
+  

@@ -1,0 +1,55 @@
+---
+title: MediaTrackCapabilities
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackcapabilities">Media Capture and Streams</a> defines <code>MediaTrackCapabilities</code></p>
+<pre class=webidl><code>dictionary MediaTrackCapabilities {
+  ULongRange width;
+  ULongRange height;
+  DoubleRange aspectRatio;
+  DoubleRange frameRate;
+  sequence<DOMString> facingMode;
+  sequence<DOMString> resizeMode;
+  ULongRange sampleRate;
+  ULongRange sampleSize;
+  sequence<boolean> echoCancellation;
+  sequence<boolean> autoGainControl;
+  sequence<boolean> noiseSuppression;
+  DoubleRange latency;
+  ULongRange channelCount;
+  DOMString deviceId;
+  DOMString groupId;
+};</code></pre>
+  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
+<pre class=webidl><code>partial dictionary MediaTrackCapabilities {
+  sequence<DOMString> whiteBalanceMode;
+  sequence<DOMString> exposureMode;
+  sequence<DOMString> focusMode;
+  MediaSettingsRange exposureCompensation;
+  MediaSettingsRange exposureTime;
+  MediaSettingsRange colorTemperature;
+  MediaSettingsRange iso;
+  MediaSettingsRange brightness;
+  MediaSettingsRange contrast;
+  MediaSettingsRange saturation;
+  MediaSettingsRange sharpness;
+  MediaSettingsRange focusDistance;
+  MediaSettingsRange pan;
+  MediaSettingsRange tilt;
+  MediaSettingsRange zoom;
+  boolean torch;
+};</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
+<pre class=webidl><code>partial dictionary MediaTrackCapabilities {
+  DOMString videoKind;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li><li><a href="InputDeviceInfo.html">InputDeviceInfo</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a> refers to <code>MediaTrackCapabilities</code></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a> refers to <code>MediaTrackCapabilities</code></li></ul>
+</section>

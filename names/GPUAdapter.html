@@ -1,0 +1,22 @@
+---
+title: GPUAdapter
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://gpuweb.github.io/gpuweb/#gpuadapter">WebGPU</a> defines <code>GPUAdapter</code></p>
+<pre class=webidl><code>interface GPUAdapter {
+  readonly attribute DOMString name;
+  [SameObject] readonly attribute GPUAdapterFeatures features;
+  [SameObject] readonly attribute GPUAdapterLimits limits;
+  Promise<GPUDevice?> requestDevice(optional GPUDeviceDescriptor descriptor = {});
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="GPU.html">GPU</a></li><li><a href="GPUDevice.html">GPUDevice</a></li><li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li></ul>
+</section>
+  

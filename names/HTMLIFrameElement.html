@@ -1,0 +1,45 @@
+---
+title: HTMLIFrameElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement">HTML Standard</a> defines <code>HTMLIFrameElement</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface HTMLIFrameElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute USVString src;
+  [CEReactions] attribute DOMString srcdoc;
+  [CEReactions] attribute DOMString name;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList sandbox;
+  [CEReactions] attribute DOMString allow;
+  [CEReactions] attribute boolean allowFullscreen;
+  [CEReactions] attribute DOMString width;
+  [CEReactions] attribute DOMString height;
+  [CEReactions] attribute DOMString referrerPolicy;
+  [CEReactions] attribute DOMString loading;
+  readonly attribute Document? contentDocument;
+  readonly attribute WindowProxy? contentWindow;
+  Document? getSVGDocument();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
+<pre class=webidl><code>partial interface HTMLIFrameElement {
+  [CEReactions] attribute DOMString align;
+  [CEReactions] attribute DOMString scrolling;
+  [CEReactions] attribute DOMString frameBorder;
+  [CEReactions] attribute USVString longDesc;
+  [CEReactions] attribute DOMString marginHeight;
+  [CEReactions] attribute DOMString marginWidth;
+};</code></pre></li><li><a href="https://www.w3.org/TR/csp-embedded-enforcement/#csp-attribute">Content Security Policy: Embedded Enforcement</a>
+<pre class=webidl><code>partial interface HTMLIFrameElement {
+  [CEReactions] attribute DOMString csp;
+};</code></pre></li><li><a href="https://www.w3.org/TR/permissions-policy-1/#the-policy-object">Permissions Policy</a>
+<pre class=webidl><code>partial interface HTMLIFrameElement {
+  [SameObject] readonly attribute PermissionsPolicy permissionsPolicy;
+};</code></pre></li></ol>
+</section>
+
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/csp-embedded-enforcement/">Content Security Policy: Embedded Enforcement</a> refers to <code>HTMLIFrameElement</code></li><li><a href="https://www.w3.org/TR/permissions-policy-1/">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li></ul>
+</section>

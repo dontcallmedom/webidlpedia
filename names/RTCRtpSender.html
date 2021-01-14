@@ -1,0 +1,34 @@
+---
+title: RTCRtpSender
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpSender</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCRtpSender {
+  readonly attribute MediaStreamTrack? track;
+  readonly attribute RTCDtlsTransport? transport;
+  static RTCRtpCapabilities? getCapabilities(DOMString kind);
+  Promise<undefined> setParameters(RTCRtpSendParameters parameters);
+  RTCRtpSendParameters getParameters();
+  Promise<undefined> replaceTrack(MediaStreamTrack? withTrack);
+  undefined setStreams(MediaStream... streams);
+  Promise<RTCStatsReport> getStats();
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
+<pre class=webidl><code>partial interface RTCRtpSender {
+  RTCInsertableStreams createEncodedStreams();
+};</code></pre></li><li><a href="https://www.w3.org/TR/webrtc/#attributes-19">WebRTC 1.0: Real-Time Communication Between Browsers</a>
+<pre class=webidl><code>partial interface RTCRtpSender {
+  readonly attribute RTCDTMFSender? dtmf;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a> refers to <code>RTCRtpSender</code></li></ul>
+</section>

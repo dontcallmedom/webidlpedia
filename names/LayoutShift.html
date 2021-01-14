@@ -1,0 +1,21 @@
+---
+title: LayoutShift
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/layout-instability/#layoutshift">Layout Instability API</a> defines <code>LayoutShift</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface LayoutShift : PerformanceEntry {
+  readonly attribute double value;
+  readonly attribute boolean hadRecentInput;
+  readonly attribute DOMHighResTimeStamp lastInputTime;
+  readonly attribute FrozenArray<LayoutShiftAttribution> sources;
+  [Default] object toJSON();
+};</code></pre>
+  
+</section>
+
+  

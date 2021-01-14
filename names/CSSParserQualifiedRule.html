@@ -1,0 +1,19 @@
+---
+title: CSSParserQualifiedRule
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/css-parser-api/#cssparserqualifiedrule">CSS Parser API</a> defines <code>CSSParserQualifiedRule</code></p>
+<pre class=webidl><code>[Constructor(sequence<CSSToken> prelude, optional sequence<CSSParserRule>? body)]
+interface CSSParserQualifiedRule : CSSParserRule {
+  readonly attribute FrozenArray<CSSParserValue> prelude;
+  readonly attribute FrozenArray<CSSParserRule> body;
+  stringifier ${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''} ();
+};</code></pre>
+  
+</section>
+
+  

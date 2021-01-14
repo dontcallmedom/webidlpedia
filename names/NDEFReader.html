@@ -1,0 +1,21 @@
+---
+title: NDEFReader
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/web-nfc/#dom-ndefreader">Web NFC</a> defines <code>NDEFReader</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface NDEFReader : EventTarget {
+  constructor();
+  attribute EventHandler onreading;
+  attribute EventHandler onreadingerror;
+  Promise<undefined> scan(optional NDEFScanOptions options = {});
+  Promise<undefined> write(NDEFMessageSource message, optional NDEFWriteOptions options = {});
+};</code></pre>
+  
+</section>
+
+  

@@ -1,0 +1,123 @@
+---
+title: Element
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/#element">DOM Standard</a> defines <code>Element</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Element : Node {
+  readonly attribute DOMString? namespaceURI;
+  readonly attribute DOMString? prefix;
+  readonly attribute DOMString localName;
+  readonly attribute DOMString tagName;
+  [CEReactions] attribute DOMString id;
+  [CEReactions] attribute DOMString className;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList classList;
+  [CEReactions, Unscopable] attribute DOMString slot;
+  boolean hasAttributes();
+  [SameObject] readonly attribute NamedNodeMap attributes;
+  sequence<DOMString> getAttributeNames();
+  DOMString? getAttribute(DOMString qualifiedName);
+  DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] undefined setAttribute(DOMString qualifiedName, DOMString value);
+  [CEReactions] undefined setAttributeNS(DOMString? namespace, DOMString qualifiedName, DOMString value);
+  [CEReactions] undefined removeAttribute(DOMString qualifiedName);
+  [CEReactions] undefined removeAttributeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] boolean toggleAttribute(DOMString qualifiedName, optional boolean force);
+  boolean hasAttribute(DOMString qualifiedName);
+  boolean hasAttributeNS(DOMString? namespace, DOMString localName);
+  Attr? getAttributeNode(DOMString qualifiedName);
+  Attr? getAttributeNodeNS(DOMString? namespace, DOMString localName);
+  [CEReactions] Attr? setAttributeNode(Attr attr);
+  [CEReactions] Attr? setAttributeNodeNS(Attr attr);
+  [CEReactions] Attr removeAttributeNode(Attr attr);
+  ShadowRoot attachShadow(ShadowRootInit init);
+  readonly attribute ShadowRoot? shadowRoot;
+  Element? closest(DOMString selectors);
+  boolean matches(DOMString selectors);
+  boolean webkitMatchesSelector(DOMString selectors);
+  HTMLCollection getElementsByTagName(DOMString qualifiedName);
+  HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+  HTMLCollection getElementsByClassName(DOMString classNames);
+  [CEReactions] Element? insertAdjacentElement(DOMString where, Element element);
+  undefined insertAdjacentText(DOMString where, DOMString data);
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a>
+<pre class=webidl><code>interface Element {
+};
+interface Element {
+};
+interface Element {
+};
+interface Element {
+};</code></pre></li><li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen API Standard</a>
+<pre class=webidl><code>partial interface Element {
+  Promise<undefined> requestFullscreen(optional FullscreenOptions options = {});
+  attribute EventHandler onfullscreenchange;
+  attribute EventHandler onfullscreenerror;
+};</code></pre></li><li><a href="https://wicg.github.io/element-timing/#sec-modifications-DOM">Element Timing API</a>
+<pre class=webidl><code>partial interface Element {
+  [CEReactions] attribute DOMString elementTiming;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
+<pre class=webidl><code>partial interface Element {
+  Node getSpatialNavigationContainer();
+  sequence<Node> focusableAreas(optional FocusableAreasOption option = {});
+  Node? spatialNavigationSearch(SpatialNavigationDirection dir, optional SpatialNavigationSearchOptions options = {});
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-pseudo-4/">CSS Pseudo-Elements Module Level 4</a>
+<pre class=webidl><code>partial interface Element {
+  CSSPseudoElement? pseudo(CSSOMString type);
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module Level 1</a>
+<pre class=webidl><code>interface Element {
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/#idl">CSS Shadow Parts</a>
+<pre class=webidl><code>partial interface Element {
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList part;
+};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
+<pre class=webidl><code>partial interface Element {
+  DOMRectList getClientRects();
+  [NewObject] DOMRect getBoundingClientRect();
+  undefined scrollIntoView(optional (boolean or ScrollIntoViewOptions) arg = {});
+  undefined scroll(optional ScrollToOptions options = {});
+  undefined scroll(unrestricted double x, unrestricted double y);
+  undefined scrollTo(optional ScrollToOptions options = {});
+  undefined scrollTo(unrestricted double x, unrestricted double y);
+  undefined scrollBy(optional ScrollToOptions options = {});
+  undefined scrollBy(unrestricted double x, unrestricted double y);
+  attribute unrestricted double scrollTop;
+  attribute unrestricted double scrollLeft;
+  readonly attribute long scrollWidth;
+  readonly attribute long scrollHeight;
+  readonly attribute long clientTop;
+  readonly attribute long clientLeft;
+  readonly attribute long clientWidth;
+  readonly attribute long clientHeight;
+};
+interface Element {
+};</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a>
+<pre class=webidl><code>interface Element {
+};
+partial interface Element {
+  [CEReactions] attribute DOMString outerHTML;
+  [CEReactions] void insertAdjacentHTML(DOMString position, DOMString text);
+};</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-element-interface">Pointer Events</a>
+<pre class=webidl><code>partial interface Element {
+  undefined setPointerCapture(long pointerId);
+  undefined releasePointerCapture(long pointerId);
+  boolean hasPointerCapture(long pointerId);
+};</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-element-interface">Pointer Lock 2.0</a>
+<pre class=webidl><code>partial interface Element {
+  undefined requestPointerLock();
+};</code></pre></li><li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a>
+<pre class=webidl><code>interface Element {
+};</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a>
+<pre class=webidl><code>interface Element {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NonElementParentNode.html">NonElementParentNode</a></li><li><a href="Document.html">Document</a></li><li><a href="ShadowRoot.html">ShadowRoot</a></li><li><a href="ParentNode.html">ParentNode</a></li><li><a href="Element.html">Element</a></li><li><a href="NonDocumentTypeChildNode.html">NonDocumentTypeChildNode</a></li><li><a href="HTMLCollection.html">HTMLCollection</a></li><li><a href="Node.html">Node</a></li><li><a href="Attr.html">Attr</a></li><li><a href="Document.html">Document</a></li><li><a href="ScrollTimelineOptions.html">ScrollTimelineOptions</a></li><li><a href="ScrollTimeline.html">ScrollTimeline</a></li><li><a href="ElementBasedOffset.html">ElementBasedOffset</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="HTMLAllCollection.html">HTMLAllCollection</a></li><li><a href="HTMLFormControlsCollection.html">HTMLFormControlsCollection</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="HTMLElement.html">HTMLElement</a></li><li><a href="HTMLFormElement.html">HTMLFormElement</a></li><li><a href="HTMLSelectElement.html">HTMLSelectElement</a></li><li><a href="HTMLSlotElement.html">HTMLSlotElement</a></li><li><a href="CanvasUserInterface.html">CanvasUserInterface</a></li><li><a href="DataTransfer.html">DataTransfer</a></li><li><a href="Window.html">Window</a></li><li><a href="XRDOMOverlayInit.html">XRDOMOverlayInit</a></li><li><a href="MathMLElement.html">MathMLElement</a></li><li><a href="PerformanceElementTiming.html">PerformanceElementTiming</a></li><li><a href="LargestContentfulPaint.html">LargestContentfulPaint</a></li><li><a href="CSSPseudoElement.html">CSSPseudoElement</a></li><li><a href="StyleSheet.html">StyleSheet</a></li><li><a href="Window.html">Window</a></li><li><a href="Document.html">Document</a></li><li><a href="HTMLElement.html">HTMLElement</a></li><li><a href="IntersectionObserver.html">IntersectionObserver</a></li><li><a href="IntersectionObserverEntry.html">IntersectionObserverEntry</a></li><li><a href="IntersectionObserverEntryInit.html">IntersectionObserverEntryInit</a></li><li><a href="IntersectionObserverInit.html">IntersectionObserverInit</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="ResizeObserver.html">ResizeObserver</a></li><li><a href="ResizeObserverEntry.html">ResizeObserverEntry</a></li><li><a href="SVGElement.html">SVGElement</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li><li><a href="KeyframeEffect.html">KeyframeEffect</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a> refers to <code>Element</code></li><li><a href="https://drafts.csswg.org/scroll-animations-1/">Scroll-linked Animations</a> refers to <code>Element</code></li><li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen API Standard</a> refers to <code>Element</code></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>Element</code></li><li><a href="https://immersive-web.github.io/dom-overlays/">WebXR DOM Overlays Module</a> refers to <code>Element</code></li><li><a href="https://mathml-refresh.github.io/mathml-core/">MathML Core</a> refers to <code>Element</code></li><li><a href="https://wicg.github.io/element-timing/">Element Timing API</a> refers to <code>Element</code></li><li><a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/css-pseudo-4/">CSS Pseudo-Elements Module Level 4</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/">CSS Shadow Parts</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/intersection-observer/">Intersection Observer</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/pointerevents3/">Pointer Events</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/pointerlock-2/">Pointer Lock 2.0</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/resize-observer-1/">Resize Observer</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a> refers to <code>Element</code></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a> refers to <code>Element</code></li></ul>
+</section>

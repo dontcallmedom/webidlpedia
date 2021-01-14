@@ -1,0 +1,27 @@
+---
+title: VideoTrackList
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/media.html#videotracklist">HTML Standard</a> defines <code>VideoTrackList</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface VideoTrackList : EventTarget {
+  readonly attribute unsigned long length;
+  getter VideoTrack (unsigned long index);
+  VideoTrack? getTrackById(DOMString id);
+  readonly attribute long selectedIndex;
+  attribute EventHandler onchange;
+  attribute EventHandler onaddtrack;
+  attribute EventHandler onremovetrack;
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="SourceBuffer.html">SourceBuffer</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>VideoTrackList</code></li></ul>
+</section>

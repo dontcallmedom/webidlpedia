@@ -1,0 +1,37 @@
+---
+title: WorkerGlobalScope
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/workers.html#workerglobalscope">HTML Standard</a> defines <code>WorkerGlobalScope</code></p>
+<pre class=webidl><code>[Exposed=Worker]
+interface WorkerGlobalScope : EventTarget {
+  readonly attribute WorkerGlobalScope self;
+  readonly attribute WorkerLocation location;
+  readonly attribute WorkerNavigator navigator;
+  undefined importScripts(USVString... urls);
+  attribute OnErrorEventHandler onerror;
+  attribute EventHandler onlanguagechange;
+  attribute EventHandler onoffline;
+  attribute EventHandler ononline;
+  attribute EventHandler onrejectionhandled;
+  attribute EventHandler onunhandledrejection;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface WorkerGlobalScope {
+};</code></pre></li><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
+<pre class=webidl><code>partial interface WorkerGlobalScope {
+  readonly attribute AddressSpace addressSpace;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
+<pre class=webidl><code>interface WorkerGlobalScope {
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></li><li><a href="DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a></li><li><a href="SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a></li><li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li><li><a href="RTCIdentityProviderGlobalScope.html">RTCIdentityProviderGlobalScope</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/cors-rfc1918/">CORS and RFC1918</a> refers to <code>WorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a> refers to <code>WorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a> refers to <code>WorkerGlobalScope</code></li></ul>
+</section>

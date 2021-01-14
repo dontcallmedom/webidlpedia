@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {{ page.title }} - WebIDLpedia
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ page.base }}style.css">
+<!--
+    <meta name="twitter:site" content="@dontcallmedom">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content=
+    "{{page.title}}">
+    <meta property="og:description" content=
+    "Bringing together experts to enrich the Open Web Platform with better foundations for machine learning.">
+    <meta property="og:image" content=
+    "https://www.w3.org/2020/06/machine-learning-workshop/images/banner.png">
+-->
+  </head>
+  <body>
+    <header class="header">
+      <div id="top">
+        <h1>
+          WebIDLpedia
+        </h1>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          {% for item in site.data.pages.pages %}
+          {% assign absolute_url = "/" | append: item.url %}
+          {% assign isThisPage = false %}
+          {% if absolute_url == page.url %}
+          {% assign isThisPage = true %}
+          {% endif %}
+          {% if absolute_url == "/index.html" and page.url == "/" %}
+          {% assign isThisPage = true %}
+          {% endif %}
+        <li>
+          <a {% if isThisPage or page.parent == item.url %}class="active-tab" {% endif %}{% if isThisPage == false %}href="{{page.base }}{{ item.url }}"{% endif %}>{{ item.title }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+      </nav>
+      <h2>{{page.title}}</h2>
+      {% if page.uplink %}
+{% include horizontal-nav.html %}
+      {% endif %}
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="footer" id="footer">
+      <p>
+        Questions? Contact Dominique Hazael-Massieux &lt;<a href=
+        "mailto:dom@w3.org">dom@w3.org</a>&gt;.
+      </p>
+      <p>WebIDLpedia is managed on <a href="https://github.com/dontcallmedom/webidlpedia/">GitHub</a> based on the data collected by <a href="https://github.com/w3c/webref/">webref</a></p>
+    </footer>
+  </body>
+</html>

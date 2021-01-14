@@ -1,0 +1,45 @@
+---
+title: BaseAudioContext
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://webaudio.github.io/web-audio-api/#baseaudiocontext">Web Audio API</a> defines <code>BaseAudioContext</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface BaseAudioContext : EventTarget {
+  readonly attribute AudioDestinationNode destination;
+  readonly attribute float sampleRate;
+  readonly attribute double currentTime;
+  readonly attribute AudioListener listener;
+  readonly attribute AudioContextState state;
+  [SameObject, SecureContext] readonly attribute AudioWorklet audioWorklet;
+  attribute EventHandler onstatechange;
+  AnalyserNode createAnalyser();
+  BiquadFilterNode createBiquadFilter();
+  AudioBuffer createBuffer(unsigned long numberOfChannels, unsigned long length, float sampleRate);
+  AudioBufferSourceNode createBufferSource();
+  ChannelMergerNode createChannelMerger(optional unsigned long numberOfInputs = 6);
+  ChannelSplitterNode createChannelSplitter(optional unsigned long numberOfOutputs = 6);
+  ConstantSourceNode createConstantSource();
+  ConvolverNode createConvolver();
+  DelayNode createDelay(optional double maxDelayTime = 1.0);
+  DynamicsCompressorNode createDynamicsCompressor();
+  GainNode createGain();
+  IIRFilterNode createIIRFilter(sequence<double> feedforward, sequence<double> feedback);
+  OscillatorNode createOscillator();
+  PannerNode createPanner();
+  PeriodicWave createPeriodicWave(sequence<float> real, sequence<float> imag, optional PeriodicWaveConstraints constraints = {});
+  ScriptProcessorNode createScriptProcessor(optional unsigned long bufferSize = 0, optional unsigned long numberOfInputChannels = 2, optional unsigned long numberOfOutputChannels = 2);
+  StereoPannerNode createStereoPanner();
+  WaveShaperNode createWaveShaper();
+  Promise<AudioBuffer> decodeAudioData(ArrayBuffer audioData, optional DecodeSuccessCallback? successCallback, optional DecodeErrorCallback? errorCallback);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="AudioContext.html">AudioContext</a></li><li><a href="OfflineAudioContext.html">OfflineAudioContext</a></li><li><a href="AudioNode.html">AudioNode</a></li><li><a href="AnalyserNode.html">AnalyserNode</a></li><li><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ChannelMergerNode.html">ChannelMergerNode</a></li><li><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></li><li><a href="ConstantSourceNode.html">ConstantSourceNode</a></li><li><a href="ConvolverNode.html">ConvolverNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="IIRFilterNode.html">IIRFilterNode</a></li><li><a href="OscillatorNode.html">OscillatorNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="PeriodicWave.html">PeriodicWave</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="WaveShaperNode.html">WaveShaperNode</a></li><li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li></ul>
+</section>
+  

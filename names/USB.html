@@ -1,0 +1,23 @@
+---
+title: USB
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/webusb/#usb">WebUSB API</a> defines <code>USB</code></p>
+<pre class=webidl><code>[Exposed=DedicatedWorker,SharedWorker,Window, SecureContext]
+interface USB : EventTarget {
+  attribute EventHandler onconnect;
+  attribute EventHandler ondisconnect;
+  Promise<sequence<USBDevice>> getDevices();
+  [Exposed=Window] Promise<USBDevice> requestDevice(USBDeviceRequestOptions options);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li></ul>
+</section>
+  

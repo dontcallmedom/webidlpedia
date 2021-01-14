@@ -1,0 +1,43 @@
+---
+title: Animation
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://drafts.csswg.org/web-animations-1/#animation">Web Animations</a> defines <code>Animation</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface Animation : EventTarget {
+  constructor(optional AnimationEffect? effect = null, optional AnimationTimeline? timeline);
+  attribute DOMString id;
+  attribute AnimationEffect? effect;
+  attribute AnimationTimeline? timeline;
+  attribute double? startTime;
+  attribute double? currentTime;
+  attribute double playbackRate;
+  readonly attribute AnimationPlayState playState;
+  readonly attribute AnimationReplaceState replaceState;
+  readonly attribute boolean pending;
+  readonly attribute Promise<Animation> ready;
+  readonly attribute Promise<Animation> finished;
+  attribute EventHandler onfinish;
+  attribute EventHandler oncancel;
+  attribute EventHandler onremove;
+  undefined cancel();
+  undefined finish();
+  undefined play();
+  undefined pause();
+  undefined updatePlaybackRate(double playbackRate);
+  undefined reverse();
+  undefined persist();
+  undefined commitStyles();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="CSSAnimation.html">CSSAnimation</a></li><li><a href="CSSTransition.html">CSSTransition</a></li><li><a href="WorkletAnimation.html">WorkletAnimation</a></li><li><a href="ShadowAnimation.html">ShadowAnimation</a></li><li><a href="Animation.html">Animation</a></li><li><a href="Animatable.html">Animatable</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://drafts.csswg.org/css-animations-2/">CSS Animations Level 2</a> refers to <code>Animation</code></li><li><a href="https://drafts.csswg.org/css-transitions-2/">CSS Transitions Level 2</a> refers to <code>Animation</code></li><li><a href="https://www.w3.org/TR/css-animation-worklet-1/">CSS Animation Worklet API</a> refers to <code>Animation</code></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a> refers to <code>Animation</code></li></ul>
+</section>

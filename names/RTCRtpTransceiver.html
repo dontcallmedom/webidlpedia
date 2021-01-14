@@ -1,0 +1,26 @@
+---
+title: RTCRtpTransceiver
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpTransceiver</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface RTCRtpTransceiver {
+  readonly attribute DOMString? mid;
+  [SameObject] readonly attribute RTCRtpSender sender;
+  [SameObject] readonly attribute RTCRtpReceiver receiver;
+  attribute RTCRtpTransceiverDirection direction;
+  readonly attribute RTCRtpTransceiverDirection? currentDirection;
+  undefined stop();
+  undefined setCodecPreferences(sequence<RTCRtpCodecCapability> codecs);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li><li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li></ul>
+</section>
+  

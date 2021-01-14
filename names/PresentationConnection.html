@@ -1,0 +1,33 @@
+---
+title: PresentationConnection
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/presentation-api/#dom-presentationconnection">Presentation API</a> defines <code>PresentationConnection</code></p>
+<pre class=webidl><code>[SecureContext, Exposed=Window]
+interface PresentationConnection : EventTarget {
+  readonly attribute USVString id;
+  readonly attribute USVString url;
+  readonly attribute PresentationConnectionState state;
+  undefined close();
+  undefined terminate();
+  attribute EventHandler onconnect;
+  attribute EventHandler onclose;
+  attribute EventHandler onterminate;
+  attribute BinaryType binaryType;
+  attribute EventHandler onmessage;
+  undefined send(DOMString message);
+  undefined send(Blob data);
+  undefined send(ArrayBuffer data);
+  undefined send(ArrayBufferView data);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PresentationRequest.html">PresentationRequest</a></li><li><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li><li><a href="PresentationConnectionAvailableEventInit.html">PresentationConnectionAvailableEventInit</a></li><li><a href="PresentationConnectionList.html">PresentationConnectionList</a></li></ul>
+</section>
+  

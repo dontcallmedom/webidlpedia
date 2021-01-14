@@ -1,0 +1,29 @@
+---
+title: UIEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/uievents/#uievent">UI Events</a> defines <code>UIEvent</code></p>
+<pre class=webidl><code>[Exposed=Window]
+interface UIEvent : Event {
+  constructor(DOMString type, optional UIEventInit eventInitDict);
+  readonly attribute Window? view;
+  readonly attribute long detail;
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/input-device-capabilities/#extensions-to-the-uievent-interface-and-uieventinit-dictionary">Input Device Capabilities</a>
+<pre class=webidl><code>partial interface UIEvent {
+  readonly attribute InputDeviceCapabilities? sourceCapabilities;
+};</code></pre></li><li><a href="https://www.w3.org/TR/uievents/#legacy-interface-UIEvent">UI Events</a>
+<pre class=webidl><code>partial interface UIEvent {
+  readonly attribute unsigned long which;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="NavigationEvent.html">NavigationEvent</a></li><li><a href="TouchEvent.html">TouchEvent</a></li><li><a href="FocusEvent.html">FocusEvent</a></li><li><a href="MouseEvent.html">MouseEvent</a></li><li><a href="InputEvent.html">InputEvent</a></li><li><a href="KeyboardEvent.html">KeyboardEvent</a></li><li><a href="CompositionEvent.html">CompositionEvent</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/input-device-capabilities/">Input Device Capabilities</a> refers to <code>UIEvent</code></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a> refers to <code>UIEvent</code></li><li><a href="https://www.w3.org/TR/touch-events/">Touch Events - Level 2</a> refers to <code>UIEvent</code></li></ul>
+</section>

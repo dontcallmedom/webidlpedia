@@ -1,0 +1,41 @@
+---
+title: HTMLFormElement
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">HTML Standard</a> defines <code>HTMLFormElement</code></p>
+<pre class=webidl><code>[Exposed=Window, LegacyOverrideBuiltIns, LegacyUnenumerableNamedProperties]
+interface HTMLFormElement : HTMLElement {
+  [HTMLConstructor] constructor();
+  [CEReactions] attribute DOMString acceptCharset;
+  [CEReactions] attribute USVString action;
+  [CEReactions] attribute DOMString autocomplete;
+  [CEReactions] attribute DOMString enctype;
+  [CEReactions] attribute DOMString encoding;
+  [CEReactions] attribute DOMString method;
+  [CEReactions] attribute DOMString name;
+  [CEReactions] attribute boolean noValidate;
+  [CEReactions] attribute DOMString target;
+  [CEReactions] attribute DOMString rel;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
+  [SameObject] readonly attribute HTMLFormControlsCollection elements;
+  readonly attribute unsigned long length;
+  getter Element (unsigned long index);
+  getter (RadioNodeList or Element) (DOMString name);
+  undefined submit();
+  undefined requestSubmit(optional HTMLElement? submitter = null);
+  [CEReactions] undefined reset();
+  boolean checkValidity();
+  boolean reportValidity();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="HTMLObjectElement.html">HTMLObjectElement</a></li><li><a href="HTMLLabelElement.html">HTMLLabelElement</a></li><li><a href="HTMLInputElement.html">HTMLInputElement</a></li><li><a href="HTMLButtonElement.html">HTMLButtonElement</a></li><li><a href="HTMLSelectElement.html">HTMLSelectElement</a></li><li><a href="HTMLOptionElement.html">HTMLOptionElement</a></li><li><a href="HTMLTextAreaElement.html">HTMLTextAreaElement</a></li><li><a href="HTMLOutputElement.html">HTMLOutputElement</a></li><li><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a></li><li><a href="HTMLLegendElement.html">HTMLLegendElement</a></li><li><a href="ElementInternals.html">ElementInternals</a></li><li><a href="PasswordCredential.html">PasswordCredential</a></li><li><a href="FormData.html">FormData</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/credential-management-1/">Credential Management Level 1</a> refers to <code>HTMLFormElement</code></li><li><a href="https://xhr.spec.whatwg.org/">XMLHttpRequest Standard</a> refers to <code>HTMLFormElement</code></li></ul>
+</section>

@@ -1,0 +1,151 @@
+---
+title: Window
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/window-object.html#window">HTML Standard</a> defines <code>Window</code></p>
+<pre class=webidl><code>[Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
+interface Window : EventTarget {
+  [LegacyUnforgeable] readonly attribute WindowProxy window;
+  [Replaceable] readonly attribute WindowProxy self;
+  [LegacyUnforgeable] readonly attribute Document document;
+  attribute DOMString name;
+  [PutForwards=href, LegacyUnforgeable] readonly attribute Location location;
+  readonly attribute History history;
+  readonly attribute CustomElementRegistry customElements;
+  [Replaceable] readonly attribute BarProp locationbar;
+  [Replaceable] readonly attribute BarProp menubar;
+  [Replaceable] readonly attribute BarProp personalbar;
+  [Replaceable] readonly attribute BarProp scrollbars;
+  [Replaceable] readonly attribute BarProp statusbar;
+  [Replaceable] readonly attribute BarProp toolbar;
+  attribute DOMString status;
+  undefined close();
+  readonly attribute boolean closed;
+  undefined stop();
+  undefined focus();
+  undefined blur();
+  [Replaceable] readonly attribute WindowProxy frames;
+  [Replaceable] readonly attribute unsigned long length;
+  [LegacyUnforgeable] readonly attribute WindowProxy? top;
+  attribute any opener;
+  [Replaceable] readonly attribute WindowProxy? parent;
+  readonly attribute Element? frameElement;
+  WindowProxy? open(optional USVString url = "", optional DOMString target = "_blank", optional DOMString features = "");
+  getter object (DOMString name);
+  readonly attribute Navigator navigator;
+  readonly attribute boolean originAgentCluster;
+  undefined alert();
+  undefined alert(DOMString message);
+  boolean confirm(optional DOMString message = "");
+  DOMString? prompt(optional DOMString message = "", optional DOMString default = "");
+  undefined print();
+  undefined postMessage(any message, USVString targetOrigin, optional sequence<object> transfer = []);
+  undefined postMessage(any message, optional WindowPostMessageOptions options = {});
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://compat.spec.whatwg.org/#windoworientation-interface">Compatibility Standard</a>
+<pre class=webidl><code>partial interface Window {
+  readonly attribute short orientation;
+  attribute EventHandler onorientationchange;
+};</code></pre></li><li><a href="https://dom.spec.whatwg.org/#interface-window-extensions">DOM Standard</a>
+<pre class=webidl><code>partial interface Window {
+  [Replaceable] readonly attribute (Event or undefined) event;
+};</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
+<pre class=webidl><code>interface Window {
+};
+interface Window {
+};
+interface Window {
+};
+interface Window {
+};
+interface Window {
+};
+interface Window {
+};
+partial interface Window {
+  undefined captureEvents();
+  undefined releaseEvents();
+  [Replaceable, SameObject] readonly attribute External external;
+};</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#Window">Cookie Store API</a>
+<pre class=webidl><code>[SecureContext]
+partial interface Window {
+  [SameObject] readonly attribute CookieStore cookieStore;
+};</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
+<pre class=webidl><code>[SecureContext]
+partial interface Window {
+  Promise<sequence<FileSystemFileHandle>> showOpenFilePicker(optional OpenFilePickerOptions options = {});
+  Promise<FileSystemFileHandle> showSaveFilePicker(optional SaveFilePickerOptions options = {});
+  Promise<FileSystemDirectoryHandle> showDirectoryPicker(optional DirectoryPickerOptions options = {});
+};</code></pre></li><li><a href="https://wicg.github.io/portals/#the-portal-element">Portals</a>
+<pre class=webidl><code>partial interface Window {
+  readonly attribute PortalHost? portalHost;
+};</code></pre></li><li><a href="https://wicg.github.io/speech-api/#tts-section">Web Speech API</a>
+<pre class=webidl><code>partial interface Window {
+  [SameObject] readonly attribute SpeechSynthesis speechSynthesis;
+};</code></pre></li><li><a href="https://wicg.github.io/visual-viewport/#extensions-to-the-window-interface">Visual Viewport API</a>
+<pre class=webidl><code>partial interface Window {
+  [SameObject, Replaceable] readonly attribute VisualViewport visualViewport;
+};</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
+<pre class=webidl><code>partial interface Window {
+  undefined navigate(SpatialNavigationDirection dir);
+};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a>
+<pre class=webidl><code>partial interface Window {
+  [NewObject] CSSStyleDeclaration getComputedStyle(Element elt, optional CSSOMString? pseudoElt);
+};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
+<pre class=webidl><code>partial interface Window {
+  [NewObject] MediaQueryList matchMedia(CSSOMString query);
+  [SameObject, Replaceable] readonly attribute Screen screen;
+  undefined moveTo(long x, long y);
+  undefined moveBy(long x, long y);
+  undefined resizeTo(long width, long height);
+  undefined resizeBy(long x, long y);
+  [Replaceable] readonly attribute long innerWidth;
+  [Replaceable] readonly attribute long innerHeight;
+  [Replaceable] readonly attribute double scrollX;
+  [Replaceable] readonly attribute double pageXOffset;
+  [Replaceable] readonly attribute double scrollY;
+  [Replaceable] readonly attribute double pageYOffset;
+  undefined scroll(optional ScrollToOptions options = {});
+  undefined scroll(unrestricted double x, unrestricted double y);
+  undefined scrollTo(optional ScrollToOptions options = {});
+  undefined scrollTo(unrestricted double x, unrestricted double y);
+  undefined scrollBy(optional ScrollToOptions options = {});
+  undefined scrollBy(unrestricted double x, unrestricted double y);
+  [Replaceable] readonly attribute long screenX;
+  [Replaceable] readonly attribute long screenLeft;
+  [Replaceable] readonly attribute long screenY;
+  [Replaceable] readonly attribute long screenTop;
+  [Replaceable] readonly attribute long outerWidth;
+  [Replaceable] readonly attribute long outerHeight;
+  [Replaceable] readonly attribute double devicePixelRatio;
+};</code></pre></li><li><a href="https://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation Event Specification</a>
+<pre class=webidl><code>partial interface Window {
+  [SecureContext] attribute EventHandler ondeviceorientation;
+};
+partial interface Window {
+  [SecureContext] attribute EventHandler ondeviceorientationabsolute;
+};
+partial interface Window {
+  attribute EventHandler oncompassneedscalibration;
+};
+partial interface Window {
+  [SecureContext] attribute EventHandler ondevicemotion;
+};</code></pre></li><li><a href="https://www.w3.org/TR/requestidlecallback/#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a>
+<pre class=webidl><code>partial interface Window {
+  unsigned long requestIdleCallback(IdleRequestCallback callback, optional IdleRequestOptions options = {});
+  undefined cancelIdleCallback(unsigned long handle);
+};</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-window-interface">Selection API</a>
+<pre class=webidl><code>partial interface Window {
+  Selection? getSelection();
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="TimeEvent.html">TimeEvent</a></li><li><a href="UIEvent.html">UIEvent</a></li><li><a href="UIEventInit.html">UIEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://compat.spec.whatwg.org/">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a> refers to <code>Window</code></li><li><a href="https://svgwg.org/specs/animations/">SVG Animations</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/cookie-store/">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/portals/">Portals</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/speech-api/">Web Speech API</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/visual-viewport/">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/orientation-event/">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/requestidlecallback/">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/selection-api/">Selection API</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/uievents/">UI Events</a> refers to <code>Window</code></li></ul>
+</section>

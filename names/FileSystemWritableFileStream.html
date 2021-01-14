@@ -1,0 +1,22 @@
+---
+title: FileSystemWritableFileStream
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://wicg.github.io/file-system-access/#filesystemwritablefilestream">File System Access</a> defines <code>FileSystemWritableFileStream</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker, SecureContext]
+interface FileSystemWritableFileStream : WritableStream {
+  Promise<undefined> write(FileSystemWriteChunkType data);
+  Promise<undefined> seek(unsigned long long position);
+  Promise<undefined> truncate(unsigned long long size);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li></ul>
+</section>
+  

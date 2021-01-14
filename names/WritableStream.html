@@ -1,0 +1,25 @@
+---
+title: WritableStream
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://streams.spec.whatwg.org/#writablestream">Streams Standard</a> defines <code>WritableStream</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker,Worklet, Transferable]
+interface WritableStream {
+  constructor(optional object underlyingSink, optional QueuingStrategy strategy = {});
+  readonly attribute boolean locked;
+  Promise<undefined> abort(optional any reason);
+  Promise<undefined> close();
+  WritableStreamDefaultWriter getWriter();
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="ReadableStream.html">ReadableStream</a></li><li><a href="ReadableWritablePair.html">ReadableWritablePair</a></li><li><a href="WritableStreamDefaultWriter.html">WritableStreamDefaultWriter</a></li><li><a href="TransformStream.html">TransformStream</a></li><li><a href="GenericTransformStream.html">GenericTransformStream</a></li><li><a href="RTCInsertableStreams.html">RTCInsertableStreams</a></li><li><a href="DatagramTransport.html">DatagramTransport</a></li><li><a href="OutgoingStream.html">OutgoingStream</a></li><li><a href="FileSystemWritableFileStream.html">FileSystemWritableFileStream</a></li><li><a href="SerialPort.html">SerialPort</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a> refers to <code>WritableStream</code></li><li><a href="https://w3c.github.io/webtransport/">WebTransport</a> refers to <code>WritableStream</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>WritableStream</code></li><li><a href="https://wicg.github.io/serial/">Web Serial API</a> refers to <code>WritableStream</code></li></ul>
+</section>

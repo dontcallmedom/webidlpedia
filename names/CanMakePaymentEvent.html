@@ -1,0 +1,21 @@
+---
+title: CanMakePaymentEvent
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/payment-handler/#dom-canmakepaymentevent">Payment Handler API</a> defines <code>CanMakePaymentEvent</code></p>
+<pre class=webidl><code>[Exposed=ServiceWorker]
+interface CanMakePaymentEvent : ExtendableEvent {
+  constructor(DOMString type, optional CanMakePaymentEventInit eventInitDict = {});
+  readonly attribute USVString topOrigin;
+  readonly attribute USVString paymentRequestOrigin;
+  readonly attribute FrozenArray<PaymentMethodData> methodData;
+  void respondWith(Promise<boolean> canMakePaymentResponse);
+};</code></pre>
+  
+</section>
+
+  

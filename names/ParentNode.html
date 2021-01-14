@@ -1,0 +1,27 @@
+---
+title: ParentNode
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://dom.spec.whatwg.org/">DOM Standard</a> defines <code>ParentNode</code></p>
+<pre class=webidl><code>interface mixin ParentNode {
+  [SameObject] readonly attribute HTMLCollection children;
+  readonly attribute Element? firstElementChild;
+  readonly attribute Element? lastElementChild;
+  readonly attribute unsigned long childElementCount;
+  [CEReactions, Unscopable] undefined prepend((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined append((Node or DOMString)... nodes);
+  [CEReactions, Unscopable] undefined replaceChildren((Node or DOMString)... nodes);
+  Element? querySelector(DOMString selectors);
+  [NewObject] NodeList querySelectorAll(DOMString selectors);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="Document.html">Document</a></li><li><a href="DocumentFragment.html">DocumentFragment</a></li><li><a href="Element.html">Element</a></li></ul>
+</section>
+  

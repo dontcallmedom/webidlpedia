@@ -1,0 +1,25 @@
+---
+title: WindowClient
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/ServiceWorker/#windowclient">Service Workers Nightly</a> defines <code>WindowClient</code></p>
+<pre class=webidl><code>[Exposed=ServiceWorker]
+interface WindowClient : Client {
+  readonly attribute VisibilityState visibilityState;
+  readonly attribute boolean focused;
+  [SameObject] readonly attribute FrozenArray<USVString> ancestorOrigins;
+  [NewObject] Promise<WindowClient> focus();
+  [NewObject] Promise<WindowClient?> navigate(USVString url);
+};</code></pre>
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="PaymentRequestEvent.html">PaymentRequestEvent</a></li><li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/payment-handler/">Payment Handler API</a> refers to <code>WindowClient</code></li></ul>
+</section>

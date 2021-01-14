@@ -1,0 +1,22 @@
+---
+title: BroadcastChannel
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#broadcastchannel">HTML Standard</a> defines <code>BroadcastChannel</code></p>
+<pre class=webidl><code>[Exposed=Window,Worker]
+interface BroadcastChannel : EventTarget {
+  constructor(DOMString name);
+  readonly attribute DOMString name;
+  undefined postMessage(any message);
+  undefined close();
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+};</code></pre>
+  
+</section>
+
+  

@@ -1,0 +1,29 @@
+---
+title: Client
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https://w3c.github.io/ServiceWorker/#client">Service Workers Nightly</a> defines <code>Client</code></p>
+<pre class=webidl><code>[Exposed=ServiceWorker]
+interface Client {
+  readonly attribute USVString url;
+  readonly attribute FrameType frameType;
+  readonly attribute DOMString id;
+  readonly attribute ClientType type;
+  undefined postMessage(any message, sequence<object> transfer);
+  undefined postMessage(any message, optional PostMessageOptions options = {});
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/page-lifecycle/#serviceworker-client-dfn">Page Lifecycle</a>
+<pre class=webidl><code>partial interface Client {
+  readonly attribute ClientLifecycleState lifecycleState;
+};</code></pre></li></ol>
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  <ul><li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li><li><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></li><li><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></li></ul>
+</section>
+  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/page-lifecycle/">Page Lifecycle</a> refers to <code>Client</code></li></ul>
+</section>
