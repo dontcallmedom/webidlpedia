@@ -15,29 +15,20 @@ interface Navigator {
 partial interface Navigator {
   [SameObject] readonly attribute GPU gpu;
 };</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>interface Navigator {
-};
-interface Navigator {
-};
-interface Navigator {
-};
-interface Navigator {
-};
-interface Navigator {
-};
-interface Navigator {
-};
-interface Navigator {
-};</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
+<pre class=webidl><code>Navigator includes NavigatorID;
+Navigator includes NavigatorLanguage;
+Navigator includes NavigatorOnLine;
+Navigator includes NavigatorContentUtils;
+Navigator includes NavigatorCookies;
+Navigator includes NavigatorPlugins;
+Navigator includes NavigatorConcurrentHardware;</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
+<pre class=webidl><code>Navigator includes NavigatorStorage;</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
 <pre class=webidl><code>[SecureContext]
 partial interface Navigator {
   Promise<undefined> setClientBadge(optional unsigned long long contents);
   Promise<undefined> clearClientBadge();
 };
-interface Navigator {
-};</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
+Navigator includes NavigatorBadge;</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
 <pre class=webidl><code>[SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute Bluetooth bluetooth;
@@ -60,18 +51,14 @@ partial interface Navigator {
 partial interface Navigator {
   [SecureContext, SameObject] readonly attribute Keyboard keyboard;
 };</code></pre></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
+<pre class=webidl><code>Navigator includes NavigatorFonts;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
+<pre class=webidl><code>Navigator includes NavigatorNetworkInformation;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
 <pre class=webidl><code>[Exposed=Window, SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute Serial serial;
 };</code></pre></li><li><a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
+<pre class=webidl><code>Navigator includes NavigatorUA;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
+<pre class=webidl><code>Navigator includes NavigatorLocks;</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
 <pre class=webidl><code>[SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute HID hid;
@@ -92,8 +79,7 @@ partial interface Navigator {
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext, SameObject] readonly attribute CredentialsContainer credentials;
 };</code></pre></li><li><a href="https://www.w3.org/TR/device-memory-1/">Device Memory 1</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
+<pre class=webidl><code>Navigator includes NavigatorDeviceMemory;</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
 <pre class=webidl><code>[Exposed=Window]
 partial interface Navigator {
   [SecureContext] Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations);
@@ -142,8 +128,7 @@ partial interface Navigator {
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext] Promise<undefined> share(optional ShareData data = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webdriver2/">WebDriver</a>
-<pre class=webidl><code>interface Navigator {
-};</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
+<pre class=webidl><code>Navigator includes NavigatorAutomationInformation;</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext] Promise<MIDIAccess> requestMIDIAccess(optional MIDIOptions options = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr/#navigator-xr-attribute">WebXR Device API</a>

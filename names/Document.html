@@ -40,14 +40,10 @@ interface Document : Node {
   [NewObject] TreeWalker createTreeWalker(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a>
-<pre class=webidl><code>interface Document {
-};
-interface Document {
-};
-interface Document {
-};
-interface Document {
-};</code></pre></li><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
+<pre class=webidl><code>Document includes NonElementParentNode;
+Document includes DocumentOrShadowRoot;
+Document includes ParentNode;
+Document includes XPathEvaluatorBase;</code></pre></li><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
 <pre class=webidl><code>partial interface Document {
   FontMetrics measureElement(Element element);
   FontMetrics measureText(DOMString text, StylePropertyMapReadOnly styleMap);
@@ -96,10 +92,8 @@ partial interface Document {
   DOMString queryCommandValue(DOMString commandId);
   [LegacyLenientThis] attribute EventHandler onreadystatechange;
 };
-interface Document {
-};
-interface Document {
-};
+Document includes GlobalEventHandlers;
+Document includes DocumentAndElementEventHandlers;
 partial interface Document {
   [CEReactions] attribute DOMString fgColor;
   [CEReactions] attribute DOMString linkColor;
@@ -128,8 +122,7 @@ partial interface Document {
 <pre class=webidl><code>partial interface Document {
   [SameObject] readonly attribute FragmentDirective fragmentDirective;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code>interface Document {
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
+<pre class=webidl><code>Document includes FontFaceSource;</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
 <pre class=webidl><code>partial interface Document {
   readonly attribute NamedFlowMap namedFlows;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
@@ -139,8 +132,7 @@ partial interface Document {
   CaretPosition? caretPositionFromPoint(double x, double y);
   readonly attribute Element? scrollingElement;
 };
-interface Document {
-};</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
+Document includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
 <pre class=webidl><code>partial interface Document {
   readonly attribute boolean hidden;
   readonly attribute VisibilityState visibilityState;

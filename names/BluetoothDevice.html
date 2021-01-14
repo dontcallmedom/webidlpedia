@@ -16,12 +16,9 @@ interface BluetoothDevice : EventTarget {
   readonly attribute boolean watchingAdvertisements;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
-<pre class=webidl><code>interface BluetoothDevice {
-};
-interface BluetoothDevice {
-};
-interface BluetoothDevice {
-};</code></pre></li></ol>
+<pre class=webidl><code>BluetoothDevice includes BluetoothDeviceEventHandlers;
+BluetoothDevice includes CharacteristicEventHandlers;
+BluetoothDevice includes ServiceEventHandlers;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

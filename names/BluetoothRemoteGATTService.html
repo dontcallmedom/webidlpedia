@@ -18,10 +18,8 @@ interface BluetoothRemoteGATTService : EventTarget {
   Promise<sequence<BluetoothRemoteGATTService>> getIncludedServices(optional BluetoothServiceUUID service);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
-<pre class=webidl><code>interface BluetoothRemoteGATTService {
-};
-interface BluetoothRemoteGATTService {
-};</code></pre></li></ol>
+<pre class=webidl><code>BluetoothRemoteGATTService includes CharacteristicEventHandlers;
+BluetoothRemoteGATTService includes ServiceEventHandlers;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

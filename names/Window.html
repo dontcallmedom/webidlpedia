@@ -54,18 +54,12 @@ interface Window : EventTarget {
 <pre class=webidl><code>partial interface Window {
   [Replaceable] readonly attribute (Event or undefined) event;
 };</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>interface Window {
-};
-interface Window {
-};
-interface Window {
-};
-interface Window {
-};
-interface Window {
-};
-interface Window {
-};
+<pre class=webidl><code>Window includes GlobalEventHandlers;
+Window includes WindowEventHandlers;
+Window includes WindowOrWorkerGlobalScope;
+Window includes AnimationFrameProvider;
+Window includes WindowSessionStorage;
+Window includes WindowLocalStorage;
 partial interface Window {
   undefined captureEvents();
   undefined releaseEvents();

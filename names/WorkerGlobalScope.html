@@ -21,13 +21,11 @@ interface WorkerGlobalScope : EventTarget {
   attribute EventHandler onunhandledrejection;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>interface WorkerGlobalScope {
-};</code></pre></li><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
+<pre class=webidl><code>WorkerGlobalScope includes WindowOrWorkerGlobalScope;</code></pre></li><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
 <pre class=webidl><code>partial interface WorkerGlobalScope {
   readonly attribute AddressSpace addressSpace;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code>interface WorkerGlobalScope {
-};</code></pre></li></ol>
+<pre class=webidl><code>WorkerGlobalScope includes FontFaceSource;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

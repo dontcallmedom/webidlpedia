@@ -29,8 +29,7 @@ interface GPUDevice : EventTarget {
   GPUQuerySet createQuerySet(GPUQuerySetDescriptor descriptor);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>
-<pre class=webidl><code>interface GPUDevice {
-};
+<pre class=webidl><code>GPUDevice includes GPUObjectBase;
 partial interface GPUDevice {
   readonly attribute Promise<GPUDeviceLostInfo> lost;
 };

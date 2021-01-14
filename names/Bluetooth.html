@@ -16,12 +16,9 @@ interface Bluetooth : EventTarget {
   Promise<BluetoothDevice> requestDevice(optional RequestDeviceOptions options = {});
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
-<pre class=webidl><code>interface Bluetooth {
-};
-interface Bluetooth {
-};
-interface Bluetooth {
-};</code></pre></li></ol>
+<pre class=webidl><code>Bluetooth includes BluetoothDeviceEventHandlers;
+Bluetooth includes CharacteristicEventHandlers;
+Bluetooth includes ServiceEventHandlers;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
