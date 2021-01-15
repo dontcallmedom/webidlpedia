@@ -6,6 +6,7 @@ const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idl && s.idl.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
 
+
 function generatePage(path, title, content) {
   fs.writeFileSync(path, `---
 title: ${title}
@@ -67,7 +68,7 @@ function extendedIdlDfnLink(name, spec) {
 }
 
 
-function interfaceDetails(data, name, used_by) {
+function interfaceDetails(data, name, used_by, templates) {
   let type;
   let mainDef = ``;
   let mainDefSpecs = [];
@@ -78,7 +79,7 @@ function interfaceDetails(data, name, used_by) {
       type = (spec.idl.idlNames[name] || {}).type;
       const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
       mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
-<pre class=webidl><code>${webidl.write(idlparsed)}</code></pre>`;
+<pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre>`;
     });
 
   let partialDef = ``;
@@ -88,7 +89,7 @@ function interfaceDetails(data, name, used_by) {
     .forEach(spec => {
       const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
       partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${spec.title}</a>
-<pre class=webidl><code>${webidl.write(idlparsed)}</code></pre></li>`;
+<pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre></li>`;
     });
   if (partialDef) {
     partialDef = `<p>This ${type} is extended in the following specifications:</p><ol>${partialDef}</ol>`;
@@ -239,9 +240,14 @@ fetch("https://w3c.github.io/webref/ed/crawl.json")
     // Generating referenceable names page
     generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by));
 
+    const webidlTemplate = {
+      name: name => `<strong>${name}</strong>`,
+      reference: name => used_by[name] ? `<a href='${name}.html'>${name}</a>` : `<span>${name}</span>`
+    };
+
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
-      generatePage("names/" + n + ".html", n, interfaceDetails(results, n, used_by));
+      generatePage("names/" + n + ".html", n, interfaceDetails(results, n, used_by, webidlTemplate));
     }
 
     // Generating enum value list
