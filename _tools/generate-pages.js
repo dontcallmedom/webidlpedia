@@ -76,7 +76,7 @@ function interfaceDetails(data, name, used_by) {
     .forEach(spec => {
       mainDefSpecs.push(spec.url);
       type = (spec.idl.idlNames[name] || {}).type;
-      const idlparsed = webidl.parse(spec.idl.idl).filter(i => i.name === name && i.type === type);
+      const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
       mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
 <pre class=webidl><code>${webidl.write(idlparsed)}</code></pre>`;
     });
@@ -86,7 +86,7 @@ function interfaceDetails(data, name, used_by) {
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
     .forEach(spec => {
-      const idlparsed = webidl.parse(spec.idl.idl).filter(i => i.name === name && i.type === type);
+      const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
       partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${spec.title}</a>
 <pre class=webidl><code>${webidl.write(idlparsed)}</code></pre></li>`;
     });
