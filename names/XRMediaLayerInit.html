@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#dictdef-xrmedialayerinit">WebXR Layers API Level 1</a> defines <code>XRMediaLayerInit</code></p>
-<pre class=webidl><code>dictionary XRMediaLayerInit {
-  XRSpace space;
-  XRLayerLayout layout;
-  boolean invertStereo;
+<pre class=webidl><code>
+
+dictionary XRMediaLayerInit {
+  required XRSpace space;
+  XRLayerLayout layout = "mono";
+  boolean invertStereo = false;
 };</code></pre>
   
 </section>

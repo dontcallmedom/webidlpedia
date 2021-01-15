@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpReceiver</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface RTCRtpReceiver {
   readonly attribute MediaStreamTrack track;
   readonly attribute RTCDtlsTransport? transport;
@@ -18,8 +20,10 @@ interface RTCRtpReceiver {
   Promise<RTCStatsReport> getStats();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>partial interface RTCRtpReceiver {
-  RTCInsertableStreams createEncodedStreams();
+<pre class=webidl><code>
+
+partial interface RTCRtpReceiver {
+    RTCInsertableStreams createEncodedStreams();
 };</code></pre></li></ol>
 </section>
 <section>

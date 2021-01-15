@@ -7,14 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/entries-api/#filesystementry">File and Directory Entries API</a> defines <code>FileSystemEntry</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface FileSystemEntry {
-  readonly attribute boolean isFile;
-  readonly attribute boolean isDirectory;
-  readonly attribute USVString name;
-  readonly attribute USVString fullPath;
-  readonly attribute FileSystem filesystem;
-  undefined getParent(optional FileSystemEntryCallback successCallback, optional ErrorCallback errorCallback);
+    readonly attribute boolean isFile;
+    readonly attribute boolean isDirectory;
+    readonly attribute USVString name;
+    readonly attribute USVString fullPath;
+    readonly attribute FileSystem filesystem;
+
+    undefined getParent(optional FileSystemEntryCallback successCallback,
+                   optional ErrorCallback errorCallback);
 };</code></pre>
   
 </section>

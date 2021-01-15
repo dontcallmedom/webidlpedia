@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmltextareaelement">HTML Standard</a> defines <code>HTMLTextAreaElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLTextAreaElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString autocomplete;
   [CEReactions] attribute unsigned long cols;
   [CEReactions] attribute DOMString dirName;
@@ -23,17 +26,21 @@ interface HTMLTextAreaElement : HTMLElement {
   [CEReactions] attribute boolean required;
   [CEReactions] attribute unsigned long rows;
   [CEReactions] attribute DOMString wrap;
+
   readonly attribute DOMString type;
   [CEReactions] attribute DOMString defaultValue;
-  attribute DOMString value;
+  attribute [LegacyNullToEmptyString] DOMString value;
   readonly attribute unsigned long textLength;
+
   readonly attribute boolean willValidate;
   readonly attribute ValidityState validity;
   readonly attribute DOMString validationMessage;
   boolean checkValidity();
   boolean reportValidity();
   undefined setCustomValidity(DOMString error);
+
   readonly attribute NodeList labels;
+
   undefined select();
   attribute unsigned long selectionStart;
   attribute unsigned long selectionEnd;

@@ -7,36 +7,47 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/tables.html#htmltableelement">HTML Standard</a> defines <code>HTMLTableElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLTableElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute HTMLTableCaptionElement? caption;
   HTMLTableCaptionElement createCaption();
   [CEReactions] undefined deleteCaption();
+
   [CEReactions] attribute HTMLTableSectionElement? tHead;
   HTMLTableSectionElement createTHead();
   [CEReactions] undefined deleteTHead();
+
   [CEReactions] attribute HTMLTableSectionElement? tFoot;
   HTMLTableSectionElement createTFoot();
   [CEReactions] undefined deleteTFoot();
+
   [SameObject] readonly attribute HTMLCollection tBodies;
   HTMLTableSectionElement createTBody();
+
   [SameObject] readonly attribute HTMLCollection rows;
   HTMLTableRowElement insertRow(optional long index = -1);
   [CEReactions] undefined deleteRow(long index);
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
-<pre class=webidl><code>partial interface HTMLTableElement {
+
+  // also has obsolete members
+};
+
+partial interface HTMLTableElement {
   [CEReactions] attribute DOMString align;
   [CEReactions] attribute DOMString border;
   [CEReactions] attribute DOMString frame;
   [CEReactions] attribute DOMString rules;
   [CEReactions] attribute DOMString summary;
   [CEReactions] attribute DOMString width;
-  [CEReactions] attribute DOMString bgColor;
-  [CEReactions] attribute DOMString cellPadding;
-  [CEReactions] attribute DOMString cellSpacing;
-};</code></pre></li></ol>
+
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString cellPadding;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString cellSpacing;
+};</code></pre>
+  
 </section>
 
   

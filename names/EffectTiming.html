@@ -7,15 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/web-animations-1/#dictdef-effecttiming">Web Animations</a> defines <code>EffectTiming</code></p>
-<pre class=webidl><code>dictionary EffectTiming {
-  double delay;
-  double endDelay;
-  FillMode fill;
-  double iterationStart;
-  unrestricted double iterations;
-  (unrestricted double or DOMString) duration;
-  PlaybackDirection direction;
-  DOMString easing;
+<pre class=webidl><code>
+
+dictionary EffectTiming {
+    double                             delay = 0;
+    double                             endDelay = 0;
+    FillMode                           fill = "auto";
+    double                             iterationStart = 0.0;
+    unrestricted double                iterations = 1.0;
+    (unrestricted double or DOMString) duration = "auto";
+    PlaybackDirection                  direction = "normal";
+    DOMString                          easing = "linear";
 };</code></pre>
   
 </section>

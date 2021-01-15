@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcerror">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCError</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface RTCError : DOMException {
   constructor(RTCErrorInit init, optional DOMString message = "");
   readonly attribute RTCErrorDetailType errorDetail;
@@ -17,7 +19,9 @@ interface RTCError : DOMException {
   readonly attribute unsigned long? sentAlert;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial interface RTCError {
+<pre class=webidl><code>
+
+partial interface RTCError {
   readonly attribute long? httpRequestStatusCode;
 };</code></pre></li></ol>
 </section>

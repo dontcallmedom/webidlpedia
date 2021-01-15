@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcicetransport">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCIceTransport</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface RTCIceTransport : EventTarget {
   readonly attribute RTCIceRole role;
   readonly attribute RTCIceComponent component;
@@ -23,15 +25,17 @@ interface RTCIceTransport : EventTarget {
   attribute EventHandler onselectedcandidatepairchange;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-ice/">IceTransport Extensions for WebRTC</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface RTCIceTransport {
-  constructor();
-  undefined gather(optional RTCIceGatherOptions options = {});
-  undefined start(RTCIceParameters remoteParameters, optional RTCIceRole role = "controlled");
-  undefined stop();
-  undefined addRemoteCandidate(RTCIceCandidateInit remoteCandidate);
-  attribute EventHandler onerror;
-  attribute EventHandler onicecandidate;
+    constructor();
+    undefined                      gather (optional RTCIceGatherOptions options = {});
+    undefined                      start (RTCIceParameters remoteParameters, optional RTCIceRole role = "controlled");
+    undefined                      stop ();
+    undefined                      addRemoteCandidate (RTCIceCandidateInit remoteCandidate);
+                    attribute EventHandler        onerror;
+                    attribute EventHandler        onicecandidate;
 };</code></pre></li></ol>
 </section>
 <section>

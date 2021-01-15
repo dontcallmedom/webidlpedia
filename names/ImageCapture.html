@@ -9,12 +9,14 @@ base: ../
   <p><a href="https://w3c.github.io/mediacapture-image/#imagecapture">MediaStream Image Capture</a> defines <code>ImageCapture</code></p>
 <pre class=webidl><code>[Exposed=Window]
 interface ImageCapture {
-  constructor(MediaStreamTrack videoTrack);
-  Promise<Blob> takePhoto(optional PhotoSettings photoSettings = {});
-  Promise<PhotoCapabilities> getPhotoCapabilities();
-  Promise<PhotoSettings> getPhotoSettings();
-  Promise<ImageBitmap> grabFrame();
-  readonly attribute MediaStreamTrack track;
+   constructor(MediaStreamTrack videoTrack);
+   Promise<Blob>              takePhoto(optional PhotoSettings photoSettings = {});
+   Promise<PhotoCapabilities> getPhotoCapabilities();
+   Promise<PhotoSettings>     getPhotoSettings();
+
+   Promise<ImageBitmap>       grabFrame();
+
+   readonly attribute MediaStreamTrack track;
 };</code></pre>
   
 </section>

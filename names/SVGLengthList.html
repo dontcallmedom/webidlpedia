@@ -7,10 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGLengthList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGLengthList</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGLengthList {
+
   readonly attribute unsigned long length;
   readonly attribute unsigned long numberOfItems;
+
   void clear();
   SVGLength initialize(SVGLength newItem);
   getter SVGLength getItem(unsigned long index);

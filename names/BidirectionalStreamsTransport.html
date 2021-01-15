@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/">WebTransport</a> defines <code>BidirectionalStreamsTransport</code></p>
-<pre class=webidl><code>interface mixin BidirectionalStreamsTransport {
-  Promise<BidirectionalStream> createBidirectionalStream();
-  readonly attribute ReadableStream incomingBidirectionalStreams;
+<pre class=webidl><code>
+
+interface mixin BidirectionalStreamsTransport {
+    Promise<BidirectionalStream> createBidirectionalStream();
+    /* a ReadableStream of BidirectionalStream objects */
+    readonly attribute ReadableStream incomingBidirectionalStreams;
 };</code></pre>
   
 </section>

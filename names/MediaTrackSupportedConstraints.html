@@ -7,51 +7,60 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints">Media Capture and Streams</a> defines <code>MediaTrackSupportedConstraints</code></p>
-<pre class=webidl><code>dictionary MediaTrackSupportedConstraints {
-  boolean width;
-  boolean height;
-  boolean aspectRatio;
-  boolean frameRate;
-  boolean facingMode;
-  boolean resizeMode;
-  boolean sampleRate;
-  boolean sampleSize;
-  boolean echoCancellation;
-  boolean autoGainControl;
-  boolean noiseSuppression;
-  boolean latency;
-  boolean channelCount;
-  boolean deviceId;
-  boolean groupId;
+<pre class=webidl><code>
+
+dictionary MediaTrackSupportedConstraints {
+  boolean width = true;
+  boolean height = true;
+  boolean aspectRatio = true;
+  boolean frameRate = true;
+  boolean facingMode = true;
+  boolean resizeMode = true;
+  boolean sampleRate = true;
+  boolean sampleSize = true;
+  boolean echoCancellation = true;
+  boolean autoGainControl = true;
+  boolean noiseSuppression = true;
+  boolean latency = true;
+  boolean channelCount = true;
+  boolean deviceId = true;
+  boolean groupId = true;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackSupportedConstraints {
-  boolean whiteBalanceMode;
-  boolean exposureMode;
-  boolean focusMode;
-  boolean pointsOfInterest;
-  boolean exposureCompensation;
-  boolean exposureTime;
-  boolean colorTemperature;
-  boolean iso;
-  boolean brightness;
-  boolean contrast;
-  boolean pan;
-  boolean saturation;
-  boolean sharpness;
-  boolean focusDistance;
-  boolean tilt;
-  boolean zoom;
-  boolean torch;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackSupportedConstraints {
+  boolean whiteBalanceMode = true;
+  boolean exposureMode = true;
+  boolean focusMode = true;
+  boolean pointsOfInterest = true;
+
+  boolean exposureCompensation = true;
+  boolean exposureTime = true;
+  boolean colorTemperature = true;
+  boolean iso = true;
+
+  boolean brightness = true;
+  boolean contrast = true;
+  boolean pan = true;
+  boolean saturation = true;
+  boolean sharpness = true;
+  boolean focusDistance = true;
+  boolean tilt = true;
+  boolean zoom = true;
+  boolean torch = true;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
 <pre class=webidl><code>partial dictionary MediaTrackSupportedConstraints {
-  boolean videoKind;
+    // Applies to both depth stream track and color stream track:
+    boolean videoKind = true;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackSupportedConstraints {
-  boolean displaySurface;
-  boolean logicalSurface;
-  boolean cursor;
-  boolean restrictOwnAudio;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackSupportedConstraints {
+  boolean displaySurface = true;
+  boolean logicalSurface = true;
+  boolean cursor = true;
+  boolean restrictOwnAudio = true;
 };</code></pre></li></ol>
 </section>
 <section>

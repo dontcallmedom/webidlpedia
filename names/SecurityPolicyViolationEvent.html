@@ -7,25 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webappsec-csp/#securitypolicyviolationevent">Content Security Policy Level 3</a> defines <code>SecurityPolicyViolationEvent</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface SecurityPolicyViolationEvent : Event {
-  constructor(DOMString type, optional SecurityPolicyViolationEventInit eventInitDict = {});
-  readonly attribute USVString documentURL;
-  readonly attribute USVString documentURI;
-  readonly attribute USVString referrer;
-  readonly attribute USVString blockedURL;
-  readonly attribute USVString blockedURI;
-  readonly attribute DOMString effectiveDirective;
-  readonly attribute DOMString violatedDirective;
-  readonly attribute DOMString originalPolicy;
-  readonly attribute USVString sourceFile;
-  readonly attribute DOMString sample;
-  readonly attribute SecurityPolicyViolationEventDisposition disposition;
-  readonly attribute unsigned short statusCode;
-  readonly attribute unsigned long lineno;
-  readonly attribute unsigned long lineNumber;
-  readonly attribute unsigned long colno;
-  readonly attribute unsigned long columnNumber;
+    constructor(DOMString type, optional SecurityPolicyViolationEventInit eventInitDict = {});
+    readonly    attribute USVString      documentURL;
+    readonly    attribute USVString      documentURI; // historical alias of documentURL
+    readonly    attribute USVString      referrer;
+    readonly    attribute USVString      blockedURL;
+    readonly    attribute USVString      blockedURI; // historical alias of blockedURL
+    readonly    attribute DOMString      effectiveDirective;
+    readonly    attribute DOMString      violatedDirective; // historical alias of effectiveDirective
+    readonly    attribute DOMString      originalPolicy;
+    readonly    attribute USVString      sourceFile;
+    readonly    attribute DOMString      sample;
+    readonly    attribute SecurityPolicyViolationEventDisposition      disposition;
+    readonly    attribute unsigned short statusCode;
+    readonly    attribute unsigned long  lineno;
+    readonly    attribute unsigned long  lineNumber; // historical alias of lineno
+    readonly    attribute unsigned long  colno;
+    readonly    attribute unsigned long  columnNumber; // historical alias of colno
 };</code></pre>
   
 </section>

@@ -7,12 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a> defines <code>GPUProgrammablePassEncoder</code></p>
-<pre class=webidl><code>interface mixin GPUProgrammablePassEncoder {
-  undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup, optional sequence<GPUBufferDynamicOffset> dynamicOffsets = []);
-  undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup, Uint32Array dynamicOffsetsData, GPUSize64 dynamicOffsetsDataStart, GPUSize32 dynamicOffsetsDataLength);
-  undefined pushDebugGroup(USVString groupLabel);
-  undefined popDebugGroup();
-  undefined insertDebugMarker(USVString markerLabel);
+<pre class=webidl><code>
+
+interface mixin GPUProgrammablePassEncoder {
+    undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup,
+                      optional sequence<GPUBufferDynamicOffset> dynamicOffsets = []);
+
+    undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup,
+                      Uint32Array dynamicOffsetsData,
+                      GPUSize64 dynamicOffsetsDataStart,
+                      GPUSize32 dynamicOffsetsDataLength);
+
+    undefined pushDebugGroup(USVString groupLabel);
+    undefined popDebugGroup();
+    undefined insertDebugMarker(USVString markerLabel);
 };</code></pre>
   
 </section>

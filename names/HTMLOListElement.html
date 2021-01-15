@@ -7,17 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#htmlolistelement">HTML Standard</a> defines <code>HTMLOListElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLOListElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute boolean reversed;
   [CEReactions] attribute long start;
   [CEReactions] attribute DOMString type;
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
-<pre class=webidl><code>partial interface HTMLOListElement {
+
+  // also has obsolete members
+};
+
+partial interface HTMLOListElement {
   [CEReactions] attribute boolean compact;
-};</code></pre></li></ol>
+};</code></pre>
+  
 </section>
 
   

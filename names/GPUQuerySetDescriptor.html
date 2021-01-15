@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpuquerysetdescriptor">WebGPU</a> defines <code>GPUQuerySetDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUQuerySetDescriptor : GPUObjectDescriptorBase {
-  GPUQueryType type;
-  GPUSize32 count;
-  sequence<GPUPipelineStatisticName> pipelineStatistics;
+<pre class=webidl><code>
+
+dictionary GPUQuerySetDescriptor : GPUObjectDescriptorBase {
+    required GPUQueryType type;
+    required GPUSize32 count;
+    sequence<GPUPipelineStatisticName> pipelineStatistics = [];
 };</code></pre>
   
 </section>

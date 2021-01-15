@@ -7,10 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">HTML Standard</a> defines <code>ImageData</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker),
+ Serializable]
 interface ImageData {
   constructor(unsigned long sw, unsigned long sh);
   constructor(Uint8ClampedArray data, unsigned long sw, optional unsigned long sh);
+
   readonly attribute unsigned long width;
   readonly attribute unsigned long height;
   readonly attribute Uint8ClampedArray data;

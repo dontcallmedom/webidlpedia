@@ -7,10 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-codecs/#videoframe">WebCodecs</a> defines <code>VideoFrame</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+
+[Exposed=(Window,Worker)]
 interface VideoFrame {
   constructor(ImageBitmap imageBitmap, VideoFrameInit frameInit);
-  constructor(PixelFormat pixelFormat, sequence<(Plane or PlaneInit)> planes, VideoFrameInit frameInit);
+  constructor(PixelFormat pixelFormat, sequence<(Plane or PlaneInit)> planes,
+              VideoFrameInit frameInit);
+
   readonly attribute PixelFormat format;
   readonly attribute FrozenArray<Plane> planes;
   readonly attribute unsigned long codedWidth;
@@ -23,9 +28,13 @@ interface VideoFrame {
   readonly attribute unsigned long displayHeight;
   readonly attribute unsigned long long? duration;
   readonly attribute unsigned long long? timestamp;
+
   undefined destroy();
   VideoFrame clone();
-  Promise<ImageBitmap> createImageBitmap(optional ImageBitmapOptions options = {});
+
+  Promise<ImageBitmap> createImageBitmap(
+    optional ImageBitmapOptions options = {});
+
 };</code></pre>
   
 </section>

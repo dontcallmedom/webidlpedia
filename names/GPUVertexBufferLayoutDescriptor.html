@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpuvertexbufferlayoutdescriptor">WebGPU</a> defines <code>GPUVertexBufferLayoutDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUVertexBufferLayoutDescriptor {
-  GPUSize64 arrayStride;
-  GPUInputStepMode stepMode;
-  sequence<GPUVertexAttributeDescriptor> attributes;
+<pre class=webidl><code>
+
+dictionary GPUVertexBufferLayoutDescriptor {
+    required GPUSize64 arrayStride;
+    GPUInputStepMode stepMode = "vertex";
+    required sequence<GPUVertexAttributeDescriptor> attributes;
 };</code></pre>
   
 </section>

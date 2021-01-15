@@ -7,12 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-JsonWebKey">Web Cryptography API</a> defines <code>JsonWebKey</code></p>
-<pre class=webidl><code>dictionary JsonWebKey {
+<pre class=webidl><code>
+
+dictionary JsonWebKey {
+  // The following fields are defined in Section 3.1 of JSON Web Key
   DOMString kty;
   DOMString use;
   sequence<DOMString> key_ops;
   DOMString alg;
+
+  // The following fields are defined in JSON Web Key Parameters Registration
   boolean ext;
+
+  // The following fields are defined in Section 6 of JSON Web Algorithms
   DOMString crv;
   DOMString x;
   DOMString y;

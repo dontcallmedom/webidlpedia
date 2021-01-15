@@ -7,14 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablestreamdefaultreader">Streams Standard</a> defines <code>ReadableStreamDefaultReader</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,Worklet)]
 interface ReadableStreamDefaultReader {
   constructor(ReadableStream stream);
+
   Promise<ReadableStreamDefaultReadResult> read();
   undefined releaseLock();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://streams.spec.whatwg.org/">Streams Standard</a>
-<pre class=webidl><code>ReadableStreamDefaultReader includes ReadableStreamGenericReader;</code></pre></li></ol>
+  
 </section>
 
   

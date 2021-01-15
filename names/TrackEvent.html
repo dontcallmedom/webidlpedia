@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#trackevent">HTML Standard</a> defines <code>TrackEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface TrackEvent : Event {
   constructor(DOMString type, optional TrackEventInit eventInitDict = {});
+
   readonly attribute (VideoTrack or AudioTrack or TextTrack)? track;
 };</code></pre>
   

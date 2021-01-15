@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-sync/spec/#syncmanager">Web Background Synchronization</a> defines <code>SyncManager</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface SyncManager {
   Promise<void> register(DOMString tag);
   Promise<sequence<DOMString>> getTags();

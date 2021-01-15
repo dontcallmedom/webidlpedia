@@ -7,12 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpucolorwrite">WebGPU</a> defines <code>GPUColorWrite</code></p>
-<pre class=webidl><code>interface GPUColorWrite {
-  const GPUFlagsConstant RED;
-  const GPUFlagsConstant GREEN;
-  const GPUFlagsConstant BLUE;
-  const GPUFlagsConstant ALPHA;
-  const GPUFlagsConstant ALL;
+<pre class=webidl><code>
+interface GPUColorWrite {
+    const GPUFlagsConstant RED   = 0x1;
+    const GPUFlagsConstant GREEN = 0x2;
+    const GPUFlagsConstant BLUE  = 0x4;
+    const GPUFlagsConstant ALPHA = 0x8;
+    const GPUFlagsConstant ALL   = 0xF;
 };</code></pre>
   
 </section>

@@ -7,19 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGSVGElement : SVGGraphicsElement {
+
   [SameObject] readonly attribute SVGAnimatedLength x;
   [SameObject] readonly attribute SVGAnimatedLength y;
   [SameObject] readonly attribute SVGAnimatedLength width;
   [SameObject] readonly attribute SVGAnimatedLength height;
+
   attribute float currentScale;
   [SameObject] readonly attribute DOMPointReadOnly currentTranslate;
+
   NodeList getIntersectionList(DOMRectReadOnly rect, SVGElement? referenceElement);
   NodeList getEnclosureList(DOMRectReadOnly rect, SVGElement? referenceElement);
   boolean checkIntersection(SVGElement element, DOMRectReadOnly rect);
   boolean checkEnclosure(SVGElement element, DOMRectReadOnly rect);
+
   void deselectAll();
+
   SVGNumber createSVGNumber();
   SVGLength createSVGLength();
   SVGAngle createSVGAngle();
@@ -28,22 +35,26 @@ interface SVGSVGElement : SVGGraphicsElement {
   DOMRect createSVGRect();
   SVGTransform createSVGTransform();
   SVGTransform createSVGTransformFromMatrix(optional DOMMatrix2DInit matrix);
+
   Element getElementById(DOMString elementId);
+
+  // Deprecated methods that have no effect when called,
+  // but which are kept for compatibility reasons.
   unsigned long suspendRedraw(unsigned long maxWaitMilliseconds);
   void unsuspendRedraw(unsigned long suspendHandleID);
   void unsuspendRedrawAll();
   void forceRedraw();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://svgwg.org/specs/animations/">SVG Animations</a>
-<pre class=webidl><code>partial interface SVGSVGElement {
+<pre class=webidl><code>
+
+partial interface SVGSVGElement {
   void pauseAnimations();
   void unpauseAnimations();
   boolean animationsPaused();
   float getCurrentTime();
   void setCurrentTime(float seconds);
-};</code></pre></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>
-<pre class=webidl><code>SVGSVGElement includes SVGFitToViewBox;
-SVGSVGElement includes WindowEventHandlers;</code></pre></li></ol>
+};</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

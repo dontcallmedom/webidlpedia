@@ -7,14 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpudepthstencilstatedescriptor">WebGPU</a> defines <code>GPUDepthStencilStateDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUDepthStencilStateDescriptor {
-  GPUTextureFormat format;
-  boolean depthWriteEnabled;
-  GPUCompareFunction depthCompare;
-  GPUStencilStateFaceDescriptor stencilFront;
-  GPUStencilStateFaceDescriptor stencilBack;
-  GPUStencilValue stencilReadMask;
-  GPUStencilValue stencilWriteMask;
+<pre class=webidl><code>
+
+dictionary GPUDepthStencilStateDescriptor {
+    required GPUTextureFormat format;
+
+    boolean depthWriteEnabled = false;
+    GPUCompareFunction depthCompare = "always";
+
+    GPUStencilStateFaceDescriptor stencilFront = {};
+    GPUStencilStateFaceDescriptor stencilBack = {};
+
+    GPUStencilValue stencilReadMask = 0xFFFFFFFF;
+    GPUStencilValue stencilWriteMask = 0xFFFFFFFF;
 };</code></pre>
   
 </section>

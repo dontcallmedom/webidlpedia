@@ -7,17 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGAngle</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGAngle {
-  const unsigned short SVG_ANGLETYPE_UNKNOWN;
-  const unsigned short SVG_ANGLETYPE_UNSPECIFIED;
-  const unsigned short SVG_ANGLETYPE_DEG;
-  const unsigned short SVG_ANGLETYPE_RAD;
-  const unsigned short SVG_ANGLETYPE_GRAD;
+
+  // Angle Unit Types
+  const unsigned short SVG_ANGLETYPE_UNKNOWN = 0;
+  const unsigned short SVG_ANGLETYPE_UNSPECIFIED = 1;
+  const unsigned short SVG_ANGLETYPE_DEG = 2;
+  const unsigned short SVG_ANGLETYPE_RAD = 3;
+  const unsigned short SVG_ANGLETYPE_GRAD = 4;
+
   readonly attribute unsigned short unitType;
-  attribute float value;
-  attribute float valueInSpecifiedUnits;
-  attribute DOMString valueAsString;
+           attribute float value;
+           attribute float valueInSpecifiedUnits;
+           attribute DOMString valueAsString;
+
   void newValueSpecifiedUnits(unsigned short unitType, float valueInSpecifiedUnits);
   void convertToSpecifiedUnits(unsigned short unitType);
 };</code></pre>

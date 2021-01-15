@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/web-share-target/#dom-sharetarget">Web Share Target API</a> defines <code>ShareTarget</code></p>
-<pre class=webidl><code>dictionary ShareTarget {
-  USVString action;
-  DOMString method;
-  DOMString enctype;
-  ShareTargetParams params;
+<pre class=webidl><code>
+
+dictionary ShareTarget {
+  required USVString action;
+  DOMString method = "GET";
+  DOMString enctype = "application/x-www-form-urlencoded";
+  required ShareTargetParams params;
 };</code></pre>
   
 </section>

@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#global">WebAssembly JavaScript Interface</a> defines <code>Global</code></p>
-<pre class=webidl><code>[LegacyNamespace=WebAssembly, Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]
 interface Global {
   constructor(GlobalDescriptor descriptor, optional any v);
   any valueOf();

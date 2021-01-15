@@ -7,15 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtcdatachannelstats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCDataChannelStats</code></p>
-<pre class=webidl><code>dictionary RTCDataChannelStats : RTCStats {
-  DOMString label;
-  DOMString protocol;
-  unsigned short dataChannelIdentifier;
-  RTCDataChannelState state;
-  unsigned long messagesSent;
-  unsigned long long bytesSent;
-  unsigned long messagesReceived;
-  unsigned long long bytesReceived;
+<pre class=webidl><code>
+
+dictionary RTCDataChannelStats : RTCStats {
+             DOMString           label;
+             DOMString           protocol;
+             unsigned short      dataChannelIdentifier;
+             required RTCDataChannelState state;
+             unsigned long       messagesSent;
+             unsigned long long  bytesSent;
+             unsigned long       messagesReceived;
+             unsigned long long  bytesReceived;
 };</code></pre>
   
 </section>

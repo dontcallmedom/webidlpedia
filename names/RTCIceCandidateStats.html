@@ -7,15 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCIceCandidateStats</code></p>
-<pre class=webidl><code>dictionary RTCIceCandidateStats : RTCStats {
-  DOMString transportId;
-  DOMString? address;
-  long port;
-  DOMString protocol;
-  RTCIceCandidateType candidateType;
-  long priority;
-  DOMString url;
-  DOMString relayProtocol;
+<pre class=webidl><code>
+
+dictionary RTCIceCandidateStats : RTCStats {
+             required DOMString       transportId;
+             DOMString?               address;
+             long                     port;
+             DOMString                protocol;
+             required RTCIceCandidateType candidateType;
+             long                     priority;
+             DOMString                url;
+             DOMString                relayProtocol;
 };</code></pre>
   
 </section>

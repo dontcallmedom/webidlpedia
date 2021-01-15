@@ -7,16 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#serviceworker">Service Workers Nightly</a> defines <code>ServiceWorker</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+<pre class=webidl><code>[SecureContext, Exposed=(Window,Worker)]
 interface ServiceWorker : EventTarget {
   readonly attribute USVString scriptURL;
   readonly attribute ServiceWorkerState state;
   undefined postMessage(any message, sequence<object> transfer);
   undefined postMessage(any message, optional PostMessageOptions options = {});
+
+  // event
   attribute EventHandler onstatechange;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a>
-<pre class=webidl><code>ServiceWorker includes AbstractWorker;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

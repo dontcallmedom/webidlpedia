@@ -7,23 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/cssom/#cssstylesheet">CSS Object Model (CSSOM)</a> defines <code>CSSStyleSheet</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface CSSStyleSheet : StyleSheet {
   readonly attribute CSSRule? ownerRule;
   [SameObject] readonly attribute CSSRuleList cssRules;
   unsigned long insertRule(CSSOMString rule, optional unsigned long index = 0);
   undefined deleteRule(unsigned long index);
+};
+
+partial interface CSSStyleSheet {
+  [SameObject] readonly attribute CSSRuleList rules;
+  long addRule(optional DOMString selector = "undefined", optional DOMString style = "undefined", optional unsigned long index);
+  undefined removeRule(optional unsigned long index = 0);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>
 <pre class=webidl><code>partial interface CSSStyleSheet {
   constructor(optional CSSStyleSheetInit options = {});
   Promise<CSSStyleSheet> replace(USVString text);
   void replaceSync(USVString text);
-};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-1/#legacy-css-style-sheet-members">CSS Object Model (CSSOM)</a>
-<pre class=webidl><code>partial interface CSSStyleSheet {
-  [SameObject] readonly attribute CSSRuleList rules;
-  long addRule(optional DOMString selector = "undefined", optional DOMString style = "undefined", optional unsigned long index);
-  undefined removeRule(optional unsigned long index = 0);
 };</code></pre></li></ol>
 </section>
 <section>

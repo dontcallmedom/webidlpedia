@@ -7,16 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#element">DOM Standard</a> defines <code>Element</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface Element : Node {
   readonly attribute DOMString? namespaceURI;
   readonly attribute DOMString? prefix;
   readonly attribute DOMString localName;
   readonly attribute DOMString tagName;
+
   [CEReactions] attribute DOMString id;
   [CEReactions] attribute DOMString className;
   [SameObject, PutForwards=value] readonly attribute DOMTokenList classList;
   [CEReactions, Unscopable] attribute DOMString slot;
+
   boolean hasAttributes();
   [SameObject] readonly attribute NamedNodeMap attributes;
   sequence<DOMString> getAttributeNames();
@@ -29,48 +33,60 @@ interface Element : Node {
   [CEReactions] boolean toggleAttribute(DOMString qualifiedName, optional boolean force);
   boolean hasAttribute(DOMString qualifiedName);
   boolean hasAttributeNS(DOMString? namespace, DOMString localName);
+
   Attr? getAttributeNode(DOMString qualifiedName);
   Attr? getAttributeNodeNS(DOMString? namespace, DOMString localName);
   [CEReactions] Attr? setAttributeNode(Attr attr);
   [CEReactions] Attr? setAttributeNodeNS(Attr attr);
   [CEReactions] Attr removeAttributeNode(Attr attr);
+
   ShadowRoot attachShadow(ShadowRootInit init);
   readonly attribute ShadowRoot? shadowRoot;
+
   Element? closest(DOMString selectors);
   boolean matches(DOMString selectors);
-  boolean webkitMatchesSelector(DOMString selectors);
+  boolean webkitMatchesSelector(DOMString selectors); // legacy alias of .matches
+
   HTMLCollection getElementsByTagName(DOMString qualifiedName);
   HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
   HTMLCollection getElementsByClassName(DOMString classNames);
-  [CEReactions] Element? insertAdjacentElement(DOMString where, Element element);
-  undefined insertAdjacentText(DOMString where, DOMString data);
+
+  [CEReactions] Element? insertAdjacentElement(DOMString where, Element element); // legacy
+  undefined insertAdjacentText(DOMString where, DOMString data); // legacy
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a>
-<pre class=webidl><code>Element includes ParentNode;
-Element includes NonDocumentTypeChildNode;
-Element includes ChildNode;
-Element includes Slottable;</code></pre></li><li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen API Standard</a>
-<pre class=webidl><code>partial interface Element {
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen API Standard</a>
+<pre class=webidl><code>
+
+partial interface Element {
   Promise<undefined> requestFullscreen(optional FullscreenOptions options = {});
+
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
 };</code></pre></li><li><a href="https://wicg.github.io/element-timing/#sec-modifications-DOM">Element Timing API</a>
-<pre class=webidl><code>partial interface Element {
-  [CEReactions] attribute DOMString elementTiming;
+<pre class=webidl><code>
+
+partial interface Element {
+    [CEReactions] attribute DOMString elementTiming;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
-<pre class=webidl><code>partial interface Element {
-  Node getSpatialNavigationContainer();
-  sequence<Node> focusableAreas(optional FocusableAreasOption option = {});
-  Node? spatialNavigationSearch(SpatialNavigationDirection dir, optional SpatialNavigationSearchOptions options = {});
+<pre class=webidl><code>
+
+partial interface Element {
+    Node getSpatialNavigationContainer();
+    sequence<Node> focusableAreas(optional FocusableAreasOption option = {});
+    Node? spatialNavigationSearch(SpatialNavigationDirection dir, optional SpatialNavigationSearchOptions options = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-pseudo-4/">CSS Pseudo-Elements Module Level 4</a>
-<pre class=webidl><code>partial interface Element {
+<pre class=webidl><code>
+
+partial interface Element {
   CSSPseudoElement? pseudo(CSSOMString type);
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module Level 1</a>
-<pre class=webidl><code>Element includes Region;</code></pre></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/#idl">CSS Shadow Parts</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/#idl">CSS Shadow Parts</a>
 <pre class=webidl><code>partial interface Element {
   [SameObject, PutForwards=value] readonly attribute DOMTokenList part;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>partial interface Element {
+<pre class=webidl><code>
+
+partial interface Element {
   DOMRectList getClientRects();
   [NewObject] DOMRect getBoundingClientRect();
   undefined scrollIntoView(optional (boolean or ScrollIntoViewOptions) arg = {});
@@ -88,23 +104,25 @@ Element includes Slottable;</code></pre></li><li><a href="https://fullscreen.spe
   readonly attribute long clientLeft;
   readonly attribute long clientWidth;
   readonly attribute long clientHeight;
-};
-Element includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a>
-<pre class=webidl><code>Element includes InnerHTML;
+};</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a>
+<pre class=webidl><code>
+
 partial interface Element {
-  [CEReactions] attribute DOMString outerHTML;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString outerHTML;
   [CEReactions] void insertAdjacentHTML(DOMString position, DOMString text);
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-element-interface">Pointer Events</a>
-<pre class=webidl><code>partial interface Element {
-  undefined setPointerCapture(long pointerId);
-  undefined releasePointerCapture(long pointerId);
-  boolean hasPointerCapture(long pointerId);
+<pre class=webidl><code>
+
+partial interface Element {
+  undefined setPointerCapture (long pointerId);
+  undefined releasePointerCapture (long pointerId);
+  boolean hasPointerCapture (long pointerId);
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-element-interface">Pointer Lock 2.0</a>
 <pre class=webidl><code>partial interface Element {
   undefined requestPointerLock();
 };</code></pre></li><li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a>
-<pre class=webidl><code>Element includes ARIAMixin;</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a>
-<pre class=webidl><code>Element includes Animatable;</code></pre></li></ol>
+<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a>
+<pre class=webidl><code></code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

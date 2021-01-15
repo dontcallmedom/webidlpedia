@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#attr">DOM Standard</a> defines <code>Attr</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface Attr : Node {
   readonly attribute DOMString? namespaceURI;
   readonly attribute DOMString? prefix;
   readonly attribute DOMString localName;
   readonly attribute DOMString name;
   [CEReactions] attribute DOMString value;
+
   readonly attribute Element? ownerElement;
-  readonly attribute boolean specified;
+
+  readonly attribute boolean specified; // useless; always returns true
 };</code></pre>
   
 </section>

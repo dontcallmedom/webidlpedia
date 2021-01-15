@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#dictdef-inputeventinit">UI Events</a> defines <code>InputEventInit</code></p>
-<pre class=webidl><code>dictionary InputEventInit : UIEventInit {
-  DOMString? data;
-  boolean isComposing;
-  DOMString inputType;
+<pre class=webidl><code>
+
+dictionary InputEventInit : UIEventInit {
+  DOMString? data = "";
+  boolean isComposing = false;
+  DOMString inputType = "";
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/input-events-2/">Input Events Level 2</a>
-<pre class=webidl><code>partial dictionary InputEventInit {
-  DataTransfer? dataTransfer;
-  sequence<StaticRange> targetRanges;
+<pre class=webidl><code>
+
+partial dictionary InputEventInit {
+   DataTransfer? dataTransfer = null;
+   sequence<StaticRange> targetRanges = [];
 };</code></pre></li></ol>
 </section>
 <section>

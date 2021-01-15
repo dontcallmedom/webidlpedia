@@ -7,12 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasPathDrawingStyles</code></p>
-<pre class=webidl><code>interface mixin CanvasPathDrawingStyles {
-  attribute unrestricted double lineWidth;
-  attribute CanvasLineCap lineCap;
-  attribute CanvasLineJoin lineJoin;
-  attribute unrestricted double miterLimit;
-  undefined setLineDash(sequence<unrestricted double> segments);
+<pre class=webidl><code>
+
+interface mixin CanvasPathDrawingStyles {
+  // line caps/joins
+  attribute unrestricted double lineWidth; // (default 1)
+  attribute CanvasLineCap lineCap; // (default "butt")
+  attribute CanvasLineJoin lineJoin; // (default "miter")
+  attribute unrestricted double miterLimit; // (default 10)
+
+  // dashed lines
+  undefined setLineDash(sequence<unrestricted double> segments); // default empty
   sequence<unrestricted double> getLineDash();
   attribute unrestricted double lineDashOffset;
 };</code></pre>

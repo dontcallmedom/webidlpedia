@@ -7,11 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#customevent">DOM Standard</a> defines <code>CustomEvent</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface CustomEvent : Event {
   constructor(DOMString type, optional CustomEventInit eventInitDict = {});
+
   readonly attribute any detail;
-  undefined initCustomEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any detail = null);
+
+  undefined initCustomEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any detail = null); // legacy
 };</code></pre>
   
 </section>

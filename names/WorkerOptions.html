@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#workeroptions">HTML Standard</a> defines <code>WorkerOptions</code></p>
-<pre class=webidl><code>dictionary WorkerOptions {
-  WorkerType type;
-  RequestCredentials credentials;
-  DOMString name;
+<pre class=webidl><code>
+
+dictionary WorkerOptions {
+  WorkerType type = "classic";
+  RequestCredentials credentials = "same-origin"; // credentials is only used if type is "module"
+  DOMString name = "";
 };</code></pre>
   
 </section>

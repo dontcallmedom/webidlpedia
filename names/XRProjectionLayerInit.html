@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#dictdef-xrprojectionlayerinit">WebXR Layers API Level 1</a> defines <code>XRProjectionLayerInit</code></p>
-<pre class=webidl><code>dictionary XRProjectionLayerInit {
-  XRTextureType textureType;
-  GLenum colorFormat;
-  GLenum depthFormat;
-  double scaleFactor;
+<pre class=webidl><code>
+
+dictionary XRProjectionLayerInit {
+  XRTextureType textureType = "texture";
+  GLenum colorFormat = 0x1908; // RGBA
+  GLenum depthFormat = 0x1902; // DEPTH_COMPONENT
+  double scaleFactor = 1.0;
 };</code></pre>
   
 </section>

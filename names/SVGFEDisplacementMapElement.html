@@ -7,20 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/filter-effects-1/#svgfedisplacementmapelement">Filter Effects Module Level 1</a> defines <code>SVGFEDisplacementMapElement</code></p>
-<pre class=webidl><code>interface SVGFEDisplacementMapElement : SVGElement {
-  const unsigned short SVG_CHANNEL_UNKNOWN;
-  const unsigned short SVG_CHANNEL_R;
-  const unsigned short SVG_CHANNEL_G;
-  const unsigned short SVG_CHANNEL_B;
-  const unsigned short SVG_CHANNEL_A;
+<pre class=webidl><code>
+
+interface SVGFEDisplacementMapElement : SVGElement {
+
+  // Channel Selectors
+  const unsigned short SVG_CHANNEL_UNKNOWN = 0;
+  const unsigned short SVG_CHANNEL_R = 1;
+  const unsigned short SVG_CHANNEL_G = 2;
+  const unsigned short SVG_CHANNEL_B = 3;
+  const unsigned short SVG_CHANNEL_A = 4;
+
   readonly attribute SVGAnimatedString in1;
   readonly attribute SVGAnimatedString in2;
   readonly attribute SVGAnimatedNumber scale;
   readonly attribute SVGAnimatedEnumeration xChannelSelector;
   readonly attribute SVGAnimatedEnumeration yChannelSelector;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/filter-effects-1/">Filter Effects Module Level 1</a>
-<pre class=webidl><code>SVGFEDisplacementMapElement includes SVGFilterPrimitiveStandardAttributes;</code></pre></li></ol>
+  
 </section>
 
   

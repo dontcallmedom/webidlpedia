@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCTrackEventInit</code></p>
-<pre class=webidl><code>dictionary RTCTrackEventInit : EventInit {
-  RTCRtpReceiver receiver;
-  MediaStreamTrack track;
-  sequence<MediaStream> streams;
-  RTCRtpTransceiver transceiver;
+<pre class=webidl><code>
+
+dictionary RTCTrackEventInit : EventInit {
+  required RTCRtpReceiver receiver;
+  required MediaStreamTrack track;
+  sequence<MediaStream> streams = [];
+  required RTCRtpTransceiver transceiver;
 };</code></pre>
   
 </section>

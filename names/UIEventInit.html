@@ -7,13 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#dictdef-uieventinit">UI Events</a> defines <code>UIEventInit</code></p>
-<pre class=webidl><code>dictionary UIEventInit : EventInit {
-  Window? view;
-  long detail;
+<pre class=webidl><code>
+
+dictionary UIEventInit : EventInit {
+  Window? view = null;
+  long detail = 0;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/input-device-capabilities/">Input Device Capabilities</a>
-<pre class=webidl><code>partial dictionary UIEventInit {
-  InputDeviceCapabilities? sourceCapabilities;
+<pre class=webidl><code>
+
+partial dictionary UIEventInit {
+  InputDeviceCapabilities? sourceCapabilities = null;
 };</code></pre></li></ol>
 </section>
 <section>

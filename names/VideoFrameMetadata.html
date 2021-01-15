@@ -8,13 +8,16 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/video-rvfc/#dictdef-videoframemetadata">HTMLVideoElement.requestVideoFrameCallback()</a> defines <code>VideoFrameMetadata</code></p>
 <pre class=webidl><code>dictionary VideoFrameMetadata {
-  DOMHighResTimeStamp presentationTime;
-  DOMHighResTimeStamp expectedDisplayTime;
-  unsigned long width;
-  unsigned long height;
-  double mediaTime;
-  unsigned long presentedFrames;
+  required DOMHighResTimeStamp presentationTime;
+  required DOMHighResTimeStamp expectedDisplayTime;
+
+  required unsigned long width;
+  required unsigned long height;
+  required double mediaTime;
+
+  required unsigned long presentedFrames;
   double processingDuration;
+
   DOMHighResTimeStamp captureTime;
   DOMHighResTimeStamp receiveTime;
   unsigned long rtpTimestamp;

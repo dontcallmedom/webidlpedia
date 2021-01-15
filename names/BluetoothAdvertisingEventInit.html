@@ -7,8 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#dictdef-bluetoothadvertisingeventinit">Web Bluetooth</a> defines <code>BluetoothAdvertisingEventInit</code></p>
-<pre class=webidl><code>dictionary BluetoothAdvertisingEventInit : EventInit {
-  BluetoothDevice device;
+<pre class=webidl><code>
+dictionary BluetoothAdvertisingEventInit : EventInit {
+  required BluetoothDevice device;
   sequence<(DOMString or unsigned long)> uuids;
   DOMString name;
   unsigned short appearance;

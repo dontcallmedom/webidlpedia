@@ -7,7 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbendpoint">WebUSB API</a> defines <code>USBEndpoint</code></p>
-<pre class=webidl><code>[Exposed=DedicatedWorker,SharedWorker,Window, SecureContext]
+<pre class=webidl><code>
+
+[
+  Exposed=(DedicatedWorker,SharedWorker,Window),
+  SecureContext
+]
 interface USBEndpoint {
   constructor(USBAlternateInterface alternate, octet endpointNumber, USBDirection direction);
   readonly attribute octet endpointNumber;

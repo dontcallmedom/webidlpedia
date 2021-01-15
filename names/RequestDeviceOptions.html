@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#dictdef-requestdeviceoptions">Web Bluetooth</a> defines <code>RequestDeviceOptions</code></p>
-<pre class=webidl><code>dictionary RequestDeviceOptions {
+<pre class=webidl><code>
+
+dictionary RequestDeviceOptions {
   sequence<BluetoothLEScanFilterInit> filters;
-  sequence<BluetoothServiceUUID> optionalServices;
-  boolean acceptAllDevices;
+  sequence<BluetoothServiceUUID> optionalServices = [];
+  boolean acceptAllDevices = false;
 };</code></pre>
   
 </section>

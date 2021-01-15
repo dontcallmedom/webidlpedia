@@ -7,21 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://notifications.spec.whatwg.org/#dictdef-notificationoptions">Notifications API Standard</a> defines <code>NotificationOptions</code></p>
-<pre class=webidl><code>dictionary NotificationOptions {
-  NotificationDirection dir;
-  DOMString lang;
-  DOMString body;
-  DOMString tag;
+<pre class=webidl><code>
+
+dictionary NotificationOptions {
+  NotificationDirection dir = "auto";
+  DOMString lang = "";
+  DOMString body = "";
+  DOMString tag = "";
   USVString image;
   USVString icon;
   USVString badge;
   VibratePattern vibrate;
   DOMTimeStamp timestamp;
-  boolean renotify;
-  boolean silent;
-  boolean requireInteraction;
-  any data;
-  sequence<NotificationAction> actions;
+  boolean renotify = false;
+  boolean silent = false;
+  boolean requireInteraction = false;
+  any data = null;
+  sequence<NotificationAction> actions = [];
 };</code></pre>
   
 </section>

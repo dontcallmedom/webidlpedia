@@ -7,50 +7,68 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/hr-time/#dom-performance">High Resolution Time</a> defines <code>Performance</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface Performance : EventTarget {
-  DOMHighResTimeStamp now();
-  readonly attribute DOMHighResTimeStamp timeOrigin;
-  [Default] object toJSON();
+    DOMHighResTimeStamp now();
+    readonly attribute DOMHighResTimeStamp timeOrigin;
+    [Default] object toJSON();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/event-timing/#sec-extensions">Event Timing API</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Performance {
-  [SameObject] readonly attribute EventCounts eventCounts;
+    [SameObject] readonly attribute EventCounts eventCounts;
 };</code></pre></li><li><a href="https://wicg.github.io/js-self-profiling/#profile-method">JS Self-Profiling API</a>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 partial interface Performance {
   Promise<Profiler> profile(ProfilerInitOptions options);
 };</code></pre></li><li><a href="https://wicg.github.io/performance-measure-memory/">Measure Memory API</a>
-<pre class=webidl><code>partial interface Performance {
+<pre class=webidl><code>
+
+partial interface Performance {
   [CrossOriginIsolated] Promise<MemoryMeasurement> measureUserAgentSpecificMemory();
 };</code></pre></li><li><a href="https://www.w3.org/TR/navigation-timing-2/#extensions-to-the-performance-interface">Navigation Timing Level 2</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Performance {
-  [SameObject] readonly attribute PerformanceTiming timing;
-  [SameObject] readonly attribute PerformanceNavigation navigation;
+  [SameObject]
+  readonly attribute PerformanceTiming timing;
+  [SameObject]
+  readonly attribute PerformanceNavigation navigation;
 };</code></pre></li><li><a href="https://www.w3.org/TR/performance-timeline-2/#getentries-method">Performance Timeline Level 2</a>
 <pre class=webidl><code>partial interface Performance {
-  PerformanceEntryList getEntries();
-  PerformanceEntryList getEntriesByType(DOMString type);
-  PerformanceEntryList getEntriesByName(DOMString name, optional DOMString type);
+  PerformanceEntryList getEntries ();
+  PerformanceEntryList getEntriesByType (DOMString type);
+  PerformanceEntryList getEntriesByName (DOMString name, optional DOMString type);
 };</code></pre></li><li><a href="https://www.w3.org/TR/resource-timing-2/#sec-extensions-performance-interface">Resource Timing Level 2</a>
-<pre class=webidl><code>partial interface Performance {
-  undefined clearResourceTimings();
-  undefined setResourceTimingBufferSize(unsigned long maxSize);
-  attribute EventHandler onresourcetimingbufferfull;
+<pre class=webidl><code>
+
+partial interface Performance {
+  undefined clearResourceTimings ();
+  undefined setResourceTimingBufferSize (unsigned long maxSize);
+              attribute EventHandler onresourcetimingbufferfull;
 };</code></pre></li><li><a href="https://www.w3.org/TR/user-timing-2/#mark-method">User Timing Level 3</a>
-<pre class=webidl><code>partial interface Performance {
-  PerformanceMark mark(DOMString markName, optional PerformanceMarkOptions markOptions = {});
-  undefined clearMarks(optional DOMString markName);
-  PerformanceMeasure measure(DOMString measureName, optional (DOMString or PerformanceMeasureOptions) startOrMeasureOptions = {}, optional DOMString endMark);
-  undefined clearMeasures(optional DOMString measureName);
+<pre class=webidl><code>
+
+partial interface Performance {
+    PerformanceMark mark(DOMString markName, optional PerformanceMarkOptions markOptions = {});
+    undefined clearMarks(optional DOMString markName);
+    PerformanceMeasure measure(DOMString measureName, optional (DOMString or PerformanceMeasureOptions) startOrMeasureOptions = {}, optional DOMString endMark);
+    undefined clearMeasures(optional DOMString measureName);
 };</code></pre></li><li><a href="https://www.w3.org/TR/user-timing-3/#mark-method">User Timing Level 3</a>
-<pre class=webidl><code>partial interface Performance {
-  PerformanceMark mark(DOMString markName, optional PerformanceMarkOptions markOptions = {});
-  undefined clearMarks(optional DOMString markName);
-  PerformanceMeasure measure(DOMString measureName, optional (DOMString or PerformanceMeasureOptions) startOrMeasureOptions = {}, optional DOMString endMark);
-  undefined clearMeasures(optional DOMString measureName);
+<pre class=webidl><code>
+
+partial interface Performance {
+    PerformanceMark mark(DOMString markName, optional PerformanceMarkOptions markOptions = {});
+    undefined clearMarks(optional DOMString markName);
+    PerformanceMeasure measure(DOMString measureName, optional (DOMString or PerformanceMeasureOptions) startOrMeasureOptions = {}, optional DOMString endMark);
+    undefined clearMeasures(optional DOMString measureName);
 };</code></pre></li></ol>
 </section>
 <section>

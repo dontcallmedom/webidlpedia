@@ -7,15 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbdatabase">Indexed Database API 3.0</a> defines <code>IDBDatabase</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface IDBDatabase : EventTarget {
   readonly attribute DOMString name;
   readonly attribute unsigned long long version;
   readonly attribute DOMStringList objectStoreNames;
-  [NewObject] IDBTransaction transaction((DOMString or sequence<DOMString>) storeNames, optional IDBTransactionMode mode = "readonly", optional IDBTransactionOptions options = {});
+
+  [NewObject] IDBTransaction transaction((DOMString or sequence<DOMString>) storeNames,
+                                         optional IDBTransactionMode mode = "readonly",
+                                         optional IDBTransactionOptions options = {});
   undefined close();
-  [NewObject] IDBObjectStore createObjectStore(DOMString name, optional IDBObjectStoreParameters options = {});
+
+  [NewObject] IDBObjectStore createObjectStore(
+    DOMString name,
+    optional IDBObjectStoreParameters options = {});
   undefined deleteObjectStore(DOMString name);
+
+  // Event handlers:
   attribute EventHandler onabort;
   attribute EventHandler onclose;
   attribute EventHandler onerror;

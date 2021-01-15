@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-HkdfParams">Web Cryptography API</a> defines <code>HkdfParams</code></p>
-<pre class=webidl><code>dictionary HkdfParams : Algorithm {
-  HashAlgorithmIdentifier hash;
-  BufferSource salt;
-  BufferSource info;
+<pre class=webidl><code>
+
+dictionary HkdfParams : Algorithm {
+  required HashAlgorithmIdentifier hash;
+  required BufferSource salt;
+  required BufferSource info;
 };</code></pre>
   
 </section>

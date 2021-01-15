@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlformcontrolscollection">HTML Standard</a> defines <code>HTMLFormControlsCollection</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLFormControlsCollection : HTMLCollection {
-  getter (RadioNodeList or Element)? namedItem(DOMString name);
+  // inherits length and item()
+  getter (RadioNodeList or Element)? namedItem(DOMString name); // shadows inherited namedItem()
 };</code></pre>
   
 </section>

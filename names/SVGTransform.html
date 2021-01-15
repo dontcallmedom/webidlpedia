@@ -7,18 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransform">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTransform</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGTransform {
-  const unsigned short SVG_TRANSFORM_UNKNOWN;
-  const unsigned short SVG_TRANSFORM_MATRIX;
-  const unsigned short SVG_TRANSFORM_TRANSLATE;
-  const unsigned short SVG_TRANSFORM_SCALE;
-  const unsigned short SVG_TRANSFORM_ROTATE;
-  const unsigned short SVG_TRANSFORM_SKEWX;
-  const unsigned short SVG_TRANSFORM_SKEWY;
+
+  // Transform Types
+  const unsigned short SVG_TRANSFORM_UNKNOWN = 0;
+  const unsigned short SVG_TRANSFORM_MATRIX = 1;
+  const unsigned short SVG_TRANSFORM_TRANSLATE = 2;
+  const unsigned short SVG_TRANSFORM_SCALE = 3;
+  const unsigned short SVG_TRANSFORM_ROTATE = 4;
+  const unsigned short SVG_TRANSFORM_SKEWX = 5;
+  const unsigned short SVG_TRANSFORM_SKEWY = 6;
+
   readonly attribute unsigned short type;
   [SameObject] readonly attribute DOMMatrix matrix;
   readonly attribute float angle;
+
   void setMatrix(optional DOMMatrix2DInit matrix);
   void setTranslate(float tx, float ty);
   void setScale(float sx, float sy);

@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://notifications.spec.whatwg.org/#notificationevent">Notifications API Standard</a> defines <code>NotificationEvent</code></p>
-<pre class=webidl><code>[Exposed=ServiceWorker]
+<pre class=webidl><code>
+
+[Exposed=ServiceWorker]
 interface NotificationEvent : ExtendableEvent {
   constructor(DOMString type, NotificationEventInit eventInitDict);
+
   readonly attribute Notification notification;
   readonly attribute DOMString action;
 };</code></pre>

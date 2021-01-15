@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset">Media Capture and Streams</a> defines <code>MediaTrackConstraintSet</code></p>
-<pre class=webidl><code>dictionary MediaTrackConstraintSet {
+<pre class=webidl><code>
+
+dictionary MediaTrackConstraintSet {
   ConstrainULong width;
   ConstrainULong height;
   ConstrainDouble aspectRatio;
@@ -25,29 +27,40 @@ base: ../
   ConstrainDOMString groupId;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackConstraintSet {
-  ConstrainDOMString whiteBalanceMode;
-  ConstrainDOMString exposureMode;
-  ConstrainDOMString focusMode;
-  ConstrainPoint2D pointsOfInterest;
-  ConstrainDouble exposureCompensation;
-  ConstrainDouble exposureTime;
-  ConstrainDouble colorTemperature;
-  ConstrainDouble iso;
-  ConstrainDouble brightness;
-  ConstrainDouble contrast;
-  ConstrainDouble saturation;
-  ConstrainDouble sharpness;
-  ConstrainDouble focusDistance;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackConstraintSet {
+  ConstrainDOMString           whiteBalanceMode;
+  ConstrainDOMString           exposureMode;
+  ConstrainDOMString           focusMode;
+  ConstrainPoint2D             pointsOfInterest;
+
+  ConstrainDouble              exposureCompensation;
+  ConstrainDouble              exposureTime;
+  ConstrainDouble              colorTemperature;
+  ConstrainDouble              iso;
+
+  ConstrainDouble              brightness;
+  ConstrainDouble              contrast;
+  ConstrainDouble              saturation;
+  ConstrainDouble              sharpness;
+
+  ConstrainDouble              focusDistance;
   (boolean or ConstrainDouble) pan;
   (boolean or ConstrainDouble) tilt;
   (boolean or ConstrainDouble) zoom;
-  ConstrainBoolean torch;
+
+  ConstrainBoolean             torch;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>partial dictionary MediaTrackConstraintSet {
-  ConstrainDOMString videoKind;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackConstraintSet {
+    // Applies to both depth stream track and color stream track:
+    ConstrainDOMString videoKind;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackConstraintSet {
+<pre class=webidl><code>
+
+partial dictionary MediaTrackConstraintSet {
   ConstrainDOMString displaySurface;
   ConstrainBoolean logicalSurface;
   ConstrainDOMString cursor;

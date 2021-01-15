@@ -7,10 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpucolorstatedescriptor">WebGPU</a> defines <code>GPUColorStateDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUColorStateDescriptor {
-  GPUTextureFormat format;
-  GPUBlendDescriptor blend;
-  GPUColorWriteFlags writeMask;
+<pre class=webidl><code>
+
+dictionary GPUColorStateDescriptor {
+    required GPUTextureFormat format;
+
+    GPUBlendDescriptor blend;
+    GPUColorWriteFlags writeMask = 0xF;  // GPUColorWrite.ALL
 };</code></pre>
   
 </section>

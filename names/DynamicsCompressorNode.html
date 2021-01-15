@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#dynamicscompressornode">Web Audio API</a> defines <code>DynamicsCompressorNode</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface DynamicsCompressorNode : AudioNode {
-  constructor(BaseAudioContext context, optional DynamicsCompressorOptions options = {});
+  constructor (BaseAudioContext context,
+               optional DynamicsCompressorOptions options = {});
   readonly attribute AudioParam threshold;
   readonly attribute AudioParam knee;
   readonly attribute AudioParam ratio;

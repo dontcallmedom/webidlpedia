@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#dictdef-tabledescriptor">WebAssembly JavaScript Interface</a> defines <code>TableDescriptor</code></p>
-<pre class=webidl><code>dictionary TableDescriptor {
-  TableKind element;
-  unsigned long initial;
+<pre class=webidl><code>
+
+dictionary TableDescriptor {
+  required TableKind element;
+  required [EnforceRange] unsigned long initial;
   [EnforceRange] unsigned long maximum;
 };</code></pre>
   

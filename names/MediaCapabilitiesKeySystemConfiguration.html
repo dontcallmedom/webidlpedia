@@ -7,15 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/media-capabilities/#dictdef-mediacapabilitieskeysystemconfiguration">Media Capabilities</a> defines <code>MediaCapabilitiesKeySystemConfiguration</code></p>
-<pre class=webidl><code>dictionary MediaCapabilitiesKeySystemConfiguration {
-  DOMString keySystem;
-  DOMString initDataType;
-  MediaKeysRequirement distinctiveIdentifier;
-  MediaKeysRequirement persistentState;
-  sequence<DOMString> sessionTypes;
-  KeySystemTrackConfiguration audio;
-  KeySystemTrackConfiguration video;
-};</code></pre>
+<pre class=webidl><code>
+
+dictionary MediaCapabilitiesKeySystemConfiguration {
+    required DOMString keySystem;
+    DOMString initDataType = "";
+    MediaKeysRequirement distinctiveIdentifier = "optional";
+    MediaKeysRequirement persistentState = "optional";
+    sequence<DOMString> sessionTypes;
+    KeySystemTrackConfiguration audio;
+    KeySystemTrackConfiguration video;
+  };</code></pre>
   
 </section>
 <section>

@@ -7,9 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">HTML Standard</a> defines <code>HTMLFormElement</code></p>
-<pre class=webidl><code>[Exposed=Window, LegacyOverrideBuiltIns, LegacyUnenumerableNamedProperties]
+<pre class=webidl><code>
+
+[Exposed=Window,
+ LegacyOverrideBuiltIns,
+ LegacyUnenumerableNamedProperties]
 interface HTMLFormElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString acceptCharset;
   [CEReactions] attribute USVString action;
   [CEReactions] attribute DOMString autocomplete;
@@ -21,10 +26,12 @@ interface HTMLFormElement : HTMLElement {
   [CEReactions] attribute DOMString target;
   [CEReactions] attribute DOMString rel;
   [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
+
   [SameObject] readonly attribute HTMLFormControlsCollection elements;
   readonly attribute unsigned long length;
   getter Element (unsigned long index);
   getter (RadioNodeList or Element) (DOMString name);
+
   undefined submit();
   undefined requestSubmit(optional HTMLElement? submitter = null);
   [CEReactions] undefined reset();

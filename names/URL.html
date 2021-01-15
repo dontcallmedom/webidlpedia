@@ -7,32 +7,39 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://url.spec.whatwg.org/#url">URL Standard</a> defines <code>URL</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, LegacyWindowAlias=webkitURL]
+<pre class=webidl><code>[Exposed=(Window,Worker),
+ LegacyWindowAlias=webkitURL]
 interface URL {
   constructor(USVString url, optional USVString base);
+
   stringifier attribute USVString href;
   readonly attribute USVString origin;
-  attribute USVString protocol;
-  attribute USVString username;
-  attribute USVString password;
-  attribute USVString host;
-  attribute USVString hostname;
-  attribute USVString port;
-  attribute USVString pathname;
-  attribute USVString search;
+           attribute USVString protocol;
+           attribute USVString username;
+           attribute USVString password;
+           attribute USVString host;
+           attribute USVString hostname;
+           attribute USVString port;
+           attribute USVString pathname;
+           attribute USVString search;
   [SameObject] readonly attribute URLSearchParams searchParams;
-  attribute USVString hash;
+           attribute USVString hash;
+
   USVString toJSON();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/FileAPI/">File API</a>
-<pre class=webidl><code>[Exposed=Window,DedicatedWorker,SharedWorker]
+<pre class=webidl><code>
+
+[Exposed=(Window,DedicatedWorker,SharedWorker)]
 partial interface URL {
   static DOMString createObjectURL((Blob or MediaSource) obj);
   static undefined revokeObjectURL(DOMString url);
 };</code></pre></li><li><a href="https://www.w3.org/TR/media-source/#methods-2">Media Source Extensions™</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface URL {
-  static DOMString createObjectURL(MediaSource mediaSource);
+    static DOMString createObjectURL (MediaSource mediaSource);
 };</code></pre></li></ol>
 </section>
 

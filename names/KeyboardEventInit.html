@@ -7,18 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#dictdef-keyboardeventinit">UI Events</a> defines <code>KeyboardEventInit</code></p>
-<pre class=webidl><code>dictionary KeyboardEventInit : EventModifierInit {
-  DOMString key;
-  DOMString code;
-  unsigned long location;
-  boolean repeat;
-  boolean isComposing;
+<pre class=webidl><code>
+
+dictionary KeyboardEventInit : EventModifierInit {
+  DOMString key = "";
+  DOMString code = "";
+  unsigned long location = 0;
+  boolean repeat = false;
+  boolean isComposing = false;
+};
+
+partial dictionary KeyboardEventInit {
+  // The following support legacy user agents
+  unsigned long charCode = 0;
+  unsigned long keyCode = 0;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/uievents/">UI Events</a>
-<pre class=webidl><code>partial dictionary KeyboardEventInit {
-  unsigned long charCode;
-  unsigned long keyCode;
-};</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

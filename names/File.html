@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-file">File API</a> defines <code>File</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker), Serializable]
 interface File : Blob {
-  constructor(sequence<BlobPart> fileBits, USVString fileName, optional FilePropertyBag options = {});
+  constructor(sequence<BlobPart> fileBits,
+              USVString fileName,
+              optional FilePropertyBag options = {});
   readonly attribute DOMString name;
   readonly attribute long long lastModified;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/#title">File and Directory Entries API</a>
 <pre class=webidl><code>partial interface File {
-  readonly attribute USVString webkitRelativePath;
+    readonly attribute USVString webkitRelativePath;
 };</code></pre></li></ol>
 </section>
 <section>

@@ -7,8 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/">WebTransport</a> defines <code>IncomingStream</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[ Exposed=(Window,Worker) ]
 interface mixin IncomingStream {
+  /* a ReadableStream of Uint8Array */
   readonly attribute ReadableStream readable;
   readonly attribute Promise<StreamAbortInfo> readingAborted;
   undefined abortReading(optional StreamAbortInfo abortInfo = {});

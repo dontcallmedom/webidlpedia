@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#dictdef-extendablemessageeventinit">Service Workers Nightly</a> defines <code>ExtendableMessageEventInit</code></p>
-<pre class=webidl><code>dictionary ExtendableMessageEventInit : ExtendableEventInit {
-  any data;
-  USVString origin;
-  DOMString lastEventId;
-  (Client or ServiceWorker or MessagePort)? source;
-  sequence<MessagePort> ports;
+<pre class=webidl><code>
+
+dictionary ExtendableMessageEventInit : ExtendableEventInit {
+  any data = null;
+  USVString origin = "";
+  DOMString lastEventId = "";
+  (Client or ServiceWorker or MessagePort)? source = null;
+  sequence<MessagePort> ports = [];
 };</code></pre>
   
 </section>

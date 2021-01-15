@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcodeccapability">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpCodecCapability</code></p>
-<pre class=webidl><code>dictionary RTCRtpCodecCapability {
-  DOMString mimeType;
-  unsigned long clockRate;
+<pre class=webidl><code>
+
+dictionary RTCRtpCodecCapability {
+  required DOMString mimeType;
+  required unsigned long clockRate;
   unsigned short channels;
   DOMString sdpFmtpLine;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-svc/">Scalable Video Coding (SVC) Extension for WebRTC</a>
-<pre class=webidl><code>partial dictionary RTCRtpCodecCapability {
-  sequence<DOMString> scalabilityModes;
+<pre class=webidl><code>
+
+partial dictionary RTCRtpCodecCapability {
+             sequence<DOMString> scalabilityModes;
 };</code></pre></li></ol>
 </section>
 <section>

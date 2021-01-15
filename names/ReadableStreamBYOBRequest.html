@@ -7,10 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablestreambyobrequest">Streams Standard</a> defines <code>ReadableStreamBYOBRequest</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,Worklet)]
 interface ReadableStreamBYOBRequest {
   readonly attribute ArrayBufferView? view;
-  undefined respond([EnforceRange] [EnforceRange] unsigned long long bytesWritten);
+
+  undefined respond([EnforceRange] unsigned long long bytesWritten);
   undefined respondWithNewView(ArrayBufferView view);
 };</code></pre>
   

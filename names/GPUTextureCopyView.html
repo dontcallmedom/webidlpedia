@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gputexturecopyview">WebGPU</a> defines <code>GPUTextureCopyView</code></p>
-<pre class=webidl><code>dictionary GPUTextureCopyView {
-  GPUTexture texture;
-  GPUIntegerCoordinate mipLevel;
-  GPUOrigin3D origin;
-  GPUTextureAspect aspect;
+<pre class=webidl><code>
+
+dictionary GPUTextureCopyView {
+    required GPUTexture texture;
+    GPUIntegerCoordinate mipLevel = 0;
+    GPUOrigin3D origin = {};
+    GPUTextureAspect aspect = "all";
 };</code></pre>
   
 </section>

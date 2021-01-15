@@ -7,18 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice">Web Bluetooth</a> defines <code>BluetoothDevice</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
+<pre class=webidl><code>
+
+[Exposed=Window, SecureContext]
 interface BluetoothDevice : EventTarget {
   readonly attribute DOMString id;
   readonly attribute DOMString? name;
   readonly attribute BluetoothRemoteGATTServer? gatt;
-  Promise<void> watchAdvertisements(optional WatchAdvertisementsOptions options = {});
+
+  Promise<void> watchAdvertisements(
+      optional WatchAdvertisementsOptions options = {});
   readonly attribute boolean watchingAdvertisements;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a>
-<pre class=webidl><code>BluetoothDevice includes BluetoothDeviceEventHandlers;
-BluetoothDevice includes CharacteristicEventHandlers;
-BluetoothDevice includes ServiceEventHandlers;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -7,13 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpurasterizationstatedescriptor">WebGPU</a> defines <code>GPURasterizationStateDescriptor</code></p>
-<pre class=webidl><code>dictionary GPURasterizationStateDescriptor {
-  GPUFrontFace frontFace;
-  GPUCullMode cullMode;
-  boolean clampDepth;
-  GPUDepthBias depthBias;
-  float depthBiasSlopeScale;
-  float depthBiasClamp;
+<pre class=webidl><code>
+
+dictionary GPURasterizationStateDescriptor {
+    GPUFrontFace frontFace = "ccw";
+    GPUCullMode cullMode = "none";
+    // Enable depth clamping (requires "depth-clamping" feature)
+    boolean clampDepth = false;
+
+    GPUDepthBias depthBias = 0;
+    float depthBiasSlopeScale = 0;
+    float depthBiasClamp = 0;
 };</code></pre>
   
 </section>

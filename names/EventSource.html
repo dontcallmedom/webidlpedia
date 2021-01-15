@@ -7,15 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#eventsource">HTML Standard</a> defines <code>EventSource</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface EventSource : EventTarget {
   constructor(USVString url, optional EventSourceInit eventSourceInitDict = {});
+
   readonly attribute USVString url;
   readonly attribute boolean withCredentials;
-  const unsigned short CONNECTING;
-  const unsigned short OPEN;
-  const unsigned short CLOSED;
+
+  // ready state
+  const unsigned short CONNECTING = 0;
+  const unsigned short OPEN = 1;
+  const unsigned short CLOSED = 2;
   readonly attribute unsigned short readyState;
+
+  // networking
   attribute EventHandler onopen;
   attribute EventHandler onmessage;
   attribute EventHandler onerror;

@@ -7,41 +7,46 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/system-state.html#navigator">HTML Standard</a> defines <code>Navigator</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface Navigator {
+  // objects implementing this interface also implement the interfaces given below
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/#navigator-gpu">WebGPU</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Navigator {
-  [SameObject] readonly attribute GPU gpu;
-};</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>Navigator includes NavigatorID;
-Navigator includes NavigatorLanguage;
-Navigator includes NavigatorOnLine;
-Navigator includes NavigatorContentUtils;
-Navigator includes NavigatorCookies;
-Navigator includes NavigatorPlugins;
-Navigator includes NavigatorConcurrentHardware;</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
-<pre class=webidl><code>Navigator includes NavigatorStorage;</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
-<pre class=webidl><code>[SecureContext]
+    [SameObject] readonly attribute GPU gpu;
+};</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
+<pre class=webidl><code>// Methods only exposed on documents.
+[SecureContext]
 partial interface Navigator {
-  Promise<undefined> setClientBadge(optional unsigned long long contents);
+  Promise<undefined> setClientBadge(optional [EnforceRange] unsigned long long contents);
   Promise<undefined> clearClientBadge();
-};
-Navigator includes NavigatorBadge;</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
-<pre class=webidl><code>[SecureContext]
+};</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
+<pre class=webidl><code>
+
+[SecureContext]
 partial interface Navigator {
-  [SameObject] readonly attribute Bluetooth bluetooth;
+  [SameObject]
+  readonly attribute Bluetooth bluetooth;
 };</code></pre></li><li><a href="https://wicg.github.io/contact-api/spec/#extensions-to-navigator">Contact Picker API</a>
 <pre class=webidl><code>[Exposed=Window]
 partial interface Navigator {
   [SecureContext, SameObject] readonly attribute ContactsManager contacts;
 };</code></pre></li><li><a href="https://wicg.github.io/get-installed-related-apps/spec/">Get Installed Related Apps API</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Navigator {
   [SecureContext] Promise<sequence<RelatedApplication>> getInstalledRelatedApps();
 };</code></pre></li><li><a href="https://wicg.github.io/is-input-pending/#extensions-to-the-navigator-interface">Early detection of input events</a>
-<pre class=webidl><code>partial interface Navigator {
+<pre class=webidl><code>
+
+partial interface Navigator {
   readonly attribute Scheduling scheduling;
 };</code></pre></li><li><a href="https://wicg.github.io/keyboard-lock/#navigator-interface">Keyboard Lock</a>
 <pre class=webidl><code>partial interface Navigator {
@@ -51,19 +56,22 @@ partial interface Navigator {
 partial interface Navigator {
   [SecureContext, SameObject] readonly attribute Keyboard keyboard;
 };</code></pre></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a>
-<pre class=webidl><code>Navigator includes NavigatorFonts;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
-<pre class=webidl><code>Navigator includes NavigatorNetworkInformation;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
 <pre class=webidl><code>[Exposed=Window, SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute Serial serial;
 };</code></pre></li><li><a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>
-<pre class=webidl><code>Navigator includes NavigatorUA;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
-<pre class=webidl><code>Navigator includes NavigatorLocks;</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
-<pre class=webidl><code>[SecureContext]
-partial interface Navigator {
-  [SameObject] readonly attribute HID hid;
+<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
+<pre class=webidl><code>
+
+[SecureContext] partial interface Navigator {
+    [SameObject] readonly attribute HID hid;
 };</code></pre></li><li><a href="https://wicg.github.io/webusb/#enumeration">WebUSB API</a>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
+<pre class=webidl><code>
+
+[Exposed=Window, SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute USB usb;
 };</code></pre></li><li><a href="https://www.w3.org/TR/battery-status/#the-navigator-interface">Battery Status API</a>
@@ -71,46 +79,63 @@ partial interface Navigator {
   Promise<BatteryManager> getBattery();
 };</code></pre></li><li><a href="https://www.w3.org/TR/beacon/#sendbeacon-method">Beacon</a>
 <pre class=webidl><code>partial interface Navigator {
-  boolean sendBeacon(USVString url, optional BodyInit? data = null);
+    boolean sendBeacon(USVString url, optional BodyInit? data = null);
 };</code></pre></li><li><a href="https://www.w3.org/TR/clipboard-apis/#navigator-interface">Clipboard API and events</a>
-<pre class=webidl><code>partial interface Navigator {
+<pre class=webidl><code>
+
+partial interface Navigator {
   [SecureContext, SameObject] readonly attribute Clipboard clipboard;
 };</code></pre></li><li><a href="https://www.w3.org/TR/credential-management-1/#framework-credential-management">Credential Management Level 1</a>
-<pre class=webidl><code>partial interface Navigator {
+<pre class=webidl><code>
+
+partial interface Navigator {
   [SecureContext, SameObject] readonly attribute CredentialsContainer credentials;
 };</code></pre></li><li><a href="https://www.w3.org/TR/device-memory-1/">Device Memory 1</a>
-<pre class=webidl><code>Navigator includes NavigatorDeviceMemory;</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
 <pre class=webidl><code>[Exposed=Window]
 partial interface Navigator {
-  [SecureContext] Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations);
+    [SecureContext] Promise<MediaKeySystemAccess> requestMediaKeySystemAccess (DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations);
 };</code></pre></li><li><a href="https://www.w3.org/TR/gamepad/#navigator-interface-extension">Gamepad</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Navigator {
   sequence<Gamepad?> getGamepads();
 };</code></pre></li><li><a href="https://www.w3.org/TR/geolocation-API/#geolocation-attribute">Geolocation API Specification</a>
 <pre class=webidl><code>partial interface Navigator {
   [SameObject] readonly attribute Geolocation geolocation;
 };</code></pre></li><li><a href="https://www.w3.org/TR/media-capabilities/#navigators-extensions">Media Capabilities</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 partial interface Navigator {
   [SameObject] readonly attribute MediaCapabilities mediaCapabilities;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-streams/#attributes-3">Media Capture and Streams</a>
-<pre class=webidl><code>partial interface Navigator {
+<pre class=webidl><code>
+
+partial interface Navigator {
   [SameObject, SecureContext] readonly attribute MediaDevices mediaDevices;
 };
+
 partial interface Navigator {
-  [SecureContext] undefined getUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);
+  [SecureContext] undefined getUserMedia(MediaStreamConstraints constraints,
+                                    NavigatorUserMediaSuccessCallback successCallback,
+                                    NavigatorUserMediaErrorCallback errorCallback);
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediasession/#the-mediasession-interface">Media Session Standard</a>
 <pre class=webidl><code>[Exposed=Window]
 partial interface Navigator {
   [SameObject] readonly attribute MediaSession mediaSession;
 };</code></pre></li><li><a href="https://www.w3.org/TR/permissions/#navigator-and-workernavigator-extension">Permissions</a>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=(Window)]
 partial interface Navigator {
   [SameObject] readonly attribute Permissions permissions;
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-navigator-interface">Pointer Events</a>
-<pre class=webidl><code>partial interface Navigator {
-  readonly attribute long maxTouchPoints;
+<pre class=webidl><code>
+
+partial interface Navigator {
+    readonly  attribute long maxTouchPoints;
 };</code></pre></li><li><a href="https://www.w3.org/TR/presentation-api/#interface-presentation">Presentation API</a>
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext, SameObject] readonly attribute Presentation presentation;
@@ -119,18 +144,23 @@ partial interface Navigator {
 partial interface Navigator {
   [SameObject] readonly attribute WakeLock wakeLock;
 };</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#navigator-serviceworker">Service Workers Nightly</a>
-<pre class=webidl><code>partial interface Navigator {
+<pre class=webidl><code>
+
+partial interface Navigator {
   [SecureContext, SameObject] readonly attribute ServiceWorkerContainer serviceWorker;
 };</code></pre></li><li><a href="https://www.w3.org/TR/vibration/#vibration-interface">Vibration API (Second Edition)</a>
-<pre class=webidl><code>partial interface Navigator {
-  boolean vibrate(VibratePattern pattern);
+<pre class=webidl><code>
+
+partial interface Navigator {
+    boolean vibrate (VibratePattern pattern);
 };</code></pre></li><li><a href="https://www.w3.org/TR/web-share/#share-method">Web Share API</a>
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext] Promise<undefined> share(optional ShareData data = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webdriver2/">WebDriver</a>
-<pre class=webidl><code>Navigator includes NavigatorAutomationInformation;</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
 <pre class=webidl><code>partial interface Navigator {
-  [SecureContext] Promise<MIDIAccess> requestMIDIAccess(optional MIDIOptions options = {});
+  [SecureContext]
+  Promise <MIDIAccess> requestMIDIAccess(optional MIDIOptions options = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr/#navigator-xr-attribute">WebXR Device API</a>
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext, SameObject] readonly attribute XRSystem xr;

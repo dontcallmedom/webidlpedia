@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/css-font-loading/#fontface">CSS Font Loading Module Level 3</a> defines <code>FontFace</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface FontFace {
-  constructor(CSSOMString family, (CSSOMString or BinaryData) source, optional FontFaceDescriptors descriptors = {});
+  constructor(CSSOMString family, (CSSOMString or BinaryData) source,
+                optional FontFaceDescriptors descriptors = {});
   attribute CSSOMString family;
   attribute CSSOMString style;
   attribute CSSOMString weight;
@@ -22,7 +25,9 @@ interface FontFace {
   attribute CSSOMString ascentOverride;
   attribute CSSOMString descentOverride;
   attribute CSSOMString lineGapOverride;
+
   readonly attribute FontFaceLoadStatus status;
+
   Promise<FontFace> load();
   readonly attribute Promise<FontFace> loaded;
 };</code></pre>

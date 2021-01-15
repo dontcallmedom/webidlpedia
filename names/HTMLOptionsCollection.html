@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmloptionscollection">HTML Standard</a> defines <code>HTMLOptionsCollection</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLOptionsCollection : HTMLCollection {
-  [CEReactions] attribute unsigned long length;
+  // inherits item(), namedItem()
+  [CEReactions] attribute unsigned long length; // shadows inherited length
   [CEReactions] setter undefined (unsigned long index, HTMLOptionElement? option);
   [CEReactions] undefined add((HTMLOptionElement or HTMLOptGroupElement) element, optional (HTMLElement or long)? before = null);
   [CEReactions] undefined remove(long index);

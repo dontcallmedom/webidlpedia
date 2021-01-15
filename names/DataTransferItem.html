@@ -7,19 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransferitem">HTML Standard</a> defines <code>DataTransferItem</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface DataTransferItem {
   readonly attribute DOMString kind;
   readonly attribute DOMString type;
-  undefined getAsString(FunctionStringCallback? callback);
+  undefined getAsString(FunctionStringCallback? _callback);
   File? getAsFile();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>
-<pre class=webidl><code>partial interface DataTransferItem {
-  FileSystemEntry? webkitGetAsEntry();
+<pre class=webidl><code>
+
+partial interface DataTransferItem {
+    FileSystemEntry? webkitGetAsEntry();
 };</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>partial interface DataTransferItem {
-  Promise<FileSystemHandle?> getAsFileSystemHandle();
+<pre class=webidl><code>
+
+partial interface DataTransferItem {
+    Promise<FileSystemHandle?> getAsFileSystemHandle();
 };</code></pre></li></ol>
 </section>
 <section>

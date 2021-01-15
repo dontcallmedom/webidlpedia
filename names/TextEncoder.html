@@ -7,14 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://encoding.spec.whatwg.org/#textencoder">Encoding Standard</a> defines <code>TextEncoder</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface TextEncoder {
   constructor();
+
   [NewObject] Uint8Array encode(optional USVString input = "");
-  TextEncoderEncodeIntoResult encodeInto(USVString source, [AllowShared] [AllowShared] Uint8Array destination);
+  TextEncoderEncodeIntoResult encodeInto(USVString source, [AllowShared] Uint8Array destination);
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/encoding/">Encoding Standard</a>
-<pre class=webidl><code>TextEncoder includes TextEncoderCommon;</code></pre></li></ol>
+  
 </section>
 
   

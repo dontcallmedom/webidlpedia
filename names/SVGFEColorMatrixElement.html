@@ -7,18 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/filter-effects-1/#svgfecolormatrixelement">Filter Effects Module Level 1</a> defines <code>SVGFEColorMatrixElement</code></p>
-<pre class=webidl><code>interface SVGFEColorMatrixElement : SVGElement {
-  const unsigned short SVG_FECOLORMATRIX_TYPE_UNKNOWN;
-  const unsigned short SVG_FECOLORMATRIX_TYPE_MATRIX;
-  const unsigned short SVG_FECOLORMATRIX_TYPE_SATURATE;
-  const unsigned short SVG_FECOLORMATRIX_TYPE_HUEROTATE;
-  const unsigned short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA;
+<pre class=webidl><code>
+
+interface SVGFEColorMatrixElement : SVGElement {
+
+  // Color Matrix Types
+  const unsigned short SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
+  const unsigned short SVG_FECOLORMATRIX_TYPE_MATRIX = 1;
+  const unsigned short SVG_FECOLORMATRIX_TYPE_SATURATE = 2;
+  const unsigned short SVG_FECOLORMATRIX_TYPE_HUEROTATE = 3;
+  const unsigned short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA = 4;
+
   readonly attribute SVGAnimatedString in1;
   readonly attribute SVGAnimatedEnumeration type;
   readonly attribute SVGAnimatedNumberList values;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/filter-effects-1/">Filter Effects Module Level 1</a>
-<pre class=webidl><code>SVGFEColorMatrixElement includes SVGFilterPrimitiveStandardAttributes;</code></pre></li></ol>
+  
 </section>
 
   

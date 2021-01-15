@@ -7,14 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpurenderpassdepthstencilattachmentdescriptor">WebGPU</a> defines <code>GPURenderPassDepthStencilAttachmentDescriptor</code></p>
-<pre class=webidl><code>dictionary GPURenderPassDepthStencilAttachmentDescriptor {
-  GPUTextureView attachment;
-  (GPULoadOp or float) depthLoadValue;
-  GPUStoreOp depthStoreOp;
-  boolean depthReadOnly;
-  (GPULoadOp or GPUStencilValue) stencilLoadValue;
-  GPUStoreOp stencilStoreOp;
-  boolean stencilReadOnly;
+<pre class=webidl><code>
+
+dictionary GPURenderPassDepthStencilAttachmentDescriptor {
+    required GPUTextureView attachment;
+
+    required (GPULoadOp or float) depthLoadValue;
+    required GPUStoreOp depthStoreOp;
+    boolean depthReadOnly = false;
+
+    required (GPULoadOp or GPUStencilValue) stencilLoadValue;
+    required GPUStoreOp stencilStoreOp;
+    boolean stencilReadOnly = false;
 };</code></pre>
   
 </section>

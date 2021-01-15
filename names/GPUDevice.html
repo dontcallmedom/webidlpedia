@@ -7,39 +7,50 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpudevice">WebGPU</a> defines <code>GPUDevice</code></p>
-<pre class=webidl><code>[Exposed=Window,DedicatedWorker, Serializable]
+<pre class=webidl><code>
+
+[Exposed=(Window, DedicatedWorker), Serializable]
 interface GPUDevice : EventTarget {
-  [SameObject] readonly attribute GPUAdapter adapter;
-  readonly attribute FrozenArray<GPUFeatureName> features;
-  readonly attribute object limits;
-  [SameObject] readonly attribute GPUQueue defaultQueue;
-  GPUBuffer createBuffer(GPUBufferDescriptor descriptor);
-  GPUTexture createTexture(GPUTextureDescriptor descriptor);
-  GPUSampler createSampler(optional GPUSamplerDescriptor descriptor = {});
-  GPUBindGroupLayout createBindGroupLayout(GPUBindGroupLayoutDescriptor descriptor);
-  GPUPipelineLayout createPipelineLayout(GPUPipelineLayoutDescriptor descriptor);
-  GPUBindGroup createBindGroup(GPUBindGroupDescriptor descriptor);
-  GPUShaderModule createShaderModule(GPUShaderModuleDescriptor descriptor);
-  GPUComputePipeline createComputePipeline(GPUComputePipelineDescriptor descriptor);
-  GPURenderPipeline createRenderPipeline(GPURenderPipelineDescriptor descriptor);
-  Promise<GPUComputePipeline> createReadyComputePipeline(GPUComputePipelineDescriptor descriptor);
-  Promise<GPURenderPipeline> createReadyRenderPipeline(GPURenderPipelineDescriptor descriptor);
-  GPUCommandEncoder createCommandEncoder(optional GPUCommandEncoderDescriptor descriptor = {});
-  GPURenderBundleEncoder createRenderBundleEncoder(GPURenderBundleEncoderDescriptor descriptor);
-  GPUQuerySet createQuerySet(GPUQuerySetDescriptor descriptor);
+    [SameObject] readonly attribute GPUAdapter adapter;
+    readonly attribute FrozenArray<GPUFeatureName> features;
+    readonly attribute object limits;
+
+    [SameObject] readonly attribute GPUQueue defaultQueue;
+
+    GPUBuffer createBuffer(GPUBufferDescriptor descriptor);
+    GPUTexture createTexture(GPUTextureDescriptor descriptor);
+    GPUSampler createSampler(optional GPUSamplerDescriptor descriptor = {});
+
+    GPUBindGroupLayout createBindGroupLayout(GPUBindGroupLayoutDescriptor descriptor);
+    GPUPipelineLayout createPipelineLayout(GPUPipelineLayoutDescriptor descriptor);
+    GPUBindGroup createBindGroup(GPUBindGroupDescriptor descriptor);
+
+    GPUShaderModule createShaderModule(GPUShaderModuleDescriptor descriptor);
+    GPUComputePipeline createComputePipeline(GPUComputePipelineDescriptor descriptor);
+    GPURenderPipeline createRenderPipeline(GPURenderPipelineDescriptor descriptor);
+    Promise<GPUComputePipeline> createReadyComputePipeline(GPUComputePipelineDescriptor descriptor);
+    Promise<GPURenderPipeline> createReadyRenderPipeline(GPURenderPipelineDescriptor descriptor);
+
+    GPUCommandEncoder createCommandEncoder(optional GPUCommandEncoderDescriptor descriptor = {});
+    GPURenderBundleEncoder createRenderBundleEncoder(GPURenderBundleEncoderDescriptor descriptor);
+
+    GPUQuerySet createQuerySet(GPUQuerySetDescriptor descriptor);
+};
+
+partial interface GPUDevice {
+    readonly attribute Promise<GPUDeviceLostInfo> lost;
+};
+
+partial interface GPUDevice {
+    undefined pushErrorScope(GPUErrorFilter filter);
+    Promise<GPUError?> popErrorScope();
+};
+
+partial interface GPUDevice {
+    [Exposed=(Window, DedicatedWorker)]
+    attribute EventHandler onuncapturederror;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>
-<pre class=webidl><code>GPUDevice includes GPUObjectBase;
-partial interface GPUDevice {
-  readonly attribute Promise<GPUDeviceLostInfo> lost;
-};
-partial interface GPUDevice {
-  undefined pushErrorScope(GPUErrorFilter filter);
-  Promise<GPUError?> popErrorScope();
-};
-partial interface GPUDevice {
-  [Exposed=Window,DedicatedWorker] attribute EventHandler onuncapturederror;
-};</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

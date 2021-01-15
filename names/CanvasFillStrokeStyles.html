@@ -7,12 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasFillStrokeStyles</code></p>
-<pre class=webidl><code>interface mixin CanvasFillStrokeStyles {
-  attribute (DOMString or CanvasGradient or CanvasPattern) strokeStyle;
-  attribute (DOMString or CanvasGradient or CanvasPattern) fillStyle;
+<pre class=webidl><code>
+
+interface mixin CanvasFillStrokeStyles {
+  // colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
+  attribute (DOMString or CanvasGradient or CanvasPattern) strokeStyle; // (default black)
+  attribute (DOMString or CanvasGradient or CanvasPattern) fillStyle; // (default black)
   CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
   CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
-  CanvasPattern? createPattern(CanvasImageSource image, [LegacyNullToEmptyString] [LegacyNullToEmptyString] DOMString repetition);
+  CanvasPattern? createPattern(CanvasImageSource image, [LegacyNullToEmptyString] DOMString repetition);
+
 };</code></pre>
   
 </section>

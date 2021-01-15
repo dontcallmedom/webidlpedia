@@ -8,27 +8,29 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/manifest/#dom-webappmanifest">Web App Manifest</a> defines <code>WebAppManifest</code></p>
 <pre class=webidl><code>dictionary WebAppManifest {
-  TextDirectionType dir;
-  DOMString lang;
-  USVString name;
-  USVString short_name;
-  USVString description;
-  sequence<ManifestImageResource> icons;
-  sequence<ManifestImageResource> screenshots;
-  sequence<USVString> categories;
-  DOMString iarc_rating_id;
-  USVString start_url;
-  DisplayModeType display;
-  OrientationLockType orientation;
-  USVString theme_color;
-  USVString background_color;
-  USVString scope;
-  sequence<ExternalApplicationResource> related_applications;
-  boolean prefer_related_applications;
-  sequence<ShortcutItem> shortcuts;
+   TextDirectionType dir = "auto";
+   DOMString lang;
+   USVString name;
+   USVString short_name;
+   USVString description;
+   sequence<ManifestImageResource> icons;
+   sequence<ManifestImageResource> screenshots;
+   sequence<USVString> categories;
+   DOMString iarc_rating_id;
+   USVString start_url;
+   DisplayModeType display = "browser";
+   OrientationLockType orientation;
+   USVString theme_color;
+   USVString background_color;
+   USVString scope;
+   sequence<ExternalApplicationResource> related_applications;
+   boolean prefer_related_applications = "false";
+   sequence<ShortcutItem> shortcuts;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/web-share-target/">Web Share Target API</a>
-<pre class=webidl><code>partial dictionary WebAppManifest {
+<pre class=webidl><code>
+
+partial dictionary WebAppManifest {
   ShareTarget share_target;
 };</code></pre></li></ol>
 </section>

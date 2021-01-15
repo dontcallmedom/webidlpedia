@@ -7,13 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-fetch/#enumdef-backgroundfetchfailurereason">Background Fetch</a> defines <code>BackgroundFetchFailureReason</code></p>
-<pre class=webidl><code>enum BackgroundFetchFailureReason {
-  "";
-  "aborted";
-  "bad-status";
-  "fetch-error";
-  "quota-exceeded";
-  "download-total-exceeded";
+<pre class=webidl><code>
+
+enum BackgroundFetchFailureReason {
+  // The background fetch has not completed yet, or was successful.
+  "",
+  // The operation was aborted by the user, or abort() was called.
+  "aborted",
+  // A response had a not-ok-status.
+  "bad-status",
+  // A fetch failed for other reasons, e.g. CORS, MIX, an invalid partial response,
+  // or a general network failure for a fetch that cannot be retried.
+  "fetch-error",
+  // Storage quota was reached during the operation.
+  "quota-exceeded",
+  // The provided downloadTotal was exceeded.
+  "download-total-exceeded"
 };</code></pre>
   
 </section>

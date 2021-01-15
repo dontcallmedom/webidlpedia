@@ -7,27 +7,37 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrframe">WebXR Device API</a> defines <code>XRFrame</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface XRFrame {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] interface XRFrame {
   [SameObject] readonly attribute XRSession session;
+
   XRViewerPose? getViewerPose(XRReferenceSpace referenceSpace);
   XRPose? getPose(XRSpace space, XRSpace baseSpace);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://immersive-web.github.io/anchors/">WebXR Anchors Module</a>
-<pre class=webidl><code>partial interface XRFrame {
+<pre class=webidl><code>
+
+partial interface XRFrame {
   Promise<XRAnchor> createAnchor(XRRigidTransform pose, XRSpace space);
 };
+
 partial interface XRFrame {
   [SameObject] readonly attribute XRAnchorSet trackedAnchors;
 };</code></pre></li><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a>
-<pre class=webidl><code>partial interface XRFrame {
+<pre class=webidl><code>
+
+partial interface XRFrame {
   FrozenArray<XRHitTestResult> getHitTestResults(XRHitTestSource hitTestSource);
   FrozenArray<XRTransientInputHitTestResult> getHitTestResultsForTransientInput(XRTransientInputHitTestSource hitTestSource);
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/">WebXR Hand Input Module - Level 1</a>
-<pre class=webidl><code>partial interface XRFrame {
-  XRJointPose? getJointPose(XRJointSpace joint, XRSpace baseSpace);
-  boolean fillJointRadii(sequence<XRJointSpace> jointSpaces, Float32Array radii);
-  boolean fillPoses(sequence<XRSpace> spaces, XRSpace baseSpace, Float32Array transforms);
+<pre class=webidl><code>
+
+partial interface XRFrame {
+    XRJointPose? getJointPose(XRJointSpace joint, XRSpace baseSpace);
+    boolean fillJointRadii(sequence<XRJointSpace> jointSpaces, Float32Array radii);
+
+    boolean fillPoses(sequence<XRSpace> spaces, XRSpace baseSpace, Float32Array transforms);
 };</code></pre></li></ol>
 </section>
 <section>

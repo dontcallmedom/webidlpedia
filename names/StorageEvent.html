@@ -7,14 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/webstorage.html#storageevent">HTML Standard</a> defines <code>StorageEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface StorageEvent : Event {
   constructor(DOMString type, optional StorageEventInit eventInitDict = {});
+
   readonly attribute DOMString? key;
   readonly attribute DOMString? oldValue;
   readonly attribute DOMString? newValue;
   readonly attribute USVString url;
   readonly attribute Storage? storageArea;
+
   undefined initStorageEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional DOMString? key = null, optional DOMString? oldValue = null, optional DOMString? newValue = null, optional USVString url = "", optional Storage? storageArea = null);
 };</code></pre>
   

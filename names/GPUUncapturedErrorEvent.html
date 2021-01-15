@@ -7,10 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpuuncapturederrorevent">WebGPU</a> defines <code>GPUUncapturedErrorEvent</code></p>
-<pre class=webidl><code>[Exposed=Window,DedicatedWorker]
+<pre class=webidl><code>
+
+[
+    Exposed=(Window, DedicatedWorker)
+]
 interface GPUUncapturedErrorEvent : Event {
-  constructor(DOMString type, GPUUncapturedErrorEventInit gpuUncapturedErrorEventInitDict);
-  [SameObject] readonly attribute GPUError error;
+    constructor(
+        DOMString type,
+        GPUUncapturedErrorEventInit gpuUncapturedErrorEventInitDict
+    );
+    [SameObject] readonly attribute GPUError error;
 };</code></pre>
   
 </section>

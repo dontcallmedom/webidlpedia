@@ -7,22 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/touch-events/#dom-touchinit">Touch Events - Level 2</a> defines <code>TouchInit</code></p>
-<pre class=webidl><code>dictionary TouchInit {
-  long identifier;
-  EventTarget target;
-  double clientX;
-  double clientY;
-  double screenX;
-  double screenY;
-  double pageX;
-  double pageY;
-  float radiusX;
-  float radiusY;
-  float rotationAngle;
-  float force;
-  double altitudeAngle;
-  double azimuthAngle;
-  TouchType touchType;
+<pre class=webidl><code>
+
+dictionary TouchInit {
+    required long        identifier;
+    required EventTarget target;
+             double      clientX = 0;
+             double      clientY = 0;
+             double      screenX = 0;
+             double      screenY = 0;
+             double      pageX = 0;
+             double      pageY = 0;
+             float       radiusX = 0;
+             float       radiusY = 0;
+             float       rotationAngle = 0;
+             float       force = 0;
+             double      altitudeAngle = 0;
+             double      azimuthAngle = 0;
+             TouchType   touchType = "direct";
 };</code></pre>
   
 </section>

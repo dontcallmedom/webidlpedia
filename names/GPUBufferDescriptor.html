@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpubufferdescriptor">WebGPU</a> defines <code>GPUBufferDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUBufferDescriptor : GPUObjectDescriptorBase {
-  GPUSize64 size;
-  GPUBufferUsageFlags usage;
-  boolean mappedAtCreation;
+<pre class=webidl><code>
+
+dictionary GPUBufferDescriptor : GPUObjectDescriptorBase {
+    required GPUSize64 size;
+    required GPUBufferUsageFlags usage;
+    boolean mappedAtCreation = false;
 };</code></pre>
   
 </section>

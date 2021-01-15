@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#dictdef-xrmediaequirectlayerinit">WebXR Layers API Level 1</a> defines <code>XRMediaEquirectLayerInit</code></p>
-<pre class=webidl><code>dictionary XRMediaEquirectLayerInit : XRMediaLayerInit {
+<pre class=webidl><code>
+
+dictionary XRMediaEquirectLayerInit : XRMediaLayerInit {
   XRRigidTransform? transform;
-  float radius;
-  float centralHorizontalAngle;
-  float upperVerticalAngle;
-  float lowerVerticalAngle;
+  float radius = 0.0;
+  float centralHorizontalAngle = 6.28318;
+  float upperVerticalAngle = 1.570795;
+  float lowerVerticalAngle = -1.570795;
 };</code></pre>
   
 </section>

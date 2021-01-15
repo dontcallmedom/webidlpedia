@@ -7,8 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-automation/#dom-mockmicrophoneconfiguration">Media Capture Automation</a> defines <code>MockMicrophoneConfiguration</code></p>
-<pre class=webidl><code>dictionary MockMicrophoneConfiguration : MockCaptureDeviceConfiguration {
-  unsigned long defaultSampleRate;
+<pre class=webidl><code>
+
+dictionary MockMicrophoneConfiguration : MockCaptureDeviceConfiguration {
+  unsigned long defaultSampleRate = 44100;
+  // TODO: Add more capabilities parameters like:
+  // ULongRange sampleRate;
+  // sequence echoCancellation;
 };</code></pre>
   
 </section>

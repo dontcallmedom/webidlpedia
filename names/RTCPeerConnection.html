@@ -7,8 +7,10 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCPeerConnection</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface RTCPeerConnection : EventTarget {
+<pre class=webidl><code>
+
+[Exposed=Window]
+interface RTCPeerConnection : EventTarget  {
   constructor(optional RTCConfiguration configuration = {});
   Promise<RTCSessionDescriptionInit> createOffer(optional RTCOfferOptions options = {});
   Promise<RTCSessionDescriptionInit> createAnswer(optional RTCAnswerOptions options = {});
@@ -37,39 +39,63 @@ interface RTCPeerConnection : EventTarget {
   attribute EventHandler oniceconnectionstatechange;
   attribute EventHandler onicegatheringstatechange;
   attribute EventHandler onconnectionstatechange;
-  Promise<undefined> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, optional RTCOfferOptions options = {});
-  Promise<undefined> setLocalDescription(RTCLocalSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback);
-  Promise<undefined> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
-  Promise<undefined> setRemoteDescription(RTCSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback);
-  Promise<undefined> addIceCandidate(RTCIceCandidateInit candidate, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback);
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial interface RTCPeerConnection {
-  undefined setIdentityProvider(DOMString provider, optional RTCIdentityProviderOptions options = {});
-  Promise<DOMString> getIdentityAssertion();
-  readonly attribute Promise<RTCIdentityAssertion> peerIdentity;
-  readonly attribute DOMString? idpLoginUrl;
-  readonly attribute DOMString? idpErrorInfo;
-};</code></pre></li><li><a href="https://www.w3.org/TR/webrtc/#methods-3">WebRTC 1.0: Real-Time Communication Between Browsers</a>
-<pre class=webidl><code>partial interface RTCPeerConnection {
-  static Promise<RTCCertificate> generateCertificate(AlgorithmIdentifier keygenAlgorithm);
+
+  // Legacy Interface Extensions
+  // Supporting the methods in this section is optional.
+  // If these methods are supported
+  // they must be implemented as defined
+  // in section "Legacy Interface Extensions"
+  Promise<undefined> createOffer(RTCSessionDescriptionCallback successCallback,
+                            RTCPeerConnectionErrorCallback failureCallback,
+                            optional RTCOfferOptions options = {});
+  Promise<undefined> setLocalDescription(RTCLocalSessionDescriptionInit description,
+                                    VoidFunction successCallback,
+                                    RTCPeerConnectionErrorCallback failureCallback);
+  Promise<undefined> createAnswer(RTCSessionDescriptionCallback successCallback,
+                             RTCPeerConnectionErrorCallback failureCallback);
+  Promise<undefined> setRemoteDescription(RTCSessionDescriptionInit description,
+                                     VoidFunction successCallback,
+                                     RTCPeerConnectionErrorCallback failureCallback);
+  Promise<undefined> addIceCandidate(RTCIceCandidateInit candidate,
+                                VoidFunction successCallback,
+                                RTCPeerConnectionErrorCallback failureCallback);
 };
+
+partial interface RTCPeerConnection {
+  static Promise<RTCCertificate>
+      generateCertificate(AlgorithmIdentifier keygenAlgorithm);
+};
+
 partial interface RTCPeerConnection {
   sequence<RTCRtpSender> getSenders();
   sequence<RTCRtpReceiver> getReceivers();
   sequence<RTCRtpTransceiver> getTransceivers();
   RTCRtpSender addTrack(MediaStreamTrack track, MediaStream... streams);
   undefined removeTrack(RTCRtpSender sender);
-  RTCRtpTransceiver addTransceiver((MediaStreamTrack or DOMString) trackOrKind, optional RTCRtpTransceiverInit init = {});
+  RTCRtpTransceiver addTransceiver((MediaStreamTrack or DOMString) trackOrKind,
+                                   optional RTCRtpTransceiverInit init = {});
   attribute EventHandler ontrack;
 };
+
 partial interface RTCPeerConnection {
   readonly attribute RTCSctpTransport? sctp;
-  RTCDataChannel createDataChannel(USVString label, optional RTCDataChannelInit dataChannelDict = {});
+  RTCDataChannel createDataChannel(USVString label,
+                                   optional RTCDataChannelInit dataChannelDict = {});
   attribute EventHandler ondatachannel;
 };
+
 partial interface RTCPeerConnection {
   Promise<RTCStatsReport> getStats(optional MediaStreamTrack? selector = null);
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
+<pre class=webidl><code>
+
+partial interface RTCPeerConnection {
+    undefined               setIdentityProvider (DOMString provider, optional RTCIdentityProviderOptions options = {});
+    Promise<DOMString> getIdentityAssertion ();
+    readonly        attribute Promise<RTCIdentityAssertion> peerIdentity;
+    readonly        attribute DOMString?                    idpLoginUrl;
+    readonly        attribute DOMString?                    idpErrorInfo;
 };</code></pre></li></ol>
 </section>
 

@@ -7,12 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#messageport">HTML Standard</a> defines <code>MessagePort</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,AudioWorklet, Transferable]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,AudioWorklet), Transferable]
 interface MessagePort : EventTarget {
   undefined postMessage(any message, sequence<object> transfer);
   undefined postMessage(any message, optional PostMessageOptions options = {});
   undefined start();
   undefined close();
+
+  // event handlers
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
 };</code></pre>

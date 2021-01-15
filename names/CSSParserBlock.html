@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/css-parser-api/#cssparserblock">CSS Parser API</a> defines <code>CSSParserBlock</code></p>
-<pre class=webidl><code>[Constructor(DOMString name, sequence<CSSParserValue> body)]
+<pre class=webidl><code>
+
+[Constructor(DOMString name, sequence<CSSParserValue> body)]
 interface CSSParserBlock : CSSParserValue {
-  readonly attribute DOMString name;
+  readonly attribute DOMString name; /* "[]", "{}", or "()" */
   readonly attribute FrozenArray<CSSParserValue> body;
-  stringifier ${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''} ();
+  stringifier;
 };</code></pre>
   
 </section>

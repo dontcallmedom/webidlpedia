@@ -7,22 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/media-source/#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface MediaSource : EventTarget {
-  constructor();
-  readonly attribute SourceBufferList sourceBuffers;
-  readonly attribute SourceBufferList activeSourceBuffers;
-  readonly attribute ReadyState readyState;
-  attribute unrestricted double duration;
-  attribute EventHandler onsourceopen;
-  attribute EventHandler onsourceended;
-  attribute EventHandler onsourceclose;
-  SourceBuffer addSourceBuffer(DOMString type);
-  undefined removeSourceBuffer(SourceBuffer sourceBuffer);
-  undefined endOfStream(optional EndOfStreamError error);
-  undefined setLiveSeekableRange(double start, double end);
-  undefined clearLiveSeekableRange();
-  static boolean isTypeSupported(DOMString type);
+    constructor();
+    readonly        attribute SourceBufferList    sourceBuffers;
+    readonly        attribute SourceBufferList    activeSourceBuffers;
+    readonly        attribute ReadyState          readyState;
+                    attribute unrestricted double duration;
+                    attribute EventHandler        onsourceopen;
+                    attribute EventHandler        onsourceended;
+                    attribute EventHandler        onsourceclose;
+    SourceBuffer   addSourceBuffer (DOMString type);
+    undefined           removeSourceBuffer (SourceBuffer sourceBuffer);
+    undefined           endOfStream (optional EndOfStreamError error);
+    undefined           setLiveSeekableRange (double start, double end);
+    undefined           clearLiveSeekableRange ();
+    static boolean isTypeSupported (DOMString type);
 };</code></pre>
   
 </section>

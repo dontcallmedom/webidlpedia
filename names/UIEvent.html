@@ -12,13 +12,17 @@ interface UIEvent : Event {
   constructor(DOMString type, optional UIEventInit eventInitDict);
   readonly attribute Window? view;
   readonly attribute long detail;
+};
+
+partial interface UIEvent {
+  // The following support legacy user agents
+  readonly attribute unsigned long which;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/input-device-capabilities/#extensions-to-the-uievent-interface-and-uieventinit-dictionary">Input Device Capabilities</a>
-<pre class=webidl><code>partial interface UIEvent {
+<pre class=webidl><code>
+
+partial interface UIEvent {
   readonly attribute InputDeviceCapabilities? sourceCapabilities;
-};</code></pre></li><li><a href="https://www.w3.org/TR/uievents/#legacy-interface-UIEvent">UI Events</a>
-<pre class=webidl><code>partial interface UIEvent {
-  readonly attribute unsigned long which;
 };</code></pre></li></ol>
 </section>
 <section>

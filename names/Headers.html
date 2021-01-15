@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://fetch.spec.whatwg.org/#headers">Fetch Standard</a> defines <code>Headers</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface Headers {
   constructor(optional HeadersInit init);
+
   undefined append(ByteString name, ByteString value);
   undefined delete(ByteString name);
   ByteString? get(ByteString name);

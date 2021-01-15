@@ -7,17 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#layoutconstraints">CSS Layout API Level 1</a> defines <code>LayoutConstraints</code></p>
-<pre class=webidl><code>[Exposed=LayoutWorklet]
+<pre class=webidl><code>
+
+[Exposed=LayoutWorklet]
 interface LayoutConstraints {
-  readonly attribute double availableInlineSize;
-  readonly attribute double availableBlockSize;
-  readonly attribute double? fixedInlineSize;
-  readonly attribute double? fixedBlockSize;
-  readonly attribute double percentageInlineSize;
-  readonly attribute double percentageBlockSize;
-  readonly attribute double? blockFragmentationOffset;
-  readonly attribute BlockFragmentationType blockFragmentationType;
-  readonly attribute any data;
+    readonly attribute double availableInlineSize;
+    readonly attribute double availableBlockSize;
+
+    readonly attribute double? fixedInlineSize;
+    readonly attribute double? fixedBlockSize;
+
+    readonly attribute double percentageInlineSize;
+    readonly attribute double percentageBlockSize;
+
+    readonly attribute double? blockFragmentationOffset;
+    readonly attribute BlockFragmentationType blockFragmentationType;
+
+    readonly attribute any data;
 };</code></pre>
   
 </section>

@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpustencilstatefacedescriptor">WebGPU</a> defines <code>GPUStencilStateFaceDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUStencilStateFaceDescriptor {
-  GPUCompareFunction compare;
-  GPUStencilOperation failOp;
-  GPUStencilOperation depthFailOp;
-  GPUStencilOperation passOp;
+<pre class=webidl><code>
+
+dictionary GPUStencilStateFaceDescriptor {
+    GPUCompareFunction compare = "always";
+    GPUStencilOperation failOp = "keep";
+    GPUStencilOperation depthFailOp = "keep";
+    GPUStencilOperation passOp = "keep";
 };</code></pre>
   
 </section>

@@ -7,11 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#textmetrics">HTML Standard</a> defines <code>TextMetrics</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface TextMetrics {
-  readonly attribute double width;
+  // x-direction
+  readonly attribute double width; // advance width
   readonly attribute double actualBoundingBoxLeft;
   readonly attribute double actualBoundingBoxRight;
+
+  // y-direction
   readonly attribute double fontBoundingBoxAscent;
   readonly attribute double fontBoundingBoxDescent;
   readonly attribute double actualBoundingBoxAscent;

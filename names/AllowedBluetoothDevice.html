@@ -7,10 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#dictdef-allowedbluetoothdevice">Web Bluetooth</a> defines <code>AllowedBluetoothDevice</code></p>
-<pre class=webidl><code>dictionary AllowedBluetoothDevice {
-  DOMString deviceId;
-  boolean mayUseGATT;
-  (DOMString or sequence<UUID>) allowedServices;
+<pre class=webidl><code>
+
+dictionary AllowedBluetoothDevice {
+  required DOMString deviceId;
+  required boolean mayUseGATT;
+  // An allowedServices of "all" means all services are allowed.
+  required (DOMString or sequence<UUID>) allowedServices;
 };</code></pre>
   
 </section>

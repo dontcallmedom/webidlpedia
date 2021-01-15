@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/manifest/#dom-shortcutitem">Web App Manifest</a> defines <code>ShortcutItem</code></p>
-<pre class=webidl><code>dictionary ShortcutItem {
-  USVString name;
+<pre class=webidl><code>
+
+dictionary ShortcutItem {
+  required USVString name;
   USVString short_name;
   USVString description;
-  USVString url;
+  required USVString url;
   sequence<ManifestImageResource> icons;
 };</code></pre>
   

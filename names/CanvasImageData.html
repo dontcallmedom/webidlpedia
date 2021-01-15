@@ -7,12 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasImageData</code></p>
-<pre class=webidl><code>interface mixin CanvasImageData {
-  ImageData createImageData([EnforceRange] [EnforceRange] long sw, [EnforceRange] [EnforceRange] long sh);
+<pre class=webidl><code>
+
+interface mixin CanvasImageData {
+  // pixel manipulation
+  ImageData createImageData([EnforceRange] long sw, [EnforceRange] long sh);
   ImageData createImageData(ImageData imagedata);
-  ImageData getImageData([EnforceRange] [EnforceRange] long sx, [EnforceRange] [EnforceRange] long sy, [EnforceRange] [EnforceRange] long sw, [EnforceRange] [EnforceRange] long sh);
-  undefined putImageData(ImageData imagedata, [EnforceRange] [EnforceRange] long dx, [EnforceRange] [EnforceRange] long dy);
-  undefined putImageData(ImageData imagedata, [EnforceRange] [EnforceRange] long dx, [EnforceRange] [EnforceRange] long dy, [EnforceRange] [EnforceRange] long dirtyX, [EnforceRange] [EnforceRange] long dirtyY, [EnforceRange] [EnforceRange] long dirtyWidth, [EnforceRange] [EnforceRange] long dirtyHeight);
+  ImageData getImageData([EnforceRange] long sx, [EnforceRange] long sy, [EnforceRange] long sw, [EnforceRange] long sh);
+  undefined putImageData(ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy);
+  undefined putImageData(ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy, [EnforceRange] long dirtyX, [EnforceRange] long dirtyY, [EnforceRange] long dirtyWidth, [EnforceRange] long dirtyHeight);
 };</code></pre>
   
 </section>

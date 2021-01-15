@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-RsaKeyGenParams">Web Cryptography API</a> defines <code>RsaKeyGenParams</code></p>
-<pre class=webidl><code>dictionary RsaKeyGenParams : Algorithm {
-  unsigned long modulusLength;
-  BigInteger publicExponent;
+<pre class=webidl><code>
+
+dictionary RsaKeyGenParams : Algorithm {
+  required [EnforceRange] unsigned long modulusLength;
+  required BigInteger publicExponent;
 };</code></pre>
   
 </section>

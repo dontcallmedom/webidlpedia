@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentitem">Payment Request API</a> defines <code>PaymentItem</code></p>
-<pre class=webidl><code>dictionary PaymentItem {
-  DOMString label;
-  PaymentCurrencyAmount amount;
-  boolean pending;
+<pre class=webidl><code>
+
+dictionary PaymentItem {
+  required DOMString label;
+  required PaymentCurrencyAmount amount;
+  boolean pending = false;
 };</code></pre>
   
 </section>

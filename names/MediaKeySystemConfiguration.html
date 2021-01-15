@@ -7,14 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration">Encrypted Media Extensions</a> defines <code>MediaKeySystemConfiguration</code></p>
-<pre class=webidl><code>dictionary MediaKeySystemConfiguration {
-  DOMString label;
-  sequence<DOMString> initDataTypes;
-  sequence<MediaKeySystemMediaCapability> audioCapabilities;
-  sequence<MediaKeySystemMediaCapability> videoCapabilities;
-  MediaKeysRequirement distinctiveIdentifier;
-  MediaKeysRequirement persistentState;
-  sequence<DOMString> sessionTypes;
+<pre class=webidl><code>
+
+dictionary MediaKeySystemConfiguration {
+             DOMString                               label = "";
+             sequence<DOMString>                     initDataTypes = [];
+             sequence<MediaKeySystemMediaCapability> audioCapabilities = [];
+             sequence<MediaKeySystemMediaCapability> videoCapabilities = [];
+             MediaKeysRequirement                    distinctiveIdentifier = "optional";
+             MediaKeysRequirement                    persistentState = "optional";
+             sequence<DOMString>                     sessionTypes;
 };</code></pre>
   
 </section>

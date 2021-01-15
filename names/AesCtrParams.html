@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-AesCtrParams">Web Cryptography API</a> defines <code>AesCtrParams</code></p>
-<pre class=webidl><code>dictionary AesCtrParams : Algorithm {
-  BufferSource counter;
-  octet length;
+<pre class=webidl><code>
+
+dictionary AesCtrParams : Algorithm {
+  required BufferSource counter;
+  required [EnforceRange] octet length;
 };</code></pre>
   
 </section>

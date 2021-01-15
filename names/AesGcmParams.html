@@ -7,8 +7,10 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-AesGcmParams">Web Cryptography API</a> defines <code>AesGcmParams</code></p>
-<pre class=webidl><code>dictionary AesGcmParams : Algorithm {
-  BufferSource iv;
+<pre class=webidl><code>
+
+dictionary AesGcmParams : Algorithm {
+  required BufferSource iv;
   BufferSource additionalData;
   [EnforceRange] octet tagLength;
 };</code></pre>

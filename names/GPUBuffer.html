@@ -7,15 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpubuffer">WebGPU</a> defines <code>GPUBuffer</code></p>
-<pre class=webidl><code>[Serializable]
+<pre class=webidl><code>
+
+[Serializable]
 interface GPUBuffer {
-  Promise<undefined> mapAsync(GPUMapModeFlags mode, optional GPUSize64 offset = 0, optional GPUSize64 size);
-  ArrayBuffer getMappedRange(optional GPUSize64 offset = 0, optional GPUSize64 size);
-  undefined unmap();
-  undefined destroy();
+    Promise<undefined> mapAsync(GPUMapModeFlags mode, optional GPUSize64 offset = 0, optional GPUSize64 size);
+    ArrayBuffer getMappedRange(optional GPUSize64 offset = 0, optional GPUSize64 size);
+    undefined unmap();
+
+    undefined destroy();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>
-<pre class=webidl><code>GPUBuffer includes GPUObjectBase;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

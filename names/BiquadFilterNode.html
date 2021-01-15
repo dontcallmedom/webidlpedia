@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#biquadfilternode">Web Audio API</a> defines <code>BiquadFilterNode</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface BiquadFilterNode : AudioNode {
-  constructor(BaseAudioContext context, optional BiquadFilterOptions options = {});
+  constructor (BaseAudioContext context, optional BiquadFilterOptions options = {});
   attribute BiquadFilterType type;
   readonly attribute AudioParam frequency;
   readonly attribute AudioParam detune;
   readonly attribute AudioParam Q;
   readonly attribute AudioParam gain;
-  undefined getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
+  undefined getFrequencyResponse (Float32Array frequencyHz,
+                                  Float32Array magResponse,
+                                  Float32Array phaseResponse);
 };</code></pre>
   
 </section>

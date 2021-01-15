@@ -7,11 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/portals/#portalactivateevent">Portals</a> defines <code>PortalActivateEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface PortalActivateEvent : Event {
-  constructor(DOMString type, optional PortalActivateEventInit eventInitDict = {});
-  readonly attribute any data;
-  HTMLPortalElement adoptPredecessor();
+    constructor(DOMString type, optional PortalActivateEventInit eventInitDict = {});
+
+    readonly attribute any data;
+    HTMLPortalElement adoptPredecessor();
 };</code></pre>
   
 </section>

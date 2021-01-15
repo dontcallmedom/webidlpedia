@@ -7,13 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#xrcompositionlayer">WebXR Layers API Level 1</a> defines <code>XRCompositionLayer</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface XRCompositionLayer : XRLayer {
+<pre class=webidl><code>
+
+[Exposed=Window] interface XRCompositionLayer : XRLayer {
   readonly attribute XRLayerLayout layout;
+
   attribute boolean blendTextureSourceAlpha;
   attribute boolean? chromaticAberrationCorrection;
   attribute float? fixedFoveation;
+
   readonly attribute boolean needsRedraw;
+
   undefined destroy();
 };</code></pre>
   

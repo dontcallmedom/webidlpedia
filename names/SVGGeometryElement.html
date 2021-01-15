@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGeometryElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGGeometryElement : SVGGraphicsElement {
   [SameObject] readonly attribute SVGAnimatedNumber pathLength;
+
   boolean isPointInFill(optional DOMPointInit point = {});
   boolean isPointInStroke(optional DOMPointInit point = {});
   float getTotalLength();

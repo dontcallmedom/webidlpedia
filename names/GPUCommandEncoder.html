@@ -7,22 +7,50 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpucommandencoder">WebGPU</a> defines <code>GPUCommandEncoder</code></p>
-<pre class=webidl><code>interface GPUCommandEncoder {
-  GPURenderPassEncoder beginRenderPass(GPURenderPassDescriptor descriptor);
-  GPUComputePassEncoder beginComputePass(optional GPUComputePassDescriptor descriptor = {});
-  undefined copyBufferToBuffer(GPUBuffer source, GPUSize64 sourceOffset, GPUBuffer destination, GPUSize64 destinationOffset, GPUSize64 size);
-  undefined copyBufferToTexture(GPUBufferCopyView source, GPUTextureCopyView destination, GPUExtent3D copySize);
-  undefined copyTextureToBuffer(GPUTextureCopyView source, GPUBufferCopyView destination, GPUExtent3D copySize);
-  undefined copyTextureToTexture(GPUTextureCopyView source, GPUTextureCopyView destination, GPUExtent3D copySize);
-  undefined pushDebugGroup(USVString groupLabel);
-  undefined popDebugGroup();
-  undefined insertDebugMarker(USVString markerLabel);
-  undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
-  undefined resolveQuerySet(GPUQuerySet querySet, GPUSize32 firstQuery, GPUSize32 queryCount, GPUBuffer destination, GPUSize64 destinationOffset);
-  GPUCommandBuffer finish(optional GPUCommandBufferDescriptor descriptor = {});
+<pre class=webidl><code>
+
+interface GPUCommandEncoder {
+    GPURenderPassEncoder beginRenderPass(GPURenderPassDescriptor descriptor);
+    GPUComputePassEncoder beginComputePass(optional GPUComputePassDescriptor descriptor = {});
+
+    undefined copyBufferToBuffer(
+        GPUBuffer source,
+        GPUSize64 sourceOffset,
+        GPUBuffer destination,
+        GPUSize64 destinationOffset,
+        GPUSize64 size);
+
+    undefined copyBufferToTexture(
+        GPUBufferCopyView source,
+        GPUTextureCopyView destination,
+        GPUExtent3D copySize);
+
+    undefined copyTextureToBuffer(
+        GPUTextureCopyView source,
+        GPUBufferCopyView destination,
+        GPUExtent3D copySize);
+
+    undefined copyTextureToTexture(
+        GPUTextureCopyView source,
+        GPUTextureCopyView destination,
+        GPUExtent3D copySize);
+
+    undefined pushDebugGroup(USVString groupLabel);
+    undefined popDebugGroup();
+    undefined insertDebugMarker(USVString markerLabel);
+
+    undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
+
+    undefined resolveQuerySet(
+        GPUQuerySet querySet,
+        GPUSize32 firstQuery,
+        GPUSize32 queryCount,
+        GPUBuffer destination,
+        GPUSize64 destinationOffset);
+
+    GPUCommandBuffer finish(optional GPUCommandBufferDescriptor descriptor = {});
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a>
-<pre class=webidl><code>GPUCommandEncoder includes GPUObjectBase;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

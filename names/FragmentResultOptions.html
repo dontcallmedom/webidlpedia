@@ -7,13 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#dictdef-fragmentresultoptions">CSS Layout API Level 1</a> defines <code>FragmentResultOptions</code></p>
-<pre class=webidl><code>dictionary FragmentResultOptions {
-  double inlineSize;
-  double blockSize;
-  double autoBlockSize;
-  sequence<LayoutFragment> childFragments;
-  any data;
-  BreakTokenOptions breakToken;
+<pre class=webidl><code>
+
+// This is the final return value from the author defined layout() method.
+dictionary FragmentResultOptions {
+    double inlineSize = 0;
+    double blockSize = 0;
+    double autoBlockSize = 0;
+    sequence<LayoutFragment> childFragments = [];
+    any data = null;
+    BreakTokenOptions breakToken = null;
 };</code></pre>
   
 </section>

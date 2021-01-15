@@ -7,15 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrwebgllayer">WebXR Device API</a> defines <code>XRWebGLLayer</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface XRWebGLLayer : XRLayer {
-  constructor(XRSession session, XRWebGLRenderingContext context, optional XRWebGLLayerInit layerInit = {});
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window]
+interface XRWebGLLayer: XRLayer {
+  constructor(XRSession session,
+             XRWebGLRenderingContext context,
+             optional XRWebGLLayerInit layerInit = {});
+  // Attributes
   readonly attribute boolean antialias;
   readonly attribute boolean ignoreDepthValues;
+
   [SameObject] readonly attribute WebGLFramebuffer? framebuffer;
   readonly attribute unsigned long framebufferWidth;
   readonly attribute unsigned long framebufferHeight;
+
+  // Methods
   XRViewport? getViewport(XRView view);
+
+  // Static Methods
   static double getNativeFramebufferScaleFactor(XRSession session);
 };</code></pre>
   

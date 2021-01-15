@@ -7,18 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices">Media Capture and Streams</a> defines <code>MediaDevices</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
+<pre class=webidl><code>
+
+[Exposed=Window, SecureContext]
 interface MediaDevices : EventTarget {
   attribute EventHandler ondevicechange;
   Promise<sequence<MediaDeviceInfo>> enumerateDevices();
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#methods-0">Audio Output Devices API</a>
-<pre class=webidl><code>partial interface MediaDevices {
-  Promise<MediaDeviceInfo> selectAudioOutput(optional AudioOutputOptions options = {});
-};</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-streams/#methods-5">Media Capture and Streams</a>
-<pre class=webidl><code>partial interface MediaDevices {
+};
+
+partial interface MediaDevices {
   MediaTrackSupportedConstraints getSupportedConstraints();
   Promise<MediaStream> getUserMedia(optional MediaStreamConstraints constraints = {});
+};</code></pre>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#methods-0">Audio Output Devices API</a>
+<pre class=webidl><code>
+
+partial interface MediaDevices {
+  Promise<MediaDeviceInfo> selectAudioOutput(optional AudioOutputOptions options = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/#mediadevices-additions">Screen Capture</a>
 <pre class=webidl><code>partial interface MediaDevices {
   Promise<MediaStream> getDisplayMedia(optional DisplayMediaStreamConstraints constraints = {});

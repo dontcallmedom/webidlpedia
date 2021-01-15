@@ -7,16 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/geometry/#dompointreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMPointReadOnly</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+<pre class=webidl><code>[Exposed=(Window,Worker),
+ Serializable]
 interface DOMPointReadOnly {
-  constructor(optional unrestricted double x = 0, optional unrestricted double y = 0, optional unrestricted double z = 0, optional unrestricted double w = 1);
-  [NewObject] static DOMPointReadOnly fromPoint(optional DOMPointInit other = {});
-  readonly attribute unrestricted double x;
-  readonly attribute unrestricted double y;
-  readonly attribute unrestricted double z;
-  readonly attribute unrestricted double w;
-  [NewObject] DOMPoint matrixTransform(optional DOMMatrixInit matrix = {});
-  [Default] object toJSON();
+    constructor(optional unrestricted double x = 0, optional unrestricted double y = 0,
+            optional unrestricted double z = 0, optional unrestricted double w = 1);
+
+    [NewObject] static DOMPointReadOnly fromPoint(optional DOMPointInit other = {});
+
+    readonly attribute unrestricted double x;
+    readonly attribute unrestricted double y;
+    readonly attribute unrestricted double z;
+    readonly attribute unrestricted double w;
+
+    [NewObject] DOMPoint matrixTransform(optional DOMMatrixInit matrix = {});
+
+    [Default] object toJSON();
 };</code></pre>
   
 </section>

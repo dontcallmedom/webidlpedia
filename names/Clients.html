@@ -7,8 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#clients">Service Workers Nightly</a> defines <code>Clients</code></p>
-<pre class=webidl><code>[Exposed=ServiceWorker]
+<pre class=webidl><code>
+
+[Exposed=ServiceWorker]
 interface Clients {
+  // The objects returned will be new instances every time
   [NewObject] Promise<any> get(DOMString id);
   [NewObject] Promise<FrozenArray<Client>> matchAll(optional ClientQueryOptions options = {});
   [NewObject] Promise<WindowClient?> openWindow(USVString url);

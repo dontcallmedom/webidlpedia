@@ -7,14 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/clipboard-apis/#clipboarditem">Clipboard API and events</a> defines <code>ClipboardItem</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface ClipboardItem {
-  constructor(record<DOMString, ClipboardItemData> items, optional ClipboardItemOptions options = {});
-  static ClipboardItem createDelayed(record<DOMString, ClipboardItemDelayedCallback> items, optional ClipboardItemOptions options = {});
+<pre class=webidl><code>
+
+[Exposed=Window] interface ClipboardItem {
+  constructor(record<DOMString, ClipboardItemData> items,
+    optional ClipboardItemOptions options = {});
+  static ClipboardItem createDelayed(
+      record<DOMString, ClipboardItemDelayedCallback> items,
+      optional ClipboardItemOptions options = {});
+
   readonly attribute PresentationStyle presentationStyle;
   readonly attribute long long lastModified;
   readonly attribute boolean delayed;
+
   readonly attribute FrozenArray<DOMString> types;
+
   Promise<Blob> getType(DOMString type);
 };</code></pre>
   

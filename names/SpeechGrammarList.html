@@ -7,13 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#speechgrammarlist">Web Speech API</a> defines <code>SpeechGrammarList</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+// The object representing a speech grammar collection
+[Exposed=Window]
 interface SpeechGrammarList {
-  constructor();
-  readonly attribute unsigned long length;
-  getter SpeechGrammar item(unsigned long index);
-  undefined addFromURI(DOMString src, optional float weight = 1.0);
-  undefined addFromString(DOMString string, optional float weight = 1.0);
+    constructor();
+    readonly attribute unsigned long length;
+    getter SpeechGrammar item(unsigned long index);
+    undefined addFromURI(DOMString src,
+                    optional float weight = 1.0);
+    undefined addFromString(DOMString string,
+                    optional float weight = 1.0);
 };</code></pre>
   
 </section>

@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/contact-api/spec/#contactsmanager">Contact Picker API</a> defines <code>ContactsManager</code></p>
-<pre class=webidl><code>[Exposed=Window,SecureContext]
+<pre class=webidl><code>
+
+[Exposed=(Window,SecureContext)]
 interface ContactsManager {
-  Promise<sequence<ContactProperty>> getProperties();
-  Promise<sequence<ContactInfo>> select(sequence<ContactProperty> properties, optional ContactsSelectOptions options);
+    Promise<sequence<ContactProperty>> getProperties();
+    Promise<sequence<ContactInfo>> select(sequence<ContactProperty> properties, optional ContactsSelectOptions options);
 };</code></pre>
   
 </section>

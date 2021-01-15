@@ -7,22 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#document">DOM Standard</a> defines <code>Document</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface Document : Node {
   constructor();
+
   [SameObject] readonly attribute DOMImplementation implementation;
   readonly attribute USVString URL;
   readonly attribute USVString documentURI;
   readonly attribute DOMString compatMode;
   readonly attribute DOMString characterSet;
-  readonly attribute DOMString charset;
-  readonly attribute DOMString inputEncoding;
+  readonly attribute DOMString charset; // legacy alias of .characterSet
+  readonly attribute DOMString inputEncoding; // legacy alias of .characterSet
   readonly attribute DOMString contentType;
+
   readonly attribute DocumentType? doctype;
   readonly attribute Element? documentElement;
   HTMLCollection getElementsByTagName(DOMString qualifiedName);
   HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
   HTMLCollection getElementsByClassName(DOMString classNames);
+
   [CEReactions, NewObject] Element createElement(DOMString localName, optional (DOMString or ElementCreationOptions) options = {});
   [CEReactions, NewObject] Element createElementNS(DOMString? namespace, DOMString qualifiedName, optional (DOMString or ElementCreationOptions) options = {});
   [NewObject] DocumentFragment createDocumentFragment();
@@ -30,39 +35,50 @@ interface Document : Node {
   [NewObject] CDATASection createCDATASection(DOMString data);
   [NewObject] Comment createComment(DOMString data);
   [NewObject] ProcessingInstruction createProcessingInstruction(DOMString target, DOMString data);
+
   [CEReactions, NewObject] Node importNode(Node node, optional boolean deep = false);
   [CEReactions] Node adoptNode(Node node);
+
   [NewObject] Attr createAttribute(DOMString localName);
   [NewObject] Attr createAttributeNS(DOMString? namespace, DOMString qualifiedName);
-  [NewObject] Event createEvent(DOMString interface);
+
+  [NewObject] Event createEvent(DOMString interface); // legacy
+
   [NewObject] Range createRange();
+
+  // NodeFilter.SHOW_ALL = 0xFFFFFFFF
   [NewObject] NodeIterator createNodeIterator(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
   [NewObject] TreeWalker createTreeWalker(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a>
-<pre class=webidl><code>Document includes NonElementParentNode;
-Document includes DocumentOrShadowRoot;
-Document includes ParentNode;
-Document includes XPathEvaluatorBase;</code></pre></li><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
+  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
 <pre class=webidl><code>partial interface Document {
-  FontMetrics measureElement(Element element);
-  FontMetrics measureText(DOMString text, StylePropertyMapReadOnly styleMap);
+    FontMetrics measureElement(Element element);
+    FontMetrics measureText(DOMString text, StylePropertyMapReadOnly styleMap);
 };</code></pre></li><li><a href="https://fullscreen.spec.whatwg.org/#api">Fullscreen API Standard</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   [LegacyLenientSetter] readonly attribute boolean fullscreenEnabled;
-  [LegacyLenientSetter, Unscopable] readonly attribute boolean fullscreen;
+  [LegacyLenientSetter, Unscopable] readonly attribute boolean fullscreen; // historical
+
   Promise<undefined> exitFullscreen();
+
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
 };</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/#the-location-interface">HTML Standard</a>
-<pre class=webidl><code>[LegacyOverrideBuiltIns]
+<pre class=webidl><code>
+
+[LegacyOverrideBuiltIns]
 partial interface Document {
+  // resource metadata management
   [PutForwards=href, LegacyUnforgeable] readonly attribute Location? location;
   attribute USVString domain;
   readonly attribute USVString referrer;
   attribute USVString cookie;
   readonly attribute DOMString lastModified;
   readonly attribute DocumentReadyState readyState;
+
+  // DOM tree accessors
   getter object (DOMString name);
   [CEReactions] attribute DOMString title;
   [CEReactions] attribute DOMString dir;
@@ -75,12 +91,16 @@ partial interface Document {
   [SameObject] readonly attribute HTMLCollection forms;
   [SameObject] readonly attribute HTMLCollection scripts;
   NodeList getElementsByName(DOMString elementName);
-  readonly attribute HTMLOrSVGScriptElement? currentScript;
-  [CEReactions] Document open(optional DOMString unused1, optional DOMString unused2);
+  readonly attribute HTMLOrSVGScriptElement? currentScript; // classic scripts in a document tree only
+
+  // dynamic markup insertion
+  [CEReactions] Document open(optional DOMString unused1, optional DOMString unused2); // both arguments are ignored
   WindowProxy? open(USVString url, DOMString name, DOMString features);
   [CEReactions] undefined close();
   [CEReactions] undefined write(DOMString... text);
   [CEReactions] undefined writeln(DOMString... text);
+
+  // user interaction
   readonly attribute WindowProxy? defaultView;
   boolean hasFocus();
   [CEReactions] attribute DOMString designMode;
@@ -90,74 +110,100 @@ partial interface Document {
   boolean queryCommandState(DOMString commandId);
   boolean queryCommandSupported(DOMString commandId);
   DOMString queryCommandValue(DOMString commandId);
+
+  // special event handler IDL attributes that only apply to Document objects
   [LegacyLenientThis] attribute EventHandler onreadystatechange;
+
+  // also has obsolete members
 };
-Document includes GlobalEventHandlers;
-Document includes DocumentAndElementEventHandlers;
+
 partial interface Document {
-  [CEReactions] attribute DOMString fgColor;
-  [CEReactions] attribute DOMString linkColor;
-  [CEReactions] attribute DOMString vlinkColor;
-  [CEReactions] attribute DOMString alinkColor;
-  [CEReactions] attribute DOMString bgColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString fgColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString linkColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString vlinkColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString alinkColor;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+
   [SameObject] readonly attribute HTMLCollection anchors;
   [SameObject] readonly attribute HTMLCollection applets;
+
   undefined clear();
   undefined captureEvents();
   undefined releaseEvents();
+
   [SameObject] readonly attribute HTMLAllCollection all;
 };</code></pre></li><li><a href="https://privacycg.github.io/storage-access/">The Storage Access API</a>
 <pre class=webidl><code>partial interface Document {
   Promise<boolean> hasStorageAccess();
   Promise<undefined> requestStorageAccess();
 };</code></pre></li><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   readonly attribute AddressSpace addressSpace;
 };</code></pre></li><li><a href="https://wicg.github.io/page-lifecycle/#sec-api">Page Lifecycle</a>
 <pre class=webidl><code>partial interface Document {
-  attribute EventHandler onfreeze;
-  attribute EventHandler onresume;
-  readonly attribute boolean wasDiscarded;
+    attribute EventHandler onfreeze;
+    attribute EventHandler onresume;
+    readonly attribute boolean wasDiscarded;
 };</code></pre></li><li><a href="https://wicg.github.io/scroll-to-text-fragment/#feature-detectability">Text Fragments</a>
-<pre class=webidl><code>partial interface Document {
-  [SameObject] readonly attribute FragmentDirective fragmentDirective;
+<pre class=webidl><code>
+
+partial interface Document {
+    [SameObject] readonly attribute FragmentDirective fragmentDirective;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code>Document includes FontFaceSource;</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
+<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
 <pre class=webidl><code>partial interface Document {
   readonly attribute NamedFlowMap namedFlows;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   Element? elementFromPoint(double x, double y);
   sequence<Element> elementsFromPoint(double x, double y);
   CaretPosition? caretPositionFromPoint(double x, double y);
   readonly attribute Element? scrollingElement;
-};
-Document includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
-<pre class=webidl><code>partial interface Document {
+};</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
+<pre class=webidl><code>
+
+partial interface Document {
   readonly attribute boolean hidden;
   readonly attribute VisibilityState visibilityState;
   attribute EventHandler onvisibilitychange;
 };</code></pre></li><li><a href="https://www.w3.org/TR/permissions-policy-1/#the-policy-object">Permissions Policy</a>
-<pre class=webidl><code>partial interface Document {
-  [SameObject] readonly attribute PermissionsPolicy permissionsPolicy;
+<pre class=webidl><code>
+
+partial interface Document {
+    [SameObject] readonly attribute PermissionsPolicy permissionsPolicy;
 };</code></pre></li><li><a href="https://www.w3.org/TR/picture-in-picture/#document-extensions">Picture-in-Picture</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   readonly attribute boolean pictureInPictureEnabled;
+
   [NewObject] Promise<undefined> exitPictureInPicture();
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-document-interface">Pointer Lock 2.0</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   attribute EventHandler onpointerlockchange;
   attribute EventHandler onpointerlockerror;
   undefined exitPointerLock();
 };</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-document-interface">Selection API</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   Selection? getSelection();
 };</code></pre></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>
-<pre class=webidl><code>partial interface Document {
+<pre class=webidl><code>
+
+partial interface Document {
   readonly attribute SVGSVGElement? rootElement;
 };</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/#extensions-to-the-document-interface">Web Animations</a>
-<pre class=webidl><code>partial interface Document {
-  readonly attribute DocumentTimeline timeline;
+<pre class=webidl><code>
+
+partial interface Document {
+    readonly attribute DocumentTimeline timeline;
 };</code></pre></li></ol>
 </section>
 <section>

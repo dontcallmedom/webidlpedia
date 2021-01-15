@@ -7,13 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.w3.org/TR/svg-markers/">SVG Markers</a> defines <code>SVGMarkerElement</code></p>
-<pre class=webidl><code>interface SVGMarkerElement : SVGElement {
-  const unsigned short SVG_MARKERUNITS_UNKNOWN;
-  const unsigned short SVG_MARKERUNITS_USERSPACEONUSE;
-  const unsigned short SVG_MARKERUNITS_STROKEWIDTH;
-  const unsigned short SVG_MARKER_ORIENT_UNKNOWN;
-  const unsigned short SVG_MARKER_ORIENT_AUTO;
-  const unsigned short SVG_MARKER_ORIENT_ANGLE;
+<pre class=webidl><code>
+
+interface SVGMarkerElement : SVGElement {
+
+  // Marker Unit Types
+  const unsigned short SVG_MARKERUNITS_UNKNOWN = 0;
+  const unsigned short SVG_MARKERUNITS_USERSPACEONUSE = 1;
+  const unsigned short SVG_MARKERUNITS_STROKEWIDTH = 2;
+
+  // Marker Orientation Types
+  const unsigned short SVG_MARKER_ORIENT_UNKNOWN = 0;
+  const unsigned short SVG_MARKER_ORIENT_AUTO = 1;
+  const unsigned short SVG_MARKER_ORIENT_ANGLE = 2;
+
   readonly attribute SVGAnimatedLength refX;
   readonly attribute SVGAnimatedLength refY;
   readonly attribute SVGAnimatedEnumeration markerUnits;
@@ -21,18 +28,26 @@ base: ../
   readonly attribute SVGAnimatedLength markerHeight;
   readonly attribute SVGAnimatedEnumeration orientType;
   readonly attribute SVGAnimatedAngle orientAngle;
-  attribute DOMString orient;
+           attribute DOMString orient;
+
   void setOrientToAuto();
   void setOrientToAngle(SVGAngle angle);
 };</code></pre><p><a href="https://svgwg.org/svg2-draft/painting.html#InterfaceSVGMarkerElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGMarkerElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGMarkerElement : SVGElement {
-  const unsigned short SVG_MARKERUNITS_UNKNOWN;
-  const unsigned short SVG_MARKERUNITS_USERSPACEONUSE;
-  const unsigned short SVG_MARKERUNITS_STROKEWIDTH;
-  const unsigned short SVG_MARKER_ORIENT_UNKNOWN;
-  const unsigned short SVG_MARKER_ORIENT_AUTO;
-  const unsigned short SVG_MARKER_ORIENT_ANGLE;
+
+  // Marker Unit Types
+  const unsigned short SVG_MARKERUNITS_UNKNOWN = 0;
+  const unsigned short SVG_MARKERUNITS_USERSPACEONUSE = 1;
+  const unsigned short SVG_MARKERUNITS_STROKEWIDTH = 2;
+
+  // Marker Orientation Types
+  const unsigned short SVG_MARKER_ORIENT_UNKNOWN = 0;
+  const unsigned short SVG_MARKER_ORIENT_AUTO = 1;
+  const unsigned short SVG_MARKER_ORIENT_ANGLE = 2;
+
   [SameObject] readonly attribute SVGAnimatedLength refX;
   [SameObject] readonly attribute SVGAnimatedLength refY;
   [SameObject] readonly attribute SVGAnimatedEnumeration markerUnits;
@@ -41,12 +56,11 @@ interface SVGMarkerElement : SVGElement {
   [SameObject] readonly attribute SVGAnimatedEnumeration orientType;
   [SameObject] readonly attribute SVGAnimatedAngle orientAngle;
   attribute DOMString orient;
+
   void setOrientToAuto();
   void setOrientToAngle(SVGAngle angle);
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/svg-markers/">SVG Markers</a>
-<pre class=webidl><code>SVGMarkerElement includes SVGFitToViewBox;</code></pre></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>
-<pre class=webidl><code>SVGMarkerElement includes SVGFitToViewBox;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -7,23 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/pointerevents/#dom-pointerevent">Pointer Events</a> defines <code>PointerEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface PointerEvent : MouseEvent {
-  constructor(DOMString type, optional PointerEventInit eventInitDict = {});
-  readonly attribute long pointerId;
-  readonly attribute double width;
-  readonly attribute double height;
-  readonly attribute float pressure;
-  readonly attribute float tangentialPressure;
-  readonly attribute long tiltX;
-  readonly attribute long tiltY;
-  readonly attribute long twist;
-  readonly attribute double altitudeAngle;
-  readonly attribute double azimuthAngle;
-  readonly attribute DOMString pointerType;
-  readonly attribute boolean isPrimary;
-  [SecureContext] sequence<PointerEvent> getCoalescedEvents();
-  sequence<PointerEvent> getPredictedEvents();
+    constructor(DOMString type, optional PointerEventInit eventInitDict = {});
+    readonly        attribute long        pointerId;
+    readonly        attribute double      width;
+    readonly        attribute double      height;
+    readonly        attribute float       pressure;
+    readonly        attribute float       tangentialPressure;
+    readonly        attribute long        tiltX;
+    readonly        attribute long        tiltY;
+    readonly        attribute long        twist;
+    readonly        attribute double      altitudeAngle;
+    readonly        attribute double      azimuthAngle;
+    readonly        attribute DOMString   pointerType;
+    readonly        attribute boolean     isPrimary;
+    [SecureContext] sequence<PointerEvent> getCoalescedEvents();
+    sequence<PointerEvent> getPredictedEvents();
 };</code></pre>
   
 </section>

@@ -7,17 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#speechsynthesis">Web Speech API</a> defines <code>SpeechSynthesis</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SpeechSynthesis : EventTarget {
-  readonly attribute boolean pending;
-  readonly attribute boolean speaking;
-  readonly attribute boolean paused;
-  attribute EventHandler onvoiceschanged;
-  undefined speak(SpeechSynthesisUtterance utterance);
-  undefined cancel();
-  undefined pause();
-  undefined resume();
-  sequence<SpeechSynthesisVoice> getVoices();
+    readonly attribute boolean pending;
+    readonly attribute boolean speaking;
+    readonly attribute boolean paused;
+
+    attribute EventHandler onvoiceschanged;
+
+    undefined speak(SpeechSynthesisUtterance utterance);
+    undefined cancel();
+    undefined pause();
+    undefined resume();
+    sequence<SpeechSynthesisVoice> getVoices();
 };</code></pre>
   
 </section>

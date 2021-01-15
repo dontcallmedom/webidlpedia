@@ -7,28 +7,37 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecellelement">HTML Standard</a> defines <code>HTMLTableCellElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLTableCellElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute unsigned long colSpan;
   [CEReactions] attribute unsigned long rowSpan;
   [CEReactions] attribute DOMString headers;
   readonly attribute long cellIndex;
-  [CEReactions] attribute DOMString scope;
-  [CEReactions] attribute DOMString abbr;
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
-<pre class=webidl><code>partial interface HTMLTableCellElement {
+
+  [CEReactions] attribute DOMString scope; // only conforming for th elements
+  [CEReactions] attribute DOMString abbr;  // only conforming for th elements
+
+  // also has obsolete members
+};
+
+partial interface HTMLTableCellElement {
   [CEReactions] attribute DOMString align;
   [CEReactions] attribute DOMString axis;
   [CEReactions] attribute DOMString height;
   [CEReactions] attribute DOMString width;
+
   [CEReactions] attribute DOMString ch;
   [CEReactions] attribute DOMString chOff;
   [CEReactions] attribute boolean noWrap;
   [CEReactions] attribute DOMString vAlign;
-  [CEReactions] attribute DOMString bgColor;
-};</code></pre></li></ol>
+
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+};</code></pre>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#messagechannel">HTML Standard</a> defines <code>MessageChannel</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface MessageChannel {
   constructor();
+
   readonly attribute MessagePort port1;
   readonly attribute MessagePort port2;
 };</code></pre>

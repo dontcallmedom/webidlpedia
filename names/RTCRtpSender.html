@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpSender</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface RTCRtpSender {
   readonly attribute MediaStreamTrack? track;
   readonly attribute RTCDtlsTransport? transport;
@@ -17,13 +19,17 @@ interface RTCRtpSender {
   Promise<undefined> replaceTrack(MediaStreamTrack? withTrack);
   undefined setStreams(MediaStream... streams);
   Promise<RTCStatsReport> getStats();
+};
+
+partial interface RTCRtpSender {
+  readonly attribute RTCDTMFSender? dtmf;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>partial interface RTCRtpSender {
-  RTCInsertableStreams createEncodedStreams();
-};</code></pre></li><li><a href="https://www.w3.org/TR/webrtc/#attributes-19">WebRTC 1.0: Real-Time Communication Between Browsers</a>
-<pre class=webidl><code>partial interface RTCRtpSender {
-  readonly attribute RTCDTMFSender? dtmf;
+<pre class=webidl><code>
+
+// New methods for RTCRtpSender and RTCRtpReceiver
+partial interface RTCRtpSender {
+    RTCInsertableStreams createEncodedStreams();
 };</code></pre></li></ol>
 </section>
 <section>

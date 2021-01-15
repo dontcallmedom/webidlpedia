@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-fetch/#backgroundfetchupdateuievent">Background Fetch</a> defines <code>BackgroundFetchUpdateUIEvent</code></p>
-<pre class=webidl><code>[Exposed=ServiceWorker]
+<pre class=webidl><code>
+
+[Exposed=ServiceWorker]
 interface BackgroundFetchUpdateUIEvent : BackgroundFetchEvent {
   constructor(DOMString type, BackgroundFetchEventInit init);
   Promise<void> updateUI(optional BackgroundFetchUIOptions options = {});

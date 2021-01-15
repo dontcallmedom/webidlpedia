@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtccertificatestats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCCertificateStats</code></p>
-<pre class=webidl><code>dictionary RTCCertificateStats : RTCStats {
-  DOMString fingerprint;
-  DOMString fingerprintAlgorithm;
-  DOMString base64Certificate;
-  DOMString issuerCertificateId;
+<pre class=webidl><code>
+
+dictionary RTCCertificateStats : RTCStats {
+             required DOMString fingerprint;
+             required DOMString fingerprintAlgorithm;
+             required DOMString base64Certificate;
+             DOMString issuerCertificateId;
 };</code></pre>
   
 </section>

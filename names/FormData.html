@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://xhr.spec.whatwg.org/#formdata">XMLHttpRequest Standard</a> defines <code>FormData</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface FormData {
   constructor(optional HTMLFormElement form);
+
   undefined append(USVString name, USVString value);
   undefined append(USVString name, Blob blobValue, optional USVString filename);
   undefined delete(USVString name);

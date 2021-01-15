@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-handler/#dom-paymentinstruments">Payment Handler API</a> defines <code>PaymentInstruments</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=(Window,Worker)]
 interface PaymentInstruments {
   Promise<boolean> delete(DOMString instrumentKey);
   Promise<any> get(DOMString instrumentKey);
-  Promise<sequence<DOMString>> keys();
+  Promise<sequence<DOMString>>  keys();
   Promise<boolean> has(DOMString instrumentKey);
   Promise<void> set(DOMString instrumentKey, PaymentInstrument details);
   Promise<void> clear();

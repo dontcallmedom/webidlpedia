@@ -7,13 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGTextContentElement : SVGGraphicsElement {
-  const unsigned short LENGTHADJUST_UNKNOWN;
-  const unsigned short LENGTHADJUST_SPACING;
-  const unsigned short LENGTHADJUST_SPACINGANDGLYPHS;
+
+  // lengthAdjust Types
+  const unsigned short LENGTHADJUST_UNKNOWN = 0;
+  const unsigned short LENGTHADJUST_SPACING = 1;
+  const unsigned short LENGTHADJUST_SPACINGANDGLYPHS = 2;
+
   [SameObject] readonly attribute SVGAnimatedLength textLength;
   [SameObject] readonly attribute SVGAnimatedEnumeration lengthAdjust;
+
   long getNumberOfChars();
   float getComputedTextLength();
   float getSubStringLength(unsigned long charnum, unsigned long nchars);

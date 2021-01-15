@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://notifications.spec.whatwg.org/#dictdef-notificationeventinit">Notifications API Standard</a> defines <code>NotificationEventInit</code></p>
-<pre class=webidl><code>dictionary NotificationEventInit : ExtendableEventInit {
-  Notification notification;
-  DOMString action;
+<pre class=webidl><code>
+
+dictionary NotificationEventInit : ExtendableEventInit {
+  required Notification notification;
+  DOMString action = "";
 };</code></pre>
   
 </section>

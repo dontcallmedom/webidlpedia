@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#bytelengthqueuingstrategy">Streams Standard</a> defines <code>ByteLengthQueuingStrategy</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,Worklet)]
 interface ByteLengthQueuingStrategy {
   constructor(QueuingStrategyInit init);
+
   readonly attribute unrestricted double highWaterMark;
   readonly attribute Function size;
 };</code></pre>

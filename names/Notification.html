@@ -7,16 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://notifications.spec.whatwg.org/#notification">Notifications API Standard</a> defines <code>Notification</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>[Exposed=(Window,Worker)]
 interface Notification : EventTarget {
   constructor(DOMString title, optional NotificationOptions options = {});
+
   static readonly attribute NotificationPermission permission;
   [Exposed=Window] static Promise<NotificationPermission> requestPermission(optional NotificationPermissionCallback deprecatedCallback);
+
   static readonly attribute unsigned long maxActions;
+
   attribute EventHandler onclick;
   attribute EventHandler onshow;
   attribute EventHandler onerror;
   attribute EventHandler onclose;
+
   readonly attribute DOMString title;
   readonly attribute NotificationDirection dir;
   readonly attribute DOMString lang;
@@ -32,6 +36,7 @@ interface Notification : EventTarget {
   readonly attribute boolean requireInteraction;
   [SameObject] readonly attribute any data;
   [SameObject] readonly attribute FrozenArray<NotificationAction> actions;
+
   undefined close();
 };</code></pre>
   

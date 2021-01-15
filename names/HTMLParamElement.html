@@ -7,17 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlparamelement">HTML Standard</a> defines <code>HTMLParamElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLParamElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString name;
   [CEReactions] attribute DOMString value;
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
-<pre class=webidl><code>partial interface HTMLParamElement {
+
+  // also has obsolete members
+};
+
+partial interface HTMLParamElement {
   [CEReactions] attribute DOMString type;
   [CEReactions] attribute DOMString valueType;
-};</code></pre></li></ol>
+};</code></pre>
+  
 </section>
 
   

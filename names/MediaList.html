@@ -9,7 +9,7 @@ base: ../
   <p><a href="https://drafts.csswg.org/cssom/#medialist">CSS Object Model (CSSOM)</a> defines <code>MediaList</code></p>
 <pre class=webidl><code>[Exposed=Window]
 interface MediaList {
-  stringifier attribute CSSOMString mediaText;
+  stringifier attribute [LegacyNullToEmptyString] CSSOMString mediaText;
   readonly attribute unsigned long length;
   getter CSSOMString? item(unsigned long index);
   undefined appendMedium(CSSOMString medium);

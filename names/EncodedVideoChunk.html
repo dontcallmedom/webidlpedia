@@ -7,12 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-codecs/#encodedvideochunk">WebCodecs</a> defines <code>EncodedVideoChunk</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+
+[Exposed=(Window,Worker)]
 interface EncodedVideoChunk {
   constructor(EncodedVideoChunkInit init);
   readonly attribute EncodedVideoChunkType type;
-  readonly attribute unsigned long long timestamp;
-  readonly attribute unsigned long long? duration;
+  readonly attribute unsigned long long timestamp;  // microseconds
+  readonly attribute unsigned long long? duration;  // microseconds
   readonly attribute ArrayBuffer data;
 };</code></pre>
   

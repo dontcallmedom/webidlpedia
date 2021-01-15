@@ -7,31 +7,37 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#event">DOM Standard</a> defines <code>Event</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,AudioWorklet]
+<pre class=webidl><code>[Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   constructor(DOMString type, optional EventInit eventInitDict = {});
+
   readonly attribute DOMString type;
   readonly attribute EventTarget? target;
-  readonly attribute EventTarget? srcElement;
+  readonly attribute EventTarget? srcElement; // legacy
   readonly attribute EventTarget? currentTarget;
   sequence<EventTarget> composedPath();
-  const unsigned short NONE;
-  const unsigned short CAPTURING_PHASE;
-  const unsigned short AT_TARGET;
-  const unsigned short BUBBLING_PHASE;
+
+  const unsigned short NONE = 0;
+  const unsigned short CAPTURING_PHASE = 1;
+  const unsigned short AT_TARGET = 2;
+  const unsigned short BUBBLING_PHASE = 3;
   readonly attribute unsigned short eventPhase;
+
   undefined stopPropagation();
-  attribute boolean cancelBubble;
+           attribute boolean cancelBubble; // legacy alias of .stopPropagation()
   undefined stopImmediatePropagation();
+
   readonly attribute boolean bubbles;
   readonly attribute boolean cancelable;
-  attribute boolean returnValue;
+           attribute boolean returnValue;  // legacy
   undefined preventDefault();
   readonly attribute boolean defaultPrevented;
   readonly attribute boolean composed;
+
   [LegacyUnforgeable] readonly attribute boolean isTrusted;
   readonly attribute DOMHighResTimeStamp timeStamp;
-  undefined initEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false);
+
+  undefined initEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false); // legacy
 };</code></pre>
   
 </section>

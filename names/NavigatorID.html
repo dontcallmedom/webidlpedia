@@ -7,22 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>NavigatorID</code></p>
-<pre class=webidl><code>interface mixin NavigatorID {
-  readonly attribute DOMString appCodeName;
-  readonly attribute DOMString appName;
+<pre class=webidl><code>
+
+interface mixin NavigatorID {
+  readonly attribute DOMString appCodeName; // constant "Mozilla"
+  readonly attribute DOMString appName; // constant "Netscape"
   readonly attribute DOMString appVersion;
   readonly attribute DOMString platform;
-  readonly attribute DOMString product;
+  readonly attribute DOMString product; // constant "Gecko"
   [Exposed=Window] readonly attribute DOMString productSub;
   readonly attribute DOMString userAgent;
   [Exposed=Window] readonly attribute DOMString vendor;
-  [Exposed=Window] readonly attribute DOMString vendorSub;
-};</code></pre>
-  <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>partial interface mixin NavigatorID {
-  [Exposed=Window] boolean taintEnabled();
+  [Exposed=Window] readonly attribute DOMString vendorSub; // constant ""
+};
+
+partial interface mixin NavigatorID {
+  [Exposed=Window] boolean taintEnabled(); // constant false
   [Exposed=Window] readonly attribute DOMString oscpu;
-};</code></pre></li></ol>
+};</code></pre>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

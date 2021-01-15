@@ -7,14 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#xrequirectlayer">WebXR Layers API Level 1</a> defines <code>XREquirectLayer</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface XREquirectLayer : XRCompositionLayer {
+<pre class=webidl><code>
+
+[Exposed=Window] interface XREquirectLayer : XRCompositionLayer {
   attribute XRSpace space;
   attribute XRRigidTransform transform;
+
   attribute float radius;
   attribute float centralHorizontalAngle;
   attribute float upperVerticalAngle;
   attribute float lowerVerticalAngle;
+
+  // Events
   attribute EventHandler onredraw;
 };</code></pre>
   

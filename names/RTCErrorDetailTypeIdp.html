@@ -7,15 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a> defines <code>RTCErrorDetailTypeIdp</code></p>
-<pre class=webidl><code>enum RTCErrorDetailTypeIdp {
-  "idp-bad-script-failure";
-  "idp-execution-failure";
-  "idp-load-failure";
-  "idp-need-login";
-  "idp-timeout";
-  "idp-tls-failure";
-  "idp-token-expired";
-  "idp-token-invalid";
+<pre class=webidl><code>
+
+// This is an extension of RTCErrorDetailType from [[WEBRTC-PC]]
+// Unfortunately, WebIDL does not support partial enums (yet).
+//
+// partial enum RTCErrorDetailType {
+enum RTCErrorDetailTypeIdp {
+  "idp-bad-script-failure",
+  "idp-execution-failure",
+  "idp-load-failure",
+  "idp-need-login",
+  "idp-timeout",
+  "idp-tls-failure",
+  "idp-token-expired",
+  "idp-token-invalid",
 };</code></pre>
   
 </section>

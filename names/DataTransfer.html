@@ -7,13 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransfer">HTML Standard</a> defines <code>DataTransfer</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface DataTransfer {
   constructor();
+
   attribute DOMString dropEffect;
   attribute DOMString effectAllowed;
+
   [SameObject] readonly attribute DataTransferItemList items;
+
   undefined setDragImage(Element image, long x, long y);
+
+  /* old interface */
   readonly attribute FrozenArray<DOMString> types;
   DOMString getData(DOMString format);
   undefined setData(DOMString format, DOMString data);

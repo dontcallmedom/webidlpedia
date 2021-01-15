@@ -7,14 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gputextureviewdescriptor">WebGPU</a> defines <code>GPUTextureViewDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUTextureViewDescriptor : GPUObjectDescriptorBase {
-  GPUTextureFormat format;
-  GPUTextureViewDimension dimension;
-  GPUTextureAspect aspect;
-  GPUIntegerCoordinate baseMipLevel;
-  GPUIntegerCoordinate mipLevelCount;
-  GPUIntegerCoordinate baseArrayLayer;
-  GPUIntegerCoordinate arrayLayerCount;
+<pre class=webidl><code>
+
+dictionary GPUTextureViewDescriptor : GPUObjectDescriptorBase {
+    GPUTextureFormat format;
+    GPUTextureViewDimension dimension;
+    GPUTextureAspect aspect = "all";
+    GPUIntegerCoordinate baseMipLevel = 0;
+    GPUIntegerCoordinate mipLevelCount;
+    GPUIntegerCoordinate baseArrayLayer = 0;
+    GPUIntegerCoordinate arrayLayerCount;
 };</code></pre>
   
 </section>

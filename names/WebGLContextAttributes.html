@@ -7,20 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> defines <code>WebGLContextAttributes</code></p>
-<pre class=webidl><code>dictionary WebGLContextAttributes {
-  boolean alpha;
-  boolean depth;
-  boolean stencil;
-  boolean antialias;
-  boolean premultipliedAlpha;
-  boolean preserveDrawingBuffer;
-  WebGLPowerPreference powerPreference;
-  boolean failIfMajorPerformanceCaveat;
-  boolean desynchronized;
+<pre class=webidl><code>
+
+dictionary WebGLContextAttributes {
+    boolean alpha = true;
+    boolean depth = true;
+    boolean stencil = false;
+    boolean antialias = true;
+    boolean premultipliedAlpha = true;
+    boolean preserveDrawingBuffer = false;
+    WebGLPowerPreference powerPreference = "default";
+    boolean failIfMajorPerformanceCaveat = false;
+    boolean desynchronized = false;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr/">WebXR Device API</a>
-<pre class=webidl><code>partial dictionary WebGLContextAttributes {
-  boolean xrCompatible;
+<pre class=webidl><code>
+
+partial dictionary WebGLContextAttributes {
+    boolean xrCompatible = false;
 };</code></pre></li></ol>
 </section>
 <section>

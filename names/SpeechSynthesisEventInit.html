@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#dictdef-speechsynthesiseventinit">Web Speech API</a> defines <code>SpeechSynthesisEventInit</code></p>
-<pre class=webidl><code>dictionary SpeechSynthesisEventInit : EventInit {
-  SpeechSynthesisUtterance utterance;
-  unsigned long charIndex;
-  unsigned long charLength;
-  float elapsedTime;
-  DOMString name;
+<pre class=webidl><code>
+
+dictionary SpeechSynthesisEventInit : EventInit {
+    required SpeechSynthesisUtterance utterance;
+    unsigned long charIndex = 0;
+    unsigned long charLength = 0;
+    float elapsedTime = 0;
+    DOMString name = "";
 };</code></pre>
   
 </section>

@@ -7,13 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsendparameters">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpSendParameters</code></p>
-<pre class=webidl><code>dictionary RTCRtpSendParameters : RTCRtpParameters {
-  DOMString transactionId;
-  sequence<RTCRtpEncodingParameters> encodings;
+<pre class=webidl><code>
+
+dictionary RTCRtpSendParameters : RTCRtpParameters {
+  required DOMString transactionId;
+  required sequence<RTCRtpEncodingParameters> encodings;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/mst-content-hint/">MediaStreamTrack Content Hints</a>
-<pre class=webidl><code>partial dictionary RTCRtpSendParameters {
-  RTCDegradationPreference degradationPreference;
+<pre class=webidl><code>
+
+partial dictionary RTCRtpSendParameters {
+ RTCDegradationPreference degradationPreference;
 };</code></pre></li></ol>
 </section>
 <section>

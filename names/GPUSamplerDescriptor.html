@@ -7,17 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpusamplerdescriptor">WebGPU</a> defines <code>GPUSamplerDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUSamplerDescriptor : GPUObjectDescriptorBase {
-  GPUAddressMode addressModeU;
-  GPUAddressMode addressModeV;
-  GPUAddressMode addressModeW;
-  GPUFilterMode magFilter;
-  GPUFilterMode minFilter;
-  GPUFilterMode mipmapFilter;
-  float lodMinClamp;
-  float lodMaxClamp;
-  GPUCompareFunction compare;
-  [Clamp] unsigned short maxAnisotropy;
+<pre class=webidl><code>
+
+dictionary GPUSamplerDescriptor : GPUObjectDescriptorBase {
+    GPUAddressMode addressModeU = "clamp-to-edge";
+    GPUAddressMode addressModeV = "clamp-to-edge";
+    GPUAddressMode addressModeW = "clamp-to-edge";
+    GPUFilterMode magFilter = "nearest";
+    GPUFilterMode minFilter = "nearest";
+    GPUFilterMode mipmapFilter = "nearest";
+    float lodMinClamp = 0;
+    float lodMaxClamp = 0xffffffff; // TODO: What should this be? Was Number.MAX_VALUE.
+    GPUCompareFunction compare;
+    [Clamp] unsigned short maxAnisotropy = 1;
 };</code></pre>
   
 </section>

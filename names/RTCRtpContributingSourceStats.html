@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpcontributingsourcestats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCRtpContributingSourceStats</code></p>
-<pre class=webidl><code>dictionary RTCRtpContributingSourceStats : RTCStats {
-  unsigned long contributorSsrc;
-  DOMString inboundRtpStreamId;
-  unsigned long packetsContributedTo;
-  double audioLevel;
+<pre class=webidl><code>
+
+dictionary RTCRtpContributingSourceStats : RTCStats {
+             required unsigned long contributorSsrc;
+             required DOMString     inboundRtpStreamId;
+             unsigned long packetsContributedTo;
+             double        audioLevel;
 };</code></pre>
   
 </section>

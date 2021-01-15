@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCRtpStreamStats</code></p>
-<pre class=webidl><code>dictionary RTCRtpStreamStats : RTCStats {
-  unsigned long ssrc;
-  DOMString kind;
-  DOMString transportId;
-  DOMString codecId;
+<pre class=webidl><code>
+
+dictionary RTCRtpStreamStats : RTCStats {
+             required unsigned long       ssrc;
+             required DOMString           kind;
+             DOMString           transportId;
+             DOMString           codecId;
 };</code></pre>
   
 </section>

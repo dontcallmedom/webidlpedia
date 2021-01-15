@@ -7,9 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#transformstream">Streams Standard</a> defines <code>TransformStream</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,Worklet, Transferable]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,Worklet), Transferable]
 interface TransformStream {
-  constructor(optional object transformer, optional QueuingStrategy writableStrategy = {}, optional QueuingStrategy readableStrategy = {});
+  constructor(optional object transformer,
+              optional QueuingStrategy writableStrategy = {},
+              optional QueuingStrategy readableStrategy = {});
+
   readonly attribute ReadableStream readable;
   readonly attribute WritableStream writable;
 };</code></pre>

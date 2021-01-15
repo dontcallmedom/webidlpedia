@@ -8,20 +8,20 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/pointerevents/#dom-pointereventinit">Pointer Events</a> defines <code>PointerEventInit</code></p>
 <pre class=webidl><code>dictionary PointerEventInit : MouseEventInit {
-  long pointerId;
-  double width;
-  double height;
-  float pressure;
-  float tangentialPressure;
-  long tiltX;
-  long tiltY;
-  long twist;
-  double altitudeAngle;
-  double azimuthAngle;
-  DOMString pointerType;
-  boolean isPrimary;
-  sequence<PointerEvent> coalescedEvents;
-  sequence<PointerEvent> predictedEvents;
+    long        pointerId = 0;
+    double      width = 1;
+    double      height = 1;
+    float       pressure = 0;
+    float       tangentialPressure = 0;
+    long        tiltX;
+    long        tiltY;
+    long        twist = 0;
+    double      altitudeAngle;
+    double      azimuthAngle;
+    DOMString   pointerType = "";
+    boolean     isPrimary = false;
+    sequence<PointerEvent> coalescedEvents = [];
+    sequence<PointerEvent> predictedEvents = [];
 };</code></pre>
   
 </section>

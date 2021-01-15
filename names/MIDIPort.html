@@ -7,8 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-midi-api/#dom-midiport">Web MIDI API</a> defines <code>MIDIPort</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface MIDIPort : EventTarget {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] interface MIDIPort: EventTarget {
   readonly attribute DOMString id;
   readonly attribute DOMString? manufacturer;
   readonly attribute DOMString? name;
@@ -17,8 +18,8 @@ interface MIDIPort : EventTarget {
   readonly attribute MIDIPortDeviceState state;
   readonly attribute MIDIPortConnectionState connection;
   attribute EventHandler onstatechange;
-  Promise<MIDIPort> open();
-  Promise<MIDIPort> close();
+  Promise <MIDIPort> open();
+  Promise <MIDIPort> close();
 };</code></pre>
   
 </section>

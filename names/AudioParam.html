@@ -7,20 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#AudioParam">Web Audio API</a> defines <code>AudioParam</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface AudioParam {
   attribute float value;
   attribute AutomationRate automationRate;
   readonly attribute float defaultValue;
   readonly attribute float minValue;
   readonly attribute float maxValue;
-  AudioParam setValueAtTime(float value, double startTime);
-  AudioParam linearRampToValueAtTime(float value, double endTime);
-  AudioParam exponentialRampToValueAtTime(float value, double endTime);
-  AudioParam setTargetAtTime(float target, double startTime, float timeConstant);
-  AudioParam setValueCurveAtTime(sequence<float> values, double startTime, double duration);
-  AudioParam cancelScheduledValues(double cancelTime);
-  AudioParam cancelAndHoldAtTime(double cancelTime);
+  AudioParam setValueAtTime (float value, double startTime);
+  AudioParam linearRampToValueAtTime (float value, double endTime);
+  AudioParam exponentialRampToValueAtTime (float value, double endTime);
+  AudioParam setTargetAtTime (float target, double startTime, float timeConstant);
+  AudioParam setValueCurveAtTime (sequence<float> values,
+                                  double startTime,
+                                  double duration);
+  AudioParam cancelScheduledValues (double cancelTime);
+  AudioParam cancelAndHoldAtTime (double cancelTime);
 };</code></pre>
   
 </section>

@@ -7,10 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#sharedworkerglobalscope">HTML Standard</a> defines <code>SharedWorkerGlobalScope</code></p>
-<pre class=webidl><code>[Global=Worker,SharedWorker, Exposed=SharedWorker]
+<pre class=webidl><code>
+
+[Global=(Worker,SharedWorker),Exposed=SharedWorker]
 interface SharedWorkerGlobalScope : WorkerGlobalScope {
   [Replaceable] readonly attribute DOMString name;
+
   undefined close();
+
   attribute EventHandler onconnect;
 };</code></pre>
   

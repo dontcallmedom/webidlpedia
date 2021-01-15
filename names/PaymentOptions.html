@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentoptions">Payment Request API</a> defines <code>PaymentOptions</code></p>
-<pre class=webidl><code>dictionary PaymentOptions {
-  boolean requestPayerName;
-  boolean requestBillingAddress;
-  boolean requestPayerEmail;
-  boolean requestPayerPhone;
-  boolean requestShipping;
-  PaymentShippingType shippingType;
+<pre class=webidl><code>
+
+dictionary PaymentOptions {
+  boolean requestPayerName = false;
+  boolean requestBillingAddress = false;
+  boolean requestPayerEmail = false;
+  boolean requestPayerPhone = false;
+  boolean requestShipping = false;
+  PaymentShippingType shippingType = "shipping";
 };</code></pre>
   
 </section>

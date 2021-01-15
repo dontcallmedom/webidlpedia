@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#audioprocessingevent">Web Audio API</a> defines <code>AudioProcessingEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface AudioProcessingEvent : Event {
-  constructor(DOMString type, AudioProcessingEventInit eventInitDict);
+  constructor (DOMString type, AudioProcessingEventInit eventInitDict);
   readonly attribute double playbackTime;
   readonly attribute AudioBuffer inputBuffer;
   readonly attribute AudioBuffer outputBuffer;

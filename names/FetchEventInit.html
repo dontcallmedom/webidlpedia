@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#dictdef-fetcheventinit">Service Workers Nightly</a> defines <code>FetchEventInit</code></p>
-<pre class=webidl><code>dictionary FetchEventInit : ExtendableEventInit {
-  Request request;
+<pre class=webidl><code>
+
+dictionary FetchEventInit : ExtendableEventInit {
+  required Request request;
   Promise<any> preloadResponse;
-  DOMString clientId;
-  DOMString resultingClientId;
-  DOMString replacesClientId;
+  DOMString clientId = "";
+  DOMString resultingClientId = "";
+  DOMString replacesClientId = "";
   Promise<undefined> handled;
 };</code></pre>
   

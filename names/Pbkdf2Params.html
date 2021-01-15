@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params">Web Cryptography API</a> defines <code>Pbkdf2Params</code></p>
-<pre class=webidl><code>dictionary Pbkdf2Params : Algorithm {
-  BufferSource salt;
-  unsigned long iterations;
-  HashAlgorithmIdentifier hash;
+<pre class=webidl><code>
+
+dictionary Pbkdf2Params : Algorithm {
+  required BufferSource salt;
+  required [EnforceRange] unsigned long iterations;
+  required HashAlgorithmIdentifier hash;
 };</code></pre>
   
 </section>

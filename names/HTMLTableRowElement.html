@@ -7,23 +7,30 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablerowelement">HTML Standard</a> defines <code>HTMLTableRowElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLTableRowElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   readonly attribute long rowIndex;
   readonly attribute long sectionRowIndex;
   [SameObject] readonly attribute HTMLCollection cells;
   HTMLTableCellElement insertCell(optional long index = -1);
   [CEReactions] undefined deleteCell(long index);
-};</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/#other-elements,-attributes-and-apis">HTML Standard</a>
-<pre class=webidl><code>partial interface HTMLTableRowElement {
+
+  // also has obsolete members
+};
+
+partial interface HTMLTableRowElement {
   [CEReactions] attribute DOMString align;
   [CEReactions] attribute DOMString ch;
   [CEReactions] attribute DOMString chOff;
   [CEReactions] attribute DOMString vAlign;
-  [CEReactions] attribute DOMString bgColor;
-};</code></pre></li></ol>
+
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+};</code></pre>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

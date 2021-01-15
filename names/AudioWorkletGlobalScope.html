@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#audioworkletglobalscope">Web Audio API</a> defines <code>AudioWorkletGlobalScope</code></p>
-<pre class=webidl><code>[Global=Worklet,AudioWorklet, Exposed=AudioWorklet]
+<pre class=webidl><code>
+
+[Global=(Worklet, AudioWorklet), Exposed=AudioWorklet]
 interface AudioWorkletGlobalScope : WorkletGlobalScope {
-  undefined registerProcessor(DOMString name, AudioWorkletProcessorConstructor processorCtor);
+  undefined registerProcessor (DOMString name,
+                               AudioWorkletProcessorConstructor processorCtor);
   readonly attribute unsigned long long currentFrame;
   readonly attribute double currentTime;
   readonly attribute float sampleRate;

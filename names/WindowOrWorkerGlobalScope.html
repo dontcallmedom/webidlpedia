@@ -7,34 +7,52 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>WindowOrWorkerGlobalScope</code></p>
-<pre class=webidl><code>interface mixin WindowOrWorkerGlobalScope {
+<pre class=webidl><code>
+
+interface mixin WindowOrWorkerGlobalScope {
   [Replaceable] readonly attribute USVString origin;
   readonly attribute boolean isSecureContext;
   readonly attribute boolean crossOriginIsolated;
+
+  // base64 utility methods
   DOMString btoa(DOMString data);
   ByteString atob(DOMString data);
+
+  // timers
   long setTimeout(TimerHandler handler, optional long timeout = 0, any... arguments);
   undefined clearTimeout(optional long handle = 0);
   long setInterval(TimerHandler handler, optional long timeout = 0, any... arguments);
   undefined clearInterval(optional long handle = 0);
+
+  // microtask queuing
   undefined queueMicrotask(VoidFunction callback);
+
+  // ImageBitmap
   Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, optional ImageBitmapOptions options = {});
   Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {});
 };</code></pre>
   <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
+<pre class=webidl><code>
+
+partial interface mixin WindowOrWorkerGlobalScope {
   [NewObject] Promise<Response> fetch(RequestInfo input, optional RequestInit init = {});
 };</code></pre></li><li><a href="https://wicg.github.io/origin-policy/#monkeypatch-html-windoworworkerglobalscope">Origin Policy</a>
 <pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
   readonly attribute FrozenArray<DOMString> originPolicyIds;
 };</code></pre></li><li><a href="https://www.w3.org/TR/hr-time-3/#the-performance-attribute">High Resolution Time</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
+<pre class=webidl><code>
+
+partial interface mixin WindowOrWorkerGlobalScope {
   [Replaceable] readonly attribute Performance performance;
 };</code></pre></li><li><a href="https://www.w3.org/TR/IndexedDB-2/#factory-interface">Indexed Database API 3.0</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
+<pre class=webidl><code>
+
+partial interface mixin WindowOrWorkerGlobalScope {
   [SameObject] readonly attribute IDBFactory indexedDB;
 };</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#global-caches">Service Workers Nightly</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
+<pre class=webidl><code>
+
+partial interface mixin WindowOrWorkerGlobalScope {
   [SecureContext, SameObject] readonly attribute CacheStorage caches;
 };</code></pre></li><li><a href="https://www.w3.org/TR/WebCryptoAPI/#crypto-interface">Web Cryptography API</a>
 <pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {

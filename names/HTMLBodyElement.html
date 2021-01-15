@@ -7,22 +7,28 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/sections.html#htmlbodyelement">HTML Standard</a> defines <code>HTMLBodyElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLBodyElement : HTMLElement {
   [HTMLConstructor] constructor();
+
+  // also has obsolete members
+};
+
+partial interface HTMLBodyElement {
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString text;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString link;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString vLink;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString aLink;
+  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions] attribute DOMString background;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://compat.spec.whatwg.org/#windoworientation-interface">Compatibility Standard</a>
-<pre class=webidl><code>partial interface HTMLBodyElement {
-  attribute EventHandler onorientationchange;
-};</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>HTMLBodyElement includes WindowEventHandlers;
+<pre class=webidl><code>
+
 partial interface HTMLBodyElement {
-  [CEReactions] attribute DOMString text;
-  [CEReactions] attribute DOMString link;
-  [CEReactions] attribute DOMString vLink;
-  [CEReactions] attribute DOMString aLink;
-  [CEReactions] attribute DOMString bgColor;
-  [CEReactions] attribute DOMString background;
+    attribute EventHandler onorientationchange;
 };</code></pre></li></ol>
 </section>
 

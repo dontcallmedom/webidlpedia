@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#dictdef-oscillatoroptions">Web Audio API</a> defines <code>OscillatorOptions</code></p>
-<pre class=webidl><code>dictionary OscillatorOptions : AudioNodeOptions {
-  OscillatorType type;
-  float frequency;
-  float detune;
+<pre class=webidl><code>
+
+dictionary OscillatorOptions : AudioNodeOptions {
+  OscillatorType type = "sine";
+  float frequency = 440;
+  float detune = 0;
   PeriodicWave periodicWave;
 };</code></pre>
   

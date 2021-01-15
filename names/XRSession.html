@@ -7,16 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrsession">WebXR Device API</a> defines <code>XRSession</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface XRSession : EventTarget {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] interface XRSession : EventTarget {
+  // Attributes
   readonly attribute XRVisibilityState visibilityState;
   [SameObject] readonly attribute XRRenderState renderState;
   [SameObject] readonly attribute XRInputSourceArray inputSources;
+
+  // Methods
   undefined updateRenderState(optional XRRenderStateInit state = {});
   [NewObject] Promise<XRReferenceSpace> requestReferenceSpace(XRReferenceSpaceType type);
+
   unsigned long requestAnimationFrame(XRFrameRequestCallback callback);
   undefined cancelAnimationFrame(unsigned long handle);
+
   Promise<undefined> end();
+
+  // Events
   attribute EventHandler onend;
   attribute EventHandler oninputsourceschange;
   attribute EventHandler onselect;
@@ -28,17 +36,26 @@ interface XRSession : EventTarget {
   attribute EventHandler onvisibilitychange;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://immersive-web.github.io/dom-overlays/#xrsession">WebXR DOM Overlays Module</a>
-<pre class=webidl><code>partial interface XRSession {
+<pre class=webidl><code>
+
+partial interface XRSession {
   readonly attribute XRDOMOverlayState? domOverlayState;
 };</code></pre></li><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a>
-<pre class=webidl><code>partial interface XRSession {
+<pre class=webidl><code>
+
+partial interface XRSession {
   Promise<XRHitTestSource> requestHitTestSource(XRHitTestOptionsInit options);
   Promise<XRTransientInputHitTestSource> requestHitTestSourceForTransientInput(XRTransientInputHitTestOptionsInit options);
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr-ar-module-1/#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a>
-<pre class=webidl><code>partial interface XRSession {
+<pre class=webidl><code>
+
+partial interface XRSession {
+  // Attributes
   readonly attribute XREnvironmentBlendMode environmentBlendMode;
 };
+
 partial interface XRSession {
+  // Attributes
   readonly attribute XRInteractionMode interactionMode;
 };</code></pre></li></ol>
 </section>

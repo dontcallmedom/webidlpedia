@@ -7,11 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#offscreencanvas">HTML Standard</a> defines <code>OffscreenCanvas</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Transferable]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker), Transferable]
 interface OffscreenCanvas : EventTarget {
-  constructor([EnforceRange] [EnforceRange] unsigned long long width, [EnforceRange] [EnforceRange] unsigned long long height);
-  attribute unsigned long long width;
-  attribute unsigned long long height;
+  constructor([EnforceRange] unsigned long long width, [EnforceRange] unsigned long long height);
+
+  attribute [EnforceRange] unsigned long long width;
+  attribute [EnforceRange] unsigned long long height;
+
   OffscreenRenderingContext? getContext(OffscreenRenderingContextId contextId, optional any options = null);
   ImageBitmap transferToImageBitmap();
   Promise<Blob> convertToBlob(optional ImageEncodeOptions options = {});

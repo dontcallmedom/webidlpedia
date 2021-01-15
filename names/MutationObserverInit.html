@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#dictdef-mutationobserverinit">DOM Standard</a> defines <code>MutationObserverInit</code></p>
-<pre class=webidl><code>dictionary MutationObserverInit {
-  boolean childList;
+<pre class=webidl><code>
+
+dictionary MutationObserverInit {
+  boolean childList = false;
   boolean attributes;
   boolean characterData;
-  boolean subtree;
+  boolean subtree = false;
   boolean attributeOldValue;
   boolean characterDataOldValue;
   sequence<DOMString> attributeFilter;

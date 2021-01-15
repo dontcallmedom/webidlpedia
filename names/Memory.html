@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#memory">WebAssembly JavaScript Interface</a> defines <code>Memory</code></p>
-<pre class=webidl><code>[LegacyNamespace=WebAssembly, Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]
 interface Memory {
   constructor(MemoryDescriptor descriptor);
-  unsigned long grow([EnforceRange] [EnforceRange] unsigned long delta);
+  unsigned long grow([EnforceRange] unsigned long delta);
   readonly attribute ArrayBuffer buffer;
 };</code></pre>
   

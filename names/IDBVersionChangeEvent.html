@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbversionchangeevent">Indexed Database API 3.0</a> defines <code>IDBVersionChangeEvent</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface IDBVersionChangeEvent : Event {
   constructor(DOMString type, optional IDBVersionChangeEventInit eventInitDict = {});
   readonly attribute unsigned long long oldVersion;

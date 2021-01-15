@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/media-capabilities/#dictdef-videoconfiguration">Media Capabilities</a> defines <code>VideoConfiguration</code></p>
-<pre class=webidl><code>dictionary VideoConfiguration {
-  DOMString contentType;
-  unsigned long width;
-  unsigned long height;
-  unsigned long long bitrate;
-  double framerate;
+<pre class=webidl><code>
+
+dictionary VideoConfiguration {
+  required DOMString contentType;
+  required unsigned long width;
+  required unsigned long height;
+  required unsigned long long bitrate;
+  required double framerate;
   boolean hasAlphaChannel;
   HdrMetadataType hdrMetadataType;
   ColorGamut colorGamut;

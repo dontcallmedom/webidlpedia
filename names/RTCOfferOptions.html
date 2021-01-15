@@ -7,14 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCOfferOptions</code></p>
-<pre class=webidl><code>dictionary RTCOfferOptions : RTCOfferAnswerOptions {
-  boolean iceRestart;
-};</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc/">WebRTC 1.0: Real-Time Communication Between Browsers</a>
-<pre class=webidl><code>partial dictionary RTCOfferOptions {
+<pre class=webidl><code>
+
+dictionary RTCOfferOptions : RTCOfferAnswerOptions {
+  boolean iceRestart = false;
+};
+
+partial dictionary RTCOfferOptions {
   boolean offerToReceiveAudio;
   boolean offerToReceiveVideo;
-};</code></pre></li></ol>
+};</code></pre>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

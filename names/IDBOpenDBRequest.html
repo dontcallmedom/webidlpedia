@@ -7,8 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbopendbrequest">Indexed Database API 3.0</a> defines <code>IDBOpenDBRequest</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface IDBOpenDBRequest : IDBRequest {
+  // Event handlers:
   attribute EventHandler onblocked;
   attribute EventHandler onupgradeneeded;
 };</code></pre>

@@ -7,16 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrrenderstate">WebXR Device API</a> defines <code>XRRenderState</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface XRRenderState {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] interface XRRenderState {
   readonly attribute double depthNear;
   readonly attribute double depthFar;
   readonly attribute double? inlineVerticalFieldOfView;
   readonly attribute XRWebGLLayer? baseLayer;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxrlayers-1/#xrrenderstatechanges">WebXR Layers API Level 1</a>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-partial interface XRRenderState {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] partial interface XRRenderState {
   readonly attribute FrozenArray<XRLayer> layers;
 };</code></pre></li></ol>
 </section>

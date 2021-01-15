@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-fetch/#backgroundfetchregistration">Background Fetch</a> defines <code>BackgroundFetchRegistration</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface BackgroundFetchRegistration : EventTarget {
   readonly attribute DOMString id;
   readonly attribute unsigned long long uploadTotal;
@@ -17,7 +19,9 @@ interface BackgroundFetchRegistration : EventTarget {
   readonly attribute BackgroundFetchResult result;
   readonly attribute BackgroundFetchFailureReason failureReason;
   readonly attribute boolean recordsAvailable;
+
   attribute EventHandler onprogress;
+
   Promise<boolean> abort();
   Promise<BackgroundFetchRecord> match(RequestInfo request, optional CacheQueryOptions options = {});
   Promise<sequence<BackgroundFetchRecord>> matchAll(optional RequestInfo request, optional CacheQueryOptions options = {});

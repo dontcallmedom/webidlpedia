@@ -7,20 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextPathElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface SVGTextPathElement : SVGTextContentElement {
-  const unsigned short TEXTPATH_METHODTYPE_UNKNOWN;
-  const unsigned short TEXTPATH_METHODTYPE_ALIGN;
-  const unsigned short TEXTPATH_METHODTYPE_STRETCH;
-  const unsigned short TEXTPATH_SPACINGTYPE_UNKNOWN;
-  const unsigned short TEXTPATH_SPACINGTYPE_AUTO;
-  const unsigned short TEXTPATH_SPACINGTYPE_EXACT;
+
+  // textPath Method Types
+  const unsigned short TEXTPATH_METHODTYPE_UNKNOWN = 0;
+  const unsigned short TEXTPATH_METHODTYPE_ALIGN = 1;
+  const unsigned short TEXTPATH_METHODTYPE_STRETCH = 2;
+
+  // textPath Spacing Types
+  const unsigned short TEXTPATH_SPACINGTYPE_UNKNOWN = 0;
+  const unsigned short TEXTPATH_SPACINGTYPE_AUTO = 1;
+  const unsigned short TEXTPATH_SPACINGTYPE_EXACT = 2;
+
   [SameObject] readonly attribute SVGAnimatedLength startOffset;
   [SameObject] readonly attribute SVGAnimatedEnumeration method;
   [SameObject] readonly attribute SVGAnimatedEnumeration spacing;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>
-<pre class=webidl><code>SVGTextPathElement includes SVGURIReference;</code></pre></li></ol>
+  
 </section>
 
   

@@ -7,15 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/web-nfc/#dom-ndefrecord">Web NFC</a> defines <code>NDEFRecord</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window]
 interface NDEFRecord {
   constructor(NDEFRecordInit recordInit);
+
   readonly attribute USVString recordType;
   readonly attribute USVString? mediaType;
   readonly attribute USVString? id;
   readonly attribute DataView? data;
+
   readonly attribute USVString? encoding;
   readonly attribute USVString? lang;
+
   sequence<NDEFRecord>? toRecords();
 };</code></pre>
   

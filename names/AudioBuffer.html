@@ -7,16 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#audiobuffer">Web Audio API</a> defines <code>AudioBuffer</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface AudioBuffer {
-  constructor(AudioBufferOptions options);
+  constructor (AudioBufferOptions options);
   readonly attribute float sampleRate;
   readonly attribute unsigned long length;
   readonly attribute double duration;
   readonly attribute unsigned long numberOfChannels;
-  Float32Array getChannelData(unsigned long channel);
-  undefined copyFromChannel(Float32Array destination, unsigned long channelNumber, optional unsigned long bufferOffset = 0);
-  undefined copyToChannel(Float32Array source, unsigned long channelNumber, optional unsigned long bufferOffset = 0);
+  Float32Array getChannelData (unsigned long channel);
+  undefined copyFromChannel (Float32Array destination,
+                             unsigned long channelNumber,
+                             optional unsigned long bufferOffset = 0);
+  undefined copyToChannel (Float32Array source,
+                           unsigned long channelNumber,
+                           optional unsigned long bufferOffset = 0);
 };</code></pre>
   
 </section>

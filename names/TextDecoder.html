@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://encoding.spec.whatwg.org/#textdecoder">Encoding Standard</a> defines <code>TextDecoder</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface TextDecoder {
   constructor(optional DOMString label = "utf-8", optional TextDecoderOptions options = {});
-  USVString decode(optional BufferSource input, optional TextDecodeOptions options = {});
+
+  USVString decode(optional [AllowShared] BufferSource input, optional TextDecodeOptions options = {});
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/encoding/">Encoding Standard</a>
-<pre class=webidl><code>TextDecoder includes TextDecoderCommon;</code></pre></li></ol>
+  
 </section>
 
   

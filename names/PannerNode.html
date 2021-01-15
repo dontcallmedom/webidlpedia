@@ -7,9 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#pannernode">Web Audio API</a> defines <code>PannerNode</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface PannerNode : AudioNode {
-  constructor(BaseAudioContext context, optional PannerOptions options = {});
+  constructor (BaseAudioContext context, optional PannerOptions options = {});
   attribute PanningModelType panningModel;
   readonly attribute AudioParam positionX;
   readonly attribute AudioParam positionY;
@@ -24,8 +26,8 @@ interface PannerNode : AudioNode {
   attribute double coneInnerAngle;
   attribute double coneOuterAngle;
   attribute double coneOuterGain;
-  undefined setPosition(float x, float y, float z);
-  undefined setOrientation(float x, float y, float z);
+  undefined setPosition (float x, float y, float z);
+  undefined setOrientation (float x, float y, float z);
 };</code></pre>
   
 </section>

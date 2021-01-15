@@ -22,11 +22,13 @@ interface MediaRecorder : EventTarget {
   readonly attribute unsigned long videoBitsPerSecond;
   readonly attribute unsigned long audioBitsPerSecond;
   readonly attribute BitrateMode audioBitrateMode;
+
   undefined start(optional unsigned long timeslice);
   undefined stop();
   undefined pause();
   undefined resume();
   undefined requestData();
+
   static boolean isTypeSupported(DOMString type);
 };</code></pre>
   

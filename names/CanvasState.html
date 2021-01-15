@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasState</code></p>
-<pre class=webidl><code>interface mixin CanvasState {
-  undefined save();
-  undefined restore();
+<pre class=webidl><code>
+
+interface mixin CanvasState {
+  // state
+  undefined save(); // push state on state stack
+  undefined restore(); // pop state stack and restore state
 };</code></pre>
   
 </section>

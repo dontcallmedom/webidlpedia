@@ -7,12 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#domimplementation">DOM Standard</a> defines <code>DOMImplementation</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface DOMImplementation {
   [NewObject] DocumentType createDocumentType(DOMString qualifiedName, DOMString publicId, DOMString systemId);
-  [NewObject] XMLDocument createDocument(DOMString? namespace, [LegacyNullToEmptyString] [LegacyNullToEmptyString] DOMString qualifiedName, optional DocumentType? doctype = null);
+  [NewObject] XMLDocument createDocument(DOMString? namespace, [LegacyNullToEmptyString] DOMString qualifiedName, optional DocumentType? doctype = null);
   [NewObject] Document createHTMLDocument(optional DOMString title);
-  boolean hasFeature();
+
+  boolean hasFeature(); // useless; always returns true
 };</code></pre>
   
 </section>

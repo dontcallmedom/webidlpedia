@@ -7,16 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrview">WebXR Device API</a> defines <code>XRView</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface XRView {
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window] interface XRView {
   readonly attribute XREye eye;
   readonly attribute Float32Array projectionMatrix;
   [SameObject] readonly attribute XRRigidTransform transform;
   readonly attribute double? recommendedViewportScale;
+
   undefined requestViewportScale(double? scale);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr-ar-module-1/#first-person-observer">WebXR Augmented Reality Module - Level 1</a>
-<pre class=webidl><code>partial interface XRView {
+<pre class=webidl><code>
+
+partial interface XRView {
   readonly attribute boolean isFirstPersonObserver;
 };</code></pre></li></ol>
 </section>

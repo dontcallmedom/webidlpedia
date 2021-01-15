@@ -7,18 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webappsec-csp/#dictdef-securitypolicyviolationeventinit">Content Security Policy Level 3</a> defines <code>SecurityPolicyViolationEventInit</code></p>
-<pre class=webidl><code>dictionary SecurityPolicyViolationEventInit : EventInit {
-  USVString documentURL;
-  USVString referrer;
-  USVString blockedURL;
-  DOMString effectiveDirective;
-  DOMString originalPolicy;
-  USVString sourceFile;
-  DOMString sample;
-  SecurityPolicyViolationEventDisposition disposition;
-  unsigned short statusCode;
-  unsigned long lineno;
-  unsigned long colno;
+<pre class=webidl><code>
+
+dictionary SecurityPolicyViolationEventInit : EventInit {
+    required USVString      documentURL;
+             USVString      referrer = "";
+             USVString      blockedURL = "";
+    required DOMString      effectiveDirective;
+    required DOMString      originalPolicy;
+             USVString      sourceFile = "";
+             DOMString      sample = "";
+    required SecurityPolicyViolationEventDisposition disposition;
+    required unsigned short statusCode;
+             unsigned long  lineno = 0;
+             unsigned long  colno = 0;
 };</code></pre>
   
 </section>

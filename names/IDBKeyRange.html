@@ -7,16 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbkeyrange">Indexed Database API 3.0</a> defines <code>IDBKeyRange</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface IDBKeyRange {
   readonly attribute any lower;
   readonly attribute any upper;
   readonly attribute boolean lowerOpen;
   readonly attribute boolean upperOpen;
+
+  // Static construction methods:
   [NewObject] static IDBKeyRange only(any value);
   [NewObject] static IDBKeyRange lowerBound(any lower, optional boolean open = false);
   [NewObject] static IDBKeyRange upperBound(any upper, optional boolean open = false);
-  [NewObject] static IDBKeyRange bound(any lower, any upper, optional boolean lowerOpen = false, optional boolean upperOpen = false);
+  [NewObject] static IDBKeyRange bound(any lower,
+                                       any upper,
+                                       optional boolean lowerOpen = false,
+                                       optional boolean upperOpen = false);
+
   boolean includes(any key);
 };</code></pre>
   

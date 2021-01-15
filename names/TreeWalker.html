@@ -7,12 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#treewalker">DOM Standard</a> defines <code>TreeWalker</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface TreeWalker {
   [SameObject] readonly attribute Node root;
   readonly attribute unsigned long whatToShow;
   readonly attribute NodeFilter? filter;
-  attribute Node currentNode;
+           attribute Node currentNode;
+
   Node? parentNode();
   Node? firstChild();
   Node? lastChild();

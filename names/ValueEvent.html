@@ -7,7 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#valueevent">Web Bluetooth</a> defines <code>ValueEvent</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
+<pre class=webidl><code>
+
+[
+  Exposed=Window,
+  SecureContext
+]
 interface ValueEvent : Event {
   constructor(DOMString type, optional ValueEventInit initDict = {});
   readonly attribute any value;

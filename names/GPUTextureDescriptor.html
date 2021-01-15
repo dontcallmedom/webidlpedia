@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gputexturedescriptor">WebGPU</a> defines <code>GPUTextureDescriptor</code></p>
-<pre class=webidl><code>dictionary GPUTextureDescriptor : GPUObjectDescriptorBase {
-  GPUExtent3D size;
-  GPUIntegerCoordinate mipLevelCount;
-  GPUSize32 sampleCount;
-  GPUTextureDimension dimension;
-  GPUTextureFormat format;
-  GPUTextureUsageFlags usage;
+<pre class=webidl><code>
+
+dictionary GPUTextureDescriptor : GPUObjectDescriptorBase {
+    required GPUExtent3D size;
+    GPUIntegerCoordinate mipLevelCount = 1;
+    GPUSize32 sampleCount = 1;
+    GPUTextureDimension dimension = "2d";
+    required GPUTextureFormat format;
+    required GPUTextureUsageFlags usage;
 };</code></pre>
   
 </section>

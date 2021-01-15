@@ -7,11 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#dictdef-bluetoothlescanfilterinit">Web Bluetooth</a> defines <code>BluetoothLEScanFilterInit</code></p>
-<pre class=webidl><code>dictionary BluetoothLEScanFilterInit {
+<pre class=webidl><code>
+
+dictionary BluetoothLEScanFilterInit {
   sequence<BluetoothServiceUUID> services;
   DOMString name;
   DOMString namePrefix;
+  // Maps unsigned shorts to BluetoothDataFilters.
   object manufacturerData;
+  // Maps BluetoothServiceUUIDs to BluetoothDataFilters.
   object serviceData;
 };</code></pre>
   

@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#dictdef-offlineaudiocontextoptions">Web Audio API</a> defines <code>OfflineAudioContextOptions</code></p>
-<pre class=webidl><code>dictionary OfflineAudioContextOptions {
-  unsigned long numberOfChannels;
-  unsigned long length;
-  float sampleRate;
+<pre class=webidl><code>
+
+dictionary OfflineAudioContextOptions {
+  unsigned long numberOfChannels = 1;
+  required unsigned long length;
+  required float sampleRate;
 };</code></pre>
   
 </section>

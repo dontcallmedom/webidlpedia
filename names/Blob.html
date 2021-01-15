@@ -7,12 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-Blob">File API</a> defines <code>Blob</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Serializable]
+<pre class=webidl><code>[Exposed=(Window,Worker), Serializable]
 interface Blob {
-  constructor(optional sequence<BlobPart> blobParts, optional BlobPropertyBag options = {});
+  constructor(optional sequence<BlobPart> blobParts,
+              optional BlobPropertyBag options = {});
+
   readonly attribute unsigned long long size;
   readonly attribute DOMString type;
-  Blob slice(optional long long start, optional long long end, optional DOMString contentType);
+
+  // slice Blob into byte-ranged chunks
+  Blob slice(optional [Clamp] long long start,
+            optional [Clamp] long long end,
+            optional DOMString contentType);
+
+  // read from the Blob.
   [NewObject] ReadableStream stream();
   [NewObject] Promise<USVString> text();
   [NewObject] Promise<ArrayBuffer> arrayBuffer();

@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackcapabilities">Media Capture and Streams</a> defines <code>MediaTrackCapabilities</code></p>
-<pre class=webidl><code>dictionary MediaTrackCapabilities {
+<pre class=webidl><code>
+
+dictionary MediaTrackCapabilities {
   ULongRange width;
   ULongRange height;
   DoubleRange aspectRatio;
@@ -25,26 +27,35 @@ base: ../
   DOMString groupId;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackCapabilities {
-  sequence<DOMString> whiteBalanceMode;
-  sequence<DOMString> exposureMode;
-  sequence<DOMString> focusMode;
-  MediaSettingsRange exposureCompensation;
-  MediaSettingsRange exposureTime;
-  MediaSettingsRange colorTemperature;
-  MediaSettingsRange iso;
-  MediaSettingsRange brightness;
-  MediaSettingsRange contrast;
-  MediaSettingsRange saturation;
-  MediaSettingsRange sharpness;
-  MediaSettingsRange focusDistance;
-  MediaSettingsRange pan;
-  MediaSettingsRange tilt;
-  MediaSettingsRange zoom;
-  boolean torch;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackCapabilities {
+  sequence<DOMString>  whiteBalanceMode;
+  sequence<DOMString>  exposureMode;
+  sequence<DOMString>  focusMode;
+
+  MediaSettingsRange   exposureCompensation;
+  MediaSettingsRange   exposureTime;
+  MediaSettingsRange   colorTemperature;
+  MediaSettingsRange   iso;
+
+  MediaSettingsRange   brightness;
+  MediaSettingsRange   contrast;
+  MediaSettingsRange   saturation;
+  MediaSettingsRange   sharpness;
+
+  MediaSettingsRange   focusDistance;
+  MediaSettingsRange   pan;
+  MediaSettingsRange   tilt;
+  MediaSettingsRange   zoom;
+
+  boolean              torch;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>partial dictionary MediaTrackCapabilities {
-  DOMString videoKind;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackCapabilities {
+    // Applies to both depth stream track and color stream track:
+    DOMString videoKind;
 };</code></pre></li></ol>
 </section>
 <section>

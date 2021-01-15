@@ -7,11 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbfactory">Indexed Database API 3.0</a> defines <code>IDBFactory</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface IDBFactory {
-  [NewObject] IDBOpenDBRequest open(DOMString name, optional unsigned long long version);
+  [NewObject] IDBOpenDBRequest open(DOMString name,
+                                    optional [EnforceRange] unsigned long long version);
   [NewObject] IDBOpenDBRequest deleteDatabase(DOMString name);
+
   Promise<sequence<IDBDatabaseInfo>> databases();
+
   short cmp(any first, any second);
 };</code></pre>
   

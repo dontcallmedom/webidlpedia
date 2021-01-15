@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-codecs/#dictdef-encodedvideochunkinit">WebCodecs</a> defines <code>EncodedVideoChunkInit</code></p>
-<pre class=webidl><code>dictionary EncodedVideoChunkInit {
-  EncodedVideoChunkType type;
-  unsigned long long timestamp;
+<pre class=webidl><code>
+
+dictionary EncodedVideoChunkInit {
+  required EncodedVideoChunkType type;
+  required unsigned long long timestamp;
   unsigned long long duration;
-  BufferSource data;
+  required BufferSource data;
 };</code></pre>
   
 </section>

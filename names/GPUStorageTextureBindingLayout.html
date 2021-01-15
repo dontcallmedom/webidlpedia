@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpustoragetexturebindinglayout">WebGPU</a> defines <code>GPUStorageTextureBindingLayout</code></p>
-<pre class=webidl><code>dictionary GPUStorageTextureBindingLayout {
-  GPUStorageTextureAccess access;
-  GPUTextureFormat format;
-  GPUTextureViewDimension viewDimension;
+<pre class=webidl><code>
+
+dictionary GPUStorageTextureBindingLayout {
+    required GPUStorageTextureAccess access;
+    required GPUTextureFormat format;
+    GPUTextureViewDimension viewDimension = "2d";
 };</code></pre>
   
 </section>

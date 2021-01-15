@@ -9,12 +9,14 @@ base: ../
   <p><a href="https://wicg.github.io/portals/#htmlportalelement">Portals</a> defines <code>HTMLPortalElement</code></p>
 <pre class=webidl><code>[Exposed=Window, HTMLConstructor]
 interface HTMLPortalElement : HTMLElement {
-  [CEReactions] attribute USVString src;
-  [CEReactions] attribute DOMString referrerPolicy;
-  [NewObject] Promise<undefined> activate(optional PortalActivateOptions options = {});
-  undefined postMessage(any message, optional PostMessageOptions options = {});
-  attribute EventHandler onmessage;
-  attribute EventHandler onmessageerror;
+    [CEReactions] attribute USVString src;
+    [CEReactions] attribute DOMString referrerPolicy;
+
+    [NewObject] Promise<undefined> activate(optional PortalActivateOptions options = {});
+    undefined postMessage(any message, optional PostMessageOptions options = {});
+
+    attribute EventHandler onmessage;
+    attribute EventHandler onmessageerror;
 };</code></pre>
   
 </section>

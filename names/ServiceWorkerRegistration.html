@@ -7,37 +7,53 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#serviceworkerregistration">Service Workers Nightly</a> defines <code>ServiceWorkerRegistration</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=(Window,Worker)]
 interface ServiceWorkerRegistration : EventTarget {
   readonly attribute ServiceWorker? installing;
   readonly attribute ServiceWorker? waiting;
   readonly attribute ServiceWorker? active;
   [SameObject] readonly attribute NavigationPreloadManager navigationPreload;
+
   readonly attribute USVString scope;
   readonly attribute ServiceWorkerUpdateViaCache updateViaCache;
+
   [NewObject] Promise<undefined> update();
   [NewObject] Promise<boolean> unregister();
+
+  // event
   attribute EventHandler onupdatefound;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://notifications.spec.whatwg.org/">Notifications API Standard</a>
-<pre class=webidl><code>partial interface ServiceWorkerRegistration {
+<pre class=webidl><code>
+
+partial interface ServiceWorkerRegistration {
   Promise<undefined> showNotification(DOMString title, optional NotificationOptions options = {});
   Promise<sequence<Notification>> getNotifications(optional GetNotificationOptions filter = {});
 };</code></pre></li><li><a href="https://wicg.github.io/background-fetch/#extensions-to-service-worker-registration">Background Fetch</a>
-<pre class=webidl><code>partial interface ServiceWorkerRegistration {
+<pre class=webidl><code>
+
+partial interface ServiceWorkerRegistration {
   readonly attribute BackgroundFetchManager backgroundFetch;
 };</code></pre></li><li><a href="https://wicg.github.io/background-sync/spec/#service-worker-registration-extensions">Web Background Synchronization</a>
 <pre class=webidl><code>partial interface ServiceWorkerRegistration {
   readonly attribute SyncManager sync;
 };</code></pre></li><li><a href="https://wicg.github.io/content-index/spec/#extensions-to-service-worker-registration">Content Index</a>
-<pre class=webidl><code>partial interface ServiceWorkerRegistration {
+<pre class=webidl><code>
+
+partial interface ServiceWorkerRegistration {
   [SameObject] readonly attribute ContentIndex index;
 };</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#ServiceWorkerRegistration">Cookie Store API</a>
-<pre class=webidl><code>[Exposed=ServiceWorker,Window]
+<pre class=webidl><code>
+
+[Exposed=(ServiceWorker,Window)]
 partial interface ServiceWorkerRegistration {
   [SameObject] readonly attribute CookieStoreManager cookies;
 };</code></pre></li><li><a href="https://wicg.github.io/periodic-background-sync/#extensions-to-serviceworkerregistration">Web Periodic Background Synchronization</a>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 partial interface ServiceWorkerRegistration {
   readonly attribute PeriodicSyncManager periodicSync;
 };</code></pre></li><li><a href="https://www.w3.org/TR/payment-handler/#extension-to-the-serviceworkerregistration-interface">Payment Handler API</a>

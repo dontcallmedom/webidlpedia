@@ -7,8 +7,10 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentdetailsmodifier">Payment Request API</a> defines <code>PaymentDetailsModifier</code></p>
-<pre class=webidl><code>dictionary PaymentDetailsModifier {
-  DOMString supportedMethods;
+<pre class=webidl><code>
+
+dictionary PaymentDetailsModifier {
+  required DOMString supportedMethods;
   PaymentItem total;
   sequence<PaymentItem> additionalDisplayItems;
   object data;

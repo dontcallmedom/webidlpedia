@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement">HTML Standard</a> defines <code>HTMLMarqueeElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLMarqueeElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString behavior;
   [CEReactions] attribute DOMString bgColor;
   [CEReactions] attribute DOMString direction;
@@ -21,9 +24,11 @@ interface HTMLMarqueeElement : HTMLElement {
   [CEReactions] attribute boolean trueSpeed;
   [CEReactions] attribute unsigned long vspace;
   [CEReactions] attribute DOMString width;
+
   attribute EventHandler onbounce;
   attribute EventHandler onfinish;
   attribute EventHandler onstart;
+
   undefined start();
   undefined stop();
 };</code></pre>

@@ -7,7 +7,8 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/geolocation-sensor/#geolocationsensor">Geolocation Sensor</a> defines <code>GeolocationSensor</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=DedicatedWorker,Window]
+<pre class=webidl><code>[SecureContext,
+ Exposed=(DedicatedWorker, Window)]
 interface GeolocationSensor : Sensor {
   constructor(optional GeolocationSensorOptions options = {});
   static Promise<GeolocationSensorReading> read(optional ReadOptions readOptions = {});

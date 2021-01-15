@@ -7,11 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#audiotracklist">HTML Standard</a> defines <code>AudioTrackList</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface AudioTrackList : EventTarget {
   readonly attribute unsigned long length;
   getter AudioTrack (unsigned long index);
   AudioTrack? getTrackById(DOMString id);
+
   attribute EventHandler onchange;
   attribute EventHandler onaddtrack;
   attribute EventHandler onremovetrack;

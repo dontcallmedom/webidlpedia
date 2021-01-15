@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcerrorinit">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCErrorInit</code></p>
-<pre class=webidl><code>dictionary RTCErrorInit {
-  RTCErrorDetailType errorDetail;
+<pre class=webidl><code>
+
+dictionary RTCErrorInit {
+  required RTCErrorDetailType errorDetail;
   long sdpLineNumber;
   long sctpCauseCode;
   unsigned long receivedAlert;
   unsigned long sentAlert;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial dictionary RTCErrorInit {
+<pre class=webidl><code>
+
+partial dictionary RTCErrorInit {
   long httpRequestStatusCode;
 };</code></pre></li></ol>
 </section>

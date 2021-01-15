@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/scroll-animations-1/#dictdef-scrolltimelineoptions">Scroll-linked Animations</a> defines <code>ScrollTimelineOptions</code></p>
-<pre class=webidl><code>dictionary ScrollTimelineOptions {
+<pre class=webidl><code>
+
+dictionary ScrollTimelineOptions {
   Element? source;
-  ScrollDirection orientation;
-  ScrollTimelineOffset start;
-  ScrollTimelineOffset end;
-  (double or ScrollTimelineAutoKeyword) timeRange;
+  ScrollDirection orientation = "block";
+  ScrollTimelineOffset start = "auto";
+  ScrollTimelineOffset end = "auto";
+  (double or ScrollTimelineAutoKeyword) timeRange = "auto";
 };</code></pre>
   
 </section>

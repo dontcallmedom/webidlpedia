@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/shape-detection-api/#dictdef-detectedbarcode">Accelerated Shape Detection in Images</a> defines <code>DetectedBarcode</code></p>
-<pre class=webidl><code>dictionary DetectedBarcode {
-  DOMRectReadOnly boundingBox;
-  DOMString rawValue;
-  BarcodeFormat format;
-  FrozenArray<Point2D> cornerPoints;
+<pre class=webidl><code>
+
+dictionary DetectedBarcode {
+  required DOMRectReadOnly boundingBox;
+  required DOMString rawValue;
+  required BarcodeFormat format;
+  required FrozenArray<Point2D> cornerPoints;
 };</code></pre>
   
 </section>

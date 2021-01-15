@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement">HTML Standard</a> defines <code>HTMLSlotElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLSlotElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString name;
   sequence<Node> assignedNodes(optional AssignedNodesOptions options = {});
   sequence<Element> assignedElements(optional AssignedNodesOptions options = {});

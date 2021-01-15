@@ -7,19 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession">Encrypted Media Extensions</a> defines <code>MediaKeySession</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
-interface MediaKeySession : EventTarget {
-  readonly attribute DOMString sessionId;
-  readonly attribute unrestricted double expiration;
-  readonly attribute Promise<undefined> closed;
-  readonly attribute MediaKeyStatusMap keyStatuses;
-  attribute EventHandler onkeystatuseschange;
-  attribute EventHandler onmessage;
-  Promise<undefined> generateRequest(DOMString initDataType, BufferSource initData);
-  Promise<boolean> load(DOMString sessionId);
-  Promise<undefined> update(BufferSource response);
-  Promise<undefined> close();
-  Promise<undefined> remove();
+<pre class=webidl><code>
+
+[Exposed=Window, SecureContext] interface MediaKeySession : EventTarget {
+    readonly        attribute DOMString           sessionId;
+    readonly        attribute unrestricted double expiration;
+    readonly        attribute Promise<undefined>       closed;
+    readonly        attribute MediaKeyStatusMap   keyStatuses;
+                    attribute EventHandler        onkeystatuseschange;
+                    attribute EventHandler        onmessage;
+    Promise<undefined>    generateRequest (DOMString initDataType, BufferSource initData);
+    Promise<boolean> load (DOMString sessionId);
+    Promise<undefined>    update (BufferSource response);
+    Promise<undefined>    close ();
+    Promise<undefined>    remove ();
 };</code></pre>
   
 </section>

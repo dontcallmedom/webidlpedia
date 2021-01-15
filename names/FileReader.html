@@ -7,20 +7,32 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-filereader">File API</a> defines <code>FileReader</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
-interface FileReader : EventTarget {
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
+interface FileReader: EventTarget {
   constructor();
+  // async read methods
   undefined readAsArrayBuffer(Blob blob);
   undefined readAsBinaryString(Blob blob);
   undefined readAsText(Blob blob, optional DOMString encoding);
   undefined readAsDataURL(Blob blob);
+
   undefined abort();
-  const unsigned short EMPTY;
-  const unsigned short LOADING;
-  const unsigned short DONE;
+
+  // states
+  const unsigned short EMPTY = 0;
+  const unsigned short LOADING = 1;
+  const unsigned short DONE = 2;
+
   readonly attribute unsigned short readyState;
+
+  // File or Blob data
   readonly attribute (DOMString or ArrayBuffer)? result;
+
   readonly attribute DOMException? error;
+
+  // event handler content attributes
   attribute EventHandler onloadstart;
   attribute EventHandler onprogress;
   attribute EventHandler onload;

@@ -7,19 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmltrackelement">HTML Standard</a> defines <code>HTMLTrackElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLTrackElement : HTMLElement {
   [HTMLConstructor] constructor();
+
   [CEReactions] attribute DOMString kind;
   [CEReactions] attribute USVString src;
   [CEReactions] attribute DOMString srclang;
   [CEReactions] attribute DOMString label;
   [CEReactions] attribute boolean default;
-  const unsigned short NONE;
-  const unsigned short LOADING;
-  const unsigned short LOADED;
-  const unsigned short ERROR;
+
+  const unsigned short NONE = 0;
+  const unsigned short LOADING = 1;
+  const unsigned short LOADED = 2;
+  const unsigned short ERROR = 3;
   readonly attribute unsigned short readyState;
+
   readonly attribute TextTrack track;
 };</code></pre>
   

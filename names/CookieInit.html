@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/cookie-store/#dictdef-cookieinit">Cookie Store API</a> defines <code>CookieInit</code></p>
-<pre class=webidl><code>dictionary CookieInit {
-  USVString name;
-  USVString value;
-  DOMTimeStamp? expires;
-  USVString? domain;
-  USVString path;
-  CookieSameSite sameSite;
+<pre class=webidl><code>
+
+dictionary CookieInit {
+  required USVString name;
+  required USVString value;
+  DOMTimeStamp? expires = null;
+  USVString? domain = null;
+  USVString path = "/";
+  CookieSameSite sameSite = "strict";
 };</code></pre>
   
 </section>

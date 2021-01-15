@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/permissions/#permissionstatus">Permissions</a> defines <code>PermissionStatus</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface PermissionStatus : EventTarget {
   readonly attribute PermissionState state;
   attribute EventHandler onchange;

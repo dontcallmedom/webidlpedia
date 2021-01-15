@@ -13,14 +13,20 @@ base: ../
   RTCBundlePolicy bundlePolicy;
   RTCRtcpMuxPolicy rtcpMuxPolicy;
   sequence<RTCCertificate> certificates;
-  [EnforceRange] octet iceCandidatePoolSize;
+  [EnforceRange] octet iceCandidatePoolSize = 0;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>partial dictionary RTCConfiguration {
-  boolean encodedInsertableStreams;
+<pre class=webidl><code>
+
+
+// New fields in RTCConfiguration
+partial dictionary RTCConfiguration {
+    boolean encodedInsertableStreams = false;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial dictionary RTCConfiguration {
-  DOMString peerIdentity;
+<pre class=webidl><code>
+
+partial dictionary RTCConfiguration {
+    DOMString peerIdentity;
 };</code></pre></li></ol>
 </section>
 <section>

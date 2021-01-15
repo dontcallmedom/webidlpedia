@@ -7,12 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webauthn/#dictdef-collectedclientdata">Web Authentication: An API for accessing Public Key Credentials - Level 2</a> defines <code>CollectedClientData</code></p>
-<pre class=webidl><code>dictionary CollectedClientData {
-  DOMString type;
-  DOMString challenge;
-  DOMString origin;
-  boolean crossOrigin;
-  TokenBinding tokenBinding;
+<pre class=webidl><code>
+
+dictionary CollectedClientData {
+    required DOMString           type;
+    required DOMString           challenge;
+    required DOMString           origin;
+    boolean                      crossOrigin;
+    TokenBinding                 tokenBinding;
 };</code></pre>
   
 </section>

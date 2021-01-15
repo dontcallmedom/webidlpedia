@@ -7,12 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#wheelevent">UI Events</a> defines <code>WheelEvent</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface WheelEvent : MouseEvent {
   constructor(DOMString type, optional WheelEventInit eventInitDict);
-  const unsigned long DOM_DELTA_PIXEL;
-  const unsigned long DOM_DELTA_LINE;
-  const unsigned long DOM_DELTA_PAGE;
+  // DeltaModeCode
+  const unsigned long DOM_DELTA_PIXEL = 0x00;
+  const unsigned long DOM_DELTA_LINE  = 0x01;
+  const unsigned long DOM_DELTA_PAGE  = 0x02;
+
   readonly attribute double deltaX;
   readonly attribute double deltaY;
   readonly attribute double deltaZ;

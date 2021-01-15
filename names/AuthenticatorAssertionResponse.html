@@ -7,11 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webauthn/#authenticatorassertionresponse">Web Authentication: An API for accessing Public Key Credentials - Level 2</a> defines <code>AuthenticatorAssertionResponse</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window]
 interface AuthenticatorAssertionResponse : AuthenticatorResponse {
-  [SameObject] readonly attribute ArrayBuffer authenticatorData;
-  [SameObject] readonly attribute ArrayBuffer signature;
-  [SameObject] readonly attribute ArrayBuffer? userHandle;
+    [SameObject] readonly attribute ArrayBuffer      authenticatorData;
+    [SameObject] readonly attribute ArrayBuffer      signature;
+    [SameObject] readonly attribute ArrayBuffer?     userHandle;
 };</code></pre>
   
 </section>

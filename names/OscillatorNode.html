@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#oscillatornode">Web Audio API</a> defines <code>OscillatorNode</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface OscillatorNode : AudioScheduledSourceNode {
-  constructor(BaseAudioContext context, optional OscillatorOptions options = {});
+  constructor (BaseAudioContext context, optional OscillatorOptions options = {});
   attribute OscillatorType type;
   readonly attribute AudioParam frequency;
   readonly attribute AudioParam detune;
-  undefined setPeriodicWave(PeriodicWave periodicWave);
+  undefined setPeriodicWave (PeriodicWave periodicWave);
 };</code></pre>
   
 </section>

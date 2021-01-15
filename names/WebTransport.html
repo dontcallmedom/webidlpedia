@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/#webtransport">WebTransport</a> defines <code>WebTransport</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface WebTransport {
   constructor(USVString url, optional WebTransportOptions options = {});
+
   Promise<WebTransportStats> getStats();
   readonly attribute WebTransportState state;
   readonly attribute Promise<undefined> ready;
@@ -17,10 +20,7 @@ interface WebTransport {
   undefined close(optional WebTransportCloseInfo closeInfo = {});
   attribute EventHandler onstatechange;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webtransport/">WebTransport</a>
-<pre class=webidl><code>WebTransport includes UnidirectionalStreamsTransport;
-WebTransport includes BidirectionalStreamsTransport;
-WebTransport includes DatagramTransport;</code></pre></li></ol>
+  
 </section>
 
   

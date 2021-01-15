@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack">Media Capture and Streams</a> defines <code>MediaStreamTrack</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface MediaStreamTrack : EventTarget {
   readonly attribute DOMString kind;
   readonly attribute DOMString id;
@@ -29,9 +31,11 @@ interface MediaStreamTrack : EventTarget {
 <pre class=webidl><code>partial interface MediaStreamTrack {
   attribute DOMString contentHint;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial interface MediaStreamTrack {
-  readonly attribute boolean isolated;
-  attribute EventHandler onisolationchange;
+<pre class=webidl><code>
+
+partial interface MediaStreamTrack {
+    readonly        attribute boolean      isolated;
+                    attribute EventHandler onisolationchange;
 };</code></pre></li></ol>
 </section>
 <section>

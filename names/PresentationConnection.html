@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/presentation-api/#dom-presentationconnection">Presentation API</a> defines <code>PresentationConnection</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window]
 interface PresentationConnection : EventTarget {
   readonly attribute USVString id;
   readonly attribute USVString url;
@@ -17,12 +19,14 @@ interface PresentationConnection : EventTarget {
   attribute EventHandler onconnect;
   attribute EventHandler onclose;
   attribute EventHandler onterminate;
+
+  // Communication
   attribute BinaryType binaryType;
   attribute EventHandler onmessage;
-  undefined send(DOMString message);
-  undefined send(Blob data);
-  undefined send(ArrayBuffer data);
-  undefined send(ArrayBufferView data);
+  undefined send (DOMString message);
+  undefined send (Blob data);
+  undefined send (ArrayBuffer data);
+  undefined send (ArrayBufferView data);
 };</code></pre>
   
 </section>

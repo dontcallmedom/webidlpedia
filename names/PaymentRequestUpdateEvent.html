@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentrequestupdateevent">Payment Request API</a> defines <code>PaymentRequestUpdateEvent</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=Window]
 interface PaymentRequestUpdateEvent : Event {
   constructor(DOMString type, optional PaymentRequestUpdateEventInit eventInitDict = {});
   undefined updateWith(Promise<PaymentDetailsUpdate> detailsPromise);

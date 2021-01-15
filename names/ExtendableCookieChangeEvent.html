@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/cookie-store/#extendablecookiechangeevent">Cookie Store API</a> defines <code>ExtendableCookieChangeEvent</code></p>
-<pre class=webidl><code>[Exposed=ServiceWorker]
+<pre class=webidl><code>
+
+[Exposed=ServiceWorker]
 interface ExtendableCookieChangeEvent : ExtendableEvent {
   constructor(DOMString type, optional ExtendableCookieChangeEventInit eventInitDict = {});
   [SameObject] readonly attribute FrozenArray<CookieListItem> changed;

@@ -7,17 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#worker">HTML Standard</a> defines <code>Worker</code></p>
-<pre class=webidl><code>[Exposed=Window,DedicatedWorker,SharedWorker]
+<pre class=webidl><code>
+
+[Exposed=(Window,DedicatedWorker,SharedWorker)]
 interface Worker : EventTarget {
   constructor(USVString scriptURL, optional WorkerOptions options = {});
+
   undefined terminate();
+
   undefined postMessage(any message, sequence<object> transfer);
   undefined postMessage(any message, optional PostMessageOptions options = {});
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>
-<pre class=webidl><code>Worker includes AbstractWorker;</code></pre></li></ol>
+  
 </section>
 
   

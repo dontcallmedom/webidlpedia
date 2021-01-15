@@ -7,19 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webhid/#dom-hiddevice">WebHID API</a> defines <code>HIDDevice</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
-interface HIDDevice : EventTarget {
-  attribute EventHandler oninputreport;
-  readonly attribute boolean opened;
-  readonly attribute unsigned short vendorId;
-  readonly attribute unsigned short productId;
-  readonly attribute DOMString productName;
-  readonly attribute FrozenArray<HIDCollectionInfo> collections;
-  Promise<undefined> open();
-  Promise<undefined> close();
-  Promise<undefined> sendReport([EnforceRange] [EnforceRange] octet reportId, BufferSource data);
-  Promise<undefined> sendFeatureReport([EnforceRange] [EnforceRange] octet reportId, BufferSource data);
-  Promise<DataView> receiveFeatureReport([EnforceRange] [EnforceRange] octet reportId);
+<pre class=webidl><code>
+
+[
+    Exposed=Window,
+    SecureContext
+] interface HIDDevice : EventTarget {
+    attribute EventHandler oninputreport;
+    readonly attribute boolean opened;
+    readonly attribute unsigned short vendorId;
+    readonly attribute unsigned short productId;
+    readonly attribute DOMString productName;
+    readonly attribute FrozenArray<HIDCollectionInfo> collections;
+    Promise<undefined> open();
+    Promise<undefined> close();
+    Promise<undefined> sendReport([EnforceRange] octet reportId, BufferSource data);
+    Promise<undefined> sendFeatureReport([EnforceRange] octet reportId, BufferSource data);
+    Promise<DataView> receiveFeatureReport([EnforceRange] octet reportId);
 };</code></pre>
   
 </section>

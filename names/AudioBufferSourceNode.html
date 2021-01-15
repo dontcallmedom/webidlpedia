@@ -7,16 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode">Web Audio API</a> defines <code>AudioBufferSourceNode</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface AudioBufferSourceNode : AudioScheduledSourceNode {
-  constructor(BaseAudioContext context, optional AudioBufferSourceOptions options = {});
+  constructor (BaseAudioContext context,
+               optional AudioBufferSourceOptions options = {});
   attribute AudioBuffer? buffer;
   readonly attribute AudioParam playbackRate;
   readonly attribute AudioParam detune;
   attribute boolean loop;
   attribute double loopStart;
   attribute double loopEnd;
-  undefined start(optional double when = 0, optional double offset, optional double duration);
+  undefined start (optional double when = 0,
+                   optional double offset,
+                   optional double duration);
 };</code></pre>
   
 </section>

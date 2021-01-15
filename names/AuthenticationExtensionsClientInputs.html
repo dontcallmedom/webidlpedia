@@ -7,24 +7,31 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webauthn/#dictdef-authenticationextensionsclientinputs">Web Authentication: An API for accessing Public Key Credentials - Level 2</a> defines <code>AuthenticationExtensionsClientInputs</code></p>
-<pre class=webidl><code>dictionary AuthenticationExtensionsClientInputs {
-};</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webauthn-2/">Web Authentication: An API for accessing Public Key Credentials - Level 2</a>
-<pre class=webidl><code>partial dictionary AuthenticationExtensionsClientInputs {
+<pre class=webidl><code>
+
+dictionary AuthenticationExtensionsClientInputs {
+};
+
+partial dictionary AuthenticationExtensionsClientInputs {
   USVString appid;
 };
+
 partial dictionary AuthenticationExtensionsClientInputs {
   USVString appidExclude;
 };
+
 partial dictionary AuthenticationExtensionsClientInputs {
   boolean uvm;
 };
+
 partial dictionary AuthenticationExtensionsClientInputs {
-  boolean credProps;
+    boolean credProps;
 };
+
 partial dictionary AuthenticationExtensionsClientInputs {
-  AuthenticationExtensionsLargeBlobInputs largeBlob;
-};</code></pre></li></ol>
+    AuthenticationExtensionsLargeBlobInputs largeBlob;
+};</code></pre>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

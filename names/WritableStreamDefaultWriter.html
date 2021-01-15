@@ -7,12 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#writablestreamdefaultwriter">Streams Standard</a> defines <code>WritableStreamDefaultWriter</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,Worklet]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,Worklet)]
 interface WritableStreamDefaultWriter {
   constructor(WritableStream stream);
+
   readonly attribute Promise<undefined> closed;
   readonly attribute unrestricted double? desiredSize;
   readonly attribute Promise<undefined> ready;
+
   Promise<undefined> abort(optional any reason);
   Promise<undefined> close();
   undefined releaseLock();

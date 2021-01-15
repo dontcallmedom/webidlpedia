@@ -7,15 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasTransform</code></p>
-<pre class=webidl><code>interface mixin CanvasTransform {
+<pre class=webidl><code>
+
+interface mixin CanvasTransform {
+  // transformations (default transform is the identity matrix)
   undefined scale(unrestricted double x, unrestricted double y);
   undefined rotate(unrestricted double angle);
   undefined translate(unrestricted double x, unrestricted double y);
   undefined transform(unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f);
+
   [NewObject] DOMMatrix getTransform();
   undefined setTransform(unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f);
   undefined setTransform(optional DOMMatrix2DInit transform = {});
   undefined resetTransform();
+
 };</code></pre>
   
 </section>

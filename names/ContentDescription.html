@@ -7,13 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/content-index/spec/#dictdef-contentdescription">Content Index</a> defines <code>ContentDescription</code></p>
-<pre class=webidl><code>dictionary ContentDescription {
-  DOMString id;
-  DOMString title;
-  DOMString description;
-  ContentCategory category;
-  sequence<ImageResource> icons;
-  USVString url;
+<pre class=webidl><code>
+
+dictionary ContentDescription {
+  required DOMString id;
+  required DOMString title;
+  required DOMString description;
+  ContentCategory category = "";
+  sequence<ImageResource> icons = [];
+  required USVString url;
 };</code></pre>
   
 </section>

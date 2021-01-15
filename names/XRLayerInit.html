@@ -7,14 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#dictdef-xrlayerinit">WebXR Layers API Level 1</a> defines <code>XRLayerInit</code></p>
-<pre class=webidl><code>dictionary XRLayerInit {
-  XRSpace space;
-  GLenum colorFormat;
+<pre class=webidl><code>
+
+dictionary XRLayerInit {
+  required XRSpace space;
+  GLenum colorFormat = 0x1908; // RGBA
   GLenum? depthFormat;
-  unsigned long viewPixelWidth;
-  unsigned long viewPixelHeight;
-  XRLayerLayout layout;
-  boolean isStatic;
+  required unsigned long viewPixelWidth;
+  required unsigned long viewPixelHeight;
+  XRLayerLayout layout = "mono";
+  boolean isStatic = false;
 };</code></pre>
   
 </section>

@@ -7,29 +7,39 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlmediaelement">HTML Standard</a> defines <code>HTMLMediaElement</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface HTMLMediaElement : HTMLElement {
+
+  // error state
   readonly attribute MediaError? error;
+
+  // network state
   [CEReactions] attribute USVString src;
   attribute MediaProvider? srcObject;
   readonly attribute USVString currentSrc;
   [CEReactions] attribute DOMString? crossOrigin;
-  const unsigned short NETWORK_EMPTY;
-  const unsigned short NETWORK_IDLE;
-  const unsigned short NETWORK_LOADING;
-  const unsigned short NETWORK_NO_SOURCE;
+  const unsigned short NETWORK_EMPTY = 0;
+  const unsigned short NETWORK_IDLE = 1;
+  const unsigned short NETWORK_LOADING = 2;
+  const unsigned short NETWORK_NO_SOURCE = 3;
   readonly attribute unsigned short networkState;
   [CEReactions] attribute DOMString preload;
   readonly attribute TimeRanges buffered;
   undefined load();
   CanPlayTypeResult canPlayType(DOMString type);
-  const unsigned short HAVE_NOTHING;
-  const unsigned short HAVE_METADATA;
-  const unsigned short HAVE_CURRENT_DATA;
-  const unsigned short HAVE_FUTURE_DATA;
-  const unsigned short HAVE_ENOUGH_DATA;
+
+  // ready state
+  const unsigned short HAVE_NOTHING = 0;
+  const unsigned short HAVE_METADATA = 1;
+  const unsigned short HAVE_CURRENT_DATA = 2;
+  const unsigned short HAVE_FUTURE_DATA = 3;
+  const unsigned short HAVE_ENOUGH_DATA = 4;
   readonly attribute unsigned short readyState;
   readonly attribute boolean seeking;
+
+  // playback state
   attribute double currentTime;
   undefined fastSeek(double time);
   readonly attribute unrestricted double duration;
@@ -45,10 +55,14 @@ interface HTMLMediaElement : HTMLElement {
   [CEReactions] attribute boolean loop;
   Promise<undefined> play();
   undefined pause();
+
+  // controls
   [CEReactions] attribute boolean controls;
   attribute double volume;
   attribute boolean muted;
   [CEReactions] attribute boolean defaultMuted;
+
+  // tracks
   [SameObject] readonly attribute AudioTrackList audioTracks;
   [SameObject] readonly attribute VideoTrackList videoTracks;
   [SameObject] readonly attribute TextTrackList textTracks;
@@ -57,20 +71,24 @@ interface HTMLMediaElement : HTMLElement {
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#attributes">Audio Output Devices API</a>
 <pre class=webidl><code>partial interface HTMLMediaElement {
   [SecureContext] readonly attribute DOMString sinkId;
-  [SecureContext] Promise<undefined> setSinkId(DOMString sinkId);
+  [SecureContext] Promise<undefined> setSinkId (DOMString sinkId);
 };</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#attributes-3">Encrypted Media Extensions</a>
-<pre class=webidl><code>[Exposed=Window]
-partial interface HTMLMediaElement {
-  [SecureContext] readonly attribute MediaKeys? mediaKeys;
-  attribute EventHandler onencrypted;
-  attribute EventHandler onwaitingforkey;
-  [SecureContext] Promise<undefined> setMediaKeys(MediaKeys? mediaKeys);
+<pre class=webidl><code>
+
+[Exposed=Window] partial interface HTMLMediaElement {
+    [SecureContext] readonly        attribute MediaKeys?   mediaKeys;
+                                    attribute EventHandler onencrypted;
+                                    attribute EventHandler onwaitingforkey;
+    [SecureContext] Promise<undefined> setMediaKeys (MediaKeys? mediaKeys);
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/#methods">Media Capture from DOM Elements</a>
 <pre class=webidl><code>partial interface HTMLMediaElement {
-  MediaStream captureStream();
+    MediaStream captureStream ();
 };</code></pre></li><li><a href="https://www.w3.org/TR/remote-playback/#extensions-to-htmlmediaelement">Remote Playback API</a>
-<pre class=webidl><code>partial interface HTMLMediaElement {
+<pre class=webidl><code>
+
+partial interface HTMLMediaElement {
   [SameObject] readonly attribute RemotePlayback remote;
+
   [CEReactions] attribute boolean disableRemotePlayback;
 };</code></pre></li></ol>
 </section>

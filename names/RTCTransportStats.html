@@ -7,24 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtctransportstats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCTransportStats</code></p>
-<pre class=webidl><code>dictionary RTCTransportStats : RTCStats {
-  unsigned long long packetsSent;
-  unsigned long long packetsReceived;
-  unsigned long long bytesSent;
-  unsigned long long bytesReceived;
-  DOMString rtcpTransportStatsId;
-  RTCIceRole iceRole;
-  DOMString iceLocalUsernameFragment;
-  RTCDtlsTransportState dtlsState;
-  RTCIceTransportState iceState;
-  DOMString selectedCandidatePairId;
-  DOMString localCertificateId;
-  DOMString remoteCertificateId;
-  DOMString tlsVersion;
-  DOMString dtlsCipher;
-  DOMString srtpCipher;
-  DOMString tlsGroup;
-  unsigned long selectedCandidatePairChanges;
+<pre class=webidl><code>
+
+dictionary RTCTransportStats : RTCStats {
+             unsigned long long    packetsSent;
+             unsigned long long    packetsReceived;
+             unsigned long long    bytesSent;
+             unsigned long long    bytesReceived;
+             DOMString             rtcpTransportStatsId;
+             RTCIceRole            iceRole;
+             DOMString             iceLocalUsernameFragment;
+             required RTCDtlsTransportState dtlsState;
+             RTCIceTransportState  iceState;
+             DOMString             selectedCandidatePairId;
+             DOMString             localCertificateId;
+             DOMString             remoteCertificateId;
+             DOMString             tlsVersion;
+             DOMString             dtlsCipher;
+             DOMString             srtpCipher;
+             DOMString             tlsGroup;
+             unsigned long         selectedCandidatePairChanges;
 };</code></pre>
   
 </section>

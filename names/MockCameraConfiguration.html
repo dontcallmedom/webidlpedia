@@ -7,9 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-automation/#dom-mockcameraconfiguration">Media Capture Automation</a> defines <code>MockCameraConfiguration</code></p>
-<pre class=webidl><code>dictionary MockCameraConfiguration : MockCaptureDeviceConfiguration {
-  double defaultFrameRate;
-  DOMString facingMode;
+<pre class=webidl><code>
+
+dictionary MockCameraConfiguration : MockCaptureDeviceConfiguration {
+  double defaultFrameRate = 30;
+  DOMString facingMode = "user";
+  // TODO: Add more capabilities parameters like:
+  // ULongRange width;
+  // ULongRange height;
+  // DoubleRange frameRate;
 };</code></pre>
   
 </section>

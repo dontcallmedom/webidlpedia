@@ -7,11 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/filter-effects-1/#svgfeconvolvematrixelement">Filter Effects Module Level 1</a> defines <code>SVGFEConvolveMatrixElement</code></p>
-<pre class=webidl><code>interface SVGFEConvolveMatrixElement : SVGElement {
-  const unsigned short SVG_EDGEMODE_UNKNOWN;
-  const unsigned short SVG_EDGEMODE_DUPLICATE;
-  const unsigned short SVG_EDGEMODE_WRAP;
-  const unsigned short SVG_EDGEMODE_NONE;
+<pre class=webidl><code>
+
+interface SVGFEConvolveMatrixElement : SVGElement {
+
+  // Edge Mode Values
+  const unsigned short SVG_EDGEMODE_UNKNOWN = 0;
+  const unsigned short SVG_EDGEMODE_DUPLICATE = 1;
+  const unsigned short SVG_EDGEMODE_WRAP = 2;
+  const unsigned short SVG_EDGEMODE_NONE = 3;
+
   readonly attribute SVGAnimatedString in1;
   readonly attribute SVGAnimatedInteger orderX;
   readonly attribute SVGAnimatedInteger orderY;
@@ -25,8 +30,7 @@ base: ../
   readonly attribute SVGAnimatedNumber kernelUnitLengthY;
   readonly attribute SVGAnimatedBoolean preserveAlpha;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/filter-effects-1/">Filter Effects Module Level 1</a>
-<pre class=webidl><code>SVGFEConvolveMatrixElement includes SVGFilterPrimitiveStandardAttributes;</code></pre></li></ol>
+  
 </section>
 
   

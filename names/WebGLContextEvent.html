@@ -7,9 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> defines <code>WebGLContextEvent</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, Constructor(DOMString type, optional WebGLContextEventInit eventInit = {})]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker),
+ Constructor(DOMString type,
+ optional WebGLContextEventInit eventInit = {})]
 interface WebGLContextEvent : Event {
-  readonly attribute DOMString statusMessage;
+    readonly attribute DOMString statusMessage;
 };</code></pre>
   
 </section>

@@ -7,12 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://fetch.spec.whatwg.org/#request">Fetch Standard</a> defines <code>Request</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker)]
 interface Request {
   constructor(RequestInfo input, optional RequestInit init = {});
+
   readonly attribute ByteString method;
   readonly attribute USVString url;
   [SameObject] readonly attribute Headers headers;
+
   readonly attribute RequestDestination destination;
   readonly attribute USVString referrer;
   readonly attribute ReferrerPolicy referrerPolicy;
@@ -25,10 +29,10 @@ interface Request {
   readonly attribute boolean isReloadNavigation;
   readonly attribute boolean isHistoryNavigation;
   readonly attribute AbortSignal signal;
+
   [NewObject] Request clone();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
-<pre class=webidl><code>Request includes Body;</code></pre></li></ol>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

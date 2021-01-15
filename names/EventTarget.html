@@ -7,9 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#eventtarget">DOM Standard</a> defines <code>EventTarget</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker,AudioWorklet]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
+
   undefined addEventListener(DOMString type, EventListener? callback, optional (AddEventListenerOptions or boolean) options = {});
   undefined removeEventListener(DOMString type, EventListener? callback, optional (EventListenerOptions or boolean) options = {});
   boolean dispatchEvent(Event event);

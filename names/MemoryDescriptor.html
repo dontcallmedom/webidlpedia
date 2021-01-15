@@ -7,8 +7,10 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#dictdef-memorydescriptor">WebAssembly JavaScript Interface</a> defines <code>MemoryDescriptor</code></p>
-<pre class=webidl><code>dictionary MemoryDescriptor {
-  unsigned long initial;
+<pre class=webidl><code>
+
+dictionary MemoryDescriptor {
+  required [EnforceRange] unsigned long initial;
   [EnforceRange] unsigned long maximum;
 };</code></pre>
   

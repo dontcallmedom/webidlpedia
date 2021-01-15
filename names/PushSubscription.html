@@ -7,13 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/push-api/#dom-pushsubscription">Push API</a> defines <code>PushSubscription</code></p>
-<pre class=webidl><code>[Exposed=Window,Worker, SecureContext]
+<pre class=webidl><code>
+
+[Exposed=(Window,Worker), SecureContext]
 interface PushSubscription {
   readonly attribute USVString endpoint;
   readonly attribute DOMTimeStamp? expirationTime;
   [SameObject] readonly attribute PushSubscriptionOptions options;
   ArrayBuffer? getKey(PushEncryptionKeyName name);
   Promise<boolean> unsubscribe();
+
   PushSubscriptionJSON toJSON();
 };</code></pre>
   

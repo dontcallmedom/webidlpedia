@@ -7,15 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#nodeiterator">DOM Standard</a> defines <code>NodeIterator</code></p>
-<pre class=webidl><code>[Exposed=Window]
+<pre class=webidl><code>
+
+[Exposed=Window]
 interface NodeIterator {
   [SameObject] readonly attribute Node root;
   readonly attribute Node referenceNode;
   readonly attribute boolean pointerBeforeReferenceNode;
   readonly attribute unsigned long whatToShow;
   readonly attribute NodeFilter? filter;
+
   Node? nextNode();
   Node? previousNode();
+
   undefined detach();
 };</code></pre>
   

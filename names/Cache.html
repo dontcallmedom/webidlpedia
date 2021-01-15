@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#cache">Service Workers Nightly</a> defines <code>Cache</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window,Worker]
+<pre class=webidl><code>
+
+[SecureContext, Exposed=(Window,Worker)]
 interface Cache {
   [NewObject] Promise<any> match(RequestInfo request, optional CacheQueryOptions options = {});
   [NewObject] Promise<FrozenArray<Response>> matchAll(optional RequestInfo request, optional CacheQueryOptions options = {});

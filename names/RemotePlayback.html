@@ -11,10 +11,13 @@ base: ../
 interface RemotePlayback : EventTarget {
   Promise<long> watchAvailability(RemotePlaybackAvailabilityCallback callback);
   Promise<undefined> cancelWatchAvailability(optional long id);
+
   readonly attribute RemotePlaybackState state;
+
   attribute EventHandler onconnecting;
   attribute EventHandler onconnect;
   attribute EventHandler ondisconnect;
+
   Promise<undefined> prompt();
 };</code></pre>
   

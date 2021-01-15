@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpubufferbindinglayout">WebGPU</a> defines <code>GPUBufferBindingLayout</code></p>
-<pre class=webidl><code>dictionary GPUBufferBindingLayout {
-  GPUBufferBindingType type;
-  boolean hasDynamicOffset;
-  GPUSize64 minBindingSize;
+<pre class=webidl><code>
+
+dictionary GPUBufferBindingLayout {
+    GPUBufferBindingType type = "uniform";
+    boolean hasDynamicOffset = false;
+    GPUSize64 minBindingSize = 0;
 };</code></pre>
   
 </section>

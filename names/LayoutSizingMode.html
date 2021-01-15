@@ -7,10 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#enumdef-layoutsizingmode">CSS Layout API Level 1</a> defines <code>LayoutSizingMode</code></p>
-<pre class=webidl><code>[Exposed=LayoutWorklet]
+<pre class=webidl><code>
+
+[Exposed=LayoutWorklet]
 enum LayoutSizingMode {
-  "block-like";
-  "manual";
+    "block-like", // default - Sizing behaves like block containers.
+    "manual", // Sizing is specified by the web developer.
 };</code></pre>
   
 </section>

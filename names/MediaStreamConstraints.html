@@ -7,13 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamconstraints">Media Capture and Streams</a> defines <code>MediaStreamConstraints</code></p>
-<pre class=webidl><code>dictionary MediaStreamConstraints {
-  (boolean or MediaTrackConstraints) video;
-  (boolean or MediaTrackConstraints) audio;
+<pre class=webidl><code>
+
+dictionary MediaStreamConstraints {
+  (boolean or MediaTrackConstraints) video = false;
+  (boolean or MediaTrackConstraints) audio = false;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>partial dictionary MediaStreamConstraints {
-  DOMString peerIdentity;
+<pre class=webidl><code>
+
+partial dictionary MediaStreamConstraints {
+             DOMString peerIdentity;
 };</code></pre></li></ol>
 </section>
 <section>

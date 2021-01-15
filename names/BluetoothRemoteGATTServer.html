@@ -7,14 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattserver">Web Bluetooth</a> defines <code>BluetoothRemoteGATTServer</code></p>
-<pre class=webidl><code>[Exposed=Window, SecureContext]
+<pre class=webidl><code>
+
+[Exposed=Window, SecureContext]
 interface BluetoothRemoteGATTServer {
-  [SameObject] readonly attribute BluetoothDevice device;
+  [SameObject]
+  readonly attribute BluetoothDevice device;
   readonly attribute boolean connected;
   Promise<BluetoothRemoteGATTServer> connect();
   void disconnect();
   Promise<BluetoothRemoteGATTService> getPrimaryService(BluetoothServiceUUID service);
-  Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices(optional BluetoothServiceUUID service);
+  Promise<sequence<BluetoothRemoteGATTService>>
+    getPrimaryServices(optional BluetoothServiceUUID service);
 };</code></pre>
   
 </section>

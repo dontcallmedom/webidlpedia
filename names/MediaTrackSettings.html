@@ -7,7 +7,9 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings">Media Capture and Streams</a> defines <code>MediaTrackSettings</code></p>
-<pre class=webidl><code>dictionary MediaTrackSettings {
+<pre class=webidl><code>
+
+dictionary MediaTrackSettings {
   long width;
   long height;
   double aspectRatio;
@@ -25,29 +27,40 @@ base: ../
   DOMString groupId;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackSettings {
-  DOMString whiteBalanceMode;
-  DOMString exposureMode;
-  DOMString focusMode;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackSettings {
+  DOMString         whiteBalanceMode;
+  DOMString         exposureMode;
+  DOMString         focusMode;
   sequence<Point2D> pointsOfInterest;
-  double exposureCompensation;
-  double exposureTime;
-  double colorTemperature;
-  double iso;
-  double brightness;
-  double contrast;
-  double saturation;
-  double sharpness;
-  double focusDistance;
-  double pan;
-  double tilt;
-  double zoom;
-  boolean torch;
+
+  double            exposureCompensation;
+  double            exposureTime;
+  double            colorTemperature;
+  double            iso;
+
+  double            brightness;
+  double            contrast;
+  double            saturation;
+  double            sharpness;
+
+  double            focusDistance;
+  double            pan;
+  double            tilt;
+  double            zoom;
+
+  boolean           torch;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>partial dictionary MediaTrackSettings {
-  DOMString videoKind;
+<pre class=webidl><code>
+
+partial dictionary MediaTrackSettings {
+    // Applies to both depth stream track and color stream track:
+    DOMString           videoKind;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>partial dictionary MediaTrackSettings {
+<pre class=webidl><code>
+
+partial dictionary MediaTrackSettings {
   DOMString displaySurface;
   boolean logicalSurface;
   DOMString cursor;

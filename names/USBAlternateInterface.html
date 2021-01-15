@@ -7,7 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbalternateinterface">WebUSB API</a> defines <code>USBAlternateInterface</code></p>
-<pre class=webidl><code>[Exposed=DedicatedWorker,SharedWorker,Window, SecureContext]
+<pre class=webidl><code>
+
+[
+  Exposed=(DedicatedWorker,SharedWorker,Window),
+  SecureContext
+]
 interface USBAlternateInterface {
   constructor(USBInterface deviceInterface, octet alternateSetting);
   readonly attribute octet alternateSetting;
