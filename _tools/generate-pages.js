@@ -6,6 +6,23 @@ const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idl && s.idl.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
 
+// webidl2 cannot serialize its JSON output, only its "live" output
+// so we start from the unparse IDL & reparse it to make it serializable
+function extractSerializableIDLFromSpec(name, type, spec) {
+  return webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
+}
+
+function extractSerializableIDLMembersFromPlatform(name, type, data) {
+  const relevantSpecs = data.filter(s => s.idl && s.idl.idlNames && s.idl.idlNames[name] && s.idl.idlNames[name].type === type);
+  if (!relevantSpecs) { return []; }
+  const idlparsed = webidl.parse(relevantSpecs.map(s => s.idl.idl).join("\n"))
+        .filter(i => i.name === name && i.type === type);
+  let members = [];
+  idlparsed.forEach(i => {
+    members = members.concat(i.members);
+  });
+  return members;
+}
 
 function generatePage(path, title, content) {
   fs.writeFileSync(path, `---
@@ -72,12 +89,43 @@ function interfaceDetails(data, name, used_by, templates) {
   let type;
   let mainDef = ``;
   let mainDefSpecs = [];
+  let consolidatedIdlDef;
+  let consolidatedIdlMembers = [] ;
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlNames[name])
     .forEach(spec => {
       mainDefSpecs.push(spec.url);
       type = (spec.idl.idlNames[name] || {}).type;
-      const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
+      const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
+      // We use a proxy to keep the parseability of the objects created by WebIDL
+      // while being able to replace the list of members
+      const mainIdlDef = idlparsed.find(i => !i.partial);
+      consolidatedIdlDef = new Proxy(mainIdlDef, {
+        get(target, propKey, receiver) {
+          if (propKey === "members") return consolidatedIdlMembers;
+          return Reflect.get(...arguments);
+        }
+      });
+      consolidatedIdlMembers = consolidatedIdlMembers.concat(mainIdlDef.members);
+      /* not sure whether to consolidate across inheritance chain yet
+         since inheritance has more impact than merging list of members
+         it feels like it's probably left alone?
+      if (mainIdlDef.inheritance) {
+        let def = mainIdlDef;
+        while (def.inheritance) {
+          let members = extractSerializableIDLMembersFromPlatform(def.inheritance, type, data);
+          consolidatedIdlMembers = consolidatedIdlMembers.concat(members);
+          def = data.find(s => s.idl && s.idl.idlNames && s.idl.idlNames[def.inheritance]).idl.idlNames[def.inheritance];
+        }
+      }
+      */
+      idlparsed.filter(i => i.partial).forEach(i => {
+        consolidatedIdlMembers =  consolidatedIdlMembers.concat(i.members);
+      });
+      idlparsed.filter(i => i.type === "includes").forEach(i => {
+        let mixinMembers = extractSerializableIDLMembersFromPlatform(i.includes, "interface mixin", data);
+        consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
+      });
       mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
 <pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre>`;
     });
@@ -87,7 +135,14 @@ function interfaceDetails(data, name, used_by, templates) {
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
     .forEach(spec => {
-      const idlparsed = webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
+      const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
+      idlparsed.filter(i => i.partial).forEach(i => {
+        consolidatedIdlMembers = consolidatedIdlMembers.concat(i.members);
+      });
+      idlparsed.filter(i => i.type === "includes").forEach(i => {
+        let mixinMembers = extractSerializableIDLMembersFromPlatform(i.includes, "interface mixin", data);
+        consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
+      });
       partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${spec.title}</a>
 <pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre></li>`;
     });
@@ -95,6 +150,10 @@ function interfaceDetails(data, name, used_by, templates) {
     partialDef = `<p>This ${type} is extended in the following specifications:</p><ol>${partialDef}</ol>`;
   }
 
+  let consolidatedDef = ``;
+  if (consolidatedIdlMembers.length) {
+    consolidatedDef = `<details><summary>Consolidated IDL (across ${consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
+  }
 
   let usedBy = ``;
   (used_by[name] || []).forEach(n => {
@@ -121,6 +180,7 @@ function interfaceDetails(data, name, used_by, templates) {
   <h3>Definition</h3>
   ${mainDef}
   ${partialDef}
+  ${consolidatedDef}
 </section>
 ${usedBy}
   ${refs}`;
