@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrinputsource">WebXR Device API</a> defines <code>XRInputSource</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=Window]
-interface XRInputSource {
-  readonly attribute XRHandedness handedness;
-  readonly attribute XRTargetRayMode targetRayMode;
-  [SameObject] readonly attribute XRSpace targetRaySpace;
-  [SameObject] readonly attribute XRSpace? gripSpace;
-  [SameObject] readonly attribute FrozenArray<DOMString> profiles;
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XRInputSource</strong> {
+  readonly attribute <a href='XRHandedness.html'>XRHandedness</a> <strong>handedness</strong>;
+  readonly attribute <a href='XRTargetRayMode.html'>XRTargetRayMode</a> <strong>targetRayMode</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a> <strong>targetRaySpace</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a>? <strong>gripSpace</strong>;
+  [SameObject] readonly attribute FrozenArray<<span>DOMString</span>> <strong>profiles</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/#xrinputsource-interface">WebXR Gamepads Module - Level 1</a>
-<pre class=webidl><code>partial interface XRInputSource {
-  [SameObject] readonly attribute Gamepad? gamepad;
+<pre class=webidl><code>partial interface <strong>XRInputSource</strong> {
+  [SameObject] readonly attribute <a href='Gamepad.html'>Gamepad</a>? <strong>gamepad</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/#xrinputsource-interface">WebXR Hand Input Module - Level 1</a>
-<pre class=webidl><code>partial interface XRInputSource {
-   readonly attribute XRHand? hand;
+<pre class=webidl><code>partial interface <strong>XRInputSource</strong> {
+   readonly attribute <a href='XRHand.html'>XRHand</a>? <strong>hand</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

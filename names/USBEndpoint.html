@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbendpoint">WebUSB API</a> defines <code>USBEndpoint</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBEndpoint {
-  constructor(USBAlternateInterface alternate, octet endpointNumber, USBDirection direction);
-  readonly attribute octet endpointNumber;
-  readonly attribute USBDirection direction;
-  readonly attribute USBEndpointType type;
-  readonly attribute unsigned long packetSize;
+interface <strong>USBEndpoint</strong> {
+  constructor(<a href='USBAlternateInterface.html'>USBAlternateInterface</a> <strong>alternate</strong>, <span>octet</span> <strong>endpointNumber</strong>, <a href='USBDirection.html'>USBDirection</a> <strong>direction</strong>);
+  readonly attribute <span>octet</span> <strong>endpointNumber</strong>;
+  readonly attribute <a href='USBDirection.html'>USBDirection</a> <strong>direction</strong>;
+  readonly attribute <a href='USBEndpointType.html'>USBEndpointType</a> <strong>type</strong>;
+  readonly attribute <span>unsigned long</span> <strong>packetSize</strong>;
 };</code></pre>
   
 </section>

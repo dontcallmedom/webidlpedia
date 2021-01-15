@@ -7,28 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentrequest">Payment Request API</a> defines <code>PaymentRequest</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=Window]
-interface PaymentRequest : EventTarget {
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
   constructor(
-    sequence<PaymentMethodData> methodData,
-    PaymentDetailsInit details,
-    optional PaymentOptions options = {}
+    sequence<<a href='PaymentMethodData.html'>PaymentMethodData</a>> <strong>methodData</strong>,
+    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>,
+    optional <a href='PaymentOptions.html'>PaymentOptions</a> <strong>options</strong> = {}
   );
   [NewObject]
-  Promise<PaymentResponse> show(optional Promise<PaymentDetailsUpdate> detailsPromise);
+  Promise<<a href='PaymentResponse.html'>PaymentResponse</a>> <strong>show</strong>(optional Promise<<a href='PaymentDetailsUpdate.html'>PaymentDetailsUpdate</a>> <strong>detailsPromise</strong>);
   [NewObject]
-  Promise<undefined> abort();
+  Promise<<span>undefined</span>> <strong>abort</strong>();
   [NewObject]
-  Promise<boolean> canMakePayment();
+  Promise<<span>boolean</span>> <strong>canMakePayment</strong>();
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
+  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
+  readonly attribute <a href='PaymentShippingType.html'>PaymentShippingType</a>? <strong>shippingType</strong>;
 
-  readonly attribute DOMString id;
-  readonly attribute PaymentAddress? shippingAddress;
-  readonly attribute DOMString? shippingOption;
-  readonly attribute PaymentShippingType? shippingType;
-
-  attribute EventHandler onshippingaddresschange;
-  attribute EventHandler onshippingoptionchange;
-  attribute EventHandler onpaymentmethodchange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingaddresschange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingoptionchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;
 };</code></pre>
   
 </section>

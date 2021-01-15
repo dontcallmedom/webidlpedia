@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/pointerevents/#dom-pointerevent">Pointer Events</a> defines <code>PointerEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface PointerEvent : MouseEvent {
-    constructor(DOMString type, optional PointerEventInit eventInitDict = {});
-    readonly        attribute long        pointerId;
-    readonly        attribute double      width;
-    readonly        attribute double      height;
-    readonly        attribute float       pressure;
-    readonly        attribute float       tangentialPressure;
-    readonly        attribute long        tiltX;
-    readonly        attribute long        tiltY;
-    readonly        attribute long        twist;
-    readonly        attribute double      altitudeAngle;
-    readonly        attribute double      azimuthAngle;
-    readonly        attribute DOMString   pointerType;
-    readonly        attribute boolean     isPrimary;
-    [SecureContext] sequence<PointerEvent> getCoalescedEvents();
-    sequence<PointerEvent> getPredictedEvents();
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PointerEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PointerEventInit.html'>PointerEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly        attribute <span>long</span>        <strong>pointerId</strong>;
+    readonly        attribute <span>double</span>      <strong>width</strong>;
+    readonly        attribute <span>double</span>      <strong>height</strong>;
+    readonly        attribute <span>float</span>       <strong>pressure</strong>;
+    readonly        attribute <span>float</span>       <strong>tangentialPressure</strong>;
+    readonly        attribute <span>long</span>        <strong>tiltX</strong>;
+    readonly        attribute <span>long</span>        <strong>tiltY</strong>;
+    readonly        attribute <span>long</span>        <strong>twist</strong>;
+    readonly        attribute <span>double</span>      <strong>altitudeAngle</strong>;
+    readonly        attribute <span>double</span>      <strong>azimuthAngle</strong>;
+    readonly        attribute <span>DOMString</span>   <strong>pointerType</strong>;
+    readonly        attribute <span>boolean</span>     <strong>isPrimary</strong>;
+    [SecureContext] sequence<<a href='PointerEvent.html'>PointerEvent</a>> <strong>getCoalescedEvents</strong>();
+    sequence<<a href='PointerEvent.html'>PointerEvent</a>> <strong>getPredictedEvents</strong>();
 };</code></pre>
   
 </section>

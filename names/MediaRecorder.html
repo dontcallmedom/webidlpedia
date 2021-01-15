@@ -7,29 +7,28 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-record/#mediarecorder">MediaStream Recording</a> defines <code>MediaRecorder</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface MediaRecorder : EventTarget {
-  constructor(MediaStream stream, optional MediaRecorderOptions options = {});
-  readonly attribute MediaStream stream;
-  readonly attribute DOMString mimeType;
-  readonly attribute RecordingState state;
-  attribute EventHandler onstart;
-  attribute EventHandler onstop;
-  attribute EventHandler ondataavailable;
-  attribute EventHandler onpause;
-  attribute EventHandler onresume;
-  attribute EventHandler onerror;
-  readonly attribute unsigned long videoBitsPerSecond;
-  readonly attribute unsigned long audioBitsPerSecond;
-  readonly attribute BitrateMode audioBitrateMode;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>, optional <a href='MediaRecorderOptions.html'>MediaRecorderOptions</a> <strong>options</strong> = {});
+  readonly attribute <a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>;
+  readonly attribute <span>DOMString</span> <strong>mimeType</strong>;
+  readonly attribute <a href='RecordingState.html'>RecordingState</a> <strong>state</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondataavailable</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoBitsPerSecond</strong>;
+  readonly attribute <span>unsigned long</span> <strong>audioBitsPerSecond</strong>;
+  readonly attribute <a href='BitrateMode.html'>BitrateMode</a> <strong>audioBitrateMode</strong>;
+  <span>undefined</span> <strong>start</strong>(optional <span>unsigned long</span> <strong>timeslice</strong>);
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>pause</strong>();
+  <span>undefined</span> <strong>resume</strong>();
+  <span>undefined</span> <strong>requestData</strong>();
 
-  undefined start(optional unsigned long timeslice);
-  undefined stop();
-  undefined pause();
-  undefined resume();
-  undefined requestData();
-
-  static boolean isTypeSupported(DOMString type);
+  static <span>boolean</span> <strong>isTypeSupported</strong>(<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
 </section>

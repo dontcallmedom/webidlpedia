@@ -7,23 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpReceiver</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface RTCRtpReceiver {
-  readonly attribute MediaStreamTrack track;
-  readonly attribute RTCDtlsTransport? transport;
-  static RTCRtpCapabilities? getCapabilities(DOMString kind);
-  RTCRtpReceiveParameters getParameters();
-  sequence<RTCRtpContributingSource> getContributingSources();
-  sequence<RTCRtpSynchronizationSource> getSynchronizationSources();
-  Promise<RTCStatsReport> getStats();
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>RTCRtpReceiver</strong> {
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span>DOMString</span> <strong>kind</strong>);
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();
+  sequence<<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>> <strong>getContributingSources</strong>();
+  sequence<<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>> <strong>getSynchronizationSources</strong>();
+  Promise<<a href='RTCStatsReport.html'>RTCStatsReport</a>> <strong>getStats</strong>();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>
-
-partial interface RTCRtpReceiver {
-    RTCInsertableStreams createEncodedStreams();
+<pre class=webidl><code>partial interface <strong>RTCRtpReceiver</strong> {
+    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();
 };</code></pre></li></ol>
 </section>
 <section>

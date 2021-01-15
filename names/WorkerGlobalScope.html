@@ -7,31 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#workerglobalscope">HTML Standard</a> defines <code>WorkerGlobalScope</code></p>
-<pre class=webidl><code>
-WorkerGlobalScope includes WindowOrWorkerGlobalScope;
+<pre class=webidl><code><a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> includes <a href='WindowOrWorkerGlobalScope.html'>WindowOrWorkerGlobalScope</a>;
 
-[Exposed=Worker]
-interface WorkerGlobalScope : EventTarget {
-  readonly attribute WorkerGlobalScope self;
-  readonly attribute WorkerLocation location;
-  readonly attribute WorkerNavigator navigator;
-  undefined importScripts(USVString... urls);
+[Exposed=<a href='Worker.html'>Worker</a>]
+interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> <strong>self</strong>;
+  readonly attribute <a href='WorkerLocation.html'>WorkerLocation</a> <strong>location</strong>;
+  readonly attribute <a href='WorkerNavigator.html'>WorkerNavigator</a> <strong>navigator</strong>;
+  <span>undefined</span> <strong>importScripts</strong>(<span>USVString</span>... <strong>urls</strong>);
 
-  attribute OnErrorEventHandler onerror;
-  attribute EventHandler onlanguagechange;
-  attribute EventHandler onoffline;
-  attribute EventHandler ononline;
-  attribute EventHandler onrejectionhandled;
-  attribute EventHandler onunhandledrejection;
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
-<pre class=webidl><code>
-
-partial interface WorkerGlobalScope {
-  readonly attribute AddressSpace addressSpace;
+<pre class=webidl><code>partial interface <strong>WorkerGlobalScope</strong> {
+  readonly attribute <a href='AddressSpace.html'>AddressSpace</a> <strong>addressSpace</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code>
-WorkerGlobalScope includes FontFaceSource;</code></pre></li></ol>
+<pre class=webidl><code><a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> includes <a href='FontFaceSource.html'>FontFaceSource</a>;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

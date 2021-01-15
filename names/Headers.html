@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://fetch.spec.whatwg.org/#headers">Fetch Standard</a> defines <code>Headers</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Headers</strong> {
+  constructor(optional <a href='HeadersInit.html'>HeadersInit</a> <strong>init</strong>);
 
-[Exposed=(Window,Worker)]
-interface Headers {
-  constructor(optional HeadersInit init);
-
-  undefined append(ByteString name, ByteString value);
-  undefined delete(ByteString name);
-  ByteString? get(ByteString name);
-  boolean has(ByteString name);
-  undefined set(ByteString name, ByteString value);
-  iterable<ByteString, ByteString>;
+  <span>undefined</span> <strong>append</strong>(<span>ByteString</span> <strong>name</strong>, <span>ByteString</span> <strong>value</strong>);
+  <span>undefined</span> <strong>delete</strong>(<span>ByteString</span> <strong>name</strong>);
+  <span>ByteString</span>? <strong>get</strong>(<span>ByteString</span> <strong>name</strong>);
+  <span>boolean</span> <strong>has</strong>(<span>ByteString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>set</strong>(<span>ByteString</span> <strong>name</strong>, <span>ByteString</span> <strong>value</strong>);
+  iterable<<span>ByteString</span>, <span>ByteString</span>>;
 };</code></pre>
   
 </section>

@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#speechsynthesis">Web Speech API</a> defines <code>SpeechSynthesis</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SpeechSynthesis</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    readonly attribute <span>boolean</span> <strong>pending</strong>;
+    readonly attribute <span>boolean</span> <strong>speaking</strong>;
+    readonly attribute <span>boolean</span> <strong>paused</strong>;
 
-[Exposed=Window]
-interface SpeechSynthesis : EventTarget {
-    readonly attribute boolean pending;
-    readonly attribute boolean speaking;
-    readonly attribute boolean paused;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvoiceschanged</strong>;
 
-    attribute EventHandler onvoiceschanged;
-
-    undefined speak(SpeechSynthesisUtterance utterance);
-    undefined cancel();
-    undefined pause();
-    undefined resume();
-    sequence<SpeechSynthesisVoice> getVoices();
+    <span>undefined</span> <strong>speak</strong>(<a href='SpeechSynthesisUtterance.html'>SpeechSynthesisUtterance</a> <strong>utterance</strong>);
+    <span>undefined</span> <strong>cancel</strong>();
+    <span>undefined</span> <strong>pause</strong>();
+    <span>undefined</span> <strong>resume</strong>();
+    sequence<<a href='SpeechSynthesisVoice.html'>SpeechSynthesisVoice</a>> <strong>getVoices</strong>();
 };</code></pre>
   
 </section>

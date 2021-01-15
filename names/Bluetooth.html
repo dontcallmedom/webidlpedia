@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Web Bluetooth</a> defines <code>Bluetooth</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window, SecureContext]
-interface Bluetooth : EventTarget {
-  Promise<boolean> getAvailability();
-  attribute EventHandler onavailabilitychanged;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  Promise<<span>boolean</span>> <strong>getAvailability</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onavailabilitychanged</strong>;
   [SameObject]
-  readonly attribute BluetoothDevice? referringDevice;
-  Promise<sequence<BluetoothDevice>> getDevices();
-  Promise<BluetoothDevice> requestDevice(optional RequestDeviceOptions options = {});
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a>? <strong>referringDevice</strong>;
+  Promise<sequence<<a href='BluetoothDevice.html'>BluetoothDevice</a>>> <strong>getDevices</strong>();
+  Promise<<a href='BluetoothDevice.html'>BluetoothDevice</a>> <strong>requestDevice</strong>(optional <a href='RequestDeviceOptions.html'>RequestDeviceOptions</a> <strong>options</strong> = {});
 };
 
-Bluetooth includes BluetoothDeviceEventHandlers;
-Bluetooth includes CharacteristicEventHandlers;
-Bluetooth includes ServiceEventHandlers;</code></pre>
+<a href='Bluetooth.html'>Bluetooth</a> includes <a href='BluetoothDeviceEventHandlers.html'>BluetoothDeviceEventHandlers</a>;
+<a href='Bluetooth.html'>Bluetooth</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;
+<a href='Bluetooth.html'>Bluetooth</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</code></pre>
   
 </section>
 <section>

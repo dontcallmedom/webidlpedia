@@ -7,27 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-request/#dom-paymentresponse">Payment Request API</a> defines <code>PaymentResponse</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTarget</a>  {
+  [Default] <span>object</span> <strong>toJSON</strong>();
 
-[SecureContext, Exposed=Window]
-interface PaymentResponse : EventTarget  {
-  [Default] object toJSON();
-
-  readonly attribute DOMString requestId;
-  readonly attribute DOMString methodName;
-  readonly attribute object details;
-  readonly attribute PaymentAddress? shippingAddress;
-  readonly attribute DOMString? shippingOption;
-  readonly attribute DOMString? payerName;
-  readonly attribute DOMString? payerEmail;
-  readonly attribute DOMString? payerPhone;
+  readonly attribute <span>DOMString</span> <strong>requestId</strong>;
+  readonly attribute <span>DOMString</span> <strong>methodName</strong>;
+  readonly attribute <span>object</span> <strong>details</strong>;
+  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
+  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerName</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerEmail</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerPhone</strong>;
 
   [NewObject]
-  Promise<undefined> complete(optional PaymentComplete result = "unknown");
+  Promise<<span>undefined</span>> <strong>complete</strong>(optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> = "unknown");
   [NewObject]
-  Promise<undefined> retry(optional PaymentValidationErrors errorFields = {});
+  Promise<<span>undefined</span>> <strong>retry</strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> = {});
 
-  attribute EventHandler onpayerdetailchange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpayerdetailchange</strong>;
 };</code></pre>
   
 </section>

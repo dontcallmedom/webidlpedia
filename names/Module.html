@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#module">WebAssembly JavaScript Interface</a> defines <code>Module</code></p>
-<pre class=webidl><code>
-
-[LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]
-interface Module {
-  constructor(BufferSource bytes);
-  static sequence<ModuleExportDescriptor> exports(Module moduleObject);
-  static sequence<ModuleImportDescriptor> imports(Module moduleObject);
-  static sequence<ArrayBuffer> customSections(Module moduleObject, DOMString sectionName);
+<pre class=webidl><code>[LegacyNamespace=<a href='WebAssembly.html'>WebAssembly</a>, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>Module</strong> {
+  constructor(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+  static sequence<<a href='ModuleExportDescriptor.html'>ModuleExportDescriptor</a>> <strong>exports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence<<a href='ModuleImportDescriptor.html'>ModuleImportDescriptor</a>> <strong>imports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence<<span>ArrayBuffer</span>> <strong>customSections</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>, <span>DOMString</span> <strong>sectionName</strong>);
 };</code></pre>
   
 </section>

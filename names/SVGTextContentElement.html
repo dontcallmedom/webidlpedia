@@ -7,28 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface SVGTextContentElement : SVGGraphicsElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
 
   // lengthAdjust Types
-  const unsigned short LENGTHADJUST_UNKNOWN = 0;
-  const unsigned short LENGTHADJUST_SPACING = 1;
-  const unsigned short LENGTHADJUST_SPACINGANDGLYPHS = 2;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> = 1;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> = 2;
 
-  [SameObject] readonly attribute SVGAnimatedLength textLength;
-  [SameObject] readonly attribute SVGAnimatedEnumeration lengthAdjust;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;
 
-  long getNumberOfChars();
-  float getComputedTextLength();
-  float getSubStringLength(unsigned long charnum, unsigned long nchars);
-  DOMPoint getStartPositionOfChar(unsigned long charnum);
-  DOMPoint getEndPositionOfChar(unsigned long charnum);
-  DOMRect getExtentOfChar(unsigned long charnum);
-  float getRotationOfChar(unsigned long charnum);
-  long getCharNumAtPosition(optional DOMPointInit point = {});
-  void selectSubString(unsigned long charnum, unsigned long nchars);
+  <span>long</span> <strong>getNumberOfChars</strong>();
+  <span>float</span> <strong>getComputedTextLength</strong>();
+  <span>float</span> <strong>getSubStringLength</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>float</span> <strong>getRotationOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> = {});
+  <a href='void.html'>void</a> <strong>selectSubString</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
 };</code></pre>
   
 </section>

@@ -7,29 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/css-font-loading/#fontface">CSS Font Loading Module Level 3</a> defines <code>FontFace</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FontFace</strong> {
+  constructor(<a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>, (<a href='CSSOMString.html'>CSSOMString</a> or <a href='BinaryData.html'>BinaryData</a>) <strong>source</strong>,
+                optional <a href='FontFaceDescriptors.html'>FontFaceDescriptors</a> <strong>descriptors</strong> = {});
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>style</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>weight</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>stretch</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>unicodeRange</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variant</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>featureSettings</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variationSettings</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>display</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>ascentOverride</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>descentOverride</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>lineGapOverride</strong>;
 
-[Exposed=(Window,Worker)]
-interface FontFace {
-  constructor(CSSOMString family, (CSSOMString or BinaryData) source,
-                optional FontFaceDescriptors descriptors = {});
-  attribute CSSOMString family;
-  attribute CSSOMString style;
-  attribute CSSOMString weight;
-  attribute CSSOMString stretch;
-  attribute CSSOMString unicodeRange;
-  attribute CSSOMString variant;
-  attribute CSSOMString featureSettings;
-  attribute CSSOMString variationSettings;
-  attribute CSSOMString display;
-  attribute CSSOMString ascentOverride;
-  attribute CSSOMString descentOverride;
-  attribute CSSOMString lineGapOverride;
+  readonly attribute <a href='FontFaceLoadStatus.html'>FontFaceLoadStatus</a> <strong>status</strong>;
 
-  readonly attribute FontFaceLoadStatus status;
-
-  Promise<FontFace> load();
-  readonly attribute Promise<FontFace> loaded;
+  Promise<<a href='FontFace.html'>FontFace</a>> <strong>load</strong>();
+  readonly attribute Promise<<a href='FontFace.html'>FontFace</a>> <strong>loaded</strong>;
 };</code></pre>
   
 </section>

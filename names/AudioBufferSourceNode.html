@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode">Web Audio API</a> defines <code>AudioBufferSourceNode</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface AudioBufferSourceNode : AudioScheduledSourceNode {
-  constructor (BaseAudioContext context,
-               optional AudioBufferSourceOptions options = {});
-  attribute AudioBuffer? buffer;
-  readonly attribute AudioParam playbackRate;
-  readonly attribute AudioParam detune;
-  attribute boolean loop;
-  attribute double loopStart;
-  attribute double loopEnd;
-  undefined start (optional double when = 0,
-                   optional double offset,
-                   optional double duration);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AudioBufferSourceNode</strong> : <a href='AudioScheduledSourceNode.html'>AudioScheduledSourceNode</a> {
+  constructor (<a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>,
+               optional <a href='AudioBufferSourceOptions.html'>AudioBufferSourceOptions</a> <strong>options</strong> = {});
+  attribute <a href='AudioBuffer.html'>AudioBuffer</a>? <strong>buffer</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>playbackRate</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>detune</strong>;
+  attribute <span>boolean</span> <strong>loop</strong>;
+  attribute <span>double</span> <strong>loopStart</strong>;
+  attribute <span>double</span> <strong>loopEnd</strong>;
+  <span>undefined</span> <strong>start</strong> (optional <span>double</span> <strong>when</strong> = 0,
+                   optional <span>double</span> <strong>offset</strong>,
+                   optional <span>double</span> <strong>duration</strong>);
 };</code></pre>
   
 </section>

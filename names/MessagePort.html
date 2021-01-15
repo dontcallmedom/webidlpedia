@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/web-messaging.html#messageport">HTML Standard</a> defines <code>MessagePort</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker,AudioWorklet), Transferable]
-interface MessagePort : EventTarget {
-  undefined postMessage(any message, sequence<object> transfer);
-  undefined postMessage(any message, optional PostMessageOptions options = {});
-  undefined start();
-  undefined close();
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>), Transferable]
+interface <strong>MessagePort</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>start</strong>();
+  <span>undefined</span> <strong>close</strong>();
 
   // event handlers
-  attribute EventHandler onmessage;
-  attribute EventHandler onmessageerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
 </section>

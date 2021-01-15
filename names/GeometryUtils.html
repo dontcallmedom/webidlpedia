@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> defines <code>GeometryUtils</code></p>
-<pre class=webidl><code>
-
-interface mixin GeometryUtils {
-  sequence<DOMQuad> getBoxQuads(optional BoxQuadOptions options = {});
-  DOMQuad convertQuadFromNode(DOMQuadInit quad, GeometryNode from, optional ConvertCoordinateOptions options = {});
-  DOMQuad convertRectFromNode(DOMRectReadOnly rect, GeometryNode from, optional ConvertCoordinateOptions options = {});
-  DOMPoint convertPointFromNode(DOMPointInit point, GeometryNode from, optional ConvertCoordinateOptions options = {}); // XXX z,w turns into 0
+<pre class=webidl><code>interface mixin <strong>GeometryUtils</strong> {
+  sequence<<a href='DOMQuad.html'>DOMQuad</a>> <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> = {});
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> = {});
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> = {});
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> = {}); // XXX z,w turns into 0
 };</code></pre>
   
 </section>

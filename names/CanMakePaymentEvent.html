@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-handler/#dom-canmakepaymentevent">Payment Handler API</a> defines <code>CanMakePaymentEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker]
-interface CanMakePaymentEvent : ExtendableEvent {
-  constructor(DOMString type, optional CanMakePaymentEventInit eventInitDict = {});
-  readonly attribute USVString topOrigin;
-  readonly attribute USVString paymentRequestOrigin;
-  readonly attribute FrozenArray<PaymentMethodData> methodData;
-  void respondWith(Promise<boolean> canMakePaymentResponse);
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>CanMakePaymentEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='CanMakePaymentEventInit.html'>CanMakePaymentEventInit</a> <strong>eventInitDict</strong> = {});
+  readonly attribute <span>USVString</span> <strong>topOrigin</strong>;
+  readonly attribute <span>USVString</span> <strong>paymentRequestOrigin</strong>;
+  readonly attribute FrozenArray<<a href='PaymentMethodData.html'>PaymentMethodData</a>> <strong>methodData</strong>;
+  <a href='void.html'>void</a> <strong>respondWith</strong>(Promise<<span>boolean</span>> <strong>canMakePaymentResponse</strong>);
 };</code></pre>
   
 </section>

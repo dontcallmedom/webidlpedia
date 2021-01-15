@@ -7,16 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-image/#imagecapture">MediaStream Image Capture</a> defines <code>ImageCapture</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface ImageCapture {
-   constructor(MediaStreamTrack videoTrack);
-   Promise<Blob>              takePhoto(optional PhotoSettings photoSettings = {});
-   Promise<PhotoCapabilities> getPhotoCapabilities();
-   Promise<PhotoSettings>     getPhotoSettings();
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>ImageCapture</strong> {
+   constructor(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>videoTrack</strong>);
+   Promise<<a href='Blob.html'>Blob</a>>              <strong>takePhoto</strong>(optional <a href='PhotoSettings.html'>PhotoSettings</a> <strong>photoSettings</strong> = {});
+   Promise<<a href='PhotoCapabilities.html'>PhotoCapabilities</a>> <strong>getPhotoCapabilities</strong>();
+   Promise<<a href='PhotoSettings.html'>PhotoSettings</a>>     <strong>getPhotoSettings</strong>();
+   Promise<<a href='ImageBitmap.html'>ImageBitmap</a>>       <strong>grabFrame</strong>();
 
-   Promise<ImageBitmap>       grabFrame();
-
-   readonly attribute MediaStreamTrack track;
+   readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;
 };</code></pre>
   
 </section>

@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/geolocation-api/#dom-geolocation">Geolocation API Specification</a> defines <code>Geolocation</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Geolocation</strong> {
+  <span>undefined</span> <strong>getCurrentPosition</strong>(<a href='PositionCallback.html'>PositionCallback</a> <strong>successCallback</strong>,
+                          optional <a href='PositionErrorCallback.html'>PositionErrorCallback</a> <strong>errorCallback</strong>,
+                          optional <a href='PositionOptions.html'>PositionOptions</a> <strong>options</strong> = {});
 
-[Exposed=Window]
-interface Geolocation {
-  undefined getCurrentPosition(PositionCallback successCallback,
-                          optional PositionErrorCallback errorCallback,
-                          optional PositionOptions options = {});
+  <span>long</span> <strong>watchPosition</strong>(<a href='PositionCallback.html'>PositionCallback</a> <strong>successCallback</strong>,
+                      optional <a href='PositionErrorCallback.html'>PositionErrorCallback</a> <strong>errorCallback</strong>,
+                      optional <a href='PositionOptions.html'>PositionOptions</a> <strong>options</strong> = {});
 
-  long watchPosition(PositionCallback successCallback,
-                      optional PositionErrorCallback errorCallback,
-                      optional PositionOptions options = {});
-
-  undefined clearWatch(long watchId);
+  <span>undefined</span> <strong>clearWatch</strong>(<span>long</span> <strong>watchId</strong>);
 };</code></pre>
   
 </section>

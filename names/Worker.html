@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#worker">HTML Standard</a> defines <code>Worker</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> = {});
 
-[Exposed=(Window,DedicatedWorker,SharedWorker)]
-interface Worker : EventTarget {
-  constructor(USVString scriptURL, optional WorkerOptions options = {});
+  <span>undefined</span> <strong>terminate</strong>();
 
-  undefined terminate();
-
-  undefined postMessage(any message, sequence<object> transfer);
-  undefined postMessage(any message, optional PostMessageOptions options = {});
-  attribute EventHandler onmessage;
-  attribute EventHandler onmessageerror;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };
 
-Worker includes AbstractWorker;</code></pre>
+<a href='Worker.html'>Worker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
   
 </section>
 

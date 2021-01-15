@@ -7,35 +7,31 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack">Media Capture and Streams</a> defines <code>MediaStreamTrack</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface MediaStreamTrack : EventTarget {
-  readonly attribute DOMString kind;
-  readonly attribute DOMString id;
-  readonly attribute DOMString label;
-  attribute boolean enabled;
-  readonly attribute boolean muted;
-  attribute EventHandler onmute;
-  attribute EventHandler onunmute;
-  readonly attribute MediaStreamTrackState readyState;
-  attribute EventHandler onended;
-  MediaStreamTrack clone();
-  undefined stop();
-  MediaTrackCapabilities getCapabilities();
-  MediaTrackConstraints getConstraints();
-  MediaTrackSettings getSettings();
-  Promise<undefined> applyConstraints(optional MediaTrackConstraints constraints = {});
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>DOMString</span> <strong>label</strong>;
+  attribute <span>boolean</span> <strong>enabled</strong>;
+  readonly attribute <span>boolean</span> <strong>muted</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmute</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunmute</strong>;
+  readonly attribute <a href='MediaStreamTrackState.html'>MediaStreamTrackState</a> <strong>readyState</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;
+  <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>clone</strong>();
+  <span>undefined</span> <strong>stop</strong>();
+  <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong>getCapabilities</strong>();
+  <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>getConstraints</strong>();
+  <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();
+  Promise<<span>undefined</span>> <strong>applyConstraints</strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> = {});
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/mst-content-hint/#mediastreamtrack-extension">MediaStreamTrack Content Hints</a>
-<pre class=webidl><code>partial interface MediaStreamTrack {
-  attribute DOMString contentHint;
+<pre class=webidl><code>partial interface <strong>MediaStreamTrack</strong> {
+  attribute <span>DOMString</span> <strong>contentHint</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>
-
-partial interface MediaStreamTrack {
-    readonly        attribute boolean      isolated;
-                    attribute EventHandler onisolationchange;
+<pre class=webidl><code>partial interface <strong>MediaStreamTrack</strong> {
+    readonly        attribute <span>boolean</span>      <strong>isolated</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onisolationchange</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

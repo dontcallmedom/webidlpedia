@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-handler/#dom-paymentmanager">Payment Handler API</a> defines <code>PaymentManager</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=(Window,Worker)]
-interface PaymentManager {
-  [SameObject] readonly attribute PaymentInstruments instruments;
-  attribute DOMString userHint;
-  Promise<void> enableDelegations(sequence<PaymentDelegation> delegations);
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PaymentManager</strong> {
+  [SameObject] readonly attribute <a href='PaymentInstruments.html'>PaymentInstruments</a> <strong>instruments</strong>;
+  attribute <span>DOMString</span> <strong>userHint</strong>;
+  Promise<<a href='void.html'>void</a>> <strong>enableDelegations</strong>(sequence<<a href='PaymentDelegation.html'>PaymentDelegation</a>> <strong>delegations</strong>);
 };</code></pre>
   
 </section>

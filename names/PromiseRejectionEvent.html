@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/webappapis.html#promiserejectionevent">HTML Standard</a> defines <code>PromiseRejectionEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PromiseRejectionEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='PromiseRejectionEventInit.html'>PromiseRejectionEventInit</a> <strong>eventInitDict</strong>);
 
-[Exposed=(Window,Worker)]
-interface PromiseRejectionEvent : Event {
-  constructor(DOMString type, PromiseRejectionEventInit eventInitDict);
-
-  readonly attribute Promise<any> promise;
-  readonly attribute any reason;
+  readonly attribute Promise<<span>any</span>> <strong>promise</strong>;
+  readonly attribute <span>any</span> <strong>reason</strong>;
 };</code></pre>
   
 </section>

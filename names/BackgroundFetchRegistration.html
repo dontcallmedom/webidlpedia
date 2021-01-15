@@ -7,24 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-fetch/#backgroundfetchregistration">Background Fetch</a> defines <code>BackgroundFetchRegistration</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>BackgroundFetchRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>uploadTotal</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>uploaded</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>downloadTotal</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>downloaded</strong>;
+  readonly attribute <a href='BackgroundFetchResult.html'>BackgroundFetchResult</a> <strong>result</strong>;
+  readonly attribute <a href='BackgroundFetchFailureReason.html'>BackgroundFetchFailureReason</a> <strong>failureReason</strong>;
+  readonly attribute <span>boolean</span> <strong>recordsAvailable</strong>;
 
-[Exposed=(Window,Worker)]
-interface BackgroundFetchRegistration : EventTarget {
-  readonly attribute DOMString id;
-  readonly attribute unsigned long long uploadTotal;
-  readonly attribute unsigned long long uploaded;
-  readonly attribute unsigned long long downloadTotal;
-  readonly attribute unsigned long long downloaded;
-  readonly attribute BackgroundFetchResult result;
-  readonly attribute BackgroundFetchFailureReason failureReason;
-  readonly attribute boolean recordsAvailable;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
 
-  attribute EventHandler onprogress;
-
-  Promise<boolean> abort();
-  Promise<BackgroundFetchRecord> match(RequestInfo request, optional CacheQueryOptions options = {});
-  Promise<sequence<BackgroundFetchRecord>> matchAll(optional RequestInfo request, optional CacheQueryOptions options = {});
+  Promise<<span>boolean</span>> <strong>abort</strong>();
+  Promise<<a href='BackgroundFetchRecord.html'>BackgroundFetchRecord</a>> <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
+  Promise<sequence<<a href='BackgroundFetchRecord.html'>BackgroundFetchRecord</a>>> <strong>matchAll</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
 </section>

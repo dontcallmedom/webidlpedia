@@ -7,69 +7,57 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope">Service Workers Nightly</a> defines <code>ServiceWorkerGlobalScope</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Global=(<a href='Worker.html'>Worker</a>,<a href='ServiceWorker.html'>ServiceWorker</a>), Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {
+  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;
+  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;
+  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;
 
-[Global=(Worker,ServiceWorker), Exposed=ServiceWorker]
-interface ServiceWorkerGlobalScope : WorkerGlobalScope {
-  [SameObject] readonly attribute Clients clients;
-  [SameObject] readonly attribute ServiceWorkerRegistration registration;
-  [SameObject] readonly attribute ServiceWorker serviceWorker;
+  [NewObject] Promise<<span>undefined</span>> <strong>skipWaiting</strong>();
 
-  [NewObject] Promise<undefined> skipWaiting();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;
 
-  attribute EventHandler oninstall;
-  attribute EventHandler onactivate;
-  attribute EventHandler onfetch;
-
-  attribute EventHandler onmessage;
-  attribute EventHandler onmessageerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://notifications.spec.whatwg.org/#service-worker-api">Notifications API Standard</a>
-<pre class=webidl><code>
-
-partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler onnotificationclick;
-  attribute EventHandler onnotificationclose;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclose</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/background-fetch/#extensions-to-service-worker-global">Background Fetch</a>
-<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler onbackgroundfetchsuccess;
-  attribute EventHandler onbackgroundfetchfail;
-  attribute EventHandler onbackgroundfetchabort;
-  attribute EventHandler onbackgroundfetchclick;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/background-sync/spec/#sync-event">Web Background Synchronization</a>
-<pre class=webidl><code>
-
-partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler onsync;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/content-index/spec/#extensions-to-service-worker-global">Content Index</a>
-<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler oncontentdelete;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#ServiceWorkerGlobalScope">Cookie Store API</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
 
-partial interface ServiceWorkerGlobalScope {
-  [SameObject] readonly attribute CookieStore cookieStore;
-
-  attribute EventHandler oncookiechange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/periodic-background-sync/#extensions-to-serviceworkerglobalscope">Web Periodic Background Synchronization</a>
-<pre class=webidl><code>partial interface ServiceWorkerGlobalScope {
-    attribute EventHandler onperiodicsync;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/payment-handler/#oncanmakepayment-attribute">Payment Handler API</a>
-<pre class=webidl><code>
-
-partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler oncanmakepayment;
+<pre class=webidl><code>partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;
 };
 
-partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler onpaymentrequest;
+partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/push-api/#extensions-to-the-serviceworkerglobalscope-interface">Push API</a>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker, SecureContext]
-partial interface ServiceWorkerGlobalScope {
-  attribute EventHandler onpush;
-  attribute EventHandler onpushsubscriptionchange;
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+partial interface <strong>ServiceWorkerGlobalScope</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;
 };</code></pre></li></ol>
 </section>
 

@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/entries-api/#filesystemdirectoryentry">File and Directory Entries API</a> defines <code>FileSystemDirectoryEntry</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface FileSystemDirectoryEntry : FileSystemEntry {
-    FileSystemDirectoryReader createReader();
-    undefined getFile(optional USVString? path,
-                 optional FileSystemFlags options = {},
-                 optional FileSystemEntryCallback successCallback,
-                 optional ErrorCallback errorCallback);
-    undefined getDirectory(optional USVString? path,
-                      optional FileSystemFlags options = {},
-                      optional FileSystemEntryCallback successCallback,
-                      optional ErrorCallback errorCallback);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>FileSystemDirectoryEntry</strong> : <a href='FileSystemEntry.html'>FileSystemEntry</a> {
+    <a href='FileSystemDirectoryReader.html'>FileSystemDirectoryReader</a> <strong>createReader</strong>();
+    <span>undefined</span> <strong>getFile</strong>(optional <span>USVString</span>? <strong>path</strong>,
+                 optional <a href='FileSystemFlags.html'>FileSystemFlags</a> <strong>options</strong> = {},
+                 optional <a href='FileSystemEntryCallback.html'>FileSystemEntryCallback</a> <strong>successCallback</strong>,
+                 optional <a href='ErrorCallback.html'>ErrorCallback</a> <strong>errorCallback</strong>);
+    <span>undefined</span> <strong>getDirectory</strong>(optional <span>USVString</span>? <strong>path</strong>,
+                      optional <a href='FileSystemFlags.html'>FileSystemFlags</a> <strong>options</strong> = {},
+                      optional <a href='FileSystemEntryCallback.html'>FileSystemEntryCallback</a> <strong>successCallback</strong>,
+                      optional <a href='ErrorCallback.html'>ErrorCallback</a> <strong>errorCallback</strong>);
 };</code></pre>
   
 </section>

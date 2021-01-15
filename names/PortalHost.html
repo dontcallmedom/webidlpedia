@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/portals/#portalhost">Portals</a> defines <code>PortalHost</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PortalHost</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
 
-[Exposed=Window]
-interface PortalHost : EventTarget {
-    undefined postMessage(any message, optional PostMessageOptions options = {});
-
-    attribute EventHandler onmessage;
-    attribute EventHandler onmessageerror;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
 </section>

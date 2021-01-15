@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#windowclient">Service Workers Nightly</a> defines <code>WindowClient</code></p>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker]
-interface WindowClient : Client {
-  readonly attribute VisibilityState visibilityState;
-  readonly attribute boolean focused;
-  [SameObject] readonly attribute FrozenArray<USVString> ancestorOrigins;
-  [NewObject] Promise<WindowClient> focus();
-  [NewObject] Promise<WindowClient?> navigate(USVString url);
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>WindowClient</strong> : <a href='Client.html'>Client</a> {
+  readonly attribute <a href='VisibilityState.html'>VisibilityState</a> <strong>visibilityState</strong>;
+  readonly attribute <span>boolean</span> <strong>focused</strong>;
+  [SameObject] readonly attribute FrozenArray<<span>USVString</span>> <strong>ancestorOrigins</strong>;
+  [NewObject] Promise<<a href='WindowClient.html'>WindowClient</a>> <strong>focus</strong>();
+  [NewObject] Promise<<a href='WindowClient.html'>WindowClient</a>?> <strong>navigate</strong>(<span>USVString</span> <strong>url</strong>);
 };</code></pre>
   
 </section>

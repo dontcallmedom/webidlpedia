@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#extendablemessageevent">Service Workers Nightly</a> defines <code>ExtendableMessageEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker]
-interface ExtendableMessageEvent : ExtendableEvent {
-  constructor(DOMString type, optional ExtendableMessageEventInit eventInitDict = {});
-  readonly attribute any data;
-  readonly attribute USVString origin;
-  readonly attribute DOMString lastEventId;
-  [SameObject] readonly attribute (Client or ServiceWorker or MessagePort)? source;
-  readonly attribute FrozenArray<MessagePort> ports;
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>ExtendableMessageEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='ExtendableMessageEventInit.html'>ExtendableMessageEventInit</a> <strong>eventInitDict</strong> = {});
+  readonly attribute <span>any</span> <strong>data</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>DOMString</span> <strong>lastEventId</strong>;
+  [SameObject] readonly attribute (<a href='Client.html'>Client</a> or <a href='ServiceWorker.html'>ServiceWorker</a> or <a href='MessagePort.html'>MessagePort</a>)? <strong>source</strong>;
+  readonly attribute FrozenArray<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong>;
 };</code></pre>
   
 </section>

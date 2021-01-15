@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/background-fetch/#backgroundfetchmanager">Background Fetch</a> defines <code>BackgroundFetchManager</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface BackgroundFetchManager {
-  Promise<BackgroundFetchRegistration> fetch(DOMString id, (RequestInfo or sequence<RequestInfo>) requests, optional BackgroundFetchOptions options = {});
-  Promise<BackgroundFetchRegistration?> get(DOMString id);
-  Promise<sequence<DOMString>> getIds();
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>BackgroundFetchManager</strong> {
+  Promise<<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>> <strong>fetch</strong>(<span>DOMString</span> <strong>id</strong>, (<a href='RequestInfo.html'>RequestInfo</a> or sequence<<a href='RequestInfo.html'>RequestInfo</a>>) <strong>requests</strong>, optional <a href='BackgroundFetchOptions.html'>BackgroundFetchOptions</a> <strong>options</strong> = {});
+  Promise<<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>?> <strong>get</strong>(<span>DOMString</span> <strong>id</strong>);
+  Promise<sequence<<span>DOMString</span>>> <strong>getIds</strong>();
 };</code></pre>
   
 </section>

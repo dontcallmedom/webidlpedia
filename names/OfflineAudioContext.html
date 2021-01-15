@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#offlineaudiocontext">Web Audio API</a> defines <code>OfflineAudioContext</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface OfflineAudioContext : BaseAudioContext {
-  constructor(OfflineAudioContextOptions contextOptions);
-  constructor(unsigned long numberOfChannels, unsigned long length, float sampleRate);
-  Promise<AudioBuffer> startRendering();
-  Promise<undefined> resume();
-  Promise<undefined> suspend(double suspendTime);
-  readonly attribute unsigned long length;
-  attribute EventHandler oncomplete;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>OfflineAudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {
+  constructor(<a href='OfflineAudioContextOptions.html'>OfflineAudioContextOptions</a> <strong>contextOptions</strong>);
+  constructor(<span>unsigned long</span> <strong>numberOfChannels</strong>, <span>unsigned long</span> <strong>length</strong>, <span>float</span> <strong>sampleRate</strong>);
+  Promise<<a href='AudioBuffer.html'>AudioBuffer</a>> <strong>startRendering</strong>();
+  Promise<<span>undefined</span>> <strong>resume</strong>();
+  Promise<<span>undefined</span>> <strong>suspend</strong>(<span>double</span> <strong>suspendTime</strong>);
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncomplete</strong>;
 };</code></pre>
   
 </section>

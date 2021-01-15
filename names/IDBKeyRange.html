@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbkeyrange">Indexed Database API 3.0</a> defines <code>IDBKeyRange</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface IDBKeyRange {
-  readonly attribute any lower;
-  readonly attribute any upper;
-  readonly attribute boolean lowerOpen;
-  readonly attribute boolean upperOpen;
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBKeyRange</strong> {
+  readonly attribute <span>any</span> <strong>lower</strong>;
+  readonly attribute <span>any</span> <strong>upper</strong>;
+  readonly attribute <span>boolean</span> <strong>lowerOpen</strong>;
+  readonly attribute <span>boolean</span> <strong>upperOpen</strong>;
 
   // Static construction methods:
-  [NewObject] static IDBKeyRange only(any value);
-  [NewObject] static IDBKeyRange lowerBound(any lower, optional boolean open = false);
-  [NewObject] static IDBKeyRange upperBound(any upper, optional boolean open = false);
-  [NewObject] static IDBKeyRange bound(any lower,
-                                       any upper,
-                                       optional boolean lowerOpen = false,
-                                       optional boolean upperOpen = false);
+  [NewObject] static <a href='IDBKeyRange.html'>IDBKeyRange</a> <strong>only</strong>(<span>any</span> <strong>value</strong>);
+  [NewObject] static <a href='IDBKeyRange.html'>IDBKeyRange</a> <strong>lowerBound</strong>(<span>any</span> <strong>lower</strong>, optional <span>boolean</span> <strong>open</strong> = false);
+  [NewObject] static <a href='IDBKeyRange.html'>IDBKeyRange</a> <strong>upperBound</strong>(<span>any</span> <strong>upper</strong>, optional <span>boolean</span> <strong>open</strong> = false);
+  [NewObject] static <a href='IDBKeyRange.html'>IDBKeyRange</a> <strong>bound</strong>(<span>any</span> <strong>lower</strong>,
+                                       <span>any</span> <strong>upper</strong>,
+                                       optional <span>boolean</span> <strong>lowerOpen</strong> = false,
+                                       optional <span>boolean</span> <strong>upperOpen</strong> = false);
 
-  boolean includes(any key);
+  <span>boolean</span> <strong>includes</strong>(<span>any</span> <strong>key</strong>);
 };</code></pre>
   
 </section>

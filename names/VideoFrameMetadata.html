@@ -7,20 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/video-rvfc/#dictdef-videoframemetadata">HTMLVideoElement.requestVideoFrameCallback()</a> defines <code>VideoFrameMetadata</code></p>
-<pre class=webidl><code>dictionary VideoFrameMetadata {
-  required DOMHighResTimeStamp presentationTime;
-  required DOMHighResTimeStamp expectedDisplayTime;
+<pre class=webidl><code>dictionary <strong>VideoFrameMetadata</strong> {
+  required <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>presentationTime</strong>;
+  required <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>expectedDisplayTime</strong>;
+  required <span>unsigned long</span> <strong>width</strong>;
+  required <span>unsigned long</span> <strong>height</strong>;
+  required <span>double</span> <strong>mediaTime</strong>;
 
-  required unsigned long width;
-  required unsigned long height;
-  required double mediaTime;
+  required <span>unsigned long</span> <strong>presentedFrames</strong>;
+  <span>double</span> <strong>processingDuration</strong>;
 
-  required unsigned long presentedFrames;
-  double processingDuration;
-
-  DOMHighResTimeStamp captureTime;
-  DOMHighResTimeStamp receiveTime;
-  unsigned long rtpTimestamp;
+  <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>captureTime</strong>;
+  <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>receiveTime</strong>;
+  <span>unsigned long</span> <strong>rtpTimestamp</strong>;
 };</code></pre>
   
 </section>

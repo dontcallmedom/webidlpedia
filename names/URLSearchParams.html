@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://url.spec.whatwg.org/#urlsearchparams">URL Standard</a> defines <code>URLSearchParams</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>URLSearchParams</strong> {
+  constructor(optional (sequence<sequence<<span>USVString</span>>> or record<<span>USVString</span>, <span>USVString</span>> or <span>USVString</span>) <strong>init</strong> = "");
 
-[Exposed=(Window,Worker)]
-interface URLSearchParams {
-  constructor(optional (sequence<sequence<USVString>> or record<USVString, USVString> or USVString) init = "");
+  <span>undefined</span> <strong>append</strong>(<span>USVString</span> <strong>name</strong>, <span>USVString</span> <strong>value</strong>);
+  <span>undefined</span> <strong>delete</strong>(<span>USVString</span> <strong>name</strong>);
+  <span>USVString</span>? <strong>get</strong>(<span>USVString</span> <strong>name</strong>);
+  sequence<<span>USVString</span>> <strong>getAll</strong>(<span>USVString</span> <strong>name</strong>);
+  <span>boolean</span> <strong>has</strong>(<span>USVString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>set</strong>(<span>USVString</span> <strong>name</strong>, <span>USVString</span> <strong>value</strong>);
 
-  undefined append(USVString name, USVString value);
-  undefined delete(USVString name);
-  USVString? get(USVString name);
-  sequence<USVString> getAll(USVString name);
-  boolean has(USVString name);
-  undefined set(USVString name, USVString value);
+  <span>undefined</span> <strong>sort</strong>();
 
-  undefined sort();
-
-  iterable<USVString, USVString>;
+  iterable<<span>USVString</span>, <span>USVString</span>>;
   stringifier;
 };</code></pre>
   

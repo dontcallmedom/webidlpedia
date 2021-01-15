@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGStringList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGStringList</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGStringList</strong> {
 
-[Exposed=Window]
-interface SVGStringList {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfItems</strong>;
 
-  readonly attribute unsigned long length;
-  readonly attribute unsigned long numberOfItems;
-
-  void clear();
-  DOMString initialize(DOMString newItem);
-  getter DOMString getItem(unsigned long index);
-  DOMString insertItemBefore(DOMString newItem, unsigned long index);
-  DOMString replaceItem(DOMString newItem, unsigned long index);
-  DOMString removeItem(unsigned long index);
-  DOMString appendItem(DOMString newItem);
-  setter void (unsigned long index, DOMString newItem);
+  <a href='void.html'>void</a> <strong>clear</strong>();
+  <span>DOMString</span> <strong>initialize</strong>(<span>DOMString</span> <strong>newItem</strong>);
+  getter <span>DOMString</span> <strong>getItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <span>DOMString</span> <strong>insertItemBefore</strong>(<span>DOMString</span> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <span>DOMString</span> <strong>replaceItem</strong>(<span>DOMString</span> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <span>DOMString</span> <strong>removeItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <span>DOMString</span> <strong>appendItem</strong>(<span>DOMString</span> <strong>newItem</strong>);
+  setter <a href='void.html'>void</a> (<span>unsigned long</span> <strong>index</strong>, <span>DOMString</span> <strong>newItem</strong>);
 };</code></pre>
   
 </section>

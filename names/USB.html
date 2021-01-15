@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usb">WebUSB API</a> defines <code>USB</code></p>
-<pre class=webidl><code>
-
-[Exposed=(DedicatedWorker,SharedWorker,Window), SecureContext]
-interface USB : EventTarget {
-  attribute EventHandler onconnect;
-  attribute EventHandler ondisconnect;
-  Promise<sequence<USBDevice>> getDevices();
-  [Exposed=Window] Promise<USBDevice> requestDevice(USBDeviceRequestOptions options);
+<pre class=webidl><code>[Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>), SecureContext]
+interface <strong>USB</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;
+  Promise<sequence<<a href='USBDevice.html'>USBDevice</a>>> <strong>getDevices</strong>();
+  [Exposed=<a href='Window.html'>Window</a>] Promise<<a href='USBDevice.html'>USBDevice</a>> <strong>requestDevice</strong>(<a href='USBDeviceRequestOptions.html'>USBDeviceRequestOptions</a> <strong>options</strong>);
 };</code></pre>
   
 </section>

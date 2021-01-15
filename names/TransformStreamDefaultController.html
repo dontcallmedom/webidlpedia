@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#transformstreamdefaultcontroller">Streams Standard</a> defines <code>TransformStreamDefaultController</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>TransformStreamDefaultController</strong> {
+  readonly attribute <span>unrestricted double</span>? <strong>desiredSize</strong>;
 
-[Exposed=(Window,Worker,Worklet)]
-interface TransformStreamDefaultController {
-  readonly attribute unrestricted double? desiredSize;
-
-  undefined enqueue(optional any chunk);
-  undefined error(optional any reason);
-  undefined terminate();
+  <span>undefined</span> <strong>enqueue</strong>(optional <span>any</span> <strong>chunk</strong>);
+  <span>undefined</span> <strong>error</strong>(optional <span>any</span> <strong>reason</strong>);
+  <span>undefined</span> <strong>terminate</strong>();
 };</code></pre>
   
 </section>

@@ -7,26 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrwebgllayer">WebXR Device API</a> defines <code>XRWebGLLayer</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=Window]
-interface XRWebGLLayer: XRLayer {
-  constructor(XRSession session,
-             XRWebGLRenderingContext context,
-             optional XRWebGLLayerInit layerInit = {});
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XRWebGLLayer</strong>: <a href='XRLayer.html'>XRLayer</a> {
+  constructor(<a href='XRSession.html'>XRSession</a> <strong>session</strong>,
+             <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>,
+             optional <a href='XRWebGLLayerInit.html'>XRWebGLLayerInit</a> <strong>layerInit</strong> = {});
   // Attributes
-  readonly attribute boolean antialias;
-  readonly attribute boolean ignoreDepthValues;
+  readonly attribute <span>boolean</span> <strong>antialias</strong>;
+  readonly attribute <span>boolean</span> <strong>ignoreDepthValues</strong>;
 
-  [SameObject] readonly attribute WebGLFramebuffer? framebuffer;
-  readonly attribute unsigned long framebufferWidth;
-  readonly attribute unsigned long framebufferHeight;
+  [SameObject] readonly attribute <a href='WebGLFramebuffer.html'>WebGLFramebuffer</a>? <strong>framebuffer</strong>;
+  readonly attribute <span>unsigned long</span> <strong>framebufferWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>framebufferHeight</strong>;
 
   // Methods
-  XRViewport? getViewport(XRView view);
+  <a href='XRViewport.html'>XRViewport</a>? <strong>getViewport</strong>(<a href='XRView.html'>XRView</a> <strong>view</strong>);
 
   // Static Methods
-  static double getNativeFramebufferScaleFactor(XRSession session);
+  static <span>double</span> <strong>getNativeFramebufferScaleFactor</strong>(<a href='XRSession.html'>XRSession</a> <strong>session</strong>);
 };</code></pre>
   
 </section>

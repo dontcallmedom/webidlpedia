@@ -7,46 +7,42 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement">HTML Standard</a> defines <code>HTMLIFrameElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLIFrameElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute USVString src;
-  [CEReactions] attribute DOMString srcdoc;
-  [CEReactions] attribute DOMString name;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList sandbox;
-  [CEReactions] attribute DOMString allow;
-  [CEReactions] attribute boolean allowFullscreen;
-  [CEReactions] attribute DOMString width;
-  [CEReactions] attribute DOMString height;
-  [CEReactions] attribute DOMString referrerPolicy;
-  [CEReactions] attribute DOMString loading;
-  readonly attribute Document? contentDocument;
-  readonly attribute WindowProxy? contentWindow;
-  Document? getSVGDocument();
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>srcdoc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sandbox</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>allow</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>allowFullscreen</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
 
   // also has obsolete members
 };
 
-partial interface HTMLIFrameElement {
-  [CEReactions] attribute DOMString align;
-  [CEReactions] attribute DOMString scrolling;
-  [CEReactions] attribute DOMString frameBorder;
-  [CEReactions] attribute USVString longDesc;
+partial interface <strong>HTMLIFrameElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>scrolling</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>frameBorder</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString marginHeight;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString marginWidth;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginHeight</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginWidth</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/csp-embedded-enforcement/#csp-attribute">Content Security Policy: Embedded Enforcement</a>
-<pre class=webidl><code>partial interface HTMLIFrameElement {
-  [CEReactions] attribute DOMString csp;
+<pre class=webidl><code>partial interface <strong>HTMLIFrameElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>csp</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/permissions-policy-1/#the-policy-object">Permissions Policy</a>
-<pre class=webidl><code>
-
-partial interface HTMLIFrameElement {
-    [SameObject] readonly attribute PermissionsPolicy permissionsPolicy;
+<pre class=webidl><code>partial interface <strong>HTMLIFrameElement</strong> {
+    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;
 };</code></pre></li></ol>
 </section>
 

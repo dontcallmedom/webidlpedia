@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#cachestorage">Service Workers Nightly</a> defines <code>CacheStorage</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=(Window,Worker)]
-interface CacheStorage {
-  [NewObject] Promise<any> match(RequestInfo request, optional MultiCacheQueryOptions options = {});
-  [NewObject] Promise<boolean> has(DOMString cacheName);
-  [NewObject] Promise<Cache> open(DOMString cacheName);
-  [NewObject] Promise<boolean> delete(DOMString cacheName);
-  [NewObject] Promise<sequence<DOMString>> keys();
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>CacheStorage</strong> {
+  [NewObject] Promise<<span>any</span>> <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='MultiCacheQueryOptions.html'>MultiCacheQueryOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<<span>boolean</span>> <strong>has</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise<<a href='Cache.html'>Cache</a>> <strong>open</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise<<span>boolean</span>> <strong>delete</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise<sequence<<span>DOMString</span>>> <strong>keys</strong>();
 };</code></pre>
   
 </section>

@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablestreamdefaultcontroller">Streams Standard</a> defines <code>ReadableStreamDefaultController</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>ReadableStreamDefaultController</strong> {
+  readonly attribute <span>unrestricted double</span>? <strong>desiredSize</strong>;
 
-[Exposed=(Window,Worker,Worklet)]
-interface ReadableStreamDefaultController {
-  readonly attribute unrestricted double? desiredSize;
-
-  undefined close();
-  undefined enqueue(optional any chunk);
-  undefined error(optional any e);
+  <span>undefined</span> <strong>close</strong>();
+  <span>undefined</span> <strong>enqueue</strong>(optional <span>any</span> <strong>chunk</strong>);
+  <span>undefined</span> <strong>error</strong>(optional <span>any</span> <strong>e</strong>);
 };</code></pre>
   
 </section>

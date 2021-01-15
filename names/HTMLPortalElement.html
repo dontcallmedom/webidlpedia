@@ -7,16 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/portals/#htmlportalelement">Portals</a> defines <code>HTMLPortalElement</code></p>
-<pre class=webidl><code>[Exposed=Window, HTMLConstructor]
-interface HTMLPortalElement : HTMLElement {
-    [CEReactions] attribute USVString src;
-    [CEReactions] attribute DOMString referrerPolicy;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, HTMLConstructor]
+interface <strong>HTMLPortalElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+    [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+    [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+    [NewObject] Promise<<span>undefined</span>> <strong>activate</strong>(optional <a href='PortalActivateOptions.html'>PortalActivateOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
 
-    [NewObject] Promise<undefined> activate(optional PortalActivateOptions options = {});
-    undefined postMessage(any message, optional PostMessageOptions options = {});
-
-    attribute EventHandler onmessage;
-    attribute EventHandler onmessageerror;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
 </section>

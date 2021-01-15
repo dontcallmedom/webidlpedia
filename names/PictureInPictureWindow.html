@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/picture-in-picture/#pictureinpicturewindow">Picture-in-Picture</a> defines <code>PictureInPictureWindow</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PictureInPictureWindow</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>long</span> <strong>width</strong>;
+  readonly attribute <span>long</span> <strong>height</strong>;
 
-[Exposed=Window]
-interface PictureInPictureWindow : EventTarget {
-  readonly attribute long width;
-  readonly attribute long height;
-
-  attribute EventHandler onresize;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;
 };</code></pre>
   
 </section>

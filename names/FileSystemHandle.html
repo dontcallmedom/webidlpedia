@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/file-system-access/#filesystemhandle">File System Access</a> defines <code>FileSystemHandle</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
+interface <strong>FileSystemHandle</strong> {
+  readonly attribute <a href='FileSystemHandleKind.html'>FileSystemHandleKind</a> <strong>kind</strong>;
+  readonly attribute <span>USVString</span> <strong>name</strong>;
 
-[Exposed=(Window,Worker), SecureContext, Serializable]
-interface FileSystemHandle {
-  readonly attribute FileSystemHandleKind kind;
-  readonly attribute USVString name;
+  Promise<<span>boolean</span>> <strong>isSameEntry</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>other</strong>);
 
-  Promise<boolean> isSameEntry(FileSystemHandle other);
-
-  Promise<PermissionState> queryPermission(optional FileSystemHandlePermissionDescriptor descriptor = {});
-  Promise<PermissionState> requestPermission(optional FileSystemHandlePermissionDescriptor descriptor = {});
+  Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>queryPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> = {});
+  Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> = {});
 };</code></pre>
   
 </section>

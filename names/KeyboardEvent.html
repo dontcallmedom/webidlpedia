@@ -7,36 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#keyboardevent">UI Events</a> defines <code>KeyboardEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface KeyboardEvent : UIEvent {
-  constructor(DOMString type, optional KeyboardEventInit eventInitDict);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);
   // KeyLocationCode
-  const unsigned long DOM_KEY_LOCATION_STANDARD = 0x00;
-  const unsigned long DOM_KEY_LOCATION_LEFT = 0x01;
-  const unsigned long DOM_KEY_LOCATION_RIGHT = 0x02;
-  const unsigned long DOM_KEY_LOCATION_NUMPAD = 0x03;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> = 0x00;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> = 0x01;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> = 0x02;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> = 0x03;
 
-  readonly attribute DOMString key;
-  readonly attribute DOMString code;
-  readonly attribute unsigned long location;
+  readonly attribute <span>DOMString</span> <strong>key</strong>;
+  readonly attribute <span>DOMString</span> <strong>code</strong>;
+  readonly attribute <span>unsigned long</span> <strong>location</strong>;
 
-  readonly attribute boolean ctrlKey;
-  readonly attribute boolean shiftKey;
-  readonly attribute boolean altKey;
-  readonly attribute boolean metaKey;
+  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
+  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
+  readonly attribute <span>boolean</span> <strong>altKey</strong>;
+  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
 
-  readonly attribute boolean repeat;
-  readonly attribute boolean isComposing;
+  readonly attribute <span>boolean</span> <strong>repeat</strong>;
+  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
 
-  boolean getModifierState(DOMString keyArg);
+  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);
 };
 
-partial interface KeyboardEvent {
+partial interface <strong>KeyboardEvent</strong> {
   // The following support legacy user agents
-  readonly attribute unsigned long charCode;
-  readonly attribute unsigned long keyCode;
+  readonly attribute <span>unsigned long</span> <strong>charCode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>keyCode</strong>;
 };</code></pre>
   
 </section>

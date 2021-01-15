@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#path2d">HTML Standard</a> defines <code>Path2D</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Path2D</strong> {
+  constructor(optional (<a href='Path2D.html'>Path2D</a> or <span>DOMString</span>) <strong>path</strong>);
 
-[Exposed=(Window,Worker)]
-interface Path2D {
-  constructor(optional (Path2D or DOMString) path);
-
-  undefined addPath(Path2D path, optional DOMMatrix2DInit transform = {});
+  <span>undefined</span> <strong>addPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> = {});
 };
-Path2D includes CanvasPath;</code></pre>
+<a href='Path2D.html'>Path2D</a> includes <a href='CanvasPath.html'>CanvasPath</a>;</code></pre>
   
 </section>
 <section>

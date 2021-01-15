@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/file-system-access/#filesystemdirectoryhandle">File System Access</a> defines <code>FileSystemDirectoryHandle</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
+interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle.html'>FileSystemHandle</a> {
+  async iterable<<span>USVString</span>, <a href='FileSystemHandle.html'>FileSystemHandle</a>>;
 
-[Exposed=(Window,Worker), SecureContext, Serializable]
-interface FileSystemDirectoryHandle : FileSystemHandle {
-  async iterable<USVString, FileSystemHandle>;
+  Promise<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>> <strong>getFileHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetFileOptions.html'>FileSystemGetFileOptions</a> <strong>options</strong> = {});
+  Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>getDirectoryHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetDirectoryOptions.html'>FileSystemGetDirectoryOptions</a> <strong>options</strong> = {});
 
-  Promise<FileSystemFileHandle> getFileHandle(USVString name, optional FileSystemGetFileOptions options = {});
-  Promise<FileSystemDirectoryHandle> getDirectoryHandle(USVString name, optional FileSystemGetDirectoryOptions options = {});
+  Promise<<span>undefined</span>> <strong>removeEntry</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemRemoveOptions.html'>FileSystemRemoveOptions</a> <strong>options</strong> = {});
 
-  Promise<undefined> removeEntry(USVString name, optional FileSystemRemoveOptions options = {});
-
-  Promise<sequence<USVString>?> resolve(FileSystemHandle possibleDescendant);
+  Promise<sequence<<span>USVString</span>>?> <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);
 };</code></pre>
   
 </section>

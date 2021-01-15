@@ -7,39 +7,37 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement">HTML Standard</a> defines <code>HTMLAnchorElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLAnchorElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLAnchorElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute DOMString target;
-  [CEReactions] attribute DOMString download;
-  [CEReactions] attribute USVString ping;
-  [CEReactions] attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
-  [CEReactions] attribute DOMString hreflang;
-  [CEReactions] attribute DOMString type;
+  [CEReactions] attribute <span>DOMString</span> <strong>target</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>download</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>ping</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rel</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>hreflang</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
 
-  [CEReactions] attribute DOMString text;
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
 
-  [CEReactions] attribute DOMString referrerPolicy;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
 
   // also has obsolete members
 };
-HTMLAnchorElement includes HTMLHyperlinkElementUtils;
+<a href='HTMLAnchorElement.html'>HTMLAnchorElement</a> includes <a href='HTMLHyperlinkElementUtils.html'>HTMLHyperlinkElementUtils</a>;
 
-partial interface HTMLAnchorElement {
-  [CEReactions] attribute DOMString coords;
-  [CEReactions] attribute DOMString charset;
-  [CEReactions] attribute DOMString name;
-  [CEReactions] attribute DOMString rev;
-  [CEReactions] attribute DOMString shape;
+partial interface <strong>HTMLAnchorElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>coords</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rev</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>shape</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://privacycg.github.io/private-click-measurement/#linkformat">Private Click Measurement</a>
-<pre class=webidl><code>partial interface HTMLAnchorElement {
-    [CEReactions] attribute DOMString adCampaignId;
-    [CEReactions] attribute USVString adDestination;
+<pre class=webidl><code>partial interface <strong>HTMLAnchorElement</strong> {
+    [CEReactions] attribute <span>DOMString</span> <strong>adCampaignId</strong>;
+    [CEReactions] attribute <span>USVString</span> <strong>adDestination</strong>;
 };</code></pre></li></ol>
 </section>
 

@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#offscreencanvas">HTML Standard</a> defines <code>OffscreenCanvas</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Transferable]
+interface <strong>OffscreenCanvas</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor([EnforceRange] <span>unsigned long long</span> <strong>width</strong>, [EnforceRange] <span>unsigned long long</span> <strong>height</strong>);
 
-[Exposed=(Window,Worker), Transferable]
-interface OffscreenCanvas : EventTarget {
-  constructor([EnforceRange] unsigned long long width, [EnforceRange] unsigned long long height);
+  attribute [EnforceRange] <span>unsigned long long</span> <strong>width</strong>;
+  attribute [EnforceRange] <span>unsigned long long</span> <strong>height</strong>;
 
-  attribute [EnforceRange] unsigned long long width;
-  attribute [EnforceRange] unsigned long long height;
-
-  OffscreenRenderingContext? getContext(OffscreenRenderingContextId contextId, optional any options = null);
-  ImageBitmap transferToImageBitmap();
-  Promise<Blob> convertToBlob(optional ImageEncodeOptions options = {});
+  <a href='OffscreenRenderingContext.html'>OffscreenRenderingContext</a>? <strong>getContext</strong>(<a href='OffscreenRenderingContextId.html'>OffscreenRenderingContextId</a> <strong>contextId</strong>, optional <span>any</span> <strong>options</strong> = null);
+  <a href='ImageBitmap.html'>ImageBitmap</a> <strong>transferToImageBitmap</strong>();
+  Promise<<a href='Blob.html'>Blob</a>> <strong>convertToBlob</strong>(optional <a href='ImageEncodeOptions.html'>ImageEncodeOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
 </section>

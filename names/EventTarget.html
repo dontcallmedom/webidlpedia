@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#eventtarget">DOM Standard</a> defines <code>EventTarget</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker,AudioWorklet)]
-interface EventTarget {
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>)]
+interface <strong>EventTarget</strong> {
   constructor();
 
-  undefined addEventListener(DOMString type, EventListener? callback, optional (AddEventListenerOptions or boolean) options = {});
-  undefined removeEventListener(DOMString type, EventListener? callback, optional (EventListenerOptions or boolean) options = {});
-  boolean dispatchEvent(Event event);
+  <span>undefined</span> <strong>addEventListener</strong>(<span>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span>boolean</span>) <strong>options</strong> = {});
+  <span>undefined</span> <strong>removeEventListener</strong>(<span>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span>boolean</span>) <strong>options</strong> = {});
+  <span>boolean</span> <strong>dispatchEvent</strong>(<a href='Event.html'>Event</a> <strong>event</strong>);
 };</code></pre>
   
 </section>

@@ -7,26 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/cssom/#cssstylesheet">CSS Object Model (CSSOM)</a> defines <code>CSSStyleSheet</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface CSSStyleSheet : StyleSheet {
-  readonly attribute CSSRule? ownerRule;
-  [SameObject] readonly attribute CSSRuleList cssRules;
-  unsigned long insertRule(CSSOMString rule, optional unsigned long index = 0);
-  undefined deleteRule(unsigned long index);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;
+  <span>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span>unsigned long</span> <strong>index</strong> = 0);
+  <span>undefined</span> <strong>deleteRule</strong>(<span>unsigned long</span> <strong>index</strong>);
 };
 
-partial interface CSSStyleSheet {
-  [SameObject] readonly attribute CSSRuleList rules;
-  long addRule(optional DOMString selector = "undefined", optional DOMString style = "undefined", optional unsigned long index);
-  undefined removeRule(optional unsigned long index = 0);
+partial interface <strong>CSSStyleSheet</strong> {
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;
+  <span>long</span> <strong>addRule</strong>(optional <span>DOMString</span> <strong>selector</strong> = "undefined", optional <span>DOMString</span> <strong>style</strong> = "undefined", optional <span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>removeRule</strong>(optional <span>unsigned long</span> <strong>index</strong> = 0);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>
-<pre class=webidl><code>partial interface CSSStyleSheet {
-  constructor(optional CSSStyleSheetInit options = {});
-  Promise<CSSStyleSheet> replace(USVString text);
-  void replaceSync(USVString text);
+<pre class=webidl><code>partial interface <strong>CSSStyleSheet</strong> {
+  constructor(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> = {});
+  Promise<<a href='CSSStyleSheet.html'>CSSStyleSheet</a>> <strong>replace</strong>(<span>USVString</span> <strong>text</strong>);
+  <a href='void.html'>void</a> <strong>replaceSync</strong>(<span>USVString</span> <strong>text</strong>);
 };</code></pre></li></ol>
 </section>
 <section>

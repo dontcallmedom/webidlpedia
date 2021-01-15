@@ -7,45 +7,43 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlobjectelement">HTML Standard</a> defines <code>HTMLObjectElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLObjectElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute USVString data;
-  [CEReactions] attribute DOMString type;
-  [CEReactions] attribute DOMString name;
-  [CEReactions] attribute DOMString useMap;
-  readonly attribute HTMLFormElement? form;
-  [CEReactions] attribute DOMString width;
-  [CEReactions] attribute DOMString height;
-  readonly attribute Document? contentDocument;
-  readonly attribute WindowProxy? contentWindow;
-  Document? getSVGDocument();
+  [CEReactions] attribute <span>USVString</span> <strong>data</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
 
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  boolean reportValidity();
-  undefined setCustomValidity(DOMString error);
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
 
   // also has obsolete members
 };
 
-partial interface HTMLObjectElement {
-  [CEReactions] attribute DOMString align;
-  [CEReactions] attribute DOMString archive;
-  [CEReactions] attribute DOMString code;
-  [CEReactions] attribute boolean declare;
-  [CEReactions] attribute unsigned long hspace;
-  [CEReactions] attribute DOMString standby;
-  [CEReactions] attribute unsigned long vspace;
-  [CEReactions] attribute DOMString codeBase;
-  [CEReactions] attribute DOMString codeType;
+partial interface <strong>HTMLObjectElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>archive</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>code</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>declare</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>standby</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>codeBase</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>codeType</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString border;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
 };</code></pre>
   
 </section>

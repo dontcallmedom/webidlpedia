@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>HTMLOrSVGElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface mixin <strong>HTMLOrSVGElement</strong> {
+  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;
+  attribute <span>DOMString</span> <strong>nonce</strong>; // intentionally no [CEReactions]
 
-interface mixin HTMLOrSVGElement {
-  [SameObject] readonly attribute DOMStringMap dataset;
-  attribute DOMString nonce; // intentionally no [CEReactions]
-
-  [CEReactions] attribute boolean autofocus;
-  [CEReactions] attribute long tabIndex;
-  undefined focus(optional FocusOptions options = {});
-  undefined blur();
+  [CEReactions] attribute <span>boolean</span> <strong>autofocus</strong>;
+  [CEReactions] attribute <span>long</span> <strong>tabIndex</strong>;
+  <span>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>blur</strong>();
 };</code></pre>
   
 </section>

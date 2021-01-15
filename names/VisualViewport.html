@@ -7,23 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/visual-viewport/#dom-visualviewport">Visual Viewport API</a> defines <code>VisualViewport</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>VisualViewport</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>double</span> <strong>offsetLeft</strong>;
+  readonly attribute <span>double</span> <strong>offsetTop</strong>;
 
-[Exposed=Window]
-interface VisualViewport : EventTarget {
-  readonly attribute double offsetLeft;
-  readonly attribute double offsetTop;
+  readonly attribute <span>double</span> <strong>pageLeft</strong>;
+  readonly attribute <span>double</span> <strong>pageTop</strong>;
 
-  readonly attribute double pageLeft;
-  readonly attribute double pageTop;
+  readonly attribute <span>double</span> <strong>width</strong>;
+  readonly attribute <span>double</span> <strong>height</strong>;
 
-  readonly attribute double width;
-  readonly attribute double height;
+  readonly attribute <span>double</span> <strong>scale</strong>;
 
-  readonly attribute double scale;
-
-  attribute EventHandler onresize;
-  attribute EventHandler onscroll;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;
 };</code></pre>
   
 </section>

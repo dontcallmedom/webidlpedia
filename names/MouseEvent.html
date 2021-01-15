@@ -7,48 +7,42 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#mouseevent">UI Events</a> defines <code>MouseEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong>);
+  readonly attribute <span>long</span> <strong>screenX</strong>;
+  readonly attribute <span>long</span> <strong>screenY</strong>;
+  readonly attribute <span>long</span> <strong>clientX</strong>;
+  readonly attribute <span>long</span> <strong>clientY</strong>;
 
-[Exposed=Window]
-interface MouseEvent : UIEvent {
-  constructor(DOMString type, optional MouseEventInit eventInitDict);
-  readonly attribute long screenX;
-  readonly attribute long screenY;
-  readonly attribute long clientX;
-  readonly attribute long clientY;
+  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
+  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
+  readonly attribute <span>boolean</span> <strong>altKey</strong>;
+  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
 
-  readonly attribute boolean ctrlKey;
-  readonly attribute boolean shiftKey;
-  readonly attribute boolean altKey;
-  readonly attribute boolean metaKey;
+  readonly attribute <span>short</span> <strong>button</strong>;
+  readonly attribute <span>unsigned short</span> <strong>buttons</strong>;
 
-  readonly attribute short button;
-  readonly attribute unsigned short buttons;
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;
 
-  readonly attribute EventTarget? relatedTarget;
-
-  boolean getModifierState(DOMString keyArg);
+  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-mouseevent-interface">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface MouseEvent {
-  readonly attribute double screenX;
-  readonly attribute double screenY;
-  readonly attribute double pageX;
-  readonly attribute double pageY;
-  readonly attribute double clientX;
-  readonly attribute double clientY;
-  readonly attribute double x;
-  readonly attribute double y;
-  readonly attribute double offsetX;
-  readonly attribute double offsetY;
+<pre class=webidl><code>partial interface <strong>MouseEvent</strong> {
+  readonly attribute <span>double</span> <strong>screenX</strong>;
+  readonly attribute <span>double</span> <strong>screenY</strong>;
+  readonly attribute <span>double</span> <strong>pageX</strong>;
+  readonly attribute <span>double</span> <strong>pageY</strong>;
+  readonly attribute <span>double</span> <strong>clientX</strong>;
+  readonly attribute <span>double</span> <strong>clientY</strong>;
+  readonly attribute <span>double</span> <strong>x</strong>;
+  readonly attribute <span>double</span> <strong>y</strong>;
+  readonly attribute <span>double</span> <strong>offsetX</strong>;
+  readonly attribute <span>double</span> <strong>offsetY</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-mouseevent-interface">Pointer Lock 2.0</a>
-<pre class=webidl><code>
-
-partial interface MouseEvent {
-  readonly attribute long movementX;
-  readonly attribute long movementY;
+<pre class=webidl><code>partial interface <strong>MouseEvent</strong> {
+  readonly attribute <span>long</span> <strong>movementX</strong>;
+  readonly attribute <span>long</span> <strong>movementY</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGLengthList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGLengthList</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGLengthList</strong> {
 
-[Exposed=Window]
-interface SVGLengthList {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfItems</strong>;
 
-  readonly attribute unsigned long length;
-  readonly attribute unsigned long numberOfItems;
-
-  void clear();
-  SVGLength initialize(SVGLength newItem);
-  getter SVGLength getItem(unsigned long index);
-  SVGLength insertItemBefore(SVGLength newItem, unsigned long index);
-  SVGLength replaceItem(SVGLength newItem, unsigned long index);
-  SVGLength removeItem(unsigned long index);
-  SVGLength appendItem(SVGLength newItem);
-  setter void (unsigned long index, SVGLength newItem);
+  <a href='void.html'>void</a> <strong>clear</strong>();
+  <a href='SVGLength.html'>SVGLength</a> <strong>initialize</strong>(<a href='SVGLength.html'>SVGLength</a> <strong>newItem</strong>);
+  getter <a href='SVGLength.html'>SVGLength</a> <strong>getItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGLength.html'>SVGLength</a> <strong>insertItemBefore</strong>(<a href='SVGLength.html'>SVGLength</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGLength.html'>SVGLength</a> <strong>replaceItem</strong>(<a href='SVGLength.html'>SVGLength</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGLength.html'>SVGLength</a> <strong>removeItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGLength.html'>SVGLength</a> <strong>appendItem</strong>(<a href='SVGLength.html'>SVGLength</a> <strong>newItem</strong>);
+  setter <a href='void.html'>void</a> (<span>unsigned long</span> <strong>index</strong>, <a href='SVGLength.html'>SVGLength</a> <strong>newItem</strong>);
 };</code></pre>
   
 </section>

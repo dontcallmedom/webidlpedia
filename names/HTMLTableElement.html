@@ -7,45 +7,43 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/tables.html#htmltableelement">HTML Standard</a> defines <code>HTMLTableElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLTableElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLTableElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute HTMLTableCaptionElement? caption;
-  HTMLTableCaptionElement createCaption();
-  [CEReactions] undefined deleteCaption();
+  [CEReactions] attribute <a href='HTMLTableCaptionElement.html'>HTMLTableCaptionElement</a>? <strong>caption</strong>;
+  <a href='HTMLTableCaptionElement.html'>HTMLTableCaptionElement</a> <strong>createCaption</strong>();
+  [CEReactions] <span>undefined</span> <strong>deleteCaption</strong>();
 
-  [CEReactions] attribute HTMLTableSectionElement? tHead;
-  HTMLTableSectionElement createTHead();
-  [CEReactions] undefined deleteTHead();
+  [CEReactions] attribute <a href='HTMLTableSectionElement.html'>HTMLTableSectionElement</a>? <strong>tHead</strong>;
+  <a href='HTMLTableSectionElement.html'>HTMLTableSectionElement</a> <strong>createTHead</strong>();
+  [CEReactions] <span>undefined</span> <strong>deleteTHead</strong>();
 
-  [CEReactions] attribute HTMLTableSectionElement? tFoot;
-  HTMLTableSectionElement createTFoot();
-  [CEReactions] undefined deleteTFoot();
+  [CEReactions] attribute <a href='HTMLTableSectionElement.html'>HTMLTableSectionElement</a>? <strong>tFoot</strong>;
+  <a href='HTMLTableSectionElement.html'>HTMLTableSectionElement</a> <strong>createTFoot</strong>();
+  [CEReactions] <span>undefined</span> <strong>deleteTFoot</strong>();
 
-  [SameObject] readonly attribute HTMLCollection tBodies;
-  HTMLTableSectionElement createTBody();
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>tBodies</strong>;
+  <a href='HTMLTableSectionElement.html'>HTMLTableSectionElement</a> <strong>createTBody</strong>();
 
-  [SameObject] readonly attribute HTMLCollection rows;
-  HTMLTableRowElement insertRow(optional long index = -1);
-  [CEReactions] undefined deleteRow(long index);
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>rows</strong>;
+  <a href='HTMLTableRowElement.html'>HTMLTableRowElement</a> <strong>insertRow</strong>(optional <span>long</span> <strong>index</strong> = -1);
+  [CEReactions] <span>undefined</span> <strong>deleteRow</strong>(<span>long</span> <strong>index</strong>);
 
   // also has obsolete members
 };
 
-partial interface HTMLTableElement {
-  [CEReactions] attribute DOMString align;
-  [CEReactions] attribute DOMString border;
-  [CEReactions] attribute DOMString frame;
-  [CEReactions] attribute DOMString rules;
-  [CEReactions] attribute DOMString summary;
-  [CEReactions] attribute DOMString width;
+partial interface <strong>HTMLTableElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>border</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>frame</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rules</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>summary</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString cellPadding;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString cellSpacing;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>cellPadding</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>cellSpacing</strong>;
 };</code></pre>
   
 </section>

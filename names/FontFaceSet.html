@@ -7,36 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/css-font-loading/#fontfaceset">CSS Font Loading Module Level 3</a> defines <code>FontFaceSet</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface FontFaceSet : EventTarget {
-  constructor(sequence<FontFace> initialFaces);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FontFaceSet</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(sequence<<a href='FontFace.html'>FontFace</a>> <strong>initialFaces</strong>);
 
   // FontFaceSet is Set-like!
-  setlike<FontFace>;
-  FontFaceSet add(FontFace font);
-  boolean delete(FontFace font);
-  undefined clear();
+  setlike<<a href='FontFace.html'>FontFace</a>>;
+  <a href='FontFaceSet.html'>FontFaceSet</a> <strong>add</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);
+  <span>boolean</span> <strong>delete</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);
+  <span>undefined</span> <strong>clear</strong>();
 
   // events for when loading state changes
-  attribute EventHandler onloading;
-  attribute EventHandler onloadingdone;
-  attribute EventHandler onloadingerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloading</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingdone</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingerror</strong>;
 
   // check and start loads if appropriate
   // and fulfill promise when all loads complete
-  Promise<sequence<FontFace>> load(CSSOMString font, optional CSSOMString text = " ");
+  Promise<sequence<<a href='FontFace.html'>FontFace</a>>> <strong>load</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> = " ");
 
   // return whether all fonts in the fontlist are loaded
   // (does not initiate load if not available)
-  boolean check(CSSOMString font, optional CSSOMString text = " ");
+  <span>boolean</span> <strong>check</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> = " ");
 
   // async notification that font loading and layout operations are done
-  readonly attribute Promise<FontFaceSet> ready;
+  readonly attribute Promise<<a href='FontFaceSet.html'>FontFaceSet</a>> <strong>ready</strong>;
 
   // loading state, "loading" while one or more fonts loading, "loaded" otherwise
-  readonly attribute FontFaceSetLoadStatus status;
+  readonly attribute <a href='FontFaceSetLoadStatus.html'>FontFaceSetLoadStatus</a> <strong>status</strong>;
 };</code></pre>
   
 </section>

@@ -7,33 +7,31 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpurenderpassencoder">WebGPU</a> defines <code>GPURenderPassEncoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>GPURenderPassEncoder</strong> {
+    <span>undefined</span> <strong>setViewport</strong>(<span>float</span> <strong>x</strong>, <span>float</span> <strong>y</strong>,
+                     <span>float</span> <strong>width</strong>, <span>float</span> <strong>height</strong>,
+                     <span>float</span> <strong>minDepth</strong>, <span>float</span> <strong>maxDepth</strong>);
 
-interface GPURenderPassEncoder {
-    undefined setViewport(float x, float y,
-                     float width, float height,
-                     float minDepth, float maxDepth);
+    <span>undefined</span> <strong>setScissorRect</strong>(<a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>x</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>y</strong>,
+                        <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>width</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>height</strong>);
 
-    undefined setScissorRect(GPUIntegerCoordinate x, GPUIntegerCoordinate y,
-                        GPUIntegerCoordinate width, GPUIntegerCoordinate height);
+    <span>undefined</span> <strong>setBlendColor</strong>(<a href='GPUColor.html'>GPUColor</a> <strong>color</strong>);
+    <span>undefined</span> <strong>setStencilReference</strong>(<a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>reference</strong>);
 
-    undefined setBlendColor(GPUColor color);
-    undefined setStencilReference(GPUStencilValue reference);
+    <span>undefined</span> <strong>beginOcclusionQuery</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span>undefined</span> <strong>endOcclusionQuery</strong>();
 
-    undefined beginOcclusionQuery(GPUSize32 queryIndex);
-    undefined endOcclusionQuery();
+    <span>undefined</span> <strong>beginPipelineStatisticsQuery</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span>undefined</span> <strong>endPipelineStatisticsQuery</strong>();
 
-    undefined beginPipelineStatisticsQuery(GPUQuerySet querySet, GPUSize32 queryIndex);
-    undefined endPipelineStatisticsQuery();
+    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
 
-    undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
-
-    undefined executeBundles(sequence<GPURenderBundle> bundles);
-    undefined endPass();
+    <span>undefined</span> <strong>executeBundles</strong>(sequence<<a href='GPURenderBundle.html'>GPURenderBundle</a>> <strong>bundles</strong>);
+    <span>undefined</span> <strong>endPass</strong>();
 };
-GPURenderPassEncoder includes GPUObjectBase;
-GPURenderPassEncoder includes GPUProgrammablePassEncoder;
-GPURenderPassEncoder includes GPURenderEncoderBase;</code></pre>
+<a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;
+<a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> includes <a href='GPUProgrammablePassEncoder.html'>GPUProgrammablePassEncoder</a>;
+<a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> includes <a href='GPURenderEncoderBase.html'>GPURenderEncoderBase</a>;</code></pre>
   
 </section>
 <section>

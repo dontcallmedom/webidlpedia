@@ -7,18 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/remote-playback/#dom-remoteplayback">Remote Playback API</a> defines <code>RemotePlayback</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface RemotePlayback : EventTarget {
-  Promise<long> watchAvailability(RemotePlaybackAvailabilityCallback callback);
-  Promise<undefined> cancelWatchAvailability(optional long id);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  Promise<<span>long</span>> <strong>watchAvailability</strong>(<a href='RemotePlaybackAvailabilityCallback.html'>RemotePlaybackAvailabilityCallback</a> <strong>callback</strong>);
+  Promise<<span>undefined</span>> <strong>cancelWatchAvailability</strong>(optional <span>long</span> <strong>id</strong>);
+  readonly attribute <a href='RemotePlaybackState.html'>RemotePlaybackState</a> <strong>state</strong>;
 
-  readonly attribute RemotePlaybackState state;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnecting</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;
 
-  attribute EventHandler onconnecting;
-  attribute EventHandler onconnect;
-  attribute EventHandler ondisconnect;
-
-  Promise<undefined> prompt();
+  Promise<<span>undefined</span>> <strong>prompt</strong>();
 };</code></pre>
   
 </section>

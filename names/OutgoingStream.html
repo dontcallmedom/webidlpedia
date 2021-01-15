@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/">WebTransport</a> defines <code>OutgoingStream</code></p>
-<pre class=webidl><code>
-
-[ Exposed=(Window,Worker) ]
-interface mixin OutgoingStream {
-  readonly attribute WritableStream writable;
-  readonly attribute Promise<StreamAbortInfo> writingAborted;
-  undefined abortWriting(optional StreamAbortInfo abortInfo = {});
+<pre class=webidl><code>[ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
+interface mixin <strong>OutgoingStream</strong> {
+  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;
+  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>writingAborted</strong>;
+  <span>undefined</span> <strong>abortWriting</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
 };</code></pre>
   
 </section>

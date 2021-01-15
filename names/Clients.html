@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#clients">Service Workers Nightly</a> defines <code>Clients</code></p>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker]
-interface Clients {
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>Clients</strong> {
   // The objects returned will be new instances every time
-  [NewObject] Promise<any> get(DOMString id);
-  [NewObject] Promise<FrozenArray<Client>> matchAll(optional ClientQueryOptions options = {});
-  [NewObject] Promise<WindowClient?> openWindow(USVString url);
-  [NewObject] Promise<undefined> claim();
+  [NewObject] Promise<<span>any</span>> <strong>get</strong>(<span>DOMString</span> <strong>id</strong>);
+  [NewObject] Promise<FrozenArray<<a href='Client.html'>Client</a>>> <strong>matchAll</strong>(optional <a href='ClientQueryOptions.html'>ClientQueryOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<<a href='WindowClient.html'>WindowClient</a>?> <strong>openWindow</strong>(<span>USVString</span> <strong>url</strong>);
+  [NewObject] Promise<<span>undefined</span>> <strong>claim</strong>();
 };</code></pre>
   
 </section>

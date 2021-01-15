@@ -7,35 +7,31 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement">HTML Standard</a> defines <code>HTMLScriptElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLScriptElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute USVString src;
-  [CEReactions] attribute DOMString type;
-  [CEReactions] attribute boolean noModule;
-  [CEReactions] attribute boolean async;
-  [CEReactions] attribute boolean defer;
-  [CEReactions] attribute DOMString? crossOrigin;
-  [CEReactions] attribute DOMString text;
-  [CEReactions] attribute DOMString integrity;
-  [CEReactions] attribute DOMString referrerPolicy;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
 
   // also has obsolete members
 };
 
-partial interface HTMLScriptElement {
-  [CEReactions] attribute DOMString charset;
-  [CEReactions] attribute DOMString event;
-  [CEReactions] attribute DOMString htmlFor;
+partial interface <strong>HTMLScriptElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/SRI/#HTMLScriptElement">Subresource Integrity</a>
-<pre class=webidl><code>
-
-partial interface HTMLScriptElement {
-  attribute DOMString integrity;
+<pre class=webidl><code>partial interface <strong>HTMLScriptElement</strong> {
+  attribute <span>DOMString</span> <strong>integrity</strong>;
 };</code></pre></li></ol>
 </section>
 

@@ -7,182 +7,161 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/window-object.html#window">HTML Standard</a> defines <code>Window</code></p>
-<pre class=webidl><code>
-
-[Global=Window,
- Exposed=Window,
+<pre class=webidl><code>[Global=<a href='Window.html'>Window</a>,
+ Exposed=<a href='Window.html'>Window</a>,
  LegacyUnenumerableNamedProperties]
-interface Window : EventTarget {
+interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   // the current browsing context
-  [LegacyUnforgeable] readonly attribute WindowProxy window;
-  [Replaceable] readonly attribute WindowProxy self;
-  [LegacyUnforgeable] readonly attribute Document document;
-  attribute DOMString name;
-  [PutForwards=href, LegacyUnforgeable] readonly attribute Location location;
-  readonly attribute History history;
-  readonly attribute CustomElementRegistry customElements;
-  [Replaceable] readonly attribute BarProp locationbar;
-  [Replaceable] readonly attribute BarProp menubar;
-  [Replaceable] readonly attribute BarProp personalbar;
-  [Replaceable] readonly attribute BarProp scrollbars;
-  [Replaceable] readonly attribute BarProp statusbar;
-  [Replaceable] readonly attribute BarProp toolbar;
-  attribute DOMString status;
-  undefined close();
-  readonly attribute boolean closed;
-  undefined stop();
-  undefined focus();
-  undefined blur();
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>window</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>self</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='Document.html'>Document</a> <strong>document</strong>;
+  attribute <span>DOMString</span> <strong>name</strong>;
+  [PutForwards=<span>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a> <strong>location</strong>;
+  readonly attribute <a href='History.html'>History</a> <strong>history</strong>;
+  readonly attribute <a href='CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>locationbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>menubar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>personalbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>scrollbars</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>statusbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>toolbar</strong>;
+  attribute <span>DOMString</span> <strong>status</strong>;
+  <span>undefined</span> <strong>close</strong>();
+  readonly attribute <span>boolean</span> <strong>closed</strong>;
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>focus</strong>();
+  <span>undefined</span> <strong>blur</strong>();
 
   // other browsing contexts
-  [Replaceable] readonly attribute WindowProxy frames;
-  [Replaceable] readonly attribute unsigned long length;
-  [LegacyUnforgeable] readonly attribute WindowProxy? top;
-  attribute any opener;
-  [Replaceable] readonly attribute WindowProxy? parent;
-  readonly attribute Element? frameElement;
-  WindowProxy? open(optional USVString url = "", optional DOMString target = "_blank", optional [LegacyNullToEmptyString] DOMString features = "");
-  getter object (DOMString name);
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;
+  [Replaceable] readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;
+  attribute <span>any</span> <strong>opener</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>frameElement</strong>;
+  <a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span>USVString</span> <strong>url</strong> = "", optional <span>DOMString</span> <strong>target</strong> = "_blank", optional [LegacyNullToEmptyString] <span>DOMString</span> <strong>features</strong> = "");
+  getter <span>object</span> (<span>DOMString</span> <strong>name</strong>);
   // Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
   // object on the prototype chain. Indeed, this does not make the global object an exotic object.
   // Indexed access is taken care of by the WindowProxy exotic object.
 
   // the user agent
-  readonly attribute Navigator navigator;
-  readonly attribute boolean originAgentCluster;
+  readonly attribute <a href='Navigator.html'>Navigator</a> <strong>navigator</strong>;
+  readonly attribute <span>boolean</span> <strong>originAgentCluster</strong>;
 
   // user prompts
-  undefined alert();
-  undefined alert(DOMString message);
-  boolean confirm(optional DOMString message = "");
-  DOMString? prompt(optional DOMString message = "", optional DOMString default = "");
-  undefined print();
+  <span>undefined</span> <strong>alert</strong>();
+  <span>undefined</span> <strong>alert</strong>(<span>DOMString</span> <strong>message</strong>);
+  <span>boolean</span> <strong>confirm</strong>(optional <span>DOMString</span> <strong>message</strong> = "");
+  <span>DOMString</span>? <strong>prompt</strong>(optional <span>DOMString</span> <strong>message</strong> = "", optional <span>DOMString</span> <strong>default</strong> = "");
+  <span>undefined</span> <strong>print</strong>();
 
-  undefined postMessage(any message, USVString targetOrigin, optional sequence<object> transfer = []);
-  undefined postMessage(any message, optional WindowPostMessageOptions options = {});
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, <span>USVString</span> <strong>targetOrigin</strong>, optional sequence<<span>object</span>> <strong>transfer</strong> = []);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> = {});
 
   // also has obsolete members
 };
-Window includes GlobalEventHandlers;
-Window includes WindowEventHandlers;
-Window includes WindowOrWorkerGlobalScope;
-Window includes AnimationFrameProvider;
-Window includes WindowSessionStorage;
-Window includes WindowLocalStorage;
+<a href='Window.html'>Window</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowOrWorkerGlobalScope.html'>WindowOrWorkerGlobalScope</a>;
+<a href='Window.html'>Window</a> includes <a href='AnimationFrameProvider.html'>AnimationFrameProvider</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowSessionStorage.html'>WindowSessionStorage</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowLocalStorage.html'>WindowLocalStorage</a>;
 
-partial interface Window {
-  undefined captureEvents();
-  undefined releaseEvents();
+partial interface <strong>Window</strong> {
+  <span>undefined</span> <strong>captureEvents</strong>();
+  <span>undefined</span> <strong>releaseEvents</strong>();
 
-  [Replaceable, SameObject] readonly attribute External external;
+  [Replaceable, SameObject] readonly attribute <a href='External.html'>External</a> <strong>external</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://compat.spec.whatwg.org/#windoworientation-interface">Compatibility Standard</a>
-<pre class=webidl><code>partial interface Window {
-    readonly attribute short orientation;
-    attribute EventHandler onorientationchange;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    readonly attribute <span>short</span> <strong>orientation</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;
 };</code></pre></li><li><a href="https://dom.spec.whatwg.org/#interface-window-extensions">DOM Standard</a>
-<pre class=webidl><code>
-
-partial interface Window {
-  [Replaceable] readonly attribute (Event or undefined) event; // legacy
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span>undefined</span>) <strong>event</strong>; // legacy
 };</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#Window">Cookie Store API</a>
-<pre class=webidl><code>
-
-[SecureContext]
-partial interface Window {
-  [SameObject] readonly attribute CookieStore cookieStore;
+<pre class=webidl><code>[SecureContext]
+partial interface <strong>Window</strong> {
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>
-
-[SecureContext]
-partial interface Window {
-    Promise<sequence<FileSystemFileHandle>> showOpenFilePicker(optional OpenFilePickerOptions options = {});
-    Promise<FileSystemFileHandle> showSaveFilePicker(optional SaveFilePickerOptions options = {});
-    Promise<FileSystemDirectoryHandle> showDirectoryPicker(optional DirectoryPickerOptions options = {});
+<pre class=webidl><code>[SecureContext]
+partial interface <strong>Window</strong> {
+    Promise<sequence<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>>> <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> = {});
+    Promise<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>> <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> = {});
+    Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> = {});
 };</code></pre></li><li><a href="https://wicg.github.io/portals/#the-portal-element">Portals</a>
-<pre class=webidl><code>
-
-partial interface Window {
-    readonly attribute PortalHost? portalHost;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/speech-api/#tts-section">Web Speech API</a>
-<pre class=webidl><code>
-
-partial interface Window {
-    [SameObject] readonly attribute SpeechSynthesis speechSynthesis;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/visual-viewport/#extensions-to-the-window-interface">Visual Viewport API</a>
-<pre class=webidl><code>partial interface Window {
-  [SameObject, Replaceable] readonly attribute VisualViewport visualViewport;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+  [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
-<pre class=webidl><code>
-
-partial interface Window {
-    undefined navigate(SpatialNavigationDirection dir);
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    <span>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a>
-<pre class=webidl><code>
-
-partial interface Window {
-  [NewObject] CSSStyleDeclaration getComputedStyle(Element elt, optional CSSOMString? pseudoElt);
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface Window {
-    [NewObject] MediaQueryList matchMedia(CSSOMString query);
-    [SameObject, Replaceable] readonly attribute Screen screen;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);
+    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;
 
     // browsing context
-    undefined moveTo(long x, long y);
-    undefined moveBy(long x, long y);
-    undefined resizeTo(long width, long height);
-    undefined resizeBy(long x, long y);
+    <span>undefined</span> <strong>moveTo</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>moveBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>resizeTo</strong>(<span>long</span> <strong>width</strong>, <span>long</span> <strong>height</strong>);
+    <span>undefined</span> <strong>resizeBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
 
     // viewport
-    [Replaceable] readonly attribute long innerWidth;
-    [Replaceable] readonly attribute long innerHeight;
+    [Replaceable] readonly attribute <span>long</span> <strong>innerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>innerHeight</strong>;
 
     // viewport scrolling
-    [Replaceable] readonly attribute double scrollX;
-    [Replaceable] readonly attribute double pageXOffset;
-    [Replaceable] readonly attribute double scrollY;
-    [Replaceable] readonly attribute double pageYOffset;
-    undefined scroll(optional ScrollToOptions options = {});
-    undefined scroll(unrestricted double x, unrestricted double y);
-    undefined scrollTo(optional ScrollToOptions options = {});
-    undefined scrollTo(unrestricted double x, unrestricted double y);
-    undefined scrollBy(optional ScrollToOptions options = {});
-    undefined scrollBy(unrestricted double x, unrestricted double y);
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollX</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageXOffset</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollY</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageYOffset</strong>;
+    <span>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scroll</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scrollTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scrollBy</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
 
     // client
-    [Replaceable] readonly attribute long screenX;
-    [Replaceable] readonly attribute long screenLeft;
-    [Replaceable] readonly attribute long screenY;
-    [Replaceable] readonly attribute long screenTop;
-    [Replaceable] readonly attribute long outerWidth;
-    [Replaceable] readonly attribute long outerHeight;
-    [Replaceable] readonly attribute double devicePixelRatio;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenX</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenLeft</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenY</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenTop</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerHeight</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>devicePixelRatio</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation Event Specification</a>
-<pre class=webidl><code>partial interface Window {
-    [SecureContext] attribute EventHandler ondeviceorientation;
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;
+};
+partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;
 };
 
-partial interface Window {
-    [SecureContext] attribute EventHandler ondeviceorientationabsolute;
+partial interface <strong>Window</strong> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;
 };
 
-partial interface Window {
-    attribute EventHandler oncompassneedscalibration;
-};
-
-partial interface Window {
-    [SecureContext] attribute EventHandler ondevicemotion;
+partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/requestidlecallback/#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a>
-<pre class=webidl><code>partial interface Window {
-  unsigned long requestIdleCallback(IdleRequestCallback callback, optional IdleRequestOptions options = {});
-  undefined cancelIdleCallback(unsigned long handle);
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+  <span>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>cancelIdleCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-window-interface">Selection API</a>
-<pre class=webidl><code>
-
-partial interface Window {
-  Selection? getSelection();
+<pre class=webidl><code>partial interface <strong>Window</strong> {
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();
 };</code></pre></li></ol>
 </section>
 <section>

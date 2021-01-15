@@ -7,57 +7,51 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#range">DOM Standard</a> defines <code>Range</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface Range : AbstractRange {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Range</strong> : <a href='AbstractRange.html'>AbstractRange</a> {
   constructor();
 
-  readonly attribute Node commonAncestorContainer;
+  readonly attribute <a href='Node.html'>Node</a> <strong>commonAncestorContainer</strong>;
 
-  undefined setStart(Node node, unsigned long offset);
-  undefined setEnd(Node node, unsigned long offset);
-  undefined setStartBefore(Node node);
-  undefined setStartAfter(Node node);
-  undefined setEndBefore(Node node);
-  undefined setEndAfter(Node node);
-  undefined collapse(optional boolean toStart = false);
-  undefined selectNode(Node node);
-  undefined selectNodeContents(Node node);
+  <span>undefined</span> <strong>setStart</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <span>unsigned long</span> <strong>offset</strong>);
+  <span>undefined</span> <strong>setEnd</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <span>unsigned long</span> <strong>offset</strong>);
+  <span>undefined</span> <strong>setStartBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  <span>undefined</span> <strong>setStartAfter</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  <span>undefined</span> <strong>setEndBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  <span>undefined</span> <strong>setEndAfter</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  <span>undefined</span> <strong>collapse</strong>(optional <span>boolean</span> <strong>toStart</strong> = false);
+  <span>undefined</span> <strong>selectNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  <span>undefined</span> <strong>selectNodeContents</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
 
-  const unsigned short START_TO_START = 0;
-  const unsigned short START_TO_END = 1;
-  const unsigned short END_TO_END = 2;
-  const unsigned short END_TO_START = 3;
-  short compareBoundaryPoints(unsigned short how, Range sourceRange);
+  const <span>unsigned short</span> <strong>START_TO_START</strong> = 0;
+  const <span>unsigned short</span> <strong>START_TO_END</strong> = 1;
+  const <span>unsigned short</span> <strong>END_TO_END</strong> = 2;
+  const <span>unsigned short</span> <strong>END_TO_START</strong> = 3;
+  <span>short</span> <strong>compareBoundaryPoints</strong>(<span>unsigned short</span> <strong>how</strong>, <a href='Range.html'>Range</a> <strong>sourceRange</strong>);
 
-  [CEReactions] undefined deleteContents();
-  [CEReactions, NewObject] DocumentFragment extractContents();
-  [CEReactions, NewObject] DocumentFragment cloneContents();
-  [CEReactions] undefined insertNode(Node node);
-  [CEReactions] undefined surroundContents(Node newParent);
+  [CEReactions] <span>undefined</span> <strong>deleteContents</strong>();
+  [CEReactions, NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>extractContents</strong>();
+  [CEReactions, NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>cloneContents</strong>();
+  [CEReactions] <span>undefined</span> <strong>insertNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  [CEReactions] <span>undefined</span> <strong>surroundContents</strong>(<a href='Node.html'>Node</a> <strong>newParent</strong>);
 
-  [NewObject] Range cloneRange();
-  undefined detach();
+  [NewObject] <a href='Range.html'>Range</a> <strong>cloneRange</strong>();
+  <span>undefined</span> <strong>detach</strong>();
 
-  boolean isPointInRange(Node node, unsigned long offset);
-  short comparePoint(Node node, unsigned long offset);
+  <span>boolean</span> <strong>isPointInRange</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <span>unsigned long</span> <strong>offset</strong>);
+  <span>short</span> <strong>comparePoint</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <span>unsigned long</span> <strong>offset</strong>);
 
-  boolean intersectsNode(Node node);
+  <span>boolean</span> <strong>intersectsNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
 
   stringifier;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface Range {
-  DOMRectList getClientRects();
-  [NewObject] DOMRect getBoundingClientRect();
+<pre class=webidl><code>partial interface <strong>Range</strong> {
+  <a href='DOMRectList.html'>DOMRectList</a> <strong>getClientRects</strong>();
+  [NewObject] <a href='DOMRect.html'>DOMRect</a> <strong>getBoundingClientRect</strong>();
 };</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/#extensions-to-the-range-interface">DOM Parsing and Serialization</a>
-<pre class=webidl><code>
-
-partial interface Range {
-  [CEReactions, NewObject] DocumentFragment createContextualFragment(DOMString fragment);
+<pre class=webidl><code>partial interface <strong>Range</strong> {
+  [CEReactions, NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createContextualFragment</strong>(<span>DOMString</span> <strong>fragment</strong>);
 };</code></pre></li></ol>
 </section>
 <section>

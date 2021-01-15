@@ -7,135 +7,114 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#element">DOM Standard</a> defines <code>Element</code></p>
-<pre class=webidl><code>
-Element includes ParentNode;
-Element includes NonDocumentTypeChildNode;
-Element includes ChildNode;
-Element includes Slottable;
+<pre class=webidl><code><a href='Element.html'>Element</a> includes <a href='ParentNode.html'>ParentNode</a>;
+<a href='Element.html'>Element</a> includes <a href='NonDocumentTypeChildNode.html'>NonDocumentTypeChildNode</a>;
+<a href='Element.html'>Element</a> includes <a href='ChildNode.html'>ChildNode</a>;
+<a href='Element.html'>Element</a> includes <a href='Slottable.html'>Slottable</a>;
 
-[Exposed=Window]
-interface Element : Node {
-  readonly attribute DOMString? namespaceURI;
-  readonly attribute DOMString? prefix;
-  readonly attribute DOMString localName;
-  readonly attribute DOMString tagName;
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Element</strong> : <a href='Node.html'>Node</a> {
+  readonly attribute <span>DOMString</span>? <strong>namespaceURI</strong>;
+  readonly attribute <span>DOMString</span>? <strong>prefix</strong>;
+  readonly attribute <span>DOMString</span> <strong>localName</strong>;
+  readonly attribute <span>DOMString</span> <strong>tagName</strong>;
 
-  [CEReactions] attribute DOMString id;
-  [CEReactions] attribute DOMString className;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList classList;
-  [CEReactions, Unscopable] attribute DOMString slot;
+  [CEReactions] attribute <span>DOMString</span> <strong>id</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>className</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>classList</strong>;
+  [CEReactions, Unscopable] attribute <span>DOMString</span> <strong>slot</strong>;
 
-  boolean hasAttributes();
-  [SameObject] readonly attribute NamedNodeMap attributes;
-  sequence<DOMString> getAttributeNames();
-  DOMString? getAttribute(DOMString qualifiedName);
-  DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
-  [CEReactions] undefined setAttribute(DOMString qualifiedName, DOMString value);
-  [CEReactions] undefined setAttributeNS(DOMString? namespace, DOMString qualifiedName, DOMString value);
-  [CEReactions] undefined removeAttribute(DOMString qualifiedName);
-  [CEReactions] undefined removeAttributeNS(DOMString? namespace, DOMString localName);
-  [CEReactions] boolean toggleAttribute(DOMString qualifiedName, optional boolean force);
-  boolean hasAttribute(DOMString qualifiedName);
-  boolean hasAttributeNS(DOMString? namespace, DOMString localName);
+  <span>boolean</span> <strong>hasAttributes</strong>();
+  [SameObject] readonly attribute <a href='NamedNodeMap.html'>NamedNodeMap</a> <strong>attributes</strong>;
+  sequence<<span>DOMString</span>> <strong>getAttributeNames</strong>();
+  <span>DOMString</span>? <strong>getAttribute</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  <span>DOMString</span>? <strong>getAttributeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
+  [CEReactions] <span>undefined</span> <strong>setAttribute</strong>(<span>DOMString</span> <strong>qualifiedName</strong>, <span>DOMString</span> <strong>value</strong>);
+  [CEReactions] <span>undefined</span> <strong>setAttributeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>qualifiedName</strong>, <span>DOMString</span> <strong>value</strong>);
+  [CEReactions] <span>undefined</span> <strong>removeAttribute</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  [CEReactions] <span>undefined</span> <strong>removeAttributeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
+  [CEReactions] <span>boolean</span> <strong>toggleAttribute</strong>(<span>DOMString</span> <strong>qualifiedName</strong>, optional <span>boolean</span> <strong>force</strong>);
+  <span>boolean</span> <strong>hasAttribute</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  <span>boolean</span> <strong>hasAttributeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
 
-  Attr? getAttributeNode(DOMString qualifiedName);
-  Attr? getAttributeNodeNS(DOMString? namespace, DOMString localName);
-  [CEReactions] Attr? setAttributeNode(Attr attr);
-  [CEReactions] Attr? setAttributeNodeNS(Attr attr);
-  [CEReactions] Attr removeAttributeNode(Attr attr);
+  <a href='Attr.html'>Attr</a>? <strong>getAttributeNode</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  <a href='Attr.html'>Attr</a>? <strong>getAttributeNodeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
+  [CEReactions] <a href='Attr.html'>Attr</a>? <strong>setAttributeNode</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);
+  [CEReactions] <a href='Attr.html'>Attr</a>? <strong>setAttributeNodeNS</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);
+  [CEReactions] <a href='Attr.html'>Attr</a> <strong>removeAttributeNode</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);
 
-  ShadowRoot attachShadow(ShadowRootInit init);
-  readonly attribute ShadowRoot? shadowRoot;
+  <a href='ShadowRoot.html'>ShadowRoot</a> <strong>attachShadow</strong>(<a href='ShadowRootInit.html'>ShadowRootInit</a> <strong>init</strong>);
+  readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;
 
-  Element? closest(DOMString selectors);
-  boolean matches(DOMString selectors);
-  boolean webkitMatchesSelector(DOMString selectors); // legacy alias of .matches
+  <a href='Element.html'>Element</a>? <strong>closest</strong>(<span>DOMString</span> <strong>selectors</strong>);
+  <span>boolean</span> <strong>matches</strong>(<span>DOMString</span> <strong>selectors</strong>);
+  <span>boolean</span> <strong>webkitMatchesSelector</strong>(<span>DOMString</span> <strong>selectors</strong>); // legacy alias of .matches
 
-  HTMLCollection getElementsByTagName(DOMString qualifiedName);
-  HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
-  HTMLCollection getElementsByClassName(DOMString classNames);
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span>DOMString</span> <strong>classNames</strong>);
 
-  [CEReactions] Element? insertAdjacentElement(DOMString where, Element element); // legacy
-  undefined insertAdjacentText(DOMString where, DOMString data); // legacy
+  [CEReactions] <a href='Element.html'>Element</a>? <strong>insertAdjacentElement</strong>(<span>DOMString</span> <strong>where</strong>, <a href='Element.html'>Element</a> <strong>element</strong>); // legacy
+  <span>undefined</span> <strong>insertAdjacentText</strong>(<span>DOMString</span> <strong>where</strong>, <span>DOMString</span> <strong>data</strong>); // legacy
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen API Standard</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  Promise<<span>undefined</span>> <strong>requestFullscreen</strong>(optional <a href='FullscreenOptions.html'>FullscreenOptions</a> <strong>options</strong> = {});
 
-partial interface Element {
-  Promise<undefined> requestFullscreen(optional FullscreenOptions options = {});
-
-  attribute EventHandler onfullscreenchange;
-  attribute EventHandler onfullscreenerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/element-timing/#sec-modifications-DOM">Element Timing API</a>
-<pre class=webidl><code>
-
-partial interface Element {
-    [CEReactions] attribute DOMString elementTiming;
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+    [CEReactions] attribute <span>DOMString</span> <strong>elementTiming</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
-<pre class=webidl><code>
-
-partial interface Element {
-    Node getSpatialNavigationContainer();
-    sequence<Node> focusableAreas(optional FocusableAreasOption option = {});
-    Node? spatialNavigationSearch(SpatialNavigationDirection dir, optional SpatialNavigationSearchOptions options = {});
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+    <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();
+    sequence<<a href='Node.html'>Node</a>> <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> = {});
+    <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-pseudo-4/">CSS Pseudo-Elements Module Level 4</a>
-<pre class=webidl><code>
-
-partial interface Element {
-  CSSPseudoElement? pseudo(CSSOMString type);
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong>pseudo</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/">CSS Regions Module Level 1</a>
-<pre class=webidl><code>
-
-Element includes Region;</code></pre></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/#idl">CSS Shadow Parts</a>
-<pre class=webidl><code>partial interface Element {
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList part;
+<pre class=webidl><code><a href='Element.html'>Element</a> includes <a href='Region.html'>Region</a>;</code></pre></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/#idl">CSS Shadow Parts</a>
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>part</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface Element {
-  DOMRectList getClientRects();
-  [NewObject] DOMRect getBoundingClientRect();
-  undefined scrollIntoView(optional (boolean or ScrollIntoViewOptions) arg = {});
-  undefined scroll(optional ScrollToOptions options = {});
-  undefined scroll(unrestricted double x, unrestricted double y);
-  undefined scrollTo(optional ScrollToOptions options = {});
-  undefined scrollTo(unrestricted double x, unrestricted double y);
-  undefined scrollBy(optional ScrollToOptions options = {});
-  undefined scrollBy(unrestricted double x, unrestricted double y);
-  attribute unrestricted double scrollTop;
-  attribute unrestricted double scrollLeft;
-  readonly attribute long scrollWidth;
-  readonly attribute long scrollHeight;
-  readonly attribute long clientTop;
-  readonly attribute long clientLeft;
-  readonly attribute long clientWidth;
-  readonly attribute long clientHeight;
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  <a href='DOMRectList.html'>DOMRectList</a> <strong>getClientRects</strong>();
+  [NewObject] <a href='DOMRect.html'>DOMRect</a> <strong>getBoundingClientRect</strong>();
+  <span>undefined</span> <strong>scrollIntoView</strong>(optional (<span>boolean</span> or <a href='ScrollIntoViewOptions.html'>ScrollIntoViewOptions</a>) <strong>arg</strong> = {});
+  <span>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>scroll</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>scrollTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>scrollBy</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  attribute <span>unrestricted double</span> <strong>scrollTop</strong>;
+  attribute <span>unrestricted double</span> <strong>scrollLeft</strong>;
+  readonly attribute <span>long</span> <strong>scrollWidth</strong>;
+  readonly attribute <span>long</span> <strong>scrollHeight</strong>;
+  readonly attribute <span>long</span> <strong>clientTop</strong>;
+  readonly attribute <span>long</span> <strong>clientLeft</strong>;
+  readonly attribute <span>long</span> <strong>clientWidth</strong>;
+  readonly attribute <span>long</span> <strong>clientHeight</strong>;
 }; // like Range
-Element includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a>
-<pre class=webidl><code>
+<a href='Element.html'>Element</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</code></pre></li><li><a href="https://www.w3.org/TR/DOM-Parsing/">DOM Parsing and Serialization</a>
+<pre class=webidl><code><a href='Element.html'>Element</a> includes <a href='InnerHTML.html'>InnerHTML</a>;
 
-Element includes InnerHTML;
-
-partial interface Element {
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString outerHTML;
-  [CEReactions] void insertAdjacentHTML(DOMString position, DOMString text);
+partial interface <strong>Element</strong> {
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>outerHTML</strong>;
+  [CEReactions] <a href='void.html'>void</a> <strong>insertAdjacentHTML</strong>(<span>DOMString</span> <strong>position</strong>, <span>DOMString</span> <strong>text</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-element-interface">Pointer Events</a>
-<pre class=webidl><code>
-
-partial interface Element {
-  undefined setPointerCapture (long pointerId);
-  undefined releasePointerCapture (long pointerId);
-  boolean hasPointerCapture (long pointerId);
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  <span>undefined</span> <strong>setPointerCapture</strong> (<span>long</span> <strong>pointerId</strong>);
+  <span>undefined</span> <strong>releasePointerCapture</strong> (<span>long</span> <strong>pointerId</strong>);
+  <span>boolean</span> <strong>hasPointerCapture</strong> (<span>long</span> <strong>pointerId</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-element-interface">Pointer Lock 2.0</a>
-<pre class=webidl><code>partial interface Element {
-  undefined requestPointerLock();
+<pre class=webidl><code>partial interface <strong>Element</strong> {
+  <span>undefined</span> <strong>requestPointerLock</strong>();
 };</code></pre></li><li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a>
-<pre class=webidl><code>
-
-Element includes ARIAMixin;</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a>
-<pre class=webidl><code>
-
-Element includes Animatable;</code></pre></li></ol>
+<pre class=webidl><code><a href='Element.html'>Element</a> includes <a href='ARIAMixin.html'>ARIAMixin</a>;</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/">Web Animations</a>
+<pre class=webidl><code><a href='Element.html'>Element</a> includes <a href='Animatable.html'>Animatable</a>;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

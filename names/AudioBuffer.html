@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#audiobuffer">Web Audio API</a> defines <code>AudioBuffer</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface AudioBuffer {
-  constructor (AudioBufferOptions options);
-  readonly attribute float sampleRate;
-  readonly attribute unsigned long length;
-  readonly attribute double duration;
-  readonly attribute unsigned long numberOfChannels;
-  Float32Array getChannelData (unsigned long channel);
-  undefined copyFromChannel (Float32Array destination,
-                             unsigned long channelNumber,
-                             optional unsigned long bufferOffset = 0);
-  undefined copyToChannel (Float32Array source,
-                           unsigned long channelNumber,
-                           optional unsigned long bufferOffset = 0);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AudioBuffer</strong> {
+  constructor (<a href='AudioBufferOptions.html'>AudioBufferOptions</a> <strong>options</strong>);
+  readonly attribute <span>float</span> <strong>sampleRate</strong>;
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  readonly attribute <span>double</span> <strong>duration</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfChannels</strong>;
+  <span>Float32Array</span> <strong>getChannelData</strong> (<span>unsigned long</span> <strong>channel</strong>);
+  <span>undefined</span> <strong>copyFromChannel</strong> (<span>Float32Array</span> <strong>destination</strong>,
+                             <span>unsigned long</span> <strong>channelNumber</strong>,
+                             optional <span>unsigned long</span> <strong>bufferOffset</strong> = 0);
+  <span>undefined</span> <strong>copyToChannel</strong> (<span>Float32Array</span> <strong>source</strong>,
+                           <span>unsigned long</span> <strong>channelNumber</strong>,
+                           optional <span>unsigned long</span> <strong>bufferOffset</strong> = 0);
 };</code></pre>
   
 </section>

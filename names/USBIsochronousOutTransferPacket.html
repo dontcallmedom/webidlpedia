@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbisochronousouttransferpacket">WebUSB API</a> defines <code>USBIsochronousOutTransferPacket</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBIsochronousOutTransferPacket {
-  constructor(USBTransferStatus status, optional unsigned long bytesWritten = 0);
-  readonly attribute unsigned long bytesWritten;
-  readonly attribute USBTransferStatus status;
+interface <strong>USBIsochronousOutTransferPacket</strong> {
+  constructor(<a href='USBTransferStatus.html'>USBTransferStatus</a> <strong>status</strong>, optional <span>unsigned long</span> <strong>bytesWritten</strong> = 0);
+  readonly attribute <span>unsigned long</span> <strong>bytesWritten</strong>;
+  readonly attribute <a href='USBTransferStatus.html'>USBTransferStatus</a> <strong>status</strong>;
 };</code></pre>
   
 </section>

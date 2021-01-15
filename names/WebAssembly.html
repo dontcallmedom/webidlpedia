@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webassembly.github.io/spec/js-api/#namespacedef-webassembly">WebAssembly JavaScript Interface</a> defines <code>WebAssembly</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>WebAssembly</strong> {
+    <span>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+    Promise<<a href='Module.html'>Module</a>> <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
 
-[Exposed=(Window,Worker,Worklet)]
-namespace WebAssembly {
-    boolean validate(BufferSource bytes);
-    Promise<Module> compile(BufferSource bytes);
+    Promise<<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>> <strong>instantiate</strong>(
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span>object</span> <strong>importObject</strong>);
 
-    Promise<WebAssemblyInstantiatedSource> instantiate(
-        BufferSource bytes, optional object importObject);
-
-    Promise<Instance> instantiate(
-        Module moduleObject, optional object importObject);
+    Promise<<a href='Instance.html'>Instance</a>> <strong>instantiate</strong>(
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span>object</span> <strong>importObject</strong>);
 };</code></pre>
   <p>This namespace is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a>
-<pre class=webidl><code>[Exposed=(Window,Worker)]
-partial namespace WebAssembly {
-  Promise<Module> compileStreaming(Promise<Response> source);
-  Promise<WebAssemblyInstantiatedSource> instantiateStreaming(
-      Promise<Response> source, optional object importObject);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+partial namespace <strong>WebAssembly</strong> {
+  Promise<<a href='Module.html'>Module</a>> <strong>compileStreaming</strong>(Promise<<a href='Response.html'>Response</a>> <strong>source</strong>);
+  Promise<<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>> <strong>instantiateStreaming</strong>(
+      Promise<<a href='Response.html'>Response</a>> <strong>source</strong>, optional <span>object</span> <strong>importObject</strong>);
 };</code></pre></li></ol>
 </section>
 

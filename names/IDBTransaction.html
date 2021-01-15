@@ -7,24 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbtransaction">Indexed Database API 3.0</a> defines <code>IDBTransaction</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBTransaction</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>objectStoreNames</strong>;
+  readonly attribute <a href='IDBTransactionMode.html'>IDBTransactionMode</a> <strong>mode</strong>;
+  readonly attribute <a href='IDBTransactionDurability.html'>IDBTransactionDurability</a> <strong>durability</strong>;
+  [SameObject] readonly attribute <a href='IDBDatabase.html'>IDBDatabase</a> <strong>db</strong>;
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
 
-[Exposed=(Window,Worker)]
-interface IDBTransaction : EventTarget {
-  readonly attribute DOMStringList objectStoreNames;
-  readonly attribute IDBTransactionMode mode;
-  readonly attribute IDBTransactionDurability durability;
-  [SameObject] readonly attribute IDBDatabase db;
-  readonly attribute DOMException? error;
-
-  IDBObjectStore objectStore(DOMString name);
-  undefined commit();
-  undefined abort();
+  <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>objectStore</strong>(<span>DOMString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>commit</strong>();
+  <span>undefined</span> <strong>abort</strong>();
 
   // Event handlers:
-  attribute EventHandler onabort;
-  attribute EventHandler oncomplete;
-  attribute EventHandler onerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncomplete</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
 };</code></pre>
   
 </section>

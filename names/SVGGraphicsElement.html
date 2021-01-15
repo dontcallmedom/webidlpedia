@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGraphicsElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>SVGGraphicsElement</strong> : <a href='SVGElement.html'>SVGElement</a> {
+  [SameObject] readonly attribute <a href='SVGAnimatedTransformList.html'>SVGAnimatedTransformList</a> <strong>transform</strong>;
 
-interface SVGGraphicsElement : SVGElement {
-  [SameObject] readonly attribute SVGAnimatedTransformList transform;
-
-  DOMRect getBBox(optional SVGBoundingBoxOptions options = {});
-  DOMMatrix? getCTM();
-  DOMMatrix? getScreenCTM();
+  <a href='DOMRect.html'>DOMRect</a> <strong>getBBox</strong>(optional <a href='SVGBoundingBoxOptions.html'>SVGBoundingBoxOptions</a> <strong>options</strong> = {});
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getCTM</strong>();
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getScreenCTM</strong>();
 };
 
-SVGGraphicsElement includes SVGTests;</code></pre>
+<a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> includes <a href='SVGTests.html'>SVGTests</a>;</code></pre>
   
 </section>
 <section>

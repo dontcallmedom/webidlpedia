@@ -7,22 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpEncodingParameters</code></p>
-<pre class=webidl><code>
-
-dictionary RTCRtpEncodingParameters : RTCRtpCodingParameters {
-  boolean active = true;
-  unsigned long maxBitrate;
-  double scaleResolutionDownBy;
+<pre class=webidl><code>dictionary <strong>RTCRtpEncodingParameters</strong> : <a href='RTCRtpCodingParameters.html'>RTCRtpCodingParameters</a> {
+  <span>boolean</span> <strong>active</strong> = true;
+  <span>unsigned long</span> <strong>maxBitrate</strong>;
+  <span>double</span> <strong>scaleResolutionDownBy</strong>;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-priority/">WebRTC Priority Control API</a>
-<pre class=webidl><code>
-
-partial dictionary RTCRtpEncodingParameters {
-  RTCPriorityType priority = "low";
-  RTCPriorityType networkPriority;
+<pre class=webidl><code>partial dictionary <strong>RTCRtpEncodingParameters</strong> {
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> = "low";
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>networkPriority</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webrtc-svc/">Scalable Video Coding (SVC) Extension for WebRTC</a>
-<pre class=webidl><code>partial dictionary RTCRtpEncodingParameters {
-             DOMString scalabilityMode;
+<pre class=webidl><code>partial dictionary <strong>RTCRtpEncodingParameters</strong> {
+             <span>DOMString</span> <strong>scalabilityMode</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

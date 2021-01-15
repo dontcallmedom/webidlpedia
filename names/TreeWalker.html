@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#treewalker">DOM Standard</a> defines <code>TreeWalker</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>TreeWalker</strong> {
+  [SameObject] readonly attribute <a href='Node.html'>Node</a> <strong>root</strong>;
+  readonly attribute <span>unsigned long</span> <strong>whatToShow</strong>;
+  readonly attribute <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong>;
+           attribute <a href='Node.html'>Node</a> <strong>currentNode</strong>;
 
-[Exposed=Window]
-interface TreeWalker {
-  [SameObject] readonly attribute Node root;
-  readonly attribute unsigned long whatToShow;
-  readonly attribute NodeFilter? filter;
-           attribute Node currentNode;
-
-  Node? parentNode();
-  Node? firstChild();
-  Node? lastChild();
-  Node? previousSibling();
-  Node? nextSibling();
-  Node? previousNode();
-  Node? nextNode();
+  <a href='Node.html'>Node</a>? <strong>parentNode</strong>();
+  <a href='Node.html'>Node</a>? <strong>firstChild</strong>();
+  <a href='Node.html'>Node</a>? <strong>lastChild</strong>();
+  <a href='Node.html'>Node</a>? <strong>previousSibling</strong>();
+  <a href='Node.html'>Node</a>? <strong>nextSibling</strong>();
+  <a href='Node.html'>Node</a>? <strong>previousNode</strong>();
+  <a href='Node.html'>Node</a>? <strong>nextNode</strong>();
 };</code></pre>
   
 </section>

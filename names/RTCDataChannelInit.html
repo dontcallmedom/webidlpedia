@@ -7,21 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannelinit">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCDataChannelInit</code></p>
-<pre class=webidl><code>
-
-dictionary RTCDataChannelInit {
-  boolean ordered = true;
-  [EnforceRange] unsigned short maxPacketLifeTime;
-  [EnforceRange] unsigned short maxRetransmits;
-  USVString protocol = "";
-  boolean negotiated = false;
-  [EnforceRange] unsigned short id;
+<pre class=webidl><code>dictionary <strong>RTCDataChannelInit</strong> {
+  <span>boolean</span> <strong>ordered</strong> = true;
+  [EnforceRange] <span>unsigned short</span> <strong>maxPacketLifeTime</strong>;
+  [EnforceRange] <span>unsigned short</span> <strong>maxRetransmits</strong>;
+  <span>USVString</span> <strong>protocol</strong> = "";
+  <span>boolean</span> <strong>negotiated</strong> = false;
+  [EnforceRange] <span>unsigned short</span> <strong>id</strong>;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-priority/">WebRTC Priority Control API</a>
-<pre class=webidl><code>
-
-partial dictionary RTCDataChannelInit {
-  RTCPriorityType priority = "low";
+<pre class=webidl><code>partial dictionary <strong>RTCDataChannelInit</strong> {
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> = "low";
 };</code></pre></li></ol>
 </section>
 <section>

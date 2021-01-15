@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/web-animations-1/#keyframeeffect">Web Animations</a> defines <code>KeyframeEffect</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface KeyframeEffect : AnimationEffect {
-    constructor(Element? target,
-                object? keyframes,
-                optional (unrestricted double or KeyframeEffectOptions) options = {});
-    constructor(KeyframeEffect source);
-    attribute Element?           target;
-    attribute CSSOMString?       pseudoElement;
-    attribute CompositeOperation composite;
-    sequence<object> getKeyframes();
-    undefined        setKeyframes(object? keyframes);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>KeyframeEffect</strong> : <a href='AnimationEffect.html'>AnimationEffect</a> {
+    constructor(<a href='Element.html'>Element</a>? <strong>target</strong>,
+                <span>object</span>? <strong>keyframes</strong>,
+                optional (<span>unrestricted double</span> or <a href='KeyframeEffectOptions.html'>KeyframeEffectOptions</a>) <strong>options</strong> = {});
+    constructor(<a href='KeyframeEffect.html'>KeyframeEffect</a> <strong>source</strong>);
+    attribute <a href='Element.html'>Element</a>?           <strong>target</strong>;
+    attribute <a href='CSSOMString.html'>CSSOMString</a>?       <strong>pseudoElement</strong>;
+    attribute <a href='CompositeOperation.html'>CompositeOperation</a> <strong>composite</strong>;
+    sequence<<span>object</span>> <strong>getKeyframes</strong>();
+    <span>undefined</span>        <strong>setKeyframes</strong>(<span>object</span>? <strong>keyframes</strong>);
 };</code></pre>
   
 </section>

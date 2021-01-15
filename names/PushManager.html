@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/push-api/#dom-pushmanager">Push API</a> defines <code>PushManager</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext]
+interface <strong>PushManager</strong> {
+  [SameObject] static readonly attribute FrozenArray<<span>DOMString</span>> <strong>supportedContentEncodings</strong>;
 
-[Exposed=(Window,Worker), SecureContext]
-interface PushManager {
-  [SameObject] static readonly attribute FrozenArray<DOMString> supportedContentEncodings;
-
-  Promise<PushSubscription> subscribe(optional PushSubscriptionOptionsInit options = {});
-  Promise<PushSubscription?> getSubscription();
-  Promise<PushPermissionState> permissionState(optional PushSubscriptionOptionsInit options = {});
+  Promise<<a href='PushSubscription.html'>PushSubscription</a>> <strong>subscribe</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> = {});
+  Promise<<a href='PushSubscription.html'>PushSubscription</a>?> <strong>getSubscription</strong>();
+  Promise<<a href='PushPermissionState.html'>PushPermissionState</a>> <strong>permissionState</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> = {});
 };</code></pre>
   
 </section>

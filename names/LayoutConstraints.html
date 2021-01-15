@@ -7,23 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#layoutconstraints">CSS Layout API Level 1</a> defines <code>LayoutConstraints</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<span>LayoutWorklet</span>]
+interface <strong>LayoutConstraints</strong> {
+    readonly attribute <span>double</span> <strong>availableInlineSize</strong>;
+    readonly attribute <span>double</span> <strong>availableBlockSize</strong>;
 
-[Exposed=LayoutWorklet]
-interface LayoutConstraints {
-    readonly attribute double availableInlineSize;
-    readonly attribute double availableBlockSize;
+    readonly attribute <span>double</span>? <strong>fixedInlineSize</strong>;
+    readonly attribute <span>double</span>? <strong>fixedBlockSize</strong>;
 
-    readonly attribute double? fixedInlineSize;
-    readonly attribute double? fixedBlockSize;
+    readonly attribute <span>double</span> <strong>percentageInlineSize</strong>;
+    readonly attribute <span>double</span> <strong>percentageBlockSize</strong>;
 
-    readonly attribute double percentageInlineSize;
-    readonly attribute double percentageBlockSize;
+    readonly attribute <span>double</span>? <strong>blockFragmentationOffset</strong>;
+    readonly attribute <a href='BlockFragmentationType.html'>BlockFragmentationType</a> <strong>blockFragmentationType</strong>;
 
-    readonly attribute double? blockFragmentationOffset;
-    readonly attribute BlockFragmentationType blockFragmentationType;
-
-    readonly attribute any data;
+    readonly attribute <span>any</span> <strong>data</strong>;
 };</code></pre>
   
 </section>

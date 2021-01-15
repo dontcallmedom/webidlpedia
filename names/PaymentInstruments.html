@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/payment-handler/#dom-paymentinstruments">Payment Handler API</a> defines <code>PaymentInstruments</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=(Window,Worker)]
-interface PaymentInstruments {
-  Promise<boolean> delete(DOMString instrumentKey);
-  Promise<any> get(DOMString instrumentKey);
-  Promise<sequence<DOMString>>  keys();
-  Promise<boolean> has(DOMString instrumentKey);
-  Promise<void> set(DOMString instrumentKey, PaymentInstrument details);
-  Promise<void> clear();
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PaymentInstruments</strong> {
+  Promise<<span>boolean</span>> <strong>delete</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<<span>any</span>> <strong>get</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<sequence<<span>DOMString</span>>>  <strong>keys</strong>();
+  Promise<<span>boolean</span>> <strong>has</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<<a href='void.html'>void</a>> <strong>set</strong>(<span>DOMString</span> <strong>instrumentKey</strong>, <a href='PaymentInstrument.html'>PaymentInstrument</a> <strong>details</strong>);
+  Promise<<a href='void.html'>void</a>> <strong>clear</strong>();
 };</code></pre>
   
 </section>

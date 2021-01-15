@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#cache">Service Workers Nightly</a> defines <code>Cache</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=(Window,Worker)]
-interface Cache {
-  [NewObject] Promise<any> match(RequestInfo request, optional CacheQueryOptions options = {});
-  [NewObject] Promise<FrozenArray<Response>> matchAll(optional RequestInfo request, optional CacheQueryOptions options = {});
-  [NewObject] Promise<undefined> add(RequestInfo request);
-  [NewObject] Promise<undefined> addAll(sequence<RequestInfo> requests);
-  [NewObject] Promise<undefined> put(RequestInfo request, Response response);
-  [NewObject] Promise<boolean> delete(RequestInfo request, optional CacheQueryOptions options = {});
-  [NewObject] Promise<FrozenArray<Request>> keys(optional RequestInfo request, optional CacheQueryOptions options = {});
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Cache</strong> {
+  [NewObject] Promise<<span>any</span>> <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<FrozenArray<<a href='Response.html'>Response</a>>> <strong>matchAll</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<<span>undefined</span>> <strong>add</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>);
+  [NewObject] Promise<<span>undefined</span>> <strong>addAll</strong>(sequence<<a href='RequestInfo.html'>RequestInfo</a>> <strong>requests</strong>);
+  [NewObject] Promise<<span>undefined</span>> <strong>put</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, <a href='Response.html'>Response</a> <strong>response</strong>);
+  [NewObject] Promise<<span>boolean</span>> <strong>delete</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<FrozenArray<<a href='Request.html'>Request</a>>> <strong>keys</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
 </section>

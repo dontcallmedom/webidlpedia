@@ -7,26 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#speechsynthesisutterance">Web Speech API</a> defines <code>SpeechSynthesisUtterance</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SpeechSynthesisUtterance</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    constructor(optional <span>DOMString</span> <strong>text</strong>);
 
-[Exposed=Window]
-interface SpeechSynthesisUtterance : EventTarget {
-    constructor(optional DOMString text);
+    attribute <span>DOMString</span> <strong>text</strong>;
+    attribute <span>DOMString</span> <strong>lang</strong>;
+    attribute <a href='SpeechSynthesisVoice.html'>SpeechSynthesisVoice</a>? <strong>voice</strong>;
+    attribute <span>float</span> <strong>volume</strong>;
+    attribute <span>float</span> <strong>rate</strong>;
+    attribute <span>float</span> <strong>pitch</strong>;
 
-    attribute DOMString text;
-    attribute DOMString lang;
-    attribute SpeechSynthesisVoice? voice;
-    attribute float volume;
-    attribute float rate;
-    attribute float pitch;
-
-    attribute EventHandler onstart;
-    attribute EventHandler onend;
-    attribute EventHandler onerror;
-    attribute EventHandler onpause;
-    attribute EventHandler onresume;
-    attribute EventHandler onmark;
-    attribute EventHandler onboundary;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmark</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onboundary</strong>;
 };</code></pre>
   
 </section>

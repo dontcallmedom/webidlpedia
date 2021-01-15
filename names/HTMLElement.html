@@ -7,48 +7,42 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/dom.html#htmlelement">HTML Standard</a> defines <code>HTMLElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLElement : Element {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {
   [HTMLConstructor] constructor();
 
   // metadata attributes
-  [CEReactions] attribute DOMString title;
-  [CEReactions] attribute DOMString lang;
-  [CEReactions] attribute boolean translate;
-  [CEReactions] attribute DOMString dir;
+  [CEReactions] attribute <span>DOMString</span> <strong>title</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>lang</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>translate</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>dir</strong>;
 
   // user interaction
-  [CEReactions] attribute boolean hidden;
-  undefined click();
-  [CEReactions] attribute DOMString accessKey;
-  readonly attribute DOMString accessKeyLabel;
-  [CEReactions] attribute boolean draggable;
-  [CEReactions] attribute boolean spellcheck;
-  [CEReactions] attribute DOMString autocapitalize;
+  [CEReactions] attribute <span>boolean</span> <strong>hidden</strong>;
+  <span>undefined</span> <strong>click</strong>();
+  [CEReactions] attribute <span>DOMString</span> <strong>accessKey</strong>;
+  readonly attribute <span>DOMString</span> <strong>accessKeyLabel</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>draggable</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>spellcheck</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>autocapitalize</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString innerText;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>innerText</strong>;
 
-  ElementInternals attachInternals();
+  <a href='ElementInternals.html'>ElementInternals</a> <strong>attachInternals</strong>();
 };
 
-HTMLElement includes GlobalEventHandlers;
-HTMLElement includes DocumentAndElementEventHandlers;
-HTMLElement includes ElementContentEditable;
-HTMLElement includes HTMLOrSVGElement;</code></pre>
+<a href='HTMLElement.html'>HTMLElement</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;
+<a href='HTMLElement.html'>HTMLElement</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;
+<a href='HTMLElement.html'>HTMLElement</a> includes <a href='ElementContentEditable.html'>ElementContentEditable</a>;
+<a href='HTMLElement.html'>HTMLElement</a> includes <a href='HTMLOrSVGElement.html'>HTMLOrSVGElement</a>;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a>
-<pre class=webidl><code>
-
-HTMLElement includes ElementCSSInlineStyle;</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlelement-interface">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface HTMLElement {
-  readonly attribute Element? offsetParent;
-  readonly attribute long offsetTop;
-  readonly attribute long offsetLeft;
-  readonly attribute long offsetWidth;
-  readonly attribute long offsetHeight;
+<pre class=webidl><code><a href='HTMLElement.html'>HTMLElement</a> includes <a href='ElementCSSInlineStyle.html'>ElementCSSInlineStyle</a>;</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlelement-interface">CSSOM View Module</a>
+<pre class=webidl><code>partial interface <strong>HTMLElement</strong> {
+  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;
+  readonly attribute <span>long</span> <strong>offsetTop</strong>;
+  readonly attribute <span>long</span> <strong>offsetLeft</strong>;
+  readonly attribute <span>long</span> <strong>offsetWidth</strong>;
+  readonly attribute <span>long</span> <strong>offsetHeight</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediasession/#mediasession">Media Session Standard</a> defines <code>MediaSession</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MediaSession</strong> {
+  attribute <a href='MediaMetadata.html'>MediaMetadata</a>? <strong>metadata</strong>;
 
-[Exposed=Window]
-interface MediaSession {
-  attribute MediaMetadata? metadata;
+  attribute <a href='MediaSessionPlaybackState.html'>MediaSessionPlaybackState</a> <strong>playbackState</strong>;
 
-  attribute MediaSessionPlaybackState playbackState;
+  <span>undefined</span> <strong>setActionHandler</strong>(<a href='MediaSessionAction.html'>MediaSessionAction</a> <strong>action</strong>, <a href='MediaSessionActionHandler.html'>MediaSessionActionHandler</a>? <strong>handler</strong>);
 
-  undefined setActionHandler(MediaSessionAction action, MediaSessionActionHandler? handler);
-
-  undefined setPositionState(optional MediaPositionState state = {});
+  <span>undefined</span> <strong>setPositionState</strong>(optional <a href='MediaPositionState.html'>MediaPositionState</a> <strong>state</strong> = {});
 };</code></pre>
   
 </section>

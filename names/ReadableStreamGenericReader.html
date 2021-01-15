@@ -7,12 +7,10 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/">Streams Standard</a> defines <code>ReadableStreamGenericReader</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface mixin <strong>ReadableStreamGenericReader</strong> {
+  readonly attribute Promise<<span>undefined</span>> <strong>closed</strong>;
 
-interface mixin ReadableStreamGenericReader {
-  readonly attribute Promise<undefined> closed;
-
-  Promise<undefined> cancel(optional any reason);
+  Promise<<span>undefined</span>> <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
 };</code></pre>
   
 </section>

@@ -7,20 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession">Encrypted Media Extensions</a> defines <code>MediaKeySession</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window, SecureContext] interface MediaKeySession : EventTarget {
-    readonly        attribute DOMString           sessionId;
-    readonly        attribute unrestricted double expiration;
-    readonly        attribute Promise<undefined>       closed;
-    readonly        attribute MediaKeyStatusMap   keyStatuses;
-                    attribute EventHandler        onkeystatuseschange;
-                    attribute EventHandler        onmessage;
-    Promise<undefined>    generateRequest (DOMString initDataType, BufferSource initData);
-    Promise<boolean> load (DOMString sessionId);
-    Promise<undefined>    update (BufferSource response);
-    Promise<undefined>    close ();
-    Promise<undefined>    remove ();
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext] interface <strong>MediaKeySession</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    readonly        attribute <span>DOMString</span>           <strong>sessionId</strong>;
+    readonly        attribute <span>unrestricted double</span> <strong>expiration</strong>;
+    readonly        attribute Promise<<span>undefined</span>>       <strong>closed</strong>;
+    readonly        attribute <a href='MediaKeyStatusMap.html'>MediaKeyStatusMap</a>   <strong>keyStatuses</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onkeystatuseschange</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onmessage</strong>;
+    Promise<<span>undefined</span>>    <strong>generateRequest</strong> (<span>DOMString</span> <strong>initDataType</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>initData</strong>);
+    Promise<<span>boolean</span>> <strong>load</strong> (<span>DOMString</span> <strong>sessionId</strong>);
+    Promise<<span>undefined</span>>    <strong>update</strong> (<a href='BufferSource.html'>BufferSource</a> <strong>response</strong>);
+    Promise<<span>undefined</span>>    <strong>close</strong> ();
+    Promise<<span>undefined</span>>    <strong>remove</strong> ();
 };</code></pre>
   
 </section>

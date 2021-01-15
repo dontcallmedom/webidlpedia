@@ -7,21 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/netinfo/#dom-networkinformation">Network Information API</a> defines <code>NetworkInformation</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface NetworkInformation : EventTarget {
-  readonly attribute ConnectionType type;
-  readonly attribute EffectiveConnectionType effectiveType;
-  readonly attribute Megabit downlinkMax;
-  readonly attribute Megabit downlink;
-  readonly attribute Millisecond rtt;
-  attribute EventHandler onchange;
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>NetworkInformation</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='ConnectionType.html'>ConnectionType</a> <strong>type</strong>;
+  readonly attribute <a href='EffectiveConnectionType.html'>EffectiveConnectionType</a> <strong>effectiveType</strong>;
+  readonly attribute <a href='Megabit.html'>Megabit</a> <strong>downlinkMax</strong>;
+  readonly attribute <a href='Megabit.html'>Megabit</a> <strong>downlink</strong>;
+  readonly attribute <a href='Millisecond.html'>Millisecond</a> <strong>rtt</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/savedata/">Save Data API</a>
-<pre class=webidl><code>
-
-NetworkInformation includes NetworkInformationSaveData;</code></pre></li></ol>
+<pre class=webidl><code><a href='NetworkInformation.html'>NetworkInformation</a> includes <a href='NetworkInformationSaveData.html'>NetworkInformationSaveData</a>;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

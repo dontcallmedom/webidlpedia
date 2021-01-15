@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/types.html#InterfaceSVGNumberList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGNumberList</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGNumberList</strong> {
 
-[Exposed=Window]
-interface SVGNumberList {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfItems</strong>;
 
-  readonly attribute unsigned long length;
-  readonly attribute unsigned long numberOfItems;
-
-  void clear();
-  SVGNumber initialize(SVGNumber newItem);
-  getter SVGNumber getItem(unsigned long index);
-  SVGNumber insertItemBefore(SVGNumber newItem, unsigned long index);
-  SVGNumber replaceItem(SVGNumber newItem, unsigned long index);
-  SVGNumber removeItem(unsigned long index);
-  SVGNumber appendItem(SVGNumber newItem);
-  setter void (unsigned long index, SVGNumber newItem);
+  <a href='void.html'>void</a> <strong>clear</strong>();
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>initialize</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
+  getter <a href='SVGNumber.html'>SVGNumber</a> <strong>getItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>insertItemBefore</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>replaceItem</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>removeItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>appendItem</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
+  setter <a href='void.html'>void</a> (<span>unsigned long</span> <strong>index</strong>, <a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
 };</code></pre>
   
 </section>

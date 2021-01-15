@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/permissions/#permissions">Permissions</a> defines <code>Permissions</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface Permissions {
-  Promise<PermissionStatus> query(object permissionDesc);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Permissions</strong> {
+  Promise<<a href='PermissionStatus.html'>PermissionStatus</a>> <strong>query</strong>(<span>object</span> <strong>permissionDesc</strong>);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/permissions-request/">Requesting Permissions</a>
-<pre class=webidl><code>partial interface Permissions {
-  Promise<PermissionStatus> request(object permissionDesc);
+<pre class=webidl><code>partial interface <strong>Permissions</strong> {
+  Promise<<a href='PermissionStatus.html'>PermissionStatus</a>> <strong>request</strong>(<span>object</span> <strong>permissionDesc</strong>);
 };</code></pre></li><li><a href="https://wicg.github.io/permissions-revoke/">Relinquishing Permissions</a>
-<pre class=webidl><code>partial interface Permissions {
-  Promise<PermissionStatus> revoke(object permissionDesc);
+<pre class=webidl><code>partial interface <strong>Permissions</strong> {
+  Promise<<a href='PermissionStatus.html'>PermissionStatus</a>> <strong>revoke</strong>(<span>object</span> <strong>permissionDesc</strong>);
 };</code></pre></li></ol>
 </section>
 <section>

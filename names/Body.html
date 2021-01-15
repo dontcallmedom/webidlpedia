@@ -7,15 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a> defines <code>Body</code></p>
-<pre class=webidl><code>
-interface mixin Body {
-  readonly attribute ReadableStream? body;
-  readonly attribute boolean bodyUsed;
-  [NewObject] Promise<ArrayBuffer> arrayBuffer();
-  [NewObject] Promise<Blob> blob();
-  [NewObject] Promise<FormData> formData();
-  [NewObject] Promise<any> json();
-  [NewObject] Promise<USVString> text();
+<pre class=webidl><code>interface mixin <strong>Body</strong> {
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;
+  readonly attribute <span>boolean</span> <strong>bodyUsed</strong>;
+  [NewObject] Promise<<span>ArrayBuffer</span>> <strong>arrayBuffer</strong>();
+  [NewObject] Promise<<a href='Blob.html'>Blob</a>> <strong>blob</strong>();
+  [NewObject] Promise<<a href='FormData.html'>FormData</a>> <strong>formData</strong>();
+  [NewObject] Promise<<span>any</span>> <strong>json</strong>();
+  [NewObject] Promise<<span>USVString</span>> <strong>text</strong>();
 };</code></pre>
   
 </section>

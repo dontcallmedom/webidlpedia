@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#xrquadlayer">WebXR Layers API Level 1</a> defines <code>XRQuadLayer</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>] interface <strong>XRQuadLayer</strong> : <a href='XRCompositionLayer.html'>XRCompositionLayer</a> {
+  attribute <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>;
+  attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;
 
-[Exposed=Window] interface XRQuadLayer : XRCompositionLayer {
-  attribute XRSpace space;
-  attribute XRRigidTransform transform;
-
-  attribute float width;
-  attribute float height;
+  attribute <span>float</span> <strong>width</strong>;
+  attribute <span>float</span> <strong>height</strong>;
 
   // Events
-  attribute EventHandler onredraw;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onredraw</strong>;
 };</code></pre>
   
 </section>

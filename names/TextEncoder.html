@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://encoding.spec.whatwg.org/#textencoder">Encoding Standard</a> defines <code>TextEncoder</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface TextEncoder {
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextEncoder</strong> {
   constructor();
 
-  [NewObject] Uint8Array encode(optional USVString input = "");
-  TextEncoderEncodeIntoResult encodeInto(USVString source, [AllowShared] Uint8Array destination);
+  [NewObject] <span>Uint8Array</span> <strong>encode</strong>(optional <span>USVString</span> <strong>input</strong> = "");
+  <a href='TextEncoderEncodeIntoResult.html'>TextEncoderEncodeIntoResult</a> <strong>encodeInto</strong>(<span>USVString</span> <strong>source</strong>, [AllowShared] <span>Uint8Array</span> <strong>destination</strong>);
 };
-TextEncoder includes TextEncoderCommon;</code></pre>
+<a href='TextEncoder.html'>TextEncoder</a> includes <a href='TextEncoderCommon.html'>TextEncoderCommon</a>;</code></pre>
   
 </section>
 

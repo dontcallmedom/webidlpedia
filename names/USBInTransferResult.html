@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbintransferresult">WebUSB API</a> defines <code>USBInTransferResult</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBInTransferResult {
-  constructor(USBTransferStatus status, optional DataView? data);
-  readonly attribute DataView? data;
-  readonly attribute USBTransferStatus status;
+interface <strong>USBInTransferResult</strong> {
+  constructor(<a href='USBTransferStatus.html'>USBTransferStatus</a> <strong>status</strong>, optional <span>DataView</span>? <strong>data</strong>);
+  readonly attribute <span>DataView</span>? <strong>data</strong>;
+  readonly attribute <a href='USBTransferStatus.html'>USBTransferStatus</a> <strong>status</strong>;
 };</code></pre>
   
 </section>

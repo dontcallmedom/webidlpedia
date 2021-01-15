@@ -7,56 +7,46 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>WindowOrWorkerGlobalScope</code></p>
-<pre class=webidl><code>
-
-interface mixin WindowOrWorkerGlobalScope {
-  [Replaceable] readonly attribute USVString origin;
-  readonly attribute boolean isSecureContext;
-  readonly attribute boolean crossOriginIsolated;
+<pre class=webidl><code>interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
+  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;
 
   // base64 utility methods
-  DOMString btoa(DOMString data);
-  ByteString atob(DOMString data);
+  <span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
+  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);
 
   // timers
-  long setTimeout(TimerHandler handler, optional long timeout = 0, any... arguments);
-  undefined clearTimeout(optional long handle = 0);
-  long setInterval(TimerHandler handler, optional long timeout = 0, any... arguments);
-  undefined clearInterval(optional long handle = 0);
+  <span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> = 0);
 
   // microtask queuing
-  undefined queueMicrotask(VoidFunction callback);
+  <span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);
 
   // ImageBitmap
-  Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, optional ImageBitmapOptions options = {});
-  Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {});
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
 };</code></pre>
   <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
-<pre class=webidl><code>
-
-partial interface mixin WindowOrWorkerGlobalScope {
-  [NewObject] Promise<Response> fetch(RequestInfo input, optional RequestInit init = {});
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [NewObject] Promise<<a href='Response.html'>Response</a>> <strong>fetch</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> = {});
 };</code></pre></li><li><a href="https://wicg.github.io/origin-policy/#monkeypatch-html-windoworworkerglobalscope">Origin Policy</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
-  readonly attribute FrozenArray<DOMString> originPolicyIds;
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  readonly attribute FrozenArray<<span>DOMString</span>> <strong>originPolicyIds</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/hr-time-3/#the-performance-attribute">High Resolution Time</a>
-<pre class=webidl><code>
-
-partial interface mixin WindowOrWorkerGlobalScope {
-  [Replaceable] readonly attribute Performance performance;
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [Replaceable] readonly attribute <a href='Performance.html'>Performance</a> <strong>performance</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/IndexedDB-2/#factory-interface">Indexed Database API 3.0</a>
-<pre class=webidl><code>
-
-partial interface mixin WindowOrWorkerGlobalScope {
-  [SameObject] readonly attribute IDBFactory indexedDB;
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [SameObject] readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong>indexedDB</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#global-caches">Service Workers Nightly</a>
-<pre class=webidl><code>
-
-partial interface mixin WindowOrWorkerGlobalScope {
-  [SecureContext, SameObject] readonly attribute CacheStorage caches;
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [SecureContext, SameObject] readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong>caches</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/WebCryptoAPI/#crypto-interface">Web Cryptography API</a>
-<pre class=webidl><code>partial interface mixin WindowOrWorkerGlobalScope {
-  [SameObject] readonly attribute Crypto crypto;
+<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [SameObject] readonly attribute <a href='Crypto.html'>Crypto</a> <strong>crypto</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

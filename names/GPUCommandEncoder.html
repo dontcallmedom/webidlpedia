@@ -7,50 +7,48 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpucommandencoder">WebGPU</a> defines <code>GPUCommandEncoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>GPUCommandEncoder</strong> {
+    <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong>beginRenderPass</strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong>beginComputePass</strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> = {});
 
-interface GPUCommandEncoder {
-    GPURenderPassEncoder beginRenderPass(GPURenderPassDescriptor descriptor);
-    GPUComputePassEncoder beginComputePass(optional GPUComputePassDescriptor descriptor = {});
+    <span>undefined</span> <strong>copyBufferToBuffer</strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>sourceOffset</strong>,
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
 
-    undefined copyBufferToBuffer(
-        GPUBuffer source,
-        GPUSize64 sourceOffset,
-        GPUBuffer destination,
-        GPUSize64 destinationOffset,
-        GPUSize64 size);
+    <span>undefined</span> <strong>copyBufferToTexture</strong>(
+        <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
 
-    undefined copyBufferToTexture(
-        GPUBufferCopyView source,
-        GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+    <span>undefined</span> <strong>copyTextureToBuffer</strong>(
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
+        <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
 
-    undefined copyTextureToBuffer(
-        GPUTextureCopyView source,
-        GPUBufferCopyView destination,
-        GPUExtent3D copySize);
+    <span>undefined</span> <strong>copyTextureToTexture</strong>(
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
 
-    undefined copyTextureToTexture(
-        GPUTextureCopyView source,
-        GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
+    <span>undefined</span> <strong>popDebugGroup</strong>();
+    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
 
-    undefined pushDebugGroup(USVString groupLabel);
-    undefined popDebugGroup();
-    undefined insertDebugMarker(USVString markerLabel);
+    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
 
-    undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
+    <span>undefined</span> <strong>resolveQuerySet</strong>(
+        <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>,
+        <a href='GPUSize32.html'>GPUSize32</a> <strong>firstQuery</strong>,
+        <a href='GPUSize32.html'>GPUSize32</a> <strong>queryCount</strong>,
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);
 
-    undefined resolveQuerySet(
-        GPUQuerySet querySet,
-        GPUSize32 firstQuery,
-        GPUSize32 queryCount,
-        GPUBuffer destination,
-        GPUSize64 destinationOffset);
-
-    GPUCommandBuffer finish(optional GPUCommandBufferDescriptor descriptor = {});
+    <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> = {});
 };
-GPUCommandEncoder includes GPUObjectBase;</code></pre>
+<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
   
 </section>
 <section>

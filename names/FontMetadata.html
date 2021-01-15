@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/local-font-access/#fontmetadata">Local Font Access API</a> defines <code>FontMetadata</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FontMetadata</strong> {
+  Promise<<a href='Blob.html'>Blob</a>> <strong>blob</strong>();
 
-[Exposed=(Window,Worker)]
-interface FontMetadata {
-  Promise<Blob> blob();
-
-  readonly attribute USVString postscriptName;
-  readonly attribute USVString fullName;
-  readonly attribute USVString family;
+  readonly attribute <span>USVString</span> <strong>postscriptName</strong>;
+  readonly attribute <span>USVString</span> <strong>fullName</strong>;
+  readonly attribute <span>USVString</span> <strong>family</strong>;
 };</code></pre>
   
 </section>

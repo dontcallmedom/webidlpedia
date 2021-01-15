@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbcursor">Indexed Database API 3.0</a> defines <code>IDBCursor</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBCursor</strong> {
+  readonly attribute (<a href='IDBObjectStore.html'>IDBObjectStore</a> or <a href='IDBIndex.html'>IDBIndex</a>) <strong>source</strong>;
+  readonly attribute <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong>;
+  readonly attribute <span>any</span> <strong>key</strong>;
+  readonly attribute <span>any</span> <strong>primaryKey</strong>;
+  [SameObject] readonly attribute <a href='IDBRequest.html'>IDBRequest</a> <strong>request</strong>;
 
-[Exposed=(Window,Worker)]
-interface IDBCursor {
-  readonly attribute (IDBObjectStore or IDBIndex) source;
-  readonly attribute IDBCursorDirection direction;
-  readonly attribute any key;
-  readonly attribute any primaryKey;
-  [SameObject] readonly attribute IDBRequest request;
+  <span>undefined</span> <strong>advance</strong>([EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  <span>undefined</span> <strong>continue</strong>(optional <span>any</span> <strong>key</strong>);
+  <span>undefined</span> <strong>continuePrimaryKey</strong>(<span>any</span> <strong>key</strong>, <span>any</span> <strong>primaryKey</strong>);
 
-  undefined advance([EnforceRange] unsigned long count);
-  undefined continue(optional any key);
-  undefined continuePrimaryKey(any key, any primaryKey);
-
-  [NewObject] IDBRequest update(any value);
-  [NewObject] IDBRequest delete();
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>update</strong>(<span>any</span> <strong>value</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>delete</strong>();
 };</code></pre>
   
 </section>

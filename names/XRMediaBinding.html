@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#xrmediabinding">WebXR Layers API Level 1</a> defines <code>XRMediaBinding</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>] interface <strong>XRMediaBinding</strong> {
+  constructor(<a href='XRSession.html'>XRSession</a> <strong>session</strong>);
 
-[Exposed=Window] interface XRMediaBinding {
-  constructor(XRSession session);
-
-  XRQuadLayer createQuadLayer(HTMLVideoElement video, optional XRMediaQuadLayerInit init);
-  XRCylinderLayer createCylinderLayer(HTMLVideoElement video, optional XRMediaCylinderLayerInit init);
-  XREquirectLayer createEquirectLayer(HTMLVideoElement video, optional XRMediaEquirectLayerInit init);
+  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(<a href='HTMLVideoElement.html'>HTMLVideoElement</a> <strong>video</strong>, optional <a href='XRMediaQuadLayerInit.html'>XRMediaQuadLayerInit</a> <strong>init</strong>);
+  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(<a href='HTMLVideoElement.html'>HTMLVideoElement</a> <strong>video</strong>, optional <a href='XRMediaCylinderLayerInit.html'>XRMediaCylinderLayerInit</a> <strong>init</strong>);
+  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(<a href='HTMLVideoElement.html'>HTMLVideoElement</a> <strong>video</strong>, optional <a href='XRMediaEquirectLayerInit.html'>XRMediaEquirectLayerInit</a> <strong>init</strong>);
 };</code></pre>
   
 </section>

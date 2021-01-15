@@ -7,37 +7,36 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://notifications.spec.whatwg.org/#notification">Notifications API Standard</a> defines <code>Notification</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker)]
-interface Notification : EventTarget {
-  constructor(DOMString title, optional NotificationOptions options = {});
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Notification</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> = {});
+  static readonly attribute <a href='NotificationPermission.html'>NotificationPermission</a> <strong>permission</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] static Promise<<a href='NotificationPermission.html'>NotificationPermission</a>> <strong>requestPermission</strong>(optional <a href='NotificationPermissionCallback.html'>NotificationPermissionCallback</a> <strong>deprecatedCallback</strong>);
 
-  static readonly attribute NotificationPermission permission;
-  [Exposed=Window] static Promise<NotificationPermission> requestPermission(optional NotificationPermissionCallback deprecatedCallback);
+  static readonly attribute <span>unsigned long</span> <strong>maxActions</strong>;
 
-  static readonly attribute unsigned long maxActions;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
 
-  attribute EventHandler onclick;
-  attribute EventHandler onshow;
-  attribute EventHandler onerror;
-  attribute EventHandler onclose;
+  readonly attribute <span>DOMString</span> <strong>title</strong>;
+  readonly attribute <a href='NotificationDirection.html'>NotificationDirection</a> <strong>dir</strong>;
+  readonly attribute <span>DOMString</span> <strong>lang</strong>;
+  readonly attribute <span>DOMString</span> <strong>body</strong>;
+  readonly attribute <span>DOMString</span> <strong>tag</strong>;
+  readonly attribute <span>USVString</span> <strong>image</strong>;
+  readonly attribute <span>USVString</span> <strong>icon</strong>;
+  readonly attribute <span>USVString</span> <strong>badge</strong>;
+  [SameObject] readonly attribute FrozenArray<<span>unsigned long</span>> <strong>vibrate</strong>;
+  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a> <strong>timestamp</strong>;
+  readonly attribute <span>boolean</span> <strong>renotify</strong>;
+  readonly attribute <span>boolean</span> <strong>silent</strong>;
+  readonly attribute <span>boolean</span> <strong>requireInteraction</strong>;
+  [SameObject] readonly attribute <span>any</span> <strong>data</strong>;
+  [SameObject] readonly attribute FrozenArray<<a href='NotificationAction.html'>NotificationAction</a>> <strong>actions</strong>;
 
-  readonly attribute DOMString title;
-  readonly attribute NotificationDirection dir;
-  readonly attribute DOMString lang;
-  readonly attribute DOMString body;
-  readonly attribute DOMString tag;
-  readonly attribute USVString image;
-  readonly attribute USVString icon;
-  readonly attribute USVString badge;
-  [SameObject] readonly attribute FrozenArray<unsigned long> vibrate;
-  readonly attribute DOMTimeStamp timestamp;
-  readonly attribute boolean renotify;
-  readonly attribute boolean silent;
-  readonly attribute boolean requireInteraction;
-  [SameObject] readonly attribute any data;
-  [SameObject] readonly attribute FrozenArray<NotificationAction> actions;
-
-  undefined close();
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
 </section>

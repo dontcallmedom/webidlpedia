@@ -7,22 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcerror">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCError</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface RTCError : DOMException {
-  constructor(RTCErrorInit init, optional DOMString message = "");
-  readonly attribute RTCErrorDetailType errorDetail;
-  readonly attribute long? sdpLineNumber;
-  readonly attribute long? sctpCauseCode;
-  readonly attribute unsigned long? receivedAlert;
-  readonly attribute unsigned long? sentAlert;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>RTCError</strong> : <a href='DOMException.html'>DOMException</a> {
+  constructor(<a href='RTCErrorInit.html'>RTCErrorInit</a> <strong>init</strong>, optional <span>DOMString</span> <strong>message</strong> = "");
+  readonly attribute <a href='RTCErrorDetailType.html'>RTCErrorDetailType</a> <strong>errorDetail</strong>;
+  readonly attribute <span>long</span>? <strong>sdpLineNumber</strong>;
+  readonly attribute <span>long</span>? <strong>sctpCauseCode</strong>;
+  readonly attribute <span>unsigned long</span>? <strong>receivedAlert</strong>;
+  readonly attribute <span>unsigned long</span>? <strong>sentAlert</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>
-
-partial interface RTCError {
-  readonly attribute long? httpRequestStatusCode;
+<pre class=webidl><code>partial interface <strong>RTCError</strong> {
+  readonly attribute <span>long</span>? <strong>httpRequestStatusCode</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

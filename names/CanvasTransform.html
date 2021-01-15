@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasTransform</code></p>
-<pre class=webidl><code>
-
-interface mixin CanvasTransform {
+<pre class=webidl><code>interface mixin <strong>CanvasTransform</strong> {
   // transformations (default transform is the identity matrix)
-  undefined scale(unrestricted double x, unrestricted double y);
-  undefined rotate(unrestricted double angle);
-  undefined translate(unrestricted double x, unrestricted double y);
-  undefined transform(unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f);
+  <span>undefined</span> <strong>scale</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>rotate</strong>(<span>unrestricted double</span> <strong>angle</strong>);
+  <span>undefined</span> <strong>translate</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>transform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
 
-  [NewObject] DOMMatrix getTransform();
-  undefined setTransform(unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f);
-  undefined setTransform(optional DOMMatrix2DInit transform = {});
-  undefined resetTransform();
+  [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>getTransform</strong>();
+  <span>undefined</span> <strong>setTransform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+  <span>undefined</span> <strong>setTransform</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> = {});
+  <span>undefined</span> <strong>resetTransform</strong>();
 
 };</code></pre>
   

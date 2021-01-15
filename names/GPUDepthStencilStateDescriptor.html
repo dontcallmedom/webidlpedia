@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpudepthstencilstatedescriptor">WebGPU</a> defines <code>GPUDepthStencilStateDescriptor</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>GPUDepthStencilStateDescriptor</strong> {
+    required <a href='GPUTextureFormat.html'>GPUTextureFormat</a> <strong>format</strong>;
 
-dictionary GPUDepthStencilStateDescriptor {
-    required GPUTextureFormat format;
+    <span>boolean</span> <strong>depthWriteEnabled</strong> = false;
+    <a href='GPUCompareFunction.html'>GPUCompareFunction</a> <strong>depthCompare</strong> = "always";
 
-    boolean depthWriteEnabled = false;
-    GPUCompareFunction depthCompare = "always";
+    <a href='GPUStencilStateFaceDescriptor.html'>GPUStencilStateFaceDescriptor</a> <strong>stencilFront</strong> = {};
+    <a href='GPUStencilStateFaceDescriptor.html'>GPUStencilStateFaceDescriptor</a> <strong>stencilBack</strong> = {};
 
-    GPUStencilStateFaceDescriptor stencilFront = {};
-    GPUStencilStateFaceDescriptor stencilBack = {};
-
-    GPUStencilValue stencilReadMask = 0xFFFFFFFF;
-    GPUStencilValue stencilWriteMask = 0xFFFFFFFF;
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilReadMask</strong> = 0xFFFFFFFF;
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilWriteMask</strong> = 0xFFFFFFFF;
 };</code></pre>
   
 </section>

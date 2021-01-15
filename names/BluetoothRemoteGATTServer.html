@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattserver">Web Bluetooth</a> defines <code>BluetoothRemoteGATTServer</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window, SecureContext]
-interface BluetoothRemoteGATTServer {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>BluetoothRemoteGATTServer</strong> {
   [SameObject]
-  readonly attribute BluetoothDevice device;
-  readonly attribute boolean connected;
-  Promise<BluetoothRemoteGATTServer> connect();
-  void disconnect();
-  Promise<BluetoothRemoteGATTService> getPrimaryService(BluetoothServiceUUID service);
-  Promise<sequence<BluetoothRemoteGATTService>>
-    getPrimaryServices(optional BluetoothServiceUUID service);
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;
+  readonly attribute <span>boolean</span> <strong>connected</strong>;
+  Promise<<a href='BluetoothRemoteGATTServer.html'>BluetoothRemoteGATTServer</a>> <strong>connect</strong>();
+  <a href='void.html'>void</a> <strong>disconnect</strong>();
+  Promise<<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>> <strong>getPrimaryService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);
+  Promise<sequence<<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>>>
+    <strong>getPrimaryServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);
 };</code></pre>
   
 </section>

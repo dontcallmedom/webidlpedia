@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer">Service Workers Nightly</a> defines <code>ServiceWorkerContainer</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>ServiceWorkerContainer</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>controller</strong>;
+  readonly attribute Promise<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>> <strong>ready</strong>;
 
-[SecureContext, Exposed=(Window,Worker)]
-interface ServiceWorkerContainer : EventTarget {
-  readonly attribute ServiceWorker? controller;
-  readonly attribute Promise<ServiceWorkerRegistration> ready;
+  [NewObject] Promise<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>> <strong>register</strong>(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='RegistrationOptions.html'>RegistrationOptions</a> <strong>options</strong> = {});
 
-  [NewObject] Promise<ServiceWorkerRegistration> register(USVString scriptURL, optional RegistrationOptions options = {});
+  [NewObject] Promise<<span>any</span>> <strong>getRegistration</strong>(optional <span>USVString</span> <strong>clientURL</strong> = "");
+  [NewObject] Promise<FrozenArray<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>>> <strong>getRegistrations</strong>();
 
-  [NewObject] Promise<any> getRegistration(optional USVString clientURL = "");
-  [NewObject] Promise<FrozenArray<ServiceWorkerRegistration>> getRegistrations();
-
-  undefined startMessages();
+  <span>undefined</span> <strong>startMessages</strong>();
 
 
   // events
-  attribute EventHandler oncontrollerchange;
-  attribute EventHandler onmessage; // event.source of message events is ServiceWorker object
-  attribute EventHandler onmessageerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontrollerchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>; // event.source of message events is ServiceWorker object
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
 </section>

@@ -7,22 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/geometry/#dompointreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMPointReadOnly</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker),
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable]
-interface DOMPointReadOnly {
-    constructor(optional unrestricted double x = 0, optional unrestricted double y = 0,
-            optional unrestricted double z = 0, optional unrestricted double w = 1);
+interface <strong>DOMPointReadOnly</strong> {
+    constructor(optional <span>unrestricted double</span> <strong>x</strong> = 0, optional <span>unrestricted double</span> <strong>y</strong> = 0,
+            optional <span>unrestricted double</span> <strong>z</strong> = 0, optional <span>unrestricted double</span> <strong>w</strong> = 1);
+    [NewObject] static <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>fromPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>other</strong> = {});
 
-    [NewObject] static DOMPointReadOnly fromPoint(optional DOMPointInit other = {});
+    readonly attribute <span>unrestricted double</span> <strong>x</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>y</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>z</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>w</strong>;
 
-    readonly attribute unrestricted double x;
-    readonly attribute unrestricted double y;
-    readonly attribute unrestricted double z;
-    readonly attribute unrestricted double w;
+    [NewObject] <a href='DOMPoint.html'>DOMPoint</a> <strong>matrixTransform</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>matrix</strong> = {});
 
-    [NewObject] DOMPoint matrixTransform(optional DOMMatrixInit matrix = {});
-
-    [Default] object toJSON();
+    [Default] <span>object</span> <strong>toJSON</strong>();
 };</code></pre>
   
 </section>

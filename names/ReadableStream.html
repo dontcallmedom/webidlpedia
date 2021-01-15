@@ -7,19 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablestream">Streams Standard</a> defines <code>ReadableStream</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker,Worklet), Transferable]
-interface ReadableStream {
-  constructor(optional object underlyingSource, optional QueuingStrategy strategy = {});
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
+interface <strong>ReadableStream</strong> {
+  constructor(optional <span>object</span> <strong>underlyingSource</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> = {});
+  readonly attribute <span>boolean</span> <strong>locked</strong>;
 
-  readonly attribute boolean locked;
+  Promise<<span>undefined</span>> <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
+  <a href='ReadableStreamReader.html'>ReadableStreamReader</a> <strong>getReader</strong>(optional <a href='ReadableStreamGetReaderOptions.html'>ReadableStreamGetReaderOptions</a> <strong>options</strong> = {});
+  <a href='ReadableStream.html'>ReadableStream</a> <strong>pipeThrough</strong>(<a href='ReadableWritablePair.html'>ReadableWritablePair</a> <strong>transform</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> = {});
+  Promise<<span>undefined</span>> <strong>pipeTo</strong>(<a href='WritableStream.html'>WritableStream</a> <strong>destination</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> = {});
+  sequence<<a href='ReadableStream.html'>ReadableStream</a>> <strong>tee</strong>();
 
-  Promise<undefined> cancel(optional any reason);
-  ReadableStreamReader getReader(optional ReadableStreamGetReaderOptions options = {});
-  ReadableStream pipeThrough(ReadableWritablePair transform, optional StreamPipeOptions options = {});
-  Promise<undefined> pipeTo(WritableStream destination, optional StreamPipeOptions options = {});
-  sequence<ReadableStream> tee();
-
-  async iterable<any>(optional ReadableStreamIteratorOptions options = {});
+  async iterable<<span>any</span>>(optional <a href='ReadableStreamIteratorOptions.html'>ReadableStreamIteratorOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
 </section>

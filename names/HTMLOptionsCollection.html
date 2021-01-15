@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmloptionscollection">HTML Standard</a> defines <code>HTMLOptionsCollection</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLOptionsCollection : HTMLCollection {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLOptionsCollection</strong> : <a href='HTMLCollection.html'>HTMLCollection</a> {
   // inherits item(), namedItem()
-  [CEReactions] attribute unsigned long length; // shadows inherited length
-  [CEReactions] setter undefined (unsigned long index, HTMLOptionElement? option);
-  [CEReactions] undefined add((HTMLOptionElement or HTMLOptGroupElement) element, optional (HTMLElement or long)? before = null);
-  [CEReactions] undefined remove(long index);
-  attribute long selectedIndex;
+  [CEReactions] attribute <span>unsigned long</span> <strong>length</strong>; // shadows inherited length
+  [CEReactions] setter <span>undefined</span> (<span>unsigned long</span> <strong>index</strong>, <a href='HTMLOptionElement.html'>HTMLOptionElement</a>? <strong>option</strong>);
+  [CEReactions] <span>undefined</span> <strong>add</strong>((<a href='HTMLOptionElement.html'>HTMLOptionElement</a> or <a href='HTMLOptGroupElement.html'>HTMLOptGroupElement</a>) <strong>element</strong>, optional (<a href='HTMLElement.html'>HTMLElement</a> or <span>long</span>)? <strong>before</strong> = null);
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(<span>long</span> <strong>index</strong>);
+  attribute <span>long</span> <strong>selectedIndex</strong>;
 };</code></pre>
   
 </section>

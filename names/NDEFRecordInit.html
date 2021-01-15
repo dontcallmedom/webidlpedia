@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/web-nfc/#dom-ndefrecordinit">Web NFC</a> defines <code>NDEFRecordInit</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>NDEFRecordInit</strong> {
+  required <span>USVString</span> <strong>recordType</strong>;
+  <span>USVString</span> <strong>mediaType</strong>;
+  <span>USVString</span> <strong>id</strong>;
 
-dictionary NDEFRecordInit {
-  required USVString recordType;
-  USVString mediaType;
-  USVString id;
+  <span>USVString</span> <strong>encoding</strong>;
+  <span>USVString</span> <strong>lang</strong>;
 
-  USVString encoding;
-  USVString lang;
-
-  NDEFRecordDataSource data;
+  <a href='NDEFRecordDataSource.html'>NDEFRecordDataSource</a> <strong>data</strong>;
 };</code></pre>
   
 </section>

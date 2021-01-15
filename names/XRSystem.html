@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrsystem">WebXR Device API</a> defines <code>XRSystem</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=Window] interface XRSystem : EventTarget {
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRSystem</strong> : <a href='EventTarget.html'>EventTarget</a> {
   // Methods
-  Promise<boolean> isSessionSupported(XRSessionMode mode);
-  [NewObject] Promise<XRSession> requestSession(XRSessionMode mode, optional XRSessionInit options = {});
+  Promise<<span>boolean</span>> <strong>isSessionSupported</strong>(<a href='XRSessionMode.html'>XRSessionMode</a> <strong>mode</strong>);
+  [NewObject] Promise<<a href='XRSession.html'>XRSession</a>> <strong>requestSession</strong>(<a href='XRSessionMode.html'>XRSessionMode</a> <strong>mode</strong>, optional <a href='XRSessionInit.html'>XRSessionInit</a> <strong>options</strong> = {});
 
   // Events
-  attribute EventHandler ondevicechange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;
 };</code></pre>
   
 </section>

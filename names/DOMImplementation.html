@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#domimplementation">DOM Standard</a> defines <code>DOMImplementation</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>DOMImplementation</strong> {
+  [NewObject] <a href='DocumentType.html'>DocumentType</a> <strong>createDocumentType</strong>(<span>DOMString</span> <strong>qualifiedName</strong>, <span>DOMString</span> <strong>publicId</strong>, <span>DOMString</span> <strong>systemId</strong>);
+  [NewObject] <a href='XMLDocument.html'>XMLDocument</a> <strong>createDocument</strong>(<span>DOMString</span>? <strong>namespace</strong>, [LegacyNullToEmptyString] <span>DOMString</span> <strong>qualifiedName</strong>, optional <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong> = null);
+  [NewObject] <a href='Document.html'>Document</a> <strong>createHTMLDocument</strong>(optional <span>DOMString</span> <strong>title</strong>);
 
-[Exposed=Window]
-interface DOMImplementation {
-  [NewObject] DocumentType createDocumentType(DOMString qualifiedName, DOMString publicId, DOMString systemId);
-  [NewObject] XMLDocument createDocument(DOMString? namespace, [LegacyNullToEmptyString] DOMString qualifiedName, optional DocumentType? doctype = null);
-  [NewObject] Document createHTMLDocument(optional DOMString title);
-
-  boolean hasFeature(); // useless; always returns true
+  <span>boolean</span> <strong>hasFeature</strong>(); // useless; always returns true
 };</code></pre>
   
 </section>

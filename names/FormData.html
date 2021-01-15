@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://xhr.spec.whatwg.org/#formdata">XMLHttpRequest Standard</a> defines <code>FormData</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FormData</strong> {
+  constructor(optional <a href='HTMLFormElement.html'>HTMLFormElement</a> <strong>form</strong>);
 
-[Exposed=(Window,Worker)]
-interface FormData {
-  constructor(optional HTMLFormElement form);
-
-  undefined append(USVString name, USVString value);
-  undefined append(USVString name, Blob blobValue, optional USVString filename);
-  undefined delete(USVString name);
-  FormDataEntryValue? get(USVString name);
-  sequence<FormDataEntryValue> getAll(USVString name);
-  boolean has(USVString name);
-  undefined set(USVString name, USVString value);
-  undefined set(USVString name, Blob blobValue, optional USVString filename);
-  iterable<USVString, FormDataEntryValue>;
+  <span>undefined</span> <strong>append</strong>(<span>USVString</span> <strong>name</strong>, <span>USVString</span> <strong>value</strong>);
+  <span>undefined</span> <strong>append</strong>(<span>USVString</span> <strong>name</strong>, <a href='Blob.html'>Blob</a> <strong>blobValue</strong>, optional <span>USVString</span> <strong>filename</strong>);
+  <span>undefined</span> <strong>delete</strong>(<span>USVString</span> <strong>name</strong>);
+  <a href='FormDataEntryValue.html'>FormDataEntryValue</a>? <strong>get</strong>(<span>USVString</span> <strong>name</strong>);
+  sequence<<a href='FormDataEntryValue.html'>FormDataEntryValue</a>> <strong>getAll</strong>(<span>USVString</span> <strong>name</strong>);
+  <span>boolean</span> <strong>has</strong>(<span>USVString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>set</strong>(<span>USVString</span> <strong>name</strong>, <span>USVString</span> <strong>value</strong>);
+  <span>undefined</span> <strong>set</strong>(<span>USVString</span> <strong>name</strong>, <a href='Blob.html'>Blob</a> <strong>blobValue</strong>, optional <span>USVString</span> <strong>filename</strong>);
+  iterable<<span>USVString</span>, <a href='FormDataEntryValue.html'>FormDataEntryValue</a>>;
 };</code></pre>
   
 </section>

@@ -7,50 +7,48 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> defines <code>WebGLRenderingContextOverloads</code></p>
-<pre class=webidl><code>
-
-interface mixin WebGLRenderingContextOverloads
+<pre class=webidl><code>interface mixin <strong>WebGLRenderingContextOverloads</strong>
 {
-    void bufferData(GLenum target, GLsizeiptr size, GLenum usage);
-    void bufferData(GLenum target, [AllowShared] BufferSource? data, GLenum usage);
-    void bufferSubData(GLenum target, GLintptr offset, [AllowShared] BufferSource data);
+    <a href='void.html'>void</a> <strong>bufferData</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLsizeiptr.html'>GLsizeiptr</a> <strong>size</strong>, <a href='GLenum.html'>GLenum</a> <strong>usage</strong>);
+    <a href='void.html'>void</a> <strong>bufferData</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, [AllowShared] <a href='BufferSource.html'>BufferSource</a>? <strong>data</strong>, <a href='GLenum.html'>GLenum</a> <strong>usage</strong>);
+    <a href='void.html'>void</a> <strong>bufferSubData</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>, [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
 
-    void compressedTexImage2D(GLenum target, GLint level, GLenum internalformat,
-                              GLsizei width, GLsizei height, GLint border,
-                              [AllowShared] ArrayBufferView data);
-    void compressedTexSubImage2D(GLenum target, GLint level,
-                                 GLint xoffset, GLint yoffset,
-                                 GLsizei width, GLsizei height, GLenum format,
-                                 [AllowShared] ArrayBufferView data);
+    <a href='void.html'>void</a> <strong>compressedTexImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>,
+                              <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>,
+                              [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
+    <a href='void.html'>void</a> <strong>compressedTexSubImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>,
+                                 <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>,
+                                 <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>,
+                                 [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
 
-    void readPixels(GLint x, GLint y, GLsizei width, GLsizei height,
-                    GLenum format, GLenum type, [AllowShared] ArrayBufferView? pixels);
+    <a href='void.html'>void</a> <strong>readPixels</strong>(<a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
+                    <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>pixels</strong>);
 
-    void texImage2D(GLenum target, GLint level, GLint internalformat,
-                    GLsizei width, GLsizei height, GLint border, GLenum format,
-                    GLenum type, [AllowShared] ArrayBufferView? pixels);
-    void texImage2D(GLenum target, GLint level, GLint internalformat,
-                    GLenum format, GLenum type, TexImageSource source); // May throw DOMException
+    <a href='void.html'>void</a> <strong>texImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>,
+                    <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>,
+                    <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>pixels</strong>);
+    <a href='void.html'>void</a> <strong>texImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>,
+                    <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>); // May throw DOMException
 
-    void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
-                       GLsizei width, GLsizei height,
-                       GLenum format, GLenum type, [AllowShared] ArrayBufferView? pixels);
-    void texSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset,
-                       GLenum format, GLenum type, TexImageSource source); // May throw DOMException
+    <a href='void.html'>void</a> <strong>texSubImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>,
+                       <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
+                       <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>pixels</strong>);
+    <a href='void.html'>void</a> <strong>texSubImage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>,
+                       <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>); // May throw DOMException
 
-    void uniform1fv(WebGLUniformLocation? location, Float32List v);
-    void uniform2fv(WebGLUniformLocation? location, Float32List v);
-    void uniform3fv(WebGLUniformLocation? location, Float32List v);
-    void uniform4fv(WebGLUniformLocation? location, Float32List v);
+    <a href='void.html'>void</a> <strong>uniform1fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Float32List.html'>Float32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform2fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Float32List.html'>Float32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform3fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Float32List.html'>Float32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform4fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Float32List.html'>Float32List</a> <strong>v</strong>);
 
-    void uniform1iv(WebGLUniformLocation? location, Int32List v);
-    void uniform2iv(WebGLUniformLocation? location, Int32List v);
-    void uniform3iv(WebGLUniformLocation? location, Int32List v);
-    void uniform4iv(WebGLUniformLocation? location, Int32List v);
+    <a href='void.html'>void</a> <strong>uniform1iv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Int32List.html'>Int32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform2iv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Int32List.html'>Int32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform3iv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Int32List.html'>Int32List</a> <strong>v</strong>);
+    <a href='void.html'>void</a> <strong>uniform4iv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Int32List.html'>Int32List</a> <strong>v</strong>);
 
-    void uniformMatrix2fv(WebGLUniformLocation? location, GLboolean transpose, Float32List value);
-    void uniformMatrix3fv(WebGLUniformLocation? location, GLboolean transpose, Float32List value);
-    void uniformMatrix4fv(WebGLUniformLocation? location, GLboolean transpose, Float32List value);
+    <a href='void.html'>void</a> <strong>uniformMatrix2fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>value</strong>);
+    <a href='void.html'>void</a> <strong>uniformMatrix3fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>value</strong>);
+    <a href='void.html'>void</a> <strong>uniformMatrix4fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>value</strong>);
 };</code></pre>
   
 </section>

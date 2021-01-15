@@ -7,25 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransferitem">HTML Standard</a> defines <code>DataTransferItem</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface DataTransferItem {
-  readonly attribute DOMString kind;
-  readonly attribute DOMString type;
-  undefined getAsString(FunctionStringCallback? _callback);
-  File? getAsFile();
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>DataTransferItem</strong> {
+  readonly attribute <span>DOMString</span> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  <span>undefined</span> <strong>getAsString</strong>(<a href='FunctionStringCallback.html'>FunctionStringCallback</a>? <strong>_callback</strong>);
+  <a href='File.html'>File</a>? <strong>getAsFile</strong>();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>
-<pre class=webidl><code>
-
-partial interface DataTransferItem {
-    FileSystemEntry? webkitGetAsEntry();
+<pre class=webidl><code>partial interface <strong>DataTransferItem</strong> {
+    <a href='FileSystemEntry.html'>FileSystemEntry</a>? <strong>webkitGetAsEntry</strong>();
 };</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>
-
-partial interface DataTransferItem {
-    Promise<FileSystemHandle?> getAsFileSystemHandle();
+<pre class=webidl><code>partial interface <strong>DataTransferItem</strong> {
+    Promise<<a href='FileSystemHandle.html'>FileSystemHandle</a>?> <strong>getAsFileSystemHandle</strong>();
 };</code></pre></li></ol>
 </section>
 <section>

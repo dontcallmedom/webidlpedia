@@ -7,23 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/#webtransport">WebTransport</a> defines <code>WebTransport</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>WebTransport</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> = {});
 
-[Exposed=(Window,Worker)]
-interface WebTransport {
-  constructor(USVString url, optional WebTransportOptions options = {});
-
-  Promise<WebTransportStats> getStats();
-  readonly attribute WebTransportState state;
-  readonly attribute Promise<undefined> ready;
-  readonly attribute Promise<WebTransportCloseInfo> closed;
-  undefined close(optional WebTransportCloseInfo closeInfo = {});
-  attribute EventHandler onstatechange;
+  Promise<<a href='WebTransportStats.html'>WebTransportStats</a>> <strong>getStats</strong>();
+  readonly attribute <a href='WebTransportState.html'>WebTransportState</a> <strong>state</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
+  readonly attribute Promise<<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>> <strong>closed</strong>;
+  <span>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> = {});
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
 };
 
-WebTransport includes UnidirectionalStreamsTransport;
-WebTransport includes BidirectionalStreamsTransport;
-WebTransport includes DatagramTransport;</code></pre>
+<a href='WebTransport.html'>WebTransport</a> includes <a href='UnidirectionalStreamsTransport.html'>UnidirectionalStreamsTransport</a>;
+<a href='WebTransport.html'>WebTransport</a> includes <a href='BidirectionalStreamsTransport.html'>BidirectionalStreamsTransport</a>;
+<a href='WebTransport.html'>WebTransport</a> includes <a href='DatagramTransport.html'>DatagramTransport</a>;</code></pre>
   
 </section>
 

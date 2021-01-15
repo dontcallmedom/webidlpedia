@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#writablestream">Streams Standard</a> defines <code>WritableStream</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
+interface <strong>WritableStream</strong> {
+  constructor(optional <span>object</span> <strong>underlyingSink</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> = {});
 
-[Exposed=(Window,Worker,Worklet), Transferable]
-interface WritableStream {
-  constructor(optional object underlyingSink, optional QueuingStrategy strategy = {});
+  readonly attribute <span>boolean</span> <strong>locked</strong>;
 
-  readonly attribute boolean locked;
-
-  Promise<undefined> abort(optional any reason);
-  Promise<undefined> close();
-  WritableStreamDefaultWriter getWriter();
+  Promise<<span>undefined</span>> <strong>abort</strong>(optional <span>any</span> <strong>reason</strong>);
+  Promise<<span>undefined</span>> <strong>close</strong>();
+  <a href='WritableStreamDefaultWriter.html'>WritableStreamDefaultWriter</a> <strong>getWriter</strong>();
 };</code></pre>
   
 </section>

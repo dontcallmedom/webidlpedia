@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/cssom/#cssstyledeclaration">CSS Object Model (CSSOM)</a> defines <code>CSSStyleDeclaration</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface CSSStyleDeclaration {
-  [CEReactions] attribute CSSOMString cssText;
-  readonly attribute unsigned long length;
-  getter CSSOMString item(unsigned long index);
-  CSSOMString getPropertyValue(CSSOMString property);
-  CSSOMString getPropertyPriority(CSSOMString property);
-  [CEReactions] undefined setProperty(CSSOMString property, [LegacyNullToEmptyString] CSSOMString value, optional [LegacyNullToEmptyString] CSSOMString priority = "");
-  [CEReactions] CSSOMString removeProperty(CSSOMString property);
-  readonly attribute CSSRule? parentRule;
-  [CEReactions] attribute [LegacyNullToEmptyString] CSSOMString cssFloat;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSStyleDeclaration</strong> {
+  [CEReactions] attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='CSSOMString.html'>CSSOMString</a> <strong>item</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='CSSOMString.html'>CSSOMString</a> <strong>getPropertyValue</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>);
+  <a href='CSSOMString.html'>CSSOMString</a> <strong>getPropertyPriority</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>);
+  [CEReactions] <span>undefined</span> <strong>setProperty</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>, [LegacyNullToEmptyString] <a href='CSSOMString.html'>CSSOMString</a> <strong>value</strong>, optional [LegacyNullToEmptyString] <a href='CSSOMString.html'>CSSOMString</a> <strong>priority</strong> = "");
+  [CEReactions] <a href='CSSOMString.html'>CSSOMString</a> <strong>removeProperty</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>);
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='CSSOMString.html'>CSSOMString</a> <strong>cssFloat</strong>;
 };</code></pre>
   
 </section>

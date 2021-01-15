@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-file">File API</a> defines <code>File</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker), Serializable]
-interface File : Blob {
-  constructor(sequence<BlobPart> fileBits,
-              USVString fileName,
-              optional FilePropertyBag options = {});
-  readonly attribute DOMString name;
-  readonly attribute long long lastModified;
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {
+  constructor(sequence<<a href='BlobPart.html'>BlobPart</a>> <strong>fileBits</strong>,
+              <span>USVString</span> <strong>fileName</strong>,
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> = {});
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/#title">File and Directory Entries API</a>
-<pre class=webidl><code>partial interface File {
-    readonly attribute USVString webkitRelativePath;
+<pre class=webidl><code>partial interface <strong>File</strong> {
+    readonly attribute <span>USVString</span> <strong>webkitRelativePath</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#abortsignal">DOM Standard</a> defines <code>AbortSignal</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>AbortSignal</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>boolean</span> <strong>aborted</strong>;
 
-[Exposed=(Window,Worker)]
-interface AbortSignal : EventTarget {
-  readonly attribute boolean aborted;
-
-  attribute EventHandler onabort;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
 };</code></pre>
   
 </section>

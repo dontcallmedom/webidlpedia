@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#popstateevent">HTML Standard</a> defines <code>PopStateEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PopStateEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PopStateEventInit.html'>PopStateEventInit</a> <strong>eventInitDict</strong> = {});
 
-[Exposed=Window]
-interface PopStateEvent : Event {
-  constructor(DOMString type, optional PopStateEventInit eventInitDict = {});
-
-  readonly attribute any state;
+  readonly attribute <span>any</span> <strong>state</strong>;
 };</code></pre>
   
 </section>

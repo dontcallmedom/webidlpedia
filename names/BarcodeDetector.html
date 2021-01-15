@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/shape-detection-api/#barcodedetector">Accelerated Shape Detection in Images</a> defines <code>BarcodeDetector</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker),
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  SecureContext]
-interface BarcodeDetector {
-  constructor(optional BarcodeDetectorOptions barcodeDetectorOptions = {});
-  static Promise<sequence<BarcodeFormat>> getSupportedFormats();
+interface <strong>BarcodeDetector</strong> {
+  constructor(optional <a href='BarcodeDetectorOptions.html'>BarcodeDetectorOptions</a> <strong>barcodeDetectorOptions</strong> = {});
+  static Promise<sequence<<a href='BarcodeFormat.html'>BarcodeFormat</a>>> <strong>getSupportedFormats</strong>();
 
-  Promise<sequence<DetectedBarcode>> detect(ImageBitmapSource image);
+  Promise<sequence<<a href='DetectedBarcode.html'>DetectedBarcode</a>>> <strong>detect</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>);
 };</code></pre>
   
 </section>

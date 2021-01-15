@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/linking.html#InterfaceSVGAElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGAElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>target</strong>;
+  attribute <span>DOMString</span> <strong>download</strong>;
+  attribute <span>USVString</span> <strong>ping</strong>;
+  attribute <span>DOMString</span> <strong>rel</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;
+  attribute <span>DOMString</span> <strong>hreflang</strong>;
+  attribute <span>DOMString</span> <strong>type</strong>;
 
-[Exposed=Window]
-interface SVGAElement : SVGGraphicsElement {
-  [SameObject] readonly attribute SVGAnimatedString target;
-  attribute DOMString download;
-  attribute USVString ping;
-  attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
-  attribute DOMString hreflang;
-  attribute DOMString type;
+  attribute <span>DOMString</span> <strong>text</strong>;
 
-  attribute DOMString text;
-
-  attribute DOMString referrerPolicy;
+  attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
 };
 
-SVGAElement includes SVGURIReference;
-SVGAElement includes HTMLHyperlinkElementUtils;</code></pre>
+<a href='SVGAElement.html'>SVGAElement</a> includes <a href='SVGURIReference.html'>SVGURIReference</a>;
+<a href='SVGAElement.html'>SVGAElement</a> includes <a href='HTMLHyperlinkElementUtils.html'>HTMLHyperlinkElementUtils</a>;</code></pre>
   
 </section>
 

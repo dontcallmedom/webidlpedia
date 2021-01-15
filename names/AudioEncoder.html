@@ -7,19 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-codecs/#audioencoder">WebCodecs</a> defines <code>AudioEncoder</code></p>
-<pre class=webidl><code>
-
-
-[Exposed=(Window,Worker)]
-interface AudioEncoder {
-  constructor(AudioEncoderInit init);
-  readonly attribute CodecState state;
-  readonly attribute long encodeQueueSize;
-  undefined configure(AudioEncoderConfig config);
-  undefined encode(AudioFrame frame);
-  Promise<undefined> flush();
-  undefined reset();
-  undefined close();
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>AudioEncoder</strong> {
+  constructor(<a href='AudioEncoderInit.html'>AudioEncoderInit</a> <strong>init</strong>);
+  readonly attribute <a href='CodecState.html'>CodecState</a> <strong>state</strong>;
+  readonly attribute <span>long</span> <strong>encodeQueueSize</strong>;
+  <span>undefined</span> <strong>configure</strong>(<a href='AudioEncoderConfig.html'>AudioEncoderConfig</a> <strong>config</strong>);
+  <span>undefined</span> <strong>encode</strong>(<a href='AudioFrame.html'>AudioFrame</a> <strong>frame</strong>);
+  Promise<<span>undefined</span>> <strong>flush</strong>();
+  <span>undefined</span> <strong>reset</strong>();
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
 </section>

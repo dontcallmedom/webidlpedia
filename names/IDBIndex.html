@@ -7,28 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbindex">Indexed Database API 3.0</a> defines <code>IDBIndex</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBIndex</strong> {
+  attribute <span>DOMString</span> <strong>name</strong>;
+  [SameObject] readonly attribute <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>objectStore</strong>;
+  readonly attribute <span>any</span> <strong>keyPath</strong>;
+  readonly attribute <span>boolean</span> <strong>multiEntry</strong>;
+  readonly attribute <span>boolean</span> <strong>unique</strong>;
 
-[Exposed=(Window,Worker)]
-interface IDBIndex {
-  attribute DOMString name;
-  [SameObject] readonly attribute IDBObjectStore objectStore;
-  readonly attribute any keyPath;
-  readonly attribute boolean multiEntry;
-  readonly attribute boolean unique;
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>get</strong>(<span>any</span> <strong>query</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getKey</strong>(<span>any</span> <strong>query</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAll</strong>(optional <span>any</span> <strong>query</strong>,
+                                optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAllKeys</strong>(optional <span>any</span> <strong>query</strong>,
+                                    optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>count</strong>(optional <span>any</span> <strong>query</strong>);
 
-  [NewObject] IDBRequest get(any query);
-  [NewObject] IDBRequest getKey(any query);
-  [NewObject] IDBRequest getAll(optional any query,
-                                optional [EnforceRange] unsigned long count);
-  [NewObject] IDBRequest getAllKeys(optional any query,
-                                    optional [EnforceRange] unsigned long count);
-  [NewObject] IDBRequest count(optional any query);
-
-  [NewObject] IDBRequest openCursor(optional any query,
-                                    optional IDBCursorDirection direction = "next");
-  [NewObject] IDBRequest openKeyCursor(optional any query,
-                                       optional IDBCursorDirection direction = "next");
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openCursor</strong>(optional <span>any</span> <strong>query</strong>,
+                                    optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openKeyCursor</strong>(optional <span>any</span> <strong>query</strong>,
+                                       optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
 };</code></pre>
   
 </section>

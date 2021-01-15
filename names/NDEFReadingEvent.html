@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/web-nfc/#dom-ndefreadingevent">Web NFC</a> defines <code>NDEFReadingEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>NDEFReadingEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='NDEFReadingEventInit.html'>NDEFReadingEventInit</a> <strong>readingEventInitDict</strong>);
 
-[SecureContext, Exposed=Window]
-interface NDEFReadingEvent : Event {
-  constructor(DOMString type, NDEFReadingEventInit readingEventInitDict);
-
-  readonly attribute DOMString serialNumber;
-  [SameObject] readonly attribute NDEFMessage message;
+  readonly attribute <span>DOMString</span> <strong>serialNumber</strong>;
+  [SameObject] readonly attribute <a href='NDEFMessage.html'>NDEFMessage</a> <strong>message</strong>;
 };</code></pre>
   
 </section>

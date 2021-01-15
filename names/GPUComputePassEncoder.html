@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpucomputepassencoder">WebGPU</a> defines <code>GPUComputePassEncoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>GPUComputePassEncoder</strong> {
+    <span>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);
+    <span>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>x</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>y</strong> = 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>z</strong> = 1);
+    <span>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);
 
-interface GPUComputePassEncoder {
-    undefined setPipeline(GPUComputePipeline pipeline);
-    undefined dispatch(GPUSize32 x, optional GPUSize32 y = 1, optional GPUSize32 z = 1);
-    undefined dispatchIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
+    <span>undefined</span> <strong>beginPipelineStatisticsQuery</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span>undefined</span> <strong>endPipelineStatisticsQuery</strong>();
 
-    undefined beginPipelineStatisticsQuery(GPUQuerySet querySet, GPUSize32 queryIndex);
-    undefined endPipelineStatisticsQuery();
+    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
 
-    undefined writeTimestamp(GPUQuerySet querySet, GPUSize32 queryIndex);
-
-    undefined endPass();
+    <span>undefined</span> <strong>endPass</strong>();
 };
-GPUComputePassEncoder includes GPUObjectBase;
-GPUComputePassEncoder includes GPUProgrammablePassEncoder;</code></pre>
+<a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;
+<a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> includes <a href='GPUProgrammablePassEncoder.html'>GPUProgrammablePassEncoder</a>;</code></pre>
   
 </section>
 <section>

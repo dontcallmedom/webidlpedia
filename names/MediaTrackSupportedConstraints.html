@@ -7,60 +7,54 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints">Media Capture and Streams</a> defines <code>MediaTrackSupportedConstraints</code></p>
-<pre class=webidl><code>
-
-dictionary MediaTrackSupportedConstraints {
-  boolean width = true;
-  boolean height = true;
-  boolean aspectRatio = true;
-  boolean frameRate = true;
-  boolean facingMode = true;
-  boolean resizeMode = true;
-  boolean sampleRate = true;
-  boolean sampleSize = true;
-  boolean echoCancellation = true;
-  boolean autoGainControl = true;
-  boolean noiseSuppression = true;
-  boolean latency = true;
-  boolean channelCount = true;
-  boolean deviceId = true;
-  boolean groupId = true;
+<pre class=webidl><code>dictionary <strong>MediaTrackSupportedConstraints</strong> {
+  <span>boolean</span> <strong>width</strong> = true;
+  <span>boolean</span> <strong>height</strong> = true;
+  <span>boolean</span> <strong>aspectRatio</strong> = true;
+  <span>boolean</span> <strong>frameRate</strong> = true;
+  <span>boolean</span> <strong>facingMode</strong> = true;
+  <span>boolean</span> <strong>resizeMode</strong> = true;
+  <span>boolean</span> <strong>sampleRate</strong> = true;
+  <span>boolean</span> <strong>sampleSize</strong> = true;
+  <span>boolean</span> <strong>echoCancellation</strong> = true;
+  <span>boolean</span> <strong>autoGainControl</strong> = true;
+  <span>boolean</span> <strong>noiseSuppression</strong> = true;
+  <span>boolean</span> <strong>latency</strong> = true;
+  <span>boolean</span> <strong>channelCount</strong> = true;
+  <span>boolean</span> <strong>deviceId</strong> = true;
+  <span>boolean</span> <strong>groupId</strong> = true;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSupportedConstraints</strong> {
+  <span>boolean</span> <strong>whiteBalanceMode</strong> = true;
+  <span>boolean</span> <strong>exposureMode</strong> = true;
+  <span>boolean</span> <strong>focusMode</strong> = true;
+  <span>boolean</span> <strong>pointsOfInterest</strong> = true;
 
-partial dictionary MediaTrackSupportedConstraints {
-  boolean whiteBalanceMode = true;
-  boolean exposureMode = true;
-  boolean focusMode = true;
-  boolean pointsOfInterest = true;
+  <span>boolean</span> <strong>exposureCompensation</strong> = true;
+  <span>boolean</span> <strong>exposureTime</strong> = true;
+  <span>boolean</span> <strong>colorTemperature</strong> = true;
+  <span>boolean</span> <strong>iso</strong> = true;
 
-  boolean exposureCompensation = true;
-  boolean exposureTime = true;
-  boolean colorTemperature = true;
-  boolean iso = true;
-
-  boolean brightness = true;
-  boolean contrast = true;
-  boolean pan = true;
-  boolean saturation = true;
-  boolean sharpness = true;
-  boolean focusDistance = true;
-  boolean tilt = true;
-  boolean zoom = true;
-  boolean torch = true;
+  <span>boolean</span> <strong>brightness</strong> = true;
+  <span>boolean</span> <strong>contrast</strong> = true;
+  <span>boolean</span> <strong>pan</strong> = true;
+  <span>boolean</span> <strong>saturation</strong> = true;
+  <span>boolean</span> <strong>sharpness</strong> = true;
+  <span>boolean</span> <strong>focusDistance</strong> = true;
+  <span>boolean</span> <strong>tilt</strong> = true;
+  <span>boolean</span> <strong>zoom</strong> = true;
+  <span>boolean</span> <strong>torch</strong> = true;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>partial dictionary MediaTrackSupportedConstraints {
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSupportedConstraints</strong> {
     // Applies to both depth stream track and color stream track:
-    boolean videoKind = true;
+    <span>boolean</span> <strong>videoKind</strong> = true;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>
-
-partial dictionary MediaTrackSupportedConstraints {
-  boolean displaySurface = true;
-  boolean logicalSurface = true;
-  boolean cursor = true;
-  boolean restrictOwnAudio = true;
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSupportedConstraints</strong> {
+  <span>boolean</span> <strong>displaySurface</strong> = true;
+  <span>boolean</span> <strong>logicalSurface</strong> = true;
+  <span>boolean</span> <strong>cursor</strong> = true;
+  <span>boolean</span> <strong>restrictOwnAudio</strong> = true;
 };</code></pre></li></ol>
 </section>
 <section>

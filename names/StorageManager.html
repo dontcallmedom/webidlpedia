@@ -7,22 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://storage.spec.whatwg.org/#storagemanager">Storage Standard</a> defines <code>StorageManager</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext,
+ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>StorageManager</strong> {
+  Promise<<span>boolean</span>> <strong>persisted</strong>();
+  [Exposed=<a href='Window.html'>Window</a>] Promise<<span>boolean</span>> <strong>persist</strong>();
 
-[SecureContext,
- Exposed=(Window,Worker)]
-interface StorageManager {
-  Promise<boolean> persisted();
-  [Exposed=Window] Promise<boolean> persist();
-
-  Promise<StorageEstimate> estimate();
+  Promise<<a href='StorageEstimate.html'>StorageEstimate</a>> <strong>estimate</strong>();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>
-
-[SecureContext]
-partial interface StorageManager {
-  Promise<FileSystemDirectoryHandle> getDirectory();
+<pre class=webidl><code>[SecureContext]
+partial interface <strong>StorageManager</strong> {
+  Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>getDirectory</strong>();
 };</code></pre></li></ol>
 </section>
 <section>

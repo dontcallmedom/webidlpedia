@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothuuid">Web Bluetooth</a> defines <code>BluetoothUUID</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>BluetoothUUID</strong> {
+  static <a href='UUID.html'>UUID</a> <strong>getService</strong>((<span>DOMString</span> or <span>unsigned long</span>) <strong>name</strong>);
+  static <a href='UUID.html'>UUID</a> <strong>getCharacteristic</strong>((<span>DOMString</span> or <span>unsigned long</span>) <strong>name</strong>);
+  static <a href='UUID.html'>UUID</a> <strong>getDescriptor</strong>((<span>DOMString</span> or <span>unsigned long</span>) <strong>name</strong>);
 
-[Exposed=Window]
-interface BluetoothUUID {
-  static UUID getService((DOMString or unsigned long) name);
-  static UUID getCharacteristic((DOMString or unsigned long) name);
-  static UUID getDescriptor((DOMString or unsigned long) name);
-
-  static UUID canonicalUUID([EnforceRange] unsigned long alias);
+  static <a href='UUID.html'>UUID</a> <strong>canonicalUUID</strong>([EnforceRange] <span>unsigned long</span> <strong>alias</strong>);
 };</code></pre>
   
 </section>

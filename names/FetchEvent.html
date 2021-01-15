@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#fetchevent">Service Workers Nightly</a> defines <code>FetchEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>FetchEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='FetchEventInit.html'>FetchEventInit</a> <strong>eventInitDict</strong>);
+  [SameObject] readonly attribute <a href='Request.html'>Request</a> <strong>request</strong>;
+  readonly attribute Promise<<span>any</span>> <strong>preloadResponse</strong>;
+  readonly attribute <span>DOMString</span> <strong>clientId</strong>;
+  readonly attribute <span>DOMString</span> <strong>resultingClientId</strong>;
+  readonly attribute <span>DOMString</span> <strong>replacesClientId</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>handled</strong>;
 
-[Exposed=ServiceWorker]
-interface FetchEvent : ExtendableEvent {
-  constructor(DOMString type, FetchEventInit eventInitDict);
-  [SameObject] readonly attribute Request request;
-  readonly attribute Promise<any> preloadResponse;
-  readonly attribute DOMString clientId;
-  readonly attribute DOMString resultingClientId;
-  readonly attribute DOMString replacesClientId;
-  readonly attribute Promise<undefined> handled;
-
-  undefined respondWith(Promise<Response> r);
+  <span>undefined</span> <strong>respondWith</strong>(Promise<<a href='Response.html'>Response</a>> <strong>r</strong>);
 };</code></pre>
   
 </section>

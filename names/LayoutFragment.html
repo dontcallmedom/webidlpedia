@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#layoutfragment">CSS Layout API Level 1</a> defines <code>LayoutFragment</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<span>LayoutWorklet</span>]
+interface <strong>LayoutFragment</strong> {
+    readonly attribute <span>double</span> <strong>inlineSize</strong>;
+    readonly attribute <span>double</span> <strong>blockSize</strong>;
 
-[Exposed=LayoutWorklet]
-interface LayoutFragment {
-    readonly attribute double inlineSize;
-    readonly attribute double blockSize;
+    attribute <span>double</span> <strong>inlineOffset</strong>;
+    attribute <span>double</span> <strong>blockOffset</strong>;
 
-    attribute double inlineOffset;
-    attribute double blockOffset;
+    readonly attribute <span>any</span> <strong>data</strong>;
 
-    readonly attribute any data;
-
-    readonly attribute ChildBreakToken? breakToken;
+    readonly attribute <a href='ChildBreakToken.html'>ChildBreakToken</a>? <strong>breakToken</strong>;
 };</code></pre>
   
 </section>

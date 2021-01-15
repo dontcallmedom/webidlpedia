@@ -7,34 +7,33 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/speech-api/#speechrecognition">Web Speech API</a> defines <code>SpeechRecognition</code></p>
-<pre class=webidl><code>[Exposed=Window]
-interface SpeechRecognition : EventTarget {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SpeechRecognition</strong> : <a href='EventTarget.html'>EventTarget</a> {
     constructor();
-
     // recognition parameters
-    attribute SpeechGrammarList grammars;
-    attribute DOMString lang;
-    attribute boolean continuous;
-    attribute boolean interimResults;
-    attribute unsigned long maxAlternatives;
+    attribute <a href='SpeechGrammarList.html'>SpeechGrammarList</a> <strong>grammars</strong>;
+    attribute <span>DOMString</span> <strong>lang</strong>;
+    attribute <span>boolean</span> <strong>continuous</strong>;
+    attribute <span>boolean</span> <strong>interimResults</strong>;
+    attribute <span>unsigned long</span> <strong>maxAlternatives</strong>;
 
     // methods to drive the speech interaction
-    undefined start();
-    undefined stop();
-    undefined abort();
+    <span>undefined</span> <strong>start</strong>();
+    <span>undefined</span> <strong>stop</strong>();
+    <span>undefined</span> <strong>abort</strong>();
 
     // event methods
-    attribute EventHandler onaudiostart;
-    attribute EventHandler onsoundstart;
-    attribute EventHandler onspeechstart;
-    attribute EventHandler onspeechend;
-    attribute EventHandler onsoundend;
-    attribute EventHandler onaudioend;
-    attribute EventHandler onresult;
-    attribute EventHandler onnomatch;
-    attribute EventHandler onerror;
-    attribute EventHandler onstart;
-    attribute EventHandler onend;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onaudiostart</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsoundstart</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onspeechstart</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onspeechend</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsoundend</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onaudioend</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresult</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnomatch</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
 };</code></pre>
   
 </section>

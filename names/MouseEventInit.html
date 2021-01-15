@@ -7,32 +7,26 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#dictdef-mouseeventinit">UI Events</a> defines <code>MouseEventInit</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>MouseEventInit</strong> : <a href='EventModifierInit.html'>EventModifierInit</a> {
+  <span>long</span> <strong>screenX</strong> = 0;
+  <span>long</span> <strong>screenY</strong> = 0;
+  <span>long</span> <strong>clientX</strong> = 0;
+  <span>long</span> <strong>clientY</strong> = 0;
 
-dictionary MouseEventInit : EventModifierInit {
-  long screenX = 0;
-  long screenY = 0;
-  long clientX = 0;
-  long clientY = 0;
-
-  short button = 0;
-  unsigned short buttons = 0;
-  EventTarget? relatedTarget = null;
+  <span>short</span> <strong>button</strong> = 0;
+  <span>unsigned short</span> <strong>buttons</strong> = 0;
+  <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong> = null;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial dictionary MouseEventInit {
-  double screenX = 0.0;
-  double screenY = 0.0;
-  double clientX = 0.0;
-  double clientY = 0.0;
+<pre class=webidl><code>partial dictionary <strong>MouseEventInit</strong> {
+  <span>double</span> <strong>screenX</strong> = 0.0;
+  <span>double</span> <strong>screenY</strong> = 0.0;
+  <span>double</span> <strong>clientX</strong> = 0.0;
+  <span>double</span> <strong>clientY</strong> = 0.0;
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/">Pointer Lock 2.0</a>
-<pre class=webidl><code>
-
-partial dictionary MouseEventInit {
-  long movementX = 0;
-  long movementY = 0;
+<pre class=webidl><code>partial dictionary <strong>MouseEventInit</strong> {
+  <span>long</span> <strong>movementX</strong> = 0;
+  <span>long</span> <strong>movementY</strong> = 0;
 };</code></pre></li></ol>
 </section>
 <section>

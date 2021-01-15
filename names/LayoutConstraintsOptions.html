@@ -7,22 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.css-houdini.org/css-layout-api-1/#dictdef-layoutconstraintsoptions">CSS Layout API Level 1</a> defines <code>LayoutConstraintsOptions</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>LayoutConstraintsOptions</strong> {
+    <span>double</span> <strong>availableInlineSize</strong>;
+    <span>double</span> <strong>availableBlockSize</strong>;
 
-dictionary LayoutConstraintsOptions {
-    double availableInlineSize;
-    double availableBlockSize;
+    <span>double</span> <strong>fixedInlineSize</strong>;
+    <span>double</span> <strong>fixedBlockSize</strong>;
 
-    double fixedInlineSize;
-    double fixedBlockSize;
+    <span>double</span> <strong>percentageInlineSize</strong>;
+    <span>double</span> <strong>percentageBlockSize</strong>;
 
-    double percentageInlineSize;
-    double percentageBlockSize;
+    <span>double</span> <strong>blockFragmentationOffset</strong>;
+    <a href='BlockFragmentationType.html'>BlockFragmentationType</a> <strong>blockFragmentationType</strong> = "none";
 
-    double blockFragmentationOffset;
-    BlockFragmentationType blockFragmentationType = "none";
-
-    any data;
+    <span>any</span> <strong>data</strong>;
 };</code></pre>
   
 </section>

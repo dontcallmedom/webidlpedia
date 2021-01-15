@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/periodic-background-sync/#periodicsyncmanager">Web Periodic Background Synchronization</a> defines <code>PeriodicSyncManager</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface PeriodicSyncManager {
-    Promise<void> register(DOMString tag, optional BackgroundSyncOptions options);
-    Promise<sequence<DOMString>> getTags();
-    Promise<void> unregister(DOMString tag);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PeriodicSyncManager</strong> {
+    Promise<<a href='void.html'>void</a>> <strong>register</strong>(<span>DOMString</span> <strong>tag</strong>, optional <a href='BackgroundSyncOptions.html'>BackgroundSyncOptions</a> <strong>options</strong>);
+    Promise<sequence<<span>DOMString</span>>> <strong>getTags</strong>();
+    Promise<<a href='void.html'>void</a>> <strong>unregister</strong>(<span>DOMString</span> <strong>tag</strong>);
 };</code></pre>
   
 </section>

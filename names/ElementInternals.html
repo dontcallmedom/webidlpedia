@@ -7,36 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#elementinternals">HTML Standard</a> defines <code>ElementInternals</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface ElementInternals {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>ElementInternals</strong> {
   // Shadow root access
-  readonly attribute ShadowRoot? shadowRoot;
+  readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;
 
   // Form-associated custom elements
-  undefined setFormValue((File or USVString or FormData)? value,
-                         optional (File or USVString or FormData)? state);
+  <span>undefined</span> <strong>setFormValue</strong>((<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>value</strong>,
+                         optional (<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);
 
-  readonly attribute HTMLFormElement? form;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
 
-  undefined setValidity(optional ValidityStateFlags flags = {},
-                        optional DOMString message,
-                        optional HTMLElement anchor);
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  boolean reportValidity();
+  <span>undefined</span> <strong>setValidity</strong>(optional <a href='ValidityStateFlags.html'>ValidityStateFlags</a> <strong>flags</strong> = {},
+                        optional <span>DOMString</span> <strong>message</strong>,
+                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
 
-  readonly attribute NodeList labels;
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
 };
 
 // Accessibility semantics
-ElementInternals includes ARIAMixin;</code></pre>
+<a href='ElementInternals.html'>ElementInternals</a> includes <a href='ARIAMixin.html'>ARIAMixin</a>;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/custom-state-pseudo-class/#exposing">Custom State Pseudo Class</a>
-<pre class=webidl><code>partial interface ElementInternals {
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList states;
+<pre class=webidl><code>partial interface <strong>ElementInternals</strong> {
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>states</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

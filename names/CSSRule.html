@@ -7,47 +7,41 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/cssom/#cssrule">CSS Object Model (CSSOM)</a> defines <code>CSSRule</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface CSSRule {
-  attribute CSSOMString cssText;
-  readonly attribute CSSRule? parentRule;
-  readonly attribute CSSStyleSheet? parentStyleSheet;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSRule</strong> {
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;
 
   // the following attribute and constants are historical
-  readonly attribute unsigned short type;
-  const unsigned short STYLE_RULE = 1;
-  const unsigned short CHARSET_RULE = 2;
-  const unsigned short IMPORT_RULE = 3;
-  const unsigned short MEDIA_RULE = 4;
-  const unsigned short FONT_FACE_RULE = 5;
-  const unsigned short PAGE_RULE = 6;
-  const unsigned short MARGIN_RULE = 9;
-  const unsigned short NAMESPACE_RULE = 10;
+  readonly attribute <span>unsigned short</span> <strong>type</strong>;
+  const <span>unsigned short</span> <strong>STYLE_RULE</strong> = 1;
+  const <span>unsigned short</span> <strong>CHARSET_RULE</strong> = 2;
+  const <span>unsigned short</span> <strong>IMPORT_RULE</strong> = 3;
+  const <span>unsigned short</span> <strong>MEDIA_RULE</strong> = 4;
+  const <span>unsigned short</span> <strong>FONT_FACE_RULE</strong> = 5;
+  const <span>unsigned short</span> <strong>PAGE_RULE</strong> = 6;
+  const <span>unsigned short</span> <strong>MARGIN_RULE</strong> = 9;
+  const <span>unsigned short</span> <strong>NAMESPACE_RULE</strong> = 10;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/css-animations-1/#interface-cssrule-idl">CSS Animations Level 1</a>
-<pre class=webidl><code>
-
-partial interface CSSRule {
-    const unsigned short KEYFRAMES_RULE = 7;
-    const unsigned short KEYFRAME_RULE = 8;
+<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
+    const <span>unsigned short</span> <strong>KEYFRAMES_RULE</strong> = 7;
+    const <span>unsigned short</span> <strong>KEYFRAME_RULE</strong> = 8;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-conditional-3/#extentions-to-cssrule-interface">CSS Conditional Rules Module Level 3</a>
-<pre class=webidl><code>partial interface CSSRule {
-    const unsigned short SUPPORTS_RULE = 12;
+<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
+    const <span>unsigned short</span> <strong>SUPPORTS_RULE</strong> = 12;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-counter-styles-3/#extentions-to-cssrule-interface">CSS Counter Styles Level 3</a>
-<pre class=webidl><code>partial interface CSSRule {
-    const unsigned short COUNTER_STYLE_RULE = 11;
+<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
+    const <span>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> = 11;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-device-adapt-1/#css-rule-interface">CSS Device Adaptation Module Level 1</a>
-<pre class=webidl><code>partial interface CSSRule {
-    const unsigned short VIEWPORT_RULE = 15;
+<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
+    const <span>unsigned short</span> <strong>VIEWPORT_RULE</strong> = 15;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-fonts-4/#om-fontfeaturevalues">CSS Fonts Module Level 4</a>
-<pre class=webidl><code>
-
-partial interface CSSRule {  const unsigned short FONT_FEATURE_VALUES_RULE = 14;
+<pre class=webidl><code>partial interface <strong>CSSRule</strong> {  const <span>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> = 14;
 };
 
-partial interface CSSRule {  const unsigned short FONT_PALETTE_VALUES_RULE = 15;
+partial interface <strong>CSSRule</strong> {  const <span>unsigned short</span> <strong>FONT_PALETTE_VALUES_RULE</strong> = 15;
 };</code></pre></li></ol>
 </section>
 <section>

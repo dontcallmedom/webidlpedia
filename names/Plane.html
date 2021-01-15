@@ -7,15 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-codecs/#plane">WebCodecs</a> defines <code>Plane</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>Plane</strong> {
+  readonly attribute <span>unsigned long</span> <strong>stride</strong>;
+  readonly attribute <span>unsigned long</span> <strong>rows</strong>;
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
 
-
-interface Plane {
-  readonly attribute unsigned long stride;
-  readonly attribute unsigned long rows;
-  readonly attribute unsigned long length;
-
-  undefined readInto(ArrayBufferView dst);
+  <span>undefined</span> <strong>readInto</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>dst</strong>);
 };</code></pre>
   
 </section>

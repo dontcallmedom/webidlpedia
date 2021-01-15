@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webauthn/#authenticatorattestationresponse">Web Authentication: An API for accessing Public Key Credentials - Level 2</a> defines <code>AuthenticatorAttestationResponse</code></p>
-<pre class=webidl><code>
-
-[SecureContext, Exposed=Window]
-interface AuthenticatorAttestationResponse : AuthenticatorResponse {
-    [SameObject] readonly attribute ArrayBuffer      attestationObject;
-    sequence<DOMString>                              getTransports();
-    ArrayBuffer                                      getAuthenticatorData();
-    ArrayBuffer?                                     getPublicKey();
-    COSEAlgorithmIdentifier                          getPublicKeyAlgorithm();
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AuthenticatorAttestationResponse</strong> : <a href='AuthenticatorResponse.html'>AuthenticatorResponse</a> {
+    [SameObject] readonly attribute <span>ArrayBuffer</span>      <strong>attestationObject</strong>;
+    sequence<<span>DOMString</span>>                              <strong>getTransports</strong>();
+    <span>ArrayBuffer</span>                                      <strong>getAuthenticatorData</strong>();
+    <span>ArrayBuffer</span>?                                     <strong>getPublicKey</strong>();
+    <a href='COSEAlgorithmIdentifier.html'>COSEAlgorithmIdentifier</a>                          <strong>getPublicKeyAlgorithm</strong>();
 };</code></pre>
   
 </section>

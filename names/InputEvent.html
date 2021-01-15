@@ -7,19 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/uievents/#inputevent">UI Events</a> defines <code>InputEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface InputEvent : UIEvent {
-  constructor(DOMString type, optional InputEventInit eventInitDict);
-  readonly attribute DOMString? data;
-  readonly attribute boolean isComposing;
-  readonly attribute DOMString inputType;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>InputEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='InputEventInit.html'>InputEventInit</a> <strong>eventInitDict</strong>);
+  readonly attribute <span>DOMString</span>? <strong>data</strong>;
+  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
+  readonly attribute <span>DOMString</span> <strong>inputType</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/input-events-2/#interface-InputEvent-Attributes">Input Events Level 2</a>
-<pre class=webidl><code>partial interface InputEvent {
-   readonly attribute DataTransfer? dataTransfer;
-   sequence<StaticRange> getTargetRanges();
+<pre class=webidl><code>partial interface <strong>InputEvent</strong> {
+   readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;
+   sequence<<a href='StaticRange.html'>StaticRange</a>> <strong>getTargetRanges</strong>();
 };</code></pre></li></ol>
 </section>
 

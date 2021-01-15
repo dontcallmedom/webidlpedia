@@ -7,64 +7,56 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset">Media Capture and Streams</a> defines <code>MediaTrackConstraintSet</code></p>
-<pre class=webidl><code>
-
-dictionary MediaTrackConstraintSet {
-  ConstrainULong width;
-  ConstrainULong height;
-  ConstrainDouble aspectRatio;
-  ConstrainDouble frameRate;
-  ConstrainDOMString facingMode;
-  ConstrainDOMString resizeMode;
-  ConstrainULong sampleRate;
-  ConstrainULong sampleSize;
-  ConstrainBoolean echoCancellation;
-  ConstrainBoolean autoGainControl;
-  ConstrainBoolean noiseSuppression;
-  ConstrainDouble latency;
-  ConstrainULong channelCount;
-  ConstrainDOMString deviceId;
-  ConstrainDOMString groupId;
+<pre class=webidl><code>dictionary <strong>MediaTrackConstraintSet</strong> {
+  <a href='ConstrainULong.html'>ConstrainULong</a> <strong>width</strong>;
+  <a href='ConstrainULong.html'>ConstrainULong</a> <strong>height</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a> <strong>aspectRatio</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a> <strong>frameRate</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>facingMode</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>resizeMode</strong>;
+  <a href='ConstrainULong.html'>ConstrainULong</a> <strong>sampleRate</strong>;
+  <a href='ConstrainULong.html'>ConstrainULong</a> <strong>sampleSize</strong>;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>echoCancellation</strong>;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>autoGainControl</strong>;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>noiseSuppression</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a> <strong>latency</strong>;
+  <a href='ConstrainULong.html'>ConstrainULong</a> <strong>channelCount</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>deviceId</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>groupId</strong>;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial dictionary <strong>MediaTrackConstraintSet</strong> {
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>whiteBalanceMode</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>exposureMode</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>focusMode</strong>;
+  <a href='ConstrainPoint2D.html'>ConstrainPoint2D</a>             <strong>pointsOfInterest</strong>;
 
-partial dictionary MediaTrackConstraintSet {
-  ConstrainDOMString           whiteBalanceMode;
-  ConstrainDOMString           exposureMode;
-  ConstrainDOMString           focusMode;
-  ConstrainPoint2D             pointsOfInterest;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>exposureCompensation</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>exposureTime</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>colorTemperature</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>iso</strong>;
 
-  ConstrainDouble              exposureCompensation;
-  ConstrainDouble              exposureTime;
-  ConstrainDouble              colorTemperature;
-  ConstrainDouble              iso;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>brightness</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>contrast</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>saturation</strong>;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>sharpness</strong>;
 
-  ConstrainDouble              brightness;
-  ConstrainDouble              contrast;
-  ConstrainDouble              saturation;
-  ConstrainDouble              sharpness;
+  <a href='ConstrainDouble.html'>ConstrainDouble</a>              <strong>focusDistance</strong>;
+  (<span>boolean</span> or <a href='ConstrainDouble.html'>ConstrainDouble</a>) <strong>pan</strong>;
+  (<span>boolean</span> or <a href='ConstrainDouble.html'>ConstrainDouble</a>) <strong>tilt</strong>;
+  (<span>boolean</span> or <a href='ConstrainDouble.html'>ConstrainDouble</a>) <strong>zoom</strong>;
 
-  ConstrainDouble              focusDistance;
-  (boolean or ConstrainDouble) pan;
-  (boolean or ConstrainDouble) tilt;
-  (boolean or ConstrainDouble) zoom;
-
-  ConstrainBoolean             torch;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a>             <strong>torch</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>
-
-partial dictionary MediaTrackConstraintSet {
+<pre class=webidl><code>partial dictionary <strong>MediaTrackConstraintSet</strong> {
     // Applies to both depth stream track and color stream track:
-    ConstrainDOMString videoKind;
+    <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>videoKind</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>
-
-partial dictionary MediaTrackConstraintSet {
-  ConstrainDOMString displaySurface;
-  ConstrainBoolean logicalSurface;
-  ConstrainDOMString cursor;
-  ConstrainBoolean restrictOwnAudio;
+<pre class=webidl><code>partial dictionary <strong>MediaTrackConstraintSet</strong> {
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>displaySurface</strong>;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>logicalSurface</strong>;
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>cursor</strong>;
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>restrictOwnAudio</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

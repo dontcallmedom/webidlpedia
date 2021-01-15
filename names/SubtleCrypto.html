@@ -7,56 +7,54 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webcrypto/#dfn-SubtleCrypto">Web Cryptography API</a> defines <code>SubtleCrypto</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext,Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>SubtleCrypto</strong> {
+  Promise<<span>any</span>> <strong>encrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                       <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<span>any</span>> <strong>decrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                       <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<span>any</span>> <strong>sign</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                    <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
+                    <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<span>any</span>> <strong>verify</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                      <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
+                      <a href='BufferSource.html'>BufferSource</a> <strong>signature</strong>,
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<span>any</span>> <strong>digest</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
 
-[SecureContext,Exposed=(Window,Worker)]
-interface SubtleCrypto {
-  Promise<any> encrypt(AlgorithmIdentifier algorithm,
-                       CryptoKey key,
-                       BufferSource data);
-  Promise<any> decrypt(AlgorithmIdentifier algorithm,
-                       CryptoKey key,
-                       BufferSource data);
-  Promise<any> sign(AlgorithmIdentifier algorithm,
-                    CryptoKey key,
-                    BufferSource data);
-  Promise<any> verify(AlgorithmIdentifier algorithm,
-                      CryptoKey key,
-                      BufferSource signature,
-                      BufferSource data);
-  Promise<any> digest(AlgorithmIdentifier algorithm,
-                      BufferSource data);
+  Promise<<span>any</span>> <strong>generateKey</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                          <span>boolean</span> <strong>extractable</strong>,
+                          sequence<<a href='KeyUsage.html'>KeyUsage</a>> <strong>keyUsages</strong> );
+  Promise<<span>any</span>> <strong>deriveKey</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                         <a href='CryptoKey.html'>CryptoKey</a> <strong>baseKey</strong>,
+                         <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>derivedKeyType</strong>,
+                         <span>boolean</span> <strong>extractable</strong>,
+                         sequence<<a href='KeyUsage.html'>KeyUsage</a>> <strong>keyUsages</strong> );
+  Promise<<span>ArrayBuffer</span>> <strong>deriveBits</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                          <a href='CryptoKey.html'>CryptoKey</a> <strong>baseKey</strong>,
+                          <span>unsigned long</span> <strong>length</strong>);
 
-  Promise<any> generateKey(AlgorithmIdentifier algorithm,
-                          boolean extractable,
-                          sequence<KeyUsage> keyUsages );
-  Promise<any> deriveKey(AlgorithmIdentifier algorithm,
-                         CryptoKey baseKey,
-                         AlgorithmIdentifier derivedKeyType,
-                         boolean extractable,
-                         sequence<KeyUsage> keyUsages );
-  Promise<ArrayBuffer> deriveBits(AlgorithmIdentifier algorithm,
-                          CryptoKey baseKey,
-                          unsigned long length);
+  Promise<<a href='CryptoKey.html'>CryptoKey</a>> <strong>importKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
+                         (<a href='BufferSource.html'>BufferSource</a> or <a href='JsonWebKey.html'>JsonWebKey</a>) <strong>keyData</strong>,
+                         <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
+                         <span>boolean</span> <strong>extractable</strong>,
+                         sequence<<a href='KeyUsage.html'>KeyUsage</a>> <strong>keyUsages</strong> );
+  Promise<<span>any</span>> <strong>exportKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>, <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>);
 
-  Promise<CryptoKey> importKey(KeyFormat format,
-                         (BufferSource or JsonWebKey) keyData,
-                         AlgorithmIdentifier algorithm,
-                         boolean extractable,
-                         sequence<KeyUsage> keyUsages );
-  Promise<any> exportKey(KeyFormat format, CryptoKey key);
-
-  Promise<any> wrapKey(KeyFormat format,
-                       CryptoKey key,
-                       CryptoKey wrappingKey,
-                       AlgorithmIdentifier wrapAlgorithm);
-  Promise<CryptoKey> unwrapKey(KeyFormat format,
-                         BufferSource wrappedKey,
-                         CryptoKey unwrappingKey,
-                         AlgorithmIdentifier unwrapAlgorithm,
-                         AlgorithmIdentifier unwrappedKeyAlgorithm,
-                         boolean extractable,
-                         sequence<KeyUsage> keyUsages );
+  Promise<<span>any</span>> <strong>wrapKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
+                       <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
+                       <a href='CryptoKey.html'>CryptoKey</a> <strong>wrappingKey</strong>,
+                       <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>wrapAlgorithm</strong>);
+  Promise<<a href='CryptoKey.html'>CryptoKey</a>> <strong>unwrapKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
+                         <a href='BufferSource.html'>BufferSource</a> <strong>wrappedKey</strong>,
+                         <a href='CryptoKey.html'>CryptoKey</a> <strong>unwrappingKey</strong>,
+                         <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>unwrapAlgorithm</strong>,
+                         <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>unwrappedKeyAlgorithm</strong>,
+                         <span>boolean</span> <strong>extractable</strong>,
+                         sequence<<a href='KeyUsage.html'>KeyUsage</a>> <strong>keyUsages</strong> );
 };</code></pre>
   
 </section>

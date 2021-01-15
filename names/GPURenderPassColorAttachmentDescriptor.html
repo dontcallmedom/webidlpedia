@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpurenderpasscolorattachmentdescriptor">WebGPU</a> defines <code>GPURenderPassColorAttachmentDescriptor</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>GPURenderPassColorAttachmentDescriptor</strong> {
+    required <a href='GPUTextureView.html'>GPUTextureView</a> <strong>attachment</strong>;
+    <a href='GPUTextureView.html'>GPUTextureView</a> <strong>resolveTarget</strong>;
 
-dictionary GPURenderPassColorAttachmentDescriptor {
-    required GPUTextureView attachment;
-    GPUTextureView resolveTarget;
-
-    required (GPULoadOp or GPUColor) loadValue;
-    GPUStoreOp storeOp = "store";
+    required (<a href='GPULoadOp.html'>GPULoadOp</a> or <a href='GPUColor.html'>GPUColor</a>) <strong>loadValue</strong>;
+    <a href='GPUStoreOp.html'>GPUStoreOp</a> <strong>storeOp</strong> = "store";
 };</code></pre>
   
 </section>

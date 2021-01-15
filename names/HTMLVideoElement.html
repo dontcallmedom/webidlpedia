@@ -7,37 +7,32 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement">HTML Standard</a> defines <code>HTMLVideoElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLVideoElement : HTMLMediaElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute unsigned long width;
-  [CEReactions] attribute unsigned long height;
-  readonly attribute unsigned long videoWidth;
-  readonly attribute unsigned long videoHeight;
-  [CEReactions] attribute USVString poster;
-  [CEReactions] attribute boolean playsInline;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoHeight</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>poster</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>playsInline</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/media-playback-quality/#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a>
-<pre class=webidl><code>partial interface HTMLVideoElement {
-  VideoPlaybackQuality getVideoPlaybackQuality();
+<pre class=webidl><code>partial interface <strong>HTMLVideoElement</strong> {
+  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();
 };</code></pre></li><li><a href="https://wicg.github.io/video-rvfc/">HTMLVideoElement.requestVideoFrameCallback()</a>
-<pre class=webidl><code>
-
-partial interface HTMLVideoElement {
-    unsigned long requestVideoFrameCallback(VideoFrameRequestCallback callback);
-    undefined cancelVideoFrameCallback(unsigned long handle);
+<pre class=webidl><code>partial interface <strong>HTMLVideoElement</strong> {
+    <span>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);
+    <span>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a>
-<pre class=webidl><code>partial interface HTMLVideoElement {
-  [NewObject] Promise<PictureInPictureWindow> requestPictureInPicture();
+<pre class=webidl><code>partial interface <strong>HTMLVideoElement</strong> {
+  [NewObject] Promise<<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>> <strong>requestPictureInPicture</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;
 
-  attribute EventHandler onenterpictureinpicture;
-  attribute EventHandler onleavepictureinpicture;
-
-  [CEReactions] attribute boolean autoPictureInPicture;
-  [CEReactions] attribute boolean disablePictureInPicture;
+  [CEReactions] attribute <span>boolean</span> <strong>autoPictureInPicture</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disablePictureInPicture</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

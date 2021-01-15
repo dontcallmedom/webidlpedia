@@ -7,20 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#analysernode">Web Audio API</a> defines <code>AnalyserNode</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface AnalyserNode : AudioNode {
-  constructor (BaseAudioContext context, optional AnalyserOptions options = {});
-  undefined getFloatFrequencyData (Float32Array array);
-  undefined getByteFrequencyData (Uint8Array array);
-  undefined getFloatTimeDomainData (Float32Array array);
-  undefined getByteTimeDomainData (Uint8Array array);
-  attribute unsigned long fftSize;
-  readonly attribute unsigned long frequencyBinCount;
-  attribute double minDecibels;
-  attribute double maxDecibels;
-  attribute double smoothingTimeConstant;
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AnalyserNode</strong> : <a href='AudioNode.html'>AudioNode</a> {
+  constructor (<a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>, optional <a href='AnalyserOptions.html'>AnalyserOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>getFloatFrequencyData</strong> (<span>Float32Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getByteFrequencyData</strong> (<span>Uint8Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getFloatTimeDomainData</strong> (<span>Float32Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getByteTimeDomainData</strong> (<span>Uint8Array</span> <strong>array</strong>);
+  attribute <span>unsigned long</span> <strong>fftSize</strong>;
+  readonly attribute <span>unsigned long</span> <strong>frequencyBinCount</strong>;
+  attribute <span>double</span> <strong>minDecibels</strong>;
+  attribute <span>double</span> <strong>maxDecibels</strong>;
+  attribute <span>double</span> <strong>smoothingTimeConstant</strong>;
 };</code></pre>
   
 </section>

@@ -7,26 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCConfiguration</code></p>
-<pre class=webidl><code>dictionary RTCConfiguration {
-  sequence<RTCIceServer> iceServers;
-  RTCIceTransportPolicy iceTransportPolicy;
-  RTCBundlePolicy bundlePolicy;
-  RTCRtcpMuxPolicy rtcpMuxPolicy;
-  sequence<RTCCertificate> certificates;
-  [EnforceRange] octet iceCandidatePoolSize = 0;
+<pre class=webidl><code>dictionary <strong>RTCConfiguration</strong> {
+  sequence<<a href='RTCIceServer.html'>RTCIceServer</a>> <strong>iceServers</strong>;
+  <a href='RTCIceTransportPolicy.html'>RTCIceTransportPolicy</a> <strong>iceTransportPolicy</strong>;
+  <a href='RTCBundlePolicy.html'>RTCBundlePolicy</a> <strong>bundlePolicy</strong>;
+  <a href='RTCRtcpMuxPolicy.html'>RTCRtcpMuxPolicy</a> <strong>rtcpMuxPolicy</strong>;
+  sequence<<a href='RTCCertificate.html'>RTCCertificate</a>> <strong>certificates</strong>;
+  [EnforceRange] <span>octet</span> <strong>iceCandidatePoolSize</strong> = 0;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>
-
-
-// New fields in RTCConfiguration
-partial dictionary RTCConfiguration {
-    boolean encodedInsertableStreams = false;
+<pre class=webidl><code>// New fields in RTCConfiguration
+partial dictionary <strong>RTCConfiguration</strong> {
+    <span>boolean</span> <strong>encodedInsertableStreams</strong> = false;
 };</code></pre></li><li><a href="https://www.w3.org/TR/webrtc-identity/">Identity for WebRTC 1.0</a>
-<pre class=webidl><code>
-
-partial dictionary RTCConfiguration {
-    DOMString peerIdentity;
+<pre class=webidl><code>partial dictionary <strong>RTCConfiguration</strong> {
+    <span>DOMString</span> <strong>peerIdentity</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

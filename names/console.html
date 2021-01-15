@@ -7,34 +7,33 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://console.spec.whatwg.org/#namespacedef-console">Console Standard</a> defines <code>console</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker,Worklet)]
-namespace console { // but see namespace object requirements below
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>console</strong> { // but see namespace object requirements below
   // Logging
-  undefined assert(optional boolean condition = false, any... data);
-  undefined clear();
-  undefined debug(any... data);
-  undefined error(any... data);
-  undefined info(any... data);
-  undefined log(any... data);
-  undefined table(optional any tabularData, optional sequence<DOMString> properties);
-  undefined trace(any... data);
-  undefined warn(any... data);
-  undefined dir(optional any item, optional object? options);
-  undefined dirxml(any... data);
-
+  <span>undefined</span> <strong>assert</strong>(optional <span>boolean</span> <strong>condition</strong> = false, <span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>clear</strong>();
+  <span>undefined</span> <strong>debug</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>error</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>info</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>log</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>table</strong>(optional <span>any</span> <strong>tabularData</strong>, optional sequence<<span>DOMString</span>> <strong>properties</strong>);
+  <span>undefined</span> <strong>trace</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>warn</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>dir</strong>(optional <span>any</span> <strong>item</strong>, optional <span>object</span>? <strong>options</strong>);
+  <span>undefined</span> <strong>dirxml</strong>(<span>any</span>... <strong>data</strong>);
   // Counting
-  undefined count(optional DOMString label = "default");
-  undefined countReset(optional DOMString label = "default");
+  <span>undefined</span> <strong>count</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+  <span>undefined</span> <strong>countReset</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
 
   // Grouping
-  undefined group(any... data);
-  undefined groupCollapsed(any... data);
-  undefined groupEnd();
+  <span>undefined</span> <strong>group</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>groupCollapsed</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>groupEnd</strong>();
 
   // Timing
-  undefined time(optional DOMString label = "default");
-  undefined timeLog(optional DOMString label = "default", any... data);
-  undefined timeEnd(optional DOMString label = "default");
+  <span>undefined</span> <strong>time</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+  <span>undefined</span> <strong>timeLog</strong>(optional <span>DOMString</span> <strong>label</strong> = "default", <span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>timeEnd</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
 };</code></pre>
   
 </section>

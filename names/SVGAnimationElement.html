@@ -7,27 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/specs/animations/">SVG Animations</a> defines <code>SVGAnimationElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>SVGAnimationElement</strong> : <a href='SVGElement.html'>SVGElement</a> {
 
-interface SVGAnimationElement : SVGElement {
+  readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>targetElement</strong>;
 
-  readonly attribute SVGElement? targetElement;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbegin</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrepeat</strong>;
 
-  attribute EventHandler onbegin;
-  attribute EventHandler onend;
-  attribute EventHandler onrepeat;
+  <span>float</span> <strong>getStartTime</strong>();
+  <span>float</span> <strong>getCurrentTime</strong>();
+  <span>float</span> <strong>getSimpleDuration</strong>();
 
-  float getStartTime();
-  float getCurrentTime();
-  float getSimpleDuration();
-
-  void beginElement();
-  void beginElementAt(float offset);
-  void endElement();
-  void endElementAt(float offset);
+  <a href='void.html'>void</a> <strong>beginElement</strong>();
+  <a href='void.html'>void</a> <strong>beginElementAt</strong>(<span>float</span> <strong>offset</strong>);
+  <a href='void.html'>void</a> <strong>endElement</strong>();
+  <a href='void.html'>void</a> <strong>endElementAt</strong>(<span>float</span> <strong>offset</strong>);
 };
 
-SVGAnimationElement includes SVGTests;</code></pre>
+<a href='SVGAnimationElement.html'>SVGAnimationElement</a> includes <a href='SVGTests.html'>SVGTests</a>;</code></pre>
   
 </section>
 <section>

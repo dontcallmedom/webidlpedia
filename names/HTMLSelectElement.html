@@ -7,43 +7,41 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement">HTML Standard</a> defines <code>HTMLSelectElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLSelectElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLSelectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute DOMString autocomplete;
-  [CEReactions] attribute boolean disabled;
-  readonly attribute HTMLFormElement? form;
-  [CEReactions] attribute boolean multiple;
-  [CEReactions] attribute DOMString name;
-  [CEReactions] attribute boolean required;
-  [CEReactions] attribute unsigned long size;
+  [CEReactions] attribute <span>DOMString</span> <strong>autocomplete</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>multiple</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>required</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>size</strong>;
 
-  readonly attribute DOMString type;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
 
-  [SameObject] readonly attribute HTMLOptionsCollection options;
-  [CEReactions] attribute unsigned long length;
-  getter Element? item(unsigned long index);
-  HTMLOptionElement? namedItem(DOMString name);
-  [CEReactions] undefined add((HTMLOptionElement or HTMLOptGroupElement) element, optional (HTMLElement or long)? before = null);
-  [CEReactions] undefined remove(); // ChildNode overload
-  [CEReactions] undefined remove(long index);
-  [CEReactions] setter undefined (unsigned long index, HTMLOptionElement? option);
+  [SameObject] readonly attribute <a href='HTMLOptionsCollection.html'>HTMLOptionsCollection</a> <strong>options</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='Element.html'>Element</a>? <strong>item</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='HTMLOptionElement.html'>HTMLOptionElement</a>? <strong>namedItem</strong>(<span>DOMString</span> <strong>name</strong>);
+  [CEReactions] <span>undefined</span> <strong>add</strong>((<a href='HTMLOptionElement.html'>HTMLOptionElement</a> or <a href='HTMLOptGroupElement.html'>HTMLOptGroupElement</a>) <strong>element</strong>, optional (<a href='HTMLElement.html'>HTMLElement</a> or <span>long</span>)? <strong>before</strong> = null);
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(); // ChildNode overload
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(<span>long</span> <strong>index</strong>);
+  [CEReactions] setter <span>undefined</span> (<span>unsigned long</span> <strong>index</strong>, <a href='HTMLOptionElement.html'>HTMLOptionElement</a>? <strong>option</strong>);
 
-  [SameObject] readonly attribute HTMLCollection selectedOptions;
-  attribute long selectedIndex;
-  attribute DOMString value;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>selectedOptions</strong>;
+  attribute <span>long</span> <strong>selectedIndex</strong>;
+  attribute <span>DOMString</span> <strong>value</strong>;
 
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  boolean reportValidity();
-  undefined setCustomValidity(DOMString error);
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
 
-  readonly attribute NodeList labels;
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
 };</code></pre>
   
 </section>

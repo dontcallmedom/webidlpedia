@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/">DOM Standard</a> defines <code>XPathEvaluatorBase</code></p>
-<pre class=webidl><code>
-
-interface mixin XPathEvaluatorBase {
-  [NewObject] XPathExpression createExpression(DOMString expression, optional XPathNSResolver? resolver = null);
-  XPathNSResolver createNSResolver(Node nodeResolver);
+<pre class=webidl><code>interface mixin <strong>XPathEvaluatorBase</strong> {
+  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> = null);
+  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);
   // XPathResult.ANY_TYPE = 0
-  XPathResult evaluate(DOMString expression, Node contextNode, optional XPathNSResolver? resolver = null, optional unsigned short type = 0, optional XPathResult? result = null);
+  <a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> = null, optional <span>unsigned short</span> <strong>type</strong> = 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> = null);
 };</code></pre>
   
 </section>

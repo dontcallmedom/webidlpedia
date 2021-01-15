@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpurenderpassdepthstencilattachmentdescriptor">WebGPU</a> defines <code>GPURenderPassDepthStencilAttachmentDescriptor</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>dictionary <strong>GPURenderPassDepthStencilAttachmentDescriptor</strong> {
+    required <a href='GPUTextureView.html'>GPUTextureView</a> <strong>attachment</strong>;
 
-dictionary GPURenderPassDepthStencilAttachmentDescriptor {
-    required GPUTextureView attachment;
+    required (<a href='GPULoadOp.html'>GPULoadOp</a> or <span>float</span>) <strong>depthLoadValue</strong>;
+    required <a href='GPUStoreOp.html'>GPUStoreOp</a> <strong>depthStoreOp</strong>;
+    <span>boolean</span> <strong>depthReadOnly</strong> = false;
 
-    required (GPULoadOp or float) depthLoadValue;
-    required GPUStoreOp depthStoreOp;
-    boolean depthReadOnly = false;
-
-    required (GPULoadOp or GPUStencilValue) stencilLoadValue;
-    required GPUStoreOp stencilStoreOp;
-    boolean stencilReadOnly = false;
+    required (<a href='GPULoadOp.html'>GPULoadOp</a> or <a href='GPUStencilValue.html'>GPUStencilValue</a>) <strong>stencilLoadValue</strong>;
+    required <a href='GPUStoreOp.html'>GPUStoreOp</a> <strong>stencilStoreOp</strong>;
+    <span>boolean</span> <strong>stencilReadOnly</strong> = false;
 };</code></pre>
   
 </section>

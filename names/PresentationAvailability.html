@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/presentation-api/#dom-presentationavailability">Presentation API</a> defines <code>PresentationAvailability</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PresentationAvailability</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>boolean</span> <strong>value</strong>;
 
-[SecureContext, Exposed=Window]
-interface PresentationAvailability : EventTarget {
-  readonly attribute boolean value;
-
-  attribute EventHandler onchange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
 };</code></pre>
   
 </section>

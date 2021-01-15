@@ -7,31 +7,29 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#xpathresult">DOM Standard</a> defines <code>XPathResult</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XPathResult</strong> {
+  const <span>unsigned short</span> <strong>ANY_TYPE</strong> = 0;
+  const <span>unsigned short</span> <strong>NUMBER_TYPE</strong> = 1;
+  const <span>unsigned short</span> <strong>STRING_TYPE</strong> = 2;
+  const <span>unsigned short</span> <strong>BOOLEAN_TYPE</strong> = 3;
+  const <span>unsigned short</span> <strong>UNORDERED_NODE_ITERATOR_TYPE</strong> = 4;
+  const <span>unsigned short</span> <strong>ORDERED_NODE_ITERATOR_TYPE</strong> = 5;
+  const <span>unsigned short</span> <strong>UNORDERED_NODE_SNAPSHOT_TYPE</strong> = 6;
+  const <span>unsigned short</span> <strong>ORDERED_NODE_SNAPSHOT_TYPE</strong> = 7;
+  const <span>unsigned short</span> <strong>ANY_UNORDERED_NODE_TYPE</strong> = 8;
+  const <span>unsigned short</span> <strong>FIRST_ORDERED_NODE_TYPE</strong> = 9;
 
-[Exposed=Window]
-interface XPathResult {
-  const unsigned short ANY_TYPE = 0;
-  const unsigned short NUMBER_TYPE = 1;
-  const unsigned short STRING_TYPE = 2;
-  const unsigned short BOOLEAN_TYPE = 3;
-  const unsigned short UNORDERED_NODE_ITERATOR_TYPE = 4;
-  const unsigned short ORDERED_NODE_ITERATOR_TYPE = 5;
-  const unsigned short UNORDERED_NODE_SNAPSHOT_TYPE = 6;
-  const unsigned short ORDERED_NODE_SNAPSHOT_TYPE = 7;
-  const unsigned short ANY_UNORDERED_NODE_TYPE = 8;
-  const unsigned short FIRST_ORDERED_NODE_TYPE = 9;
+  readonly attribute <span>unsigned short</span> <strong>resultType</strong>;
+  readonly attribute <span>unrestricted double</span> <strong>numberValue</strong>;
+  readonly attribute <span>DOMString</span> <strong>stringValue</strong>;
+  readonly attribute <span>boolean</span> <strong>booleanValue</strong>;
+  readonly attribute <a href='Node.html'>Node</a>? <strong>singleNodeValue</strong>;
+  readonly attribute <span>boolean</span> <strong>invalidIteratorState</strong>;
+  readonly attribute <span>unsigned long</span> <strong>snapshotLength</strong>;
 
-  readonly attribute unsigned short resultType;
-  readonly attribute unrestricted double numberValue;
-  readonly attribute DOMString stringValue;
-  readonly attribute boolean booleanValue;
-  readonly attribute Node? singleNodeValue;
-  readonly attribute boolean invalidIteratorState;
-  readonly attribute unsigned long snapshotLength;
-
-  Node? iterateNext();
-  Node? snapshotItem(unsigned long index);
+  <a href='Node.html'>Node</a>? <strong>iterateNext</strong>();
+  <a href='Node.html'>Node</a>? <strong>snapshotItem</strong>(<span>unsigned long</span> <strong>index</strong>);
 };</code></pre>
   
 </section>

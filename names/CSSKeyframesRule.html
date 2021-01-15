@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/css-animations/#csskeyframesrule">CSS Animations Level 1</a> defines <code>CSSKeyframesRule</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSKeyframesRule</strong> : <a href='CSSRule.html'>CSSRule</a> {
+           attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>name</strong>;
+  readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;
 
-[Exposed=Window]
-interface CSSKeyframesRule : CSSRule {
-           attribute CSSOMString name;
-  readonly attribute CSSRuleList cssRules;
-
-  undefined        appendRule(CSSOMString rule);
-  undefined        deleteRule(CSSOMString select);
-  CSSKeyframeRule? findRule(CSSOMString select);
+  <span>undefined</span>        <strong>appendRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>);
+  <span>undefined</span>        <strong>deleteRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>select</strong>);
+  <a href='CSSKeyframeRule.html'>CSSKeyframeRule</a>? <strong>findRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>select</strong>);
 };</code></pre>
   
 </section>

@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablestreambyobreader">Streams Standard</a> defines <code>ReadableStreamBYOBReader</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>ReadableStreamBYOBReader</strong> {
+  constructor(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);
 
-[Exposed=(Window,Worker,Worklet)]
-interface ReadableStreamBYOBReader {
-  constructor(ReadableStream stream);
-
-  Promise<ReadableStreamBYOBReadResult> read(ArrayBufferView view);
-  undefined releaseLock();
+  Promise<<a href='ReadableStreamBYOBReadResult.html'>ReadableStreamBYOBReadResult</a>> <strong>read</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>view</strong>);
+  <span>undefined</span> <strong>releaseLock</strong>();
 };
-ReadableStreamBYOBReader includes ReadableStreamGenericReader;</code></pre>
+<a href='ReadableStreamBYOBReader.html'>ReadableStreamBYOBReader</a> includes <a href='ReadableStreamGenericReader.html'>ReadableStreamGenericReader</a>;</code></pre>
   
 </section>
 

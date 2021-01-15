@@ -7,32 +7,30 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gpuqueue">WebGPU</a> defines <code>GPUQueue</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface <strong>GPUQueue</strong> {
+    <span>undefined</span> <strong>submit</strong>(sequence<<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>> <strong>commandBuffers</strong>);
 
-interface GPUQueue {
-    undefined submit(sequence<GPUCommandBuffer> commandBuffers);
+    Promise<<span>undefined</span>> <strong>onSubmittedWorkDone</strong>();
 
-    Promise<undefined> onSubmittedWorkDone();
+    <span>undefined</span> <strong>writeBuffer</strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
+        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> = 0,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
 
-    undefined writeBuffer(
-        GPUBuffer buffer,
-        GPUSize64 bufferOffset,
-        [AllowShared] BufferSource data,
-        optional GPUSize64 dataOffset = 0,
-        optional GPUSize64 size);
+    <span>undefined</span> <strong>writeTexture</strong>(
+      <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+      <a href='GPUTextureDataLayout.html'>GPUTextureDataLayout</a> <strong>dataLayout</strong>,
+      <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);
 
-    undefined writeTexture(
-      GPUTextureCopyView destination,
-      [AllowShared] BufferSource data,
-      GPUTextureDataLayout dataLayout,
-      GPUExtent3D size);
-
-    undefined copyImageBitmapToTexture(
-        GPUImageBitmapCopyView source,
-        GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+    <span>undefined</span> <strong>copyImageBitmapToTexture</strong>(
+        <a href='GPUImageBitmapCopyView.html'>GPUImageBitmapCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
 };
-GPUQueue includes GPUObjectBase;</code></pre>
+<a href='GPUQueue.html'>GPUQueue</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
   
 </section>
 <section>

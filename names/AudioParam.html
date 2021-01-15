@@ -7,24 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webaudio.github.io/web-audio-api/#AudioParam">Web Audio API</a> defines <code>AudioParam</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface AudioParam {
-  attribute float value;
-  attribute AutomationRate automationRate;
-  readonly attribute float defaultValue;
-  readonly attribute float minValue;
-  readonly attribute float maxValue;
-  AudioParam setValueAtTime (float value, double startTime);
-  AudioParam linearRampToValueAtTime (float value, double endTime);
-  AudioParam exponentialRampToValueAtTime (float value, double endTime);
-  AudioParam setTargetAtTime (float target, double startTime, float timeConstant);
-  AudioParam setValueCurveAtTime (sequence<float> values,
-                                  double startTime,
-                                  double duration);
-  AudioParam cancelScheduledValues (double cancelTime);
-  AudioParam cancelAndHoldAtTime (double cancelTime);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AudioParam</strong> {
+  attribute <span>float</span> <strong>value</strong>;
+  attribute <a href='AutomationRate.html'>AutomationRate</a> <strong>automationRate</strong>;
+  readonly attribute <span>float</span> <strong>defaultValue</strong>;
+  readonly attribute <span>float</span> <strong>minValue</strong>;
+  readonly attribute <span>float</span> <strong>maxValue</strong>;
+  <a href='AudioParam.html'>AudioParam</a> <strong>setValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>startTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>linearRampToValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>endTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>exponentialRampToValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>endTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>setTargetAtTime</strong> (<span>float</span> <strong>target</strong>, <span>double</span> <strong>startTime</strong>, <span>float</span> <strong>timeConstant</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>setValueCurveAtTime</strong> (sequence<<span>float</span>> <strong>values</strong>,
+                                  <span>double</span> <strong>startTime</strong>,
+                                  <span>double</span> <strong>duration</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>cancelScheduledValues</strong> (<span>double</span> <strong>cancelTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>cancelAndHoldAtTime</strong> (<span>double</span> <strong>cancelTime</strong>);
 };</code></pre>
   
 </section>

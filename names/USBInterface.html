@@ -7,18 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbinterface">WebUSB API</a> defines <code>USBInterface</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBInterface {
-  constructor(USBConfiguration configuration, octet interfaceNumber);
-  readonly attribute octet interfaceNumber;
-  readonly attribute USBAlternateInterface alternate;
-  readonly attribute FrozenArray<USBAlternateInterface> alternates;
-  readonly attribute boolean claimed;
+interface <strong>USBInterface</strong> {
+  constructor(<a href='USBConfiguration.html'>USBConfiguration</a> <strong>configuration</strong>, <span>octet</span> <strong>interfaceNumber</strong>);
+  readonly attribute <span>octet</span> <strong>interfaceNumber</strong>;
+  readonly attribute <a href='USBAlternateInterface.html'>USBAlternateInterface</a> <strong>alternate</strong>;
+  readonly attribute FrozenArray<<a href='USBAlternateInterface.html'>USBAlternateInterface</a>> <strong>alternates</strong>;
+  readonly attribute <span>boolean</span> <strong>claimed</strong>;
 };</code></pre>
   
 </section>

@@ -7,16 +7,14 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#readablebytestreamcontroller">Streams Standard</a> defines <code>ReadableByteStreamController</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>ReadableByteStreamController</strong> {
+  readonly attribute <a href='ReadableStreamBYOBRequest.html'>ReadableStreamBYOBRequest</a>? <strong>byobRequest</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>desiredSize</strong>;
 
-[Exposed=(Window,Worker,Worklet)]
-interface ReadableByteStreamController {
-  readonly attribute ReadableStreamBYOBRequest? byobRequest;
-  readonly attribute unrestricted double? desiredSize;
-
-  undefined close();
-  undefined enqueue(ArrayBufferView chunk);
-  undefined error(optional any e);
+  <span>undefined</span> <strong>close</strong>();
+  <span>undefined</span> <strong>enqueue</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>chunk</strong>);
+  <span>undefined</span> <strong>error</strong>(optional <span>any</span> <strong>e</strong>);
 };</code></pre>
   
 </section>

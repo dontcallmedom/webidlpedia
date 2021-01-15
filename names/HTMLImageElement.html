@@ -7,51 +7,47 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement">HTML Standard</a> defines <code>HTMLImageElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window,
- LegacyFactoryFunction=Image(optional unsigned long width, optional unsigned long height)]
-interface HTMLImageElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>,
+ LegacyFactoryFunction=<span>Image</span>(optional <span>unsigned long</span> <strong>width</strong>, optional <span>unsigned long</span> <strong>height</strong>)]
+interface <strong>HTMLImageElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute DOMString alt;
-  [CEReactions] attribute USVString src;
-  [CEReactions] attribute USVString srcset;
-  [CEReactions] attribute DOMString sizes;
-  [CEReactions] attribute DOMString? crossOrigin;
-  [CEReactions] attribute DOMString useMap;
-  [CEReactions] attribute boolean isMap;
-  [CEReactions] attribute unsigned long width;
-  [CEReactions] attribute unsigned long height;
-  readonly attribute unsigned long naturalWidth;
-  readonly attribute unsigned long naturalHeight;
-  readonly attribute boolean complete;
-  readonly attribute USVString currentSrc;
-  [CEReactions] attribute DOMString referrerPolicy;
-  [CEReactions] attribute DOMString decoding;
-  [CEReactions] attribute DOMString loading;
+  [CEReactions] attribute <span>DOMString</span> <strong>alt</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>srcset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>sizes</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>isMap</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalHeight</strong>;
+  readonly attribute <span>boolean</span> <strong>complete</strong>;
+  readonly attribute <span>USVString</span> <strong>currentSrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>decoding</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
 
-  Promise<undefined> decode();
+  Promise<<span>undefined</span>> <strong>decode</strong>();
 
   // also has obsolete members
 };
 
-partial interface HTMLImageElement {
-  [CEReactions] attribute DOMString name;
-  [CEReactions] attribute USVString lowsrc;
-  [CEReactions] attribute DOMString align;
-  [CEReactions] attribute unsigned long hspace;
-  [CEReactions] attribute unsigned long vspace;
-  [CEReactions] attribute USVString longDesc;
+partial interface <strong>HTMLImageElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>lowsrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString border;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlimageelement-interface">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface HTMLImageElement {
-  readonly attribute long x;
-  readonly attribute long y;
+<pre class=webidl><code>partial interface <strong>HTMLImageElement</strong> {
+  readonly attribute <span>long</span> <strong>x</strong>;
+  readonly attribute <span>long</span> <strong>y</strong>;
 };</code></pre></li></ol>
 </section>
 

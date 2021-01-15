@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/layers/#xrwebglbinding">WebXR Layers API Level 1</a> defines <code>XRWebGLBinding</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>] interface <strong>XRWebGLBinding</strong> {
+  constructor(<a href='XRSession.html'>XRSession</a> <strong>session</strong>, <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>);
 
-[Exposed=Window] interface XRWebGLBinding {
-  constructor(XRSession session, XRWebGLRenderingContext context);
+  readonly attribute <span>double</span> <strong>nativeProjectionScaleFactor</strong>;
 
-  readonly attribute double nativeProjectionScaleFactor;
+  <a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>createProjectionLayer</strong>(optional <a href='XRProjectionLayerInit.html'>XRProjectionLayerInit</a> <strong>init</strong>);
+  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(optional <a href='XRQuadLayerInit.html'>XRQuadLayerInit</a> <strong>init</strong>);
+  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(optional <a href='XRCylinderLayerInit.html'>XRCylinderLayerInit</a> <strong>init</strong>);
+  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(optional <a href='XREquirectLayerInit.html'>XREquirectLayerInit</a> <strong>init</strong>);
+  <a href='XRCubeLayer.html'>XRCubeLayer</a> <strong>createCubeLayer</strong>(optional <a href='XRCubeLayerInit.html'>XRCubeLayerInit</a> <strong>init</strong>);
 
-  XRProjectionLayer createProjectionLayer(optional XRProjectionLayerInit init);
-  XRQuadLayer createQuadLayer(optional XRQuadLayerInit init);
-  XRCylinderLayer createCylinderLayer(optional XRCylinderLayerInit init);
-  XREquirectLayer createEquirectLayer(optional XREquirectLayerInit init);
-  XRCubeLayer createCubeLayer(optional XRCubeLayerInit init);
-
-  XRWebGLSubImage getSubImage(XRCompositionLayer layer, XRFrame frame, optional XREye eye = "none");
-  XRWebGLSubImage getViewSubImage(XRProjectionLayer layer, XRView view);
+  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getSubImage</strong>(<a href='XRCompositionLayer.html'>XRCompositionLayer</a> <strong>layer</strong>, <a href='XRFrame.html'>XRFrame</a> <strong>frame</strong>, optional <a href='XREye.html'>XREye</a> <strong>eye</strong> = "none");
+  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getViewSubImage</strong>(<a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>layer</strong>, <a href='XRView.html'>XRView</a> <strong>view</strong>);
 };</code></pre>
   
 </section>

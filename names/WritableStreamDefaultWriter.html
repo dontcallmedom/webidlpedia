@@ -7,20 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#writablestreamdefaultwriter">Streams Standard</a> defines <code>WritableStreamDefaultWriter</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>WritableStreamDefaultWriter</strong> {
+  constructor(<a href='WritableStream.html'>WritableStream</a> <strong>stream</strong>);
 
-[Exposed=(Window,Worker,Worklet)]
-interface WritableStreamDefaultWriter {
-  constructor(WritableStream stream);
+  readonly attribute Promise<<span>undefined</span>> <strong>closed</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>desiredSize</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
 
-  readonly attribute Promise<undefined> closed;
-  readonly attribute unrestricted double? desiredSize;
-  readonly attribute Promise<undefined> ready;
-
-  Promise<undefined> abort(optional any reason);
-  Promise<undefined> close();
-  undefined releaseLock();
-  Promise<undefined> write(optional any chunk);
+  Promise<<span>undefined</span>> <strong>abort</strong>(optional <span>any</span> <strong>reason</strong>);
+  Promise<<span>undefined</span>> <strong>close</strong>();
+  <span>undefined</span> <strong>releaseLock</strong>();
+  Promise<<span>undefined</span>> <strong>write</strong>(optional <span>any</span> <strong>chunk</strong>);
 };</code></pre>
   
 </section>

@@ -7,36 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/forms.html#htmlformelement">HTML Standard</a> defines <code>HTMLFormElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window,
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>,
  LegacyOverrideBuiltIns,
  LegacyUnenumerableNamedProperties]
-interface HTMLFormElement : HTMLElement {
+interface <strong>HTMLFormElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute DOMString acceptCharset;
-  [CEReactions] attribute USVString action;
-  [CEReactions] attribute DOMString autocomplete;
-  [CEReactions] attribute DOMString enctype;
-  [CEReactions] attribute DOMString encoding;
-  [CEReactions] attribute DOMString method;
-  [CEReactions] attribute DOMString name;
-  [CEReactions] attribute boolean noValidate;
-  [CEReactions] attribute DOMString target;
-  [CEReactions] attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
+  [CEReactions] attribute <span>DOMString</span> <strong>acceptCharset</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>action</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>autocomplete</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>enctype</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>encoding</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>method</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noValidate</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>target</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rel</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;
 
-  [SameObject] readonly attribute HTMLFormControlsCollection elements;
-  readonly attribute unsigned long length;
-  getter Element (unsigned long index);
-  getter (RadioNodeList or Element) (DOMString name);
+  [SameObject] readonly attribute <a href='HTMLFormControlsCollection.html'>HTMLFormControlsCollection</a> <strong>elements</strong>;
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='Element.html'>Element</a> (<span>unsigned long</span> <strong>index</strong>);
+  getter (<a href='RadioNodeList.html'>RadioNodeList</a> or <a href='Element.html'>Element</a>) (<span>DOMString</span> <strong>name</strong>);
 
-  undefined submit();
-  undefined requestSubmit(optional HTMLElement? submitter = null);
-  [CEReactions] undefined reset();
-  boolean checkValidity();
-  boolean reportValidity();
+  <span>undefined</span> <strong>submit</strong>();
+  <span>undefined</span> <strong>requestSubmit</strong>(optional <a href='HTMLElement.html'>HTMLElement</a>? <strong>submitter</strong> = null);
+  [CEReactions] <span>undefined</span> <strong>reset</strong>();
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
 };</code></pre>
   
 </section>

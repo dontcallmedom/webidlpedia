@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://streams.spec.whatwg.org/#countqueuingstrategy">Streams Standard</a> defines <code>CountQueuingStrategy</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>CountQueuingStrategy</strong> {
+  constructor(<a href='QueuingStrategyInit.html'>QueuingStrategyInit</a> <strong>init</strong>);
 
-[Exposed=(Window,Worker,Worklet)]
-interface CountQueuingStrategy {
-  constructor(QueuingStrategyInit init);
-
-  readonly attribute unrestricted double highWaterMark;
-  readonly attribute Function size;
+  readonly attribute <span>unrestricted double</span> <strong>highWaterMark</strong>;
+  readonly attribute <a href='Function.html'>Function</a> <strong>size</strong>;
 };</code></pre>
   
 </section>

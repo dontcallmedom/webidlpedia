@@ -7,14 +7,12 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr-hand-input/#xrhand">WebXR Hand Input Module - Level 1</a> defines <code>XRHand</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XRHand</strong> {
+    iterable<<a href='XRHandJoint.html'>XRHandJoint</a>, <a href='XRJointSpace.html'>XRJointSpace</a>>;
 
-[Exposed=Window]
-interface XRHand {
-    iterable<XRHandJoint, XRJointSpace>;
-
-    readonly attribute unsigned long size;
-    XRJointSpace get(XRHandJoint key);
+    readonly attribute <span>unsigned long</span> <strong>size</strong>;
+    <a href='XRJointSpace.html'>XRJointSpace</a> <strong>get</strong>(<a href='XRHandJoint.html'>XRHandJoint</a> <strong>key</strong>);
 };</code></pre>
   
 </section>

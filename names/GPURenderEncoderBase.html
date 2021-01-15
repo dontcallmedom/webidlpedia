@@ -7,23 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a> defines <code>GPURenderEncoderBase</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface mixin <strong>GPURenderEncoderBase</strong> {
+    <span>undefined</span> <strong>setPipeline</strong>(<a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>pipeline</strong>);
 
-interface mixin GPURenderEncoderBase {
-    undefined setPipeline(GPURenderPipeline pipeline);
+    <span>undefined</span> <strong>setIndexBuffer</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, <a href='GPUIndexFormat.html'>GPUIndexFormat</a> <strong>indexFormat</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> = 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong> = 0);
+    <span>undefined</span> <strong>setVertexBuffer</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>slot</strong>, <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> = 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong> = 0);
 
-    undefined setIndexBuffer(GPUBuffer buffer, GPUIndexFormat indexFormat, optional GPUSize64 offset = 0, optional GPUSize64 size = 0);
-    undefined setVertexBuffer(GPUIndex32 slot, GPUBuffer buffer, optional GPUSize64 offset = 0, optional GPUSize64 size = 0);
+    <span>undefined</span> <strong>draw</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>vertexCount</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>instanceCount</strong> = 1,
+              optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstVertex</strong> = 0, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> = 0);
+    <span>undefined</span> <strong>drawIndexed</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>indexCount</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>instanceCount</strong> = 1,
+                     optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstIndex</strong> = 0,
+                     optional <a href='GPUSignedOffset32.html'>GPUSignedOffset32</a> <strong>baseVertex</strong> = 0,
+                     optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> = 0);
 
-    undefined draw(GPUSize32 vertexCount, optional GPUSize32 instanceCount = 1,
-              optional GPUSize32 firstVertex = 0, optional GPUSize32 firstInstance = 0);
-    undefined drawIndexed(GPUSize32 indexCount, optional GPUSize32 instanceCount = 1,
-                     optional GPUSize32 firstIndex = 0,
-                     optional GPUSignedOffset32 baseVertex = 0,
-                     optional GPUSize32 firstInstance = 0);
-
-    undefined drawIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
-    undefined drawIndexedIndirect(GPUBuffer indirectBuffer, GPUSize64 indirectOffset);
+    <span>undefined</span> <strong>drawIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);
+    <span>undefined</span> <strong>drawIndexedIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);
 };</code></pre>
   
 </section>

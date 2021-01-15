@@ -7,22 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/ServiceWorker/#client">Service Workers Nightly</a> defines <code>Client</code></p>
-<pre class=webidl><code>
-
-[Exposed=ServiceWorker]
-interface Client {
-  readonly attribute USVString url;
-  readonly attribute FrameType frameType;
-  readonly attribute DOMString id;
-  readonly attribute ClientType type;
-  undefined postMessage(any message, sequence<object> transfer);
-  undefined postMessage(any message, optional PostMessageOptions options = {});
+<pre class=webidl><code>[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>Client</strong> {
+  readonly attribute <span>USVString</span> <strong>url</strong>;
+  readonly attribute <a href='FrameType.html'>FrameType</a> <strong>frameType</strong>;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='ClientType.html'>ClientType</a> <strong>type</strong>;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/page-lifecycle/#serviceworker-client-dfn">Page Lifecycle</a>
-<pre class=webidl><code>
-
-partial interface Client {
-    readonly attribute ClientLifecycleState lifecycleState;
+<pre class=webidl><code>partial interface <strong>Client</strong> {
+    readonly attribute <a href='ClientLifecycleState.html'>ClientLifecycleState</a> <strong>lifecycleState</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

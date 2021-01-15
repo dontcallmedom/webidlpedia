@@ -7,27 +7,25 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webappsec-csp/#securitypolicyviolationevent">Content Security Policy Level 3</a> defines <code>SecurityPolicyViolationEvent</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface SecurityPolicyViolationEvent : Event {
-    constructor(DOMString type, optional SecurityPolicyViolationEventInit eventInitDict = {});
-    readonly    attribute USVString      documentURL;
-    readonly    attribute USVString      documentURI; // historical alias of documentURL
-    readonly    attribute USVString      referrer;
-    readonly    attribute USVString      blockedURL;
-    readonly    attribute USVString      blockedURI; // historical alias of blockedURL
-    readonly    attribute DOMString      effectiveDirective;
-    readonly    attribute DOMString      violatedDirective; // historical alias of effectiveDirective
-    readonly    attribute DOMString      originalPolicy;
-    readonly    attribute USVString      sourceFile;
-    readonly    attribute DOMString      sample;
-    readonly    attribute SecurityPolicyViolationEventDisposition      disposition;
-    readonly    attribute unsigned short statusCode;
-    readonly    attribute unsigned long  lineno;
-    readonly    attribute unsigned long  lineNumber; // historical alias of lineno
-    readonly    attribute unsigned long  colno;
-    readonly    attribute unsigned long  columnNumber; // historical alias of colno
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>SecurityPolicyViolationEvent</strong> : <a href='Event.html'>Event</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='SecurityPolicyViolationEventInit.html'>SecurityPolicyViolationEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly    attribute <span>USVString</span>      <strong>documentURL</strong>;
+    readonly    attribute <span>USVString</span>      <strong>documentURI</strong>; // historical alias of documentURL
+    readonly    attribute <span>USVString</span>      <strong>referrer</strong>;
+    readonly    attribute <span>USVString</span>      <strong>blockedURL</strong>;
+    readonly    attribute <span>USVString</span>      <strong>blockedURI</strong>; // historical alias of blockedURL
+    readonly    attribute <span>DOMString</span>      <strong>effectiveDirective</strong>;
+    readonly    attribute <span>DOMString</span>      <strong>violatedDirective</strong>; // historical alias of effectiveDirective
+    readonly    attribute <span>DOMString</span>      <strong>originalPolicy</strong>;
+    readonly    attribute <span>USVString</span>      <strong>sourceFile</strong>;
+    readonly    attribute <span>DOMString</span>      <strong>sample</strong>;
+    readonly    attribute <a href='SecurityPolicyViolationEventDisposition.html'>SecurityPolicyViolationEventDisposition</a>      <strong>disposition</strong>;
+    readonly    attribute <span>unsigned short</span> <strong>statusCode</strong>;
+    readonly    attribute <span>unsigned long</span>  <strong>lineno</strong>;
+    readonly    attribute <span>unsigned long</span>  <strong>lineNumber</strong>; // historical alias of lineno
+    readonly    attribute <span>unsigned long</span>  <strong>colno</strong>;
+    readonly    attribute <span>unsigned long</span>  <strong>columnNumber</strong>; // historical alias of colno
 };</code></pre>
   
 </section>

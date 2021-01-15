@@ -7,56 +7,52 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
 
-[Exposed=Window]
-interface SVGSVGElement : SVGGraphicsElement {
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
 
-  [SameObject] readonly attribute SVGAnimatedLength x;
-  [SameObject] readonly attribute SVGAnimatedLength y;
-  [SameObject] readonly attribute SVGAnimatedLength width;
-  [SameObject] readonly attribute SVGAnimatedLength height;
+  attribute <span>float</span> <strong>currentScale</strong>;
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;
 
-  attribute float currentScale;
-  [SameObject] readonly attribute DOMPointReadOnly currentTranslate;
+  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
+  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
+  <span>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
+  <span>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
 
-  NodeList getIntersectionList(DOMRectReadOnly rect, SVGElement? referenceElement);
-  NodeList getEnclosureList(DOMRectReadOnly rect, SVGElement? referenceElement);
-  boolean checkIntersection(SVGElement element, DOMRectReadOnly rect);
-  boolean checkEnclosure(SVGElement element, DOMRectReadOnly rect);
+  <a href='void.html'>void</a> <strong>deselectAll</strong>();
 
-  void deselectAll();
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();
+  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();
+  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();
+  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();
+  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();
+  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();
+  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong>);
 
-  SVGNumber createSVGNumber();
-  SVGLength createSVGLength();
-  SVGAngle createSVGAngle();
-  DOMPoint createSVGPoint();
-  DOMMatrix createSVGMatrix();
-  DOMRect createSVGRect();
-  SVGTransform createSVGTransform();
-  SVGTransform createSVGTransformFromMatrix(optional DOMMatrix2DInit matrix);
-
-  Element getElementById(DOMString elementId);
+  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span>DOMString</span> <strong>elementId</strong>);
 
   // Deprecated methods that have no effect when called,
   // but which are kept for compatibility reasons.
-  unsigned long suspendRedraw(unsigned long maxWaitMilliseconds);
-  void unsuspendRedraw(unsigned long suspendHandleID);
-  void unsuspendRedrawAll();
-  void forceRedraw();
+  <span>unsigned long</span> <strong>suspendRedraw</strong>(<span>unsigned long</span> <strong>maxWaitMilliseconds</strong>);
+  <a href='void.html'>void</a> <strong>unsuspendRedraw</strong>(<span>unsigned long</span> <strong>suspendHandleID</strong>);
+  <a href='void.html'>void</a> <strong>unsuspendRedrawAll</strong>();
+  <a href='void.html'>void</a> <strong>forceRedraw</strong>();
 };
 
-SVGSVGElement includes SVGFitToViewBox;
-SVGSVGElement includes WindowEventHandlers;</code></pre>
+<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='SVGFitToViewBox.html'>SVGFitToViewBox</a>;
+<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://svgwg.org/specs/animations/">SVG Animations</a>
-<pre class=webidl><code>
-
-partial interface SVGSVGElement {
-  void pauseAnimations();
-  void unpauseAnimations();
-  boolean animationsPaused();
-  float getCurrentTime();
-  void setCurrentTime(float seconds);
+<pre class=webidl><code>partial interface <strong>SVGSVGElement</strong> {
+  <a href='void.html'>void</a> <strong>pauseAnimations</strong>();
+  <a href='void.html'>void</a> <strong>unpauseAnimations</strong>();
+  <span>boolean</span> <strong>animationsPaused</strong>();
+  <span>float</span> <strong>getCurrentTime</strong>();
+  <a href='void.html'>void</a> <strong>setCurrentTime</strong>(<span>float</span> <strong>seconds</strong>);
 };</code></pre></li></ol>
 </section>
 <section>

@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/web-locks/#lockmanager">Web Locks API</a> defines <code>LockManager</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>LockManager</strong> {
+  Promise<<span>any</span>> <strong>request</strong>(<span>DOMString</span> <strong>name</strong>,
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);
+  Promise<<span>any</span>> <strong>request</strong>(<span>DOMString</span> <strong>name</strong>,
+                       <a href='LockOptions.html'>LockOptions</a> <strong>options</strong>,
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);
 
-[SecureContext, Exposed=(Window,Worker)]
-interface LockManager {
-  Promise<any> request(DOMString name,
-                       LockGrantedCallback callback);
-  Promise<any> request(DOMString name,
-                       LockOptions options,
-                       LockGrantedCallback callback);
-
-  Promise<LockManagerSnapshot> query();
+  Promise<<a href='LockManagerSnapshot.html'>LockManagerSnapshot</a>> <strong>query</strong>();
 };</code></pre>
   
 </section>

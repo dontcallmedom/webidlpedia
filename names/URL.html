@@ -7,39 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://url.spec.whatwg.org/#url">URL Standard</a> defines <code>URL</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker),
- LegacyWindowAlias=webkitURL]
-interface URL {
-  constructor(USVString url, optional USVString base);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ LegacyWindowAlias=<span>webkitURL</span>]
+interface <strong>URL</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <span>USVString</span> <strong>base</strong>);
+  stringifier attribute <span>USVString</span> <strong>href</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+           attribute <span>USVString</span> <strong>protocol</strong>;
+           attribute <span>USVString</span> <strong>username</strong>;
+           attribute <span>USVString</span> <strong>password</strong>;
+           attribute <span>USVString</span> <strong>host</strong>;
+           attribute <span>USVString</span> <strong>hostname</strong>;
+           attribute <span>USVString</span> <strong>port</strong>;
+           attribute <span>USVString</span> <strong>pathname</strong>;
+           attribute <span>USVString</span> <strong>search</strong>;
+  [SameObject] readonly attribute <a href='URLSearchParams.html'>URLSearchParams</a> <strong>searchParams</strong>;
+           attribute <span>USVString</span> <strong>hash</strong>;
 
-  stringifier attribute USVString href;
-  readonly attribute USVString origin;
-           attribute USVString protocol;
-           attribute USVString username;
-           attribute USVString password;
-           attribute USVString host;
-           attribute USVString hostname;
-           attribute USVString port;
-           attribute USVString pathname;
-           attribute USVString search;
-  [SameObject] readonly attribute URLSearchParams searchParams;
-           attribute USVString hash;
-
-  USVString toJSON();
+  <span>USVString</span> <strong>toJSON</strong>();
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/FileAPI/">File API</a>
-<pre class=webidl><code>
-
-[Exposed=(Window,DedicatedWorker,SharedWorker)]
-partial interface URL {
-  static DOMString createObjectURL((Blob or MediaSource) obj);
-  static undefined revokeObjectURL(DOMString url);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+partial interface <strong>URL</strong> {
+  static <span>DOMString</span> <strong>createObjectURL</strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);
+  static <span>undefined</span> <strong>revokeObjectURL</strong>(<span>DOMString</span> <strong>url</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/media-source/#methods-2">Media Source Extensions™</a>
-<pre class=webidl><code>
-
-[Exposed=Window]
-partial interface URL {
-    static DOMString createObjectURL (MediaSource mediaSource);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+partial interface <strong>URL</strong> {
+    static <span>DOMString</span> <strong>createObjectURL</strong> (<a href='MediaSource.html'>MediaSource</a> <strong>mediaSource</strong>);
 };</code></pre></li></ol>
 </section>
 

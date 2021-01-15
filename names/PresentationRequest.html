@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/presentation-api/#dom-presentationrequest">Presentation API</a> defines <code>PresentationRequest</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PresentationRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>url</strong>);
+  constructor(sequence<<span>USVString</span>> <strong>urls</strong>);
+  Promise<<a href='PresentationConnection.html'>PresentationConnection</a>> <strong>start</strong>();
+  Promise<<a href='PresentationConnection.html'>PresentationConnection</a>> <strong>reconnect</strong>(<span>USVString</span> <strong>presentationId</strong>);
+  Promise<<a href='PresentationAvailability.html'>PresentationAvailability</a>> <strong>getAvailability</strong>();
 
-[SecureContext, Exposed=Window]
-interface PresentationRequest : EventTarget {
-  constructor(USVString url);
-  constructor(sequence<USVString> urls);
-  Promise<PresentationConnection> start();
-  Promise<PresentationConnection> reconnect(USVString presentationId);
-  Promise<PresentationAvailability> getAvailability();
-
-  attribute EventHandler onconnectionavailable;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnectionavailable</strong>;
 };</code></pre>
   
 </section>

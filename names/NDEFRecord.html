@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/web-nfc/#dom-ndefrecord">Web NFC</a> defines <code>NDEFRecord</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>NDEFRecord</strong> {
+  constructor(<a href='NDEFRecordInit.html'>NDEFRecordInit</a> <strong>recordInit</strong>);
 
-[SecureContext, Exposed=Window]
-interface NDEFRecord {
-  constructor(NDEFRecordInit recordInit);
+  readonly attribute <span>USVString</span> <strong>recordType</strong>;
+  readonly attribute <span>USVString</span>? <strong>mediaType</strong>;
+  readonly attribute <span>USVString</span>? <strong>id</strong>;
+  readonly attribute <span>DataView</span>? <strong>data</strong>;
 
-  readonly attribute USVString recordType;
-  readonly attribute USVString? mediaType;
-  readonly attribute USVString? id;
-  readonly attribute DataView? data;
+  readonly attribute <span>USVString</span>? <strong>encoding</strong>;
+  readonly attribute <span>USVString</span>? <strong>lang</strong>;
 
-  readonly attribute USVString? encoding;
-  readonly attribute USVString? lang;
-
-  sequence<NDEFRecord>? toRecords();
+  sequence<<a href='NDEFRecord.html'>NDEFRecord</a>>? <strong>toRecords</strong>();
 };</code></pre>
   
 </section>

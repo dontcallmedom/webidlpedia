@@ -7,24 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/media-source/#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface MediaSource : EventTarget {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget</a> {
     constructor();
-    readonly        attribute SourceBufferList    sourceBuffers;
-    readonly        attribute SourceBufferList    activeSourceBuffers;
-    readonly        attribute ReadyState          readyState;
-                    attribute unrestricted double duration;
-                    attribute EventHandler        onsourceopen;
-                    attribute EventHandler        onsourceended;
-                    attribute EventHandler        onsourceclose;
-    SourceBuffer   addSourceBuffer (DOMString type);
-    undefined           removeSourceBuffer (SourceBuffer sourceBuffer);
-    undefined           endOfStream (optional EndOfStreamError error);
-    undefined           setLiveSeekableRange (double start, double end);
-    undefined           clearLiveSeekableRange ();
-    static boolean isTypeSupported (DOMString type);
+    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>sourceBuffers</strong>;
+    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>activeSourceBuffers</strong>;
+    readonly        attribute <a href='ReadyState.html'>ReadyState</a>          <strong>readyState</strong>;
+                    attribute <span>unrestricted double</span> <strong>duration</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceopen</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceended</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceclose</strong>;
+    <a href='SourceBuffer.html'>SourceBuffer</a>   <strong>addSourceBuffer</strong> (<span>DOMString</span> <strong>type</strong>);
+    <span>undefined</span>           <strong>removeSourceBuffer</strong> (<a href='SourceBuffer.html'>SourceBuffer</a> <strong>sourceBuffer</strong>);
+    <span>undefined</span>           <strong>endOfStream</strong> (optional <a href='EndOfStreamError.html'>EndOfStreamError</a> <strong>error</strong>);
+    <span>undefined</span>           <strong>setLiveSeekableRange</strong> (<span>double</span> <strong>start</strong>, <span>double</span> <strong>end</strong>);
+    <span>undefined</span>           <strong>clearLiveSeekableRange</strong> ();
+    static <span>boolean</span> <strong>isTypeSupported</strong> (<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
 </section>

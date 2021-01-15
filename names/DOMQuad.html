@@ -7,24 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/geometry/#domquad">Geometry Interfaces Module Level 1</a> defines <code>DOMQuad</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker),
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable]
-interface DOMQuad {
-    constructor(optional DOMPointInit p1 = {}, optional DOMPointInit p2 = {},
-            optional DOMPointInit p3 = {}, optional DOMPointInit p4 = {});
+interface <strong>DOMQuad</strong> {
+    constructor(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>p1</strong> = {}, optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>p2</strong> = {},
+            optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>p3</strong> = {}, optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>p4</strong> = {});
 
-    [NewObject] static DOMQuad fromRect(optional DOMRectInit other = {});
-    [NewObject] static DOMQuad fromQuad(optional DOMQuadInit other = {});
+    [NewObject] static <a href='DOMQuad.html'>DOMQuad</a> <strong>fromRect</strong>(optional <a href='DOMRectInit.html'>DOMRectInit</a> <strong>other</strong> = {});
+    [NewObject] static <a href='DOMQuad.html'>DOMQuad</a> <strong>fromQuad</strong>(optional <a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>other</strong> = {});
 
-    [SameObject] readonly attribute DOMPoint p1;
-    [SameObject] readonly attribute DOMPoint p2;
-    [SameObject] readonly attribute DOMPoint p3;
-    [SameObject] readonly attribute DOMPoint p4;
-    [NewObject] DOMRect getBounds();
+    [SameObject] readonly attribute <a href='DOMPoint.html'>DOMPoint</a> <strong>p1</strong>;
+    [SameObject] readonly attribute <a href='DOMPoint.html'>DOMPoint</a> <strong>p2</strong>;
+    [SameObject] readonly attribute <a href='DOMPoint.html'>DOMPoint</a> <strong>p3</strong>;
+    [SameObject] readonly attribute <a href='DOMPoint.html'>DOMPoint</a> <strong>p4</strong>;
+    [NewObject] <a href='DOMRect.html'>DOMRect</a> <strong>getBounds</strong>();
 
-    [Default] object toJSON();
+    [Default] <span>object</span> <strong>toJSON</strong>();
 };</code></pre>
   
 </section>

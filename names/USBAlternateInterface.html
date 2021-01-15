@@ -7,20 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbalternateinterface">WebUSB API</a> defines <code>USBAlternateInterface</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBAlternateInterface {
-  constructor(USBInterface deviceInterface, octet alternateSetting);
-  readonly attribute octet alternateSetting;
-  readonly attribute octet interfaceClass;
-  readonly attribute octet interfaceSubclass;
-  readonly attribute octet interfaceProtocol;
-  readonly attribute DOMString? interfaceName;
-  readonly attribute FrozenArray<USBEndpoint> endpoints;
+interface <strong>USBAlternateInterface</strong> {
+  constructor(<a href='USBInterface.html'>USBInterface</a> <strong>deviceInterface</strong>, <span>octet</span> <strong>alternateSetting</strong>);
+  readonly attribute <span>octet</span> <strong>alternateSetting</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceClass</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceSubclass</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceProtocol</strong>;
+  readonly attribute <span>DOMString</span>? <strong>interfaceName</strong>;
+  readonly attribute FrozenArray<<a href='USBEndpoint.html'>USBEndpoint</a>> <strong>endpoints</strong>;
 };</code></pre>
   
 </section>

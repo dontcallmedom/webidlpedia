@@ -7,212 +7,185 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#document">DOM Standard</a> defines <code>Document</code></p>
-<pre class=webidl><code>
-Document includes NonElementParentNode;
-Document includes DocumentOrShadowRoot;
-Document includes ParentNode;
+<pre class=webidl><code><a href='Document.html'>Document</a> includes <a href='NonElementParentNode.html'>NonElementParentNode</a>;
+<a href='Document.html'>Document</a> includes <a href='DocumentOrShadowRoot.html'>DocumentOrShadowRoot</a>;
+<a href='Document.html'>Document</a> includes <a href='ParentNode.html'>ParentNode</a>;
 
-[Exposed=Window]
-interface Document : Node {
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Document</strong> : <a href='Node.html'>Node</a> {
   constructor();
 
-  [SameObject] readonly attribute DOMImplementation implementation;
-  readonly attribute USVString URL;
-  readonly attribute USVString documentURI;
-  readonly attribute DOMString compatMode;
-  readonly attribute DOMString characterSet;
-  readonly attribute DOMString charset; // legacy alias of .characterSet
-  readonly attribute DOMString inputEncoding; // legacy alias of .characterSet
-  readonly attribute DOMString contentType;
+  [SameObject] readonly attribute <a href='DOMImplementation.html'>DOMImplementation</a> <strong>implementation</strong>;
+  readonly attribute <span>USVString</span> <strong>URL</strong>;
+  readonly attribute <span>USVString</span> <strong>documentURI</strong>;
+  readonly attribute <span>DOMString</span> <strong>compatMode</strong>;
+  readonly attribute <span>DOMString</span> <strong>characterSet</strong>;
+  readonly attribute <span>DOMString</span> <strong>charset</strong>; // legacy alias of .characterSet
+  readonly attribute <span>DOMString</span> <strong>inputEncoding</strong>; // legacy alias of .characterSet
+  readonly attribute <span>DOMString</span> <strong>contentType</strong>;
 
-  readonly attribute DocumentType? doctype;
-  readonly attribute Element? documentElement;
-  HTMLCollection getElementsByTagName(DOMString qualifiedName);
-  HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
-  HTMLCollection getElementsByClassName(DOMString classNames);
+  readonly attribute <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>documentElement</strong>;
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span>DOMString</span> <strong>qualifiedName</strong>);
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>localName</strong>);
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span>DOMString</span> <strong>classNames</strong>);
 
-  [CEReactions, NewObject] Element createElement(DOMString localName, optional (DOMString or ElementCreationOptions) options = {});
-  [CEReactions, NewObject] Element createElementNS(DOMString? namespace, DOMString qualifiedName, optional (DOMString or ElementCreationOptions) options = {});
-  [NewObject] DocumentFragment createDocumentFragment();
-  [NewObject] Text createTextNode(DOMString data);
-  [NewObject] CDATASection createCDATASection(DOMString data);
-  [NewObject] Comment createComment(DOMString data);
-  [NewObject] ProcessingInstruction createProcessingInstruction(DOMString target, DOMString data);
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElement</strong>(<span>DOMString</span> <strong>localName</strong>, optional (<span>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> = {});
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElementNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>qualifiedName</strong>, optional (<span>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> = {});
+  [NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createDocumentFragment</strong>();
+  [NewObject] <a href='Text.html'>Text</a> <strong>createTextNode</strong>(<span>DOMString</span> <strong>data</strong>);
+  [NewObject] <a href='CDATASection.html'>CDATASection</a> <strong>createCDATASection</strong>(<span>DOMString</span> <strong>data</strong>);
+  [NewObject] <a href='Comment.html'>Comment</a> <strong>createComment</strong>(<span>DOMString</span> <strong>data</strong>);
+  [NewObject] <a href='ProcessingInstruction.html'>ProcessingInstruction</a> <strong>createProcessingInstruction</strong>(<span>DOMString</span> <strong>target</strong>, <span>DOMString</span> <strong>data</strong>);
 
-  [CEReactions, NewObject] Node importNode(Node node, optional boolean deep = false);
-  [CEReactions] Node adoptNode(Node node);
+  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>importNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>boolean</span> <strong>deep</strong> = false);
+  [CEReactions] <a href='Node.html'>Node</a> <strong>adoptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
 
-  [NewObject] Attr createAttribute(DOMString localName);
-  [NewObject] Attr createAttributeNS(DOMString? namespace, DOMString qualifiedName);
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttribute</strong>(<span>DOMString</span> <strong>localName</strong>);
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttributeNS</strong>(<span>DOMString</span>? <strong>namespace</strong>, <span>DOMString</span> <strong>qualifiedName</strong>);
 
-  [NewObject] Event createEvent(DOMString interface); // legacy
+  [NewObject] <a href='Event.html'>Event</a> <strong>createEvent</strong>(<span>DOMString</span> <strong>interface</strong>); // legacy
 
-  [NewObject] Range createRange();
+  [NewObject] <a href='Range.html'>Range</a> <strong>createRange</strong>();
 
   // NodeFilter.SHOW_ALL = 0xFFFFFFFF
-  [NewObject] NodeIterator createNodeIterator(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
-  [NewObject] TreeWalker createTreeWalker(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
+  [NewObject] <a href='NodeIterator.html'>NodeIterator</a> <strong>createNodeIterator</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span>unsigned long</span> <strong>whatToShow</strong> = 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> = null);
+  [NewObject] <a href='TreeWalker.html'>TreeWalker</a> <strong>createTreeWalker</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span>unsigned long</span> <strong>whatToShow</strong> = 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> = null);
 };
-Document includes XPathEvaluatorBase;</code></pre>
+<a href='Document.html'>Document</a> includes <a href='XPathEvaluatorBase.html'>XPathEvaluatorBase</a>;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
-<pre class=webidl><code>partial interface Document {
-    FontMetrics measureElement(Element element);
-    FontMetrics measureText(DOMString text, StylePropertyMapReadOnly styleMap);
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);
 };</code></pre></li><li><a href="https://fullscreen.spec.whatwg.org/#api">Fullscreen API Standard</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  [LegacyLenientSetter] readonly attribute <span>boolean</span> <strong>fullscreenEnabled</strong>;
+  [LegacyLenientSetter, Unscopable] readonly attribute <span>boolean</span> <strong>fullscreen</strong>; // historical
 
-partial interface Document {
-  [LegacyLenientSetter] readonly attribute boolean fullscreenEnabled;
-  [LegacyLenientSetter, Unscopable] readonly attribute boolean fullscreen; // historical
+  Promise<<span>undefined</span>> <strong>exitFullscreen</strong>();
 
-  Promise<undefined> exitFullscreen();
-
-  attribute EventHandler onfullscreenchange;
-  attribute EventHandler onfullscreenerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;
 };</code></pre></li><li><a href="https://html.spec.whatwg.org/multipage/#the-location-interface">HTML Standard</a>
-<pre class=webidl><code>
-
-[LegacyOverrideBuiltIns]
-partial interface Document {
+<pre class=webidl><code>[LegacyOverrideBuiltIns]
+partial interface <strong>Document</strong> {
   // resource metadata management
-  [PutForwards=href, LegacyUnforgeable] readonly attribute Location? location;
-  attribute USVString domain;
-  readonly attribute USVString referrer;
-  attribute USVString cookie;
-  readonly attribute DOMString lastModified;
-  readonly attribute DocumentReadyState readyState;
+  [PutForwards=<span>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;
+  attribute <span>USVString</span> <strong>domain</strong>;
+  readonly attribute <span>USVString</span> <strong>referrer</strong>;
+  attribute <span>USVString</span> <strong>cookie</strong>;
+  readonly attribute <span>DOMString</span> <strong>lastModified</strong>;
+  readonly attribute <a href='DocumentReadyState.html'>DocumentReadyState</a> <strong>readyState</strong>;
 
   // DOM tree accessors
-  getter object (DOMString name);
-  [CEReactions] attribute DOMString title;
-  [CEReactions] attribute DOMString dir;
-  [CEReactions] attribute HTMLElement? body;
-  readonly attribute HTMLHeadElement? head;
-  [SameObject] readonly attribute HTMLCollection images;
-  [SameObject] readonly attribute HTMLCollection embeds;
-  [SameObject] readonly attribute HTMLCollection plugins;
-  [SameObject] readonly attribute HTMLCollection links;
-  [SameObject] readonly attribute HTMLCollection forms;
-  [SameObject] readonly attribute HTMLCollection scripts;
-  NodeList getElementsByName(DOMString elementName);
-  readonly attribute HTMLOrSVGScriptElement? currentScript; // classic scripts in a document tree only
+  getter <span>object</span> (<span>DOMString</span> <strong>name</strong>);
+  [CEReactions] attribute <span>DOMString</span> <strong>title</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>dir</strong>;
+  [CEReactions] attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>body</strong>;
+  readonly attribute <a href='HTMLHeadElement.html'>HTMLHeadElement</a>? <strong>head</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>images</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>embeds</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>plugins</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>links</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>forms</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>scripts</strong>;
+  <a href='NodeList.html'>NodeList</a> <strong>getElementsByName</strong>(<span>DOMString</span> <strong>elementName</strong>);
+  readonly attribute <a href='HTMLOrSVGScriptElement.html'>HTMLOrSVGScriptElement</a>? <strong>currentScript</strong>; // classic scripts in a document tree only
 
   // dynamic markup insertion
-  [CEReactions] Document open(optional DOMString unused1, optional DOMString unused2); // both arguments are ignored
-  WindowProxy? open(USVString url, DOMString name, DOMString features);
-  [CEReactions] undefined close();
-  [CEReactions] undefined write(DOMString... text);
-  [CEReactions] undefined writeln(DOMString... text);
+  [CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span>DOMString</span> <strong>unused1</strong>, optional <span>DOMString</span> <strong>unused2</strong>); // both arguments are ignored
+  <a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span>USVString</span> <strong>url</strong>, <span>DOMString</span> <strong>name</strong>, <span>DOMString</span> <strong>features</strong>);
+  [CEReactions] <span>undefined</span> <strong>close</strong>();
+  [CEReactions] <span>undefined</span> <strong>write</strong>(<span>DOMString</span>... <strong>text</strong>);
+  [CEReactions] <span>undefined</span> <strong>writeln</strong>(<span>DOMString</span>... <strong>text</strong>);
 
   // user interaction
-  readonly attribute WindowProxy? defaultView;
-  boolean hasFocus();
-  [CEReactions] attribute DOMString designMode;
-  [CEReactions] boolean execCommand(DOMString commandId, optional boolean showUI = false, optional DOMString value = "");
-  boolean queryCommandEnabled(DOMString commandId);
-  boolean queryCommandIndeterm(DOMString commandId);
-  boolean queryCommandState(DOMString commandId);
-  boolean queryCommandSupported(DOMString commandId);
-  DOMString queryCommandValue(DOMString commandId);
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;
+  <span>boolean</span> <strong>hasFocus</strong>();
+  [CEReactions] attribute <span>DOMString</span> <strong>designMode</strong>;
+  [CEReactions] <span>boolean</span> <strong>execCommand</strong>(<span>DOMString</span> <strong>commandId</strong>, optional <span>boolean</span> <strong>showUI</strong> = false, optional <span>DOMString</span> <strong>value</strong> = "");
+  <span>boolean</span> <strong>queryCommandEnabled</strong>(<span>DOMString</span> <strong>commandId</strong>);
+  <span>boolean</span> <strong>queryCommandIndeterm</strong>(<span>DOMString</span> <strong>commandId</strong>);
+  <span>boolean</span> <strong>queryCommandState</strong>(<span>DOMString</span> <strong>commandId</strong>);
+  <span>boolean</span> <strong>queryCommandSupported</strong>(<span>DOMString</span> <strong>commandId</strong>);
+  <span>DOMString</span> <strong>queryCommandValue</strong>(<span>DOMString</span> <strong>commandId</strong>);
 
   // special event handler IDL attributes that only apply to Document objects
-  [LegacyLenientThis] attribute EventHandler onreadystatechange;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;
 
   // also has obsolete members
 };
-Document includes GlobalEventHandlers;
-Document includes DocumentAndElementEventHandlers;
+<a href='Document.html'>Document</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;
+<a href='Document.html'>Document</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;
 
-partial interface Document {
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString fgColor;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString linkColor;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString vlinkColor;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString alinkColor;
-  [CEReactions] attribute [LegacyNullToEmptyString] DOMString bgColor;
+partial interface <strong>Document</strong> {
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>fgColor</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>linkColor</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>vlinkColor</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>alinkColor</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;
 
-  [SameObject] readonly attribute HTMLCollection anchors;
-  [SameObject] readonly attribute HTMLCollection applets;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>anchors</strong>;
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>applets</strong>;
 
-  undefined clear();
-  undefined captureEvents();
-  undefined releaseEvents();
+  <span>undefined</span> <strong>clear</strong>();
+  <span>undefined</span> <strong>captureEvents</strong>();
+  <span>undefined</span> <strong>releaseEvents</strong>();
 
-  [SameObject] readonly attribute HTMLAllCollection all;
+  [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;
 };</code></pre></li><li><a href="https://privacycg.github.io/storage-access/">The Storage Access API</a>
-<pre class=webidl><code>partial interface Document {
-  Promise<boolean> hasStorageAccess();
-  Promise<undefined> requestStorageAccess();
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  Promise<<span>boolean</span>> <strong>hasStorageAccess</strong>();
+  Promise<<span>undefined</span>> <strong>requestStorageAccess</strong>();
 };</code></pre></li><li><a href="https://wicg.github.io/cors-rfc1918/#feature-detect">CORS and RFC1918</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  readonly attribute AddressSpace addressSpace;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  readonly attribute <a href='AddressSpace.html'>AddressSpace</a> <strong>addressSpace</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/page-lifecycle/#sec-api">Page Lifecycle</a>
-<pre class=webidl><code>partial interface Document {
-    attribute EventHandler onfreeze;
-    attribute EventHandler onresume;
-    readonly attribute boolean wasDiscarded;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
+    readonly attribute <span>boolean</span> <strong>wasDiscarded</strong>;
 };</code></pre></li><li><a href="https://wicg.github.io/scroll-to-text-fragment/#feature-detectability">Text Fragments</a>
-<pre class=webidl><code>
-
-partial interface Document {
-    [SameObject] readonly attribute FragmentDirective fragmentDirective;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+    [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code>
-
-Document includes FontFaceSource;</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
-<pre class=webidl><code>partial interface Document {
-  readonly attribute NamedFlowMap namedFlows;
+<pre class=webidl><code><a href='Document.html'>Document</a> includes <a href='FontFaceSource.html'>FontFaceSource</a>;</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  Element? elementFromPoint(double x, double y);
-  sequence<Element> elementsFromPoint(double x, double y);
-  CaretPosition? caretPositionFromPoint(double x, double y);
-  readonly attribute Element? scrollingElement;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span>double</span> <strong>x</strong>, <span>double</span> <strong>y</strong>);
+  sequence<<a href='Element.html'>Element</a>> <strong>elementsFromPoint</strong>(<span>double</span> <strong>x</strong>, <span>double</span> <strong>y</strong>);
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span>double</span> <strong>x</strong>, <span>double</span> <strong>y</strong>);
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;
 };
-Document includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  readonly attribute boolean hidden;
-  readonly attribute VisibilityState visibilityState;
-  attribute EventHandler onvisibilitychange;
+<a href='Document.html'>Document</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  readonly attribute <span>boolean</span> <strong>hidden</strong>;
+  readonly attribute <a href='VisibilityState.html'>VisibilityState</a> <strong>visibilityState</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/permissions-policy-1/#the-policy-object">Permissions Policy</a>
-<pre class=webidl><code>
-
-partial interface Document {
-    [SameObject] readonly attribute PermissionsPolicy permissionsPolicy;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/picture-in-picture/#document-extensions">Picture-in-Picture</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  readonly attribute <span>boolean</span> <strong>pictureInPictureEnabled</strong>;
 
-partial interface Document {
-  readonly attribute boolean pictureInPictureEnabled;
-
-  [NewObject] Promise<undefined> exitPictureInPicture();
+  [NewObject] Promise<<span>undefined</span>> <strong>exitPictureInPicture</strong>();
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/#extensions-to-the-document-interface">Pointer Lock 2.0</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  attribute EventHandler onpointerlockchange;
-  attribute EventHandler onpointerlockerror;
-  undefined exitPointerLock();
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;
+  <span>undefined</span> <strong>exitPointerLock</strong>();
 };</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-document-interface">Selection API</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  Selection? getSelection();
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();
 };</code></pre></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>
-<pre class=webidl><code>
-
-partial interface Document {
-  readonly attribute SVGSVGElement? rootElement;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/web-animations-1/#extensions-to-the-document-interface">Web Animations</a>
-<pre class=webidl><code>
-
-partial interface Document {
-    readonly attribute DocumentTimeline timeline;
+<pre class=webidl><code>partial interface <strong>Document</strong> {
+    readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

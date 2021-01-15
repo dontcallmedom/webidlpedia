@@ -7,89 +7,83 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlmediaelement">HTML Standard</a> defines <code>HTMLMediaElement</code></p>
-<pre class=webidl><code>
-
-[Exposed=Window]
-interface HTMLMediaElement : HTMLElement {
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
 
   // error state
-  readonly attribute MediaError? error;
+  readonly attribute <a href='MediaError.html'>MediaError</a>? <strong>error</strong>;
 
   // network state
-  [CEReactions] attribute USVString src;
-  attribute MediaProvider? srcObject;
-  readonly attribute USVString currentSrc;
-  [CEReactions] attribute DOMString? crossOrigin;
-  const unsigned short NETWORK_EMPTY = 0;
-  const unsigned short NETWORK_IDLE = 1;
-  const unsigned short NETWORK_LOADING = 2;
-  const unsigned short NETWORK_NO_SOURCE = 3;
-  readonly attribute unsigned short networkState;
-  [CEReactions] attribute DOMString preload;
-  readonly attribute TimeRanges buffered;
-  undefined load();
-  CanPlayTypeResult canPlayType(DOMString type);
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  attribute <a href='MediaProvider.html'>MediaProvider</a>? <strong>srcObject</strong>;
+  readonly attribute <span>USVString</span> <strong>currentSrc</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  const <span>unsigned short</span> <strong>NETWORK_EMPTY</strong> = 0;
+  const <span>unsigned short</span> <strong>NETWORK_IDLE</strong> = 1;
+  const <span>unsigned short</span> <strong>NETWORK_LOADING</strong> = 2;
+  const <span>unsigned short</span> <strong>NETWORK_NO_SOURCE</strong> = 3;
+  readonly attribute <span>unsigned short</span> <strong>networkState</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>preload</strong>;
+  readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong>buffered</strong>;
+  <span>undefined</span> <strong>load</strong>();
+  <a href='CanPlayTypeResult.html'>CanPlayTypeResult</a> <strong>canPlayType</strong>(<span>DOMString</span> <strong>type</strong>);
 
   // ready state
-  const unsigned short HAVE_NOTHING = 0;
-  const unsigned short HAVE_METADATA = 1;
-  const unsigned short HAVE_CURRENT_DATA = 2;
-  const unsigned short HAVE_FUTURE_DATA = 3;
-  const unsigned short HAVE_ENOUGH_DATA = 4;
-  readonly attribute unsigned short readyState;
-  readonly attribute boolean seeking;
+  const <span>unsigned short</span> <strong>HAVE_NOTHING</strong> = 0;
+  const <span>unsigned short</span> <strong>HAVE_METADATA</strong> = 1;
+  const <span>unsigned short</span> <strong>HAVE_CURRENT_DATA</strong> = 2;
+  const <span>unsigned short</span> <strong>HAVE_FUTURE_DATA</strong> = 3;
+  const <span>unsigned short</span> <strong>HAVE_ENOUGH_DATA</strong> = 4;
+  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  readonly attribute <span>boolean</span> <strong>seeking</strong>;
 
   // playback state
-  attribute double currentTime;
-  undefined fastSeek(double time);
-  readonly attribute unrestricted double duration;
-  object getStartDate();
-  readonly attribute boolean paused;
-  attribute double defaultPlaybackRate;
-  attribute double playbackRate;
-  attribute boolean preservesPitch;
-  readonly attribute TimeRanges played;
-  readonly attribute TimeRanges seekable;
-  readonly attribute boolean ended;
-  [CEReactions] attribute boolean autoplay;
-  [CEReactions] attribute boolean loop;
-  Promise<undefined> play();
-  undefined pause();
+  attribute <span>double</span> <strong>currentTime</strong>;
+  <span>undefined</span> <strong>fastSeek</strong>(<span>double</span> <strong>time</strong>);
+  readonly attribute <span>unrestricted double</span> <strong>duration</strong>;
+  <span>object</span> <strong>getStartDate</strong>();
+  readonly attribute <span>boolean</span> <strong>paused</strong>;
+  attribute <span>double</span> <strong>defaultPlaybackRate</strong>;
+  attribute <span>double</span> <strong>playbackRate</strong>;
+  attribute <span>boolean</span> <strong>preservesPitch</strong>;
+  readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong>played</strong>;
+  readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong>seekable</strong>;
+  readonly attribute <span>boolean</span> <strong>ended</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>autoplay</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>loop</strong>;
+  Promise<<span>undefined</span>> <strong>play</strong>();
+  <span>undefined</span> <strong>pause</strong>();
 
   // controls
-  [CEReactions] attribute boolean controls;
-  attribute double volume;
-  attribute boolean muted;
-  [CEReactions] attribute boolean defaultMuted;
+  [CEReactions] attribute <span>boolean</span> <strong>controls</strong>;
+  attribute <span>double</span> <strong>volume</strong>;
+  attribute <span>boolean</span> <strong>muted</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defaultMuted</strong>;
 
   // tracks
-  [SameObject] readonly attribute AudioTrackList audioTracks;
-  [SameObject] readonly attribute VideoTrackList videoTracks;
-  [SameObject] readonly attribute TextTrackList textTracks;
-  TextTrack addTextTrack(TextTrackKind kind, optional DOMString label = "", optional DOMString language = "");
+  [SameObject] readonly attribute <a href='AudioTrackList.html'>AudioTrackList</a> <strong>audioTracks</strong>;
+  [SameObject] readonly attribute <a href='VideoTrackList.html'>VideoTrackList</a> <strong>videoTracks</strong>;
+  [SameObject] readonly attribute <a href='TextTrackList.html'>TextTrackList</a> <strong>textTracks</strong>;
+  <a href='TextTrack.html'>TextTrack</a> <strong>addTextTrack</strong>(<a href='TextTrackKind.html'>TextTrackKind</a> <strong>kind</strong>, optional <span>DOMString</span> <strong>label</strong> = "", optional <span>DOMString</span> <strong>language</strong> = "");
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#attributes">Audio Output Devices API</a>
-<pre class=webidl><code>partial interface HTMLMediaElement {
-  [SecureContext] readonly attribute DOMString sinkId;
-  [SecureContext] Promise<undefined> setSinkId (DOMString sinkId);
+<pre class=webidl><code>partial interface <strong>HTMLMediaElement</strong> {
+  [SecureContext] readonly attribute <span>DOMString</span> <strong>sinkId</strong>;
+  [SecureContext] Promise<<span>undefined</span>> <strong>setSinkId</strong> (<span>DOMString</span> <strong>sinkId</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#attributes-3">Encrypted Media Extensions</a>
-<pre class=webidl><code>
-
-[Exposed=Window] partial interface HTMLMediaElement {
-    [SecureContext] readonly        attribute MediaKeys?   mediaKeys;
-                                    attribute EventHandler onencrypted;
-                                    attribute EventHandler onwaitingforkey;
-    [SecureContext] Promise<undefined> setMediaKeys (MediaKeys? mediaKeys);
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>] partial interface <strong>HTMLMediaElement</strong> {
+    [SecureContext] readonly        attribute <a href='MediaKeys.html'>MediaKeys</a>?   <strong>mediaKeys</strong>;
+                                    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onencrypted</strong>;
+                                    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaitingforkey</strong>;
+    [SecureContext] Promise<<span>undefined</span>> <strong>setMediaKeys</strong> (<a href='MediaKeys.html'>MediaKeys</a>? <strong>mediaKeys</strong>);
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/#methods">Media Capture from DOM Elements</a>
-<pre class=webidl><code>partial interface HTMLMediaElement {
-    MediaStream captureStream ();
+<pre class=webidl><code>partial interface <strong>HTMLMediaElement</strong> {
+    <a href='MediaStream.html'>MediaStream</a> <strong>captureStream</strong> ();
 };</code></pre></li><li><a href="https://www.w3.org/TR/remote-playback/#extensions-to-htmlmediaelement">Remote Playback API</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial interface <strong>HTMLMediaElement</strong> {
+  [SameObject] readonly attribute <a href='RemotePlayback.html'>RemotePlayback</a> <strong>remote</strong>;
 
-partial interface HTMLMediaElement {
-  [SameObject] readonly attribute RemotePlayback remote;
-
-  [CEReactions] attribute boolean disableRemotePlayback;
+  [CEReactions] attribute <span>boolean</span> <strong>disableRemotePlayback</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

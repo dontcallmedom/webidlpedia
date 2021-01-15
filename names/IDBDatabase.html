@@ -7,29 +7,27 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbdatabase">Indexed Database API 3.0</a> defines <code>IDBDatabase</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBDatabase</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>version</strong>;
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>objectStoreNames</strong>;
 
-[Exposed=(Window,Worker)]
-interface IDBDatabase : EventTarget {
-  readonly attribute DOMString name;
-  readonly attribute unsigned long long version;
-  readonly attribute DOMStringList objectStoreNames;
+  [NewObject] <a href='IDBTransaction.html'>IDBTransaction</a> <strong>transaction</strong>((<span>DOMString</span> or sequence<<span>DOMString</span>>) <strong>storeNames</strong>,
+                                         optional <a href='IDBTransactionMode.html'>IDBTransactionMode</a> <strong>mode</strong> = "readonly",
+                                         optional <a href='IDBTransactionOptions.html'>IDBTransactionOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>close</strong>();
 
-  [NewObject] IDBTransaction transaction((DOMString or sequence<DOMString>) storeNames,
-                                         optional IDBTransactionMode mode = "readonly",
-                                         optional IDBTransactionOptions options = {});
-  undefined close();
-
-  [NewObject] IDBObjectStore createObjectStore(
-    DOMString name,
-    optional IDBObjectStoreParameters options = {});
-  undefined deleteObjectStore(DOMString name);
+  [NewObject] <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>createObjectStore</strong>(
+    <span>DOMString</span> <strong>name</strong>,
+    optional <a href='IDBObjectStoreParameters.html'>IDBObjectStoreParameters</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>deleteObjectStore</strong>(<span>DOMString</span> <strong>name</strong>);
 
   // Event handlers:
-  attribute EventHandler onabort;
-  attribute EventHandler onclose;
-  attribute EventHandler onerror;
-  attribute EventHandler onversionchange;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onversionchange</strong>;
 };</code></pre>
   
 </section>

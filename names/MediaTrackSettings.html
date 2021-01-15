@@ -7,63 +7,55 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatracksettings">Media Capture and Streams</a> defines <code>MediaTrackSettings</code></p>
-<pre class=webidl><code>
-
-dictionary MediaTrackSettings {
-  long width;
-  long height;
-  double aspectRatio;
-  double frameRate;
-  DOMString facingMode;
-  DOMString resizeMode;
-  long sampleRate;
-  long sampleSize;
-  boolean echoCancellation;
-  boolean autoGainControl;
-  boolean noiseSuppression;
-  double latency;
-  long channelCount;
-  DOMString deviceId;
-  DOMString groupId;
+<pre class=webidl><code>dictionary <strong>MediaTrackSettings</strong> {
+  <span>long</span> <strong>width</strong>;
+  <span>long</span> <strong>height</strong>;
+  <span>double</span> <strong>aspectRatio</strong>;
+  <span>double</span> <strong>frameRate</strong>;
+  <span>DOMString</span> <strong>facingMode</strong>;
+  <span>DOMString</span> <strong>resizeMode</strong>;
+  <span>long</span> <strong>sampleRate</strong>;
+  <span>long</span> <strong>sampleSize</strong>;
+  <span>boolean</span> <strong>echoCancellation</strong>;
+  <span>boolean</span> <strong>autoGainControl</strong>;
+  <span>boolean</span> <strong>noiseSuppression</strong>;
+  <span>double</span> <strong>latency</strong>;
+  <span>long</span> <strong>channelCount</strong>;
+  <span>DOMString</span> <strong>deviceId</strong>;
+  <span>DOMString</span> <strong>groupId</strong>;
 };</code></pre>
   <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSettings</strong> {
+  <span>DOMString</span>         <strong>whiteBalanceMode</strong>;
+  <span>DOMString</span>         <strong>exposureMode</strong>;
+  <span>DOMString</span>         <strong>focusMode</strong>;
+  sequence<<a href='Point2D.html'>Point2D</a>> <strong>pointsOfInterest</strong>;
 
-partial dictionary MediaTrackSettings {
-  DOMString         whiteBalanceMode;
-  DOMString         exposureMode;
-  DOMString         focusMode;
-  sequence<Point2D> pointsOfInterest;
+  <span>double</span>            <strong>exposureCompensation</strong>;
+  <span>double</span>            <strong>exposureTime</strong>;
+  <span>double</span>            <strong>colorTemperature</strong>;
+  <span>double</span>            <strong>iso</strong>;
 
-  double            exposureCompensation;
-  double            exposureTime;
-  double            colorTemperature;
-  double            iso;
+  <span>double</span>            <strong>brightness</strong>;
+  <span>double</span>            <strong>contrast</strong>;
+  <span>double</span>            <strong>saturation</strong>;
+  <span>double</span>            <strong>sharpness</strong>;
 
-  double            brightness;
-  double            contrast;
-  double            saturation;
-  double            sharpness;
+  <span>double</span>            <strong>focusDistance</strong>;
+  <span>double</span>            <strong>pan</strong>;
+  <span>double</span>            <strong>tilt</strong>;
+  <span>double</span>            <strong>zoom</strong>;
 
-  double            focusDistance;
-  double            pan;
-  double            tilt;
-  double            zoom;
-
-  boolean           torch;
+  <span>boolean</span>           <strong>torch</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>
-
-partial dictionary MediaTrackSettings {
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSettings</strong> {
     // Applies to both depth stream track and color stream track:
-    DOMString           videoKind;
+    <span>DOMString</span>           <strong>videoKind</strong>;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/">Screen Capture</a>
-<pre class=webidl><code>
-
-partial dictionary MediaTrackSettings {
-  DOMString displaySurface;
-  boolean logicalSurface;
-  DOMString cursor;
+<pre class=webidl><code>partial dictionary <strong>MediaTrackSettings</strong> {
+  <span>DOMString</span> <strong>displaySurface</strong>;
+  <span>boolean</span> <strong>logicalSurface</strong>;
+  <span>DOMString</span> <strong>cursor</strong>;
 };</code></pre></li></ol>
 </section>
 <section>

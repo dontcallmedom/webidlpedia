@@ -7,23 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-Blob">File API</a> defines <code>Blob</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker), Serializable]
-interface Blob {
-  constructor(optional sequence<BlobPart> blobParts,
-              optional BlobPropertyBag options = {});
-
-  readonly attribute unsigned long long size;
-  readonly attribute DOMString type;
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
+interface <strong>Blob</strong> {
+  constructor(optional sequence<<a href='BlobPart.html'>BlobPart</a>> <strong>blobParts</strong>,
+              optional <a href='BlobPropertyBag.html'>BlobPropertyBag</a> <strong>options</strong> = {});
+  readonly attribute <span>unsigned long long</span> <strong>size</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
 
   // slice Blob into byte-ranged chunks
-  Blob slice(optional [Clamp] long long start,
-            optional [Clamp] long long end,
-            optional DOMString contentType);
+  <a href='Blob.html'>Blob</a> <strong>slice</strong>(optional [Clamp] <span>long long</span> <strong>start</strong>,
+            optional [Clamp] <span>long long</span> <strong>end</strong>,
+            optional <span>DOMString</span> <strong>contentType</strong>);
 
   // read from the Blob.
-  [NewObject] ReadableStream stream();
-  [NewObject] Promise<USVString> text();
-  [NewObject] Promise<ArrayBuffer> arrayBuffer();
+  [NewObject] <a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>();
+  [NewObject] Promise<<span>USVString</span>> <strong>text</strong>();
+  [NewObject] Promise<<span>ArrayBuffer</span>> <strong>arrayBuffer</strong>();
 };</code></pre>
   
 </section>

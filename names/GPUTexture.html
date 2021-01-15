@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/#gputexture">WebGPU</a> defines <code>GPUTexture</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Serializable]
+interface <strong>GPUTexture</strong> {
+    <a href='GPUTextureView.html'>GPUTextureView</a> <strong>createView</strong>(optional <a href='GPUTextureViewDescriptor.html'>GPUTextureViewDescriptor</a> <strong>descriptor</strong> = {});
 
-[Serializable]
-interface GPUTexture {
-    GPUTextureView createView(optional GPUTextureViewDescriptor descriptor = {});
-
-    undefined destroy();
+    <span>undefined</span> <strong>destroy</strong>();
 };
-GPUTexture includes GPUObjectBase;</code></pre>
+<a href='GPUTexture.html'>GPUTexture</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
   
 </section>
 <section>

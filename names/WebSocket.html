@@ -7,36 +7,35 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
-<pre class=webidl><code>
-[Exposed=(Window,Worker)]
-interface WebSocket : EventTarget {
-  constructor(USVString url, optional (DOMString or sequence<DOMString>) protocols = []);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional (<span>DOMString</span> or sequence<<span>DOMString</span>>) <strong>protocols</strong> = []);
 
-  readonly attribute USVString url;
+  readonly attribute <span>USVString</span> <strong>url</strong>;
 
   // ready state
-  const unsigned short CONNECTING = 0;
-  const unsigned short OPEN = 1;
-  const unsigned short CLOSING = 2;
-  const unsigned short CLOSED = 3;
-  readonly attribute unsigned short readyState;
-  readonly attribute unsigned long long bufferedAmount;
+  const <span>unsigned short</span> <strong>CONNECTING</strong> = 0;
+  const <span>unsigned short</span> <strong>OPEN</strong> = 1;
+  const <span>unsigned short</span> <strong>CLOSING</strong> = 2;
+  const <span>unsigned short</span> <strong>CLOSED</strong> = 3;
+  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>bufferedAmount</strong>;
 
   // networking
-  attribute EventHandler onopen;
-  attribute EventHandler onerror;
-  attribute EventHandler onclose;
-  readonly attribute DOMString extensions;
-  readonly attribute DOMString protocol;
-  undefined close(optional [Clamp] unsigned short code, optional USVString reason);
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  readonly attribute <span>DOMString</span> <strong>extensions</strong>;
+  readonly attribute <span>DOMString</span> <strong>protocol</strong>;
+  <span>undefined</span> <strong>close</strong>(optional [Clamp] <span>unsigned short</span> <strong>code</strong>, optional <span>USVString</span> <strong>reason</strong>);
 
   // messaging
-  attribute EventHandler onmessage;
-  attribute BinaryType binaryType;
-  undefined send(USVString data);
-  undefined send(Blob data);
-  undefined send(ArrayBuffer data);
-  undefined send(ArrayBufferView data);
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
+  <span>undefined</span> <strong>send</strong>(<span>USVString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<span>ArrayBuffer</span> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
 };</code></pre>
   
 </section>

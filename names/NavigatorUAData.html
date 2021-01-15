@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/ua-client-hints/#navigatoruadata">User-Agent Client Hints</a> defines <code>NavigatorUAData</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker)]
-interface NavigatorUAData {
-  readonly attribute FrozenArray<NavigatorUABrandVersion> brands;
-  readonly attribute boolean mobile;
-  Promise<UADataValues> getHighEntropyValues(sequence<DOMString> hints);
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>NavigatorUAData</strong> {
+  readonly attribute FrozenArray<<a href='NavigatorUABrandVersion.html'>NavigatorUABrandVersion</a>> <strong>brands</strong>;
+  readonly attribute <span>boolean</span> <strong>mobile</strong>;
+  Promise<<a href='UADataValues.html'>UADataValues</a>> <strong>getHighEntropyValues</strong>(sequence<<span>DOMString</span>> <strong>hints</strong>);
 };</code></pre>
   
 </section>

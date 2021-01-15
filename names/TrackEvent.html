@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/media.html#trackevent">HTML Standard</a> defines <code>TrackEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>TrackEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='TrackEventInit.html'>TrackEventInit</a> <strong>eventInitDict</strong> = {});
 
-[Exposed=Window]
-interface TrackEvent : Event {
-  constructor(DOMString type, optional TrackEventInit eventInitDict = {});
-
-  readonly attribute (VideoTrack or AudioTrack or TextTrack)? track;
+  readonly attribute (<a href='VideoTrack.html'>VideoTrack</a> or <a href='AudioTrack.html'>AudioTrack</a> or <a href='TextTrack.html'>TextTrack</a>)? <strong>track</strong>;
 };</code></pre>
   
 </section>

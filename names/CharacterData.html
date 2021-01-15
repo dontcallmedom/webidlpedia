@@ -7,18 +7,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#characterdata">DOM Standard</a> defines <code>CharacterData</code></p>
-<pre class=webidl><code>
-CharacterData includes NonDocumentTypeChildNode;
-CharacterData includes ChildNode;
-[Exposed=Window]
-interface CharacterData : Node {
-  attribute [LegacyNullToEmptyString] DOMString data;
-  readonly attribute unsigned long length;
-  DOMString substringData(unsigned long offset, unsigned long count);
-  undefined appendData(DOMString data);
-  undefined insertData(unsigned long offset, DOMString data);
-  undefined deleteData(unsigned long offset, unsigned long count);
-  undefined replaceData(unsigned long offset, unsigned long count, DOMString data);
+<pre class=webidl><code><a href='CharacterData.html'>CharacterData</a> includes <a href='NonDocumentTypeChildNode.html'>NonDocumentTypeChildNode</a>;
+<a href='CharacterData.html'>CharacterData</a> includes <a href='ChildNode.html'>ChildNode</a>;
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CharacterData</strong> : <a href='Node.html'>Node</a> {
+  attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>data</strong>;
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  <span>DOMString</span> <strong>substringData</strong>(<span>unsigned long</span> <strong>offset</strong>, <span>unsigned long</span> <strong>count</strong>);
+  <span>undefined</span> <strong>appendData</strong>(<span>DOMString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>insertData</strong>(<span>unsigned long</span> <strong>offset</strong>, <span>DOMString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>deleteData</strong>(<span>unsigned long</span> <strong>offset</strong>, <span>unsigned long</span> <strong>count</strong>);
+  <span>undefined</span> <strong>replaceData</strong>(<span>unsigned long</span> <strong>offset</strong>, <span>unsigned long</span> <strong>count</strong>, <span>DOMString</span> <strong>data</strong>);
 };</code></pre>
   
 </section>

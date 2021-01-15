@@ -7,13 +7,11 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#dragevent">HTML Standard</a> defines <code>DragEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>DragEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='DragEventInit.html'>DragEventInit</a> <strong>eventInitDict</strong> = {});
 
-[Exposed=Window]
-interface DragEvent : MouseEvent {
-  constructor(DOMString type, optional DragEventInit eventInitDict = {});
-
-  readonly attribute DataTransfer? dataTransfer;
+  readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;
 };</code></pre>
   
 </section>

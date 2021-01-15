@@ -7,23 +7,21 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>NavigatorID</code></p>
-<pre class=webidl><code>
-
-interface mixin NavigatorID {
-  readonly attribute DOMString appCodeName; // constant "Mozilla"
-  readonly attribute DOMString appName; // constant "Netscape"
-  readonly attribute DOMString appVersion;
-  readonly attribute DOMString platform;
-  readonly attribute DOMString product; // constant "Gecko"
-  [Exposed=Window] readonly attribute DOMString productSub;
-  readonly attribute DOMString userAgent;
-  [Exposed=Window] readonly attribute DOMString vendor;
-  [Exposed=Window] readonly attribute DOMString vendorSub; // constant ""
+<pre class=webidl><code>interface mixin <strong>NavigatorID</strong> {
+  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>; // constant "Mozilla"
+  readonly attribute <span>DOMString</span> <strong>appName</strong>; // constant "Netscape"
+  readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
+  readonly attribute <span>DOMString</span> <strong>platform</strong>;
+  readonly attribute <span>DOMString</span> <strong>product</strong>; // constant "Gecko"
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
+  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>; // constant ""
 };
 
-partial interface mixin NavigatorID {
-  [Exposed=Window] boolean taintEnabled(); // constant false
-  [Exposed=Window] readonly attribute DOMString oscpu;
+partial interface mixin <strong>NavigatorID</strong> {
+  [Exposed=<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>(); // constant false
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;
 };</code></pre>
   
 </section>

@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://encoding.spec.whatwg.org/#textdecoder">Encoding Standard</a> defines <code>TextDecoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextDecoder</strong> {
+  constructor(optional <span>DOMString</span> <strong>label</strong> = "utf-8", optional <a href='TextDecoderOptions.html'>TextDecoderOptions</a> <strong>options</strong> = {});
 
-[Exposed=(Window,Worker)]
-interface TextDecoder {
-  constructor(optional DOMString label = "utf-8", optional TextDecoderOptions options = {});
-
-  USVString decode(optional [AllowShared] BufferSource input, optional TextDecodeOptions options = {});
+  <span>USVString</span> <strong>decode</strong>(optional [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>input</strong>, optional <a href='TextDecodeOptions.html'>TextDecodeOptions</a> <strong>options</strong> = {});
 };
-TextDecoder includes TextDecoderCommon;</code></pre>
+<a href='TextDecoder.html'>TextDecoder</a> includes <a href='TextDecoderCommon.html'>TextDecoderCommon</a>;</code></pre>
   
 </section>
 

@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#sharedworker">HTML Standard</a> defines <code>SharedWorker</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SharedWorker</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional (<span>DOMString</span> or <a href='WorkerOptions.html'>WorkerOptions</a>) <strong>options</strong> = {});
 
-[Exposed=Window]
-interface SharedWorker : EventTarget {
-  constructor(USVString scriptURL, optional (DOMString or WorkerOptions) options = {});
-
-  readonly attribute MessagePort port;
+  readonly attribute <a href='MessagePort.html'>MessagePort</a> <strong>port</strong>;
 };
-SharedWorker includes AbstractWorker;</code></pre>
+<a href='SharedWorker.html'>SharedWorker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
   
 </section>
 

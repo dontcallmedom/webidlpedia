@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/deviceorientation/#devicemotionevent">DeviceOrientation Event Specification</a> defines <code>DeviceMotionEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>DeviceMotionEvent</strong> : <a href='Event.html'>Event</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='DeviceMotionEventInit.html'>DeviceMotionEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly attribute <a href='DeviceMotionEventAcceleration.html'>DeviceMotionEventAcceleration</a>? <strong>acceleration</strong>;
+    readonly attribute <a href='DeviceMotionEventAcceleration.html'>DeviceMotionEventAcceleration</a>? <strong>accelerationIncludingGravity</strong>;
+    readonly attribute <a href='DeviceMotionEventRotationRate.html'>DeviceMotionEventRotationRate</a>? <strong>rotationRate</strong>;
+    readonly attribute <span>double</span> <strong>interval</strong>;
 
-[Exposed=Window, SecureContext]
-interface DeviceMotionEvent : Event {
-    constructor(DOMString type, optional DeviceMotionEventInit eventInitDict = {});
-    readonly attribute DeviceMotionEventAcceleration? acceleration;
-    readonly attribute DeviceMotionEventAcceleration? accelerationIncludingGravity;
-    readonly attribute DeviceMotionEventRotationRate? rotationRate;
-    readonly attribute double interval;
-
-    static Promise<PermissionState> requestPermission();
+    static Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>();
 };</code></pre>
   
 </section>

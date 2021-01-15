@@ -7,20 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a> defines <code>GPUProgrammablePassEncoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>interface mixin <strong>GPUProgrammablePassEncoder</strong> {
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      optional sequence<<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>> <strong>dynamicOffsets</strong> = []);
 
-interface mixin GPUProgrammablePassEncoder {
-    undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup,
-                      optional sequence<GPUBufferDynamicOffset> dynamicOffsets = []);
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      <span>Uint32Array</span> <strong>dynamicOffsetsData</strong>,
+                      <a href='GPUSize64.html'>GPUSize64</a> <strong>dynamicOffsetsDataStart</strong>,
+                      <a href='GPUSize32.html'>GPUSize32</a> <strong>dynamicOffsetsDataLength</strong>);
 
-    undefined setBindGroup(GPUIndex32 index, GPUBindGroup bindGroup,
-                      Uint32Array dynamicOffsetsData,
-                      GPUSize64 dynamicOffsetsDataStart,
-                      GPUSize32 dynamicOffsetsDataLength);
-
-    undefined pushDebugGroup(USVString groupLabel);
-    undefined popDebugGroup();
-    undefined insertDebugMarker(USVString markerLabel);
+    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
+    <span>undefined</span> <strong>popDebugGroup</strong>();
+    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
 };</code></pre>
   
 </section>

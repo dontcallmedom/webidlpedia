@@ -7,53 +7,51 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats">Identifiers for WebRTC's Statistics API</a> defines <code>RTCInboundRtpStreamStats</code></p>
-<pre class=webidl><code>
-
-dictionary RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats {
- required DOMString   receiverId;
- DOMString            remoteId;
- unsigned long        framesDecoded;
- unsigned long        keyFramesDecoded;
- unsigned long        frameWidth;
- unsigned long        frameHeight;
- unsigned long        frameBitDepth;
- double               framesPerSecond;
- unsigned long long   qpSum;
- double               totalDecodeTime;
- double               totalInterFrameDelay;
- double               totalSquaredInterFrameDelay;
- boolean              voiceActivityFlag;
- DOMHighResTimeStamp  lastPacketReceivedTimestamp;
- double               averageRtcpInterval;
- unsigned long long   headerBytesReceived;
- unsigned long long   fecPacketsReceived;
- unsigned long long   fecPacketsDiscarded;
- unsigned long long   bytesReceived;
- unsigned long long   packetsFailedDecryption;
- unsigned long long   packetsDuplicated;
- record<USVString, unsigned long long> perDscpPacketsReceived;
- unsigned long        nackCount;
- unsigned long        firCount;
- unsigned long        pliCount;
- unsigned long        sliCount;
- double               totalProcessingDelay;
- DOMHighResTimeStamp  estimatedPlayoutTimestamp;
- double               jitterBufferDelay;
- unsigned long long   jitterBufferEmittedCount;
- unsigned long long   totalSamplesReceived;
- unsigned long long   totalSamplesDecoded;
- unsigned long long   samplesDecodedWithSilk;
- unsigned long long   samplesDecodedWithCelt;
- unsigned long long   concealedSamples;
- unsigned long long   silentConcealedSamples;
- unsigned long long   concealmentEvents;
- unsigned long long   insertedSamplesForDeceleration;
- unsigned long long   removedSamplesForAcceleration;
- double               audioLevel;
- double               totalAudioEnergy;
- double               totalSamplesDuration;
- unsigned long        framesReceived;
- DOMString            decoderImplementation;
+<pre class=webidl><code>dictionary <strong>RTCInboundRtpStreamStats</strong> : <a href='RTCReceivedRtpStreamStats.html'>RTCReceivedRtpStreamStats</a> {
+ required <span>DOMString</span>   <strong>receiverId</strong>;
+ <span>DOMString</span>            <strong>remoteId</strong>;
+ <span>unsigned long</span>        <strong>framesDecoded</strong>;
+ <span>unsigned long</span>        <strong>keyFramesDecoded</strong>;
+ <span>unsigned long</span>        <strong>frameWidth</strong>;
+ <span>unsigned long</span>        <strong>frameHeight</strong>;
+ <span>unsigned long</span>        <strong>frameBitDepth</strong>;
+ <span>double</span>               <strong>framesPerSecond</strong>;
+ <span>unsigned long long</span>   <strong>qpSum</strong>;
+ <span>double</span>               <strong>totalDecodeTime</strong>;
+ <span>double</span>               <strong>totalInterFrameDelay</strong>;
+ <span>double</span>               <strong>totalSquaredInterFrameDelay</strong>;
+ <span>boolean</span>              <strong>voiceActivityFlag</strong>;
+ <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>lastPacketReceivedTimestamp</strong>;
+ <span>double</span>               <strong>averageRtcpInterval</strong>;
+ <span>unsigned long long</span>   <strong>headerBytesReceived</strong>;
+ <span>unsigned long long</span>   <strong>fecPacketsReceived</strong>;
+ <span>unsigned long long</span>   <strong>fecPacketsDiscarded</strong>;
+ <span>unsigned long long</span>   <strong>bytesReceived</strong>;
+ <span>unsigned long long</span>   <strong>packetsFailedDecryption</strong>;
+ <span>unsigned long long</span>   <strong>packetsDuplicated</strong>;
+ record<<span>USVString</span>, <span>unsigned long long</span>> <strong>perDscpPacketsReceived</strong>;
+ <span>unsigned long</span>        <strong>nackCount</strong>;
+ <span>unsigned long</span>        <strong>firCount</strong>;
+ <span>unsigned long</span>        <strong>pliCount</strong>;
+ <span>unsigned long</span>        <strong>sliCount</strong>;
+ <span>double</span>               <strong>totalProcessingDelay</strong>;
+ <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>estimatedPlayoutTimestamp</strong>;
+ <span>double</span>               <strong>jitterBufferDelay</strong>;
+ <span>unsigned long long</span>   <strong>jitterBufferEmittedCount</strong>;
+ <span>unsigned long long</span>   <strong>totalSamplesReceived</strong>;
+ <span>unsigned long long</span>   <strong>totalSamplesDecoded</strong>;
+ <span>unsigned long long</span>   <strong>samplesDecodedWithSilk</strong>;
+ <span>unsigned long long</span>   <strong>samplesDecodedWithCelt</strong>;
+ <span>unsigned long long</span>   <strong>concealedSamples</strong>;
+ <span>unsigned long long</span>   <strong>silentConcealedSamples</strong>;
+ <span>unsigned long long</span>   <strong>concealmentEvents</strong>;
+ <span>unsigned long long</span>   <strong>insertedSamplesForDeceleration</strong>;
+ <span>unsigned long long</span>   <strong>removedSamplesForAcceleration</strong>;
+ <span>double</span>               <strong>audioLevel</strong>;
+ <span>double</span>               <strong>totalAudioEnergy</strong>;
+ <span>double</span>               <strong>totalSamplesDuration</strong>;
+ <span>unsigned long</span>        <strong>framesReceived</strong>;
+ <span>DOMString</span>            <strong>decoderImplementation</strong>;
 };</code></pre>
   
 </section>

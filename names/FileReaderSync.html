@@ -7,17 +7,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-FileReaderSync">File API</a> defines <code>FileReaderSync</code></p>
-<pre class=webidl><code>
-
-[Exposed=(DedicatedWorker,SharedWorker)]
-interface FileReaderSync {
+<pre class=webidl><code>[Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+interface <strong>FileReaderSync</strong> {
   constructor();
   // Synchronously return strings
 
-  ArrayBuffer readAsArrayBuffer(Blob blob);
-  DOMString readAsBinaryString(Blob blob);
-  DOMString readAsText(Blob blob, optional DOMString encoding);
-  DOMString readAsDataURL(Blob blob);
+  <span>ArrayBuffer</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
+  <span>DOMString</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
+  <span>DOMString</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span>DOMString</span> <strong>encoding</strong>);
+  <span>DOMString</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
 };</code></pre>
   
 </section>

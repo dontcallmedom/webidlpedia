@@ -7,21 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.fxtf.org/geometry/#dompoint">Geometry Interfaces Module Level 1</a> defines <code>DOMPoint</code></p>
-<pre class=webidl><code>
-
-[Exposed=(Window,Worker),
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable,
- LegacyWindowAlias=SVGPoint]
-interface DOMPoint : DOMPointReadOnly {
-    constructor(optional unrestricted double x = 0, optional unrestricted double y = 0,
-            optional unrestricted double z = 0, optional unrestricted double w = 1);
+ LegacyWindowAlias=<span>SVGPoint</span>]
+interface <strong>DOMPoint</strong> : <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> {
+    constructor(optional <span>unrestricted double</span> <strong>x</strong> = 0, optional <span>unrestricted double</span> <strong>y</strong> = 0,
+            optional <span>unrestricted double</span> <strong>z</strong> = 0, optional <span>unrestricted double</span> <strong>w</strong> = 1);
 
-    [NewObject] static DOMPoint fromPoint(optional DOMPointInit other = {});
+    [NewObject] static <a href='DOMPoint.html'>DOMPoint</a> <strong>fromPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>other</strong> = {});
 
-    inherit attribute unrestricted double x;
-    inherit attribute unrestricted double y;
-    inherit attribute unrestricted double z;
-    inherit attribute unrestricted double w;
+    inherit attribute <span>unrestricted double</span> <strong>x</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>y</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>z</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>w</strong>;
 };</code></pre>
   
 </section>

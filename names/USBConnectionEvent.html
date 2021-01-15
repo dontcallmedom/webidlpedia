@@ -7,15 +7,13 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://wicg.github.io/webusb/#usbconnectionevent">WebUSB API</a> defines <code>USBConnectionEvent</code></p>
-<pre class=webidl><code>
-
-[
-  Exposed=(DedicatedWorker,SharedWorker,Window),
+<pre class=webidl><code>[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
   SecureContext
 ]
-interface USBConnectionEvent : Event {
-  constructor(DOMString type, USBConnectionEventInit eventInitDict);
-  [SameObject] readonly attribute USBDevice device;
+interface <strong>USBConnectionEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='USBConnectionEventInit.html'>USBConnectionEventInit</a> <strong>eventInitDict</strong>);
+  [SameObject] readonly attribute <a href='USBDevice.html'>USBDevice</a> <strong>device</strong>;
 };</code></pre>
   
 </section>

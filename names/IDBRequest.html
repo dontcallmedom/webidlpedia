@@ -7,17 +7,16 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbrequest">Indexed Database API 3.0</a> defines <code>IDBRequest</code></p>
-<pre class=webidl><code>[Exposed=(Window,Worker)]
-interface IDBRequest : EventTarget {
-  readonly attribute any result;
-  readonly attribute DOMException? error;
-  readonly attribute (IDBObjectStore or IDBIndex or IDBCursor)? source;
-  readonly attribute IDBTransaction? transaction;
-  readonly attribute IDBRequestReadyState readyState;
-
+<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>any</span> <strong>result</strong>;
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
+  readonly attribute (<a href='IDBObjectStore.html'>IDBObjectStore</a> or <a href='IDBIndex.html'>IDBIndex</a> or <a href='IDBCursor.html'>IDBCursor</a>)? <strong>source</strong>;
+  readonly attribute <a href='IDBTransaction.html'>IDBTransaction</a>? <strong>transaction</strong>;
+  readonly attribute <a href='IDBRequestReadyState.html'>IDBRequestReadyState</a> <strong>readyState</strong>;
   // Event handlers:
-  attribute EventHandler onsuccess;
-  attribute EventHandler onerror;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuccess</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
 };</code></pre>
   
 </section>

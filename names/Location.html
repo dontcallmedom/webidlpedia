@@ -7,25 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/history.html#location">HTML Standard</a> defines <code>Location</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Location</strong> { // but see also additional creation steps and overridden internal methods
+  [LegacyUnforgeable] stringifier attribute <span>USVString</span> <strong>href</strong>;
+  [LegacyUnforgeable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>protocol</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>host</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>hostname</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>port</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>pathname</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>search</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>hash</strong>;
 
-[Exposed=Window]
-interface Location { // but see also additional creation steps and overridden internal methods
-  [LegacyUnforgeable] stringifier attribute USVString href;
-  [LegacyUnforgeable] readonly attribute USVString origin;
-  [LegacyUnforgeable] attribute USVString protocol;
-  [LegacyUnforgeable] attribute USVString host;
-  [LegacyUnforgeable] attribute USVString hostname;
-  [LegacyUnforgeable] attribute USVString port;
-  [LegacyUnforgeable] attribute USVString pathname;
-  [LegacyUnforgeable] attribute USVString search;
-  [LegacyUnforgeable] attribute USVString hash;
+  [LegacyUnforgeable] <span>undefined</span> <strong>assign</strong>(<span>USVString</span> <strong>url</strong>);
+  [LegacyUnforgeable] <span>undefined</span> <strong>replace</strong>(<span>USVString</span> <strong>url</strong>);
+  [LegacyUnforgeable] <span>undefined</span> <strong>reload</strong>();
 
-  [LegacyUnforgeable] undefined assign(USVString url);
-  [LegacyUnforgeable] undefined replace(USVString url);
-  [LegacyUnforgeable] undefined reload();
-
-  [LegacyUnforgeable, SameObject] readonly attribute DOMStringList ancestorOrigins;
+  [LegacyUnforgeable, SameObject] readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>ancestorOrigins</strong>;
 };</code></pre>
   
 </section>
