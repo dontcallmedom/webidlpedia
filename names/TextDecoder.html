@@ -15,6 +15,17 @@ interface <strong>TextDecoder</strong> {
 };
 <a href='TextDecoder.html'>TextDecoder</a> includes <a href='TextDecoderCommon.html'>TextDecoderCommon</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextDecoder</strong> {
+  constructor(optional <span>DOMString</span> <strong>label</strong> = "utf-8", optional <a href='TextDecoderOptions.html'>TextDecoderOptions</a> <strong>options</strong> = {});
+
+  <span>USVString</span> <strong>decode</strong>(optional [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>input</strong>, optional <a href='TextDecodeOptions.html'>TextDecodeOptions</a> <strong>options</strong> = {});
+  readonly attribute <span>DOMString</span> <strong>encoding</strong>;
+  readonly attribute <span>boolean</span> <strong>fatal</strong>;
+  readonly attribute <span>boolean</span> <strong>ignoreBOM</strong>;
+};</code></pre></details>
 </section>
 
   

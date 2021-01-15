@@ -16,6 +16,16 @@ interface <strong>MutationObserver</strong> {
   sequence<<a href='MutationRecord.html'>MutationRecord</a>> <strong>takeRecords</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MutationObserver</strong> {
+  constructor(<a href='MutationCallback.html'>MutationCallback</a> <strong>callback</strong>);
+
+  <span>undefined</span> <strong>observe</strong>(<a href='Node.html'>Node</a> <strong>target</strong>, optional <a href='MutationObserverInit.html'>MutationObserverInit</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>disconnect</strong>();
+  sequence<<a href='MutationRecord.html'>MutationRecord</a>> <strong>takeRecords</strong>();
+};</code></pre></details>
 </section>
 
   

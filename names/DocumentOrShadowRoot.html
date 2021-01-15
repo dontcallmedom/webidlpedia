@@ -31,6 +31,17 @@ base: ../
 <pre class=webidl><code>partial interface mixin <strong>DocumentOrShadowRoot</strong> {
     sequence<<a href='Animation.html'>Animation</a>> <strong>getAnimations</strong>();
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+interface mixin <strong>DocumentOrShadowRoot</strong> {
+  [LegacyLenientSetter] readonly attribute <a href='Element.html'>Element</a>? <strong>fullscreenElement</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>activeElement</strong>;
+  attribute FrozenArray<<a href='CSSStyleSheet.html'>CSSStyleSheet</a>> <strong>adoptedStyleSheets</strong>;
+  [SameObject] readonly attribute <a href='StyleSheetList.html'>StyleSheetList</a> <strong>styleSheets</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>pictureInPictureElement</strong>;
+  readonly attribute <a href='Element.html'>Element</a> ? <strong>pointerLockElement</strong>;
+    sequence<<a href='Animation.html'>Animation</a>> <strong>getAnimations</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

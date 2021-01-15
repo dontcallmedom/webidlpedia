@@ -19,6 +19,19 @@ interface <strong>TouchEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
     readonly        attribute <span>boolean</span>   <strong>shiftKey</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>TouchEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='TouchEventInit.html'>TouchEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly        attribute <a href='TouchList.html'>TouchList</a> <strong>touches</strong>;
+    readonly        attribute <a href='TouchList.html'>TouchList</a> <strong>targetTouches</strong>;
+    readonly        attribute <a href='TouchList.html'>TouchList</a> <strong>changedTouches</strong>;
+    readonly        attribute <span>boolean</span>   <strong>altKey</strong>;
+    readonly        attribute <span>boolean</span>   <strong>metaKey</strong>;
+    readonly        attribute <span>boolean</span>   <strong>ctrlKey</strong>;
+    readonly        attribute <span>boolean</span>   <strong>shiftKey</strong>;
+};</code></pre></details>
 </section>
 
   

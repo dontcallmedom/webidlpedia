@@ -26,6 +26,21 @@ partial interface <strong>CSSStyleSheet</strong> {
   Promise<<a href='CSSStyleSheet.html'>CSSStyleSheet</a>> <strong>replace</strong>(<span>USVString</span> <strong>text</strong>);
   <a href='void.html'>void</a> <strong>replaceSync</strong>(<span>USVString</span> <strong>text</strong>);
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;
+  <span>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span>unsigned long</span> <strong>index</strong> = 0);
+  <span>undefined</span> <strong>deleteRule</strong>(<span>unsigned long</span> <strong>index</strong>);
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;
+  <span>long</span> <strong>addRule</strong>(optional <span>DOMString</span> <strong>selector</strong> = "undefined", optional <span>DOMString</span> <strong>style</strong> = "undefined", optional <span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>removeRule</strong>(optional <span>unsigned long</span> <strong>index</strong> = 0);
+  constructor(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> = {});
+  Promise<<a href='CSSStyleSheet.html'>CSSStyleSheet</a>> <strong>replace</strong>(<span>USVString</span> <strong>text</strong>);
+  <a href='void.html'>void</a> <strong>replaceSync</strong>(<span>USVString</span> <strong>text</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

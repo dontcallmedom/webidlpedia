@@ -27,6 +27,27 @@ interface <strong>HTMLFieldSetElement</strong> : <a href='HTMLElement.html'>HTML
   <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLFieldSetElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>elements</strong>;
+
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  [SameObject] readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
+};</code></pre></details>
 </section>
 
   

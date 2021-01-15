@@ -48,6 +48,36 @@ base: ../
 <pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
   [SameObject] readonly attribute <a href='Crypto.html'>Crypto</a> <strong>crypto</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
+  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
+  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;
+
+  // base64 utility methods
+  <span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
+  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);
+
+  // timers
+  <span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+
+  // microtask queuing
+  <span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);
+
+  // ImageBitmap
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  [NewObject] Promise<<a href='Response.html'>Response</a>> <strong>fetch</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> = {});
+  readonly attribute FrozenArray<<span>DOMString</span>> <strong>originPolicyIds</strong>;
+  [Replaceable] readonly attribute <a href='Performance.html'>Performance</a> <strong>performance</strong>;
+  [SameObject] readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong>indexedDB</strong>;
+  [SecureContext, SameObject] readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong>caches</strong>;
+  [SameObject] readonly attribute <a href='Crypto.html'>Crypto</a> <strong>crypto</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -24,6 +24,19 @@ partial interface <strong>Screen</strong> {
 <pre class=webidl><code>partial interface <strong>Screen</strong> {
   [SameObject] readonly attribute <a href='ScreenOrientation.html'>ScreenOrientation</a> <strong>orientation</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Screen</strong> {
+  readonly attribute <span>long</span> <strong>availWidth</strong>;
+  readonly attribute <span>long</span> <strong>availHeight</strong>;
+  readonly attribute <span>long</span> <strong>width</strong>;
+  readonly attribute <span>long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>colorDepth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>pixelDepth</strong>;
+  [SameObject] readonly attribute <a href='ScreenFold.html'>ScreenFold</a> <strong>fold</strong>;
+  [SameObject] readonly attribute <a href='ScreenOrientation.html'>ScreenOrientation</a> <strong>orientation</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

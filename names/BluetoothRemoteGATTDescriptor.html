@@ -17,6 +17,17 @@ interface <strong>BluetoothRemoteGATTDescriptor</strong> {
   Promise<<a href='void.html'>void</a>> <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>BluetoothRemoteGATTDescriptor</strong> {
+  [SameObject]
+  readonly attribute <a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a> <strong>characteristic</strong>;
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;
+  readonly attribute <span>DataView</span>? <strong>value</strong>;
+  Promise<<span>DataView</span>> <strong>readValue</strong>();
+  Promise<<a href='void.html'>void</a>> <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

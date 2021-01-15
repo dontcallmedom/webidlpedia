@@ -18,6 +18,18 @@ interface <strong>PushSubscription</strong> {
   <a href='PushSubscriptionJSON.html'>PushSubscriptionJSON</a> <strong>toJSON</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext]
+interface <strong>PushSubscription</strong> {
+  readonly attribute <span>USVString</span> <strong>endpoint</strong>;
+  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a>? <strong>expirationTime</strong>;
+  [SameObject] readonly attribute <a href='PushSubscriptionOptions.html'>PushSubscriptionOptions</a> <strong>options</strong>;
+  <span>ArrayBuffer</span>? <strong>getKey</strong>(<a href='PushEncryptionKeyName.html'>PushEncryptionKeyName</a> <strong>name</strong>);
+  Promise<<span>boolean</span>> <strong>unsubscribe</strong>();
+
+  <a href='PushSubscriptionJSON.html'>PushSubscriptionJSON</a> <strong>toJSON</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

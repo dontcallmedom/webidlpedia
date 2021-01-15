@@ -21,6 +21,21 @@ base: ../
     <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+interface mixin <strong>GPUProgrammablePassEncoder</strong> {
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      optional sequence<<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>> <strong>dynamicOffsets</strong> = []);
+
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      <span>Uint32Array</span> <strong>dynamicOffsetsData</strong>,
+                      <a href='GPUSize64.html'>GPUSize64</a> <strong>dynamicOffsetsDataStart</strong>,
+                      <a href='GPUSize32.html'>GPUSize32</a> <strong>dynamicOffsetsDataLength</strong>);
+
+    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
+    <span>undefined</span> <strong>popDebugGroup</strong>();
+    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

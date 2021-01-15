@@ -40,6 +40,40 @@ interface <strong>IDBObjectStore</strong> {
   <span>undefined</span> <strong>deleteIndex</strong>(<span>DOMString</span> <strong>name</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBObjectStore</strong> {
+  attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>any</span> <strong>keyPath</strong>;
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>indexNames</strong>;
+  [SameObject] readonly attribute <a href='IDBTransaction.html'>IDBTransaction</a> <strong>transaction</strong>;
+  readonly attribute <span>boolean</span> <strong>autoIncrement</strong>;
+
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>put</strong>(<span>any</span> <strong>value</strong>, optional <span>any</span> <strong>key</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>add</strong>(<span>any</span> <strong>value</strong>, optional <span>any</span> <strong>key</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>delete</strong>(<span>any</span> <strong>query</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>clear</strong>();
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>get</strong>(<span>any</span> <strong>query</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getKey</strong>(<span>any</span> <strong>query</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAll</strong>(optional <span>any</span> <strong>query</strong>,
+                                optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAllKeys</strong>(optional <span>any</span> <strong>query</strong>,
+                                    optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>count</strong>(optional <span>any</span> <strong>query</strong>);
+
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openCursor</strong>(optional <span>any</span> <strong>query</strong>,
+                                    optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openKeyCursor</strong>(optional <span>any</span> <strong>query</strong>,
+                                       optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
+
+  <a href='IDBIndex.html'>IDBIndex</a> <strong>index</strong>(<span>DOMString</span> <strong>name</strong>);
+
+  [NewObject] <a href='IDBIndex.html'>IDBIndex</a> <strong>createIndex</strong>(<span>DOMString</span> <strong>name</strong>,
+                                   (<span>DOMString</span> or sequence<<span>DOMString</span>>) <strong>keyPath</strong>,
+                                   optional <a href='IDBIndexParameters.html'>IDBIndexParameters</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>deleteIndex</strong>(<span>DOMString</span> <strong>name</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

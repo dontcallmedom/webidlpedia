@@ -44,6 +44,117 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {
   readonly attribute <span>long</span> <strong>offsetWidth</strong>;
   readonly attribute <span>long</span> <strong>offsetHeight</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {
+  [HTMLConstructor] constructor();
+
+  // metadata attributes
+  [CEReactions] attribute <span>DOMString</span> <strong>title</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>lang</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>translate</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>dir</strong>;
+
+  // user interaction
+  [CEReactions] attribute <span>boolean</span> <strong>hidden</strong>;
+  <span>undefined</span> <strong>click</strong>();
+  [CEReactions] attribute <span>DOMString</span> <strong>accessKey</strong>;
+  readonly attribute <span>DOMString</span> <strong>accessKeyLabel</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>draggable</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>spellcheck</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>autocapitalize</strong>;
+
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>innerText</strong>;
+
+  <a href='ElementInternals.html'>ElementInternals</a> <strong>attachInternals</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>contentEditable</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>enterKeyHint</strong>;
+  readonly attribute <span>boolean</span> <strong>isContentEditable</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>inputMode</strong>;
+  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;
+  attribute <span>DOMString</span> <strong>nonce</strong>; // intentionally no [CEReactions]
+
+  [CEReactions] attribute <span>boolean</span> <strong>autofocus</strong>;
+  [CEReactions] attribute <span>long</span> <strong>tabIndex</strong>;
+  <span>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>blur</strong>();
+  [SameObject, PutForwards=<span>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;
+  readonly attribute <span>long</span> <strong>offsetTop</strong>;
+  readonly attribute <span>long</span> <strong>offsetLeft</strong>;
+  readonly attribute <span>long</span> <strong>offsetWidth</strong>;
+  readonly attribute <span>long</span> <strong>offsetHeight</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

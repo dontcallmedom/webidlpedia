@@ -16,6 +16,18 @@ interface <strong>ReadableStreamDefaultReader</strong> {
 };
 <a href='ReadableStreamDefaultReader.html'>ReadableStreamDefaultReader</a> includes <a href='ReadableStreamGenericReader.html'>ReadableStreamGenericReader</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>ReadableStreamDefaultReader</strong> {
+  constructor(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);
+
+  Promise<<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>> <strong>read</strong>();
+  <span>undefined</span> <strong>releaseLock</strong>();
+  readonly attribute Promise<<span>undefined</span>> <strong>closed</strong>;
+
+  Promise<<span>undefined</span>> <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
+};</code></pre></details>
 </section>
 
   

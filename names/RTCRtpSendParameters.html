@@ -15,6 +15,13 @@ base: ../
 <pre class=webidl><code>partial dictionary <strong>RTCRtpSendParameters</strong> {
  <a href='RTCDegradationPreference.html'>RTCDegradationPreference</a> <strong>degradationPreference</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>RTCRtpSendParameters</strong> : <a href='RTCRtpParameters.html'>RTCRtpParameters</a> {
+  required <span>DOMString</span> <strong>transactionId</strong>;
+  required sequence<<a href='RTCRtpEncodingParameters.html'>RTCRtpEncodingParameters</a>> <strong>encodings</strong>;
+ <a href='RTCDegradationPreference.html'>RTCDegradationPreference</a> <strong>degradationPreference</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

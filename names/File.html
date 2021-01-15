@@ -19,6 +19,17 @@ interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {
 <pre class=webidl><code>partial interface <strong>File</strong> {
     readonly attribute <span>USVString</span> <strong>webkitRelativePath</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {
+  constructor(sequence<<a href='BlobPart.html'>BlobPart</a>> <strong>fileBits</strong>,
+              <span>USVString</span> <strong>fileName</strong>,
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> = {});
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
+    readonly attribute <span>USVString</span> <strong>webkitRelativePath</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

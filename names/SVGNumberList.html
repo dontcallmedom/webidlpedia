@@ -23,6 +23,23 @@ interface <strong>SVGNumberList</strong> {
   setter <a href='void.html'>void</a> (<span>unsigned long</span> <strong>index</strong>, <a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGNumberList</strong> {
+
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfItems</strong>;
+
+  <a href='void.html'>void</a> <strong>clear</strong>();
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>initialize</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
+  getter <a href='SVGNumber.html'>SVGNumber</a> <strong>getItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>insertItemBefore</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>replaceItem</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>, <span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>removeItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>appendItem</strong>(<a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
+  setter <a href='void.html'>void</a> (<span>unsigned long</span> <strong>index</strong>, <a href='SVGNumber.html'>SVGNumber</a> <strong>newItem</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -19,6 +19,19 @@ interface <strong>VideoTrackList</strong> : <a href='EventTarget.html'>EventTarg
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onremovetrack</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>VideoTrackList</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='VideoTrack.html'>VideoTrack</a> (<span>unsigned long</span> <strong>index</strong>);
+  <a href='VideoTrack.html'>VideoTrack</a>? <strong>getTrackById</strong>(<span>DOMString</span> <strong>id</strong>);
+  readonly attribute <span>long</span> <strong>selectedIndex</strong>;
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onaddtrack</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onremovetrack</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

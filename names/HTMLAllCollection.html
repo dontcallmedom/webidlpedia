@@ -17,6 +17,16 @@ interface <strong>HTMLAllCollection</strong> {
   // Note: HTMLAllCollection objects have a custom [[Call]] internal method and an [[IsHTMLDDA]] internal slot.
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>,
+ LegacyUnenumerableNamedProperties]
+interface <strong>HTMLAllCollection</strong> {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='Element.html'>Element</a> (<span>unsigned long</span> <strong>index</strong>);
+  getter (<a href='HTMLCollection.html'>HTMLCollection</a> or <a href='Element.html'>Element</a>)? <strong>namedItem</strong>(<span>DOMString</span> <strong>name</strong>);
+  (<a href='HTMLCollection.html'>HTMLCollection</a> or <a href='Element.html'>Element</a>)? <strong>item</strong>(optional <span>DOMString</span> <strong>nameOrIndex</strong>);
+
+  // Note: HTMLAllCollection objects have a custom [[Call]] internal method and an [[IsHTMLDDA]] internal slot.
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

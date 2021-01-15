@@ -15,6 +15,15 @@ interface <strong>CookieStoreManager</strong> {
   Promise<<span>undefined</span>> <strong>unsubscribe</strong>(sequence<<a href='CookieStoreGetOptions.html'>CookieStoreGetOptions</a>> <strong>subscriptions</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='ServiceWorker.html'>ServiceWorker</a>,<a href='Window.html'>Window</a>),
+ SecureContext]
+interface <strong>CookieStoreManager</strong> {
+  Promise<<span>undefined</span>> <strong>subscribe</strong>(sequence<<a href='CookieStoreGetOptions.html'>CookieStoreGetOptions</a>> <strong>subscriptions</strong>);
+  Promise<sequence<<a href='CookieStoreGetOptions.html'>CookieStoreGetOptions</a>>> <strong>getSubscriptions</strong>();
+  Promise<<span>undefined</span>> <strong>unsubscribe</strong>(sequence<<a href='CookieStoreGetOptions.html'>CookieStoreGetOptions</a>> <strong>subscriptions</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

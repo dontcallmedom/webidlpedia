@@ -31,6 +31,27 @@ base: ../
 <pre class=webidl><code>partial dictionary <strong>WebAppManifest</strong> {
   <a href='ShareTarget.html'>ShareTarget</a> <strong>share_target</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>dictionary <strong>WebAppManifest</strong> {
+   <a href='TextDirectionType.html'>TextDirectionType</a> <strong>dir</strong> = "auto";
+   <span>DOMString</span> <strong>lang</strong>;
+   <span>USVString</span> <strong>name</strong>;
+   <span>USVString</span> <strong>short_name</strong>;
+   <span>USVString</span> <strong>description</strong>;
+   sequence<<a href='ManifestImageResource.html'>ManifestImageResource</a>> <strong>icons</strong>;
+   sequence<<a href='ManifestImageResource.html'>ManifestImageResource</a>> <strong>screenshots</strong>;
+   sequence<<span>USVString</span>> <strong>categories</strong>;
+   <span>DOMString</span> <strong>iarc_rating_id</strong>;
+   <span>USVString</span> <strong>start_url</strong>;
+   <a href='DisplayModeType.html'>DisplayModeType</a> <strong>display</strong> = "browser";
+   <a href='OrientationLockType.html'>OrientationLockType</a> <strong>orientation</strong>;
+   <span>USVString</span> <strong>theme_color</strong>;
+   <span>USVString</span> <strong>background_color</strong>;
+   <span>USVString</span> <strong>scope</strong>;
+   sequence<<a href='ExternalApplicationResource.html'>ExternalApplicationResource</a>> <strong>related_applications</strong>;
+   <span>boolean</span> <strong>prefer_related_applications</strong> = "false";
+   sequence<<a href='ShortcutItem.html'>ShortcutItem</a>> <strong>shortcuts</strong>;
+  <a href='ShareTarget.html'>ShareTarget</a> <strong>share_target</strong>;
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/web-share-target/">Web Share Target API</a> refers to <code>WebAppManifest</code></li></ul>

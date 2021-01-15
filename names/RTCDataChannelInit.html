@@ -19,6 +19,17 @@ base: ../
 <pre class=webidl><code>partial dictionary <strong>RTCDataChannelInit</strong> {
   <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> = "low";
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>RTCDataChannelInit</strong> {
+  <span>boolean</span> <strong>ordered</strong> = true;
+  [EnforceRange] <span>unsigned short</span> <strong>maxPacketLifeTime</strong>;
+  [EnforceRange] <span>unsigned short</span> <strong>maxRetransmits</strong>;
+  <span>USVString</span> <strong>protocol</strong> = "";
+  <span>boolean</span> <strong>negotiated</strong> = false;
+  [EnforceRange] <span>unsigned short</span> <strong>id</strong>;
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> = "low";
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

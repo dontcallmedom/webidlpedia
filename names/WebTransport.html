@@ -23,6 +23,29 @@ interface <strong>WebTransport</strong> {
 <a href='WebTransport.html'>WebTransport</a> includes <a href='BidirectionalStreamsTransport.html'>BidirectionalStreamsTransport</a>;
 <a href='WebTransport.html'>WebTransport</a> includes <a href='DatagramTransport.html'>DatagramTransport</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>WebTransport</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> = {});
+
+  Promise<<a href='WebTransportStats.html'>WebTransportStats</a>> <strong>getStats</strong>();
+  readonly attribute <a href='WebTransportState.html'>WebTransportState</a> <strong>state</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
+  readonly attribute Promise<<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>> <strong>closed</strong>;
+  <span>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> = {});
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+  Promise<<a href='SendStream.html'>SendStream</a>> <strong>createUnidirectionalStream</strong>(optional <a href='SendStreamParameters.html'>SendStreamParameters</a> <strong>parameters</strong> = {});
+  /* a ReadableStream of ReceiveStream objects */
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;
+    Promise<<a href='BidirectionalStream.html'>BidirectionalStream</a>> <strong>createBidirectionalStream</strong>();
+    /* a ReadableStream of BidirectionalStream objects */
+    readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;
+    readonly attribute <span>unsigned short</span> <strong>maxDatagramSize</strong>;
+    /* both streams are streams of Uint8Array objects */
+    readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>datagramReadable</strong>;
+    readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>datagramWritable</strong>;
+};</code></pre></details>
 </section>
 
   

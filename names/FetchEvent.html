@@ -20,6 +20,20 @@ interface <strong>FetchEvent</strong> : <a href='ExtendableEvent.html'>Extendabl
   <span>undefined</span> <strong>respondWith</strong>(Promise<<a href='Response.html'>Response</a>> <strong>r</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>FetchEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='FetchEventInit.html'>FetchEventInit</a> <strong>eventInitDict</strong>);
+  [SameObject] readonly attribute <a href='Request.html'>Request</a> <strong>request</strong>;
+  readonly attribute Promise<<span>any</span>> <strong>preloadResponse</strong>;
+  readonly attribute <span>DOMString</span> <strong>clientId</strong>;
+  readonly attribute <span>DOMString</span> <strong>resultingClientId</strong>;
+  readonly attribute <span>DOMString</span> <strong>replacesClientId</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>handled</strong>;
+
+  <span>undefined</span> <strong>respondWith</strong>(Promise<<a href='Response.html'>Response</a>> <strong>r</strong>);
+};</code></pre></details>
 </section>
 
   

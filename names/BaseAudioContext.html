@@ -52,6 +52,52 @@ interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTa
     optional <a href='DecodeErrorCallback.html'>DecodeErrorCallback</a>? <strong>errorCallback</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='AudioDestinationNode.html'>AudioDestinationNode</a> <strong>destination</strong>;
+  readonly attribute <span>float</span> <strong>sampleRate</strong>;
+  readonly attribute <span>double</span> <strong>currentTime</strong>;
+  readonly attribute <a href='AudioListener.html'>AudioListener</a> <strong>listener</strong>;
+  readonly attribute <a href='AudioContextState.html'>AudioContextState</a> <strong>state</strong>;
+  [SameObject, SecureContext]
+  readonly attribute <a href='AudioWorklet.html'>AudioWorklet</a> <strong>audioWorklet</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+
+  <a href='AnalyserNode.html'>AnalyserNode</a> <strong>createAnalyser</strong> ();
+  <a href='BiquadFilterNode.html'>BiquadFilterNode</a> <strong>createBiquadFilter</strong> ();
+  <a href='AudioBuffer.html'>AudioBuffer</a> <strong>createBuffer</strong> (<span>unsigned long</span> <strong>numberOfChannels</strong>,
+                            <span>unsigned long</span> <strong>length</strong>,
+                            <span>float</span> <strong>sampleRate</strong>);
+  <a href='AudioBufferSourceNode.html'>AudioBufferSourceNode</a> <strong>createBufferSource</strong> ();
+  <a href='ChannelMergerNode.html'>ChannelMergerNode</a> <strong>createChannelMerger</strong> (optional <span>unsigned long</span> <strong>numberOfInputs</strong> = 6);
+  <a href='ChannelSplitterNode.html'>ChannelSplitterNode</a> <strong>createChannelSplitter</strong> (
+    optional <span>unsigned long</span> <strong>numberOfOutputs</strong> = 6);
+  <a href='ConstantSourceNode.html'>ConstantSourceNode</a> <strong>createConstantSource</strong> ();
+  <a href='ConvolverNode.html'>ConvolverNode</a> <strong>createConvolver</strong> ();
+  <a href='DelayNode.html'>DelayNode</a> <strong>createDelay</strong> (optional <span>double</span> <strong>maxDelayTime</strong> = 1.0);
+  <a href='DynamicsCompressorNode.html'>DynamicsCompressorNode</a> <strong>createDynamicsCompressor</strong> ();
+  <a href='GainNode.html'>GainNode</a> <strong>createGain</strong> ();
+  <a href='IIRFilterNode.html'>IIRFilterNode</a> <strong>createIIRFilter</strong> (sequence<<span>double</span>> <strong>feedforward</strong>,
+                                 sequence<<span>double</span>> <strong>feedback</strong>);
+  <a href='OscillatorNode.html'>OscillatorNode</a> <strong>createOscillator</strong> ();
+  <a href='PannerNode.html'>PannerNode</a> <strong>createPanner</strong> ();
+  <a href='PeriodicWave.html'>PeriodicWave</a> <strong>createPeriodicWave</strong> (sequence<<span>float</span>> <strong>real</strong>,
+                                   sequence<<span>float</span>> <strong>imag</strong>,
+                                   optional <a href='PeriodicWaveConstraints.html'>PeriodicWaveConstraints</a> <strong>constraints</strong> = {});
+  <a href='ScriptProcessorNode.html'>ScriptProcessorNode</a> <strong>createScriptProcessor</strong>(
+    optional <span>unsigned long</span> <strong>bufferSize</strong> = 0,
+    optional <span>unsigned long</span> <strong>numberOfInputChannels</strong> = 2,
+    optional <span>unsigned long</span> <strong>numberOfOutputChannels</strong> = 2);
+  <a href='StereoPannerNode.html'>StereoPannerNode</a> <strong>createStereoPanner</strong> ();
+  <a href='WaveShaperNode.html'>WaveShaperNode</a> <strong>createWaveShaper</strong> ();
+
+  Promise<<a href='AudioBuffer.html'>AudioBuffer</a>> <strong>decodeAudioData</strong> (
+    <span>ArrayBuffer</span> <strong>audioData</strong>,
+    optional <a href='DecodeSuccessCallback.html'>DecodeSuccessCallback</a>? <strong>successCallback</strong>,
+    optional <a href='DecodeErrorCallback.html'>DecodeErrorCallback</a>? <strong>errorCallback</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

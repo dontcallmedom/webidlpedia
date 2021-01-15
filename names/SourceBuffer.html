@@ -28,6 +28,28 @@ interface <strong>SourceBuffer</strong> : <a href='EventTarget.html'>EventTarget
     <span>undefined</span> <strong>remove</strong> (<span>double</span> <strong>start</strong>, <span>unrestricted double</span> <strong>end</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SourceBuffer</strong> : <a href='EventTarget.html'>EventTarget</a> {
+                    attribute <a href='AppendMode.html'>AppendMode</a>          <strong>mode</strong>;
+    readonly        attribute <span>boolean</span>             <strong>updating</strong>;
+    readonly        attribute <a href='TimeRanges.html'>TimeRanges</a>          <strong>buffered</strong>;
+                    attribute <span>double</span>              <strong>timestampOffset</strong>;
+    readonly        attribute <a href='AudioTrackList.html'>AudioTrackList</a>      <strong>audioTracks</strong>;
+    readonly        attribute <a href='VideoTrackList.html'>VideoTrackList</a>      <strong>videoTracks</strong>;
+    readonly        attribute <a href='TextTrackList.html'>TextTrackList</a>       <strong>textTracks</strong>;
+                    attribute <span>double</span>              <strong>appendWindowStart</strong>;
+                    attribute <span>unrestricted double</span> <strong>appendWindowEnd</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onupdatestart</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onupdate</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onupdateend</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onerror</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onabort</strong>;
+    <span>undefined</span> <strong>appendBuffer</strong> (<a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+    <span>undefined</span> <strong>abort</strong> ();
+    <span>undefined</span> <strong>remove</strong> (<span>double</span> <strong>start</strong>, <span>unrestricted double</span> <strong>end</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

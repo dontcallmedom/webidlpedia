@@ -20,6 +20,20 @@ interface <strong>MessageEvent</strong> : <a href='Event.html'>Event</a> {
   <span>undefined</span> <strong>initMessageEvent</strong>(<span>DOMString</span> <strong>type</strong>, optional <span>boolean</span> <strong>bubbles</strong> = false, optional <span>boolean</span> <strong>cancelable</strong> = false, optional <span>any</span> <strong>data</strong> = null, optional <span>USVString</span> <strong>origin</strong> = "", optional <span>DOMString</span> <strong>lastEventId</strong> = "", optional <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong> = null, optional sequence<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong> = []);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>)]
+interface <strong>MessageEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='MessageEventInit.html'>MessageEventInit</a> <strong>eventInitDict</strong> = {});
+
+  readonly attribute <span>any</span> <strong>data</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>DOMString</span> <strong>lastEventId</strong>;
+  readonly attribute <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong>;
+  readonly attribute FrozenArray<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong>;
+
+  <span>undefined</span> <strong>initMessageEvent</strong>(<span>DOMString</span> <strong>type</strong>, optional <span>boolean</span> <strong>bubbles</strong> = false, optional <span>boolean</span> <strong>cancelable</strong> = false, optional <span>any</span> <strong>data</strong> = null, optional <span>USVString</span> <strong>origin</strong> = "", optional <span>DOMString</span> <strong>lastEventId</strong> = "", optional <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong> = null, optional sequence<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong> = []);
+};</code></pre></details>
 </section>
 
   

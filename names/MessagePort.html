@@ -19,6 +19,19 @@ interface <strong>MessagePort</strong> : <a href='EventTarget.html'>EventTarget<
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>), Transferable]
+interface <strong>MessagePort</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>start</strong>();
+  <span>undefined</span> <strong>close</strong>();
+
+  // event handlers
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

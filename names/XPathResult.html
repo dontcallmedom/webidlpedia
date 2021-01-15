@@ -32,6 +32,32 @@ interface <strong>XPathResult</strong> {
   <a href='Node.html'>Node</a>? <strong>snapshotItem</strong>(<span>unsigned long</span> <strong>index</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XPathResult</strong> {
+  const <span>unsigned short</span> <strong>ANY_TYPE</strong> = 0;
+  const <span>unsigned short</span> <strong>NUMBER_TYPE</strong> = 1;
+  const <span>unsigned short</span> <strong>STRING_TYPE</strong> = 2;
+  const <span>unsigned short</span> <strong>BOOLEAN_TYPE</strong> = 3;
+  const <span>unsigned short</span> <strong>UNORDERED_NODE_ITERATOR_TYPE</strong> = 4;
+  const <span>unsigned short</span> <strong>ORDERED_NODE_ITERATOR_TYPE</strong> = 5;
+  const <span>unsigned short</span> <strong>UNORDERED_NODE_SNAPSHOT_TYPE</strong> = 6;
+  const <span>unsigned short</span> <strong>ORDERED_NODE_SNAPSHOT_TYPE</strong> = 7;
+  const <span>unsigned short</span> <strong>ANY_UNORDERED_NODE_TYPE</strong> = 8;
+  const <span>unsigned short</span> <strong>FIRST_ORDERED_NODE_TYPE</strong> = 9;
+
+  readonly attribute <span>unsigned short</span> <strong>resultType</strong>;
+  readonly attribute <span>unrestricted double</span> <strong>numberValue</strong>;
+  readonly attribute <span>DOMString</span> <strong>stringValue</strong>;
+  readonly attribute <span>boolean</span> <strong>booleanValue</strong>;
+  readonly attribute <a href='Node.html'>Node</a>? <strong>singleNodeValue</strong>;
+  readonly attribute <span>boolean</span> <strong>invalidIteratorState</strong>;
+  readonly attribute <span>unsigned long</span> <strong>snapshotLength</strong>;
+
+  <a href='Node.html'>Node</a>? <strong>iterateNext</strong>();
+  <a href='Node.html'>Node</a>? <strong>snapshotItem</strong>(<span>unsigned long</span> <strong>index</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

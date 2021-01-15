@@ -33,6 +33,28 @@ partial interface <strong>HTMLScriptElement</strong> {
 <pre class=webidl><code>partial interface <strong>HTMLScriptElement</strong> {
   attribute <span>DOMString</span> <strong>integrity</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
+  attribute <span>DOMString</span> <strong>integrity</strong>;
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/SRI/">Subresource Integrity</a> refers to <code>HTMLScriptElement</code></li></ul>

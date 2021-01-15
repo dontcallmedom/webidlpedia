@@ -23,6 +23,16 @@ partial dictionary <strong>RTCConfiguration</strong> {
 <pre class=webidl><code>partial dictionary <strong>RTCConfiguration</strong> {
     <span>DOMString</span> <strong>peerIdentity</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>dictionary <strong>RTCConfiguration</strong> {
+  sequence<<a href='RTCIceServer.html'>RTCIceServer</a>> <strong>iceServers</strong>;
+  <a href='RTCIceTransportPolicy.html'>RTCIceTransportPolicy</a> <strong>iceTransportPolicy</strong>;
+  <a href='RTCBundlePolicy.html'>RTCBundlePolicy</a> <strong>bundlePolicy</strong>;
+  <a href='RTCRtcpMuxPolicy.html'>RTCRtcpMuxPolicy</a> <strong>rtcpMuxPolicy</strong>;
+  sequence<<a href='RTCCertificate.html'>RTCCertificate</a>> <strong>certificates</strong>;
+  [EnforceRange] <span>octet</span> <strong>iceCandidatePoolSize</strong> = 0;
+    <span>boolean</span> <strong>encodedInsertableStreams</strong> = false;
+    <span>DOMString</span> <strong>peerIdentity</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

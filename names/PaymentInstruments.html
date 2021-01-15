@@ -17,6 +17,17 @@ interface <strong>PaymentInstruments</strong> {
   Promise<<a href='void.html'>void</a>> <strong>clear</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PaymentInstruments</strong> {
+  Promise<<span>boolean</span>> <strong>delete</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<<span>any</span>> <strong>get</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<sequence<<span>DOMString</span>>>  <strong>keys</strong>();
+  Promise<<span>boolean</span>> <strong>has</strong>(<span>DOMString</span> <strong>instrumentKey</strong>);
+  Promise<<a href='void.html'>void</a>> <strong>set</strong>(<span>DOMString</span> <strong>instrumentKey</strong>, <a href='PaymentInstrument.html'>PaymentInstrument</a> <strong>details</strong>);
+  Promise<<a href='void.html'>void</a>> <strong>clear</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

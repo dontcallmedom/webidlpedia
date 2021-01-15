@@ -21,6 +21,20 @@ interface <strong>ReadableStream</strong> {
   async iterable<<span>any</span>>(optional <a href='ReadableStreamIteratorOptions.html'>ReadableStreamIteratorOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
+interface <strong>ReadableStream</strong> {
+  constructor(optional <span>object</span> <strong>underlyingSource</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> = {});
+
+  readonly attribute <span>boolean</span> <strong>locked</strong>;
+
+  Promise<<span>undefined</span>> <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
+  <a href='ReadableStreamReader.html'>ReadableStreamReader</a> <strong>getReader</strong>(optional <a href='ReadableStreamGetReaderOptions.html'>ReadableStreamGetReaderOptions</a> <strong>options</strong> = {});
+  <a href='ReadableStream.html'>ReadableStream</a> <strong>pipeThrough</strong>(<a href='ReadableWritablePair.html'>ReadableWritablePair</a> <strong>transform</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> = {});
+  Promise<<span>undefined</span>> <strong>pipeTo</strong>(<a href='WritableStream.html'>WritableStream</a> <strong>destination</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> = {});
+  sequence<<a href='ReadableStream.html'>ReadableStream</a>> <strong>tee</strong>();
+
+  async iterable<<span>any</span>>(optional <a href='ReadableStreamIteratorOptions.html'>ReadableStreamIteratorOptions</a> <strong>options</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

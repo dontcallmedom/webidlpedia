@@ -29,6 +29,29 @@ interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.h
   <a href='void.html'>void</a> <strong>selectSubString</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
+
+  // lengthAdjust Types
+  const <span>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> = 1;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> = 2;
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;
+
+  <span>long</span> <strong>getNumberOfChars</strong>();
+  <span>float</span> <strong>getComputedTextLength</strong>();
+  <span>float</span> <strong>getSubStringLength</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>float</span> <strong>getRotationOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> = {});
+  <a href='void.html'>void</a> <strong>selectSubString</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

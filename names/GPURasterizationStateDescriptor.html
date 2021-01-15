@@ -18,6 +18,18 @@ base: ../
     <span>float</span> <strong>depthBiasClamp</strong> = 0;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>GPURasterizationStateDescriptor</strong> {
+    <a href='GPUFrontFace.html'>GPUFrontFace</a> <strong>frontFace</strong> = "ccw";
+    <a href='GPUCullMode.html'>GPUCullMode</a> <strong>cullMode</strong> = "none";
+    // Enable depth clamping (requires "depth-clamping" feature)
+    <span>boolean</span> <strong>clampDepth</strong> = false;
+
+    <a href='GPUDepthBias.html'>GPUDepthBias</a> <strong>depthBias</strong> = 0;
+    <span>float</span> <strong>depthBiasSlopeScale</strong> = 0;
+    <span>float</span> <strong>depthBiasClamp</strong> = 0;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

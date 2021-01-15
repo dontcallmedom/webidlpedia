@@ -17,6 +17,17 @@ interface <strong>ExtendableMessageEvent</strong> : <a href='ExtendableEvent.htm
   readonly attribute FrozenArray<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>ExtendableMessageEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='ExtendableMessageEventInit.html'>ExtendableMessageEventInit</a> <strong>eventInitDict</strong> = {});
+  readonly attribute <span>any</span> <strong>data</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>DOMString</span> <strong>lastEventId</strong>;
+  [SameObject] readonly attribute (<a href='Client.html'>Client</a> or <a href='ServiceWorker.html'>ServiceWorker</a> or <a href='MessagePort.html'>MessagePort</a>)? <strong>source</strong>;
+  readonly attribute FrozenArray<<a href='MessagePort.html'>MessagePort</a>> <strong>ports</strong>;
+};</code></pre></details>
 </section>
 
   

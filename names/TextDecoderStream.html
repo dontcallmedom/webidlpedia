@@ -14,6 +14,17 @@ interface <strong>TextDecoderStream</strong> {
 <a href='TextDecoderStream.html'>TextDecoderStream</a> includes <a href='TextDecoderCommon.html'>TextDecoderCommon</a>;
 <a href='TextDecoderStream.html'>TextDecoderStream</a> includes <a href='GenericTransformStream.html'>GenericTransformStream</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextDecoderStream</strong> {
+  constructor(optional <span>DOMString</span> <strong>label</strong> = "utf-8", optional <a href='TextDecoderOptions.html'>TextDecoderOptions</a> <strong>options</strong> = {});
+  readonly attribute <span>DOMString</span> <strong>encoding</strong>;
+  readonly attribute <span>boolean</span> <strong>fatal</strong>;
+  readonly attribute <span>boolean</span> <strong>ignoreBOM</strong>;
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;
+  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;
+};</code></pre></details>
 </section>
 
   

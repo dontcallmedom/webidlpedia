@@ -36,6 +36,29 @@ partial interface <strong>URL</strong> {
 partial interface <strong>URL</strong> {
     static <span>DOMString</span> <strong>createObjectURL</strong> (<a href='MediaSource.html'>MediaSource</a> <strong>mediaSource</strong>);
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ LegacyWindowAlias=<span>webkitURL</span>]
+interface <strong>URL</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <span>USVString</span> <strong>base</strong>);
+
+  stringifier attribute <span>USVString</span> <strong>href</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+           attribute <span>USVString</span> <strong>protocol</strong>;
+           attribute <span>USVString</span> <strong>username</strong>;
+           attribute <span>USVString</span> <strong>password</strong>;
+           attribute <span>USVString</span> <strong>host</strong>;
+           attribute <span>USVString</span> <strong>hostname</strong>;
+           attribute <span>USVString</span> <strong>port</strong>;
+           attribute <span>USVString</span> <strong>pathname</strong>;
+           attribute <span>USVString</span> <strong>search</strong>;
+  [SameObject] readonly attribute <a href='URLSearchParams.html'>URLSearchParams</a> <strong>searchParams</strong>;
+           attribute <span>USVString</span> <strong>hash</strong>;
+
+  <span>USVString</span> <strong>toJSON</strong>();
+  static <span>DOMString</span> <strong>createObjectURL</strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);
+  static <span>undefined</span> <strong>revokeObjectURL</strong>(<span>DOMString</span> <strong>url</strong>);
+    static <span>DOMString</span> <strong>createObjectURL</strong> (<a href='MediaSource.html'>MediaSource</a> <strong>mediaSource</strong>);
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/FileAPI/">File API</a> refers to <code>URL</code></li><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>URL</code></li></ul>

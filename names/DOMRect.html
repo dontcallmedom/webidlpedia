@@ -22,6 +22,22 @@ interface <strong>DOMRect</strong> : <a href='DOMRectReadOnly.html'>DOMRectReadO
     inherit attribute <span>unrestricted double</span> <strong>height</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ Serializable,
+ LegacyWindowAlias=<span>SVGRect</span>]
+interface <strong>DOMRect</strong> : <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> {
+    constructor(optional <span>unrestricted double</span> <strong>x</strong> = 0, optional <span>unrestricted double</span> <strong>y</strong> = 0,
+            optional <span>unrestricted double</span> <strong>width</strong> = 0, optional <span>unrestricted double</span> <strong>height</strong> = 0);
+
+    [NewObject] static <a href='DOMRect.html'>DOMRect</a> <strong>fromRect</strong>(optional <a href='DOMRectInit.html'>DOMRectInit</a> <strong>other</strong> = {});
+
+    inherit attribute <span>unrestricted double</span> <strong>x</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>y</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>width</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>height</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

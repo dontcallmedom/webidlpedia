@@ -44,6 +44,39 @@ partial interface <strong>WorkerNavigator</strong> {
 <pre class=webidl><code>partial interface <strong>WorkerNavigator</strong> {
   [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Worker.html'>Worker</a>]
+interface <strong>WorkerNavigator</strong> {
+  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>; // constant "Mozilla"
+  readonly attribute <span>DOMString</span> <strong>appName</strong>; // constant "Netscape"
+  readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
+  readonly attribute <span>DOMString</span> <strong>platform</strong>;
+  readonly attribute <span>DOMString</span> <strong>product</strong>; // constant "Gecko"
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
+  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>;
+  [Exposed=<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>(); // constant false
+  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;
+  readonly attribute <span>DOMString</span> <strong>language</strong>;
+  readonly attribute FrozenArray<<span>DOMString</span>> <strong>languages</strong>;
+  readonly attribute <span>boolean</span> <strong>onLine</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>hardwareConcurrency</strong>;
+    [SameObject] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;
+  [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;
+  Promise<<span>undefined</span>> <strong>setAppBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
+  Promise<<span>undefined</span>> <strong>clearAppBadge</strong>();
+  [SameObject] readonly attribute <a href='FontManager.html'>FontManager</a> <strong>fonts</strong>;
+  [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;
+  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;
+  [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;
+  [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;
+    readonly attribute <span>double</span> <strong>deviceMemory</strong>;
+  [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;
+  [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;
+  [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -25,6 +25,25 @@ interface <strong>IDBTransaction</strong> : <a href='EventTarget.html'>EventTarg
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBTransaction</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>objectStoreNames</strong>;
+  readonly attribute <a href='IDBTransactionMode.html'>IDBTransactionMode</a> <strong>mode</strong>;
+  readonly attribute <a href='IDBTransactionDurability.html'>IDBTransactionDurability</a> <strong>durability</strong>;
+  [SameObject] readonly attribute <a href='IDBDatabase.html'>IDBDatabase</a> <strong>db</strong>;
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
+
+  <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>objectStore</strong>(<span>DOMString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>commit</strong>();
+  <span>undefined</span> <strong>abort</strong>();
+
+  // Event handlers:
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncomplete</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

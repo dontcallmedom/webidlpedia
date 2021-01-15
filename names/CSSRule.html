@@ -43,6 +43,30 @@ interface <strong>CSSRule</strong> {
 
 partial interface <strong>CSSRule</strong> {  const <span>unsigned short</span> <strong>FONT_PALETTE_VALUES_RULE</strong> = 15;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CSSRule</strong> {
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;
+
+  // the following attribute and constants are historical
+  readonly attribute <span>unsigned short</span> <strong>type</strong>;
+  const <span>unsigned short</span> <strong>STYLE_RULE</strong> = 1;
+  const <span>unsigned short</span> <strong>CHARSET_RULE</strong> = 2;
+  const <span>unsigned short</span> <strong>IMPORT_RULE</strong> = 3;
+  const <span>unsigned short</span> <strong>MEDIA_RULE</strong> = 4;
+  const <span>unsigned short</span> <strong>FONT_FACE_RULE</strong> = 5;
+  const <span>unsigned short</span> <strong>PAGE_RULE</strong> = 6;
+  const <span>unsigned short</span> <strong>MARGIN_RULE</strong> = 9;
+  const <span>unsigned short</span> <strong>NAMESPACE_RULE</strong> = 10;
+    const <span>unsigned short</span> <strong>KEYFRAMES_RULE</strong> = 7;
+    const <span>unsigned short</span> <strong>KEYFRAME_RULE</strong> = 8;
+    const <span>unsigned short</span> <strong>SUPPORTS_RULE</strong> = 12;
+    const <span>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> = 11;
+    const <span>unsigned short</span> <strong>VIEWPORT_RULE</strong> = 15;  const <span>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> = 14;  const <span>unsigned short</span> <strong>FONT_PALETTE_VALUES_RULE</strong> = 15;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

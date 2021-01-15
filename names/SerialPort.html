@@ -22,6 +22,22 @@ interface <strong>SerialPort</strong> : <a href='EventTarget.html'>EventTarget</
   Promise<<span>undefined</span>> <strong>close</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<span>DedicatedWorker</span>,<a href='Window.html'>Window</a>), SecureContext]
+interface <strong>SerialPort</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;
+  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;
+
+  <a href='SerialPortInfo.html'>SerialPortInfo</a> <strong>getInfo</strong>();
+
+  Promise<<span>undefined</span>> <strong>open</strong>(<a href='SerialOptions.html'>SerialOptions</a> <strong>options</strong>);
+  Promise<<span>undefined</span>> <strong>setSignals</strong>(optional <a href='SerialOutputSignals.html'>SerialOutputSignals</a> <strong>signals</strong> = {});
+  Promise<<a href='SerialInputSignals.html'>SerialInputSignals</a>> <strong>getSignals</strong>();
+  Promise<<span>undefined</span>> <strong>close</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

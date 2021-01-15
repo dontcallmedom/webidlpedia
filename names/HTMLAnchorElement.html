@@ -39,6 +39,44 @@ partial interface <strong>HTMLAnchorElement</strong> {
     [CEReactions] attribute <span>DOMString</span> <strong>adCampaignId</strong>;
     [CEReactions] attribute <span>USVString</span> <strong>adDestination</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLAnchorElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>DOMString</span> <strong>target</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>download</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>ping</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rel</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>hreflang</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>coords</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rev</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>shape</strong>;
+  [CEReactions] stringifier attribute <span>USVString</span> <strong>href</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>protocol</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>username</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>password</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>host</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>hostname</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>port</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>pathname</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>search</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>hash</strong>;
+    [CEReactions] attribute <span>DOMString</span> <strong>adCampaignId</strong>;
+    [CEReactions] attribute <span>USVString</span> <strong>adDestination</strong>;
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://privacycg.github.io/private-click-measurement/">Private Click Measurement</a> refers to <code>HTMLAnchorElement</code></li></ul>

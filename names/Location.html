@@ -26,6 +26,26 @@ interface <strong>Location</strong> { // but see also additional creation steps 
   [LegacyUnforgeable, SameObject] readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>ancestorOrigins</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Location</strong> { // but see also additional creation steps and overridden internal methods
+  [LegacyUnforgeable] stringifier attribute <span>USVString</span> <strong>href</strong>;
+  [LegacyUnforgeable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>protocol</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>host</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>hostname</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>port</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>pathname</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>search</strong>;
+  [LegacyUnforgeable] attribute <span>USVString</span> <strong>hash</strong>;
+
+  [LegacyUnforgeable] <span>undefined</span> <strong>assign</strong>(<span>USVString</span> <strong>url</strong>);
+  [LegacyUnforgeable] <span>undefined</span> <strong>replace</strong>(<span>USVString</span> <strong>url</strong>);
+  [LegacyUnforgeable] <span>undefined</span> <strong>reload</strong>();
+
+  [LegacyUnforgeable, SameObject] readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>ancestorOrigins</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

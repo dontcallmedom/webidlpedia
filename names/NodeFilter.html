@@ -32,6 +32,31 @@ callback interface <strong>NodeFilter</strong> {
   <span>unsigned short</span> <strong>acceptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+[Exposed=<a href='Window.html'>Window</a>]
+callback interface <strong>NodeFilter</strong> {
+  // Constants for acceptNode()
+  const <span>unsigned short</span> <strong>FILTER_ACCEPT</strong> = 1;
+  const <span>unsigned short</span> <strong>FILTER_REJECT</strong> = 2;
+  const <span>unsigned short</span> <strong>FILTER_SKIP</strong> = 3;
+
+  // Constants for whatToShow
+  const <span>unsigned long</span> <strong>SHOW_ALL</strong> = 0xFFFFFFFF;
+  const <span>unsigned long</span> <strong>SHOW_ELEMENT</strong> = 0x1;
+  const <span>unsigned long</span> <strong>SHOW_ATTRIBUTE</strong> = 0x2;
+  const <span>unsigned long</span> <strong>SHOW_TEXT</strong> = 0x4;
+  const <span>unsigned long</span> <strong>SHOW_CDATA_SECTION</strong> = 0x8;
+  const <span>unsigned long</span> <strong>SHOW_ENTITY_REFERENCE</strong> = 0x10; // legacy
+  const <span>unsigned long</span> <strong>SHOW_ENTITY</strong> = 0x20; // legacy
+  const <span>unsigned long</span> <strong>SHOW_PROCESSING_INSTRUCTION</strong> = 0x40;
+  const <span>unsigned long</span> <strong>SHOW_COMMENT</strong> = 0x80;
+  const <span>unsigned long</span> <strong>SHOW_DOCUMENT</strong> = 0x100;
+  const <span>unsigned long</span> <strong>SHOW_DOCUMENT_TYPE</strong> = 0x200;
+  const <span>unsigned long</span> <strong>SHOW_DOCUMENT_FRAGMENT</strong> = 0x400;
+  const <span>unsigned long</span> <strong>SHOW_NOTATION</strong> = 0x800; // legacy
+
+  <span>unsigned short</span> <strong>acceptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

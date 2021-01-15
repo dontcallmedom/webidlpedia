@@ -19,6 +19,17 @@ interface <strong>InputEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
    readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;
    sequence<<a href='StaticRange.html'>StaticRange</a>> <strong>getTargetRanges</strong>();
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>InputEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='InputEventInit.html'>InputEventInit</a> <strong>eventInitDict</strong>);
+  readonly attribute <span>DOMString</span>? <strong>data</strong>;
+  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
+  readonly attribute <span>DOMString</span> <strong>inputType</strong>;
+   readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;
+   sequence<<a href='StaticRange.html'>StaticRange</a>> <strong>getTargetRanges</strong>();
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/input-events-2/">Input Events Level 2</a> refers to <code>InputEvent</code></li></ul>

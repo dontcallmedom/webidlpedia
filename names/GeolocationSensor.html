@@ -21,6 +21,19 @@ interface <strong>GeolocationSensor</strong> : <a href='Sensor.html'>Sensor</a> 
   readonly attribute <span>unrestricted double</span>? <strong>speed</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[SecureContext,
+ Exposed=(<span>DedicatedWorker</span>, <a href='Window.html'>Window</a>)]
+interface <strong>GeolocationSensor</strong> : <a href='Sensor.html'>Sensor</a> {
+  constructor(optional <a href='GeolocationSensorOptions.html'>GeolocationSensorOptions</a> <strong>options</strong> = {});
+  static Promise<<a href='GeolocationSensorReading.html'>GeolocationSensorReading</a>> <strong>read</strong>(optional <a href='ReadOptions.html'>ReadOptions</a> <strong>readOptions</strong> = {});
+  readonly attribute <span>unrestricted double</span>? <strong>latitude</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>longitude</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>altitude</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>accuracy</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>altitudeAccuracy</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>heading</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>speed</strong>;
+};</code></pre></details>
 </section>
 
   

@@ -18,6 +18,18 @@ interface <strong>WritableStream</strong> {
   <a href='WritableStreamDefaultWriter.html'>WritableStreamDefaultWriter</a> <strong>getWriter</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
+interface <strong>WritableStream</strong> {
+  constructor(optional <span>object</span> <strong>underlyingSink</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> = {});
+
+  readonly attribute <span>boolean</span> <strong>locked</strong>;
+
+  Promise<<span>undefined</span>> <strong>abort</strong>(optional <span>any</span> <strong>reason</strong>);
+  Promise<<span>undefined</span>> <strong>close</strong>();
+  <a href='WritableStreamDefaultWriter.html'>WritableStreamDefaultWriter</a> <strong>getWriter</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

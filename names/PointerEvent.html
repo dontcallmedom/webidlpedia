@@ -26,6 +26,26 @@ interface <strong>PointerEvent</strong> : <a href='MouseEvent.html'>MouseEvent</
     sequence<<a href='PointerEvent.html'>PointerEvent</a>> <strong>getPredictedEvents</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PointerEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PointerEventInit.html'>PointerEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly        attribute <span>long</span>        <strong>pointerId</strong>;
+    readonly        attribute <span>double</span>      <strong>width</strong>;
+    readonly        attribute <span>double</span>      <strong>height</strong>;
+    readonly        attribute <span>float</span>       <strong>pressure</strong>;
+    readonly        attribute <span>float</span>       <strong>tangentialPressure</strong>;
+    readonly        attribute <span>long</span>        <strong>tiltX</strong>;
+    readonly        attribute <span>long</span>        <strong>tiltY</strong>;
+    readonly        attribute <span>long</span>        <strong>twist</strong>;
+    readonly        attribute <span>double</span>      <strong>altitudeAngle</strong>;
+    readonly        attribute <span>double</span>      <strong>azimuthAngle</strong>;
+    readonly        attribute <span>DOMString</span>   <strong>pointerType</strong>;
+    readonly        attribute <span>boolean</span>     <strong>isPrimary</strong>;
+    [SecureContext] sequence<<a href='PointerEvent.html'>PointerEvent</a>> <strong>getCoalescedEvents</strong>();
+    sequence<<a href='PointerEvent.html'>PointerEvent</a>> <strong>getPredictedEvents</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

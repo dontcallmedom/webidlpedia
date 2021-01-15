@@ -21,6 +21,20 @@ interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
 
 <a href='Worker.html'>Worker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> = {});
+
+  <span>undefined</span> <strong>terminate</strong>();
+
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+};</code></pre></details>
 </section>
 
   

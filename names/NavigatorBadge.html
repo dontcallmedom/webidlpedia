@@ -14,6 +14,14 @@ interface mixin <strong>NavigatorBadge</strong> {
   Promise<<span>undefined</span>> <strong>clearAppBadge</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+// Methods exposed on both documents and service workers.
+[SecureContext]
+interface mixin <strong>NavigatorBadge</strong> {
+  Promise<<span>undefined</span>> <strong>setAppBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
+  Promise<<span>undefined</span>> <strong>clearAppBadge</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

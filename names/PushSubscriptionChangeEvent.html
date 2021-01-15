@@ -14,6 +14,14 @@ interface <strong>PushSubscriptionChangeEvent</strong> : <a href='ExtendableEven
   readonly attribute <a href='PushSubscription.html'>PushSubscription</a>? <strong>oldSubscription</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+interface <strong>PushSubscriptionChangeEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PushSubscriptionChangeEventInit.html'>PushSubscriptionChangeEventInit</a> <strong>eventInitDict</strong> = {});
+  readonly attribute <a href='PushSubscription.html'>PushSubscription</a>? <strong>newSubscription</strong>;
+  readonly attribute <a href='PushSubscription.html'>PushSubscription</a>? <strong>oldSubscription</strong>;
+};</code></pre></details>
 </section>
 
   

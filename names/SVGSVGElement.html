@@ -54,6 +54,67 @@ interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVG
   <span>float</span> <strong>getCurrentTime</strong>();
   <a href='void.html'>void</a> <strong>setCurrentTime</strong>(<span>float</span> <strong>seconds</strong>);
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
+
+  attribute <span>float</span> <strong>currentScale</strong>;
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;
+
+  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
+  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
+  <span>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
+  <span>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
+
+  <a href='void.html'>void</a> <strong>deselectAll</strong>();
+
+  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();
+  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();
+  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();
+  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();
+  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();
+  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();
+  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong>);
+
+  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span>DOMString</span> <strong>elementId</strong>);
+
+  // Deprecated methods that have no effect when called,
+  // but which are kept for compatibility reasons.
+  <span>unsigned long</span> <strong>suspendRedraw</strong>(<span>unsigned long</span> <strong>maxWaitMilliseconds</strong>);
+  <a href='void.html'>void</a> <strong>unsuspendRedraw</strong>(<span>unsigned long</span> <strong>suspendHandleID</strong>);
+  <a href='void.html'>void</a> <strong>unsuspendRedrawAll</strong>();
+  <a href='void.html'>void</a> <strong>forceRedraw</strong>();
+  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
+  <a href='void.html'>void</a> <strong>pauseAnimations</strong>();
+  <a href='void.html'>void</a> <strong>unpauseAnimations</strong>();
+  <span>boolean</span> <strong>animationsPaused</strong>();
+  <span>float</span> <strong>getCurrentTime</strong>();
+  <a href='void.html'>void</a> <strong>setCurrentTime</strong>(<span>float</span> <strong>seconds</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

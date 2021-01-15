@@ -15,6 +15,15 @@ interface <strong>Report</strong> {
   readonly attribute <a href='ReportBody.html'>ReportBody</a>? <strong>body</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Report</strong> {
+  [Default] <span>object</span> <strong>toJSON</strong>();
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  readonly attribute <span>DOMString</span> <strong>url</strong>;
+  readonly attribute <a href='ReportBody.html'>ReportBody</a>? <strong>body</strong>;
+};</code></pre></details>
 </section>
 
   

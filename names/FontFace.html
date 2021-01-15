@@ -30,6 +30,30 @@ interface <strong>FontFace</strong> {
   readonly attribute Promise<<a href='FontFace.html'>FontFace</a>> <strong>loaded</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FontFace</strong> {
+  constructor(<a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>, (<a href='CSSOMString.html'>CSSOMString</a> or <a href='BinaryData.html'>BinaryData</a>) <strong>source</strong>,
+                optional <a href='FontFaceDescriptors.html'>FontFaceDescriptors</a> <strong>descriptors</strong> = {});
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>style</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>weight</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>stretch</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>unicodeRange</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variant</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>featureSettings</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variationSettings</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>display</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>ascentOverride</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>descentOverride</strong>;
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>lineGapOverride</strong>;
+
+  readonly attribute <a href='FontFaceLoadStatus.html'>FontFaceLoadStatus</a> <strong>status</strong>;
+
+  Promise<<a href='FontFace.html'>FontFace</a>> <strong>load</strong>();
+  readonly attribute Promise<<a href='FontFace.html'>FontFace</a>> <strong>loaded</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

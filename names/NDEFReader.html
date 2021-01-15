@@ -19,6 +19,19 @@ interface <strong>NDEFReader</strong> : <a href='EventTarget.html'>EventTarget</
                                  optional <a href='NDEFWriteOptions.html'>NDEFWriteOptions</a> <strong>options</strong>={});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>NDEFReader</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor();
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreading</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadingerror</strong>;
+
+  Promise<<span>undefined</span>> <strong>scan</strong>(optional <a href='NDEFScanOptions.html'>NDEFScanOptions</a> <strong>options</strong>={});
+  Promise<<span>undefined</span>> <strong>write</strong>(<a href='NDEFMessageSource.html'>NDEFMessageSource</a> <strong>message</strong>,
+                                 optional <a href='NDEFWriteOptions.html'>NDEFWriteOptions</a> <strong>options</strong>={});
+};</code></pre></details>
 </section>
 
   

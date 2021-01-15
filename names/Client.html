@@ -20,6 +20,18 @@ interface <strong>Client</strong> {
 <pre class=webidl><code>partial interface <strong>Client</strong> {
     readonly attribute <a href='ClientLifecycleState.html'>ClientLifecycleState</a> <strong>lifecycleState</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>Client</strong> {
+  readonly attribute <span>USVString</span> <strong>url</strong>;
+  readonly attribute <a href='FrameType.html'>FrameType</a> <strong>frameType</strong>;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='ClientType.html'>ClientType</a> <strong>type</strong>;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+    readonly attribute <a href='ClientLifecycleState.html'>ClientLifecycleState</a> <strong>lifecycleState</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

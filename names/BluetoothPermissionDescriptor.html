@@ -15,6 +15,15 @@ base: ../
   <span>boolean</span> <strong>acceptAllDevices</strong> = false;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>BluetoothPermissionDescriptor</strong> : <a href='PermissionDescriptor.html'>PermissionDescriptor</a> {
+  <span>DOMString</span> <strong>deviceId</strong>;
+  // These match RequestDeviceOptions.
+  sequence<<a href='BluetoothLEScanFilterInit.html'>BluetoothLEScanFilterInit</a>> <strong>filters</strong>;
+  sequence<<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a>> <strong>optionalServices</strong> = [];
+  <span>boolean</span> <strong>acceptAllDevices</strong> = false;
+};</code></pre></details>
 </section>
 
   

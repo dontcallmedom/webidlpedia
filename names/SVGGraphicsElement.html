@@ -17,6 +17,17 @@ base: ../
 
 <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> includes <a href='SVGTests.html'>SVGTests</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+interface <strong>SVGGraphicsElement</strong> : <a href='SVGElement.html'>SVGElement</a> {
+  [SameObject] readonly attribute <a href='SVGAnimatedTransformList.html'>SVGAnimatedTransformList</a> <strong>transform</strong>;
+
+  <a href='DOMRect.html'>DOMRect</a> <strong>getBBox</strong>(optional <a href='SVGBoundingBoxOptions.html'>SVGBoundingBoxOptions</a> <strong>options</strong> = {});
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getCTM</strong>();
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getScreenCTM</strong>();
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

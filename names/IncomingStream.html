@@ -15,6 +15,15 @@ interface mixin <strong>IncomingStream</strong> {
   <span>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+[ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
+interface mixin <strong>IncomingStream</strong> {
+  /* a ReadableStream of Uint8Array */
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;
+  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>readingAborted</strong>;
+  <span>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

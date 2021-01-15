@@ -22,6 +22,18 @@ interface <strong>XRInputSource</strong> {
 <pre class=webidl><code>partial interface <strong>XRInputSource</strong> {
    readonly attribute <a href='XRHand.html'>XRHand</a>? <strong>hand</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>XRInputSource</strong> {
+  readonly attribute <a href='XRHandedness.html'>XRHandedness</a> <strong>handedness</strong>;
+  readonly attribute <a href='XRTargetRayMode.html'>XRTargetRayMode</a> <strong>targetRayMode</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a> <strong>targetRaySpace</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a>? <strong>gripSpace</strong>;
+  [SameObject] readonly attribute FrozenArray<<span>DOMString</span>> <strong>profiles</strong>;
+  [SameObject] readonly attribute <a href='Gamepad.html'>Gamepad</a>? <strong>gamepad</strong>;
+   readonly attribute <a href='XRHand.html'>XRHand</a>? <strong>hand</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

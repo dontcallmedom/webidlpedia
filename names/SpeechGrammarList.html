@@ -19,6 +19,19 @@ interface <strong>SpeechGrammarList</strong> {
                     optional <span>float</span> <strong>weight</strong> = 1.0);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+// The object representing a speech grammar collection
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SpeechGrammarList</strong> {
+    constructor();
+    readonly attribute <span>unsigned long</span> <strong>length</strong>;
+    getter <a href='SpeechGrammar.html'>SpeechGrammar</a> <strong>item</strong>(<span>unsigned long</span> <strong>index</strong>);
+    <span>undefined</span> <strong>addFromURI</strong>(<span>DOMString</span> <strong>src</strong>,
+                    optional <span>float</span> <strong>weight</strong> = 1.0);
+    <span>undefined</span> <strong>addFromString</strong>(<span>DOMString</span> <strong>string</strong>,
+                    optional <span>float</span> <strong>weight</strong> = 1.0);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

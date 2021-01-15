@@ -21,6 +21,21 @@ interface <strong>USBAlternateInterface</strong> {
   readonly attribute FrozenArray<<a href='USBEndpoint.html'>USBEndpoint</a>> <strong>endpoints</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[
+  Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>),
+  SecureContext
+]
+interface <strong>USBAlternateInterface</strong> {
+  constructor(<a href='USBInterface.html'>USBInterface</a> <strong>deviceInterface</strong>, <span>octet</span> <strong>alternateSetting</strong>);
+  readonly attribute <span>octet</span> <strong>alternateSetting</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceClass</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceSubclass</strong>;
+  readonly attribute <span>octet</span> <strong>interfaceProtocol</strong>;
+  readonly attribute <span>DOMString</span>? <strong>interfaceName</strong>;
+  readonly attribute FrozenArray<<a href='USBEndpoint.html'>USBEndpoint</a>> <strong>endpoints</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

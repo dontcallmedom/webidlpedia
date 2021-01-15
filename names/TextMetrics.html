@@ -26,6 +26,26 @@ interface <strong>TextMetrics</strong> {
   readonly attribute <span>double</span> <strong>ideographicBaseline</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextMetrics</strong> {
+  // x-direction
+  readonly attribute <span>double</span> <strong>width</strong>; // advance width
+  readonly attribute <span>double</span> <strong>actualBoundingBoxLeft</strong>;
+  readonly attribute <span>double</span> <strong>actualBoundingBoxRight</strong>;
+
+  // y-direction
+  readonly attribute <span>double</span> <strong>fontBoundingBoxAscent</strong>;
+  readonly attribute <span>double</span> <strong>fontBoundingBoxDescent</strong>;
+  readonly attribute <span>double</span> <strong>actualBoundingBoxAscent</strong>;
+  readonly attribute <span>double</span> <strong>actualBoundingBoxDescent</strong>;
+  readonly attribute <span>double</span> <strong>emHeightAscent</strong>;
+  readonly attribute <span>double</span> <strong>emHeightDescent</strong>;
+  readonly attribute <span>double</span> <strong>hangingBaseline</strong>;
+  readonly attribute <span>double</span> <strong>alphabeticBaseline</strong>;
+  readonly attribute <span>double</span> <strong>ideographicBaseline</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

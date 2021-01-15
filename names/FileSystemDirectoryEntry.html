@@ -20,6 +20,20 @@ interface <strong>FileSystemDirectoryEntry</strong> : <a href='FileSystemEntry.h
                       optional <a href='ErrorCallback.html'>ErrorCallback</a> <strong>errorCallback</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>FileSystemDirectoryEntry</strong> : <a href='FileSystemEntry.html'>FileSystemEntry</a> {
+    <a href='FileSystemDirectoryReader.html'>FileSystemDirectoryReader</a> <strong>createReader</strong>();
+    <span>undefined</span> <strong>getFile</strong>(optional <span>USVString</span>? <strong>path</strong>,
+                 optional <a href='FileSystemFlags.html'>FileSystemFlags</a> <strong>options</strong> = {},
+                 optional <a href='FileSystemEntryCallback.html'>FileSystemEntryCallback</a> <strong>successCallback</strong>,
+                 optional <a href='ErrorCallback.html'>ErrorCallback</a> <strong>errorCallback</strong>);
+    <span>undefined</span> <strong>getDirectory</strong>(optional <span>USVString</span>? <strong>path</strong>,
+                      optional <a href='FileSystemFlags.html'>FileSystemFlags</a> <strong>options</strong> = {},
+                      optional <a href='FileSystemEntryCallback.html'>FileSystemEntryCallback</a> <strong>successCallback</strong>,
+                      optional <a href='ErrorCallback.html'>ErrorCallback</a> <strong>errorCallback</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

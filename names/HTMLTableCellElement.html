@@ -36,6 +36,33 @@ partial interface <strong>HTMLTableCellElement</strong> {
   [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLTableCellElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>unsigned long</span> <strong>colSpan</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>rowSpan</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>headers</strong>;
+  readonly attribute <span>long</span> <strong>cellIndex</strong>;
+
+  [CEReactions] attribute <span>DOMString</span> <strong>scope</strong>; // only conforming for th elements
+  [CEReactions] attribute <span>DOMString</span> <strong>abbr</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>axis</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+
+  [CEReactions] attribute <span>DOMString</span> <strong>ch</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>chOff</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noWrap</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>vAlign</strong>;
+
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;  // only conforming for th elements
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

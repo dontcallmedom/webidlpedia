@@ -23,6 +23,23 @@ base: ../
   Promise<<a href='Blob.html'>Blob</a>> <strong>getType</strong>(<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>] interface <strong>ClipboardItem</strong> {
+  constructor(record<<span>DOMString</span>, <a href='ClipboardItemData.html'>ClipboardItemData</a>> <strong>items</strong>,
+    optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> = {});
+  static <a href='ClipboardItem.html'>ClipboardItem</a> <strong>createDelayed</strong>(
+      record<<span>DOMString</span>, <a href='ClipboardItemDelayedCallback.html'>ClipboardItemDelayedCallback</a>> <strong>items</strong>,
+      optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> = {});
+
+  readonly attribute <a href='PresentationStyle.html'>PresentationStyle</a> <strong>presentationStyle</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
+  readonly attribute <span>boolean</span> <strong>delayed</strong>;
+
+  readonly attribute FrozenArray<<span>DOMString</span>> <strong>types</strong>;
+
+  Promise<<a href='Blob.html'>Blob</a>> <strong>getType</strong>(<span>DOMString</span> <strong>type</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

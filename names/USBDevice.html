@@ -42,6 +42,42 @@ interface <strong>USBDevice</strong> {
   Promise<<span>undefined</span>> <strong>reset</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>,<a href='Window.html'>Window</a>), SecureContext]
+interface <strong>USBDevice</strong> {
+  readonly attribute <span>octet</span> <strong>usbVersionMajor</strong>;
+  readonly attribute <span>octet</span> <strong>usbVersionMinor</strong>;
+  readonly attribute <span>octet</span> <strong>usbVersionSubminor</strong>;
+  readonly attribute <span>octet</span> <strong>deviceClass</strong>;
+  readonly attribute <span>octet</span> <strong>deviceSubclass</strong>;
+  readonly attribute <span>octet</span> <strong>deviceProtocol</strong>;
+  readonly attribute <span>unsigned short</span> <strong>vendorId</strong>;
+  readonly attribute <span>unsigned short</span> <strong>productId</strong>;
+  readonly attribute <span>octet</span> <strong>deviceVersionMajor</strong>;
+  readonly attribute <span>octet</span> <strong>deviceVersionMinor</strong>;
+  readonly attribute <span>octet</span> <strong>deviceVersionSubminor</strong>;
+  readonly attribute <span>DOMString</span>? <strong>manufacturerName</strong>;
+  readonly attribute <span>DOMString</span>? <strong>productName</strong>;
+  readonly attribute <span>DOMString</span>? <strong>serialNumber</strong>;
+  readonly attribute <a href='USBConfiguration.html'>USBConfiguration</a>? <strong>configuration</strong>;
+  readonly attribute FrozenArray<<a href='USBConfiguration.html'>USBConfiguration</a>> <strong>configurations</strong>;
+  readonly attribute <span>boolean</span> <strong>opened</strong>;
+  Promise<<span>undefined</span>> <strong>open</strong>();
+  Promise<<span>undefined</span>> <strong>close</strong>();
+  Promise<<span>undefined</span>> <strong>selectConfiguration</strong>(<span>octet</span> <strong>configurationValue</strong>);
+  Promise<<span>undefined</span>> <strong>claimInterface</strong>(<span>octet</span> <strong>interfaceNumber</strong>);
+  Promise<<span>undefined</span>> <strong>releaseInterface</strong>(<span>octet</span> <strong>interfaceNumber</strong>);
+  Promise<<span>undefined</span>> <strong>selectAlternateInterface</strong>(<span>octet</span> <strong>interfaceNumber</strong>, <span>octet</span> <strong>alternateSetting</strong>);
+  Promise<<a href='USBInTransferResult.html'>USBInTransferResult</a>> <strong>controlTransferIn</strong>(<a href='USBControlTransferParameters.html'>USBControlTransferParameters</a> <strong>setup</strong>, <span>unsigned short</span> <strong>length</strong>);
+  Promise<<a href='USBOutTransferResult.html'>USBOutTransferResult</a>> <strong>controlTransferOut</strong>(<a href='USBControlTransferParameters.html'>USBControlTransferParameters</a> <strong>setup</strong>, optional <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<span>undefined</span>> <strong>clearHalt</strong>(<a href='USBDirection.html'>USBDirection</a> <strong>direction</strong>, <span>octet</span> <strong>endpointNumber</strong>);
+  Promise<<a href='USBInTransferResult.html'>USBInTransferResult</a>> <strong>transferIn</strong>(<span>octet</span> <strong>endpointNumber</strong>, <span>unsigned long</span> <strong>length</strong>);
+  Promise<<a href='USBOutTransferResult.html'>USBOutTransferResult</a>> <strong>transferOut</strong>(<span>octet</span> <strong>endpointNumber</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+  Promise<<a href='USBIsochronousInTransferResult.html'>USBIsochronousInTransferResult</a>> <strong>isochronousTransferIn</strong>(<span>octet</span> <strong>endpointNumber</strong>, sequence<<span>unsigned long</span>> <strong>packetLengths</strong>);
+  Promise<<a href='USBIsochronousOutTransferResult.html'>USBIsochronousOutTransferResult</a>> <strong>isochronousTransferOut</strong>(<span>octet</span> <strong>endpointNumber</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>, sequence<<span>unsigned long</span>> <strong>packetLengths</strong>);
+  Promise<<span>undefined</span>> <strong>reset</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

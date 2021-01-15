@@ -18,6 +18,18 @@ interface <strong>FileSystemHandle</strong> {
   Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> = {});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
+interface <strong>FileSystemHandle</strong> {
+  readonly attribute <a href='FileSystemHandleKind.html'>FileSystemHandleKind</a> <strong>kind</strong>;
+  readonly attribute <span>USVString</span> <strong>name</strong>;
+
+  Promise<<span>boolean</span>> <strong>isSameEntry</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>other</strong>);
+
+  Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>queryPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> = {});
+  Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

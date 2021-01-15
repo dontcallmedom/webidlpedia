@@ -39,6 +39,34 @@ partial interface <strong>HTMLLinkElement</strong> {
 <pre class=webidl><code>partial interface <strong>HTMLLinkElement</strong> {
   attribute <span>DOMString</span> <strong>integrity</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>USVString</span> <strong>href</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rel</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>as</strong>; // (default "")
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>media</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>hreflang</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sizes</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>imageSrcset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>imageSizes</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>rev</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>target</strong>;
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;
+  attribute <span>DOMString</span> <strong>integrity</strong>;
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/SRI/">Subresource Integrity</a> refers to <code>HTMLLinkElement</code></li></ul>

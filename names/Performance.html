@@ -54,6 +54,35 @@ partial interface <strong>Performance</strong> {
     <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span>DOMString</span> <strong>measureName</strong>, optional (<span>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> = {}, optional <span>DOMString</span> <strong>endMark</strong>);
     <span>undefined</span> <strong>clearMeasures</strong>(optional <span>DOMString</span> <strong>measureName</strong>);
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;
+    [Default] <span>object</span> <strong>toJSON</strong>();
+    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;
+  Promise<<a href='Profiler.html'>Profiler</a>> <strong>profile</strong>(<a href='ProfilerInitOptions.html'>ProfilerInitOptions</a> <strong>options</strong>);
+  [CrossOriginIsolated] Promise<<a href='MemoryMeasurement.html'>MemoryMeasurement</a>> <strong>measureUserAgentSpecificMemory</strong>();
+  [SameObject]
+  readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;
+  [SameObject]
+  readonly attribute <a href='PerformanceNavigation.html'>PerformanceNavigation</a> <strong>navigation</strong>;
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntries</strong> ();
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByType</strong> (<span>DOMString</span> <strong>type</strong>);
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByName</strong> (<span>DOMString</span> <strong>name</strong>, optional <span>DOMString</span> <strong>type</strong>);
+  <span>undefined</span> <strong>clearResourceTimings</strong> ();
+  <span>undefined</span> <strong>setResourceTimingBufferSize</strong> (<span>unsigned long</span> <strong>maxSize</strong>);
+              attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresourcetimingbufferfull</strong>;
+    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> = {});
+    <span>undefined</span> <strong>clearMarks</strong>(optional <span>DOMString</span> <strong>markName</strong>);
+    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span>DOMString</span> <strong>measureName</strong>, optional (<span>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> = {}, optional <span>DOMString</span> <strong>endMark</strong>);
+    <span>undefined</span> <strong>clearMeasures</strong>(optional <span>DOMString</span> <strong>measureName</strong>);
+    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> = {});
+    <span>undefined</span> <strong>clearMarks</strong>(optional <span>DOMString</span> <strong>markName</strong>);
+    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span>DOMString</span> <strong>measureName</strong>, optional (<span>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> = {}, optional <span>DOMString</span> <strong>endMark</strong>);
+    <span>undefined</span> <strong>clearMeasures</strong>(optional <span>DOMString</span> <strong>measureName</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -14,6 +14,14 @@ interface <strong>Memory</strong> {
   readonly attribute <span>ArrayBuffer</span> <strong>buffer</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[LegacyNamespace=<a href='WebAssembly.html'>WebAssembly</a>, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>Memory</strong> {
+  constructor(<a href='MemoryDescriptor.html'>MemoryDescriptor</a> <strong>descriptor</strong>);
+  <span>unsigned long</span> <strong>grow</strong>([EnforceRange] <span>unsigned long</span> <strong>delta</strong>);
+  readonly attribute <span>ArrayBuffer</span> <strong>buffer</strong>;
+};</code></pre></details>
 </section>
 
   

@@ -163,6 +163,224 @@ partial interface <strong>Window</strong> {
 <pre class=webidl><code>partial interface <strong>Window</strong> {
   <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Global=<a href='Window.html'>Window</a>,
+ Exposed=<a href='Window.html'>Window</a>,
+ LegacyUnenumerableNamedProperties]
+interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  // the current browsing context
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>window</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>self</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='Document.html'>Document</a> <strong>document</strong>;
+  attribute <span>DOMString</span> <strong>name</strong>;
+  [PutForwards=<span>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a> <strong>location</strong>;
+  readonly attribute <a href='History.html'>History</a> <strong>history</strong>;
+  readonly attribute <a href='CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>locationbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>menubar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>personalbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>scrollbars</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>statusbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>toolbar</strong>;
+  attribute <span>DOMString</span> <strong>status</strong>;
+  <span>undefined</span> <strong>close</strong>();
+  readonly attribute <span>boolean</span> <strong>closed</strong>;
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>focus</strong>();
+  <span>undefined</span> <strong>blur</strong>();
+
+  // other browsing contexts
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;
+  [Replaceable] readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;
+  attribute <span>any</span> <strong>opener</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>frameElement</strong>;
+  <a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span>USVString</span> <strong>url</strong> = "", optional <span>DOMString</span> <strong>target</strong> = "_blank", optional [LegacyNullToEmptyString] <span>DOMString</span> <strong>features</strong> = "");
+  getter <span>object</span> (<span>DOMString</span> <strong>name</strong>);
+  // Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
+  // object on the prototype chain. Indeed, this does not make the global object an exotic object.
+  // Indexed access is taken care of by the WindowProxy exotic object.
+
+  // the user agent
+  readonly attribute <a href='Navigator.html'>Navigator</a> <strong>navigator</strong>;
+  readonly attribute <span>boolean</span> <strong>originAgentCluster</strong>;
+
+  // user prompts
+  <span>undefined</span> <strong>alert</strong>();
+  <span>undefined</span> <strong>alert</strong>(<span>DOMString</span> <strong>message</strong>);
+  <span>boolean</span> <strong>confirm</strong>(optional <span>DOMString</span> <strong>message</strong> = "");
+  <span>DOMString</span>? <strong>prompt</strong>(optional <span>DOMString</span> <strong>message</strong> = "", optional <span>DOMString</span> <strong>default</strong> = "");
+  <span>undefined</span> <strong>print</strong>();
+
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, <span>USVString</span> <strong>targetOrigin</strong>, optional sequence<<span>object</span>> <strong>transfer</strong> = []);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>captureEvents</strong>();
+  <span>undefined</span> <strong>releaseEvents</strong>();
+
+  [Replaceable, SameObject] readonly attribute <a href='External.html'>External</a> <strong>external</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
+  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
+  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;
+
+  // base64 utility methods
+  <span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
+  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);
+
+  // timers
+  <span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+
+  // microtask queuing
+  <span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);
+
+  // ImageBitmap
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  <span>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);
+  <span>undefined</span> <strong>cancelAnimationFrame</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  readonly attribute <a href='Storage.html'>Storage</a> <strong>sessionStorage</strong>;
+  readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;
+    readonly attribute <span>short</span> <strong>orientation</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span>undefined</span>) <strong>event</strong>;
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
+    Promise<sequence<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>>> <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> = {});
+    Promise<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>> <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> = {});
+    Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> = {});
+    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;
+  [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;
+    <span>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);
+  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);
+    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);
+    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;
+
+    // browsing context
+    <span>undefined</span> <strong>moveTo</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>moveBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>resizeTo</strong>(<span>long</span> <strong>width</strong>, <span>long</span> <strong>height</strong>);
+    <span>undefined</span> <strong>resizeBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+
+    // viewport
+    [Replaceable] readonly attribute <span>long</span> <strong>innerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>innerHeight</strong>;
+
+    // viewport scrolling
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollX</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageXOffset</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollY</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageYOffset</strong>;
+    <span>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scroll</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scrollTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> = {});
+    <span>undefined</span> <strong>scrollBy</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+
+    // client
+    [Replaceable] readonly attribute <span>long</span> <strong>screenX</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenLeft</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenY</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenTop</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerHeight</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>devicePixelRatio</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;
+  <span>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>cancelIdleCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

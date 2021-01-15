@@ -20,6 +20,17 @@ interface <strong>StorageManager</strong> {
 partial interface <strong>StorageManager</strong> {
   Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>getDirectory</strong>();
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext,
+ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>StorageManager</strong> {
+  Promise<<span>boolean</span>> <strong>persisted</strong>();
+  [Exposed=<a href='Window.html'>Window</a>] Promise<<span>boolean</span>> <strong>persist</strong>();
+
+  Promise<<a href='StorageEstimate.html'>StorageEstimate</a>> <strong>estimate</strong>();
+  Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>getDirectory</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

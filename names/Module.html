@@ -15,6 +15,15 @@ interface <strong>Module</strong> {
   static sequence<<span>ArrayBuffer</span>> <strong>customSections</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>, <span>DOMString</span> <strong>sectionName</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[LegacyNamespace=<a href='WebAssembly.html'>WebAssembly</a>, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>Module</strong> {
+  constructor(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+  static sequence<<a href='ModuleExportDescriptor.html'>ModuleExportDescriptor</a>> <strong>exports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence<<a href='ModuleImportDescriptor.html'>ModuleImportDescriptor</a>> <strong>imports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence<<span>ArrayBuffer</span>> <strong>customSections</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>, <span>DOMString</span> <strong>sectionName</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

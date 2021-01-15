@@ -34,6 +34,29 @@ interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HT
   [CEReactions] attribute <span>boolean</span> <strong>autoPictureInPicture</strong>;
   [CEReactions] attribute <span>boolean</span> <strong>disablePictureInPicture</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoHeight</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>poster</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>playsInline</strong>;
+  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();
+    <span>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);
+    <span>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  [NewObject] Promise<<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>> <strong>requestPictureInPicture</strong>();
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;
+
+  [CEReactions] attribute <span>boolean</span> <strong>autoPictureInPicture</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disablePictureInPicture</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

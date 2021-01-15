@@ -31,6 +31,30 @@ interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarge
   static <span>boolean</span> <strong>isTypeSupported</strong>(<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>, optional <a href='MediaRecorderOptions.html'>MediaRecorderOptions</a> <strong>options</strong> = {});
+  readonly attribute <a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>;
+  readonly attribute <span>DOMString</span> <strong>mimeType</strong>;
+  readonly attribute <a href='RecordingState.html'>RecordingState</a> <strong>state</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondataavailable</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoBitsPerSecond</strong>;
+  readonly attribute <span>unsigned long</span> <strong>audioBitsPerSecond</strong>;
+  readonly attribute <a href='BitrateMode.html'>BitrateMode</a> <strong>audioBitrateMode</strong>;
+
+  <span>undefined</span> <strong>start</strong>(optional <span>unsigned long</span> <strong>timeslice</strong>);
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>pause</strong>();
+  <span>undefined</span> <strong>resume</strong>();
+  <span>undefined</span> <strong>requestData</strong>();
+
+  static <span>boolean</span> <strong>isTypeSupported</strong>(<span>DOMString</span> <strong>type</strong>);
+};</code></pre></details>
 </section>
 
   

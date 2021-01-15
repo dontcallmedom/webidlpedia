@@ -16,6 +16,16 @@ interface <strong>EventTarget</strong> {
   <span>boolean</span> <strong>dispatchEvent</strong>(<a href='Event.html'>Event</a> <strong>event</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>)]
+interface <strong>EventTarget</strong> {
+  constructor();
+
+  <span>undefined</span> <strong>addEventListener</strong>(<span>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span>boolean</span>) <strong>options</strong> = {});
+  <span>undefined</span> <strong>removeEventListener</strong>(<span>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span>boolean</span>) <strong>options</strong> = {});
+  <span>boolean</span> <strong>dispatchEvent</strong>(<a href='Event.html'>Event</a> <strong>event</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

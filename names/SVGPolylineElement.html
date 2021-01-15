@@ -14,6 +14,16 @@ interface <strong>SVGPolylineElement</strong> : <a href='SVGGeometryElement.html
 <a href='SVGPolylineElement.html'>SVGPolylineElement</a> includes <a href='SVGAnimatedPoints.html'>SVGAnimatedPoints</a>;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/svg-markers/">SVG Markers</a>
 <pre class=webidl><code><a href='SVGPolylineElement.html'>SVGPolylineElement</a> includes <a href='SVGMarkableElement.html'>SVGMarkableElement</a>;</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGPolylineElement</strong> : <a href='SVGGeometryElement.html'>SVGGeometryElement</a> {
+  [SameObject] readonly attribute <a href='SVGPointList.html'>SVGPointList</a> <strong>points</strong>;
+  [SameObject] readonly attribute <a href='SVGPointList.html'>SVGPointList</a> <strong>animatedPoints</strong>;
+  readonly attribute <a href='SVGMarkerList.html'>SVGMarkerList</a> <strong>markers</strong>;
+
+  <span>long</span> <strong>getMarkerIndexFromPoint</strong>(<a href='DOMPoint.html'>DOMPoint</a> <strong>point</strong>);
+};</code></pre></details>
 </section>
 
   

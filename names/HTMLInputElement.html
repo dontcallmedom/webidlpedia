@@ -83,6 +83,76 @@ partial interface <strong>HTMLInputElement</strong> {
 <pre class=webidl><code>partial interface <strong>HTMLInputElement</strong> {
     [CEReactions] attribute <span>DOMString</span> <strong>capture</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLInputElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>DOMString</span> <strong>accept</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>alt</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>autocomplete</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defaultChecked</strong>;
+  attribute <span>boolean</span> <strong>checked</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>dirName</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  attribute <a href='FileList.html'>FileList</a>? <strong>files</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>formAction</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>formEnctype</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>formMethod</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>formNoValidate</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>formTarget</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  attribute <span>boolean</span> <strong>indeterminate</strong>;
+  readonly attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>list</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>max</strong>;
+  [CEReactions] attribute <span>long</span> <strong>maxLength</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>min</strong>;
+  [CEReactions] attribute <span>long</span> <strong>minLength</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>multiple</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>pattern</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>placeholder</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>readOnly</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>required</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>size</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>step</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>defaultValue</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>value</strong>;
+  attribute <span>object</span>? <strong>valueAsDate</strong>;
+  attribute <span>unrestricted double</span> <strong>valueAsNumber</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+
+  <span>undefined</span> <strong>stepUp</strong>(optional <span>long</span> <strong>n</strong> = 1);
+  <span>undefined</span> <strong>stepDown</strong>(optional <span>long</span> <strong>n</strong> = 1);
+
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
+
+  readonly attribute <a href='NodeList.html'>NodeList</a>? <strong>labels</strong>;
+
+  <span>undefined</span> <strong>select</strong>();
+  attribute <span>unsigned long</span>? <strong>selectionStart</strong>;
+  attribute <span>unsigned long</span>? <strong>selectionEnd</strong>;
+  attribute <span>DOMString</span>? <strong>selectionDirection</strong>;
+  <span>undefined</span> <strong>setRangeText</strong>(<span>DOMString</span> <strong>replacement</strong>);
+  <span>undefined</span> <strong>setRangeText</strong>(<span>DOMString</span> <strong>replacement</strong>, <span>unsigned long</span> <strong>start</strong>, <span>unsigned long</span> <strong>end</strong>, optional <a href='SelectionMode.html'>SelectionMode</a> <strong>selectionMode</strong> = "preserve");
+  <span>undefined</span> <strong>setSelectionRange</strong>(<span>unsigned long</span> <strong>start</strong>, <span>unsigned long</span> <strong>end</strong>, optional <span>DOMString</span> <strong>direction</strong>);
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+    attribute <span>boolean</span> <strong>webkitdirectory</strong>;
+    readonly attribute FrozenArray<<a href='FileSystemEntry.html'>FileSystemEntry</a>> <strong>webkitEntries</strong>;
+    [CEReactions] attribute <span>DOMString</span> <strong>capture</strong>;
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a> refers to <code>HTMLInputElement</code></li><li><a href="https://www.w3.org/TR/html-media-capture/">HTML Media Capture</a> refers to <code>HTMLInputElement</code></li></ul>

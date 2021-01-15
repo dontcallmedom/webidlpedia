@@ -23,6 +23,23 @@ interface <strong>HTMLOptionElement</strong> : <a href='HTMLElement.html'>HTMLEl
   readonly attribute <span>long</span> <strong>index</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>,
+ LegacyFactoryFunction=<span>Option</span>(optional <span>DOMString</span> <strong>text</strong> = "", optional <span>DOMString</span> <strong>value</strong>, optional <span>boolean</span> <strong>defaultSelected</strong> = false, optional <span>boolean</span> <strong>selected</strong> = false)]
+interface <strong>HTMLOptionElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>label</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defaultSelected</strong>;
+  attribute <span>boolean</span> <strong>selected</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>value</strong>;
+
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+  readonly attribute <span>long</span> <strong>index</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

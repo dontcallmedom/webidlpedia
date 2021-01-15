@@ -36,6 +36,35 @@ namespace <strong>console</strong> { // but see namespace object requirements be
   <span>undefined</span> <strong>timeEnd</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>console</strong> { // but see namespace object requirements below
+  // Logging
+  <span>undefined</span> <strong>assert</strong>(optional <span>boolean</span> <strong>condition</strong> = false, <span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>clear</strong>();
+  <span>undefined</span> <strong>debug</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>error</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>info</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>log</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>table</strong>(optional <span>any</span> <strong>tabularData</strong>, optional sequence<<span>DOMString</span>> <strong>properties</strong>);
+  <span>undefined</span> <strong>trace</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>warn</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>dir</strong>(optional <span>any</span> <strong>item</strong>, optional <span>object</span>? <strong>options</strong>);
+  <span>undefined</span> <strong>dirxml</strong>(<span>any</span>... <strong>data</strong>);
+
+  // Counting
+  <span>undefined</span> <strong>count</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+  <span>undefined</span> <strong>countReset</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+
+  // Grouping
+  <span>undefined</span> <strong>group</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>groupCollapsed</strong>(<span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>groupEnd</strong>();
+
+  // Timing
+  <span>undefined</span> <strong>time</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+  <span>undefined</span> <strong>timeLog</strong>(optional <span>DOMString</span> <strong>label</strong> = "default", <span>any</span>... <strong>data</strong>);
+  <span>undefined</span> <strong>timeEnd</strong>(optional <span>DOMString</span> <strong>label</strong> = "default");
+};</code></pre></details>
 </section>
 
   

@@ -20,6 +20,20 @@ base: ../
     [Clamp] <span>unsigned short</span> <strong>maxAnisotropy</strong> = 1;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>GPUSamplerDescriptor</strong> : <a href='GPUObjectDescriptorBase.html'>GPUObjectDescriptorBase</a> {
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeU</strong> = "clamp-to-edge";
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeV</strong> = "clamp-to-edge";
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeW</strong> = "clamp-to-edge";
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>magFilter</strong> = "nearest";
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>minFilter</strong> = "nearest";
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>mipmapFilter</strong> = "nearest";
+    <span>float</span> <strong>lodMinClamp</strong> = 0;
+    <span>float</span> <strong>lodMaxClamp</strong> = 0xffffffff; // TODO: What should this be? Was Number.MAX_VALUE.
+    <a href='GPUCompareFunction.html'>GPUCompareFunction</a> <strong>compare</strong>;
+    [Clamp] <span>unsigned short</span> <strong>maxAnisotropy</strong> = 1;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

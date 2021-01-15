@@ -26,6 +26,25 @@ interface <strong>BluetoothAdvertisingEvent</strong> : <a href='Event.html'>Even
   readonly attribute <a href='BluetoothServiceDataMap.html'>BluetoothServiceDataMap</a> <strong>serviceData</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+[
+  Exposed=<a href='Window.html'>Window</a>,
+  SecureContext
+]
+interface <strong>BluetoothAdvertisingEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='BluetoothAdvertisingEventInit.html'>BluetoothAdvertisingEventInit</a> <strong>init</strong>);
+  [SameObject]
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;
+  readonly attribute FrozenArray<<a href='UUID.html'>UUID</a>> <strong>uuids</strong>;
+  readonly attribute <span>DOMString</span>? <strong>name</strong>;
+  readonly attribute <span>unsigned short</span>? <strong>appearance</strong>;
+  readonly attribute <span>byte</span>? <strong>txPower</strong>;
+  readonly attribute <span>byte</span>? <strong>rssi</strong>;
+  [SameObject]
+  readonly attribute <a href='BluetoothManufacturerDataMap.html'>BluetoothManufacturerDataMap</a> <strong>manufacturerData</strong>;
+  [SameObject]
+  readonly attribute <a href='BluetoothServiceDataMap.html'>BluetoothServiceDataMap</a> <strong>serviceData</strong>;
+};</code></pre></details>
 </section>
 
   

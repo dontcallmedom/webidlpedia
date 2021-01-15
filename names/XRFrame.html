@@ -31,6 +31,22 @@ partial interface <strong>XRFrame</strong> {
 
     <span>boolean</span> <strong>fillPoses</strong>(sequence<<a href='XRSpace.html'>XRSpace</a>> <strong>spaces</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>, <span>Float32Array</span> <strong>transforms</strong>);
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRFrame</strong> {
+  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong>session</strong>;
+
+  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);
+  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
+  Promise<<a href='XRAnchor.html'>XRAnchor</a>> <strong>createAnchor</strong>(<a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>pose</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>);
+  [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;
+  FrozenArray<<a href='XRHitTestResult.html'>XRHitTestResult</a>> <strong>getHitTestResults</strong>(<a href='XRHitTestSource.html'>XRHitTestSource</a> <strong>hitTestSource</strong>);
+  FrozenArray<<a href='XRTransientInputHitTestResult.html'>XRTransientInputHitTestResult</a>> <strong>getHitTestResultsForTransientInput</strong>(<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a> <strong>hitTestSource</strong>);
+    <a href='XRJointPose.html'>XRJointPose</a>? <strong>getJointPose</strong>(<a href='XRJointSpace.html'>XRJointSpace</a> <strong>joint</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
+    <span>boolean</span> <strong>fillJointRadii</strong>(sequence<<a href='XRJointSpace.html'>XRJointSpace</a>> <strong>jointSpaces</strong>, <span>Float32Array</span> <strong>radii</strong>);
+
+    <span>boolean</span> <strong>fillPoses</strong>(sequence<<a href='XRSpace.html'>XRSpace</a>> <strong>spaces</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>, <span>Float32Array</span> <strong>transforms</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

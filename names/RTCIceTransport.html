@@ -33,6 +33,30 @@ partial interface <strong>RTCIceTransport</strong> {
                     attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onerror</strong>;
                     attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onicecandidate</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>RTCIceTransport</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='RTCIceRole.html'>RTCIceRole</a> <strong>role</strong>;
+  readonly attribute <a href='RTCIceComponent.html'>RTCIceComponent</a> <strong>component</strong>;
+  readonly attribute <a href='RTCIceTransportState.html'>RTCIceTransportState</a> <strong>state</strong>;
+  readonly attribute <a href='RTCIceGathererState.html'>RTCIceGathererState</a> <strong>gatheringState</strong>;
+  sequence<<a href='RTCIceCandidate.html'>RTCIceCandidate</a>> <strong>getLocalCandidates</strong>();
+  sequence<<a href='RTCIceCandidate.html'>RTCIceCandidate</a>> <strong>getRemoteCandidates</strong>();
+  <a href='RTCIceCandidatePair.html'>RTCIceCandidatePair</a>? <strong>getSelectedCandidatePair</strong>();
+  <a href='RTCIceParameters.html'>RTCIceParameters</a>? <strong>getLocalParameters</strong>();
+  <a href='RTCIceParameters.html'>RTCIceParameters</a>? <strong>getRemoteParameters</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ongatheringstatechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectedcandidatepairchange</strong>;
+    constructor();
+    <span>undefined</span>                      <strong>gather</strong> (optional <a href='RTCIceGatherOptions.html'>RTCIceGatherOptions</a> <strong>options</strong> = {});
+    <span>undefined</span>                      <strong>start</strong> (<a href='RTCIceParameters.html'>RTCIceParameters</a> <strong>remoteParameters</strong>, optional <a href='RTCIceRole.html'>RTCIceRole</a> <strong>role</strong> = "controlled");
+    <span>undefined</span>                      <strong>stop</strong> ();
+    <span>undefined</span>                      <strong>addRemoteCandidate</strong> (<a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>remoteCandidate</strong>);
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onerror</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onicecandidate</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

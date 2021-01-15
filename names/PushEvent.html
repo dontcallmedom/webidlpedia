@@ -13,6 +13,13 @@ interface <strong>PushEvent</strong> : <a href='ExtendableEvent.html'>Extendable
   readonly attribute <a href='PushMessageData.html'>PushMessageData</a>? <strong>data</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+interface <strong>PushEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PushEventInit.html'>PushEventInit</a> <strong>eventInitDict</strong> = {});
+  readonly attribute <a href='PushMessageData.html'>PushMessageData</a>? <strong>data</strong>;
+};</code></pre></details>
 </section>
 
   

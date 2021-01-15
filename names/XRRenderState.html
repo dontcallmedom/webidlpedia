@@ -17,6 +17,15 @@ base: ../
 <pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>] partial interface <strong>XRRenderState</strong> {
   readonly attribute FrozenArray<<a href='XRLayer.html'>XRLayer</a>> <strong>layers</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRRenderState</strong> {
+  readonly attribute <span>double</span> <strong>depthNear</strong>;
+  readonly attribute <span>double</span> <strong>depthFar</strong>;
+  readonly attribute <span>double</span>? <strong>inlineVerticalFieldOfView</strong>;
+  readonly attribute <a href='XRWebGLLayer.html'>XRWebGLLayer</a>? <strong>baseLayer</strong>;
+  readonly attribute FrozenArray<<a href='XRLayer.html'>XRLayer</a>> <strong>layers</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

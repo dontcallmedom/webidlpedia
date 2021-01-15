@@ -20,6 +20,20 @@ base: ../
   attribute <span>unrestricted double</span> <strong>lineDashOffset</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+interface mixin <strong>CanvasPathDrawingStyles</strong> {
+  // line caps/joins
+  attribute <span>unrestricted double</span> <strong>lineWidth</strong>; // (default 1)
+  attribute <a href='CanvasLineCap.html'>CanvasLineCap</a> <strong>lineCap</strong>; // (default "butt")
+  attribute <a href='CanvasLineJoin.html'>CanvasLineJoin</a> <strong>lineJoin</strong>; // (default "miter")
+  attribute <span>unrestricted double</span> <strong>miterLimit</strong>; // (default 10)
+
+  // dashed lines
+  <span>undefined</span> <strong>setLineDash</strong>(sequence<<span>unrestricted double</span>> <strong>segments</strong>); // default empty
+  sequence<<span>unrestricted double</span>> <strong>getLineDash</strong>();
+  attribute <span>unrestricted double</span> <strong>lineDashOffset</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

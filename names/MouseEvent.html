@@ -44,6 +44,40 @@ interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
   readonly attribute <span>long</span> <strong>movementX</strong>;
   readonly attribute <span>long</span> <strong>movementY</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong>);
+  readonly attribute <span>long</span> <strong>screenX</strong>;
+  readonly attribute <span>long</span> <strong>screenY</strong>;
+  readonly attribute <span>long</span> <strong>clientX</strong>;
+  readonly attribute <span>long</span> <strong>clientY</strong>;
+
+  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
+  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
+  readonly attribute <span>boolean</span> <strong>altKey</strong>;
+  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
+
+  readonly attribute <span>short</span> <strong>button</strong>;
+  readonly attribute <span>unsigned short</span> <strong>buttons</strong>;
+
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;
+
+  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);
+  readonly attribute <span>double</span> <strong>screenX</strong>;
+  readonly attribute <span>double</span> <strong>screenY</strong>;
+  readonly attribute <span>double</span> <strong>pageX</strong>;
+  readonly attribute <span>double</span> <strong>pageY</strong>;
+  readonly attribute <span>double</span> <strong>clientX</strong>;
+  readonly attribute <span>double</span> <strong>clientY</strong>;
+  readonly attribute <span>double</span> <strong>x</strong>;
+  readonly attribute <span>double</span> <strong>y</strong>;
+  readonly attribute <span>double</span> <strong>offsetX</strong>;
+  readonly attribute <span>double</span> <strong>offsetY</strong>;
+  readonly attribute <span>long</span> <strong>movementX</strong>;
+  readonly attribute <span>long</span> <strong>movementY</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

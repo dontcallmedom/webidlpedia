@@ -19,6 +19,19 @@ interface <strong>IntersectionObserverEntry</strong> {
   readonly attribute <a href='Element.html'>Element</a> <strong>target</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>IntersectionObserverEntry</strong> {
+  constructor(<a href='IntersectionObserverEntryInit.html'>IntersectionObserverEntryInit</a> <strong>intersectionObserverEntryInit</strong>);
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>time</strong>;
+  readonly attribute <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a>? <strong>rootBounds</strong>;
+  readonly attribute <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>boundingClientRect</strong>;
+  readonly attribute <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>intersectionRect</strong>;
+  readonly attribute <span>boolean</span> <strong>isIntersecting</strong>;
+  readonly attribute <span>double</span> <strong>intersectionRatio</strong>;
+  readonly attribute <a href='Element.html'>Element</a> <strong>target</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

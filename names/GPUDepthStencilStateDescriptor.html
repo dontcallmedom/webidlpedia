@@ -20,6 +20,20 @@ base: ../
     <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilWriteMask</strong> = 0xFFFFFFFF;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>GPUDepthStencilStateDescriptor</strong> {
+    required <a href='GPUTextureFormat.html'>GPUTextureFormat</a> <strong>format</strong>;
+
+    <span>boolean</span> <strong>depthWriteEnabled</strong> = false;
+    <a href='GPUCompareFunction.html'>GPUCompareFunction</a> <strong>depthCompare</strong> = "always";
+
+    <a href='GPUStencilStateFaceDescriptor.html'>GPUStencilStateFaceDescriptor</a> <strong>stencilFront</strong> = {};
+    <a href='GPUStencilStateFaceDescriptor.html'>GPUStencilStateFaceDescriptor</a> <strong>stencilBack</strong> = {};
+
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilReadMask</strong> = 0xFFFFFFFF;
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilWriteMask</strong> = 0xFFFFFFFF;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -21,6 +21,18 @@ partial dictionary <strong>KeyboardEventInit</strong> {
   <span>unsigned long</span> <strong>keyCode</strong> = 0;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>KeyboardEventInit</strong> : <a href='EventModifierInit.html'>EventModifierInit</a> {
+  <span>DOMString</span> <strong>key</strong> = "";
+  <span>DOMString</span> <strong>code</strong> = "";
+  <span>unsigned long</span> <strong>location</strong> = 0;
+  <span>boolean</span> <strong>repeat</strong> = false;
+  <span>boolean</span> <strong>isComposing</strong> = false;
+  // The following support legacy user agents
+  <span>unsigned long</span> <strong>charCode</strong> = 0;
+  <span>unsigned long</span> <strong>keyCode</strong> = 0;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

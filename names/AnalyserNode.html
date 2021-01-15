@@ -21,6 +21,21 @@ interface <strong>AnalyserNode</strong> : <a href='AudioNode.html'>AudioNode</a>
   attribute <span>double</span> <strong>smoothingTimeConstant</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AnalyserNode</strong> : <a href='AudioNode.html'>AudioNode</a> {
+  constructor (<a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>, optional <a href='AnalyserOptions.html'>AnalyserOptions</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>getFloatFrequencyData</strong> (<span>Float32Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getByteFrequencyData</strong> (<span>Uint8Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getFloatTimeDomainData</strong> (<span>Float32Array</span> <strong>array</strong>);
+  <span>undefined</span> <strong>getByteTimeDomainData</strong> (<span>Uint8Array</span> <strong>array</strong>);
+  attribute <span>unsigned long</span> <strong>fftSize</strong>;
+  readonly attribute <span>unsigned long</span> <strong>frequencyBinCount</strong>;
+  attribute <span>double</span> <strong>minDecibels</strong>;
+  attribute <span>double</span> <strong>maxDecibels</strong>;
+  attribute <span>double</span> <strong>smoothingTimeConstant</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

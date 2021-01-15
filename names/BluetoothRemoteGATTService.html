@@ -25,6 +25,27 @@ interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.htm
 <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;
 <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  [SameObject]
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;
+  readonly attribute <span>boolean</span> <strong>isPrimary</strong>;
+  Promise<<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>>
+    <strong>getCharacteristic</strong>(<a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);
+  Promise<sequence<<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>>>
+    <strong>getCharacteristics</strong>(optional <a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);
+  Promise<<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>>
+    <strong>getIncludedService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);
+  Promise<sequence<<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>>>
+    <strong>getIncludedServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

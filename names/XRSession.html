@@ -50,6 +50,41 @@ partial interface <strong>XRSession</strong> {
   // Attributes
   readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  // Attributes
+  readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;
+  [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;
+  [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;
+
+  // Methods
+  <span>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> = {});
+  [NewObject] Promise<<a href='XRReferenceSpace.html'>XRReferenceSpace</a>> <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);
+
+  <span>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);
+  <span>undefined</span> <strong>cancelAnimationFrame</strong>(<span>unsigned long</span> <strong>handle</strong>);
+
+  Promise<<span>undefined</span>> <strong>end</strong>();
+
+  // Events
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputsourceschange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;
+  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;
+  Promise<<a href='XRHitTestSource.html'>XRHitTestSource</a>> <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);
+  Promise<<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>> <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);
+  // Attributes
+  readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;
+  // Attributes
+  readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

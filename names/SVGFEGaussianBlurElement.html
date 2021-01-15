@@ -25,6 +25,28 @@ base: ../
 
 <a href='SVGFEGaussianBlurElement.html'>SVGFEGaussianBlurElement</a> includes <a href='SVGFilterPrimitiveStandardAttributes.html'>SVGFilterPrimitiveStandardAttributes</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+interface <strong>SVGFEGaussianBlurElement</strong> : <a href='SVGElement.html'>SVGElement</a> {
+
+  // Edge Mode Values
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_DUPLICATE</strong> = 1;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_WRAP</strong> = 2;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_NONE</strong> = 3;
+
+  readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>in1</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>stdDeviationX</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>stdDeviationY</strong>;
+  readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>edgeMode</strong>;
+
+  <a href='void.html'>void</a> <strong>setStdDeviation</strong>(<span>float</span> <strong>stdDeviationX</strong>, <span>float</span> <strong>stdDeviationY</strong>);
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
+  readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>result</strong>;
+};</code></pre></details>
 </section>
 
   

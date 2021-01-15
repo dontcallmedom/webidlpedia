@@ -18,6 +18,18 @@ interface <strong>ImageData</strong> {
   readonly attribute <span>Uint8ClampedArray</span> <strong>data</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ Serializable]
+interface <strong>ImageData</strong> {
+  constructor(<span>unsigned long</span> <strong>sw</strong>, <span>unsigned long</span> <strong>sh</strong>);
+  constructor(<span>Uint8ClampedArray</span> <strong>data</strong>, <span>unsigned long</span> <strong>sw</strong>, optional <span>unsigned long</span> <strong>sh</strong>);
+
+  readonly attribute <span>unsigned long</span> <strong>width</strong>;
+  readonly attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>Uint8ClampedArray</span> <strong>data</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

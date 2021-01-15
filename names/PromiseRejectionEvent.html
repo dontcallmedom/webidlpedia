@@ -15,6 +15,15 @@ interface <strong>PromiseRejectionEvent</strong> : <a href='Event.html'>Event</a
   readonly attribute <span>any</span> <strong>reason</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PromiseRejectionEvent</strong> : <a href='Event.html'>Event</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='PromiseRejectionEventInit.html'>PromiseRejectionEventInit</a> <strong>eventInitDict</strong>);
+
+  readonly attribute Promise<<span>any</span>> <strong>promise</strong>;
+  readonly attribute <span>any</span> <strong>reason</strong>;
+};</code></pre></details>
 </section>
 
   

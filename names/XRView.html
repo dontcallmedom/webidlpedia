@@ -19,6 +19,17 @@ base: ../
 <pre class=webidl><code>partial interface <strong>XRView</strong> {
   readonly attribute <span>boolean</span> <strong>isFirstPersonObserver</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRView</strong> {
+  readonly attribute <a href='XREye.html'>XREye</a> <strong>eye</strong>;
+  readonly attribute <span>Float32Array</span> <strong>projectionMatrix</strong>;
+  [SameObject] readonly attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;
+  readonly attribute <span>double</span>? <strong>recommendedViewportScale</strong>;
+
+  <span>undefined</span> <strong>requestViewportScale</strong>(<span>double</span>? <strong>scale</strong>);
+  readonly attribute <span>boolean</span> <strong>isFirstPersonObserver</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

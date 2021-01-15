@@ -28,6 +28,28 @@ interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTar
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpayerdetailchange</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=<a href='Window.html'>Window</a>]
+interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTarget</a>  {
+  [Default] <span>object</span> <strong>toJSON</strong>();
+
+  readonly attribute <span>DOMString</span> <strong>requestId</strong>;
+  readonly attribute <span>DOMString</span> <strong>methodName</strong>;
+  readonly attribute <span>object</span> <strong>details</strong>;
+  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
+  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerName</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerEmail</strong>;
+  readonly attribute <span>DOMString</span>? <strong>payerPhone</strong>;
+
+  [NewObject]
+  Promise<<span>undefined</span>> <strong>complete</strong>(optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> = "unknown");
+  [NewObject]
+  Promise<<span>undefined</span>> <strong>retry</strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> = {});
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpayerdetailchange</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

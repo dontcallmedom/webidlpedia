@@ -23,6 +23,23 @@ interface <strong>IDBCursor</strong> {
   [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>delete</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBCursor</strong> {
+  readonly attribute (<a href='IDBObjectStore.html'>IDBObjectStore</a> or <a href='IDBIndex.html'>IDBIndex</a>) <strong>source</strong>;
+  readonly attribute <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong>;
+  readonly attribute <span>any</span> <strong>key</strong>;
+  readonly attribute <span>any</span> <strong>primaryKey</strong>;
+  [SameObject] readonly attribute <a href='IDBRequest.html'>IDBRequest</a> <strong>request</strong>;
+
+  <span>undefined</span> <strong>advance</strong>([EnforceRange] <span>unsigned long</span> <strong>count</strong>);
+  <span>undefined</span> <strong>continue</strong>(optional <span>any</span> <strong>key</strong>);
+  <span>undefined</span> <strong>continuePrimaryKey</strong>(<span>any</span> <strong>key</strong>, <span>any</span> <strong>primaryKey</strong>);
+
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>update</strong>(<span>any</span> <strong>value</strong>);
+  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>delete</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

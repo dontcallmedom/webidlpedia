@@ -44,6 +44,44 @@ interface <strong>HTMLSelectElement</strong> : <a href='HTMLElement.html'>HTMLEl
   readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLSelectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>DOMString</span> <strong>autocomplete</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>multiple</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>required</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>size</strong>;
+
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+
+  [SameObject] readonly attribute <a href='HTMLOptionsCollection.html'>HTMLOptionsCollection</a> <strong>options</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <a href='Element.html'>Element</a>? <strong>item</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <a href='HTMLOptionElement.html'>HTMLOptionElement</a>? <strong>namedItem</strong>(<span>DOMString</span> <strong>name</strong>);
+  [CEReactions] <span>undefined</span> <strong>add</strong>((<a href='HTMLOptionElement.html'>HTMLOptionElement</a> or <a href='HTMLOptGroupElement.html'>HTMLOptGroupElement</a>) <strong>element</strong>, optional (<a href='HTMLElement.html'>HTMLElement</a> or <span>long</span>)? <strong>before</strong> = null);
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(); // ChildNode overload
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(<span>long</span> <strong>index</strong>);
+  [CEReactions] setter <span>undefined</span> (<span>unsigned long</span> <strong>index</strong>, <a href='HTMLOptionElement.html'>HTMLOptionElement</a>? <strong>option</strong>);
+
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>selectedOptions</strong>;
+  attribute <span>long</span> <strong>selectedIndex</strong>;
+  attribute <span>DOMString</span> <strong>value</strong>;
+
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
+
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
+};</code></pre></details>
 </section>
 
   

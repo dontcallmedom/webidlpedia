@@ -16,6 +16,16 @@ interface <strong>SharedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Global=(<a href='Worker.html'>Worker</a>,<a href='SharedWorker.html'>SharedWorker</a>),Exposed=<a href='SharedWorker.html'>SharedWorker</a>]
+interface <strong>SharedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {
+  [Replaceable] readonly attribute <span>DOMString</span> <strong>name</strong>;
+
+  <span>undefined</span> <strong>close</strong>();
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+};</code></pre></details>
 </section>
 
   

@@ -61,6 +61,59 @@ interface <strong>SVGMarkerElement</strong> : <a href='SVGElement.html'>SVGEleme
 
 <a href='SVGMarkerElement.html'>SVGMarkerElement</a> includes <a href='SVGFitToViewBox.html'>SVGFitToViewBox</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGMarkerElement</strong> : <a href='SVGElement.html'>SVGElement</a> {
+
+  // Marker Unit Types
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_USERSPACEONUSE</strong> = 1;
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_STROKEWIDTH</strong> = 2;
+
+  // Marker Orientation Types
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_AUTO</strong> = 1;
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_ANGLE</strong> = 2;
+
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>refX</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>refY</strong>;
+  readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>markerUnits</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>markerWidth</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>markerHeight</strong>;
+  readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>orientType</strong>;
+  readonly attribute <a href='SVGAnimatedAngle.html'>SVGAnimatedAngle</a> <strong>orientAngle</strong>;
+           attribute <span>DOMString</span> <strong>orient</strong>;
+
+  <a href='void.html'>void</a> <strong>setOrientToAuto</strong>();
+  <a href='void.html'>void</a> <strong>setOrientToAngle</strong>(<a href='SVGAngle.html'>SVGAngle</a> <strong>angle</strong>);
+  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;
+
+  // Marker Unit Types
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_USERSPACEONUSE</strong> = 1;
+  const <span>unsigned short</span> <strong>SVG_MARKERUNITS_STROKEWIDTH</strong> = 2;
+
+  // Marker Orientation Types
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_AUTO</strong> = 1;
+  const <span>unsigned short</span> <strong>SVG_MARKER_ORIENT_ANGLE</strong> = 2;
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>refX</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>refY</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>markerUnits</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>markerWidth</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>markerHeight</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>orientType</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedAngle.html'>SVGAnimatedAngle</a> <strong>orientAngle</strong>;
+  attribute <span>DOMString</span> <strong>orient</strong>;
+
+  <a href='void.html'>void</a> <strong>setOrientToAuto</strong>();
+  <a href='void.html'>void</a> <strong>setOrientToAngle</strong>(<a href='SVGAngle.html'>SVGAngle</a> <strong>angle</strong>);
+  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

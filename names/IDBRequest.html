@@ -19,6 +19,18 @@ interface <strong>IDBRequest</strong> : <a href='EventTarget.html'>EventTarget</
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>any</span> <strong>result</strong>;
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
+  readonly attribute (<a href='IDBObjectStore.html'>IDBObjectStore</a> or <a href='IDBIndex.html'>IDBIndex</a> or <a href='IDBCursor.html'>IDBCursor</a>)? <strong>source</strong>;
+  readonly attribute <a href='IDBTransaction.html'>IDBTransaction</a>? <strong>transaction</strong>;
+  readonly attribute <a href='IDBRequestReadyState.html'>IDBRequestReadyState</a> <strong>readyState</strong>;
+
+  // Event handlers:
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuccess</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

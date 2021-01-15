@@ -19,6 +19,19 @@ interface <strong>History</strong> {
   <span>undefined</span> <strong>replaceState</strong>(<span>any</span> <strong>data</strong>, <span>DOMString</span> <strong>title</strong>, optional <span>USVString</span>? <strong>url</strong> = null);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>History</strong> {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  attribute <a href='ScrollRestoration.html'>ScrollRestoration</a> <strong>scrollRestoration</strong>;
+  readonly attribute <span>any</span> <strong>state</strong>;
+  <span>undefined</span> <strong>go</strong>(optional <span>long</span> <strong>delta</strong> = 0);
+  <span>undefined</span> <strong>back</strong>();
+  <span>undefined</span> <strong>forward</strong>();
+  <span>undefined</span> <strong>pushState</strong>(<span>any</span> <strong>data</strong>, <span>DOMString</span> <strong>title</strong>, optional <span>USVString</span>? <strong>url</strong> = null);
+  <span>undefined</span> <strong>replaceState</strong>(<span>any</span> <strong>data</strong>, <span>DOMString</span> <strong>title</strong>, optional <span>USVString</span>? <strong>url</strong> = null);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

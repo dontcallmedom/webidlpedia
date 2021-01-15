@@ -59,6 +59,39 @@ partial interface <strong>ServiceWorkerGlobalScope</strong> {
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Global=(<a href='Worker.html'>Worker</a>,<a href='ServiceWorker.html'>ServiceWorker</a>), Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {
+  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;
+  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;
+  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;
+
+  [NewObject] Promise<<span>undefined</span>> <strong>skipWaiting</strong>();
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;
+};</code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3><ul><li><a href="https://notifications.spec.whatwg.org/">Notifications API Standard</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/background-fetch/">Background Fetch</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/background-sync/spec/">Web Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/content-index/spec/">Content Index</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/cookie-store/">Cookie Store API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://wicg.github.io/periodic-background-sync/">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/payment-handler/">Payment Handler API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https://www.w3.org/TR/push-api/">Push API</a> refers to <code>ServiceWorkerGlobalScope</code></li></ul>

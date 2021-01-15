@@ -15,6 +15,15 @@ interface <strong>Serial</strong> : <a href='EventTarget.html'>EventTarget</a> {
   [Exposed=<a href='Window.html'>Window</a>] Promise<<a href='SerialPort.html'>SerialPort</a>> <strong>requestPort</strong>(optional <a href='SerialPortRequestOptions.html'>SerialPortRequestOptions</a> <strong>options</strong> = {});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<span>DedicatedWorker</span>, <a href='Window.html'>Window</a>), SecureContext]
+interface <strong>Serial</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;
+  Promise<sequence<<a href='SerialPort.html'>SerialPort</a>>> <strong>getPorts</strong>();
+  [Exposed=<a href='Window.html'>Window</a>] Promise<<a href='SerialPort.html'>SerialPort</a>> <strong>requestPort</strong>(optional <a href='SerialPortRequestOptions.html'>SerialPortRequestOptions</a> <strong>options</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

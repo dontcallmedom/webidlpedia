@@ -26,6 +26,26 @@ interface <strong>HTMLTrackElement</strong> : <a href='HTMLElement.html'>HTMLEle
   readonly attribute <a href='TextTrack.html'>TextTrack</a> <strong>track</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLTrackElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>DOMString</span> <strong>kind</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>srclang</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>label</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>default</strong>;
+
+  const <span>unsigned short</span> <strong>NONE</strong> = 0;
+  const <span>unsigned short</span> <strong>LOADING</strong> = 1;
+  const <span>unsigned short</span> <strong>LOADED</strong> = 2;
+  const <span>unsigned short</span> <strong>ERROR</strong> = 3;
+  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+
+  readonly attribute <a href='TextTrack.html'>TextTrack</a> <strong>track</strong>;
+};</code></pre></details>
 </section>
 
   

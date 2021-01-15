@@ -15,6 +15,15 @@ interface <strong>SharedWorker</strong> : <a href='EventTarget.html'>EventTarget
 };
 <a href='SharedWorker.html'>SharedWorker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SharedWorker</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional (<span>DOMString</span> or <a href='WorkerOptions.html'>WorkerOptions</a>) <strong>options</strong> = {});
+
+  readonly attribute <a href='MessagePort.html'>MessagePort</a> <strong>port</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+};</code></pre></details>
 </section>
 
   

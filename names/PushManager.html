@@ -16,6 +16,16 @@ interface <strong>PushManager</strong> {
   Promise<<a href='PushPermissionState.html'>PushPermissionState</a>> <strong>permissionState</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> = {});
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext]
+interface <strong>PushManager</strong> {
+  [SameObject] static readonly attribute FrozenArray<<span>DOMString</span>> <strong>supportedContentEncodings</strong>;
+
+  Promise<<a href='PushSubscription.html'>PushSubscription</a>> <strong>subscribe</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> = {});
+  Promise<<a href='PushSubscription.html'>PushSubscription</a>?> <strong>getSubscription</strong>();
+  Promise<<a href='PushPermissionState.html'>PushPermissionState</a>> <strong>permissionState</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

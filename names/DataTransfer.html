@@ -26,6 +26,26 @@ interface <strong>DataTransfer</strong> {
   [SameObject] readonly attribute <a href='FileList.html'>FileList</a> <strong>files</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>DataTransfer</strong> {
+  constructor();
+
+  attribute <span>DOMString</span> <strong>dropEffect</strong>;
+  attribute <span>DOMString</span> <strong>effectAllowed</strong>;
+
+  [SameObject] readonly attribute <a href='DataTransferItemList.html'>DataTransferItemList</a> <strong>items</strong>;
+
+  <span>undefined</span> <strong>setDragImage</strong>(<a href='Element.html'>Element</a> <strong>image</strong>, <span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+
+  /* old interface */
+  readonly attribute FrozenArray<<span>DOMString</span>> <strong>types</strong>;
+  <span>DOMString</span> <strong>getData</strong>(<span>DOMString</span> <strong>format</strong>);
+  <span>undefined</span> <strong>setData</strong>(<span>DOMString</span> <strong>format</strong>, <span>DOMString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>clearData</strong>(optional <span>DOMString</span> <strong>format</strong>);
+  [SameObject] readonly attribute <a href='FileList.html'>FileList</a> <strong>files</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

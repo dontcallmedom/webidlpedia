@@ -20,6 +20,16 @@ base: ../
 <pre class=webidl><code>partial dictionary <strong>RTCRtpEncodingParameters</strong> {
              <span>DOMString</span> <strong>scalabilityMode</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+dictionary <strong>RTCRtpEncodingParameters</strong> : <a href='RTCRtpCodingParameters.html'>RTCRtpCodingParameters</a> {
+  <span>boolean</span> <strong>active</strong> = true;
+  <span>unsigned long</span> <strong>maxBitrate</strong>;
+  <span>double</span> <strong>scaleResolutionDownBy</strong>;
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> = "low";
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>networkPriority</strong>;
+             <span>DOMString</span> <strong>scalabilityMode</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

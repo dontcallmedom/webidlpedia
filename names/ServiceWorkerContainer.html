@@ -26,6 +26,26 @@ interface <strong>ServiceWorkerContainer</strong> : <a href='EventTarget.html'>E
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>ServiceWorkerContainer</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>controller</strong>;
+  readonly attribute Promise<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>> <strong>ready</strong>;
+
+  [NewObject] Promise<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>> <strong>register</strong>(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='RegistrationOptions.html'>RegistrationOptions</a> <strong>options</strong> = {});
+
+  [NewObject] Promise<<span>any</span>> <strong>getRegistration</strong>(optional <span>USVString</span> <strong>clientURL</strong> = "");
+  [NewObject] Promise<FrozenArray<<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>>> <strong>getRegistrations</strong>();
+
+  <span>undefined</span> <strong>startMessages</strong>();
+
+
+  // events
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontrollerchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>; // event.source of message events is ServiceWorker object
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

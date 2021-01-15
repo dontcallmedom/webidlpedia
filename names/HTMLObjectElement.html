@@ -46,6 +46,43 @@ partial interface <strong>HTMLObjectElement</strong> {
   [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+  [HTMLConstructor] constructor();
+
+  [CEReactions] attribute <span>USVString</span> <strong>data</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
+
+  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
+  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
+  <span>boolean</span> <strong>checkValidity</strong>();
+  <span>boolean</span> <strong>reportValidity</strong>();
+  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>archive</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>code</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>declare</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>standby</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>codeBase</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>codeType</strong>;
+
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
+
+  // also has obsolete members
+};</code></pre></details>
 </section>
 
   

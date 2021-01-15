@@ -27,6 +27,26 @@ interface <strong>SVGTextPathElement</strong> : <a href='SVGTextContentElement.h
 
 <a href='SVGTextPathElement.html'>SVGTextPathElement</a> includes <a href='SVGURIReference.html'>SVGURIReference</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>SVGTextPathElement</strong> : <a href='SVGTextContentElement.html'>SVGTextContentElement</a> {
+
+  // textPath Method Types
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_ALIGN</strong> = 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_STRETCH</strong> = 2;
+
+  // textPath Spacing Types
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_UNKNOWN</strong> = 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_AUTO</strong> = 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_EXACT</strong> = 2;
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>startOffset</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>method</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>spacing</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>href</strong>;
+};</code></pre></details>
 </section>
 
   

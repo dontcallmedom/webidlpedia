@@ -13,6 +13,18 @@ interface <strong>BidirectionalStream</strong> {
 <a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='OutgoingStream.html'>OutgoingStream</a>;
 <a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='IncomingStream.html'>IncomingStream</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
+interface <strong>BidirectionalStream</strong> {
+  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;
+  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>writingAborted</strong>;
+  <span>undefined</span> <strong>abortWriting</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
+  /* a ReadableStream of Uint8Array */
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;
+  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>readingAborted</strong>;
+  <span>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

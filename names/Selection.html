@@ -34,6 +34,32 @@ interface <strong>Selection</strong> {
   stringifier <span>DOMString</span> ();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>Selection</strong> {
+  readonly attribute <a href='Node.html'>Node</a>? <strong>anchorNode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>anchorOffset</strong>;
+  readonly attribute <a href='Node.html'>Node</a>? <strong>focusNode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>focusOffset</strong>;
+  readonly attribute <span>boolean</span> <strong>isCollapsed</strong>;
+  readonly attribute <span>unsigned long</span> <strong>rangeCount</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  <a href='Range.html'>Range</a> <strong>getRangeAt</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>addRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
+  <span>undefined</span> <strong>removeRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
+  <span>undefined</span> <strong>removeAllRanges</strong>();
+  <span>undefined</span> <strong>empty</strong>();
+  <span>undefined</span> <strong>collapse</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> = 0);
+  <span>undefined</span> <strong>setPosition</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> = 0);
+  <span>undefined</span> <strong>collapseToStart</strong>();
+  <span>undefined</span> <strong>collapseToEnd</strong>();
+  <span>undefined</span> <strong>extend</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> = 0);
+  <span>undefined</span> <strong>setBaseAndExtent</strong>(<a href='Node.html'>Node</a> <strong>anchorNode</strong>, <span>unsigned long</span> <strong>anchorOffset</strong>, <a href='Node.html'>Node</a> <strong>focusNode</strong>, <span>unsigned long</span> <strong>focusOffset</strong>);
+  <span>undefined</span> <strong>selectAllChildren</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+  [CEReactions]
+  <span>undefined</span> <strong>deleteFromDocument</strong>();
+  <span>boolean</span> <strong>containsNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>boolean</span> <strong>allowPartialContainment</strong> = false);
+  stringifier <span>DOMString</span> ();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

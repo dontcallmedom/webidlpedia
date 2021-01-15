@@ -31,6 +31,106 @@ interface <strong>CanvasRenderingContext2D</strong> {
 <a href='CanvasRenderingContext2D.html'>CanvasRenderingContext2D</a> includes <a href='CanvasTextDrawingStyles.html'>CanvasTextDrawingStyles</a>;
 <a href='CanvasRenderingContext2D.html'>CanvasRenderingContext2D</a> includes <a href='CanvasPath.html'>CanvasPath</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>CanvasRenderingContext2D</strong> {
+  // back-reference to the canvas
+  readonly attribute <a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> <strong>canvas</strong>;
+
+  <a href='CanvasRenderingContext2DSettings.html'>CanvasRenderingContext2DSettings</a> <strong>getContextAttributes</strong>();
+  // state
+  <span>undefined</span> <strong>save</strong>(); // push state on state stack
+  <span>undefined</span> <strong>restore</strong>();
+  // transformations (default transform is the identity matrix)
+  <span>undefined</span> <strong>scale</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>rotate</strong>(<span>unrestricted double</span> <strong>angle</strong>);
+  <span>undefined</span> <strong>translate</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>transform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+
+  [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>getTransform</strong>();
+  <span>undefined</span> <strong>setTransform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+  <span>undefined</span> <strong>setTransform</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> = {});
+  <span>undefined</span> <strong>resetTransform</strong>();
+  // compositing
+  attribute <span>unrestricted double</span> <strong>globalAlpha</strong>; // (default 1.0)
+  attribute <span>DOMString</span> <strong>globalCompositeOperation</strong>;
+  // image smoothing
+  attribute <span>boolean</span> <strong>imageSmoothingEnabled</strong>; // (default true)
+  attribute <a href='ImageSmoothingQuality.html'>ImageSmoothingQuality</a> <strong>imageSmoothingQuality</strong>;
+  // colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
+  attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>strokeStyle</strong>; // (default black)
+  attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>fillStyle</strong>; // (default black)
+  <a href='CanvasGradient.html'>CanvasGradient</a> <strong>createLinearGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>);
+  <a href='CanvasGradient.html'>CanvasGradient</a> <strong>createRadialGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>r0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>, <span>double</span> <strong>r1</strong>);
+  <a href='CanvasPattern.html'>CanvasPattern</a>? <strong>createPattern</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, [LegacyNullToEmptyString] <span>DOMString</span> <strong>repetition</strong>);
+  // shadows
+  attribute <span>unrestricted double</span> <strong>shadowOffsetX</strong>; // (default 0)
+  attribute <span>unrestricted double</span> <strong>shadowOffsetY</strong>; // (default 0)
+  attribute <span>unrestricted double</span> <strong>shadowBlur</strong>; // (default 0)
+  attribute <span>DOMString</span> <strong>shadowColor</strong>;
+  // filters
+  attribute <span>DOMString</span> <strong>filter</strong>;
+  // rects
+  <span>undefined</span> <strong>clearRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>fillRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>strokeRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  // path API (see also CanvasPath)
+  <span>undefined</span> <strong>beginPath</strong>();
+  <span>undefined</span> <strong>fill</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>undefined</span> <strong>fill</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>undefined</span> <strong>stroke</strong>();
+  <span>undefined</span> <strong>stroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);
+  <span>undefined</span> <strong>clip</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>undefined</span> <strong>clip</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>boolean</span> <strong>isPointInPath</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>boolean</span> <strong>isPointInPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> = "nonzero");
+  <span>boolean</span> <strong>isPointInStroke</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>boolean</span> <strong>isPointInStroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>drawFocusIfNeeded</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);
+  <span>undefined</span> <strong>drawFocusIfNeeded</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <a href='Element.html'>Element</a> <strong>element</strong>);
+  <span>undefined</span> <strong>scrollPathIntoView</strong>();
+  <span>undefined</span> <strong>scrollPathIntoView</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);
+  // text (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
+  <span>undefined</span> <strong>fillText</strong>(<span>DOMString</span> <strong>text</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <span>unrestricted double</span> <strong>maxWidth</strong>);
+  <span>undefined</span> <strong>strokeText</strong>(<span>DOMString</span> <strong>text</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <span>unrestricted double</span> <strong>maxWidth</strong>);
+  <a href='TextMetrics.html'>TextMetrics</a> <strong>measureText</strong>(<span>DOMString</span> <strong>text</strong>);
+  // drawing images
+  <span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>);
+  <span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>, <span>unrestricted double</span> <strong>dw</strong>, <span>unrestricted double</span> <strong>dh</strong>);
+  <span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>sx</strong>, <span>unrestricted double</span> <strong>sy</strong>, <span>unrestricted double</span> <strong>sw</strong>, <span>unrestricted double</span> <strong>sh</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>, <span>unrestricted double</span> <strong>dw</strong>, <span>unrestricted double</span> <strong>dh</strong>);
+  // pixel manipulation
+  <a href='ImageData.html'>ImageData</a> <strong>createImageData</strong>([EnforceRange] <span>long</span> <strong>sw</strong>, [EnforceRange] <span>long</span> <strong>sh</strong>);
+  <a href='ImageData.html'>ImageData</a> <strong>createImageData</strong>(<a href='ImageData.html'>ImageData</a> <strong>imagedata</strong>);
+  <a href='ImageData.html'>ImageData</a> <strong>getImageData</strong>([EnforceRange] <span>long</span> <strong>sx</strong>, [EnforceRange] <span>long</span> <strong>sy</strong>, [EnforceRange] <span>long</span> <strong>sw</strong>, [EnforceRange] <span>long</span> <strong>sh</strong>);
+  <span>undefined</span> <strong>putImageData</strong>(<a href='ImageData.html'>ImageData</a> <strong>imagedata</strong>, [EnforceRange] <span>long</span> <strong>dx</strong>, [EnforceRange] <span>long</span> <strong>dy</strong>);
+  <span>undefined</span> <strong>putImageData</strong>(<a href='ImageData.html'>ImageData</a> <strong>imagedata</strong>, [EnforceRange] <span>long</span> <strong>dx</strong>, [EnforceRange] <span>long</span> <strong>dy</strong>, [EnforceRange] <span>long</span> <strong>dirtyX</strong>, [EnforceRange] <span>long</span> <strong>dirtyY</strong>, [EnforceRange] <span>long</span> <strong>dirtyWidth</strong>, [EnforceRange] <span>long</span> <strong>dirtyHeight</strong>);
+  // line caps/joins
+  attribute <span>unrestricted double</span> <strong>lineWidth</strong>; // (default 1)
+  attribute <a href='CanvasLineCap.html'>CanvasLineCap</a> <strong>lineCap</strong>; // (default "butt")
+  attribute <a href='CanvasLineJoin.html'>CanvasLineJoin</a> <strong>lineJoin</strong>; // (default "miter")
+  attribute <span>unrestricted double</span> <strong>miterLimit</strong>; // (default 10)
+
+  // dashed lines
+  <span>undefined</span> <strong>setLineDash</strong>(sequence<<span>unrestricted double</span>> <strong>segments</strong>); // default empty
+  sequence<<span>unrestricted double</span>> <strong>getLineDash</strong>();
+  attribute <span>unrestricted double</span> <strong>lineDashOffset</strong>;
+  // text
+  attribute <span>DOMString</span> <strong>font</strong>; // (default 10px sans-serif)
+  attribute <a href='CanvasTextAlign.html'>CanvasTextAlign</a> <strong>textAlign</strong>; // (default: "start")
+  attribute <a href='CanvasTextBaseline.html'>CanvasTextBaseline</a> <strong>textBaseline</strong>; // (default: "alphabetic")
+  attribute <a href='CanvasDirection.html'>CanvasDirection</a> <strong>direction</strong>;
+  // shared path API methods
+  <span>undefined</span> <strong>closePath</strong>();
+  <span>undefined</span> <strong>moveTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>lineTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>quadraticCurveTo</strong>(<span>unrestricted double</span> <strong>cpx</strong>, <span>unrestricted double</span> <strong>cpy</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>bezierCurveTo</strong>(<span>unrestricted double</span> <strong>cp1x</strong>, <span>unrestricted double</span> <strong>cp1y</strong>, <span>unrestricted double</span> <strong>cp2x</strong>, <span>unrestricted double</span> <strong>cp2y</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>arcTo</strong>(<span>unrestricted double</span> <strong>x1</strong>, <span>unrestricted double</span> <strong>y1</strong>, <span>unrestricted double</span> <strong>x2</strong>, <span>unrestricted double</span> <strong>y2</strong>, <span>unrestricted double</span> <strong>radius</strong>);
+  <span>undefined</span> <strong>rect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>arc</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radius</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> = false);
+  <span>undefined</span> <strong>ellipse</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radiusX</strong>, <span>unrestricted double</span> <strong>radiusY</strong>, <span>unrestricted double</span> <strong>rotation</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> = false);
+};</code></pre></details>
 </section>
 
   

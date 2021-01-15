@@ -52,6 +52,33 @@ partial interface <strong>ServiceWorkerRegistration</strong> {
 partial interface <strong>ServiceWorkerRegistration</strong> {
   readonly attribute <a href='PushManager.html'>PushManager</a> <strong>pushManager</strong>;
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>installing</strong>;
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>waiting</strong>;
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>active</strong>;
+  [SameObject] readonly attribute <a href='NavigationPreloadManager.html'>NavigationPreloadManager</a> <strong>navigationPreload</strong>;
+
+  readonly attribute <span>USVString</span> <strong>scope</strong>;
+  readonly attribute <a href='ServiceWorkerUpdateViaCache.html'>ServiceWorkerUpdateViaCache</a> <strong>updateViaCache</strong>;
+
+  [NewObject] Promise<<span>undefined</span>> <strong>update</strong>();
+  [NewObject] Promise<<span>boolean</span>> <strong>unregister</strong>();
+
+  // event
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onupdatefound</strong>;
+  Promise<<span>undefined</span>> <strong>showNotification</strong>(<span>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> = {});
+  Promise<sequence<<a href='Notification.html'>Notification</a>>> <strong>getNotifications</strong>(optional <a href='GetNotificationOptions.html'>GetNotificationOptions</a> <strong>filter</strong> = {});
+  readonly attribute <a href='BackgroundFetchManager.html'>BackgroundFetchManager</a> <strong>backgroundFetch</strong>;
+  readonly attribute <a href='SyncManager.html'>SyncManager</a> <strong>sync</strong>;
+  [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;
+  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;
+  readonly attribute <a href='PeriodicSyncManager.html'>PeriodicSyncManager</a> <strong>periodicSync</strong>;
+  [SameObject] readonly attribute <a href='PaymentManager.html'>PaymentManager</a> <strong>paymentManager</strong>;
+  readonly attribute <a href='PushManager.html'>PushManager</a> <strong>pushManager</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

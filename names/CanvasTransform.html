@@ -21,6 +21,21 @@ base: ../
 
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
+
+interface mixin <strong>CanvasTransform</strong> {
+  // transformations (default transform is the identity matrix)
+  <span>undefined</span> <strong>scale</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>rotate</strong>(<span>unrestricted double</span> <strong>angle</strong>);
+  <span>undefined</span> <strong>translate</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>transform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+
+  [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>getTransform</strong>();
+  <span>undefined</span> <strong>setTransform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+  <span>undefined</span> <strong>setTransform</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> = {});
+  <span>undefined</span> <strong>resetTransform</strong>();
+
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

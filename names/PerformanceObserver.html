@@ -16,6 +16,15 @@ interface <strong>PerformanceObserver</strong> {
   [SameObject] static readonly attribute FrozenArray<<span>DOMString</span>> <strong>supportedEntryTypes</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>PerformanceObserver</strong> {
+  constructor(<a href='PerformanceObserverCallback.html'>PerformanceObserverCallback</a> <strong>callback</strong>);
+  <span>undefined</span> <strong>observe</strong> (optional <a href='PerformanceObserverInit.html'>PerformanceObserverInit</a> <strong>options</strong> = {});
+  <span>undefined</span> <strong>disconnect</strong> ();
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>takeRecords</strong>();
+  [SameObject] static readonly attribute FrozenArray<<span>DOMString</span>> <strong>supportedEntryTypes</strong>;
+};</code></pre></details>
 </section>
 
   

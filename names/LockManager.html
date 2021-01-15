@@ -18,6 +18,18 @@ interface <strong>LockManager</strong> {
   Promise<<a href='LockManagerSnapshot.html'>LockManagerSnapshot</a>> <strong>query</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>LockManager</strong> {
+  Promise<<span>any</span>> <strong>request</strong>(<span>DOMString</span> <strong>name</strong>,
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);
+  Promise<<span>any</span>> <strong>request</strong>(<span>DOMString</span> <strong>name</strong>,
+                       <a href='LockOptions.html'>LockOptions</a> <strong>options</strong>,
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);
+
+  Promise<<a href='LockManagerSnapshot.html'>LockManagerSnapshot</a>> <strong>query</strong>();
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

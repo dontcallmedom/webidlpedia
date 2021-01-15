@@ -13,6 +13,13 @@ interface <strong>PaintWorkletGlobalScope</strong> : <a href='WorkletGlobalScope
     readonly attribute <span>unrestricted double</span> <strong>devicePixelRatio</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Global=(<a href='Worklet.html'>Worklet</a>,<span>PaintWorklet</span>),Exposed=<span>PaintWorklet</span>]
+interface <strong>PaintWorkletGlobalScope</strong> : <a href='WorkletGlobalScope.html'>WorkletGlobalScope</a> {
+    <span>undefined</span> <strong>registerPaint</strong>(<span>DOMString</span> <strong>name</strong>, <a href='VoidFunction.html'>VoidFunction</a> <strong>paintCtor</strong>);
+    readonly attribute <span>unrestricted double</span> <strong>devicePixelRatio</strong>;
+};</code></pre></details>
 </section>
 
   

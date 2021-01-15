@@ -21,6 +21,23 @@ interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a
 <a href='Bluetooth.html'>Bluetooth</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;
 <a href='Bluetooth.html'>Bluetooth</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  Promise<<span>boolean</span>> <strong>getAvailability</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onavailabilitychanged</strong>;
+  [SameObject]
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a>? <strong>referringDevice</strong>;
+  Promise<sequence<<a href='BluetoothDevice.html'>BluetoothDevice</a>>> <strong>getDevices</strong>();
+  Promise<<a href='BluetoothDevice.html'>BluetoothDevice</a>> <strong>requestDevice</strong>(optional <a href='RequestDeviceOptions.html'>RequestDeviceOptions</a> <strong>options</strong> = {});
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onadvertisementreceived</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ongattserverdisconnected</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

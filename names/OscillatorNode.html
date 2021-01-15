@@ -16,6 +16,16 @@ interface <strong>OscillatorNode</strong> : <a href='AudioScheduledSourceNode.ht
   <span>undefined</span> <strong>setPeriodicWave</strong> (<a href='PeriodicWave.html'>PeriodicWave</a> <strong>periodicWave</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>OscillatorNode</strong> : <a href='AudioScheduledSourceNode.html'>AudioScheduledSourceNode</a> {
+  constructor (<a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>, optional <a href='OscillatorOptions.html'>OscillatorOptions</a> <strong>options</strong> = {});
+  attribute <a href='OscillatorType.html'>OscillatorType</a> <strong>type</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>frequency</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>detune</strong>;
+  <span>undefined</span> <strong>setPeriodicWave</strong> (<a href='PeriodicWave.html'>PeriodicWave</a> <strong>periodicWave</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

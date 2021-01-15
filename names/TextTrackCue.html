@@ -20,6 +20,20 @@ interface <strong>TextTrackCue</strong> : <a href='EventTarget.html'>EventTarget
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onexit</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>TextTrackCue</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='TextTrack.html'>TextTrack</a>? <strong>track</strong>;
+
+  attribute <span>DOMString</span> <strong>id</strong>;
+  attribute <span>double</span> <strong>startTime</strong>;
+  attribute <span>double</span> <strong>endTime</strong>;
+  attribute <span>boolean</span> <strong>pauseOnExit</strong>;
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenter</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onexit</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

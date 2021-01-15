@@ -24,6 +24,17 @@ partial interface <strong>MediaDevices</strong> {
 <pre class=webidl><code>partial interface <strong>MediaDevices</strong> {
   Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> = {});
 };</code></pre></li></ol>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;
+  Promise<sequence<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>>> <strong>enumerateDevices</strong>();
+  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();
+  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> = {});
+  Promise<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>> <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> = {});
+  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> = {});
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

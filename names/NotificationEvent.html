@@ -15,6 +15,15 @@ interface <strong>NotificationEvent</strong> : <a href='ExtendableEvent.html'>Ex
   readonly attribute <span>DOMString</span> <strong>action</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>NotificationEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, <a href='NotificationEventInit.html'>NotificationEventInit</a> <strong>eventInitDict</strong>);
+
+  readonly attribute <a href='Notification.html'>Notification</a> <strong>notification</strong>;
+  readonly attribute <span>DOMString</span> <strong>action</strong>;
+};</code></pre></details>
 </section>
 
   

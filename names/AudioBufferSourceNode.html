@@ -22,6 +22,22 @@ interface <strong>AudioBufferSourceNode</strong> : <a href='AudioScheduledSource
                    optional <span>double</span> <strong>duration</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>]
+interface <strong>AudioBufferSourceNode</strong> : <a href='AudioScheduledSourceNode.html'>AudioScheduledSourceNode</a> {
+  constructor (<a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>,
+               optional <a href='AudioBufferSourceOptions.html'>AudioBufferSourceOptions</a> <strong>options</strong> = {});
+  attribute <a href='AudioBuffer.html'>AudioBuffer</a>? <strong>buffer</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>playbackRate</strong>;
+  readonly attribute <a href='AudioParam.html'>AudioParam</a> <strong>detune</strong>;
+  attribute <span>boolean</span> <strong>loop</strong>;
+  attribute <span>double</span> <strong>loopStart</strong>;
+  attribute <span>double</span> <strong>loopEnd</strong>;
+  <span>undefined</span> <strong>start</strong> (optional <span>double</span> <strong>when</strong> = 0,
+                   optional <span>double</span> <strong>offset</strong>,
+                   optional <span>double</span> <strong>duration</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

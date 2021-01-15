@@ -32,6 +32,32 @@ base: ../
 };
 <a href='GPUQueue.html'>GPUQueue</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+interface <strong>GPUQueue</strong> {
+    <span>undefined</span> <strong>submit</strong>(sequence<<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>> <strong>commandBuffers</strong>);
+
+    Promise<<span>undefined</span>> <strong>onSubmittedWorkDone</strong>();
+
+    <span>undefined</span> <strong>writeBuffer</strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
+        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> = 0,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
+
+    <span>undefined</span> <strong>writeTexture</strong>(
+      <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+      <a href='GPUTextureDataLayout.html'>GPUTextureDataLayout</a> <strong>dataLayout</strong>,
+      <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);
+
+    <span>undefined</span> <strong>copyImageBitmapToTexture</strong>(
+        <a href='GPUImageBitmapCopyView.html'>GPUImageBitmapCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+    attribute <span>USVString</span>? <strong>label</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

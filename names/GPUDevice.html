@@ -50,6 +50,41 @@ partial interface <strong>GPUDevice</strong> {
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>), Serializable]
+interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    [SameObject] readonly attribute <a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>;
+    readonly attribute FrozenArray<<a href='GPUFeatureName.html'>GPUFeatureName</a>> <strong>features</strong>;
+    readonly attribute <span>object</span> <strong>limits</strong>;
+
+    [SameObject] readonly attribute <a href='GPUQueue.html'>GPUQueue</a> <strong>defaultQueue</strong>;
+
+    <a href='GPUBuffer.html'>GPUBuffer</a> <strong>createBuffer</strong>(<a href='GPUBufferDescriptor.html'>GPUBufferDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUTexture.html'>GPUTexture</a> <strong>createTexture</strong>(<a href='GPUTextureDescriptor.html'>GPUTextureDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUSampler.html'>GPUSampler</a> <strong>createSampler</strong>(optional <a href='GPUSamplerDescriptor.html'>GPUSamplerDescriptor</a> <strong>descriptor</strong> = {});
+
+    <a href='GPUBindGroupLayout.html'>GPUBindGroupLayout</a> <strong>createBindGroupLayout</strong>(<a href='GPUBindGroupLayoutDescriptor.html'>GPUBindGroupLayoutDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUPipelineLayout.html'>GPUPipelineLayout</a> <strong>createPipelineLayout</strong>(<a href='GPUPipelineLayoutDescriptor.html'>GPUPipelineLayoutDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>createBindGroup</strong>(<a href='GPUBindGroupDescriptor.html'>GPUBindGroupDescriptor</a> <strong>descriptor</strong>);
+
+    <a href='GPUShaderModule.html'>GPUShaderModule</a> <strong>createShaderModule</strong>(<a href='GPUShaderModuleDescriptor.html'>GPUShaderModuleDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>createComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>createRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
+    Promise<<a href='GPUComputePipeline.html'>GPUComputePipeline</a>> <strong>createReadyComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
+    Promise<<a href='GPURenderPipeline.html'>GPURenderPipeline</a>> <strong>createReadyRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
+
+    <a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> <strong>createCommandEncoder</strong>(optional <a href='GPUCommandEncoderDescriptor.html'>GPUCommandEncoderDescriptor</a> <strong>descriptor</strong> = {});
+    <a href='GPURenderBundleEncoder.html'>GPURenderBundleEncoder</a> <strong>createRenderBundleEncoder</strong>(<a href='GPURenderBundleEncoderDescriptor.html'>GPURenderBundleEncoderDescriptor</a> <strong>descriptor</strong>);
+
+    <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>createQuerySet</strong>(<a href='GPUQuerySetDescriptor.html'>GPUQuerySetDescriptor</a> <strong>descriptor</strong>);
+    readonly attribute Promise<<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>> <strong>lost</strong>;
+    <span>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);
+    Promise<<a href='GPUError.html'>GPUError</a>?> <strong>popErrorScope</strong>();
+    [Exposed=(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>)]
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;
+    attribute <span>USVString</span>? <strong>label</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

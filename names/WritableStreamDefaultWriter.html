@@ -21,6 +21,21 @@ interface <strong>WritableStreamDefaultWriter</strong> {
   Promise<<span>undefined</span>> <strong>write</strong>(optional <span>any</span> <strong>chunk</strong>);
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>WritableStreamDefaultWriter</strong> {
+  constructor(<a href='WritableStream.html'>WritableStream</a> <strong>stream</strong>);
+
+  readonly attribute Promise<<span>undefined</span>> <strong>closed</strong>;
+  readonly attribute <span>unrestricted double</span>? <strong>desiredSize</strong>;
+  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
+
+  Promise<<span>undefined</span>> <strong>abort</strong>(optional <span>any</span> <strong>reason</strong>);
+  Promise<<span>undefined</span>> <strong>close</strong>();
+  <span>undefined</span> <strong>releaseLock</strong>();
+  Promise<<span>undefined</span>> <strong>write</strong>(optional <span>any</span> <strong>chunk</strong>);
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

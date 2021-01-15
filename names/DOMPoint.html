@@ -22,6 +22,22 @@ interface <strong>DOMPoint</strong> : <a href='DOMPointReadOnly.html'>DOMPointRe
     inherit attribute <span>unrestricted double</span> <strong>w</strong>;
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ Serializable,
+ LegacyWindowAlias=<span>SVGPoint</span>]
+interface <strong>DOMPoint</strong> : <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> {
+    constructor(optional <span>unrestricted double</span> <strong>x</strong> = 0, optional <span>unrestricted double</span> <strong>y</strong> = 0,
+            optional <span>unrestricted double</span> <strong>z</strong> = 0, optional <span>unrestricted double</span> <strong>w</strong> = 1);
+
+    [NewObject] static <a href='DOMPoint.html'>DOMPoint</a> <strong>fromPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>other</strong> = {});
+
+    inherit attribute <span>unrestricted double</span> <strong>x</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>y</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>z</strong>;
+    inherit attribute <span>unrestricted double</span> <strong>w</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

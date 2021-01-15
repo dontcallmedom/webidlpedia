@@ -18,6 +18,18 @@ interface <strong>DeviceOrientationEvent</strong> : <a href='Event.html'>Event</
     static Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>();
 };</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+
+[Exposed=<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>DeviceOrientationEvent</strong> : <a href='Event.html'>Event</a> {
+    constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='DeviceOrientationEventInit.html'>DeviceOrientationEventInit</a> <strong>eventInitDict</strong> = {});
+    readonly attribute <span>double</span>? <strong>alpha</strong>;
+    readonly attribute <span>double</span>? <strong>beta</strong>;
+    readonly attribute <span>double</span>? <strong>gamma</strong>;
+    readonly attribute <span>boolean</span> <strong>absolute</strong>;
+
+    static Promise<<a href='PermissionState.html'>PermissionState</a>> <strong>requestPermission</strong>();
+};</code></pre></details>
 </section>
 
   

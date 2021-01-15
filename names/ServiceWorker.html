@@ -18,6 +18,17 @@ interface <strong>ServiceWorker</strong> : <a href='EventTarget.html'>EventTarge
 };
 <a href='ServiceWorker.html'>ServiceWorker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
   
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[SecureContext, Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>ServiceWorker</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>USVString</span> <strong>scriptURL</strong>;
+  readonly attribute <a href='ServiceWorkerState.html'>ServiceWorkerState</a> <strong>state</strong>;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence<<span>object</span>> <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> = {});
+
+  // event
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
