@@ -76,6 +76,10 @@ function formatIDLType(idlType) {
 function fromIDLParsedToIDL(obj) {
   if (obj.includes) {
     return `${obj.name} includes ${obj.includes};`;
+  } else if (obj.type === "typedef") {
+    return `typedef ${formatIDLType(obj.idlType)} ${obj.name};`;
+  } else if (obj.type === "callback") {
+    return `callback ${obj.name} = ${formatIDLType(obj.idlType)} (${obj.arguments.map(formatIDLItem).join(', ')});`;
   } else {
     let idl = `${obj.extAttrs && obj.extAttrs.length ? '[' + obj.extAttrs.map(formatExtendedAttribute).join(', ') + ']\n' : ''}${obj.partial ? 'partial ' : ''}${obj.type} ${obj.name} ${obj.inheritance ? ": " + obj.inheritance + " " : ''}{\n`;
     for (let m of (obj.members || obj.values || [])) {
@@ -123,7 +127,7 @@ function idlDfnLink(name, spec) {
   const type = (spec.idl.idlNames[name] || {}).type;
   // Look for anchor among definitions to give more specific link if possible
   if (spec.dfns && type) {
-    const dfn = spec.dfns.find(dfn => dfn.type === type && dfn.linkingText.includes(name));
+    const dfn = spec.dfns.find(dfn => dfn.type === type.replace("callback interface", "callback") && dfn.linkingText.includes(name));
     if (dfn) {
       url = dfn.href;
     }
