@@ -1,94 +1,10 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
+const webidl = require("webidl2");
 
 const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idl && s.idl.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
-
-function formatIDLValue(def) {
-  switch(def.type) {
-  case "dictionary":
-    return '{}';
-  case "sequence":
-    return '[]';
-  case "null":
-    return 'null';
-  case "string":
-    return `"${def.value}"`;
-  case "boolean":
-  case "number":
-    return "" + def.value;
-  }
-}
-
-function formatExtendedAttribute(extAttr) {
-  return `${extAttr.name}${extAttr.rhs ? '=' + arrayify(extAttr.rhs.value).map(r => r.value).join(',') : ''}${extAttr.arguments.length ? '(' + extAttr.arguments.map(formatIDLItem).join(', ') + ')' : ''}`;
-}
-
-function formatIDLItem(item) {
-  let idl = `${item.extAttrs && item.extAttrs.length ? '[' + item.extAttrs.map(formatExtendedAttribute).join(', ') + '] ' : ''}`;
-  switch (item.type) {
-  case "operation":
-    idl += `${item.special ? item.special + ' ' : ''}${formatIDLType(item.idlType)} ${item.name}(${item.arguments.map(formatIDLItem).join(', ')})`;
-    break;
-  case "constructor":
-    idl += `${item.type}(${item.arguments.map(formatIDLItem).join(', ')})`;
-    break;
-  case "attribute":
-    idl += `${item.special ? item.special + ' ' : ''}${item.readonly ? "readonly " : ""}${item.type} ${formatIDLType(item.idlType)} ${item.name}`;
-    break;
-  case "maplike":
-  case "setlike":
-  case "iterable":
-    idl += `${item.readonly ? "readonly " : ""}${item.async ? "async " : ""}${item.type}<${item.idlType.map(formatIDLType).join(', ')}>`;
-    break;
-  case "argument":
-    idl += `${item.extAttrs.length ? '[' + item.extAttrs.map(formatExtendedAttribute).join(', ') + '] ' : ''}${item.optional ? "optional " : ""}${formatIDLType(item.idlType)}${item.variadic ? '...' : ''} ${item.name}${item.default ? ` = ${formatIDLValue(item.default)}` : ''}`;
-    break;
-  case "const":
-    idl += `const ${formatIDLType(item.idlType)} ${item.name}`;
-    break;
-  case "field":
-    idl += `${formatIDLType(item.idlType)} ${item.name}`;
-    break;
-  case "enum-value":
-    idl += `"${item.value}"`;
-    break;
-  default:
-    console.error(`Unhandled IDL item type ${item.type}`);
-  }
-  return idl;
-}
-
-function formatIDLType(idlType) {
-  let idl = "${idlType.extAttrs.length ? '[' + idlType.extAttrs.map(formatExtendedAttribute).join(', ') + ']' : ''}";
-  if (!idlType) return idl;
-  if (typeof idlType.idlType === "string") {
-    idl = `${idlType.idlType}`;
-  } else if (idlType.generic) {
-    idl = `${idlType.generic}<${idlType.idlType.map(formatIDLType).join(', ')}>`;
-  } else if (idlType.union) {
-    idl = `(${idlType.idlType.map(formatIDLType).join(' or ')})`;
-  }
-  return idl + (idlType.nullable ? '?' : '');
-}
-
-function fromIDLParsedToIDL(obj) {
-  if (obj.includes) {
-    return `${obj.name} includes ${obj.includes};`;
-  } else if (obj.type === "typedef") {
-    return `typedef ${formatIDLType(obj.idlType)} ${obj.name};`;
-  } else if (obj.type === "callback") {
-    return `callback ${obj.name} = ${formatIDLType(obj.idlType)} (${obj.arguments.map(formatIDLItem).join(', ')});`;
-  } else {
-    let idl = `${obj.extAttrs && obj.extAttrs.length ? '[' + obj.extAttrs.map(formatExtendedAttribute).join(', ') + ']\n' : ''}${obj.partial ? 'partial ' : ''}${obj.type} ${obj.name} ${obj.inheritance ? ": " + obj.inheritance + " " : ''}{\n`;
-    for (let m of (obj.members || obj.values || [])) {
-      idl += `  ${formatIDLItem(m)};\n`;
-    }
-    idl += `};`;
-    return idl;
-  }
-}
 
 function generatePage(path, title, content) {
   fs.writeFileSync(path, `---
@@ -154,21 +70,25 @@ function extendedIdlDfnLink(name, spec) {
 function interfaceDetails(data, name, used_by) {
   let type;
   let mainDef = ``;
+  let mainDefSpecs = [];
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlNames[name])
     .forEach(spec => {
+      mainDefSpecs.push(spec.url);
       type = (spec.idl.idlNames[name] || {}).type;
+      const idlparsed = webidl.parse(spec.idl.idl).filter(i => i.name === name && i.type === type);
       mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
-<pre class=webidl><code>${fromIDLParsedToIDL(spec.idl.idlNames[name])}</code></pre>`;
+<pre class=webidl><code>${webidl.write(idlparsed)}</code></pre>`;
     });
 
   let partialDef = ``;
   partialDef.textContent = "This " + type + " is extended in the following specifications:";
   data.filter(hasIdlDef)
-    .filter(spec => spec.idl.idlExtendedNames[name])
+    .filter(spec => spec.idl.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
     .forEach(spec => {
+      const idlparsed = webidl.parse(spec.idl.idl).filter(i => i.name === name && i.type === type);
       partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${spec.title}</a>
-<pre class=webidl><code>${spec.idl.idlExtendedNames[name].map(fromIDLParsedToIDL).join("\n")}</code></pre></li>`;
+<pre class=webidl><code>${webidl.write(idlparsed)}</code></pre></li>`;
     });
   if (partialDef) {
     partialDef = `<p>This ${type} is extended in the following specifications:</p><ol>${partialDef}</ol>`;
