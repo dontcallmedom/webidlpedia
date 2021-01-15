@@ -12,7 +12,14 @@ base: ../
 [Exposed=Window]
 interface Navigator {
   // objects implementing this interface also implement the interfaces given below
-};</code></pre>
+};
+Navigator includes NavigatorID;
+Navigator includes NavigatorLanguage;
+Navigator includes NavigatorOnLine;
+Navigator includes NavigatorContentUtils;
+Navigator includes NavigatorCookies;
+Navigator includes NavigatorPlugins;
+Navigator includes NavigatorConcurrentHardware;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/#navigator-gpu">WebGPU</a>
 <pre class=webidl><code>
 
@@ -20,13 +27,16 @@ interface Navigator {
 partial interface Navigator {
     [SameObject] readonly attribute GPU gpu;
 };</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
+<pre class=webidl><code>
+Navigator includes NavigatorStorage;</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
 <pre class=webidl><code>// Methods only exposed on documents.
 [SecureContext]
 partial interface Navigator {
   Promise<undefined> setClientBadge(optional [EnforceRange] unsigned long long contents);
   Promise<undefined> clearClientBadge();
-};</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
+};
+
+Navigator includes NavigatorBadge;</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
 <pre class=webidl><code>
 
 [SecureContext]
@@ -56,14 +66,20 @@ partial interface Navigator {
 partial interface Navigator {
   [SecureContext, SameObject] readonly attribute Keyboard keyboard;
 };</code></pre></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
+<pre class=webidl><code>
+Navigator includes NavigatorFonts;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
+<pre class=webidl><code>
+
+Navigator includes NavigatorNetworkInformation;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
 <pre class=webidl><code>[Exposed=Window, SecureContext]
 partial interface Navigator {
   [SameObject] readonly attribute Serial serial;
 };</code></pre></li><li><a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
+<pre class=webidl><code>
+
+Navigator includes NavigatorUA;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
+<pre class=webidl><code>
+Navigator includes NavigatorLocks;</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
 <pre class=webidl><code>
 
 [SecureContext] partial interface Navigator {
@@ -91,7 +107,9 @@ partial interface Navigator {
 partial interface Navigator {
   [SecureContext, SameObject] readonly attribute CredentialsContainer credentials;
 };</code></pre></li><li><a href="https://www.w3.org/TR/device-memory-1/">Device Memory 1</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
+<pre class=webidl><code>
+
+Navigator includes NavigatorDeviceMemory;</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
 <pre class=webidl><code>[Exposed=Window]
 partial interface Navigator {
     [SecureContext] Promise<MediaKeySystemAccess> requestMediaKeySystemAccess (DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations);
@@ -157,7 +175,8 @@ partial interface Navigator {
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext] Promise<undefined> share(optional ShareData data = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webdriver2/">WebDriver</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
+<pre class=webidl><code>
+Navigator includes NavigatorAutomationInformation;</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
 <pre class=webidl><code>partial interface Navigator {
   [SecureContext]
   Promise <MIDIAccess> requestMIDIAccess(optional MIDIOptions options = {});

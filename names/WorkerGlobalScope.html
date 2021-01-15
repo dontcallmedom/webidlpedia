@@ -8,6 +8,7 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/workers.html#workerglobalscope">HTML Standard</a> defines <code>WorkerGlobalScope</code></p>
 <pre class=webidl><code>
+WorkerGlobalScope includes WindowOrWorkerGlobalScope;
 
 [Exposed=Worker]
 interface WorkerGlobalScope : EventTarget {
@@ -29,7 +30,8 @@ interface WorkerGlobalScope : EventTarget {
 partial interface WorkerGlobalScope {
   readonly attribute AddressSpace addressSpace;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code></code></pre></li></ol>
+<pre class=webidl><code>
+WorkerGlobalScope includes FontFaceSource;</code></pre></li></ol>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -8,6 +8,9 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#document">DOM Standard</a> defines <code>Document</code></p>
 <pre class=webidl><code>
+Document includes NonElementParentNode;
+Document includes DocumentOrShadowRoot;
+Document includes ParentNode;
 
 [Exposed=Window]
 interface Document : Node {
@@ -49,7 +52,8 @@ interface Document : Node {
   // NodeFilter.SHOW_ALL = 0xFFFFFFFF
   [NewObject] NodeIterator createNodeIterator(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
   [NewObject] TreeWalker createTreeWalker(Node root, optional unsigned long whatToShow = 0xFFFFFFFF, optional NodeFilter? filter = null);
-};</code></pre>
+};
+Document includes XPathEvaluatorBase;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://drafts.css-houdini.org/font-metrics-api-1/">Font Metrics API Level 1</a>
 <pre class=webidl><code>partial interface Document {
     FontMetrics measureElement(Element element);
@@ -116,6 +120,8 @@ partial interface Document {
 
   // also has obsolete members
 };
+Document includes GlobalEventHandlers;
+Document includes DocumentAndElementEventHandlers;
 
 partial interface Document {
   [CEReactions] attribute [LegacyNullToEmptyString] DOMString fgColor;
@@ -152,7 +158,9 @@ partial interface Document {
 partial interface Document {
     [SameObject] readonly attribute FragmentDirective fragmentDirective;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-font-loading-3/">CSS Font Loading Module Level 3</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
+<pre class=webidl><code>
+
+Document includes FontFaceSource;</code></pre></li><li><a href="https://www.w3.org/TR/css-regions-1/#the-namedflow-interface">CSS Regions Module Level 1</a>
 <pre class=webidl><code>partial interface Document {
   readonly attribute NamedFlowMap namedFlows;
 };</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
@@ -163,7 +171,8 @@ partial interface Document {
   sequence<Element> elementsFromPoint(double x, double y);
   CaretPosition? caretPositionFromPoint(double x, double y);
   readonly attribute Element? scrollingElement;
-};</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
+};
+Document includes GeometryUtils;</code></pre></li><li><a href="https://www.w3.org/TR/page-visibility-2/#hidden-attribute">Page Visibility Level 2</a>
 <pre class=webidl><code>
 
 partial interface Document {

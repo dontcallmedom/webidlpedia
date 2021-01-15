@@ -19,7 +19,11 @@ interface WebTransport {
   readonly attribute Promise<WebTransportCloseInfo> closed;
   undefined close(optional WebTransportCloseInfo closeInfo = {});
   attribute EventHandler onstatechange;
-};</code></pre>
+};
+
+WebTransport includes UnidirectionalStreamsTransport;
+WebTransport includes BidirectionalStreamsTransport;
+WebTransport includes DatagramTransport;</code></pre>
   
 </section>
 

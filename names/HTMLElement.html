@@ -31,9 +31,16 @@ interface HTMLElement : Element {
   [CEReactions] attribute [LegacyNullToEmptyString] DOMString innerText;
 
   ElementInternals attachInternals();
-};</code></pre>
+};
+
+HTMLElement includes GlobalEventHandlers;
+HTMLElement includes DocumentAndElementEventHandlers;
+HTMLElement includes ElementContentEditable;
+HTMLElement includes HTMLOrSVGElement;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a>
-<pre class=webidl><code></code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlelement-interface">CSSOM View Module</a>
+<pre class=webidl><code>
+
+HTMLElement includes ElementCSSInlineStyle;</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlelement-interface">CSSOM View Module</a>
 <pre class=webidl><code>
 
 partial interface HTMLElement {

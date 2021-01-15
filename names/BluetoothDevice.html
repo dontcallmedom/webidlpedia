@@ -18,7 +18,10 @@ interface BluetoothDevice : EventTarget {
   Promise<void> watchAdvertisements(
       optional WatchAdvertisementsOptions options = {});
   readonly attribute boolean watchingAdvertisements;
-};</code></pre>
+};
+BluetoothDevice includes BluetoothDeviceEventHandlers;
+BluetoothDevice includes CharacteristicEventHandlers;
+BluetoothDevice includes ServiceEventHandlers;</code></pre>
   
 </section>
 <section>

@@ -36,6 +36,7 @@ interface GPUDevice : EventTarget {
 
     GPUQuerySet createQuerySet(GPUQuerySetDescriptor descriptor);
 };
+GPUDevice includes GPUObjectBase;
 
 partial interface GPUDevice {
     readonly attribute Promise<GPUDeviceLostInfo> lost;

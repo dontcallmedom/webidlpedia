@@ -30,7 +30,10 @@ interface ElementInternals {
   boolean reportValidity();
 
   readonly attribute NodeList labels;
-};</code></pre>
+};
+
+// Accessibility semantics
+ElementInternals includes ARIAMixin;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/custom-state-pseudo-class/#exposing">Custom State Pseudo Class</a>
 <pre class=webidl><code>partial interface ElementInternals {
   [SameObject, PutForwards=value] readonly attribute DOMTokenList states;

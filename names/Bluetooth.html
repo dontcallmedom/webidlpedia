@@ -17,7 +17,11 @@ interface Bluetooth : EventTarget {
   readonly attribute BluetoothDevice? referringDevice;
   Promise<sequence<BluetoothDevice>> getDevices();
   Promise<BluetoothDevice> requestDevice(optional RequestDeviceOptions options = {});
-};</code></pre>
+};
+
+Bluetooth includes BluetoothDeviceEventHandlers;
+Bluetooth includes CharacteristicEventHandlers;
+Bluetooth includes ServiceEventHandlers;</code></pre>
   
 </section>
 <section>
