@@ -181,7 +181,7 @@ function interfaceDetails(data, name, used_by, templates) {
     refs = `<section><h3>Refering specifications</h3><ul>${refs}</ul>
 </section>`;
   }
-  return `
+  return {title: `<code>${name}</code> ${type}`, content: `
 <section>
   <h3>Definition</h3>
   ${mainDef}
@@ -189,7 +189,7 @@ function interfaceDetails(data, name, used_by, templates) {
   ${consolidatedDef}
 </section>
 ${usedBy}
-  ${refs}`;
+  ${refs}`};
 }
 
 function enumNames(data) {
@@ -313,7 +313,8 @@ fetch("https://w3c.github.io/webref/ed/crawl.json")
 
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
-      generatePage("names/" + n + ".html", n, interfaceDetails(results, n, used_by, webidlTemplate));
+      const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate);
+      generatePage("names/" + n + ".html", title, content);
     }
 
     // Generating enum value list
