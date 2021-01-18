@@ -6,40 +6,51 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> defines <code>WebGLContextAttributes</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;WebGLContextAttributes&lt;/strong&gt; {
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;alpha&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;depth&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;stencil&lt;/strong&gt; = false;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;antialias&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;premultipliedAlpha&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;preserveDrawingBuffer&lt;/strong&gt; = false;
-    &lt;a href=&#39;WebGLPowerPreference.html&#39;&gt;WebGLPowerPreference&lt;/a&gt; &lt;strong&gt;powerPreference&lt;/strong&gt; = &quot;default&quot;;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;failIfMajorPerformanceCaveat&lt;/strong&gt; = false;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;desynchronized&lt;/strong&gt; = false;
+  <p><a href="https:&#x2F;&#x2F;www.khronos.org&#x2F;registry&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;">WebGL Specification</a> defines <code>WebGLContextAttributes</code></p>
+<pre class=webidl><code>
+
+dictionary <strong>WebGLContextAttributes</strong> {
+    <span>boolean</span> <strong>alpha</strong> &#x3D; true;
+    <span>boolean</span> <strong>depth</strong> &#x3D; true;
+    <span>boolean</span> <strong>stencil</strong> &#x3D; false;
+    <span>boolean</span> <strong>antialias</strong> &#x3D; true;
+    <span>boolean</span> <strong>premultipliedAlpha</strong> &#x3D; true;
+    <span>boolean</span> <strong>preserveDrawingBuffer</strong> &#x3D; false;
+    <a href='WebGLPowerPreference.html'>WebGLPowerPreference</a> <strong>powerPreference</strong> &#x3D; &quot;default&quot;;
+    <span>boolean</span> <strong>failIfMajorPerformanceCaveat</strong> &#x3D; false;
+    <span>boolean</span> <strong>desynchronized</strong> &#x3D; false;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr/">WebXR Device API</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;WebGLContextAttributes&lt;/strong&gt; {
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;xrCompatible&lt;/strong&gt; = false;
-};</code></pre></li></ol>
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr&#x2F;">WebXR Device API</a><pre class=webidl><code>
+
+partial dictionary <strong>WebGLContextAttributes</strong> {
+    <span>boolean</span> <strong>xrCompatible</strong> &#x3D; false;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-dictionary &lt;strong&gt;WebGLContextAttributes&lt;/strong&gt; {
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;alpha&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;depth&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;stencil&lt;/strong&gt; = false;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;antialias&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;premultipliedAlpha&lt;/strong&gt; = true;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;preserveDrawingBuffer&lt;/strong&gt; = false;
-    &lt;a href=&#39;WebGLPowerPreference.html&#39;&gt;WebGLPowerPreference&lt;/a&gt; &lt;strong&gt;powerPreference&lt;/strong&gt; = &quot;default&quot;;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;failIfMajorPerformanceCaveat&lt;/strong&gt; = false;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;desynchronized&lt;/strong&gt; = false;
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;xrCompatible&lt;/strong&gt; = false;
+dictionary <strong>WebGLContextAttributes</strong> {
+    <span>boolean</span> <strong>alpha</strong> &#x3D; true;
+    <span>boolean</span> <strong>depth</strong> &#x3D; true;
+    <span>boolean</span> <strong>stencil</strong> &#x3D; false;
+    <span>boolean</span> <strong>antialias</strong> &#x3D; true;
+    <span>boolean</span> <strong>premultipliedAlpha</strong> &#x3D; true;
+    <span>boolean</span> <strong>preserveDrawingBuffer</strong> &#x3D; false;
+    <a href='WebGLPowerPreference.html'>WebGLPowerPreference</a> <strong>powerPreference</strong> &#x3D; &quot;default&quot;;
+    <span>boolean</span> <strong>failIfMajorPerformanceCaveat</strong> &#x3D; false;
+    <span>boolean</span> <strong>desynchronized</strong> &#x3D; false;
+    <span>boolean</span> <strong>xrCompatible</strong> &#x3D; false;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li></ul>
+  
+  <ul>
+    <li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/webxr/">WebXR Device API</a> refers to <code>WebGLContextAttributes</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr&#x2F;">WebXR Device API</a> refers to <code>WebGLContextAttributes</code></li>
+  </ul></section>

@@ -6,25 +6,27 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/payment-handler/#dom-paymentrequestevent">Payment Handler API</a> defines <code>PaymentRequestEvent</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;]
-interface &lt;strong&gt;PaymentRequestEvent&lt;/strong&gt; : &lt;a href=&#39;ExtendableEvent.html&#39;&gt;ExtendableEvent&lt;/a&gt; {
-  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;a href=&#39;PaymentRequestEventInit.html&#39;&gt;PaymentRequestEventInit&lt;/a&gt; &lt;strong&gt;eventInitDict&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;topOrigin&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;paymentRequestOrigin&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;paymentRequestId&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;PaymentMethodData.html&#39;&gt;PaymentMethodData&lt;/a&gt;&gt; &lt;strong&gt;methodData&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;total&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;PaymentDetailsModifier.html&#39;&gt;PaymentDetailsModifier&lt;/a&gt;&gt; &lt;strong&gt;modifiers&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;instrumentKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;requestBillingAddress&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;object&lt;/span&gt;? &lt;strong&gt;paymentOptions&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;PaymentShippingOption.html&#39;&gt;PaymentShippingOption&lt;/a&gt;&gt;? &lt;strong&gt;shippingOptions&lt;/strong&gt;;
-  Promise&lt;&lt;a href=&#39;WindowClient.html&#39;&gt;WindowClient&lt;/a&gt;?&gt; &lt;strong&gt;openWindow&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;PaymentRequestDetailsUpdate.html&#39;&gt;PaymentRequestDetailsUpdate&lt;/a&gt;?&gt; &lt;strong&gt;changePaymentMethod&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;methodName&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt;? &lt;strong&gt;methodDetails&lt;/strong&gt; = null);
-  Promise&lt;&lt;a href=&#39;PaymentRequestDetailsUpdate.html&#39;&gt;PaymentRequestDetailsUpdate&lt;/a&gt;?&gt; &lt;strong&gt;changeShippingAddress&lt;/strong&gt;(optional &lt;a href=&#39;AddressInit.html&#39;&gt;AddressInit&lt;/a&gt; &lt;strong&gt;shippingAddress&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;PaymentRequestDetailsUpdate.html&#39;&gt;PaymentRequestDetailsUpdate&lt;/a&gt;?&gt; &lt;strong&gt;changeShippingOption&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;shippingOption&lt;/strong&gt;);
-  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;respondWith&lt;/strong&gt;(Promise&lt;&lt;a href=&#39;PaymentHandlerResponse.html&#39;&gt;PaymentHandlerResponse&lt;/a&gt;&gt; &lt;strong&gt;handlerResponsePromise&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-handler&#x2F;#dom-paymentrequestevent">Payment Handler API</a> defines <code>PaymentRequestEvent</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PaymentRequestEventInit.html'>PaymentRequestEventInit</a> <strong>eventInitDict</strong> &#x3D; {});
+  readonly attribute <span>USVString</span> <strong>topOrigin</strong>;
+  readonly attribute <span>USVString</span> <strong>paymentRequestOrigin</strong>;
+  readonly attribute <span>DOMString</span> <strong>paymentRequestId</strong>;
+  readonly attribute FrozenArray&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>;
+  readonly attribute <span>object</span> <strong>total</strong>;
+  readonly attribute FrozenArray&lt;<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>&gt; <strong>modifiers</strong>;
+  readonly attribute <span>DOMString</span> <strong>instrumentKey</strong>;
+  readonly attribute <span>boolean</span> <strong>requestBillingAddress</strong>;
+  readonly attribute <span>object</span>? <strong>paymentOptions</strong>;
+  readonly attribute FrozenArray&lt;<a href='PaymentShippingOption.html'>PaymentShippingOption</a>&gt;? <strong>shippingOptions</strong>;
+  Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span>USVString</span> <strong>url</strong>);
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changePaymentMethod</strong>(<span>DOMString</span> <strong>methodName</strong>, optional <span>object</span>? <strong>methodDetails</strong> &#x3D; null);
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changeShippingAddress</strong>(optional <a href='AddressInit.html'>AddressInit</a> <strong>shippingAddress</strong> &#x3D; {});
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changeShippingOption</strong>(<span>DOMString</span> <strong>shippingOption</strong>);
+  <a href='void.html'>void</a> <strong>respondWith</strong>(Promise&lt;<a href='PaymentHandlerResponse.html'>PaymentHandlerResponse</a>&gt; <strong>handlerResponsePromise</strong>);
 };</code></pre>
   
   

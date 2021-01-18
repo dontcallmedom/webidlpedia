@@ -6,30 +6,37 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/media-source/#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;MediaSource&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-source&#x2F;#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget</a> {
     constructor();
-    readonly        attribute &lt;a href=&#39;SourceBufferList.html&#39;&gt;SourceBufferList&lt;/a&gt;    &lt;strong&gt;sourceBuffers&lt;/strong&gt;;
-    readonly        attribute &lt;a href=&#39;SourceBufferList.html&#39;&gt;SourceBufferList&lt;/a&gt;    &lt;strong&gt;activeSourceBuffers&lt;/strong&gt;;
-    readonly        attribute &lt;a href=&#39;ReadyState.html&#39;&gt;ReadyState&lt;/a&gt;          &lt;strong&gt;readyState&lt;/strong&gt;;
-                    attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;duration&lt;/strong&gt;;
-                    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt;        &lt;strong&gt;onsourceopen&lt;/strong&gt;;
-                    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt;        &lt;strong&gt;onsourceended&lt;/strong&gt;;
-                    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt;        &lt;strong&gt;onsourceclose&lt;/strong&gt;;
-    &lt;a href=&#39;SourceBuffer.html&#39;&gt;SourceBuffer&lt;/a&gt;   &lt;strong&gt;addSourceBuffer&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt;           &lt;strong&gt;removeSourceBuffer&lt;/strong&gt; (&lt;a href=&#39;SourceBuffer.html&#39;&gt;SourceBuffer&lt;/a&gt; &lt;strong&gt;sourceBuffer&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt;           &lt;strong&gt;endOfStream&lt;/strong&gt; (optional &lt;a href=&#39;EndOfStreamError.html&#39;&gt;EndOfStreamError&lt;/a&gt; &lt;strong&gt;error&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt;           &lt;strong&gt;setLiveSeekableRange&lt;/strong&gt; (&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;start&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;end&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt;           &lt;strong&gt;clearLiveSeekableRange&lt;/strong&gt; ();
-    static &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isTypeSupported&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;);
+    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>sourceBuffers</strong>;
+    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>activeSourceBuffers</strong>;
+    readonly        attribute <a href='ReadyState.html'>ReadyState</a>          <strong>readyState</strong>;
+                    attribute <span>unrestricted double</span> <strong>duration</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceopen</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceended</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceclose</strong>;
+    <a href='SourceBuffer.html'>SourceBuffer</a>   <strong>addSourceBuffer</strong> (<span>DOMString</span> <strong>type</strong>);
+    <span>undefined</span>           <strong>removeSourceBuffer</strong> (<a href='SourceBuffer.html'>SourceBuffer</a> <strong>sourceBuffer</strong>);
+    <span>undefined</span>           <strong>endOfStream</strong> (optional <a href='EndOfStreamError.html'>EndOfStreamError</a> <strong>error</strong>);
+    <span>undefined</span>           <strong>setLiveSeekableRange</strong> (<span>double</span> <strong>start</strong>, <span>double</span> <strong>end</strong>);
+    <span>undefined</span>           <strong>clearLiveSeekableRange</strong> ();
+    static <span>boolean</span> <strong>isTypeSupported</strong> (<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="URL.html">URL</a></li><li><a href="URL.html">URL</a></li></ul>
+  
+  <ul>
+    <li><a href="URL.html">URL</a></li><li><a href="URL.html">URL</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>MediaSource</code></li><li><a href="https://www.w3.org/TR/FileAPI/">File API</a> refers to <code>MediaSource</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>MediaSource</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;FileAPI&#x2F;">File API</a> refers to <code>MediaSource</code></li>
+  </ul></section>

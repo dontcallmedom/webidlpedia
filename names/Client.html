@@ -6,36 +6,47 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/ServiceWorker/#client">Service Workers Nightly</a> defines <code>Client</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;]
-interface &lt;strong&gt;Client&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;FrameType.html&#39;&gt;FrameType&lt;/a&gt; &lt;strong&gt;frameType&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;ClientType.html&#39;&gt;ClientType&lt;/a&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, sequence&lt;&lt;span&gt;object&lt;/span&gt;&gt; &lt;strong&gt;transfer&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, optional &lt;a href=&#39;PostMessageOptions.html&#39;&gt;PostMessageOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#client">Service Workers Nightly</a> defines <code>Client</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>Client</strong> {
+  readonly attribute <span>USVString</span> <strong>url</strong>;
+  readonly attribute <a href='FrameType.html'>FrameType</a> <strong>frameType</strong>;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='ClientType.html'>ClientType</a> <strong>type</strong>;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence&lt;<span>object</span>&gt; <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/page-lifecycle/#serviceworker-client-dfn">Page Lifecycle</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Client&lt;/strong&gt; {
-    readonly attribute &lt;a href=&#39;ClientLifecycleState.html&#39;&gt;ClientLifecycleState&lt;/a&gt; &lt;strong&gt;lifecycleState&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;#serviceworker-client-dfn">Page Lifecycle</a><pre class=webidl><code>
+
+partial interface <strong>Client</strong> {
+    readonly attribute <a href='ClientLifecycleState.html'>ClientLifecycleState</a> <strong>lifecycleState</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;]
-interface &lt;strong&gt;Client&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;FrameType.html&#39;&gt;FrameType&lt;/a&gt; &lt;strong&gt;frameType&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;ClientType.html&#39;&gt;ClientType&lt;/a&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, sequence&lt;&lt;span&gt;object&lt;/span&gt;&gt; &lt;strong&gt;transfer&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, optional &lt;a href=&#39;PostMessageOptions.html&#39;&gt;PostMessageOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    readonly attribute &lt;a href=&#39;ClientLifecycleState.html&#39;&gt;ClientLifecycleState&lt;/a&gt; &lt;strong&gt;lifecycleState&lt;/strong&gt;;
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>Client</strong> {
+  readonly attribute <span>USVString</span> <strong>url</strong>;
+  readonly attribute <a href='FrameType.html'>FrameType</a> <strong>frameType</strong>;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='ClientType.html'>ClientType</a> <strong>type</strong>;
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence&lt;<span>object</span>&gt; <strong>transfer</strong>);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});
+    readonly attribute <a href='ClientLifecycleState.html'>ClientLifecycleState</a> <strong>lifecycleState</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li><li><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></li><li><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li><li><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></li><li><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/page-lifecycle/">Page Lifecycle</a> refers to <code>Client</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Client</code></li>
+  </ul></section>

@@ -6,25 +6,27 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://encoding.spec.whatwg.org/#textencoder">Encoding Standard</a> defines <code>TextEncoder</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;TextEncoder&lt;/strong&gt; {
+  <p><a href="https:&#x2F;&#x2F;encoding.spec.whatwg.org&#x2F;#textencoder">Encoding Standard</a> defines <code>TextEncoder</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextEncoder</strong> {
   constructor();
 
-  [NewObject] &lt;span&gt;Uint8Array&lt;/span&gt; &lt;strong&gt;encode&lt;/strong&gt;(optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;input&lt;/strong&gt; = &quot;&quot;);
-  &lt;a href=&#39;TextEncoderEncodeIntoResult.html&#39;&gt;TextEncoderEncodeIntoResult&lt;/a&gt; &lt;strong&gt;encodeInto&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;source&lt;/strong&gt;, [AllowShared] &lt;span&gt;Uint8Array&lt;/span&gt; &lt;strong&gt;destination&lt;/strong&gt;);
+  [NewObject] <span>Uint8Array</span> <strong>encode</strong>(optional <span>USVString</span> <strong>input</strong> &#x3D; &quot;&quot;);
+  <a href='TextEncoderEncodeIntoResult.html'>TextEncoderEncodeIntoResult</a> <strong>encodeInto</strong>(<span>USVString</span> <strong>source</strong>, [AllowShared] <span>Uint8Array</span> <strong>destination</strong>);
 };
-&lt;a href=&#39;TextEncoder.html&#39;&gt;TextEncoder&lt;/a&gt; includes &lt;a href=&#39;TextEncoderCommon.html&#39;&gt;TextEncoderCommon&lt;/a&gt;;</code></pre>
+<a href='TextEncoder.html'>TextEncoder</a> includes <a href='TextEncoderCommon.html'>TextEncoderCommon</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;TextEncoder&lt;/strong&gt; {
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>TextEncoder</strong> {
   constructor();
 
-  [NewObject] &lt;span&gt;Uint8Array&lt;/span&gt; &lt;strong&gt;encode&lt;/strong&gt;(optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;input&lt;/strong&gt; = &quot;&quot;);
-  &lt;a href=&#39;TextEncoderEncodeIntoResult.html&#39;&gt;TextEncoderEncodeIntoResult&lt;/a&gt; &lt;strong&gt;encodeInto&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;source&lt;/strong&gt;, [AllowShared] &lt;span&gt;Uint8Array&lt;/span&gt; &lt;strong&gt;destination&lt;/strong&gt;);
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;encoding&lt;/strong&gt;;
+  [NewObject] <span>Uint8Array</span> <strong>encode</strong>(optional <span>USVString</span> <strong>input</strong> &#x3D; &quot;&quot;);
+  <a href='TextEncoderEncodeIntoResult.html'>TextEncoderEncodeIntoResult</a> <strong>encodeInto</strong>(<span>USVString</span> <strong>source</strong>, [AllowShared] <span>Uint8Array</span> <strong>destination</strong>);
+  readonly attribute <span>DOMString</span> <strong>encoding</strong>;
 };</code></pre></details>
 </section>
 

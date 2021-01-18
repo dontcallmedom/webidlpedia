@@ -6,42 +6,47 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>NavigatorID</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;NavigatorID&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appCodeName&lt;/strong&gt;; // constant &quot;Mozilla&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appName&lt;/strong&gt;; // constant &quot;Netscape&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appVersion&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;platform&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;product&lt;/strong&gt;; // constant &quot;Gecko&quot;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;productSub&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;userAgent&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendor&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendorSub&lt;/strong&gt;; // constant &quot;&quot;
-};
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>NavigatorID</code></p>
+<pre class=webidl><code>
 
-partial interface mixin &lt;strong&gt;NavigatorID&lt;/strong&gt; {
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;taintEnabled&lt;/strong&gt;(); // constant false
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;oscpu&lt;/strong&gt;;
+interface mixin <strong>NavigatorID</strong> {
+  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
+  readonly attribute <span>DOMString</span> <strong>platform</strong>;
+  readonly attribute <span>DOMString</span> <strong>product</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
+  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;&quot;
+</span>};
+
+partial interface mixin <strong>NavigatorID</strong> {
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>();<span class="comment"> &#x2F;&#x2F; constant false
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;
 };</code></pre>
   
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-interface mixin &lt;strong&gt;NavigatorID&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appCodeName&lt;/strong&gt;; // constant &quot;Mozilla&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appName&lt;/strong&gt;; // constant &quot;Netscape&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appVersion&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;platform&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;product&lt;/strong&gt;; // constant &quot;Gecko&quot;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;productSub&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;userAgent&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendor&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendorSub&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;taintEnabled&lt;/strong&gt;(); // constant false
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;oscpu&lt;/strong&gt;; // constant &quot;&quot;
-};</code></pre></details>
+interface mixin <strong>NavigatorID</strong> {
+  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
+  readonly attribute <span>DOMString</span> <strong>platform</strong>;
+  readonly attribute <span>DOMString</span> <strong>product</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
+  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>();<span class="comment"> &#x2F;&#x2F; constant false
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;&quot;
+</span>};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li></ul>
+  
+  <ul>
+    <li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li>
+  </ul>
 </section>
   

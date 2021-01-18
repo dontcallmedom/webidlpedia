@@ -6,36 +6,48 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransferitem">HTML Standard</a> defines <code>DataTransferItem</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;DataTransferItem&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;getAsString&lt;/strong&gt;(&lt;a href=&#39;FunctionStringCallback.html&#39;&gt;FunctionStringCallback&lt;/a&gt;? &lt;strong&gt;_callback&lt;/strong&gt;);
-  &lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt;? &lt;strong&gt;getAsFile&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;dnd.html#datatransferitem">HTML Standard</a> defines <code>DataTransferItem</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>DataTransferItem</strong> {
+  readonly attribute <span>DOMString</span> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  <span>undefined</span> <strong>getAsString</strong>(<a href='FunctionStringCallback.html'>FunctionStringCallback</a>? <strong>_callback</strong>);
+  <a href='File.html'>File</a>? <strong>getAsFile</strong>();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;DataTransferItem&lt;/strong&gt; {
-    &lt;a href=&#39;FileSystemEntry.html&#39;&gt;FileSystemEntry&lt;/a&gt;? &lt;strong&gt;webkitGetAsEntry&lt;/strong&gt;();
-};</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;DataTransferItem&lt;/strong&gt; {
-    Promise&lt;&lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt;?&gt; &lt;strong&gt;getAsFileSystemHandle&lt;/strong&gt;();
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;">File and Directory Entries API</a><pre class=webidl><code>
+
+partial interface <strong>DataTransferItem</strong> {
+    <a href='FileSystemEntry.html'>FileSystemEntry</a>? <strong>webkitGetAsEntry</strong>();
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a><pre class=webidl><code>
+
+partial interface <strong>DataTransferItem</strong> {
+    Promise&lt;<a href='FileSystemHandle.html'>FileSystemHandle</a>?&gt; <strong>getAsFileSystemHandle</strong>();
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;DataTransferItem&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;getAsString&lt;/strong&gt;(&lt;a href=&#39;FunctionStringCallback.html&#39;&gt;FunctionStringCallback&lt;/a&gt;? &lt;strong&gt;_callback&lt;/strong&gt;);
-  &lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt;? &lt;strong&gt;getAsFile&lt;/strong&gt;();
-    &lt;a href=&#39;FileSystemEntry.html&#39;&gt;FileSystemEntry&lt;/a&gt;? &lt;strong&gt;webkitGetAsEntry&lt;/strong&gt;();
-    Promise&lt;&lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt;?&gt; &lt;strong&gt;getAsFileSystemHandle&lt;/strong&gt;();
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>DataTransferItem</strong> {
+  readonly attribute <span>DOMString</span> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  <span>undefined</span> <strong>getAsString</strong>(<a href='FunctionStringCallback.html'>FunctionStringCallback</a>? <strong>_callback</strong>);
+  <a href='File.html'>File</a>? <strong>getAsFile</strong>();
+    <a href='FileSystemEntry.html'>FileSystemEntry</a>? <strong>webkitGetAsEntry</strong>();
+    Promise&lt;<a href='FileSystemHandle.html'>FileSystemHandle</a>?&gt; <strong>getAsFileSystemHandle</strong>();
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="DataTransferItemList.html">DataTransferItemList</a></li></ul>
+  
+  <ul>
+    <li><a href="DataTransferItemList.html">DataTransferItemList</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a> refers to <code>DataTransferItem</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>DataTransferItem</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;">File and Directory Entries API</a> refers to <code>DataTransferItem</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>DataTransferItem</code></li>
+  </ul></section>

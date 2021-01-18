@@ -6,33 +6,38 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;SVGTextContentElement&lt;/strong&gt; : &lt;a href=&#39;SVGGraphicsElement.html&#39;&gt;SVGGraphicsElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
+<pre class=webidl><code>
 
-  // lengthAdjust Types
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;LENGTHADJUST_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;LENGTHADJUST_SPACING&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;LENGTHADJUST_SPACINGANDGLYPHS&lt;/strong&gt; = 2;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class="comment">
 
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;textLength&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;lengthAdjust&lt;/strong&gt;;
+  &#x2F;&#x2F; lengthAdjust Types
+  </span>const <span>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> &#x3D; 2;
 
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;getNumberOfChars&lt;/strong&gt;();
-  &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;getComputedTextLength&lt;/strong&gt;();
-  &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;getSubStringLength&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;nchars&lt;/strong&gt;);
-  &lt;a href=&#39;DOMPoint.html&#39;&gt;DOMPoint&lt;/a&gt; &lt;strong&gt;getStartPositionOfChar&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;);
-  &lt;a href=&#39;DOMPoint.html&#39;&gt;DOMPoint&lt;/a&gt; &lt;strong&gt;getEndPositionOfChar&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;);
-  &lt;a href=&#39;DOMRect.html&#39;&gt;DOMRect&lt;/a&gt; &lt;strong&gt;getExtentOfChar&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;);
-  &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;getRotationOfChar&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;);
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;getCharNumAtPosition&lt;/strong&gt;(optional &lt;a href=&#39;DOMPointInit.html&#39;&gt;DOMPointInit&lt;/a&gt; &lt;strong&gt;point&lt;/strong&gt; = {});
-  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;selectSubString&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charnum&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;nchars&lt;/strong&gt;);
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;
+
+  <span>long</span> <strong>getNumberOfChars</strong>();
+  <span>float</span> <strong>getComputedTextLength</strong>();
+  <span>float</span> <strong>getSubStringLength</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>float</span> <strong>getRotationOfChar</strong>(<span>unsigned long</span> <strong>charnum</strong>);
+  <span>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});
+  <a href='void.html'>void</a> <strong>selectSubString</strong>(<span>unsigned long</span> <strong>charnum</strong>, <span>unsigned long</span> <strong>nchars</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li></ul>
+  
+  <ul>
+    <li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li>
+  </ul>
 </section>
   

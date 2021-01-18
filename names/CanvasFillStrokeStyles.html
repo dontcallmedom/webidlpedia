@@ -6,14 +6,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasFillStrokeStyles</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;CanvasFillStrokeStyles&lt;/strong&gt; {
-  // colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
-  attribute (&lt;span&gt;DOMString&lt;/span&gt; or &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; or &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;) &lt;strong&gt;strokeStyle&lt;/strong&gt;; // (default black)
-  attribute (&lt;span&gt;DOMString&lt;/span&gt; or &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; or &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;) &lt;strong&gt;fillStyle&lt;/strong&gt;; // (default black)
-  &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; &lt;strong&gt;createLinearGradient&lt;/strong&gt;(&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;);
-  &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; &lt;strong&gt;createRadialGradient&lt;/strong&gt;(&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;r0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;r1&lt;/strong&gt;);
-  &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;? &lt;strong&gt;createPattern&lt;/strong&gt;(&lt;a href=&#39;CanvasImageSource.html&#39;&gt;CanvasImageSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;repetition&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>CanvasFillStrokeStyles</code></p>
+<pre class=webidl><code>
+
+interface mixin <strong>CanvasFillStrokeStyles</strong> {<span class="comment">
+  &#x2F;&#x2F; colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
+  </span>attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>strokeStyle</strong>;<span class="comment"> &#x2F;&#x2F; (default black)
+  </span>attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>fillStyle</strong>;<span class="comment"> &#x2F;&#x2F; (default black)
+  </span><a href='CanvasGradient.html'>CanvasGradient</a> <strong>createLinearGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>);
+  <a href='CanvasGradient.html'>CanvasGradient</a> <strong>createRadialGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>r0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>, <span>double</span> <strong>r1</strong>);
+  <a href='CanvasPattern.html'>CanvasPattern</a>? <strong>createPattern</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, [LegacyNullToEmptyString] <span>DOMString</span> <strong>repetition</strong>);
 
 };</code></pre>
   
@@ -21,6 +23,9 @@ base: ../
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li></ul>
+  
+  <ul>
+    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li>
+  </ul>
 </section>
   

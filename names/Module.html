@@ -6,20 +6,27 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webassembly.github.io/spec/js-api/#module">WebAssembly JavaScript Interface</a> defines <code>Module</code></p>
-<pre class=webidl><code>[LegacyNamespace=&lt;a href=&#39;WebAssembly.html&#39;&gt;WebAssembly&lt;/a&gt;, Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt;)]
-interface &lt;strong&gt;Module&lt;/strong&gt; {
-  constructor(&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;);
-  static sequence&lt;&lt;a href=&#39;ModuleExportDescriptor.html&#39;&gt;ModuleExportDescriptor&lt;/a&gt;&gt; &lt;strong&gt;exports&lt;/strong&gt;(&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt; &lt;strong&gt;moduleObject&lt;/strong&gt;);
-  static sequence&lt;&lt;a href=&#39;ModuleImportDescriptor.html&#39;&gt;ModuleImportDescriptor&lt;/a&gt;&gt; &lt;strong&gt;imports&lt;/strong&gt;(&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt; &lt;strong&gt;moduleObject&lt;/strong&gt;);
-  static sequence&lt;&lt;span&gt;ArrayBuffer&lt;/span&gt;&gt; &lt;strong&gt;customSections&lt;/strong&gt;(&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt; &lt;strong&gt;moduleObject&lt;/strong&gt;, &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sectionName&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#module">WebAssembly JavaScript Interface</a> defines <code>Module</code></p>
+<pre class=webidl><code>
+
+[LegacyNamespace&#x3D;<a href='WebAssembly.html'>WebAssembly</a>, Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>Module</strong> {
+  constructor(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+  static sequence&lt;<a href='ModuleExportDescriptor.html'>ModuleExportDescriptor</a>&gt; <strong>exports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence&lt;<a href='ModuleImportDescriptor.html'>ModuleImportDescriptor</a>&gt; <strong>imports</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>);
+  static sequence&lt;<span>ArrayBuffer</span>&gt; <strong>customSections</strong>(<a href='Module.html'>Module</a> <strong>moduleObject</strong>, <span>DOMString</span> <strong>sectionName</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="WebAssemblyInstantiatedSource.html">WebAssemblyInstantiatedSource</a></li><li><a href="WebAssembly.html">WebAssembly</a></li><li><a href="Module.html">Module</a></li><li><a href="Instance.html">Instance</a></li><li><a href="WebAssembly.html">WebAssembly</a></li></ul>
+  
+  <ul>
+    <li><a href="WebAssemblyInstantiatedSource.html">WebAssemblyInstantiatedSource</a></li><li><a href="WebAssembly.html">WebAssembly</a></li><li><a href="Module.html">Module</a></li><li><a href="Instance.html">Instance</a></li><li><a href="WebAssembly.html">WebAssembly</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a> refers to <code>Module</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wasm-web-api-1&#x2F;">WebAssembly Web API</a> refers to <code>Module</code></li>
+  </ul></section>

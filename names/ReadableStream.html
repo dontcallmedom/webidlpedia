@@ -6,26 +6,32 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://streams.spec.whatwg.org/#readablestream">Streams Standard</a> defines <code>ReadableStream</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt;), Transferable]
-interface &lt;strong&gt;ReadableStream&lt;/strong&gt; {
-  constructor(optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;underlyingSource&lt;/strong&gt;, optional &lt;a href=&#39;QueuingStrategy.html&#39;&gt;QueuingStrategy&lt;/a&gt; &lt;strong&gt;strategy&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;locked&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;streams.spec.whatwg.org&#x2F;#readablestream">Streams Standard</a> defines <code>ReadableStream</code></p>
+<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
+interface <strong>ReadableStream</strong> {
+  constructor(optional <span>object</span> <strong>underlyingSource</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> &#x3D; {});
 
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;cancel&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;reason&lt;/strong&gt;);
-  &lt;a href=&#39;ReadableStreamReader.html&#39;&gt;ReadableStreamReader&lt;/a&gt; &lt;strong&gt;getReader&lt;/strong&gt;(optional &lt;a href=&#39;ReadableStreamGetReaderOptions.html&#39;&gt;ReadableStreamGetReaderOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;pipeThrough&lt;/strong&gt;(&lt;a href=&#39;ReadableWritablePair.html&#39;&gt;ReadableWritablePair&lt;/a&gt; &lt;strong&gt;transform&lt;/strong&gt;, optional &lt;a href=&#39;StreamPipeOptions.html&#39;&gt;StreamPipeOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;pipeTo&lt;/strong&gt;(&lt;a href=&#39;WritableStream.html&#39;&gt;WritableStream&lt;/a&gt; &lt;strong&gt;destination&lt;/strong&gt;, optional &lt;a href=&#39;StreamPipeOptions.html&#39;&gt;StreamPipeOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  sequence&lt;&lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt;&gt; &lt;strong&gt;tee&lt;/strong&gt;();
+  readonly attribute <span>boolean</span> <strong>locked</strong>;
 
-  async iterable&lt;&lt;span&gt;any&lt;/span&gt;&gt;(optional &lt;a href=&#39;ReadableStreamIteratorOptions.html&#39;&gt;ReadableStreamIteratorOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  Promise&lt;<span>undefined</span>&gt; <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
+  <a href='ReadableStreamReader.html'>ReadableStreamReader</a> <strong>getReader</strong>(optional <a href='ReadableStreamGetReaderOptions.html'>ReadableStreamGetReaderOptions</a> <strong>options</strong> &#x3D; {});
+  <a href='ReadableStream.html'>ReadableStream</a> <strong>pipeThrough</strong>(<a href='ReadableWritablePair.html'>ReadableWritablePair</a> <strong>transform</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<span>undefined</span>&gt; <strong>pipeTo</strong>(<a href='WritableStream.html'>WritableStream</a> <strong>destination</strong>, optional <a href='StreamPipeOptions.html'>StreamPipeOptions</a> <strong>options</strong> &#x3D; {});
+  sequence&lt;<a href='ReadableStream.html'>ReadableStream</a>&gt; <strong>tee</strong>();
+
+  async iterable&lt;<span>any</span>&gt;(optional <a href='ReadableStreamIteratorOptions.html'>ReadableStreamIteratorOptions</a> <strong>options</strong> &#x3D; {});
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Body.html">Body</a></li><li><a href="ReadableStream.html">ReadableStream</a></li><li><a href="ReadableWritablePair.html">ReadableWritablePair</a></li><li><a href="ReadableStreamDefaultReader.html">ReadableStreamDefaultReader</a></li><li><a href="ReadableStreamBYOBReader.html">ReadableStreamBYOBReader</a></li><li><a href="TransformStream.html">TransformStream</a></li><li><a href="GenericTransformStream.html">GenericTransformStream</a></li><li><a href="RTCInsertableStreams.html">RTCInsertableStreams</a></li><li><a href="UnidirectionalStreamsTransport.html">UnidirectionalStreamsTransport</a></li><li><a href="BidirectionalStreamsTransport.html">BidirectionalStreamsTransport</a></li><li><a href="DatagramTransport.html">DatagramTransport</a></li><li><a href="IncomingStream.html">IncomingStream</a></li><li><a href="SerialPort.html">SerialPort</a></li><li><a href="Blob.html">Blob</a></li></ul>
+  
+  <ul>
+    <li><a href="Body.html">Body</a></li><li><a href="ReadableStream.html">ReadableStream</a></li><li><a href="ReadableWritablePair.html">ReadableWritablePair</a></li><li><a href="ReadableStreamDefaultReader.html">ReadableStreamDefaultReader</a></li><li><a href="ReadableStreamBYOBReader.html">ReadableStreamBYOBReader</a></li><li><a href="TransformStream.html">TransformStream</a></li><li><a href="GenericTransformStream.html">GenericTransformStream</a></li><li><a href="RTCInsertableStreams.html">RTCInsertableStreams</a></li><li><a href="UnidirectionalStreamsTransport.html">UnidirectionalStreamsTransport</a></li><li><a href="BidirectionalStreamsTransport.html">BidirectionalStreamsTransport</a></li><li><a href="DatagramTransport.html">DatagramTransport</a></li><li><a href="IncomingStream.html">IncomingStream</a></li><li><a href="SerialPort.html">SerialPort</a></li><li><a href="Blob.html">Blob</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a> refers to <code>ReadableStream</code></li><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a> refers to <code>ReadableStream</code></li><li><a href="https://w3c.github.io/webtransport/">WebTransport</a> refers to <code>ReadableStream</code></li><li><a href="https://wicg.github.io/css-parser-api/">CSS Parser API</a> refers to <code>ReadableStream</code></li><li><a href="https://wicg.github.io/serial/">Web Serial API</a> refers to <code>ReadableStream</code></li><li><a href="https://www.w3.org/TR/FileAPI/">File API</a> refers to <code>ReadableStream</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;fetch.spec.whatwg.org&#x2F;">Fetch Standard</a> refers to <code>ReadableStream</code></li><li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-insertable-streams&#x2F;">WebRTC Insertable Media using Streams</a> refers to <code>ReadableStream</code></li><li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webtransport&#x2F;">WebTransport</a> refers to <code>ReadableStream</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;css-parser-api&#x2F;">CSS Parser API</a> refers to <code>ReadableStream</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;">Web Serial API</a> refers to <code>ReadableStream</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;FileAPI&#x2F;">File API</a> refers to <code>ReadableStream</code></li>
+  </ul></section>

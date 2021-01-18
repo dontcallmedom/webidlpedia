@@ -6,43 +6,47 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://notifications.spec.whatwg.org/#notification">Notifications API Standard</a> defines <code>Notification</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;Notification&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;title&lt;/strong&gt;, optional &lt;a href=&#39;NotificationOptions.html&#39;&gt;NotificationOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  static readonly attribute &lt;a href=&#39;NotificationPermission.html&#39;&gt;NotificationPermission&lt;/a&gt; &lt;strong&gt;permission&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] static Promise&lt;&lt;a href=&#39;NotificationPermission.html&#39;&gt;NotificationPermission&lt;/a&gt;&gt; &lt;strong&gt;requestPermission&lt;/strong&gt;(optional &lt;a href=&#39;NotificationPermissionCallback.html&#39;&gt;NotificationPermissionCallback&lt;/a&gt; &lt;strong&gt;deprecatedCallback&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;#notification">Notifications API Standard</a> defines <code>Notification</code></p>
+<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Notification</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});
 
-  static readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;maxActions&lt;/strong&gt;;
+  static readonly attribute <a href='NotificationPermission.html'>NotificationPermission</a> <strong>permission</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] static Promise&lt;<a href='NotificationPermission.html'>NotificationPermission</a>&gt; <strong>requestPermission</strong>(optional <a href='NotificationPermissionCallback.html'>NotificationPermissionCallback</a> <strong>deprecatedCallback</strong>);
 
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclick&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onshow&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
+  static readonly attribute <span>unsigned long</span> <strong>maxActions</strong>;
 
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;title&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;NotificationDirection.html&#39;&gt;NotificationDirection&lt;/a&gt; &lt;strong&gt;dir&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;lang&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;body&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;tag&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;image&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;icon&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;badge&lt;/strong&gt;;
-  [SameObject] readonly attribute FrozenArray&lt;&lt;span&gt;unsigned long&lt;/span&gt;&gt; &lt;strong&gt;vibrate&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMTimeStamp.html&#39;&gt;DOMTimeStamp&lt;/a&gt; &lt;strong&gt;timestamp&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;renotify&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;silent&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;requireInteraction&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;;
-  [SameObject] readonly attribute FrozenArray&lt;&lt;a href=&#39;NotificationAction.html&#39;&gt;NotificationAction&lt;/a&gt;&gt; &lt;strong&gt;actions&lt;/strong&gt;;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+  readonly attribute <span>DOMString</span> <strong>title</strong>;
+  readonly attribute <a href='NotificationDirection.html'>NotificationDirection</a> <strong>dir</strong>;
+  readonly attribute <span>DOMString</span> <strong>lang</strong>;
+  readonly attribute <span>DOMString</span> <strong>body</strong>;
+  readonly attribute <span>DOMString</span> <strong>tag</strong>;
+  readonly attribute <span>USVString</span> <strong>image</strong>;
+  readonly attribute <span>USVString</span> <strong>icon</strong>;
+  readonly attribute <span>USVString</span> <strong>badge</strong>;
+  [SameObject] readonly attribute FrozenArray&lt;<span>unsigned long</span>&gt; <strong>vibrate</strong>;
+  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a> <strong>timestamp</strong>;
+  readonly attribute <span>boolean</span> <strong>renotify</strong>;
+  readonly attribute <span>boolean</span> <strong>silent</strong>;
+  readonly attribute <span>boolean</span> <strong>requireInteraction</strong>;
+  [SameObject] readonly attribute <span>any</span> <strong>data</strong>;
+  [SameObject] readonly attribute FrozenArray&lt;<a href='NotificationAction.html'>NotificationAction</a>&gt; <strong>actions</strong>;
+
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li><li><a href="NotificationEvent.html">NotificationEvent</a></li><li><a href="NotificationEventInit.html">NotificationEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li><li><a href="NotificationEvent.html">NotificationEvent</a></li><li><a href="NotificationEventInit.html">NotificationEventInit</a></li>
+  </ul>
 </section>
   

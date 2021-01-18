@@ -6,27 +6,32 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webaudio.github.io/web-audio-api/#audiocontext">Web Audio API</a> defines <code>AudioContext</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;AudioContext&lt;/strong&gt; : &lt;a href=&#39;BaseAudioContext.html&#39;&gt;BaseAudioContext&lt;/a&gt; {
-  constructor (optional &lt;a href=&#39;AudioContextOptions.html&#39;&gt;AudioContextOptions&lt;/a&gt; &lt;strong&gt;contextOptions&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;baseLatency&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;outputLatency&lt;/strong&gt;;
-  &lt;a href=&#39;AudioTimestamp.html&#39;&gt;AudioTimestamp&lt;/a&gt; &lt;strong&gt;getOutputTimestamp&lt;/strong&gt; ();
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;resume&lt;/strong&gt; ();
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;suspend&lt;/strong&gt; ();
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;close&lt;/strong&gt; ();
-  &lt;a href=&#39;MediaElementAudioSourceNode.html&#39;&gt;MediaElementAudioSourceNode&lt;/a&gt; &lt;strong&gt;createMediaElementSource&lt;/strong&gt; (&lt;a href=&#39;HTMLMediaElement.html&#39;&gt;HTMLMediaElement&lt;/a&gt; &lt;strong&gt;mediaElement&lt;/strong&gt;);
-  &lt;a href=&#39;MediaStreamAudioSourceNode.html&#39;&gt;MediaStreamAudioSourceNode&lt;/a&gt; &lt;strong&gt;createMediaStreamSource&lt;/strong&gt; (&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt; &lt;strong&gt;mediaStream&lt;/strong&gt;);
-  &lt;a href=&#39;MediaStreamTrackAudioSourceNode.html&#39;&gt;MediaStreamTrackAudioSourceNode&lt;/a&gt; &lt;strong&gt;createMediaStreamTrackSource&lt;/strong&gt; (
-    &lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt; &lt;strong&gt;mediaStreamTrack&lt;/strong&gt;);
-  &lt;a href=&#39;MediaStreamAudioDestinationNode.html&#39;&gt;MediaStreamAudioDestinationNode&lt;/a&gt; &lt;strong&gt;createMediaStreamDestination&lt;/strong&gt; ();
+  <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#audiocontext">Web Audio API</a> defines <code>AudioContext</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {
+  constructor (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> &#x3D; {});
+  readonly attribute <span>double</span> <strong>baseLatency</strong>;
+  readonly attribute <span>double</span> <strong>outputLatency</strong>;
+  <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();
+  Promise&lt;<span>undefined</span>&gt; <strong>resume</strong> ();
+  Promise&lt;<span>undefined</span>&gt; <strong>suspend</strong> ();
+  Promise&lt;<span>undefined</span>&gt; <strong>close</strong> ();
+  <a href='MediaElementAudioSourceNode.html'>MediaElementAudioSourceNode</a> <strong>createMediaElementSource</strong> (<a href='HTMLMediaElement.html'>HTMLMediaElement</a> <strong>mediaElement</strong>);
+  <a href='MediaStreamAudioSourceNode.html'>MediaStreamAudioSourceNode</a> <strong>createMediaStreamSource</strong> (<a href='MediaStream.html'>MediaStream</a> <strong>mediaStream</strong>);
+  <a href='MediaStreamTrackAudioSourceNode.html'>MediaStreamTrackAudioSourceNode</a> <strong>createMediaStreamTrackSource</strong> (
+    <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>mediaStreamTrack</strong>);
+  <a href='MediaStreamAudioDestinationNode.html'>MediaStreamAudioDestinationNode</a> <strong>createMediaStreamDestination</strong> ();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li></ul>
+  
+  <ul>
+    <li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li>
+  </ul>
 </section>
   

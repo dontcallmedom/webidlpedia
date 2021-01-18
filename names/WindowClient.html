@@ -6,21 +6,28 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/ServiceWorker/#windowclient">Service Workers Nightly</a> defines <code>WindowClient</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;]
-interface &lt;strong&gt;WindowClient&lt;/strong&gt; : &lt;a href=&#39;Client.html&#39;&gt;Client&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;VisibilityState.html&#39;&gt;VisibilityState&lt;/a&gt; &lt;strong&gt;visibilityState&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;focused&lt;/strong&gt;;
-  [SameObject] readonly attribute FrozenArray&lt;&lt;span&gt;USVString&lt;/span&gt;&gt; &lt;strong&gt;ancestorOrigins&lt;/strong&gt;;
-  [NewObject] Promise&lt;&lt;a href=&#39;WindowClient.html&#39;&gt;WindowClient&lt;/a&gt;&gt; &lt;strong&gt;focus&lt;/strong&gt;();
-  [NewObject] Promise&lt;&lt;a href=&#39;WindowClient.html&#39;&gt;WindowClient&lt;/a&gt;?&gt; &lt;strong&gt;navigate&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#windowclient">Service Workers Nightly</a> defines <code>WindowClient</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>WindowClient</strong> : <a href='Client.html'>Client</a> {
+  readonly attribute <a href='VisibilityState.html'>VisibilityState</a> <strong>visibilityState</strong>;
+  readonly attribute <span>boolean</span> <strong>focused</strong>;
+  [SameObject] readonly attribute FrozenArray&lt;<span>USVString</span>&gt; <strong>ancestorOrigins</strong>;
+  [NewObject] Promise&lt;<a href='WindowClient.html'>WindowClient</a>&gt; <strong>focus</strong>();
+  [NewObject] Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>navigate</strong>(<span>USVString</span> <strong>url</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="PaymentRequestEvent.html">PaymentRequestEvent</a></li><li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li></ul>
+  
+  <ul>
+    <li><a href="PaymentRequestEvent.html">PaymentRequestEvent</a></li><li><a href="WindowClient.html">WindowClient</a></li><li><a href="Clients.html">Clients</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/payment-handler/">Payment Handler API</a> refers to <code>WindowClient</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;">Payment Handler API</a> refers to <code>WindowClient</code></li>
+  </ul></section>

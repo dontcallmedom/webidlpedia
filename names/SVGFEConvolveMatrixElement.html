@@ -6,58 +6,60 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://drafts.fxtf.org/filter-effects-1/#svgfeconvolvematrixelement">Filter Effects Module Level 1</a> defines <code>SVGFEConvolveMatrixElement</code></p>
-<pre class=webidl><code>interface &lt;strong&gt;SVGFEConvolveMatrixElement&lt;/strong&gt; : &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;drafts.fxtf.org&#x2F;filter-effects-1&#x2F;#svgfeconvolvematrixelement">Filter Effects Module Level 1</a> defines <code>SVGFEConvolveMatrixElement</code></p>
+<pre class=webidl><code>
 
-  // Edge Mode Values
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_DUPLICATE&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_WRAP&lt;/strong&gt; = 2;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_NONE&lt;/strong&gt; = 3;
+interface <strong>SVGFEConvolveMatrixElement</strong> : <a href='SVGElement.html'>SVGElement</a> {<span class="comment">
 
-  readonly attribute &lt;a href=&#39;SVGAnimatedString.html&#39;&gt;SVGAnimatedString&lt;/a&gt; &lt;strong&gt;in1&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;orderX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;orderY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumberList.html&#39;&gt;SVGAnimatedNumberList&lt;/a&gt; &lt;strong&gt;kernelMatrix&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;divisor&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;bias&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;targetX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;targetY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;edgeMode&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;kernelUnitLengthX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;kernelUnitLengthY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedBoolean.html&#39;&gt;SVGAnimatedBoolean&lt;/a&gt; &lt;strong&gt;preserveAlpha&lt;/strong&gt;;
+  &#x2F;&#x2F; Edge Mode Values
+  </span>const <span>unsigned short</span> <strong>SVG_EDGEMODE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_DUPLICATE</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_WRAP</strong> &#x3D; 2;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_NONE</strong> &#x3D; 3;
+
+  readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>in1</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>orderX</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>orderY</strong>;
+  readonly attribute <a href='SVGAnimatedNumberList.html'>SVGAnimatedNumberList</a> <strong>kernelMatrix</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>divisor</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>bias</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>targetX</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>targetY</strong>;
+  readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>edgeMode</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>kernelUnitLengthX</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>kernelUnitLengthY</strong>;
+  readonly attribute <a href='SVGAnimatedBoolean.html'>SVGAnimatedBoolean</a> <strong>preserveAlpha</strong>;
 };
 
-&lt;a href=&#39;SVGFEConvolveMatrixElement.html&#39;&gt;SVGFEConvolveMatrixElement&lt;/a&gt; includes &lt;a href=&#39;SVGFilterPrimitiveStandardAttributes.html&#39;&gt;SVGFilterPrimitiveStandardAttributes&lt;/a&gt;;</code></pre>
+<a href='SVGFEConvolveMatrixElement.html'>SVGFEConvolveMatrixElement</a> includes <a href='SVGFilterPrimitiveStandardAttributes.html'>SVGFilterPrimitiveStandardAttributes</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-interface &lt;strong&gt;SVGFEConvolveMatrixElement&lt;/strong&gt; : &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; {
+interface <strong>SVGFEConvolveMatrixElement</strong> : <a href='SVGElement.html'>SVGElement</a> {<span class="comment">
 
-  // Edge Mode Values
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_DUPLICATE&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_WRAP&lt;/strong&gt; = 2;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SVG_EDGEMODE_NONE&lt;/strong&gt; = 3;
+  &#x2F;&#x2F; Edge Mode Values
+  </span>const <span>unsigned short</span> <strong>SVG_EDGEMODE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_DUPLICATE</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_WRAP</strong> &#x3D; 2;
+  const <span>unsigned short</span> <strong>SVG_EDGEMODE_NONE</strong> &#x3D; 3;
 
-  readonly attribute &lt;a href=&#39;SVGAnimatedString.html&#39;&gt;SVGAnimatedString&lt;/a&gt; &lt;strong&gt;in1&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;orderX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;orderY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumberList.html&#39;&gt;SVGAnimatedNumberList&lt;/a&gt; &lt;strong&gt;kernelMatrix&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;divisor&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;bias&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;targetX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedInteger.html&#39;&gt;SVGAnimatedInteger&lt;/a&gt; &lt;strong&gt;targetY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;edgeMode&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;kernelUnitLengthX&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedNumber.html&#39;&gt;SVGAnimatedNumber&lt;/a&gt; &lt;strong&gt;kernelUnitLengthY&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedBoolean.html&#39;&gt;SVGAnimatedBoolean&lt;/a&gt; &lt;strong&gt;preserveAlpha&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;x&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;y&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;SVGAnimatedString.html&#39;&gt;SVGAnimatedString&lt;/a&gt; &lt;strong&gt;result&lt;/strong&gt;;
+  readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>in1</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>orderX</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>orderY</strong>;
+  readonly attribute <a href='SVGAnimatedNumberList.html'>SVGAnimatedNumberList</a> <strong>kernelMatrix</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>divisor</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>bias</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>targetX</strong>;
+  readonly attribute <a href='SVGAnimatedInteger.html'>SVGAnimatedInteger</a> <strong>targetY</strong>;
+  readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>edgeMode</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>kernelUnitLengthX</strong>;
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>kernelUnitLengthY</strong>;
+  readonly attribute <a href='SVGAnimatedBoolean.html'>SVGAnimatedBoolean</a> <strong>preserveAlpha</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
+  readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
+  readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>result</strong>;
 };</code></pre></details>
 </section>
 

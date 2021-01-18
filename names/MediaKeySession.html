@@ -6,25 +6,30 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/encrypted-media/#dom-mediakeysession">Encrypted Media Extensions</a> defines <code>MediaKeySession</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext] interface &lt;strong&gt;MediaKeySession&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-    readonly        attribute &lt;span&gt;DOMString&lt;/span&gt;           &lt;strong&gt;sessionId&lt;/strong&gt;;
-    readonly        attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;expiration&lt;/strong&gt;;
-    readonly        attribute Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt;       &lt;strong&gt;closed&lt;/strong&gt;;
-    readonly        attribute &lt;a href=&#39;MediaKeyStatusMap.html&#39;&gt;MediaKeyStatusMap&lt;/a&gt;   &lt;strong&gt;keyStatuses&lt;/strong&gt;;
-                    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt;        &lt;strong&gt;onkeystatuseschange&lt;/strong&gt;;
-                    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt;        &lt;strong&gt;onmessage&lt;/strong&gt;;
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt;    &lt;strong&gt;generateRequest&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;initDataType&lt;/strong&gt;, &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;initData&lt;/strong&gt;);
-    Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;load&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sessionId&lt;/strong&gt;);
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt;    &lt;strong&gt;update&lt;/strong&gt; (&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;response&lt;/strong&gt;);
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt;    &lt;strong&gt;close&lt;/strong&gt; ();
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt;    &lt;strong&gt;remove&lt;/strong&gt; ();
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;encrypted-media&#x2F;#dom-mediakeysession">Encrypted Media Extensions</a> defines <code>MediaKeySession</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext] interface <strong>MediaKeySession</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    readonly        attribute <span>DOMString</span>           <strong>sessionId</strong>;
+    readonly        attribute <span>unrestricted double</span> <strong>expiration</strong>;
+    readonly        attribute Promise&lt;<span>undefined</span>&gt;       <strong>closed</strong>;
+    readonly        attribute <a href='MediaKeyStatusMap.html'>MediaKeyStatusMap</a>   <strong>keyStatuses</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onkeystatuseschange</strong>;
+                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onmessage</strong>;
+    Promise&lt;<span>undefined</span>&gt;    <strong>generateRequest</strong> (<span>DOMString</span> <strong>initDataType</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>initData</strong>);
+    Promise&lt;<span>boolean</span>&gt; <strong>load</strong> (<span>DOMString</span> <strong>sessionId</strong>);
+    Promise&lt;<span>undefined</span>&gt;    <strong>update</strong> (<a href='BufferSource.html'>BufferSource</a> <strong>response</strong>);
+    Promise&lt;<span>undefined</span>&gt;    <strong>close</strong> ();
+    Promise&lt;<span>undefined</span>&gt;    <strong>remove</strong> ();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="MediaKeys.html">MediaKeys</a></li></ul>
+  
+  <ul>
+    <li><a href="MediaKeys.html">MediaKeys</a></li>
+  </ul>
 </section>
   

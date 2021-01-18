@@ -6,51 +6,56 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://gpuweb.github.io/gpuweb/#gpucomputepassencoder">WebGPU</a> defines <code>GPUComputePassEncoder</code></p>
-<pre class=webidl><code>interface &lt;strong&gt;GPUComputePassEncoder&lt;/strong&gt; {
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setPipeline&lt;/strong&gt;(&lt;a href=&#39;GPUComputePipeline.html&#39;&gt;GPUComputePipeline&lt;/a&gt; &lt;strong&gt;pipeline&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;dispatch&lt;/strong&gt;(&lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;x&lt;/strong&gt;, optional &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;y&lt;/strong&gt; = 1, optional &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;z&lt;/strong&gt; = 1);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;dispatchIndirect&lt;/strong&gt;(&lt;a href=&#39;GPUBuffer.html&#39;&gt;GPUBuffer&lt;/a&gt; &lt;strong&gt;indirectBuffer&lt;/strong&gt;, &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;indirectOffset&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpucomputepassencoder">WebGPU</a> defines <code>GPUComputePassEncoder</code></p>
+<pre class=webidl><code>
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;beginPipelineStatisticsQuery&lt;/strong&gt;(&lt;a href=&#39;GPUQuerySet.html&#39;&gt;GPUQuerySet&lt;/a&gt; &lt;strong&gt;querySet&lt;/strong&gt;, &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;queryIndex&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;endPipelineStatisticsQuery&lt;/strong&gt;();
+interface <strong>GPUComputePassEncoder</strong> {
+    <span>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);
+    <span>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>x</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>y</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>z</strong> &#x3D; 1);
+    <span>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeTimestamp&lt;/strong&gt;(&lt;a href=&#39;GPUQuerySet.html&#39;&gt;GPUQuerySet&lt;/a&gt; &lt;strong&gt;querySet&lt;/strong&gt;, &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;queryIndex&lt;/strong&gt;);
+    <span>undefined</span> <strong>beginPipelineStatisticsQuery</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span>undefined</span> <strong>endPipelineStatisticsQuery</strong>();
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;endPass&lt;/strong&gt;();
+    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+
+    <span>undefined</span> <strong>endPass</strong>();
 };
-&lt;a href=&#39;GPUComputePassEncoder.html&#39;&gt;GPUComputePassEncoder&lt;/a&gt; includes &lt;a href=&#39;GPUObjectBase.html&#39;&gt;GPUObjectBase&lt;/a&gt;;
-&lt;a href=&#39;GPUComputePassEncoder.html&#39;&gt;GPUComputePassEncoder&lt;/a&gt; includes &lt;a href=&#39;GPUProgrammablePassEncoder.html&#39;&gt;GPUProgrammablePassEncoder&lt;/a&gt;;</code></pre>
+<a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;
+<a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> includes <a href='GPUProgrammablePassEncoder.html'>GPUProgrammablePassEncoder</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-interface &lt;strong&gt;GPUComputePassEncoder&lt;/strong&gt; {
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setPipeline&lt;/strong&gt;(&lt;a href=&#39;GPUComputePipeline.html&#39;&gt;GPUComputePipeline&lt;/a&gt; &lt;strong&gt;pipeline&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;dispatch&lt;/strong&gt;(&lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;x&lt;/strong&gt;, optional &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;y&lt;/strong&gt; = 1, optional &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;z&lt;/strong&gt; = 1);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;dispatchIndirect&lt;/strong&gt;(&lt;a href=&#39;GPUBuffer.html&#39;&gt;GPUBuffer&lt;/a&gt; &lt;strong&gt;indirectBuffer&lt;/strong&gt;, &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;indirectOffset&lt;/strong&gt;);
+interface <strong>GPUComputePassEncoder</strong> {
+    <span>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);
+    <span>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>x</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>y</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>z</strong> &#x3D; 1);
+    <span>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;beginPipelineStatisticsQuery&lt;/strong&gt;(&lt;a href=&#39;GPUQuerySet.html&#39;&gt;GPUQuerySet&lt;/a&gt; &lt;strong&gt;querySet&lt;/strong&gt;, &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;queryIndex&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;endPipelineStatisticsQuery&lt;/strong&gt;();
+    <span>undefined</span> <strong>beginPipelineStatisticsQuery</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span>undefined</span> <strong>endPipelineStatisticsQuery</strong>();
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeTimestamp&lt;/strong&gt;(&lt;a href=&#39;GPUQuerySet.html&#39;&gt;GPUQuerySet&lt;/a&gt; &lt;strong&gt;querySet&lt;/strong&gt;, &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;queryIndex&lt;/strong&gt;);
+    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;endPass&lt;/strong&gt;();
-    attribute &lt;span&gt;USVString&lt;/span&gt;? &lt;strong&gt;label&lt;/strong&gt;;
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setBindGroup&lt;/strong&gt;(&lt;a href=&#39;GPUIndex32.html&#39;&gt;GPUIndex32&lt;/a&gt; &lt;strong&gt;index&lt;/strong&gt;, &lt;a href=&#39;GPUBindGroup.html&#39;&gt;GPUBindGroup&lt;/a&gt; &lt;strong&gt;bindGroup&lt;/strong&gt;,
-                      optional sequence&lt;&lt;a href=&#39;GPUBufferDynamicOffset.html&#39;&gt;GPUBufferDynamicOffset&lt;/a&gt;&gt; &lt;strong&gt;dynamicOffsets&lt;/strong&gt; = []);
+    <span>undefined</span> <strong>endPass</strong>();
+    attribute <span>USVString</span>? <strong>label</strong>;
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      optional sequence&lt;<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>&gt; <strong>dynamicOffsets</strong> &#x3D; []);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setBindGroup&lt;/strong&gt;(&lt;a href=&#39;GPUIndex32.html&#39;&gt;GPUIndex32&lt;/a&gt; &lt;strong&gt;index&lt;/strong&gt;, &lt;a href=&#39;GPUBindGroup.html&#39;&gt;GPUBindGroup&lt;/a&gt; &lt;strong&gt;bindGroup&lt;/strong&gt;,
-                      &lt;span&gt;Uint32Array&lt;/span&gt; &lt;strong&gt;dynamicOffsetsData&lt;/strong&gt;,
-                      &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;dynamicOffsetsDataStart&lt;/strong&gt;,
-                      &lt;a href=&#39;GPUSize32.html&#39;&gt;GPUSize32&lt;/a&gt; &lt;strong&gt;dynamicOffsetsDataLength&lt;/strong&gt;);
+    <span>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
+                      <span>Uint32Array</span> <strong>dynamicOffsetsData</strong>,
+                      <a href='GPUSize64.html'>GPUSize64</a> <strong>dynamicOffsetsDataStart</strong>,
+                      <a href='GPUSize32.html'>GPUSize32</a> <strong>dynamicOffsetsDataLength</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;pushDebugGroup&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;groupLabel&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;popDebugGroup&lt;/strong&gt;();
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;insertDebugMarker&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;markerLabel&lt;/strong&gt;);
+    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
+    <span>undefined</span> <strong>popDebugGroup</strong>();
+    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></li></ul>
+  
+  <ul>
+    <li><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></li>
+  </ul>
 </section>
   

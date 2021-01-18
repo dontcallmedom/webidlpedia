@@ -6,96 +6,108 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediatrackcapabilities">Media Capture and Streams</a> defines <code>MediaTrackCapabilities</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;MediaTrackCapabilities&lt;/strong&gt; {
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;aspectRatio&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;frameRate&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;facingMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;resizeMode&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;sampleRate&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;sampleSize&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;echoCancellation&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;autoGainControl&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;noiseSuppression&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;latency&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;channelCount&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;deviceId&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;groupId&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackcapabilities">Media Capture and Streams</a> defines <code>MediaTrackCapabilities</code></p>
+<pre class=webidl><code>
+
+dictionary <strong>MediaTrackCapabilities</strong> {
+  <a href='ULongRange.html'>ULongRange</a> <strong>width</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>height</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>aspectRatio</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>frameRate</strong>;
+  sequence&lt;<span>DOMString</span>&gt; <strong>facingMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt; <strong>resizeMode</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>sampleRate</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>sampleSize</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>echoCancellation</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>autoGainControl</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>noiseSuppression</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>latency</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>channelCount</strong>;
+  <span>DOMString</span> <strong>deviceId</strong>;
+  <span>DOMString</span> <strong>groupId</strong>;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;MediaTrackCapabilities&lt;/strong&gt; {
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;whiteBalanceMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;exposureMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;focusMode&lt;/strong&gt;;
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a><pre class=webidl><code>
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;exposureCompensation&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;exposureTime&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;colorTemperature&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;iso&lt;/strong&gt;;
+partial dictionary <strong>MediaTrackCapabilities</strong> {
+  sequence&lt;<span>DOMString</span>&gt;  <strong>whiteBalanceMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt;  <strong>exposureMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt;  <strong>focusMode</strong>;
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;brightness&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;contrast&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;saturation&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;sharpness&lt;/strong&gt;;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>exposureCompensation</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>exposureTime</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>colorTemperature</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>iso</strong>;
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;focusDistance&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;pan&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;tilt&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;zoom&lt;/strong&gt;;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>brightness</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>contrast</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>saturation</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>sharpness</strong>;
 
-  &lt;span&gt;boolean&lt;/span&gt;              &lt;strong&gt;torch&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;MediaTrackCapabilities&lt;/strong&gt; {
-    // Applies to both depth stream track and color stream track:
-    &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;videoKind&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>focusDistance</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>pan</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>tilt</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>zoom</strong>;
+
+  <span>boolean</span>              <strong>torch</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-depth&#x2F;">Media Capture Depth Stream Extensions</a><pre class=webidl><code>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class="comment">
+    &#x2F;&#x2F; Applies to both depth stream track and color stream track:
+    </span><span>DOMString</span> <strong>videoKind</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-dictionary &lt;strong&gt;MediaTrackCapabilities&lt;/strong&gt; {
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;aspectRatio&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;frameRate&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;facingMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;resizeMode&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;sampleRate&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;sampleSize&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;echoCancellation&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;autoGainControl&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;noiseSuppression&lt;/strong&gt;;
-  &lt;a href=&#39;DoubleRange.html&#39;&gt;DoubleRange&lt;/a&gt; &lt;strong&gt;latency&lt;/strong&gt;;
-  &lt;a href=&#39;ULongRange.html&#39;&gt;ULongRange&lt;/a&gt; &lt;strong&gt;channelCount&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;deviceId&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;groupId&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;whiteBalanceMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;exposureMode&lt;/strong&gt;;
-  sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;  &lt;strong&gt;focusMode&lt;/strong&gt;;
+dictionary <strong>MediaTrackCapabilities</strong> {
+  <a href='ULongRange.html'>ULongRange</a> <strong>width</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>height</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>aspectRatio</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>frameRate</strong>;
+  sequence&lt;<span>DOMString</span>&gt; <strong>facingMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt; <strong>resizeMode</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>sampleRate</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>sampleSize</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>echoCancellation</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>autoGainControl</strong>;
+  sequence&lt;<span>boolean</span>&gt; <strong>noiseSuppression</strong>;
+  <a href='DoubleRange.html'>DoubleRange</a> <strong>latency</strong>;
+  <a href='ULongRange.html'>ULongRange</a> <strong>channelCount</strong>;
+  <span>DOMString</span> <strong>deviceId</strong>;
+  <span>DOMString</span> <strong>groupId</strong>;
+  sequence&lt;<span>DOMString</span>&gt;  <strong>whiteBalanceMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt;  <strong>exposureMode</strong>;
+  sequence&lt;<span>DOMString</span>&gt;  <strong>focusMode</strong>;
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;exposureCompensation&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;exposureTime&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;colorTemperature&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;iso&lt;/strong&gt;;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>exposureCompensation</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>exposureTime</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>colorTemperature</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>iso</strong>;
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;brightness&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;contrast&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;saturation&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;sharpness&lt;/strong&gt;;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>brightness</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>contrast</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>saturation</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>sharpness</strong>;
 
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;focusDistance&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;pan&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;tilt&lt;/strong&gt;;
-  &lt;a href=&#39;MediaSettingsRange.html&#39;&gt;MediaSettingsRange&lt;/a&gt;   &lt;strong&gt;zoom&lt;/strong&gt;;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>focusDistance</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>pan</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>tilt</strong>;
+  <a href='MediaSettingsRange.html'>MediaSettingsRange</a>   <strong>zoom</strong>;
 
-  &lt;span&gt;boolean&lt;/span&gt;              &lt;strong&gt;torch&lt;/strong&gt;;
-    // Applies to both depth stream track and color stream track:
-    &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;videoKind&lt;/strong&gt;;
+  <span>boolean</span>              <strong>torch</strong>;<span class="comment">
+    &#x2F;&#x2F; Applies to both depth stream track and color stream track:
+    </span><span>DOMString</span> <strong>videoKind</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li><li><a href="InputDeviceInfo.html">InputDeviceInfo</a></li></ul>
+  
+  <ul>
+    <li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li><li><a href="InputDeviceInfo.html">InputDeviceInfo</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/image-capture/">MediaStream Image Capture</a> refers to <code>MediaTrackCapabilities</code></li><li><a href="https://www.w3.org/TR/mediacapture-depth/">Media Capture Depth Stream Extensions</a> refers to <code>MediaTrackCapabilities</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaTrackCapabilities</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-depth&#x2F;">Media Capture Depth Stream Extensions</a> refers to <code>MediaTrackCapabilities</code></li>
+  </ul></section>

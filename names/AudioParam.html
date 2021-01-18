@@ -6,29 +6,34 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webaudio.github.io/web-audio-api/#AudioParam">Web Audio API</a> defines <code>AudioParam</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;AudioParam&lt;/strong&gt; {
-  attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;;
-  attribute &lt;a href=&#39;AutomationRate.html&#39;&gt;AutomationRate&lt;/a&gt; &lt;strong&gt;automationRate&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;defaultValue&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;minValue&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;maxValue&lt;/strong&gt;;
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;setValueAtTime&lt;/strong&gt; (&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;startTime&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;linearRampToValueAtTime&lt;/strong&gt; (&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;endTime&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;exponentialRampToValueAtTime&lt;/strong&gt; (&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;endTime&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;setTargetAtTime&lt;/strong&gt; (&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;target&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;startTime&lt;/strong&gt;, &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;timeConstant&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;setValueCurveAtTime&lt;/strong&gt; (sequence&lt;&lt;span&gt;float&lt;/span&gt;&gt; &lt;strong&gt;values&lt;/strong&gt;,
-                                  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;startTime&lt;/strong&gt;,
-                                  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;duration&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;cancelScheduledValues&lt;/strong&gt; (&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;cancelTime&lt;/strong&gt;);
-  &lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;cancelAndHoldAtTime&lt;/strong&gt; (&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;cancelTime&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#AudioParam">Web Audio API</a> defines <code>AudioParam</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>AudioParam</strong> {
+  attribute <span>float</span> <strong>value</strong>;
+  attribute <a href='AutomationRate.html'>AutomationRate</a> <strong>automationRate</strong>;
+  readonly attribute <span>float</span> <strong>defaultValue</strong>;
+  readonly attribute <span>float</span> <strong>minValue</strong>;
+  readonly attribute <span>float</span> <strong>maxValue</strong>;
+  <a href='AudioParam.html'>AudioParam</a> <strong>setValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>startTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>linearRampToValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>endTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>exponentialRampToValueAtTime</strong> (<span>float</span> <strong>value</strong>, <span>double</span> <strong>endTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>setTargetAtTime</strong> (<span>float</span> <strong>target</strong>, <span>double</span> <strong>startTime</strong>, <span>float</span> <strong>timeConstant</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>setValueCurveAtTime</strong> (sequence&lt;<span>float</span>&gt; <strong>values</strong>,
+                                  <span>double</span> <strong>startTime</strong>,
+                                  <span>double</span> <strong>duration</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>cancelScheduledValues</strong> (<span>double</span> <strong>cancelTime</strong>);
+  <a href='AudioParam.html'>AudioParam</a> <strong>cancelAndHoldAtTime</strong> (<span>double</span> <strong>cancelTime</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioParam.html">AudioParam</a></li><li><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></li><li><a href="AudioListener.html">AudioListener</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ConstantSourceNode.html">ConstantSourceNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="OscillatorNode.html">OscillatorNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="AudioParamMap.html">AudioParamMap</a></li></ul>
+  
+  <ul>
+    <li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioParam.html">AudioParam</a></li><li><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></li><li><a href="AudioListener.html">AudioListener</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ConstantSourceNode.html">ConstantSourceNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="OscillatorNode.html">OscillatorNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="AudioParamMap.html">AudioParamMap</a></li>
+  </ul>
 </section>
   

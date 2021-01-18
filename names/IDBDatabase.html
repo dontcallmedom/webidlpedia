@@ -6,34 +6,39 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/IndexedDB/#idbdatabase">Indexed Database API 3.0</a> defines <code>IDBDatabase</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;IDBDatabase&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;version&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMStringList.html&#39;&gt;DOMStringList&lt;/a&gt; &lt;strong&gt;objectStoreNames&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;IndexedDB&#x2F;#idbdatabase">Indexed Database API 3.0</a> defines <code>IDBDatabase</code></p>
+<pre class=webidl><code>
 
-  [NewObject] &lt;a href=&#39;IDBTransaction.html&#39;&gt;IDBTransaction&lt;/a&gt; &lt;strong&gt;transaction&lt;/strong&gt;((&lt;span&gt;DOMString&lt;/span&gt; or sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;) &lt;strong&gt;storeNames&lt;/strong&gt;,
-                                         optional &lt;a href=&#39;IDBTransactionMode.html&#39;&gt;IDBTransactionMode&lt;/a&gt; &lt;strong&gt;mode&lt;/strong&gt; = &quot;readonly&quot;,
-                                         optional &lt;a href=&#39;IDBTransactionOptions.html&#39;&gt;IDBTransactionOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBDatabase</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>version</strong>;
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>objectStoreNames</strong>;
 
-  [NewObject] &lt;a href=&#39;IDBObjectStore.html&#39;&gt;IDBObjectStore&lt;/a&gt; &lt;strong&gt;createObjectStore&lt;/strong&gt;(
-    &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;,
-    optional &lt;a href=&#39;IDBObjectStoreParameters.html&#39;&gt;IDBObjectStoreParameters&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;deleteObjectStore&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
+  [NewObject] <a href='IDBTransaction.html'>IDBTransaction</a> <strong>transaction</strong>((<span>DOMString</span> or sequence&lt;<span>DOMString</span>&gt;) <strong>storeNames</strong>,
+                                         optional <a href='IDBTransactionMode.html'>IDBTransactionMode</a> <strong>mode</strong> &#x3D; &quot;readonly&quot;,
+                                         optional <a href='IDBTransactionOptions.html'>IDBTransactionOptions</a> <strong>options</strong> &#x3D; {});
+  <span>undefined</span> <strong>close</strong>();
 
-  // Event handlers:
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onabort&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onversionchange&lt;/strong&gt;;
+  [NewObject] <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>createObjectStore</strong>(
+    <span>DOMString</span> <strong>name</strong>,
+    optional <a href='IDBObjectStoreParameters.html'>IDBObjectStoreParameters</a> <strong>options</strong> &#x3D; {});
+  <span>undefined</span> <strong>deleteObjectStore</strong>(<span>DOMString</span> <strong>name</strong>);<span class="comment">
+
+  &#x2F;&#x2F; Event handlers:
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onversionchange</strong>;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="IDBTransaction.html">IDBTransaction</a></li></ul>
+  
+  <ul>
+    <li><a href="IDBTransaction.html">IDBTransaction</a></li>
+  </ul>
 </section>
   

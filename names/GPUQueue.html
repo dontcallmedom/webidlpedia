@@ -6,61 +6,66 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://gpuweb.github.io/gpuweb/#gpuqueue">WebGPU</a> defines <code>GPUQueue</code></p>
-<pre class=webidl><code>interface &lt;strong&gt;GPUQueue&lt;/strong&gt; {
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;submit&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;GPUCommandBuffer.html&#39;&gt;GPUCommandBuffer&lt;/a&gt;&gt; &lt;strong&gt;commandBuffers&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpuqueue">WebGPU</a> defines <code>GPUQueue</code></p>
+<pre class=webidl><code>
 
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;onSubmittedWorkDone&lt;/strong&gt;();
+interface <strong>GPUQueue</strong> {
+    <span>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeBuffer&lt;/strong&gt;(
-        &lt;a href=&#39;GPUBuffer.html&#39;&gt;GPUBuffer&lt;/a&gt; &lt;strong&gt;buffer&lt;/strong&gt;,
-        &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;bufferOffset&lt;/strong&gt;,
-        [AllowShared] &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;,
-        optional &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;dataOffset&lt;/strong&gt; = 0,
-        optional &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;size&lt;/strong&gt;);
+    Promise&lt;<span>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeTexture&lt;/strong&gt;(
-      &lt;a href=&#39;GPUTextureCopyView.html&#39;&gt;GPUTextureCopyView&lt;/a&gt; &lt;strong&gt;destination&lt;/strong&gt;,
-      [AllowShared] &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;,
-      &lt;a href=&#39;GPUTextureDataLayout.html&#39;&gt;GPUTextureDataLayout&lt;/a&gt; &lt;strong&gt;dataLayout&lt;/strong&gt;,
-      &lt;a href=&#39;GPUExtent3D.html&#39;&gt;GPUExtent3D&lt;/a&gt; &lt;strong&gt;size&lt;/strong&gt;);
+    <span>undefined</span> <strong>writeBuffer</strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
+        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;copyImageBitmapToTexture&lt;/strong&gt;(
-        &lt;a href=&#39;GPUImageBitmapCopyView.html&#39;&gt;GPUImageBitmapCopyView&lt;/a&gt; &lt;strong&gt;source&lt;/strong&gt;,
-        &lt;a href=&#39;GPUTextureCopyView.html&#39;&gt;GPUTextureCopyView&lt;/a&gt; &lt;strong&gt;destination&lt;/strong&gt;,
-        &lt;a href=&#39;GPUExtent3D.html&#39;&gt;GPUExtent3D&lt;/a&gt; &lt;strong&gt;copySize&lt;/strong&gt;);
+    <span>undefined</span> <strong>writeTexture</strong>(
+      <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+      <a href='GPUTextureDataLayout.html'>GPUTextureDataLayout</a> <strong>dataLayout</strong>,
+      <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);
+
+    <span>undefined</span> <strong>copyImageBitmapToTexture</strong>(
+        <a href='GPUImageBitmapCopyView.html'>GPUImageBitmapCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
 };
-&lt;a href=&#39;GPUQueue.html&#39;&gt;GPUQueue&lt;/a&gt; includes &lt;a href=&#39;GPUObjectBase.html&#39;&gt;GPUObjectBase&lt;/a&gt;;</code></pre>
+<a href='GPUQueue.html'>GPUQueue</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-interface &lt;strong&gt;GPUQueue&lt;/strong&gt; {
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;submit&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;GPUCommandBuffer.html&#39;&gt;GPUCommandBuffer&lt;/a&gt;&gt; &lt;strong&gt;commandBuffers&lt;/strong&gt;);
+interface <strong>GPUQueue</strong> {
+    <span>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);
 
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;onSubmittedWorkDone&lt;/strong&gt;();
+    Promise&lt;<span>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeBuffer&lt;/strong&gt;(
-        &lt;a href=&#39;GPUBuffer.html&#39;&gt;GPUBuffer&lt;/a&gt; &lt;strong&gt;buffer&lt;/strong&gt;,
-        &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;bufferOffset&lt;/strong&gt;,
-        [AllowShared] &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;,
-        optional &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;dataOffset&lt;/strong&gt; = 0,
-        optional &lt;a href=&#39;GPUSize64.html&#39;&gt;GPUSize64&lt;/a&gt; &lt;strong&gt;size&lt;/strong&gt;);
+    <span>undefined</span> <strong>writeBuffer</strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
+        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;writeTexture&lt;/strong&gt;(
-      &lt;a href=&#39;GPUTextureCopyView.html&#39;&gt;GPUTextureCopyView&lt;/a&gt; &lt;strong&gt;destination&lt;/strong&gt;,
-      [AllowShared] &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;,
-      &lt;a href=&#39;GPUTextureDataLayout.html&#39;&gt;GPUTextureDataLayout&lt;/a&gt; &lt;strong&gt;dataLayout&lt;/strong&gt;,
-      &lt;a href=&#39;GPUExtent3D.html&#39;&gt;GPUExtent3D&lt;/a&gt; &lt;strong&gt;size&lt;/strong&gt;);
+    <span>undefined</span> <strong>writeTexture</strong>(
+      <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+      <a href='GPUTextureDataLayout.html'>GPUTextureDataLayout</a> <strong>dataLayout</strong>,
+      <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);
 
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;copyImageBitmapToTexture&lt;/strong&gt;(
-        &lt;a href=&#39;GPUImageBitmapCopyView.html&#39;&gt;GPUImageBitmapCopyView&lt;/a&gt; &lt;strong&gt;source&lt;/strong&gt;,
-        &lt;a href=&#39;GPUTextureCopyView.html&#39;&gt;GPUTextureCopyView&lt;/a&gt; &lt;strong&gt;destination&lt;/strong&gt;,
-        &lt;a href=&#39;GPUExtent3D.html&#39;&gt;GPUExtent3D&lt;/a&gt; &lt;strong&gt;copySize&lt;/strong&gt;);
-    attribute &lt;span&gt;USVString&lt;/span&gt;? &lt;strong&gt;label&lt;/strong&gt;;
+    <span>undefined</span> <strong>copyImageBitmapToTexture</strong>(
+        <a href='GPUImageBitmapCopyView.html'>GPUImageBitmapCopyView</a> <strong>source</strong>,
+        <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+    attribute <span>USVString</span>? <strong>label</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="GPUDevice.html">GPUDevice</a></li></ul>
+  
+  <ul>
+    <li><a href="GPUDevice.html">GPUDevice</a></li>
+  </ul>
 </section>
   

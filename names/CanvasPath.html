@@ -6,24 +6,29 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasPath</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;CanvasPath&lt;/strong&gt; {
-  // shared path API methods
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;closePath&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;lineTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;quadraticCurveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cpx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cpy&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;bezierCurveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp1x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp1y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp2x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp2y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;arcTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x2&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y2&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radius&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;rect&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;w&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;h&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;arc&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radius&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;startAngle&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;endAngle&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;anticlockwise&lt;/strong&gt; = false);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;ellipse&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radiusX&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radiusY&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;rotation&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;startAngle&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;endAngle&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;anticlockwise&lt;/strong&gt; = false);
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>CanvasPath</code></p>
+<pre class=webidl><code>
+
+interface mixin <strong>CanvasPath</strong> {<span class="comment">
+  &#x2F;&#x2F; shared path API methods
+  </span><span>undefined</span> <strong>closePath</strong>();
+  <span>undefined</span> <strong>moveTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>lineTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>quadraticCurveTo</strong>(<span>unrestricted double</span> <strong>cpx</strong>, <span>unrestricted double</span> <strong>cpy</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>bezierCurveTo</strong>(<span>unrestricted double</span> <strong>cp1x</strong>, <span>unrestricted double</span> <strong>cp1y</strong>, <span>unrestricted double</span> <strong>cp2x</strong>, <span>unrestricted double</span> <strong>cp2y</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>arcTo</strong>(<span>unrestricted double</span> <strong>x1</strong>, <span>unrestricted double</span> <strong>y1</strong>, <span>unrestricted double</span> <strong>x2</strong>, <span>unrestricted double</span> <strong>y2</strong>, <span>unrestricted double</span> <strong>radius</strong>);
+  <span>undefined</span> <strong>rect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>arc</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radius</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> &#x3D; false);
+  <span>undefined</span> <strong>ellipse</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radiusX</strong>, <span>unrestricted double</span> <strong>radiusY</strong>, <span>unrestricted double</span> <strong>rotation</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> &#x3D; false);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="Path2D.html">Path2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li></ul>
+  
+  <ul>
+    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="Path2D.html">Path2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li>
+  </ul>
 </section>
   

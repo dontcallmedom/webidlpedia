@@ -6,88 +6,93 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://drafts.fxtf.org/geometry/#dommatrixreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMMatrixReadOnly</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;),
+  <p><a href="https:&#x2F;&#x2F;drafts.fxtf.org&#x2F;geometry&#x2F;#dommatrixreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMMatrixReadOnly</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable]
-interface &lt;strong&gt;DOMMatrixReadOnly&lt;/strong&gt; {
-    constructor(optional (&lt;span&gt;DOMString&lt;/span&gt; or sequence&lt;&lt;span&gt;unrestricted double&lt;/span&gt;&gt;) &lt;strong&gt;init&lt;/strong&gt;);
+interface <strong>DOMMatrixReadOnly</strong> {
+    constructor(optional (<span>DOMString</span> or sequence&lt;<span>unrestricted double</span>&gt;) <strong>init</strong>);
 
-    [NewObject] static &lt;a href=&#39;DOMMatrixReadOnly.html&#39;&gt;DOMMatrixReadOnly&lt;/a&gt; &lt;strong&gt;fromMatrix&lt;/strong&gt;(optional &lt;a href=&#39;DOMMatrixInit.html&#39;&gt;DOMMatrixInit&lt;/a&gt; &lt;strong&gt;other&lt;/strong&gt; = {});
-    [NewObject] static &lt;a href=&#39;DOMMatrixReadOnly.html&#39;&gt;DOMMatrixReadOnly&lt;/a&gt; &lt;strong&gt;fromFloat32Array&lt;/strong&gt;(&lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;array32&lt;/strong&gt;);
-    [NewObject] static &lt;a href=&#39;DOMMatrixReadOnly.html&#39;&gt;DOMMatrixReadOnly&lt;/a&gt; &lt;strong&gt;fromFloat64Array&lt;/strong&gt;(&lt;span&gt;Float64Array&lt;/span&gt; &lt;strong&gt;array64&lt;/strong&gt;);
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromMatrix</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromFloat32Array</strong>(<span>Float32Array</span> <strong>array32</strong>);
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromFloat64Array</strong>(<span>Float64Array</span> <strong>array64</strong>);<span class="comment">
 
-    // These attributes are simple aliases for certain elements of the 4x4 matrix
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;a&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;b&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;c&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;d&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;e&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;f&lt;/strong&gt;;
+    &#x2F;&#x2F; These attributes are simple aliases for certain elements of the 4x4 matrix
+    </span>readonly attribute <span>unrestricted double</span> <strong>a</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>b</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>c</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>d</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>e</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>f</strong>;
 
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m11&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m12&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m13&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m14&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m21&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m22&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m23&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m24&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m31&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m32&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m33&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m34&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m41&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m42&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m43&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;m44&lt;/strong&gt;;
+    readonly attribute <span>unrestricted double</span> <strong>m11</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m12</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m13</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m14</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m21</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m22</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m23</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m24</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m31</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m32</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m33</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m34</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m41</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m42</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m43</strong>;
+    readonly attribute <span>unrestricted double</span> <strong>m44</strong>;
 
-    readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;is2D&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isIdentity&lt;/strong&gt;;
+    readonly attribute <span>boolean</span> <strong>is2D</strong>;
+    readonly attribute <span>boolean</span> <strong>isIdentity</strong>;<span class="comment">
 
-    // Immutable transform methods
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;translate&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;tx&lt;/strong&gt; = 0,
-                                    optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;ty&lt;/strong&gt; = 0,
-                                    optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;tz&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;scale&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scaleX&lt;/strong&gt; = 1,
-                                optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scaleY&lt;/strong&gt;,
-                                optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scaleZ&lt;/strong&gt; = 1,
-                                optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originX&lt;/strong&gt; = 0,
-                                optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originY&lt;/strong&gt; = 0,
-                                optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originZ&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;scaleNonUniform&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scaleX&lt;/strong&gt; = 1,
-                                          optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scaleY&lt;/strong&gt; = 1);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;scale3d&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;scale&lt;/strong&gt; = 1,
-                                  optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originX&lt;/strong&gt; = 0,
-                                  optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originY&lt;/strong&gt; = 0,
-                                  optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;originZ&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;rotate&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;rotX&lt;/strong&gt; = 0,
-                                 optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;rotY&lt;/strong&gt;,
-                                 optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;rotZ&lt;/strong&gt;);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;rotateFromVector&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt; = 0,
-                                           optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;rotateAxisAngle&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt; = 0,
-                                          optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt; = 0,
-                                          optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;z&lt;/strong&gt; = 0,
-                                          optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;angle&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;skewX&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sx&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;skewY&lt;/strong&gt;(optional &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sy&lt;/strong&gt; = 0);
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;multiply&lt;/strong&gt;(optional &lt;a href=&#39;DOMMatrixInit.html&#39;&gt;DOMMatrixInit&lt;/a&gt; &lt;strong&gt;other&lt;/strong&gt; = {});
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;flipX&lt;/strong&gt;();
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;flipY&lt;/strong&gt;();
-    [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;inverse&lt;/strong&gt;();
+    &#x2F;&#x2F; Immutable transform methods
+    </span>[NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>translate</strong>(optional <span>unrestricted double</span> <strong>tx</strong> &#x3D; 0,
+                                    optional <span>unrestricted double</span> <strong>ty</strong> &#x3D; 0,
+                                    optional <span>unrestricted double</span> <strong>tz</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale</strong>(optional <span>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
+                                optional <span>unrestricted double</span> <strong>scaleY</strong>,
+                                optional <span>unrestricted double</span> <strong>scaleZ</strong> &#x3D; 1,
+                                optional <span>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                                optional <span>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                                optional <span>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scaleNonUniform</strong>(optional <span>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
+                                          optional <span>unrestricted double</span> <strong>scaleY</strong> &#x3D; 1);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale3d</strong>(optional <span>unrestricted double</span> <strong>scale</strong> &#x3D; 1,
+                                  optional <span>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                                  optional <span>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                                  optional <span>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotate</strong>(optional <span>unrestricted double</span> <strong>rotX</strong> &#x3D; 0,
+                                 optional <span>unrestricted double</span> <strong>rotY</strong>,
+                                 optional <span>unrestricted double</span> <strong>rotZ</strong>);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateFromVector</strong>(optional <span>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                           optional <span>unrestricted double</span> <strong>y</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateAxisAngle</strong>(optional <span>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                          optional <span>unrestricted double</span> <strong>y</strong> &#x3D; 0,
+                                          optional <span>unrestricted double</span> <strong>z</strong> &#x3D; 0,
+                                          optional <span>unrestricted double</span> <strong>angle</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewX</strong>(optional <span>unrestricted double</span> <strong>sx</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewY</strong>(optional <span>unrestricted double</span> <strong>sy</strong> &#x3D; 0);
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>multiply</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>flipX</strong>();
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>flipY</strong>();
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>inverse</strong>();
 
-    [NewObject] &lt;a href=&#39;DOMPoint.html&#39;&gt;DOMPoint&lt;/a&gt; &lt;strong&gt;transformPoint&lt;/strong&gt;(optional &lt;a href=&#39;DOMPointInit.html&#39;&gt;DOMPointInit&lt;/a&gt; &lt;strong&gt;point&lt;/strong&gt; = {});
-    [NewObject] &lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;toFloat32Array&lt;/strong&gt;();
-    [NewObject] &lt;span&gt;Float64Array&lt;/span&gt; &lt;strong&gt;toFloat64Array&lt;/strong&gt;();
+    [NewObject] <a href='DOMPoint.html'>DOMPoint</a> <strong>transformPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});
+    [NewObject] <span>Float32Array</span> <strong>toFloat32Array</strong>();
+    [NewObject] <span>Float64Array</span> <strong>toFloat64Array</strong>();
 
-    [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] stringifier;
-    [Default] &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;toJSON&lt;/strong&gt;();
+    [Exposed&#x3D;<a href='Window.html'>Window</a>] stringifier;
+    [Default] <span>object</span> <strong>toJSON</strong>();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="DOMMatrixReadOnly.html">DOMMatrixReadOnly</a></li><li><a href="DOMMatrix.html">DOMMatrix</a></li></ul>
+  
+  <ul>
+    <li><a href="DOMMatrixReadOnly.html">DOMMatrixReadOnly</a></li><li><a href="DOMMatrix.html">DOMMatrix</a></li>
+  </ul>
 </section>
   

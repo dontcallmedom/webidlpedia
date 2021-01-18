@@ -6,61 +6,71 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement">HTML Standard</a> defines <code>HTMLVideoElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLVideoElement&lt;/strong&gt; : &lt;a href=&#39;HTMLMediaElement.html&#39;&gt;HTMLMediaElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#htmlvideoelement">HTML Standard</a> defines <code>HTMLVideoElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;videoWidth&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;videoHeight&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;poster&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;playsInline&lt;/strong&gt;;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoHeight</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>poster</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>playsInline</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/media-playback-quality/#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLVideoElement&lt;/strong&gt; {
-  &lt;a href=&#39;VideoPlaybackQuality.html&#39;&gt;VideoPlaybackQuality&lt;/a&gt; &lt;strong&gt;getVideoPlaybackQuality&lt;/strong&gt;();
-};</code></pre></li><li><a href="https://wicg.github.io/video-rvfc/">HTMLVideoElement.requestVideoFrameCallback()</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLVideoElement&lt;/strong&gt; {
-    &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;requestVideoFrameCallback&lt;/strong&gt;(&lt;a href=&#39;VideoFrameRequestCallback.html&#39;&gt;VideoFrameRequestCallback&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;cancelVideoFrameCallback&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLVideoElement&lt;/strong&gt; {
-  [NewObject] Promise&lt;&lt;a href=&#39;PictureInPictureWindow.html&#39;&gt;PictureInPictureWindow&lt;/a&gt;&gt; &lt;strong&gt;requestPictureInPicture&lt;/strong&gt;();
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onenterpictureinpicture&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onleavepictureinpicture&lt;/strong&gt;;
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-playback-quality&#x2F;#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a><pre class=webidl><code>partial interface <strong>HTMLVideoElement</strong> {
+  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;video-rvfc&#x2F;">HTMLVideoElement.requestVideoFrameCallback()</a><pre class=webidl><code>
 
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;autoPictureInPicture&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;disablePictureInPicture&lt;/strong&gt;;
-};</code></pre></li></ol>
+partial interface <strong>HTMLVideoElement</strong> {
+    <span>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);
+    <span>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a><pre class=webidl><code>partial interface <strong>HTMLVideoElement</strong> {
+  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;
+
+  [CEReactions] attribute <span>boolean</span> <strong>autoPictureInPicture</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disablePictureInPicture</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLVideoElement&lt;/strong&gt; : &lt;a href=&#39;HTMLMediaElement.html&#39;&gt;HTMLMediaElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;videoWidth&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;videoHeight&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;poster&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;playsInline&lt;/strong&gt;;
-  &lt;a href=&#39;VideoPlaybackQuality.html&#39;&gt;VideoPlaybackQuality&lt;/a&gt; &lt;strong&gt;getVideoPlaybackQuality&lt;/strong&gt;();
-    &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;requestVideoFrameCallback&lt;/strong&gt;(&lt;a href=&#39;VideoFrameRequestCallback.html&#39;&gt;VideoFrameRequestCallback&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;cancelVideoFrameCallback&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt;);
-  [NewObject] Promise&lt;&lt;a href=&#39;PictureInPictureWindow.html&#39;&gt;PictureInPictureWindow&lt;/a&gt;&gt; &lt;strong&gt;requestPictureInPicture&lt;/strong&gt;();
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoHeight</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>poster</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>playsInline</strong>;
+  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();
+    <span>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);
+    <span>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();
 
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onenterpictureinpicture&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onleavepictureinpicture&lt;/strong&gt;;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;
 
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;autoPictureInPicture&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;disablePictureInPicture&lt;/strong&gt;;
+  [CEReactions] attribute <span>boolean</span> <strong>autoPictureInPicture</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>disablePictureInPicture</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="XRMediaBinding.html">XRMediaBinding</a></li></ul>
+  
+  <ul>
+    <li><a href="XRMediaBinding.html">XRMediaBinding</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/media-playback-quality/">Media Playback Quality</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://wicg.github.io/video-rvfc/">HTMLVideoElement.requestVideoFrameCallback()</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.w3.org/TR/picture-in-picture/">Picture-in-Picture</a> refers to <code>HTMLVideoElement</code></li><li><a href="https://www.w3.org/TR/webxrlayers-1/">WebXR Layers API Level 1</a> refers to <code>HTMLVideoElement</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-playback-quality&#x2F;">Media Playback Quality</a> refers to <code>HTMLVideoElement</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;video-rvfc&#x2F;">HTMLVideoElement.requestVideoFrameCallback()</a> refers to <code>HTMLVideoElement</code></li><li><a href="https:&#x2F;&#x2F;www.khronos.org&#x2F;registry&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;">WebGL Specification</a> refers to <code>HTMLVideoElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a> refers to <code>HTMLVideoElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxrlayers-1&#x2F;">WebXR Layers API Level 1</a> refers to <code>HTMLVideoElement</code></li>
+  </ul></section>

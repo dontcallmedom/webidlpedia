@@ -6,54 +6,65 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>WindowEventHandlers</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;WindowEventHandlers&lt;/strong&gt; {
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onafterprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbeforeprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;OnBeforeUnloadEventHandler.html&#39;&gt;OnBeforeUnloadEventHandler&lt;/a&gt; &lt;strong&gt;onbeforeunload&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onhashchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onlanguagechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessageerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onoffline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ononline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpagehide&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpageshow&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpopstate&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onrejectionhandled&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstorage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunhandledrejection&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunload&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>WindowEventHandlers</code></p>
+<pre class=webidl><code>
+
+interface mixin <strong>WindowEventHandlers</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
 };</code></pre>
-  <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/portals/#patch-event-handlers">Portals</a>
-<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowEventHandlers&lt;/strong&gt; {
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onportalactivate&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface mixin is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;#patch-event-handlers">Portals</a><pre class=webidl><code>
+
+partial interface mixin <strong>WindowEventHandlers</strong> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onportalactivate</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-interface mixin &lt;strong&gt;WindowEventHandlers&lt;/strong&gt; {
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onafterprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbeforeprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;OnBeforeUnloadEventHandler.html&#39;&gt;OnBeforeUnloadEventHandler&lt;/a&gt; &lt;strong&gt;onbeforeunload&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onhashchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onlanguagechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessageerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onoffline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ononline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpagehide&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpageshow&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpopstate&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onrejectionhandled&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstorage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunhandledrejection&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunload&lt;/strong&gt;;
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onportalactivate&lt;/strong&gt;;
+interface mixin <strong>WindowEventHandlers</strong> {
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onportalactivate</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="HTMLBodyElement.html">HTMLBodyElement</a></li><li><a href="Window.html">Window</a></li><li><a href="HTMLFrameSetElement.html">HTMLFrameSetElement</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li></ul>
+  
+  <ul>
+    <li><a href="HTMLBodyElement.html">HTMLBodyElement</a></li><li><a href="Window.html">Window</a></li><li><a href="HTMLFrameSetElement.html">HTMLFrameSetElement</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/portals/">Portals</a> refers to <code>WindowEventHandlers</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>WindowEventHandlers</code></li>
+  </ul></section>

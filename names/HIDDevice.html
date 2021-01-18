@@ -6,28 +6,33 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/webhid/#dom-hiddevice">WebHID API</a> defines <code>HIDDevice</code></p>
-<pre class=webidl><code>[
-    Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;#dom-hiddevice">WebHID API</a> defines <code>HIDDevice</code></p>
+<pre class=webidl><code>
+
+[
+    Exposed&#x3D;<a href='Window.html'>Window</a>,
     SecureContext
-] interface &lt;strong&gt;HIDDevice&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oninputreport&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;opened&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;vendorId&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;productId&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;productName&lt;/strong&gt;;
-    readonly attribute FrozenArray&lt;&lt;a href=&#39;HIDCollectionInfo.html&#39;&gt;HIDCollectionInfo&lt;/a&gt;&gt; &lt;strong&gt;collections&lt;/strong&gt;;
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;open&lt;/strong&gt;();
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;close&lt;/strong&gt;();
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;sendReport&lt;/strong&gt;([EnforceRange] &lt;span&gt;octet&lt;/span&gt; &lt;strong&gt;reportId&lt;/strong&gt;, &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
-    Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;sendFeatureReport&lt;/strong&gt;([EnforceRange] &lt;span&gt;octet&lt;/span&gt; &lt;strong&gt;reportId&lt;/strong&gt;, &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
-    Promise&lt;&lt;span&gt;DataView&lt;/span&gt;&gt; &lt;strong&gt;receiveFeatureReport&lt;/strong&gt;([EnforceRange] &lt;span&gt;octet&lt;/span&gt; &lt;strong&gt;reportId&lt;/strong&gt;);
+] interface <strong>HIDDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputreport</strong>;
+    readonly attribute <span>boolean</span> <strong>opened</strong>;
+    readonly attribute <span>unsigned short</span> <strong>vendorId</strong>;
+    readonly attribute <span>unsigned short</span> <strong>productId</strong>;
+    readonly attribute <span>DOMString</span> <strong>productName</strong>;
+    readonly attribute FrozenArray&lt;<a href='HIDCollectionInfo.html'>HIDCollectionInfo</a>&gt; <strong>collections</strong>;
+    Promise&lt;<span>undefined</span>&gt; <strong>open</strong>();
+    Promise&lt;<span>undefined</span>&gt; <strong>close</strong>();
+    Promise&lt;<span>undefined</span>&gt; <strong>sendReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+    Promise&lt;<span>undefined</span>&gt; <strong>sendFeatureReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
+    Promise&lt;<span>DataView</span>&gt; <strong>receiveFeatureReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="HID.html">HID</a></li><li><a href="HIDConnectionEventInit.html">HIDConnectionEventInit</a></li><li><a href="HIDConnectionEvent.html">HIDConnectionEvent</a></li><li><a href="HIDInputReportEventInit.html">HIDInputReportEventInit</a></li><li><a href="HIDInputReportEvent.html">HIDInputReportEvent</a></li></ul>
+  
+  <ul>
+    <li><a href="HID.html">HID</a></li><li><a href="HIDConnectionEventInit.html">HIDConnectionEventInit</a></li><li><a href="HIDConnectionEvent.html">HIDConnectionEvent</a></li><li><a href="HIDInputReportEventInit.html">HIDInputReportEventInit</a></li><li><a href="HIDInputReportEvent.html">HIDInputReportEvent</a></li>
+  </ul>
 </section>
   

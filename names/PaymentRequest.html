@@ -6,28 +6,29 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/payment-request/#dom-paymentrequest">Payment Request API</a> defines <code>PaymentRequest</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;PaymentRequest&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentrequest">Payment Request API</a> defines <code>PaymentRequest</code></p>
+<pre class=webidl><code>[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
   constructor(
-    sequence&lt;&lt;a href=&#39;PaymentMethodData.html&#39;&gt;PaymentMethodData&lt;/a&gt;&gt; &lt;strong&gt;methodData&lt;/strong&gt;,
-    &lt;a href=&#39;PaymentDetailsInit.html&#39;&gt;PaymentDetailsInit&lt;/a&gt; &lt;strong&gt;details&lt;/strong&gt;,
-    optional &lt;a href=&#39;PaymentOptions.html&#39;&gt;PaymentOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {}
+    sequence&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>,
+    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>,
+    optional <a href='PaymentOptions.html'>PaymentOptions</a> <strong>options</strong> &#x3D; {}
   );
   [NewObject]
-  Promise&lt;&lt;a href=&#39;PaymentResponse.html&#39;&gt;PaymentResponse&lt;/a&gt;&gt; &lt;strong&gt;show&lt;/strong&gt;(optional Promise&lt;&lt;a href=&#39;PaymentDetailsUpdate.html&#39;&gt;PaymentDetailsUpdate&lt;/a&gt;&gt; &lt;strong&gt;detailsPromise&lt;/strong&gt;);
+  Promise&lt;<a href='PaymentResponse.html'>PaymentResponse</a>&gt; <strong>show</strong>(optional Promise&lt;<a href='PaymentDetailsUpdate.html'>PaymentDetailsUpdate</a>&gt; <strong>detailsPromise</strong>);
   [NewObject]
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;abort&lt;/strong&gt;();
+  Promise&lt;<span>undefined</span>&gt; <strong>abort</strong>();
   [NewObject]
-  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;canMakePayment&lt;/strong&gt;();
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;PaymentAddress.html&#39;&gt;PaymentAddress&lt;/a&gt;? &lt;strong&gt;shippingAddress&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;shippingOption&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;PaymentShippingType.html&#39;&gt;PaymentShippingType&lt;/a&gt;? &lt;strong&gt;shippingType&lt;/strong&gt;;
+  Promise&lt;<span>boolean</span>&gt; <strong>canMakePayment</strong>();
 
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onshippingaddresschange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onshippingoptionchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpaymentmethodchange&lt;/strong&gt;;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
+  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
+  readonly attribute <a href='PaymentShippingType.html'>PaymentShippingType</a>? <strong>shippingType</strong>;
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingaddresschange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingoptionchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;
 };</code></pre>
   
   

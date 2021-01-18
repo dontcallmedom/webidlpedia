@@ -6,60 +6,68 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://url.spec.whatwg.org/#url">URL Standard</a> defines <code>URL</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;),
- LegacyWindowAlias=&lt;span&gt;webkitURL&lt;/span&gt;]
-interface &lt;strong&gt;URL&lt;/strong&gt; {
-  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;base&lt;/strong&gt;);
-  stringifier attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;href&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;origin&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;protocol&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;username&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;password&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;host&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;hostname&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;port&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;pathname&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;search&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;URLSearchParams.html&#39;&gt;URLSearchParams&lt;/a&gt; &lt;strong&gt;searchParams&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;hash&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;url.spec.whatwg.org&#x2F;#url">URL Standard</a> defines <code>URL</code></p>
+<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ LegacyWindowAlias&#x3D;<span>webkitURL</span>]
+interface <strong>URL</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <span>USVString</span> <strong>base</strong>);
 
-  &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;toJSON&lt;/strong&gt;();
+  stringifier attribute <span>USVString</span> <strong>href</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+           attribute <span>USVString</span> <strong>protocol</strong>;
+           attribute <span>USVString</span> <strong>username</strong>;
+           attribute <span>USVString</span> <strong>password</strong>;
+           attribute <span>USVString</span> <strong>host</strong>;
+           attribute <span>USVString</span> <strong>hostname</strong>;
+           attribute <span>USVString</span> <strong>port</strong>;
+           attribute <span>USVString</span> <strong>pathname</strong>;
+           attribute <span>USVString</span> <strong>search</strong>;
+  [SameObject] readonly attribute <a href='URLSearchParams.html'>URLSearchParams</a> <strong>searchParams</strong>;
+           attribute <span>USVString</span> <strong>hash</strong>;
+
+  <span>USVString</span> <strong>toJSON</strong>();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/FileAPI/">File API</a>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;span&gt;DedicatedWorker&lt;/span&gt;,&lt;a href=&#39;SharedWorker.html&#39;&gt;SharedWorker&lt;/a&gt;)]
-partial interface &lt;strong&gt;URL&lt;/strong&gt; {
-  static &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;createObjectURL&lt;/strong&gt;((&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; or &lt;a href=&#39;MediaSource.html&#39;&gt;MediaSource&lt;/a&gt;) &lt;strong&gt;obj&lt;/strong&gt;);
-  static &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;revokeObjectURL&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/media-source/#methods-2">Media Source Extensions™</a>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-partial interface &lt;strong&gt;URL&lt;/strong&gt; {
-    static &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;createObjectURL&lt;/strong&gt; (&lt;a href=&#39;MediaSource.html&#39;&gt;MediaSource&lt;/a&gt; &lt;strong&gt;mediaSource&lt;/strong&gt;);
-};</code></pre></li></ol>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;),
- LegacyWindowAlias=&lt;span&gt;webkitURL&lt;/span&gt;]
-interface &lt;strong&gt;URL&lt;/strong&gt; {
-  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;base&lt;/strong&gt;);
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;FileAPI&#x2F;">File API</a><pre class=webidl><code>
 
-  stringifier attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;href&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;origin&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;protocol&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;username&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;password&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;host&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;hostname&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;port&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;pathname&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;search&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;URLSearchParams.html&#39;&gt;URLSearchParams&lt;/a&gt; &lt;strong&gt;searchParams&lt;/strong&gt;;
-           attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;hash&lt;/strong&gt;;
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+partial interface <strong>URL</strong> {
+  static <span>DOMString</span> <strong>createObjectURL</strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);
+  static <span>undefined</span> <strong>revokeObjectURL</strong>(<span>DOMString</span> <strong>url</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-source&#x2F;#methods-2">Media Source Extensions™</a><pre class=webidl><code>
 
-  &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;toJSON&lt;/strong&gt;();
-  static &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;createObjectURL&lt;/strong&gt;((&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; or &lt;a href=&#39;MediaSource.html&#39;&gt;MediaSource&lt;/a&gt;) &lt;strong&gt;obj&lt;/strong&gt;);
-  static &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;revokeObjectURL&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
-    static &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;createObjectURL&lt;/strong&gt; (&lt;a href=&#39;MediaSource.html&#39;&gt;MediaSource&lt;/a&gt; &lt;strong&gt;mediaSource&lt;/strong&gt;);
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+partial interface <strong>URL</strong> {
+    static <span>DOMString</span> <strong>createObjectURL</strong> (<a href='MediaSource.html'>MediaSource</a> <strong>mediaSource</strong>);
+};</code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ LegacyWindowAlias&#x3D;<span>webkitURL</span>]
+interface <strong>URL</strong> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional <span>USVString</span> <strong>base</strong>);
+
+  stringifier attribute <span>USVString</span> <strong>href</strong>;
+  readonly attribute <span>USVString</span> <strong>origin</strong>;
+           attribute <span>USVString</span> <strong>protocol</strong>;
+           attribute <span>USVString</span> <strong>username</strong>;
+           attribute <span>USVString</span> <strong>password</strong>;
+           attribute <span>USVString</span> <strong>host</strong>;
+           attribute <span>USVString</span> <strong>hostname</strong>;
+           attribute <span>USVString</span> <strong>port</strong>;
+           attribute <span>USVString</span> <strong>pathname</strong>;
+           attribute <span>USVString</span> <strong>search</strong>;
+  [SameObject] readonly attribute <a href='URLSearchParams.html'>URLSearchParams</a> <strong>searchParams</strong>;
+           attribute <span>USVString</span> <strong>hash</strong>;
+
+  <span>USVString</span> <strong>toJSON</strong>();
+  static <span>DOMString</span> <strong>createObjectURL</strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);
+  static <span>undefined</span> <strong>revokeObjectURL</strong>(<span>DOMString</span> <strong>url</strong>);
+    static <span>DOMString</span> <strong>createObjectURL</strong> (<a href='MediaSource.html'>MediaSource</a> <strong>mediaSource</strong>);
 };</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/FileAPI/">File API</a> refers to <code>URL</code></li><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>URL</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;FileAPI&#x2F;">File API</a> refers to <code>URL</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-source&#x2F;">Media Source Extensions™</a> refers to <code>URL</code></li>
+  </ul></section>

@@ -6,38 +6,41 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/selection-api/#dom-selection">Selection API</a> defines <code>Selection</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;Selection&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt;? &lt;strong&gt;anchorNode&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;anchorOffset&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt;? &lt;strong&gt;focusNode&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;focusOffset&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isCollapsed&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;rangeCount&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  &lt;a href=&#39;Range.html&#39;&gt;Range&lt;/a&gt; &lt;strong&gt;getRangeAt&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;addRange&lt;/strong&gt;(&lt;a href=&#39;Range.html&#39;&gt;Range&lt;/a&gt; &lt;strong&gt;range&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeRange&lt;/strong&gt;(&lt;a href=&#39;Range.html&#39;&gt;Range&lt;/a&gt; &lt;strong&gt;range&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeAllRanges&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;empty&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;collapse&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt;? &lt;strong&gt;node&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;offset&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setPosition&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt;? &lt;strong&gt;node&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;offset&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;collapseToStart&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;collapseToEnd&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;extend&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;node&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;offset&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setBaseAndExtent&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;anchorNode&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;anchorOffset&lt;/strong&gt;, &lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;focusNode&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;focusOffset&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;selectAllChildren&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;node&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;selection-api&#x2F;#dom-selection">Selection API</a> defines <code>Selection</code></p>
+<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Selection</strong> {
+  readonly attribute <a href='Node.html'>Node</a>? <strong>anchorNode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>anchorOffset</strong>;
+  readonly attribute <a href='Node.html'>Node</a>? <strong>focusNode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>focusOffset</strong>;
+  readonly attribute <span>boolean</span> <strong>isCollapsed</strong>;
+  readonly attribute <span>unsigned long</span> <strong>rangeCount</strong>;
+  readonly attribute <span>DOMString</span> <strong>type</strong>;
+  <a href='Range.html'>Range</a> <strong>getRangeAt</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>addRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
+  <span>undefined</span> <strong>removeRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
+  <span>undefined</span> <strong>removeAllRanges</strong>();
+  <span>undefined</span> <strong>empty</strong>();
+  <span>undefined</span> <strong>collapse</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
+  <span>undefined</span> <strong>setPosition</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
+  <span>undefined</span> <strong>collapseToStart</strong>();
+  <span>undefined</span> <strong>collapseToEnd</strong>();
+  <span>undefined</span> <strong>extend</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
+  <span>undefined</span> <strong>setBaseAndExtent</strong>(<a href='Node.html'>Node</a> <strong>anchorNode</strong>, <span>unsigned long</span> <strong>anchorOffset</strong>, <a href='Node.html'>Node</a> <strong>focusNode</strong>, <span>unsigned long</span> <strong>focusOffset</strong>);
+  <span>undefined</span> <strong>selectAllChildren</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
   [CEReactions]
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;deleteFromDocument&lt;/strong&gt;();
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;containsNode&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;node&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;allowPartialContainment&lt;/strong&gt; = false);
-  stringifier &lt;span&gt;DOMString&lt;/span&gt; ();
+  <span>undefined</span> <strong>deleteFromDocument</strong>();
+  <span>boolean</span> <strong>containsNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>boolean</span> <strong>allowPartialContainment</strong> &#x3D; false);
+  stringifier <span>DOMString</span> ();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Document.html">Document</a></li><li><a href="Window.html">Window</a></li></ul>
+  
+  <ul>
+    <li><a href="Document.html">Document</a></li><li><a href="Window.html">Window</a></li>
+  </ul>
 </section>
   

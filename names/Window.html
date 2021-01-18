@@ -6,385 +6,401 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/window-object.html#window">HTML Standard</a> defines <code>Window</code></p>
-<pre class=webidl><code>[Global=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
- Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;window-object.html#window">HTML Standard</a> defines <code>Window</code></p>
+<pre class=webidl><code>
+
+[Global&#x3D;<a href='Window.html'>Window</a>,
+ Exposed&#x3D;<a href='Window.html'>Window</a>,
  LegacyUnenumerableNamedProperties]
-interface &lt;strong&gt;Window&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  // the current browsing context
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;window&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;self&lt;/strong&gt;;
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt; &lt;strong&gt;document&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [PutForwards=&lt;span&gt;href&lt;/span&gt;, LegacyUnforgeable] readonly attribute &lt;a href=&#39;Location.html&#39;&gt;Location&lt;/a&gt; &lt;strong&gt;location&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;History.html&#39;&gt;History&lt;/a&gt; &lt;strong&gt;history&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;CustomElementRegistry.html&#39;&gt;CustomElementRegistry&lt;/a&gt; &lt;strong&gt;customElements&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;locationbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;menubar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;personalbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;scrollbars&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;statusbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;toolbar&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;closed&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stop&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;focus&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;blur&lt;/strong&gt;();
+interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class="comment">
+  &#x2F;&#x2F; the current browsing context
+  </span>[LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>window</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>self</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='Document.html'>Document</a> <strong>document</strong>;
+  attribute <span>DOMString</span> <strong>name</strong>;
+  [PutForwards&#x3D;<span>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a> <strong>location</strong>;
+  readonly attribute <a href='History.html'>History</a> <strong>history</strong>;
+  readonly attribute <a href='CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>locationbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>menubar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>personalbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>scrollbars</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>statusbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>toolbar</strong>;
+  attribute <span>DOMString</span> <strong>status</strong>;
+  <span>undefined</span> <strong>close</strong>();
+  readonly attribute <span>boolean</span> <strong>closed</strong>;
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>focus</strong>();
+  <span>undefined</span> <strong>blur</strong>();<span class="comment">
 
-  // other browsing contexts
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;frames&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;length&lt;/strong&gt;;
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;top&lt;/strong&gt;;
-  attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;opener&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;parent&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt;? &lt;strong&gt;frameElement&lt;/strong&gt;;
-  &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;open&lt;/strong&gt;(optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt; = &quot;&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;target&lt;/strong&gt; = &quot;_blank&quot;, optional [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;features&lt;/strong&gt; = &quot;&quot;);
-  getter &lt;span&gt;object&lt;/span&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
-  // Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
-  // object on the prototype chain. Indeed, this does not make the global object an exotic object.
-  // Indexed access is taken care of by the WindowProxy exotic object.
+  &#x2F;&#x2F; other browsing contexts
+  </span>[Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;
+  [Replaceable] readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;
+  attribute <span>any</span> <strong>opener</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>frameElement</strong>;
+  <a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span>USVString</span> <strong>url</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>target</strong> &#x3D; &quot;_blank&quot;, optional [LegacyNullToEmptyString] <span>DOMString</span> <strong>features</strong> &#x3D; &quot;&quot;);
+  getter <span>object</span> (<span>DOMString</span> <strong>name</strong>);<span class="comment">
+  &#x2F;&#x2F; Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
+  &#x2F;&#x2F; object on the prototype chain. Indeed, this does not make the global object an exotic object.
+  &#x2F;&#x2F; Indexed access is taken care of by the WindowProxy exotic object.
 
-  // the user agent
-  readonly attribute &lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; &lt;strong&gt;navigator&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;originAgentCluster&lt;/strong&gt;;
+  &#x2F;&#x2F; the user agent
+  </span>readonly attribute <a href='Navigator.html'>Navigator</a> <strong>navigator</strong>;
+  readonly attribute <span>boolean</span> <strong>originAgentCluster</strong>;<span class="comment">
 
-  // user prompts
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;alert&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;alert&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;confirm&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt; = &quot;&quot;);
-  &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;prompt&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt; = &quot;&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;default&lt;/strong&gt; = &quot;&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;print&lt;/strong&gt;();
+  &#x2F;&#x2F; user prompts
+  </span><span>undefined</span> <strong>alert</strong>();
+  <span>undefined</span> <strong>alert</strong>(<span>DOMString</span> <strong>message</strong>);
+  <span>boolean</span> <strong>confirm</strong>(optional <span>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);
+  <span>DOMString</span>? <strong>prompt</strong>(optional <span>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>default</strong> &#x3D; &quot;&quot;);
+  <span>undefined</span> <strong>print</strong>();
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;targetOrigin&lt;/strong&gt;, optional sequence&lt;&lt;span&gt;object&lt;/span&gt;&gt; &lt;strong&gt;transfer&lt;/strong&gt; = []);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, optional &lt;a href=&#39;WindowPostMessageOptions.html&#39;&gt;WindowPostMessageOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, <span>USVString</span> <strong>targetOrigin</strong>, optional sequence&lt;<span>object</span>&gt; <strong>transfer</strong> &#x3D; []);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> &#x3D; {});<span class="comment">
 
-  // also has obsolete members
-};
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;GlobalEventHandlers.html&#39;&gt;GlobalEventHandlers&lt;/a&gt;;
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;WindowEventHandlers.html&#39;&gt;WindowEventHandlers&lt;/a&gt;;
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;WindowOrWorkerGlobalScope.html&#39;&gt;WindowOrWorkerGlobalScope&lt;/a&gt;;
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;AnimationFrameProvider.html&#39;&gt;AnimationFrameProvider&lt;/a&gt;;
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;WindowSessionStorage.html&#39;&gt;WindowSessionStorage&lt;/a&gt;;
-&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt; includes &lt;a href=&#39;WindowLocalStorage.html&#39;&gt;WindowLocalStorage&lt;/a&gt;;
+  &#x2F;&#x2F; also has obsolete members
+</span>};
+<a href='Window.html'>Window</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowOrWorkerGlobalScope.html'>WindowOrWorkerGlobalScope</a>;
+<a href='Window.html'>Window</a> includes <a href='AnimationFrameProvider.html'>AnimationFrameProvider</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowSessionStorage.html'>WindowSessionStorage</a>;
+<a href='Window.html'>Window</a> includes <a href='WindowLocalStorage.html'>WindowLocalStorage</a>;
 
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;captureEvents&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;releaseEvents&lt;/strong&gt;();
+partial interface <strong>Window</strong> {
+  <span>undefined</span> <strong>captureEvents</strong>();
+  <span>undefined</span> <strong>releaseEvents</strong>();
 
-  [Replaceable, SameObject] readonly attribute &lt;a href=&#39;External.html&#39;&gt;External&lt;/a&gt; &lt;strong&gt;external&lt;/strong&gt;;
+  [Replaceable, SameObject] readonly attribute <a href='External.html'>External</a> <strong>external</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://compat.spec.whatwg.org/#windoworientation-interface">Compatibility Standard</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    readonly attribute &lt;span&gt;short&lt;/span&gt; &lt;strong&gt;orientation&lt;/strong&gt;;
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onorientationchange&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://dom.spec.whatwg.org/#interface-window-extensions">DOM Standard</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  [Replaceable] readonly attribute (&lt;a href=&#39;Event.html&#39;&gt;Event&lt;/a&gt; or &lt;span&gt;undefined&lt;/span&gt;) &lt;strong&gt;event&lt;/strong&gt;; // legacy
-};</code></pre></li><li><a href="https://wicg.github.io/cookie-store/#Window">Cookie Store API</a>
-<pre class=webidl><code>[SecureContext]
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;CookieStore.html&#39;&gt;CookieStore&lt;/a&gt; &lt;strong&gt;cookieStore&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>[SecureContext]
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    Promise&lt;sequence&lt;&lt;a href=&#39;FileSystemFileHandle.html&#39;&gt;FileSystemFileHandle&lt;/a&gt;&gt;&gt; &lt;strong&gt;showOpenFilePicker&lt;/strong&gt;(optional &lt;a href=&#39;OpenFilePickerOptions.html&#39;&gt;OpenFilePickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    Promise&lt;&lt;a href=&#39;FileSystemFileHandle.html&#39;&gt;FileSystemFileHandle&lt;/a&gt;&gt; &lt;strong&gt;showSaveFilePicker&lt;/strong&gt;(optional &lt;a href=&#39;SaveFilePickerOptions.html&#39;&gt;SaveFilePickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    Promise&lt;&lt;a href=&#39;FileSystemDirectoryHandle.html&#39;&gt;FileSystemDirectoryHandle&lt;/a&gt;&gt; &lt;strong&gt;showDirectoryPicker&lt;/strong&gt;(optional &lt;a href=&#39;DirectoryPickerOptions.html&#39;&gt;DirectoryPickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-};</code></pre></li><li><a href="https://wicg.github.io/portals/#the-portal-element">Portals</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    readonly attribute &lt;a href=&#39;PortalHost.html&#39;&gt;PortalHost&lt;/a&gt;? &lt;strong&gt;portalHost&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://wicg.github.io/speech-api/#tts-section">Web Speech API</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;SpeechSynthesis.html&#39;&gt;SpeechSynthesis&lt;/a&gt; &lt;strong&gt;speechSynthesis&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://wicg.github.io/visual-viewport/#extensions-to-the-window-interface">Visual Viewport API</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  [SameObject, Replaceable] readonly attribute &lt;a href=&#39;VisualViewport.html&#39;&gt;VisualViewport&lt;/a&gt; &lt;strong&gt;visualViewport&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;navigate&lt;/strong&gt;(&lt;a href=&#39;SpatialNavigationDirection.html&#39;&gt;SpatialNavigationDirection&lt;/a&gt; &lt;strong&gt;dir&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  [NewObject] &lt;a href=&#39;CSSStyleDeclaration.html&#39;&gt;CSSStyleDeclaration&lt;/a&gt; &lt;strong&gt;getComputedStyle&lt;/strong&gt;(&lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt; &lt;strong&gt;elt&lt;/strong&gt;, optional &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt;? &lt;strong&gt;pseudoElt&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    [NewObject] &lt;a href=&#39;MediaQueryList.html&#39;&gt;MediaQueryList&lt;/a&gt; &lt;strong&gt;matchMedia&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;query&lt;/strong&gt;);
-    [SameObject, Replaceable] readonly attribute &lt;a href=&#39;Screen.html&#39;&gt;Screen&lt;/a&gt; &lt;strong&gt;screen&lt;/strong&gt;;
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;#windoworientation-interface">Compatibility Standard</a><pre class=webidl><code>partial interface <strong>Window</strong> {
+    readonly attribute <span>short</span> <strong>orientation</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#interface-window-extensions">DOM Standard</a><pre class=webidl><code>
 
-    // browsing context
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveTo&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveBy&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resizeTo&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resizeBy&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+partial interface <strong>Window</strong> {
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span>undefined</span>) <strong>event</strong>;<span class="comment"> &#x2F;&#x2F; legacy
+</span>};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#Window">Cookie Store API</a><pre class=webidl><code>
 
-    // viewport
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;innerWidth&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;innerHeight&lt;/strong&gt;;
+[SecureContext]
+partial interface <strong>Window</strong> {
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a><pre class=webidl><code>
 
-    // viewport scrolling
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;scrollX&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;pageXOffset&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;scrollY&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;pageYOffset&lt;/strong&gt;;
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scroll&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scroll&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollTo&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollBy&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollBy&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+[SecureContext]
+partial interface <strong>Window</strong> {
+    Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});
+    Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});
+    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;#the-portal-element">Portals</a><pre class=webidl><code>
 
-    // client
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenLeft&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenTop&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;outerWidth&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;outerHeight&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;devicePixelRatio&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation Event Specification</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondeviceorientation&lt;/strong&gt;;
+partial interface <strong>Window</strong> {
+    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code>
+
+partial interface <strong>Window</strong> {
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;#extensions-to-the-window-interface">Visual Viewport API</a><pre class=webidl><code>partial interface <strong>Window</strong> {
+  [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code>
+
+partial interface <strong>Window</strong> {
+    <span>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code>
+
+partial interface <strong>Window</strong> {
+  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code>
+
+partial interface <strong>Window</strong> {
+    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);
+    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;<span class="comment">
+
+    &#x2F;&#x2F; browsing context
+    </span><span>undefined</span> <strong>moveTo</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>moveBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>resizeTo</strong>(<span>long</span> <strong>width</strong>, <span>long</span> <strong>height</strong>);
+    <span>undefined</span> <strong>resizeBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);<span class="comment">
+
+    &#x2F;&#x2F; viewport
+    </span>[Replaceable] readonly attribute <span>long</span> <strong>innerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>innerHeight</strong>;<span class="comment">
+
+    &#x2F;&#x2F; viewport scrolling
+    </span>[Replaceable] readonly attribute <span>double</span> <strong>scrollX</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageXOffset</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollY</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageYOffset</strong>;
+    <span>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scroll</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scrollTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scrollBy</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);<span class="comment">
+
+    &#x2F;&#x2F; client
+    </span>[Replaceable] readonly attribute <span>long</span> <strong>screenX</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenLeft</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenY</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenTop</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerHeight</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>devicePixelRatio</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;#deviceorientation">DeviceOrientation Event Specification</a><pre class=webidl><code>partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;
 };
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondeviceorientationabsolute&lt;/strong&gt;;
+
+partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;
 };
 
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncompassneedscalibration&lt;/strong&gt;;
+partial interface <strong>Window</strong> {
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;
 };
 
-partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondevicemotion&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/requestidlecallback/#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;requestIdleCallback&lt;/strong&gt;(&lt;a href=&#39;IdleRequestCallback.html&#39;&gt;IdleRequestCallback&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;, optional &lt;a href=&#39;IdleRequestOptions.html&#39;&gt;IdleRequestOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;cancelIdleCallback&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/selection-api/#extensions-to-window-interface">Selection API</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Window&lt;/strong&gt; {
-  &lt;a href=&#39;Selection.html&#39;&gt;Selection&lt;/a&gt;? &lt;strong&gt;getSelection&lt;/strong&gt;();
-};</code></pre></li></ol>
+partial interface <strong>Window</strong> {
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a><pre class=webidl><code>partial interface <strong>Window</strong> {
+  <span>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});
+  <span>undefined</span> <strong>cancelIdleCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;#extensions-to-window-interface">Selection API</a><pre class=webidl><code>
+
+partial interface <strong>Window</strong> {
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Global=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
- Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
+[Global&#x3D;<a href='Window.html'>Window</a>,
+ Exposed&#x3D;<a href='Window.html'>Window</a>,
  LegacyUnenumerableNamedProperties]
-interface &lt;strong&gt;Window&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  // the current browsing context
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;window&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;self&lt;/strong&gt;;
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt; &lt;strong&gt;document&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [PutForwards=&lt;span&gt;href&lt;/span&gt;, LegacyUnforgeable] readonly attribute &lt;a href=&#39;Location.html&#39;&gt;Location&lt;/a&gt; &lt;strong&gt;location&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;History.html&#39;&gt;History&lt;/a&gt; &lt;strong&gt;history&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;CustomElementRegistry.html&#39;&gt;CustomElementRegistry&lt;/a&gt; &lt;strong&gt;customElements&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;locationbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;menubar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;personalbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;scrollbars&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;statusbar&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;BarProp.html&#39;&gt;BarProp&lt;/a&gt; &lt;strong&gt;toolbar&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;closed&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stop&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;focus&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;blur&lt;/strong&gt;();
+interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class="comment">
+  &#x2F;&#x2F; the current browsing context
+  </span>[LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>window</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>self</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='Document.html'>Document</a> <strong>document</strong>;
+  attribute <span>DOMString</span> <strong>name</strong>;
+  [PutForwards&#x3D;<span>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a> <strong>location</strong>;
+  readonly attribute <a href='History.html'>History</a> <strong>history</strong>;
+  readonly attribute <a href='CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>locationbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>menubar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>personalbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>scrollbars</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>statusbar</strong>;
+  [Replaceable] readonly attribute <a href='BarProp.html'>BarProp</a> <strong>toolbar</strong>;
+  attribute <span>DOMString</span> <strong>status</strong>;
+  <span>undefined</span> <strong>close</strong>();
+  readonly attribute <span>boolean</span> <strong>closed</strong>;
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>focus</strong>();
+  <span>undefined</span> <strong>blur</strong>();<span class="comment">
 
-  // other browsing contexts
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt; &lt;strong&gt;frames&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;length&lt;/strong&gt;;
-  [LegacyUnforgeable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;top&lt;/strong&gt;;
-  attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;opener&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;parent&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt;? &lt;strong&gt;frameElement&lt;/strong&gt;;
-  &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;open&lt;/strong&gt;(optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt; = &quot;&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;target&lt;/strong&gt; = &quot;_blank&quot;, optional [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;features&lt;/strong&gt; = &quot;&quot;);
-  getter &lt;span&gt;object&lt;/span&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
-  // Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
-  // object on the prototype chain. Indeed, this does not make the global object an exotic object.
-  // Indexed access is taken care of by the WindowProxy exotic object.
+  &#x2F;&#x2F; other browsing contexts
+  </span>[Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;
+  [Replaceable] readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  [LegacyUnforgeable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;
+  attribute <span>any</span> <strong>opener</strong>;
+  [Replaceable] readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;
+  readonly attribute <a href='Element.html'>Element</a>? <strong>frameElement</strong>;
+  <a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span>USVString</span> <strong>url</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>target</strong> &#x3D; &quot;_blank&quot;, optional [LegacyNullToEmptyString] <span>DOMString</span> <strong>features</strong> &#x3D; &quot;&quot;);
+  getter <span>object</span> (<span>DOMString</span> <strong>name</strong>);<span class="comment">
+  &#x2F;&#x2F; Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
+  &#x2F;&#x2F; object on the prototype chain. Indeed, this does not make the global object an exotic object.
+  &#x2F;&#x2F; Indexed access is taken care of by the WindowProxy exotic object.
 
-  // the user agent
-  readonly attribute &lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; &lt;strong&gt;navigator&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;originAgentCluster&lt;/strong&gt;;
+  &#x2F;&#x2F; the user agent
+  </span>readonly attribute <a href='Navigator.html'>Navigator</a> <strong>navigator</strong>;
+  readonly attribute <span>boolean</span> <strong>originAgentCluster</strong>;<span class="comment">
 
-  // user prompts
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;alert&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;alert&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;confirm&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt; = &quot;&quot;);
-  &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;prompt&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt; = &quot;&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;default&lt;/strong&gt; = &quot;&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;print&lt;/strong&gt;();
+  &#x2F;&#x2F; user prompts
+  </span><span>undefined</span> <strong>alert</strong>();
+  <span>undefined</span> <strong>alert</strong>(<span>DOMString</span> <strong>message</strong>);
+  <span>boolean</span> <strong>confirm</strong>(optional <span>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);
+  <span>DOMString</span>? <strong>prompt</strong>(optional <span>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>default</strong> &#x3D; &quot;&quot;);
+  <span>undefined</span> <strong>print</strong>();
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;targetOrigin&lt;/strong&gt;, optional sequence&lt;&lt;span&gt;object&lt;/span&gt;&gt; &lt;strong&gt;transfer&lt;/strong&gt; = []);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;postMessage&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;, optional &lt;a href=&#39;WindowPostMessageOptions.html&#39;&gt;WindowPostMessageOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;captureEvents&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;releaseEvents&lt;/strong&gt;();
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, <span>USVString</span> <strong>targetOrigin</strong>, optional sequence&lt;<span>object</span>&gt; <strong>transfer</strong> &#x3D; []);
+  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> &#x3D; {});
+  <span>undefined</span> <strong>captureEvents</strong>();
+  <span>undefined</span> <strong>releaseEvents</strong>();
 
-  [Replaceable, SameObject] readonly attribute &lt;a href=&#39;External.html&#39;&gt;External&lt;/a&gt; &lt;strong&gt;external&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onabort&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onauxclick&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onblur&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncancel&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncanplay&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncanplaythrough&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclick&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncontextmenu&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncuechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondblclick&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondrag&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondragend&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondragenter&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondragleave&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondragover&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondragstart&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondrop&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondurationchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onemptied&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onended&lt;/strong&gt;;
-  attribute &lt;a href=&#39;OnErrorEventHandler.html&#39;&gt;OnErrorEventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onfocus&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onformdata&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oninput&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oninvalid&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onkeydown&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onkeypress&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onkeyup&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onload&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadeddata&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadedmetadata&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadstart&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmousedown&lt;/strong&gt;;
-  [LegacyLenientThis] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmouseenter&lt;/strong&gt;;
-  [LegacyLenientThis] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmouseleave&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmousemove&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmouseout&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmouseover&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmouseup&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpause&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onplay&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onplaying&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onprogress&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onratechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onreset&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onresize&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onscroll&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onsecuritypolicyviolation&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onseeked&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onseeking&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onselect&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onslotchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstalled&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onsubmit&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onsuspend&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ontimeupdate&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ontoggle&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onvolumechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwaiting&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwebkitanimationend&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwebkitanimationiteration&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwebkitanimationstart&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwebkittransitionend&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onwheel&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onafterprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbeforeprint&lt;/strong&gt;;
-  attribute &lt;a href=&#39;OnBeforeUnloadEventHandler.html&#39;&gt;OnBeforeUnloadEventHandler&lt;/a&gt; &lt;strong&gt;onbeforeunload&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onhashchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onlanguagechange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessageerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onoffline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ononline&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpagehide&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpageshow&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpopstate&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onrejectionhandled&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstorage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunhandledrejection&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunload&lt;/strong&gt;;
-  [Replaceable] readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;origin&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isSecureContext&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;crossOriginIsolated&lt;/strong&gt;;
+  [Replaceable, SameObject] readonly attribute <a href='External.html'>External</a> <strong>external</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
+  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
+  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
+  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;<span class="comment">
 
-  // base64 utility methods
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;btoa&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;atob&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &#x2F;&#x2F; base64 utility methods
+  </span><span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
+  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);<span class="comment">
 
-  // timers
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setTimeout&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearTimeout&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setInterval&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearInterval&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
+  &#x2F;&#x2F; timers
+  </span><span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> &#x3D; 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> &#x3D; 0);
+  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> &#x3D; 0, <span>any</span>... <strong>arguments</strong>);
+  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> &#x3D; 0);<span class="comment">
 
-  // microtask queuing
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;queueMicrotask&lt;/strong&gt;(&lt;a href=&#39;VoidFunction.html&#39;&gt;VoidFunction&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
+  &#x2F;&#x2F; microtask queuing
+  </span><span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);<span class="comment">
 
-  // ImageBitmap
-  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sx&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sy&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sw&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sh&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;requestAnimationFrame&lt;/strong&gt;(&lt;a href=&#39;FrameRequestCallback.html&#39;&gt;FrameRequestCallback&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;cancelAnimationFrame&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt;);
-  readonly attribute &lt;a href=&#39;Storage.html&#39;&gt;Storage&lt;/a&gt; &lt;strong&gt;sessionStorage&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Storage.html&#39;&gt;Storage&lt;/a&gt; &lt;strong&gt;localStorage&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;short&lt;/span&gt; &lt;strong&gt;orientation&lt;/strong&gt;;
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onorientationchange&lt;/strong&gt;;
-  [Replaceable] readonly attribute (&lt;a href=&#39;Event.html&#39;&gt;Event&lt;/a&gt; or &lt;span&gt;undefined&lt;/span&gt;) &lt;strong&gt;event&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;CookieStore.html&#39;&gt;CookieStore&lt;/a&gt; &lt;strong&gt;cookieStore&lt;/strong&gt;;
-    Promise&lt;sequence&lt;&lt;a href=&#39;FileSystemFileHandle.html&#39;&gt;FileSystemFileHandle&lt;/a&gt;&gt;&gt; &lt;strong&gt;showOpenFilePicker&lt;/strong&gt;(optional &lt;a href=&#39;OpenFilePickerOptions.html&#39;&gt;OpenFilePickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    Promise&lt;&lt;a href=&#39;FileSystemFileHandle.html&#39;&gt;FileSystemFileHandle&lt;/a&gt;&gt; &lt;strong&gt;showSaveFilePicker&lt;/strong&gt;(optional &lt;a href=&#39;SaveFilePickerOptions.html&#39;&gt;SaveFilePickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    Promise&lt;&lt;a href=&#39;FileSystemDirectoryHandle.html&#39;&gt;FileSystemDirectoryHandle&lt;/a&gt;&gt; &lt;strong&gt;showDirectoryPicker&lt;/strong&gt;(optional &lt;a href=&#39;DirectoryPickerOptions.html&#39;&gt;DirectoryPickerOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    readonly attribute &lt;a href=&#39;PortalHost.html&#39;&gt;PortalHost&lt;/a&gt;? &lt;strong&gt;portalHost&lt;/strong&gt;;
-    [SameObject] readonly attribute &lt;a href=&#39;SpeechSynthesis.html&#39;&gt;SpeechSynthesis&lt;/a&gt; &lt;strong&gt;speechSynthesis&lt;/strong&gt;;
-  [SameObject, Replaceable] readonly attribute &lt;a href=&#39;VisualViewport.html&#39;&gt;VisualViewport&lt;/a&gt; &lt;strong&gt;visualViewport&lt;/strong&gt;;
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;navigate&lt;/strong&gt;(&lt;a href=&#39;SpatialNavigationDirection.html&#39;&gt;SpatialNavigationDirection&lt;/a&gt; &lt;strong&gt;dir&lt;/strong&gt;);
-  [NewObject] &lt;a href=&#39;CSSStyleDeclaration.html&#39;&gt;CSSStyleDeclaration&lt;/a&gt; &lt;strong&gt;getComputedStyle&lt;/strong&gt;(&lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt; &lt;strong&gt;elt&lt;/strong&gt;, optional &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt;? &lt;strong&gt;pseudoElt&lt;/strong&gt;);
-    [NewObject] &lt;a href=&#39;MediaQueryList.html&#39;&gt;MediaQueryList&lt;/a&gt; &lt;strong&gt;matchMedia&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;query&lt;/strong&gt;);
-    [SameObject, Replaceable] readonly attribute &lt;a href=&#39;Screen.html&#39;&gt;Screen&lt;/a&gt; &lt;strong&gt;screen&lt;/strong&gt;;
+  &#x2F;&#x2F; ImageBitmap
+  </span>Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});
+  <span>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);
+  <span>undefined</span> <strong>cancelAnimationFrame</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  readonly attribute <a href='Storage.html'>Storage</a> <strong>sessionStorage</strong>;
+  readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;
+    readonly attribute <span>short</span> <strong>orientation</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span>undefined</span>) <strong>event</strong>;
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;
+    Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});
+    Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});
+    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});
+    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;
+  [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;
+    <span>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);
+  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);
+    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);
+    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;<span class="comment">
 
-    // browsing context
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveTo&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveBy&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resizeTo&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resizeBy&lt;/strong&gt;(&lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+    &#x2F;&#x2F; browsing context
+    </span><span>undefined</span> <strong>moveTo</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>moveBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);
+    <span>undefined</span> <strong>resizeTo</strong>(<span>long</span> <strong>width</strong>, <span>long</span> <strong>height</strong>);
+    <span>undefined</span> <strong>resizeBy</strong>(<span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);<span class="comment">
 
-    // viewport
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;innerWidth&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;innerHeight&lt;/strong&gt;;
+    &#x2F;&#x2F; viewport
+    </span>[Replaceable] readonly attribute <span>long</span> <strong>innerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>innerHeight</strong>;<span class="comment">
 
-    // viewport scrolling
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;scrollX&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;pageXOffset&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;scrollY&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;pageYOffset&lt;/strong&gt;;
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scroll&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scroll&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollTo&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollBy&lt;/strong&gt;(optional &lt;a href=&#39;ScrollToOptions.html&#39;&gt;ScrollToOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-    &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scrollBy&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+    &#x2F;&#x2F; viewport scrolling
+    </span>[Replaceable] readonly attribute <span>double</span> <strong>scrollX</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageXOffset</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>scrollY</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>pageYOffset</strong>;
+    <span>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scroll</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scrollTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+    <span>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});
+    <span>undefined</span> <strong>scrollBy</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);<span class="comment">
 
-    // client
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenLeft&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenTop&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;outerWidth&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;outerHeight&lt;/strong&gt;;
-    [Replaceable] readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;devicePixelRatio&lt;/strong&gt;;
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondeviceorientation&lt;/strong&gt;;
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondeviceorientationabsolute&lt;/strong&gt;;
-    attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncompassneedscalibration&lt;/strong&gt;;
-    [SecureContext] attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondevicemotion&lt;/strong&gt;;
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;requestIdleCallback&lt;/strong&gt;(&lt;a href=&#39;IdleRequestCallback.html&#39;&gt;IdleRequestCallback&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;, optional &lt;a href=&#39;IdleRequestOptions.html&#39;&gt;IdleRequestOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;cancelIdleCallback&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt;);
-  &lt;a href=&#39;Selection.html&#39;&gt;Selection&lt;/a&gt;? &lt;strong&gt;getSelection&lt;/strong&gt;();
+    &#x2F;&#x2F; client
+    </span>[Replaceable] readonly attribute <span>long</span> <strong>screenX</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenLeft</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenY</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>screenTop</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerWidth</strong>;
+    [Replaceable] readonly attribute <span>long</span> <strong>outerHeight</strong>;
+    [Replaceable] readonly attribute <span>double</span> <strong>devicePixelRatio</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;
+    [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;
+  <span>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});
+  <span>undefined</span> <strong>cancelIdleCallback</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();<span class="comment">
 
-  // also has obsolete members
-};</code></pre></details>
+  &#x2F;&#x2F; also has obsolete members
+</span>};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="TimeEvent.html">TimeEvent</a></li><li><a href="UIEvent.html">UIEvent</a></li><li><a href="UIEventInit.html">UIEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="TimeEvent.html">TimeEvent</a></li><li><a href="UIEvent.html">UIEvent</a></li><li><a href="UIEventInit.html">UIEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://compat.spec.whatwg.org/">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https://dom.spec.whatwg.org/">DOM Standard</a> refers to <code>Window</code></li><li><a href="https://svgwg.org/specs/animations/">SVG Animations</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/cookie-store/">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/portals/">Portals</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/speech-api/">Web Speech API</a> refers to <code>Window</code></li><li><a href="https://wicg.github.io/visual-viewport/">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/css-nav-1/">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/cssom-1/">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/orientation-event/">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/requestidlecallback/">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/selection-api/">Selection API</a> refers to <code>Window</code></li><li><a href="https://www.w3.org/TR/uievents/">UI Events</a> refers to <code>Window</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;uievents&#x2F;">UI Events</a> refers to <code>Window</code></li>
+  </ul></section>

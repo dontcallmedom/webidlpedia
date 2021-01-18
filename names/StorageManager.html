@@ -6,35 +6,46 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://storage.spec.whatwg.org/#storagemanager">Storage Standard</a> defines <code>StorageManager</code></p>
-<pre class=webidl><code>[SecureContext,
- Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;StorageManager&lt;/strong&gt; {
-  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;persisted&lt;/strong&gt;();
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;persist&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;storage.spec.whatwg.org&#x2F;#storagemanager">Storage Standard</a> defines <code>StorageManager</code></p>
+<pre class=webidl><code>
 
-  Promise&lt;&lt;a href=&#39;StorageEstimate.html&#39;&gt;StorageEstimate&lt;/a&gt;&gt; &lt;strong&gt;estimate&lt;/strong&gt;();
+[SecureContext,
+ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>StorageManager</strong> {
+  Promise&lt;<span>boolean</span>&gt; <strong>persisted</strong>();
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] Promise&lt;<span>boolean</span>&gt; <strong>persist</strong>();
+
+  Promise&lt;<a href='StorageEstimate.html'>StorageEstimate</a>&gt; <strong>estimate</strong>();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/file-system-access/">File System Access</a>
-<pre class=webidl><code>[SecureContext]
-partial interface &lt;strong&gt;StorageManager&lt;/strong&gt; {
-  Promise&lt;&lt;a href=&#39;FileSystemDirectoryHandle.html&#39;&gt;FileSystemDirectoryHandle&lt;/a&gt;&gt; &lt;strong&gt;getDirectory&lt;/strong&gt;();
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a><pre class=webidl><code>
+
+[SecureContext]
+partial interface <strong>StorageManager</strong> {
+  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>getDirectory</strong>();
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
 [SecureContext,
- Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;StorageManager&lt;/strong&gt; {
-  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;persisted&lt;/strong&gt;();
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;persist&lt;/strong&gt;();
+ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>StorageManager</strong> {
+  Promise&lt;<span>boolean</span>&gt; <strong>persisted</strong>();
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] Promise&lt;<span>boolean</span>&gt; <strong>persist</strong>();
 
-  Promise&lt;&lt;a href=&#39;StorageEstimate.html&#39;&gt;StorageEstimate&lt;/a&gt;&gt; &lt;strong&gt;estimate&lt;/strong&gt;();
-  Promise&lt;&lt;a href=&#39;FileSystemDirectoryHandle.html&#39;&gt;FileSystemDirectoryHandle&lt;/a&gt;&gt; &lt;strong&gt;getDirectory&lt;/strong&gt;();
+  Promise&lt;<a href='StorageEstimate.html'>StorageEstimate</a>&gt; <strong>estimate</strong>();
+  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>getDirectory</strong>();
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="NavigatorStorage.html">NavigatorStorage</a></li></ul>
+  
+  <ul>
+    <li><a href="NavigatorStorage.html">NavigatorStorage</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>StorageManager</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>StorageManager</code></li>
+  </ul></section>

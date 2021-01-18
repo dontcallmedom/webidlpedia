@@ -6,27 +6,32 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/clipboard-apis/#clipboarditem">Clipboard API and events</a> defines <code>ClipboardItem</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] interface &lt;strong&gt;ClipboardItem&lt;/strong&gt; {
-  constructor(record&lt;&lt;span&gt;DOMString&lt;/span&gt;, &lt;a href=&#39;ClipboardItemData.html&#39;&gt;ClipboardItemData&lt;/a&gt;&gt; &lt;strong&gt;items&lt;/strong&gt;,
-    optional &lt;a href=&#39;ClipboardItemOptions.html&#39;&gt;ClipboardItemOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  static &lt;a href=&#39;ClipboardItem.html&#39;&gt;ClipboardItem&lt;/a&gt; &lt;strong&gt;createDelayed&lt;/strong&gt;(
-      record&lt;&lt;span&gt;DOMString&lt;/span&gt;, &lt;a href=&#39;ClipboardItemDelayedCallback.html&#39;&gt;ClipboardItemDelayedCallback&lt;/a&gt;&gt; &lt;strong&gt;items&lt;/strong&gt;,
-      optional &lt;a href=&#39;ClipboardItemOptions.html&#39;&gt;ClipboardItemOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;clipboard-apis&#x2F;#clipboarditem">Clipboard API and events</a> defines <code>ClipboardItem</code></p>
+<pre class=webidl><code>
 
-  readonly attribute &lt;a href=&#39;PresentationStyle.html&#39;&gt;PresentationStyle&lt;/a&gt; &lt;strong&gt;presentationStyle&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long long&lt;/span&gt; &lt;strong&gt;lastModified&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;delayed&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>ClipboardItem</strong> {
+  constructor(record&lt;<span>DOMString</span>, <a href='ClipboardItemData.html'>ClipboardItemData</a>&gt; <strong>items</strong>,
+    optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});
+  static <a href='ClipboardItem.html'>ClipboardItem</a> <strong>createDelayed</strong>(
+      record&lt;<span>DOMString</span>, <a href='ClipboardItemDelayedCallback.html'>ClipboardItemDelayedCallback</a>&gt; <strong>items</strong>,
+      optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});
 
-  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;types&lt;/strong&gt;;
+  readonly attribute <a href='PresentationStyle.html'>PresentationStyle</a> <strong>presentationStyle</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
+  readonly attribute <span>boolean</span> <strong>delayed</strong>;
 
-  Promise&lt;&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt;&gt; &lt;strong&gt;getType&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;);
+  readonly attribute FrozenArray&lt;<span>DOMString</span>&gt; <strong>types</strong>;
+
+  Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>getType</strong>(<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="ClipboardItem.html">ClipboardItem</a></li></ul>
+  
+  <ul>
+    <li><a href="ClipboardItem.html">ClipboardItem</a></li>
+  </ul>
 </section>
   

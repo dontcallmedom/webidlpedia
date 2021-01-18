@@ -6,66 +6,71 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/tables.html#htmltablecellelement">HTML Standard</a> defines <code>HTMLTableCellElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLTableCellElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#htmltablecellelement">HTML Standard</a> defines <code>HTMLTableCellElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLTableCellElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;colSpan&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;rowSpan&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;headers&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;cellIndex&lt;/strong&gt;;
+  [CEReactions] attribute <span>unsigned long</span> <strong>colSpan</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>rowSpan</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>headers</strong>;
+  readonly attribute <span>long</span> <strong>cellIndex</strong>;
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scope&lt;/strong&gt;; // only conforming for th elements
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;abbr&lt;/strong&gt;;  // only conforming for th elements
+  [CEReactions] attribute <span>DOMString</span> <strong>scope</strong>;<span class="comment"> &#x2F;&#x2F; only conforming for th elements
+  </span>[CEReactions] attribute <span>DOMString</span> <strong>abbr</strong>;<span class="comment">  &#x2F;&#x2F; only conforming for th elements
 
-  // also has obsolete members
-};
+  &#x2F;&#x2F; also has obsolete members
+</span>};
 
-partial interface &lt;strong&gt;HTMLTableCellElement&lt;/strong&gt; {
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;axis&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
+partial interface <strong>HTMLTableCellElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>axis</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ch&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;chOff&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;noWrap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vAlign&lt;/strong&gt;;
+  [CEReactions] attribute <span>DOMString</span> <strong>ch</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>chOff</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noWrap</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>vAlign</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;bgColor&lt;/strong&gt;;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;
 };</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLTableCellElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLTableCellElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;colSpan&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;rowSpan&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;headers&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;cellIndex&lt;/strong&gt;;
+  [CEReactions] attribute <span>unsigned long</span> <strong>colSpan</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>rowSpan</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>headers</strong>;
+  readonly attribute <span>long</span> <strong>cellIndex</strong>;
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scope&lt;/strong&gt;; // only conforming for th elements
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;abbr&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;axis&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
+  [CEReactions] attribute <span>DOMString</span> <strong>scope</strong>;<span class="comment"> &#x2F;&#x2F; only conforming for th elements
+  </span>[CEReactions] attribute <span>DOMString</span> <strong>abbr</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>axis</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ch&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;chOff&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;noWrap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vAlign&lt;/strong&gt;;
+  [CEReactions] attribute <span>DOMString</span> <strong>ch</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>chOff</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noWrap</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>vAlign</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;bgColor&lt;/strong&gt;;  // only conforming for th elements
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>bgColor</strong>;<span class="comment">  &#x2F;&#x2F; only conforming for th elements
 
-  // also has obsolete members
-};</code></pre></details>
+  &#x2F;&#x2F; also has obsolete members
+</span>};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></li></ul>
+  
+  <ul>
+    <li><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></li>
+  </ul>
 </section>
   

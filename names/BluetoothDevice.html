@@ -6,42 +6,47 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice">Web Bluetooth</a> defines <code>BluetoothDevice</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
-interface &lt;strong&gt;BluetoothDevice&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;BluetoothRemoteGATTServer.html&#39;&gt;BluetoothRemoteGATTServer&lt;/a&gt;? &lt;strong&gt;gatt&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;#bluetoothdevice">Web Bluetooth</a> defines <code>BluetoothDevice</code></p>
+<pre class=webidl><code>
 
-  Promise&lt;&lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt;&gt; &lt;strong&gt;watchAdvertisements&lt;/strong&gt;(
-      optional &lt;a href=&#39;WatchAdvertisementsOptions.html&#39;&gt;WatchAdvertisementsOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;watchingAdvertisements&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>BluetoothDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>DOMString</span>? <strong>name</strong>;
+  readonly attribute <a href='BluetoothRemoteGATTServer.html'>BluetoothRemoteGATTServer</a>? <strong>gatt</strong>;
+
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>watchAdvertisements</strong>(
+      optional <a href='WatchAdvertisementsOptions.html'>WatchAdvertisementsOptions</a> <strong>options</strong> &#x3D; {});
+  readonly attribute <span>boolean</span> <strong>watchingAdvertisements</strong>;
 };
-&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt; includes &lt;a href=&#39;BluetoothDeviceEventHandlers.html&#39;&gt;BluetoothDeviceEventHandlers&lt;/a&gt;;
-&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt; includes &lt;a href=&#39;CharacteristicEventHandlers.html&#39;&gt;CharacteristicEventHandlers&lt;/a&gt;;
-&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt; includes &lt;a href=&#39;ServiceEventHandlers.html&#39;&gt;ServiceEventHandlers&lt;/a&gt;;</code></pre>
+<a href='BluetoothDevice.html'>BluetoothDevice</a> includes <a href='BluetoothDeviceEventHandlers.html'>BluetoothDeviceEventHandlers</a>;
+<a href='BluetoothDevice.html'>BluetoothDevice</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;
+<a href='BluetoothDevice.html'>BluetoothDevice</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
-interface &lt;strong&gt;BluetoothDevice&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;BluetoothRemoteGATTServer.html&#39;&gt;BluetoothRemoteGATTServer&lt;/a&gt;? &lt;strong&gt;gatt&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>BluetoothDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>DOMString</span>? <strong>name</strong>;
+  readonly attribute <a href='BluetoothRemoteGATTServer.html'>BluetoothRemoteGATTServer</a>? <strong>gatt</strong>;
 
-  Promise&lt;&lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt;&gt; &lt;strong&gt;watchAdvertisements&lt;/strong&gt;(
-      optional &lt;a href=&#39;WatchAdvertisementsOptions.html&#39;&gt;WatchAdvertisementsOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;watchingAdvertisements&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onadvertisementreceived&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ongattserverdisconnected&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncharacteristicvaluechanged&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onserviceadded&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onservicechanged&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onserviceremoved&lt;/strong&gt;;
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>watchAdvertisements</strong>(
+      optional <a href='WatchAdvertisementsOptions.html'>WatchAdvertisementsOptions</a> <strong>options</strong> &#x3D; {});
+  readonly attribute <span>boolean</span> <strong>watchingAdvertisements</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onadvertisementreceived</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ongattserverdisconnected</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Bluetooth.html">Bluetooth</a></li><li><a href="BluetoothPermissionResult.html">BluetoothPermissionResult</a></li><li><a href="BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></li><li><a href="BluetoothAdvertisingEventInit.html">BluetoothAdvertisingEventInit</a></li><li><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li><li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li></ul>
+  
+  <ul>
+    <li><a href="Bluetooth.html">Bluetooth</a></li><li><a href="BluetoothPermissionResult.html">BluetoothPermissionResult</a></li><li><a href="BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></li><li><a href="BluetoothAdvertisingEventInit.html">BluetoothAdvertisingEventInit</a></li><li><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li><li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li>
+  </ul>
 </section>
   

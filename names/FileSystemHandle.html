@@ -6,22 +6,27 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/file-system-access/#filesystemhandle">File System Access</a> defines <code>FileSystemHandle</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), SecureContext, Serializable]
-interface &lt;strong&gt;FileSystemHandle&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;FileSystemHandleKind.html&#39;&gt;FileSystemHandleKind&lt;/a&gt; &lt;strong&gt;kind&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;#filesystemhandle">File System Access</a> defines <code>FileSystemHandle</code></p>
+<pre class=webidl><code>
 
-  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;isSameEntry&lt;/strong&gt;(&lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt; &lt;strong&gt;other&lt;/strong&gt;);
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
+interface <strong>FileSystemHandle</strong> {
+  readonly attribute <a href='FileSystemHandleKind.html'>FileSystemHandleKind</a> <strong>kind</strong>;
+  readonly attribute <span>USVString</span> <strong>name</strong>;
 
-  Promise&lt;&lt;a href=&#39;PermissionState.html&#39;&gt;PermissionState&lt;/a&gt;&gt; &lt;strong&gt;queryPermission&lt;/strong&gt;(optional &lt;a href=&#39;FileSystemHandlePermissionDescriptor.html&#39;&gt;FileSystemHandlePermissionDescriptor&lt;/a&gt; &lt;strong&gt;descriptor&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;PermissionState.html&#39;&gt;PermissionState&lt;/a&gt;&gt; &lt;strong&gt;requestPermission&lt;/strong&gt;(optional &lt;a href=&#39;FileSystemHandlePermissionDescriptor.html&#39;&gt;FileSystemHandlePermissionDescriptor&lt;/a&gt; &lt;strong&gt;descriptor&lt;/strong&gt; = {});
+  Promise&lt;<span>boolean</span>&gt; <strong>isSameEntry</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>other</strong>);
+
+  Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>queryPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> &#x3D; {});
+  Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>requestPermission</strong>(optional <a href='FileSystemHandlePermissionDescriptor.html'>FileSystemHandlePermissionDescriptor</a> <strong>descriptor</strong> &#x3D; {});
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="FileSystemPermissionDescriptor.html">FileSystemPermissionDescriptor</a></li><li><a href="FileSystemHandle.html">FileSystemHandle</a></li><li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li><li><a href="FileSystemDirectoryHandle.html">FileSystemDirectoryHandle</a></li><li><a href="DataTransferItem.html">DataTransferItem</a></li></ul>
+  
+  <ul>
+    <li><a href="FileSystemPermissionDescriptor.html">FileSystemPermissionDescriptor</a></li><li><a href="FileSystemHandle.html">FileSystemHandle</a></li><li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li><li><a href="FileSystemDirectoryHandle.html">FileSystemDirectoryHandle</a></li><li><a href="DataTransferItem.html">DataTransferItem</a></li>
+  </ul>
 </section>
   

@@ -6,96 +6,98 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://drafts.css-houdini.org/css-paint-api-1/#paintrenderingcontext2d">CSS Painting API Level 1</a> defines <code>PaintRenderingContext2D</code></p>
-<pre class=webidl><code>[Exposed=&lt;span&gt;PaintWorklet&lt;/span&gt;]
-interface &lt;strong&gt;PaintRenderingContext2D&lt;/strong&gt; {
+  <p><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;css-paint-api-1&#x2F;#paintrenderingcontext2d">CSS Painting API Level 1</a> defines <code>PaintRenderingContext2D</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<span>PaintWorklet</span>]
+interface <strong>PaintRenderingContext2D</strong> {
 };
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasState.html&#39;&gt;CanvasState&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasTransform.html&#39;&gt;CanvasTransform&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasCompositing.html&#39;&gt;CanvasCompositing&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasImageSmoothing.html&#39;&gt;CanvasImageSmoothing&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasFillStrokeStyles.html&#39;&gt;CanvasFillStrokeStyles&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasShadowStyles.html&#39;&gt;CanvasShadowStyles&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasRect.html&#39;&gt;CanvasRect&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasDrawPath.html&#39;&gt;CanvasDrawPath&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasDrawImage.html&#39;&gt;CanvasDrawImage&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasPathDrawingStyles.html&#39;&gt;CanvasPathDrawingStyles&lt;/a&gt;;
-&lt;a href=&#39;PaintRenderingContext2D.html&#39;&gt;PaintRenderingContext2D&lt;/a&gt; includes &lt;a href=&#39;CanvasPath.html&#39;&gt;CanvasPath&lt;/a&gt;;</code></pre>
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasState.html'>CanvasState</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasTransform.html'>CanvasTransform</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasCompositing.html'>CanvasCompositing</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasImageSmoothing.html'>CanvasImageSmoothing</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasFillStrokeStyles.html'>CanvasFillStrokeStyles</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasShadowStyles.html'>CanvasShadowStyles</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasRect.html'>CanvasRect</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasDrawPath.html'>CanvasDrawPath</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasDrawImage.html'>CanvasDrawImage</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasPathDrawingStyles.html'>CanvasPathDrawingStyles</a>;
+<a href='PaintRenderingContext2D.html'>PaintRenderingContext2D</a> includes <a href='CanvasPath.html'>CanvasPath</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;span&gt;PaintWorklet&lt;/span&gt;]
-interface &lt;strong&gt;PaintRenderingContext2D&lt;/strong&gt; {
-  // state
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;save&lt;/strong&gt;(); // push state on state stack
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;restore&lt;/strong&gt;();
-  // transformations (default transform is the identity matrix)
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;scale&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;rotate&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;angle&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;translate&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;transform&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;a&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;b&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;c&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;d&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;e&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;f&lt;/strong&gt;);
+[Exposed&#x3D;<span>PaintWorklet</span>]
+interface <strong>PaintRenderingContext2D</strong> {<span class="comment">
+  &#x2F;&#x2F; state
+  </span><span>undefined</span> <strong>save</strong>();<span class="comment"> &#x2F;&#x2F; push state on state stack
+  </span><span>undefined</span> <strong>restore</strong>();<span class="comment">
+  &#x2F;&#x2F; transformations (default transform is the identity matrix)
+  </span><span>undefined</span> <strong>scale</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>rotate</strong>(<span>unrestricted double</span> <strong>angle</strong>);
+  <span>undefined</span> <strong>translate</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>transform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
 
-  [NewObject] &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;getTransform&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setTransform&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;a&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;b&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;c&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;d&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;e&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;f&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setTransform&lt;/strong&gt;(optional &lt;a href=&#39;DOMMatrix2DInit.html&#39;&gt;DOMMatrix2DInit&lt;/a&gt; &lt;strong&gt;transform&lt;/strong&gt; = {});
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resetTransform&lt;/strong&gt;();
-  // compositing
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;globalAlpha&lt;/strong&gt;; // (default 1.0)
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;globalCompositeOperation&lt;/strong&gt;;
-  // image smoothing
-  attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;imageSmoothingEnabled&lt;/strong&gt;; // (default true)
-  attribute &lt;a href=&#39;ImageSmoothingQuality.html&#39;&gt;ImageSmoothingQuality&lt;/a&gt; &lt;strong&gt;imageSmoothingQuality&lt;/strong&gt;;
-  // colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
-  attribute (&lt;span&gt;DOMString&lt;/span&gt; or &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; or &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;) &lt;strong&gt;strokeStyle&lt;/strong&gt;; // (default black)
-  attribute (&lt;span&gt;DOMString&lt;/span&gt; or &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; or &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;) &lt;strong&gt;fillStyle&lt;/strong&gt;; // (default black)
-  &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; &lt;strong&gt;createLinearGradient&lt;/strong&gt;(&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;);
-  &lt;a href=&#39;CanvasGradient.html&#39;&gt;CanvasGradient&lt;/a&gt; &lt;strong&gt;createRadialGradient&lt;/strong&gt;(&lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;r0&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;, &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;r1&lt;/strong&gt;);
-  &lt;a href=&#39;CanvasPattern.html&#39;&gt;CanvasPattern&lt;/a&gt;? &lt;strong&gt;createPattern&lt;/strong&gt;(&lt;a href=&#39;CanvasImageSource.html&#39;&gt;CanvasImageSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;repetition&lt;/strong&gt;);
-  // shadows
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;shadowOffsetX&lt;/strong&gt;; // (default 0)
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;shadowOffsetY&lt;/strong&gt;; // (default 0)
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;shadowBlur&lt;/strong&gt;; // (default 0)
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;shadowColor&lt;/strong&gt;;
-  // rects
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearRect&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;w&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;h&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;fillRect&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;w&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;h&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;strokeRect&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;w&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;h&lt;/strong&gt;);
-  // path API (see also CanvasPath)
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;beginPath&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;fill&lt;/strong&gt;(optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;fill&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stroke&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stroke&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clip&lt;/strong&gt;(optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clip&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInPath&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInPath&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInStroke&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInStroke&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  // drawing images
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;drawImage&lt;/strong&gt;(&lt;a href=&#39;CanvasImageSource.html&#39;&gt;CanvasImageSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dy&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;drawImage&lt;/strong&gt;(&lt;a href=&#39;CanvasImageSource.html&#39;&gt;CanvasImageSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dy&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dw&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dh&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;drawImage&lt;/strong&gt;(&lt;a href=&#39;CanvasImageSource.html&#39;&gt;CanvasImageSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sy&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sw&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;sh&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dy&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dw&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;dh&lt;/strong&gt;);
-  // line caps/joins
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;lineWidth&lt;/strong&gt;; // (default 1)
-  attribute &lt;a href=&#39;CanvasLineCap.html&#39;&gt;CanvasLineCap&lt;/a&gt; &lt;strong&gt;lineCap&lt;/strong&gt;; // (default &quot;butt&quot;)
-  attribute &lt;a href=&#39;CanvasLineJoin.html&#39;&gt;CanvasLineJoin&lt;/a&gt; &lt;strong&gt;lineJoin&lt;/strong&gt;; // (default &quot;miter&quot;)
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;miterLimit&lt;/strong&gt;; // (default 10)
+  [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>getTransform</strong>();
+  <span>undefined</span> <strong>setTransform</strong>(<span>unrestricted double</span> <strong>a</strong>, <span>unrestricted double</span> <strong>b</strong>, <span>unrestricted double</span> <strong>c</strong>, <span>unrestricted double</span> <strong>d</strong>, <span>unrestricted double</span> <strong>e</strong>, <span>unrestricted double</span> <strong>f</strong>);
+  <span>undefined</span> <strong>setTransform</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> &#x3D; {});
+  <span>undefined</span> <strong>resetTransform</strong>();<span class="comment">
+  &#x2F;&#x2F; compositing
+  </span>attribute <span>unrestricted double</span> <strong>globalAlpha</strong>;<span class="comment"> &#x2F;&#x2F; (default 1.0)
+  </span>attribute <span>DOMString</span> <strong>globalCompositeOperation</strong>;<span class="comment">
+  &#x2F;&#x2F; image smoothing
+  </span>attribute <span>boolean</span> <strong>imageSmoothingEnabled</strong>;<span class="comment"> &#x2F;&#x2F; (default true)
+  </span>attribute <a href='ImageSmoothingQuality.html'>ImageSmoothingQuality</a> <strong>imageSmoothingQuality</strong>;<span class="comment">
+  &#x2F;&#x2F; colors and styles (see also the CanvasPathDrawingStyles and CanvasTextDrawingStyles interfaces)
+  </span>attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>strokeStyle</strong>;<span class="comment"> &#x2F;&#x2F; (default black)
+  </span>attribute (<span>DOMString</span> or <a href='CanvasGradient.html'>CanvasGradient</a> or <a href='CanvasPattern.html'>CanvasPattern</a>) <strong>fillStyle</strong>;<span class="comment"> &#x2F;&#x2F; (default black)
+  </span><a href='CanvasGradient.html'>CanvasGradient</a> <strong>createLinearGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>);
+  <a href='CanvasGradient.html'>CanvasGradient</a> <strong>createRadialGradient</strong>(<span>double</span> <strong>x0</strong>, <span>double</span> <strong>y0</strong>, <span>double</span> <strong>r0</strong>, <span>double</span> <strong>x1</strong>, <span>double</span> <strong>y1</strong>, <span>double</span> <strong>r1</strong>);
+  <a href='CanvasPattern.html'>CanvasPattern</a>? <strong>createPattern</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, [LegacyNullToEmptyString] <span>DOMString</span> <strong>repetition</strong>);<span class="comment">
+  &#x2F;&#x2F; shadows
+  </span>attribute <span>unrestricted double</span> <strong>shadowOffsetX</strong>;<span class="comment"> &#x2F;&#x2F; (default 0)
+  </span>attribute <span>unrestricted double</span> <strong>shadowOffsetY</strong>;<span class="comment"> &#x2F;&#x2F; (default 0)
+  </span>attribute <span>unrestricted double</span> <strong>shadowBlur</strong>;<span class="comment"> &#x2F;&#x2F; (default 0)
+  </span>attribute <span>DOMString</span> <strong>shadowColor</strong>;<span class="comment">
+  &#x2F;&#x2F; rects
+  </span><span>undefined</span> <strong>clearRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>fillRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>strokeRect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);<span class="comment">
+  &#x2F;&#x2F; path API (see also CanvasPath)
+  </span><span>undefined</span> <strong>beginPath</strong>();
+  <span>undefined</span> <strong>fill</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>fill</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>stroke</strong>();
+  <span>undefined</span> <strong>stroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);
+  <span>undefined</span> <strong>clip</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>clip</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInPath</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInStroke</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>boolean</span> <strong>isPointInStroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);<span class="comment">
+  &#x2F;&#x2F; drawing images
+  </span><span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>);
+  <span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>, <span>unrestricted double</span> <strong>dw</strong>, <span>unrestricted double</span> <strong>dh</strong>);
+  <span>undefined</span> <strong>drawImage</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, <span>unrestricted double</span> <strong>sx</strong>, <span>unrestricted double</span> <strong>sy</strong>, <span>unrestricted double</span> <strong>sw</strong>, <span>unrestricted double</span> <strong>sh</strong>, <span>unrestricted double</span> <strong>dx</strong>, <span>unrestricted double</span> <strong>dy</strong>, <span>unrestricted double</span> <strong>dw</strong>, <span>unrestricted double</span> <strong>dh</strong>);<span class="comment">
+  &#x2F;&#x2F; line caps&#x2F;joins
+  </span>attribute <span>unrestricted double</span> <strong>lineWidth</strong>;<span class="comment"> &#x2F;&#x2F; (default 1)
+  </span>attribute <a href='CanvasLineCap.html'>CanvasLineCap</a> <strong>lineCap</strong>;<span class="comment"> &#x2F;&#x2F; (default &quot;butt&quot;)
+  </span>attribute <a href='CanvasLineJoin.html'>CanvasLineJoin</a> <strong>lineJoin</strong>;<span class="comment"> &#x2F;&#x2F; (default &quot;miter&quot;)
+  </span>attribute <span>unrestricted double</span> <strong>miterLimit</strong>;<span class="comment"> &#x2F;&#x2F; (default 10)
 
-  // dashed lines
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setLineDash&lt;/strong&gt;(sequence&lt;&lt;span&gt;unrestricted double&lt;/span&gt;&gt; &lt;strong&gt;segments&lt;/strong&gt;); // default empty
-  sequence&lt;&lt;span&gt;unrestricted double&lt;/span&gt;&gt; &lt;strong&gt;getLineDash&lt;/strong&gt;();
-  attribute &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;lineDashOffset&lt;/strong&gt;;
-  // shared path API methods
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;closePath&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;moveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;lineTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;quadraticCurveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cpx&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cpy&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;bezierCurveTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp1x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp1y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp2x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;cp2y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;arcTo&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x1&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y1&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x2&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y2&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radius&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;rect&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;w&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;h&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;arc&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radius&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;startAngle&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;endAngle&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;anticlockwise&lt;/strong&gt; = false);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;ellipse&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radiusX&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;radiusY&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;rotation&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;startAngle&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;endAngle&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;anticlockwise&lt;/strong&gt; = false);
+  &#x2F;&#x2F; dashed lines
+  </span><span>undefined</span> <strong>setLineDash</strong>(sequence&lt;<span>unrestricted double</span>&gt; <strong>segments</strong>);<span class="comment"> &#x2F;&#x2F; default empty
+  </span>sequence&lt;<span>unrestricted double</span>&gt; <strong>getLineDash</strong>();
+  attribute <span>unrestricted double</span> <strong>lineDashOffset</strong>;<span class="comment">
+  &#x2F;&#x2F; shared path API methods
+  </span><span>undefined</span> <strong>closePath</strong>();
+  <span>undefined</span> <strong>moveTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>lineTo</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>quadraticCurveTo</strong>(<span>unrestricted double</span> <strong>cpx</strong>, <span>unrestricted double</span> <strong>cpy</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>bezierCurveTo</strong>(<span>unrestricted double</span> <strong>cp1x</strong>, <span>unrestricted double</span> <strong>cp1y</strong>, <span>unrestricted double</span> <strong>cp2x</strong>, <span>unrestricted double</span> <strong>cp2y</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>undefined</span> <strong>arcTo</strong>(<span>unrestricted double</span> <strong>x1</strong>, <span>unrestricted double</span> <strong>y1</strong>, <span>unrestricted double</span> <strong>x2</strong>, <span>unrestricted double</span> <strong>y2</strong>, <span>unrestricted double</span> <strong>radius</strong>);
+  <span>undefined</span> <strong>rect</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>w</strong>, <span>unrestricted double</span> <strong>h</strong>);
+  <span>undefined</span> <strong>arc</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radius</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> &#x3D; false);
+  <span>undefined</span> <strong>ellipse</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, <span>unrestricted double</span> <strong>radiusX</strong>, <span>unrestricted double</span> <strong>radiusY</strong>, <span>unrestricted double</span> <strong>rotation</strong>, <span>unrestricted double</span> <strong>startAngle</strong>, <span>unrestricted double</span> <strong>endAngle</strong>, optional <span>boolean</span> <strong>anticlockwise</strong> &#x3D; false);
 };</code></pre></details>
 </section>
 

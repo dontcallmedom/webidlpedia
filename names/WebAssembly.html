@@ -6,42 +6,48 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webassembly.github.io/spec/js-api/#namespacedef-webassembly">WebAssembly JavaScript Interface</a> defines <code>WebAssembly</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt;)]
-namespace &lt;strong&gt;WebAssembly&lt;/strong&gt; {
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;validate&lt;/strong&gt;(&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;);
-    Promise&lt;&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt;&gt; &lt;strong&gt;compile&lt;/strong&gt;(&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#namespacedef-webassembly">WebAssembly JavaScript Interface</a> defines <code>WebAssembly</code></p>
+<pre class=webidl><code>
 
-    Promise&lt;&lt;a href=&#39;WebAssemblyInstantiatedSource.html&#39;&gt;WebAssemblyInstantiatedSource&lt;/a&gt;&gt; &lt;strong&gt;instantiate&lt;/strong&gt;(
-        &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>WebAssembly</strong> {
+    <span>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
 
-    Promise&lt;&lt;a href=&#39;Instance.html&#39;&gt;Instance&lt;/a&gt;&gt; &lt;strong&gt;instantiate&lt;/strong&gt;(
-        &lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt; &lt;strong&gt;moduleObject&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
+    Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiate</strong>(
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span>object</span> <strong>importObject</strong>);
+
+    Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong>instantiate</strong>(
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span>object</span> <strong>importObject</strong>);
 };</code></pre>
-  <p>This namespace is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-partial namespace &lt;strong&gt;WebAssembly&lt;/strong&gt; {
-  Promise&lt;&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt;&gt; &lt;strong&gt;compileStreaming&lt;/strong&gt;(Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;source&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;WebAssemblyInstantiatedSource.html&#39;&gt;WebAssemblyInstantiatedSource&lt;/a&gt;&gt; &lt;strong&gt;instantiateStreaming&lt;/strong&gt;(
-      Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;source&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
-};</code></pre></li></ol>
+  <p>This namespace is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wasm-web-api-1&#x2F;">WebAssembly Web API</a><pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+partial namespace <strong>WebAssembly</strong> {
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);
+  Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
+      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span>object</span> <strong>importObject</strong>);
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt;)]
-namespace &lt;strong&gt;WebAssembly&lt;/strong&gt; {
-    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;validate&lt;/strong&gt;(&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;);
-    Promise&lt;&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt;&gt; &lt;strong&gt;compile&lt;/strong&gt;(&lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;);
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>WebAssembly</strong> {
+    <span>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);
 
-    Promise&lt;&lt;a href=&#39;WebAssemblyInstantiatedSource.html&#39;&gt;WebAssemblyInstantiatedSource&lt;/a&gt;&gt; &lt;strong&gt;instantiate&lt;/strong&gt;(
-        &lt;a href=&#39;BufferSource.html&#39;&gt;BufferSource&lt;/a&gt; &lt;strong&gt;bytes&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
+    Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiate</strong>(
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span>object</span> <strong>importObject</strong>);
 
-    Promise&lt;&lt;a href=&#39;Instance.html&#39;&gt;Instance&lt;/a&gt;&gt; &lt;strong&gt;instantiate&lt;/strong&gt;(
-        &lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt; &lt;strong&gt;moduleObject&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;Module.html&#39;&gt;Module&lt;/a&gt;&gt; &lt;strong&gt;compileStreaming&lt;/strong&gt;(Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;source&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;WebAssemblyInstantiatedSource.html&#39;&gt;WebAssemblyInstantiatedSource&lt;/a&gt;&gt; &lt;strong&gt;instantiateStreaming&lt;/strong&gt;(
-      Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;source&lt;/strong&gt;, optional &lt;span&gt;object&lt;/span&gt; &lt;strong&gt;importObject&lt;/strong&gt;);
+    Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong>instantiate</strong>(
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span>object</span> <strong>importObject</strong>);
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);
+  Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
+      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span>object</span> <strong>importObject</strong>);
 };</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/wasm-web-api-1/">WebAssembly Web API</a> refers to <code>WebAssembly</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wasm-web-api-1&#x2F;">WebAssembly Web API</a> refers to <code>WebAssembly</code></li>
+  </ul></section>

@@ -6,14 +6,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/css-parser-api/#cssparseratrule">CSS Parser API</a> defines <code>CSSParserAtRule</code></p>
-<pre class=webidl><code>[Constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;, sequence&lt;&lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt;&gt; &lt;strong&gt;prelude&lt;/strong&gt;, optional sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;? &lt;strong&gt;body&lt;/strong&gt;)]
-interface &lt;strong&gt;CSSParserAtRule&lt;/strong&gt; : &lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;CSSParserValue.html&#39;&gt;CSSParserValue&lt;/a&gt;&gt; &lt;strong&gt;prelude&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;? &lt;strong&gt;body&lt;/strong&gt;;
-  /* nullable to handle at-statements */
-  stringifier;
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;css-parser-api&#x2F;#cssparseratrule">CSS Parser API</a> defines <code>CSSParserAtRule</code></p>
+<pre class=webidl><code>
+
+[Constructor(<span>DOMString</span> <strong>name</strong>, sequence&lt;<a href='CSSToken.html'>CSSToken</a>&gt; <strong>prelude</strong>, optional sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;? <strong>body</strong>)]
+interface <strong>CSSParserAtRule</strong> : <a href='CSSParserRule.html'>CSSParserRule</a> {
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute FrozenArray&lt;<a href='CSSParserValue.html'>CSSParserValue</a>&gt; <strong>prelude</strong>;
+  readonly attribute FrozenArray&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;? <strong>body</strong>;<span class="comment">
+  &#x2F;* nullable to handle at-statements *&#x2F;
+  </span>stringifier;
 };</code></pre>
   
   

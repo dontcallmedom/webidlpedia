@@ -6,46 +6,48 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPathElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextPathElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;SVGTextPathElement&lt;/strong&gt; : &lt;a href=&#39;SVGTextContentElement.html&#39;&gt;SVGTextContentElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;text.html#InterfaceSVGTextPathElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextPathElement</code></p>
+<pre class=webidl><code>
 
-  // textPath Method Types
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_ALIGN&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_STRETCH&lt;/strong&gt; = 2;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>SVGTextPathElement</strong> : <a href='SVGTextContentElement.html'>SVGTextContentElement</a> {<span class="comment">
 
-  // textPath Spacing Types
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_AUTO&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_EXACT&lt;/strong&gt; = 2;
+  &#x2F;&#x2F; textPath Method Types
+  </span>const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_ALIGN</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_STRETCH</strong> &#x3D; 2;<span class="comment">
 
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;startOffset&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;method&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;spacing&lt;/strong&gt;;
+  &#x2F;&#x2F; textPath Spacing Types
+  </span>const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_AUTO</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_EXACT</strong> &#x3D; 2;
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>startOffset</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>method</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>spacing</strong>;
 };
 
-&lt;a href=&#39;SVGTextPathElement.html&#39;&gt;SVGTextPathElement&lt;/a&gt; includes &lt;a href=&#39;SVGURIReference.html&#39;&gt;SVGURIReference&lt;/a&gt;;</code></pre>
+<a href='SVGTextPathElement.html'>SVGTextPathElement</a> includes <a href='SVGURIReference.html'>SVGURIReference</a>;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;SVGTextPathElement&lt;/strong&gt; : &lt;a href=&#39;SVGTextContentElement.html&#39;&gt;SVGTextContentElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>SVGTextPathElement</strong> : <a href='SVGTextContentElement.html'>SVGTextContentElement</a> {<span class="comment">
 
-  // textPath Method Types
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_ALIGN&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_METHODTYPE_STRETCH&lt;/strong&gt; = 2;
+  &#x2F;&#x2F; textPath Method Types
+  </span>const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_ALIGN</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_METHODTYPE_STRETCH</strong> &#x3D; 2;<span class="comment">
 
-  // textPath Spacing Types
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_UNKNOWN&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_AUTO&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TEXTPATH_SPACINGTYPE_EXACT&lt;/strong&gt; = 2;
+  &#x2F;&#x2F; textPath Spacing Types
+  </span>const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_UNKNOWN</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_AUTO</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>TEXTPATH_SPACINGTYPE_EXACT</strong> &#x3D; 2;
 
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;startOffset&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;method&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedEnumeration.html&#39;&gt;SVGAnimatedEnumeration&lt;/a&gt; &lt;strong&gt;spacing&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedString.html&#39;&gt;SVGAnimatedString&lt;/a&gt; &lt;strong&gt;href&lt;/strong&gt;;
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>startOffset</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>method</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>spacing</strong>;
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>href</strong>;
 };</code></pre></details>
 </section>
 

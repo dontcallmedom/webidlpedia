@@ -6,20 +6,25 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/ServiceWorker/#cachestorage">Service Workers Nightly</a> defines <code>CacheStorage</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;CacheStorage&lt;/strong&gt; {
-  [NewObject] Promise&lt;&lt;span&gt;any&lt;/span&gt;&gt; &lt;strong&gt;match&lt;/strong&gt;(&lt;a href=&#39;RequestInfo.html&#39;&gt;RequestInfo&lt;/a&gt; &lt;strong&gt;request&lt;/strong&gt;, optional &lt;a href=&#39;MultiCacheQueryOptions.html&#39;&gt;MultiCacheQueryOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  [NewObject] Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;has&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;cacheName&lt;/strong&gt;);
-  [NewObject] Promise&lt;&lt;a href=&#39;Cache.html&#39;&gt;Cache&lt;/a&gt;&gt; &lt;strong&gt;open&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;cacheName&lt;/strong&gt;);
-  [NewObject] Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;delete&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;cacheName&lt;/strong&gt;);
-  [NewObject] Promise&lt;sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;&gt; &lt;strong&gt;keys&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#cachestorage">Service Workers Nightly</a> defines <code>CacheStorage</code></p>
+<pre class=webidl><code>
+
+[SecureContext, Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>CacheStorage</strong> {
+  [NewObject] Promise&lt;<span>any</span>&gt; <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='MultiCacheQueryOptions.html'>MultiCacheQueryOptions</a> <strong>options</strong> &#x3D; {});
+  [NewObject] Promise&lt;<span>boolean</span>&gt; <strong>has</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise&lt;<a href='Cache.html'>Cache</a>&gt; <strong>open</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise&lt;<span>boolean</span>&gt; <strong>delete</strong>(<span>DOMString</span> <strong>cacheName</strong>);
+  [NewObject] Promise&lt;sequence&lt;<span>DOMString</span>&gt;&gt; <strong>keys</strong>();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li></ul>
+  
+  <ul>
+    <li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li>
+  </ul>
 </section>
   

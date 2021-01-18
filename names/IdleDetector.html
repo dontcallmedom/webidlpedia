@@ -6,17 +6,19 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/idle-detection/#idledetector">Idle Detection API</a> defines <code>IdleDetector</code></p>
-<pre class=webidl><code>[
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;idle-detection&#x2F;#idledetector">Idle Detection API</a> defines <code>IdleDetector</code></p>
+<pre class=webidl><code>
+
+[
   SecureContext,
-  Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;span&gt;DedicatedWorker&lt;/span&gt;)
-] interface &lt;strong&gt;IdleDetector&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  Exposed&#x3D;(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>)
+] interface <strong>IdleDetector</strong> : <a href='EventTarget.html'>EventTarget</a> {
   constructor();
-  readonly attribute &lt;a href=&#39;UserIdleState.html&#39;&gt;UserIdleState&lt;/a&gt;? &lt;strong&gt;userState&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;ScreenIdleState.html&#39;&gt;ScreenIdleState&lt;/a&gt;? &lt;strong&gt;screenState&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onchange&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] static Promise&lt;&lt;a href=&#39;PermissionState.html&#39;&gt;PermissionState&lt;/a&gt;&gt; &lt;strong&gt;requestPermission&lt;/strong&gt;();
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;start&lt;/strong&gt;(optional &lt;a href=&#39;IdleOptions.html&#39;&gt;IdleOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  readonly attribute <a href='UserIdleState.html'>UserIdleState</a>? <strong>userState</strong>;
+  readonly attribute <a href='ScreenIdleState.html'>ScreenIdleState</a>? <strong>screenState</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] static Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>requestPermission</strong>();
+  Promise&lt;<span>undefined</span>&gt; <strong>start</strong>(optional <a href='IdleOptions.html'>IdleOptions</a> <strong>options</strong> &#x3D; {});
 };</code></pre>
   
   

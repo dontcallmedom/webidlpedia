@@ -6,50 +6,62 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/uievents/#dictdef-mouseeventinit">UI Events</a> defines <code>MouseEventInit</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;MouseEventInit&lt;/strong&gt; : &lt;a href=&#39;EventModifierInit.html&#39;&gt;EventModifierInit&lt;/a&gt; {
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;clientX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;clientY&lt;/strong&gt; = 0;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;uievents&#x2F;#dictdef-mouseeventinit">UI Events</a> defines <code>MouseEventInit</code></p>
+<pre class=webidl><code>
 
-  &lt;span&gt;short&lt;/span&gt; &lt;strong&gt;button&lt;/strong&gt; = 0;
-  &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;buttons&lt;/strong&gt; = 0;
-  &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;? &lt;strong&gt;relatedTarget&lt;/strong&gt; = null;
+dictionary <strong>MouseEventInit</strong> : <a href='EventModifierInit.html'>EventModifierInit</a> {
+  <span>long</span> <strong>screenX</strong> &#x3D; 0;
+  <span>long</span> <strong>screenY</strong> &#x3D; 0;
+  <span>long</span> <strong>clientX</strong> &#x3D; 0;
+  <span>long</span> <strong>clientY</strong> &#x3D; 0;
+
+  <span>short</span> <strong>button</strong> &#x3D; 0;
+  <span>unsigned short</span> <strong>buttons</strong> &#x3D; 0;
+  <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong> &#x3D; null;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;MouseEventInit&lt;/strong&gt; {
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;clientX&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;clientY&lt;/strong&gt; = 0.0;
-};</code></pre></li><li><a href="https://www.w3.org/TR/pointerlock-2/">Pointer Lock 2.0</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;MouseEventInit&lt;/strong&gt; {
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;movementX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;movementY&lt;/strong&gt; = 0;
-};</code></pre></li></ol>
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code>
+
+partial dictionary <strong>MouseEventInit</strong> {
+  <span>double</span> <strong>screenX</strong> &#x3D; 0.0;
+  <span>double</span> <strong>screenY</strong> &#x3D; 0.0;
+  <span>double</span> <strong>clientX</strong> &#x3D; 0.0;
+  <span>double</span> <strong>clientY</strong> &#x3D; 0.0;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;">Pointer Lock 2.0</a><pre class=webidl><code>
+
+partial dictionary <strong>MouseEventInit</strong> {
+  <span>long</span> <strong>movementX</strong> &#x3D; 0;
+  <span>long</span> <strong>movementY</strong> &#x3D; 0;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-dictionary &lt;strong&gt;MouseEventInit&lt;/strong&gt; : &lt;a href=&#39;EventModifierInit.html&#39;&gt;EventModifierInit&lt;/a&gt; {
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;clientX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;clientY&lt;/strong&gt; = 0;
+dictionary <strong>MouseEventInit</strong> : <a href='EventModifierInit.html'>EventModifierInit</a> {
+  <span>long</span> <strong>screenX</strong> &#x3D; 0;
+  <span>long</span> <strong>screenY</strong> &#x3D; 0;
+  <span>long</span> <strong>clientX</strong> &#x3D; 0;
+  <span>long</span> <strong>clientY</strong> &#x3D; 0;
 
-  &lt;span&gt;short&lt;/span&gt; &lt;strong&gt;button&lt;/strong&gt; = 0;
-  &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;buttons&lt;/strong&gt; = 0;
-  &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;? &lt;strong&gt;relatedTarget&lt;/strong&gt; = null;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;screenX&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;screenY&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;clientX&lt;/strong&gt; = 0.0;
-  &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;clientY&lt;/strong&gt; = 0.0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;movementX&lt;/strong&gt; = 0;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;movementY&lt;/strong&gt; = 0;
+  <span>short</span> <strong>button</strong> &#x3D; 0;
+  <span>unsigned short</span> <strong>buttons</strong> &#x3D; 0;
+  <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong> &#x3D; null;
+  <span>double</span> <strong>screenX</strong> &#x3D; 0.0;
+  <span>double</span> <strong>screenY</strong> &#x3D; 0.0;
+  <span>double</span> <strong>clientX</strong> &#x3D; 0.0;
+  <span>double</span> <strong>clientY</strong> &#x3D; 0.0;
+  <span>long</span> <strong>movementX</strong> &#x3D; 0;
+  <span>long</span> <strong>movementY</strong> &#x3D; 0;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="DragEventInit.html">DragEventInit</a></li><li><a href="PointerEventInit.html">PointerEventInit</a></li><li><a href="MouseEvent.html">MouseEvent</a></li><li><a href="WheelEventInit.html">WheelEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="DragEventInit.html">DragEventInit</a></li><li><a href="PointerEventInit.html">PointerEventInit</a></li><li><a href="MouseEvent.html">MouseEvent</a></li><li><a href="WheelEventInit.html">WheelEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>MouseEventInit</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>MouseEventInit</code></li><li><a href="https://www.w3.org/TR/pointerevents3/">Pointer Events</a> refers to <code>MouseEventInit</code></li><li><a href="https://www.w3.org/TR/pointerlock-2/">Pointer Lock 2.0</a> refers to <code>MouseEventInit</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>MouseEventInit</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>MouseEventInit</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerevents3&#x2F;">Pointer Events</a> refers to <code>MouseEventInit</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;">Pointer Lock 2.0</a> refers to <code>MouseEventInit</code></li>
+  </ul></section>

@@ -6,34 +6,43 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/FileAPI/#dfn-file">File API</a> defines <code>File</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), Serializable]
-interface &lt;strong&gt;File&lt;/strong&gt; : &lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; {
-  constructor(sequence&lt;&lt;a href=&#39;BlobPart.html&#39;&gt;BlobPart&lt;/a&gt;&gt; &lt;strong&gt;fileBits&lt;/strong&gt;,
-              &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;fileName&lt;/strong&gt;,
-              optional &lt;a href=&#39;FilePropertyBag.html&#39;&gt;FilePropertyBag&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long long&lt;/span&gt; &lt;strong&gt;lastModified&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-file">File API</a> defines <code>File</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {
+  constructor(sequence&lt;<a href='BlobPart.html'>BlobPart</a>&gt; <strong>fileBits</strong>,
+              <span>USVString</span> <strong>fileName</strong>,
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/entries-api/#title">File and Directory Entries API</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;File&lt;/strong&gt; {
-    readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;webkitRelativePath&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;#title">File and Directory Entries API</a><pre class=webidl><code>partial interface <strong>File</strong> {
+    readonly attribute <span>USVString</span> <strong>webkitRelativePath</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), Serializable]
-interface &lt;strong&gt;File&lt;/strong&gt; : &lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; {
-  constructor(sequence&lt;&lt;a href=&#39;BlobPart.html&#39;&gt;BlobPart&lt;/a&gt;&gt; &lt;strong&gt;fileBits&lt;/strong&gt;,
-              &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;fileName&lt;/strong&gt;,
-              optional &lt;a href=&#39;FilePropertyBag.html&#39;&gt;FilePropertyBag&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long long&lt;/span&gt; &lt;strong&gt;lastModified&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;webkitRelativePath&lt;/strong&gt;;
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {
+  constructor(sequence&lt;<a href='BlobPart.html'>BlobPart</a>&gt; <strong>fileBits</strong>,
+              <span>USVString</span> <strong>fileName</strong>,
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>long long</span> <strong>lastModified</strong>;
+    readonly attribute <span>USVString</span> <strong>webkitRelativePath</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="ElementInternals.html">ElementInternals</a></li><li><a href="DataTransferItemList.html">DataTransferItemList</a></li><li><a href="DataTransferItem.html">DataTransferItem</a></li><li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li><li><a href="FileList.html">FileList</a></li><li><a href="ShareData.html">ShareData</a></li></ul>
+  
+  <ul>
+    <li><a href="ElementInternals.html">ElementInternals</a></li><li><a href="DataTransferItemList.html">DataTransferItemList</a></li><li><a href="DataTransferItem.html">DataTransferItem</a></li><li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li><li><a href="FileList.html">FileList</a></li><li><a href="ShareData.html">ShareData</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>File</code></li><li><a href="https://wicg.github.io/entries-api/">File and Directory Entries API</a> refers to <code>File</code></li><li><a href="https://wicg.github.io/file-system-access/">File System Access</a> refers to <code>File</code></li><li><a href="https://www.w3.org/TR/web-share/">Web Share API</a> refers to <code>File</code></li><li><a href="https://xhr.spec.whatwg.org/">XMLHttpRequest Standard</a> refers to <code>File</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>File</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;">File and Directory Entries API</a> refers to <code>File</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>File</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-share&#x2F;">Web Share API</a> refers to <code>File</code></li><li><a href="https:&#x2F;&#x2F;xhr.spec.whatwg.org&#x2F;">XMLHttpRequest Standard</a> refers to <code>File</code></li>
+  </ul></section>

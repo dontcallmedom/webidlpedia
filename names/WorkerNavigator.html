@@ -6,81 +6,97 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/workers.html#workernavigator">HTML Standard</a> defines <code>WorkerNavigator</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;]
-interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {};
-&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorID.html&#39;&gt;NavigatorID&lt;/a&gt;;
-&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorLanguage.html&#39;&gt;NavigatorLanguage&lt;/a&gt;;
-&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorOnLine.html&#39;&gt;NavigatorOnLine&lt;/a&gt;;
-&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorConcurrentHardware.html&#39;&gt;NavigatorConcurrentHardware&lt;/a&gt;;</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/#navigator-gpu">WebGPU</a>
-<pre class=webidl><code>[Exposed=&lt;span&gt;DedicatedWorker&lt;/span&gt;]
-partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;GPU.html&#39;&gt;GPU&lt;/a&gt; &lt;strong&gt;gpu&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorStorage.html&#39;&gt;NavigatorStorage&lt;/a&gt;;</code></pre></li><li><a href="https://w3c.github.io/badging/">Badging API</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorBadge.html&#39;&gt;NavigatorBadge&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorFonts.html&#39;&gt;NavigatorFonts&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorNetworkInformation.html&#39;&gt;NavigatorNetworkInformation&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute-0">Web Serial API</a>
-<pre class=webidl><code>[Exposed=&lt;span&gt;DedicatedWorker&lt;/span&gt;, SecureContext]
-partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;Serial.html&#39;&gt;Serial&lt;/a&gt; &lt;strong&gt;serial&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorUA.html&#39;&gt;NavigatorUA&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorLocks.html&#39;&gt;NavigatorLocks&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/webusb/#enumeration">WebUSB API</a>
-<pre class=webidl><code>[Exposed=(&lt;span&gt;DedicatedWorker&lt;/span&gt;,&lt;a href=&#39;SharedWorker.html&#39;&gt;SharedWorker&lt;/a&gt;), SecureContext]
-partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;USB.html&#39;&gt;USB&lt;/a&gt; &lt;strong&gt;usb&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/device-memory-1/">Device Memory 1</a>
-<pre class=webidl><code>&lt;a href=&#39;WorkerNavigator.html&#39;&gt;WorkerNavigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorDeviceMemory.html&#39;&gt;NavigatorDeviceMemory&lt;/a&gt;;</code></pre></li><li><a href="https://www.w3.org/TR/media-capabilities/#navigators-extensions">Media Capabilities</a>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;]
-partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;MediaCapabilities.html&#39;&gt;MediaCapabilities&lt;/a&gt; &lt;strong&gt;mediaCapabilities&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/permissions/#navigator-and-workernavigator-extension">Permissions</a>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;Permissions.html&#39;&gt;Permissions&lt;/a&gt; &lt;strong&gt;permissions&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#navigator-serviceworker">Service Workers Nightly</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ServiceWorkerContainer.html&#39;&gt;ServiceWorkerContainer&lt;/a&gt; &lt;strong&gt;serviceWorker&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;workers.html#workernavigator">HTML Standard</a> defines <code>WorkerNavigator</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Worker.html'>Worker</a>]
+interface <strong>WorkerNavigator</strong> {};
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorID.html'>NavigatorID</a>;
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorLanguage.html'>NavigatorLanguage</a>;
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorOnLine.html'>NavigatorOnLine</a>;
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorConcurrentHardware.html'>NavigatorConcurrentHardware</a>;</code></pre>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#navigator-gpu">WebGPU</a><pre class=webidl><code>
+
+[Exposed&#x3D;<span>DedicatedWorker</span>]
+partial interface <strong>WorkerNavigator</strong> {
+    [SameObject] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;storage.spec.whatwg.org&#x2F;">Storage Standard</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorStorage.html'>NavigatorStorage</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;badging&#x2F;">Badging API</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorBadge.html'>NavigatorBadge</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorFonts.html'>NavigatorFonts</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;netinfo&#x2F;">Network Information API</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorNetworkInformation.html'>NavigatorNetworkInformation</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;#serial-attribute-0">Web Serial API</a><pre class=webidl><code>
+
+[Exposed&#x3D;<span>DedicatedWorker</span>, SecureContext]
+partial interface <strong>WorkerNavigator</strong> {
+  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;#enumeration">WebUSB API</a><pre class=webidl><code>
+
+[Exposed&#x3D;(<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>), SecureContext]
+partial interface <strong>WorkerNavigator</strong> {
+  [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-memory-1&#x2F;">Device Memory 1</a><pre class=webidl><code>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorDeviceMemory.html'>NavigatorDeviceMemory</a>;</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-capabilities&#x2F;#navigators-extensions">Media Capabilities</a><pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Worker.html'>Worker</a>]
+partial interface <strong>WorkerNavigator</strong> {
+  [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions&#x2F;#navigator-and-workernavigator-extension">Permissions</a><pre class=webidl><code>
+
+[Exposed&#x3D;(<a href='Worker.html'>Worker</a>)]
+partial interface <strong>WorkerNavigator</strong> {
+  [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers-1&#x2F;#navigator-serviceworker">Service Workers Nightly</a><pre class=webidl><code>
+
+partial interface <strong>WorkerNavigator</strong> {
+  [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;]
-interface &lt;strong&gt;WorkerNavigator&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appCodeName&lt;/strong&gt;; // constant &quot;Mozilla&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appName&lt;/strong&gt;; // constant &quot;Netscape&quot;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appVersion&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;platform&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;product&lt;/strong&gt;; // constant &quot;Gecko&quot;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;productSub&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;userAgent&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendor&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendorSub&lt;/strong&gt;;
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;taintEnabled&lt;/strong&gt;(); // constant false
-  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;oscpu&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;language&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;languages&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;onLine&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;hardwareConcurrency&lt;/strong&gt;;
-    [SameObject] readonly attribute &lt;a href=&#39;GPU.html&#39;&gt;GPU&lt;/a&gt; &lt;strong&gt;gpu&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;StorageManager.html&#39;&gt;StorageManager&lt;/a&gt; &lt;strong&gt;storage&lt;/strong&gt;;
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setAppBadge&lt;/strong&gt;(optional [EnforceRange] &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;contents&lt;/strong&gt;);
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;clearAppBadge&lt;/strong&gt;();
-  [SameObject] readonly attribute &lt;a href=&#39;FontManager.html&#39;&gt;FontManager&lt;/a&gt; &lt;strong&gt;fonts&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;NetworkInformation.html&#39;&gt;NetworkInformation&lt;/a&gt; &lt;strong&gt;connection&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;Serial.html&#39;&gt;Serial&lt;/a&gt; &lt;strong&gt;serial&lt;/strong&gt;;
-  [SecureContext] readonly attribute &lt;a href=&#39;NavigatorUAData.html&#39;&gt;NavigatorUAData&lt;/a&gt; &lt;strong&gt;userAgentData&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;LockManager.html&#39;&gt;LockManager&lt;/a&gt; &lt;strong&gt;locks&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;USB.html&#39;&gt;USB&lt;/a&gt; &lt;strong&gt;usb&lt;/strong&gt;;
-    readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;deviceMemory&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;MediaCapabilities.html&#39;&gt;MediaCapabilities&lt;/a&gt; &lt;strong&gt;mediaCapabilities&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;Permissions.html&#39;&gt;Permissions&lt;/a&gt; &lt;strong&gt;permissions&lt;/strong&gt;;
-  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ServiceWorkerContainer.html&#39;&gt;ServiceWorkerContainer&lt;/a&gt; &lt;strong&gt;serviceWorker&lt;/strong&gt;;};</code></pre></details>
+[Exposed&#x3D;<a href='Worker.html'>Worker</a>]
+interface <strong>WorkerNavigator</strong> {
+  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appName</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
+  </span>readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
+  readonly attribute <span>DOMString</span> <strong>platform</strong>;
+  readonly attribute <span>DOMString</span> <strong>product</strong>;<span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
+  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>;
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>();<span class="comment"> &#x2F;&#x2F; constant false
+  </span>[Exposed&#x3D;<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;
+  readonly attribute <span>DOMString</span> <strong>language</strong>;
+  readonly attribute FrozenArray&lt;<span>DOMString</span>&gt; <strong>languages</strong>;
+  readonly attribute <span>boolean</span> <strong>onLine</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>hardwareConcurrency</strong>;
+    [SameObject] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;
+  [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;
+  Promise&lt;<span>undefined</span>&gt; <strong>setAppBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
+  Promise&lt;<span>undefined</span>&gt; <strong>clearAppBadge</strong>();
+  [SameObject] readonly attribute <a href='FontManager.html'>FontManager</a> <strong>fonts</strong>;
+  [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;
+  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;
+  [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;
+  [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;
+    readonly attribute <span>double</span> <strong>deviceMemory</strong>;
+  [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;
+  [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;
+  [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;};</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></li></ul>
+  
+  <ul>
+    <li><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://gpuweb.github.io/gpuweb/">WebGPU</a> refers to <code>WorkerNavigator</code></li><li><a href="https://wicg.github.io/serial/">Web Serial API</a> refers to <code>WorkerNavigator</code></li><li><a href="https://wicg.github.io/webusb/">WebUSB API</a> refers to <code>WorkerNavigator</code></li><li><a href="https://www.w3.org/TR/media-capabilities/">Media Capabilities</a> refers to <code>WorkerNavigator</code></li><li><a href="https://www.w3.org/TR/permissions/">Permissions</a> refers to <code>WorkerNavigator</code></li><li><a href="https://www.w3.org/TR/service-workers-1/">Service Workers Nightly</a> refers to <code>WorkerNavigator</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;">WebGPU</a> refers to <code>WorkerNavigator</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;">Web Serial API</a> refers to <code>WorkerNavigator</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;">WebUSB API</a> refers to <code>WorkerNavigator</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-capabilities&#x2F;">Media Capabilities</a> refers to <code>WorkerNavigator</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions&#x2F;">Permissions</a> refers to <code>WorkerNavigator</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers-1&#x2F;">Service Workers Nightly</a> refers to <code>WorkerNavigator</code></li>
+  </ul></section>

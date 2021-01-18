@@ -6,31 +6,36 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/presentation-api/#dom-presentationconnection">Presentation API</a> defines <code>PresentationConnection</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;PresentationConnection&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;PresentationConnectionState.html&#39;&gt;PresentationConnectionState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;terminate&lt;/strong&gt;();
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onconnect&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onterminate&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;presentation-api&#x2F;#dom-presentationconnection">Presentation API</a> defines <code>PresentationConnection</code></p>
+<pre class=webidl><code>
 
-  // Communication
-  attribute &lt;a href=&#39;BinaryType.html&#39;&gt;BinaryType&lt;/a&gt; &lt;strong&gt;binaryType&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt; (&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt; (&lt;span&gt;ArrayBuffer&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt; (&lt;a href=&#39;ArrayBufferView.html&#39;&gt;ArrayBufferView&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
+[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>PresentationConnection</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <span>USVString</span> <strong>id</strong>;
+  readonly attribute <span>USVString</span> <strong>url</strong>;
+  readonly attribute <a href='PresentationConnectionState.html'>PresentationConnectionState</a> <strong>state</strong>;
+  <span>undefined</span> <strong>close</strong>();
+  <span>undefined</span> <strong>terminate</strong>();
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onterminate</strong>;<span class="comment">
+
+  &#x2F;&#x2F; Communication
+  </span>attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  <span>undefined</span> <strong>send</strong> (<span>DOMString</span> <strong>message</strong>);
+  <span>undefined</span> <strong>send</strong> (<a href='Blob.html'>Blob</a> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong> (<span>ArrayBuffer</span> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong> (<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="PresentationRequest.html">PresentationRequest</a></li><li><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li><li><a href="PresentationConnectionAvailableEventInit.html">PresentationConnectionAvailableEventInit</a></li><li><a href="PresentationConnectionList.html">PresentationConnectionList</a></li></ul>
+  
+  <ul>
+    <li><a href="PresentationRequest.html">PresentationRequest</a></li><li><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li><li><a href="PresentationConnectionAvailableEventInit.html">PresentationConnectionAvailableEventInit</a></li><li><a href="PresentationConnectionList.html">PresentationConnectionList</a></li>
+  </ul>
 </section>
   

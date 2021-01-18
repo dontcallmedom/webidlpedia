@@ -6,68 +6,75 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://drafts.csswg.org/cssom/#namespacedef-css">CSS Object Model (CSSOM)</a> defines <code>CSS</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;escape&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;ident&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom&#x2F;#namespacedef-css">CSS Object Model (CSSOM)</a> defines <code>CSS</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+namespace <strong>CSS</strong> {
+  <a href='CSSOMString.html'>CSSOMString</a> <strong>escape</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);
 };</code></pre>
-  <p>This namespace is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/css-parser-api/">CSS Parser API</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseStylesheet&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseRuleList&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt; &lt;strong&gt;parseRule&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseDeclarationList&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  &lt;a href=&#39;CSSParserDeclaration.html&#39;&gt;CSSParserDeclaration&lt;/a&gt; &lt;strong&gt;parseDeclaration&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  &lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt; &lt;strong&gt;parseValue&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-  sequence&lt;&lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt;&gt; &lt;strong&gt;parseValueList&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-  sequence&lt;sequence&lt;&lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseCommaValueList&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-animation-worklet-1/#animation-worklet-desc">CSS Animation Worklet API</a>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;animationWorklet&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-conditional-3/">CSS Conditional Rules Module Level 3</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;supports&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;property&lt;/strong&gt;, &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;value&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;supports&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;conditionText&lt;/strong&gt;);
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-highlight-api-1/#registration">CSS Custom Highlight API Module Level 1</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;HighlightsRegister.html&#39;&gt;HighlightsRegister&lt;/a&gt; &lt;strong&gt;highlights&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-images-4/#elementsources">CSS Images Module Level 4</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;elementSources&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-layout-api-1/#layout-worklet">CSS Layout API Level 1</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;layoutWorklet&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-paint-api-1/#paint-worklet">CSS Painting API Level 1</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;paintWorklet&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API Level 1</a>
-<pre class=webidl><code>partial namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;registerProperty&lt;/strong&gt;(&lt;a href=&#39;PropertyDefinition.html&#39;&gt;PropertyDefinition&lt;/a&gt; &lt;strong&gt;definition&lt;/strong&gt;);
-};</code></pre></li></ol>
+  <p>This namespace is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;css-parser-api&#x2F;">CSS Parser API</a><pre class=webidl><code>
+
+partial namespace <strong>CSS</strong> {
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseStylesheet</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseRuleList</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt; <strong>parseRule</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseDeclarationList</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  <a href='CSSParserDeclaration.html'>CSSParserDeclaration</a> <strong>parseDeclaration</strong>(<span>DOMString</span> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  <a href='CSSToken.html'>CSSToken</a> <strong>parseValue</strong>(<span>DOMString</span> <strong>css</strong>);
+  sequence&lt;<a href='CSSToken.html'>CSSToken</a>&gt; <strong>parseValueList</strong>(<span>DOMString</span> <strong>css</strong>);
+  sequence&lt;sequence&lt;<a href='CSSToken.html'>CSSToken</a>&gt;&gt; <strong>parseCommaValueList</strong>(<span>DOMString</span> <strong>css</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animation-worklet-1&#x2F;#animation-worklet-desc">CSS Animation Worklet API</a><pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+partial namespace <strong>CSS</strong> {
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>animationWorklet</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-conditional-3&#x2F;">CSS Conditional Rules Module Level 3</a><pre class=webidl><code>
+
+partial namespace <strong>CSS</strong> {
+  <span>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>, <a href='CSSOMString.html'>CSSOMString</a> <strong>value</strong>);
+  <span>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>conditionText</strong>);
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-highlight-api-1&#x2F;#registration">CSS Custom Highlight API Module Level 1</a><pre class=webidl><code>
+
+partial namespace <strong>CSS</strong> {
+  readonly attribute <a href='HighlightsRegister.html'>HighlightsRegister</a> <strong>highlights</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-images-4&#x2F;#elementsources">CSS Images Module Level 4</a><pre class=webidl><code>partial namespace <strong>CSS</strong> {
+  [SameObject] readonly attribute <span>any</span> <strong>elementSources</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-layout-api-1&#x2F;#layout-worklet">CSS Layout API Level 1</a><pre class=webidl><code>partial namespace <strong>CSS</strong> {
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>layoutWorklet</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-paint-api-1&#x2F;#paint-worklet">CSS Painting API Level 1</a><pre class=webidl><code>partial namespace <strong>CSS</strong> {
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>paintWorklet</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-properties-values-api-1&#x2F;">CSS Properties and Values API Level 1</a><pre class=webidl><code>
+
+partial namespace <strong>CSS</strong> {
+  <span>undefined</span> <strong>registerProperty</strong>(<a href='PropertyDefinition.html'>PropertyDefinition</a> <strong>definition</strong>);
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-namespace &lt;strong&gt;CSS&lt;/strong&gt; {
-  &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;escape&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;ident&lt;/strong&gt;);
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseStylesheet&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseRuleList&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt; &lt;strong&gt;parseRule&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  Promise&lt;sequence&lt;&lt;a href=&#39;CSSParserRule.html&#39;&gt;CSSParserRule&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseDeclarationList&lt;/strong&gt;(&lt;a href=&#39;CSSStringSource.html&#39;&gt;CSSStringSource&lt;/a&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  &lt;a href=&#39;CSSParserDeclaration.html&#39;&gt;CSSParserDeclaration&lt;/a&gt; &lt;strong&gt;parseDeclaration&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;, optional &lt;a href=&#39;CSSParserOptions.html&#39;&gt;CSSParserOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;);
-  &lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt; &lt;strong&gt;parseValue&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-  sequence&lt;&lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt;&gt; &lt;strong&gt;parseValueList&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-  sequence&lt;sequence&lt;&lt;a href=&#39;CSSToken.html&#39;&gt;CSSToken&lt;/a&gt;&gt;&gt; &lt;strong&gt;parseCommaValueList&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;css&lt;/strong&gt;);
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;animationWorklet&lt;/strong&gt;;
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;supports&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;property&lt;/strong&gt;, &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;value&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;supports&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;conditionText&lt;/strong&gt;);
-  readonly attribute &lt;a href=&#39;HighlightsRegister.html&#39;&gt;HighlightsRegister&lt;/a&gt; &lt;strong&gt;highlights&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;elementSources&lt;/strong&gt;;
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;layoutWorklet&lt;/strong&gt;;
-    [SameObject] readonly attribute &lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt; &lt;strong&gt;paintWorklet&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;registerProperty&lt;/strong&gt;(&lt;a href=&#39;PropertyDefinition.html&#39;&gt;PropertyDefinition&lt;/a&gt; &lt;strong&gt;definition&lt;/strong&gt;);
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+namespace <strong>CSS</strong> {
+  <a href='CSSOMString.html'>CSSOMString</a> <strong>escape</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseStylesheet</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseRuleList</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt; <strong>parseRule</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseDeclarationList</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  <a href='CSSParserDeclaration.html'>CSSParserDeclaration</a> <strong>parseDeclaration</strong>(<span>DOMString</span> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong>);
+  <a href='CSSToken.html'>CSSToken</a> <strong>parseValue</strong>(<span>DOMString</span> <strong>css</strong>);
+  sequence&lt;<a href='CSSToken.html'>CSSToken</a>&gt; <strong>parseValueList</strong>(<span>DOMString</span> <strong>css</strong>);
+  sequence&lt;sequence&lt;<a href='CSSToken.html'>CSSToken</a>&gt;&gt; <strong>parseCommaValueList</strong>(<span>DOMString</span> <strong>css</strong>);
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>animationWorklet</strong>;
+  <span>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>, <a href='CSSOMString.html'>CSSOMString</a> <strong>value</strong>);
+  <span>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>conditionText</strong>);
+  readonly attribute <a href='HighlightsRegister.html'>HighlightsRegister</a> <strong>highlights</strong>;
+  [SameObject] readonly attribute <span>any</span> <strong>elementSources</strong>;
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>layoutWorklet</strong>;
+    [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>paintWorklet</strong>;
+  <span>undefined</span> <strong>registerProperty</strong>(<a href='PropertyDefinition.html'>PropertyDefinition</a> <strong>definition</strong>);
 };</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/css-parser-api/">CSS Parser API</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-animation-worklet-1/">CSS Animation Worklet API</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-conditional-3/">CSS Conditional Rules Module Level 3</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-highlight-api-1/">CSS Custom Highlight API Module Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-images-4/">CSS Images Module Level 4</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-layout-api-1/">CSS Layout API Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-paint-api-1/">CSS Painting API Level 1</a> refers to <code>CSS</code></li><li><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API Level 1</a> refers to <code>CSS</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;css-parser-api&#x2F;">CSS Parser API</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animation-worklet-1&#x2F;">CSS Animation Worklet API</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-conditional-3&#x2F;">CSS Conditional Rules Module Level 3</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-highlight-api-1&#x2F;">CSS Custom Highlight API Module Level 1</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-images-4&#x2F;">CSS Images Module Level 4</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-layout-api-1&#x2F;">CSS Layout API Level 1</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-paint-api-1&#x2F;">CSS Painting API Level 1</a> refers to <code>CSS</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-properties-values-api-1&#x2F;">CSS Properties and Values API Level 1</a> refers to <code>CSS</code></li>
+  </ul></section>

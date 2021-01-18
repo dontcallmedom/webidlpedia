@@ -6,31 +6,38 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/dnd.html#datatransfer">HTML Standard</a> defines <code>DataTransfer</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;DataTransfer&lt;/strong&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;dnd.html#datatransfer">HTML Standard</a> defines <code>DataTransfer</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>DataTransfer</strong> {
   constructor();
 
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;dropEffect&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;effectAllowed&lt;/strong&gt;;
+  attribute <span>DOMString</span> <strong>dropEffect</strong>;
+  attribute <span>DOMString</span> <strong>effectAllowed</strong>;
 
-  [SameObject] readonly attribute &lt;a href=&#39;DataTransferItemList.html&#39;&gt;DataTransferItemList&lt;/a&gt; &lt;strong&gt;items&lt;/strong&gt;;
+  [SameObject] readonly attribute <a href='DataTransferItemList.html'>DataTransferItemList</a> <strong>items</strong>;
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setDragImage&lt;/strong&gt;(&lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+  <span>undefined</span> <strong>setDragImage</strong>(<a href='Element.html'>Element</a> <strong>image</strong>, <span>long</span> <strong>x</strong>, <span>long</span> <strong>y</strong>);<span class="comment">
 
-  /* old interface */
-  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;types&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;getData&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;format&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setData&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;format&lt;/strong&gt;, &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearData&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;format&lt;/strong&gt;);
-  [SameObject] readonly attribute &lt;a href=&#39;FileList.html&#39;&gt;FileList&lt;/a&gt; &lt;strong&gt;files&lt;/strong&gt;;
+  &#x2F;* old interface *&#x2F;
+  </span>readonly attribute FrozenArray&lt;<span>DOMString</span>&gt; <strong>types</strong>;
+  <span>DOMString</span> <strong>getData</strong>(<span>DOMString</span> <strong>format</strong>);
+  <span>undefined</span> <strong>setData</strong>(<span>DOMString</span> <strong>format</strong>, <span>DOMString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>clearData</strong>(optional <span>DOMString</span> <strong>format</strong>);
+  [SameObject] readonly attribute <a href='FileList.html'>FileList</a> <strong>files</strong>;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="DragEvent.html">DragEvent</a></li><li><a href="DragEventInit.html">DragEventInit</a></li><li><a href="ClipboardEventInit.html">ClipboardEventInit</a></li><li><a href="ClipboardEvent.html">ClipboardEvent</a></li><li><a href="InputEvent.html">InputEvent</a></li><li><a href="InputEventInit.html">InputEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="DragEvent.html">DragEvent</a></li><li><a href="DragEventInit.html">DragEventInit</a></li><li><a href="ClipboardEventInit.html">ClipboardEventInit</a></li><li><a href="ClipboardEvent.html">ClipboardEvent</a></li><li><a href="InputEvent.html">InputEvent</a></li><li><a href="InputEventInit.html">InputEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/clipboard-apis/">Clipboard API and events</a> refers to <code>DataTransfer</code></li><li><a href="https://www.w3.org/TR/input-events-2/">Input Events Level 2</a> refers to <code>DataTransfer</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;clipboard-apis&#x2F;">Clipboard API and events</a> refers to <code>DataTransfer</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;input-events-2&#x2F;">Input Events Level 2</a> refers to <code>DataTransfer</code></li>
+  </ul></section>

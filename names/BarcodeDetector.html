@@ -6,14 +6,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/shape-detection-api/#barcodedetector">Accelerated Shape Detection in Images</a> defines <code>BarcodeDetector</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;),
- SecureContext]
-interface &lt;strong&gt;BarcodeDetector&lt;/strong&gt; {
-  constructor(optional &lt;a href=&#39;BarcodeDetectorOptions.html&#39;&gt;BarcodeDetectorOptions&lt;/a&gt; &lt;strong&gt;barcodeDetectorOptions&lt;/strong&gt; = {});
-  static Promise&lt;sequence&lt;&lt;a href=&#39;BarcodeFormat.html&#39;&gt;BarcodeFormat&lt;/a&gt;&gt;&gt; &lt;strong&gt;getSupportedFormats&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shape-detection-api&#x2F;#barcodedetector">Accelerated Shape Detection in Images</a> defines <code>BarcodeDetector</code></p>
+<pre class=webidl><code>
 
-  Promise&lt;sequence&lt;&lt;a href=&#39;DetectedBarcode.html&#39;&gt;DetectedBarcode&lt;/a&gt;&gt;&gt; &lt;strong&gt;detect&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;);
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ SecureContext]
+interface <strong>BarcodeDetector</strong> {
+  constructor(optional <a href='BarcodeDetectorOptions.html'>BarcodeDetectorOptions</a> <strong>barcodeDetectorOptions</strong> &#x3D; {});
+  static Promise&lt;sequence&lt;<a href='BarcodeFormat.html'>BarcodeFormat</a>&gt;&gt; <strong>getSupportedFormats</strong>();
+
+  Promise&lt;sequence&lt;<a href='DetectedBarcode.html'>DetectedBarcode</a>&gt;&gt; <strong>detect</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>);
 };</code></pre>
   
   

@@ -6,30 +6,35 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/ServiceWorker/#serviceworkercontainer">Service Workers Nightly</a> defines <code>ServiceWorkerContainer</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;ServiceWorkerContainer&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;? &lt;strong&gt;controller&lt;/strong&gt;;
-  readonly attribute Promise&lt;&lt;a href=&#39;ServiceWorkerRegistration.html&#39;&gt;ServiceWorkerRegistration&lt;/a&gt;&gt; &lt;strong&gt;ready&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#serviceworkercontainer">Service Workers Nightly</a> defines <code>ServiceWorkerContainer</code></p>
+<pre class=webidl><code>
 
-  [NewObject] Promise&lt;&lt;a href=&#39;ServiceWorkerRegistration.html&#39;&gt;ServiceWorkerRegistration&lt;/a&gt;&gt; &lt;strong&gt;register&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;scriptURL&lt;/strong&gt;, optional &lt;a href=&#39;RegistrationOptions.html&#39;&gt;RegistrationOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+[SecureContext, Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>ServiceWorkerContainer</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>controller</strong>;
+  readonly attribute Promise&lt;<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>&gt; <strong>ready</strong>;
 
-  [NewObject] Promise&lt;&lt;span&gt;any&lt;/span&gt;&gt; &lt;strong&gt;getRegistration&lt;/strong&gt;(optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;clientURL&lt;/strong&gt; = &quot;&quot;);
-  [NewObject] Promise&lt;FrozenArray&lt;&lt;a href=&#39;ServiceWorkerRegistration.html&#39;&gt;ServiceWorkerRegistration&lt;/a&gt;&gt;&gt; &lt;strong&gt;getRegistrations&lt;/strong&gt;();
+  [NewObject] Promise&lt;<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>&gt; <strong>register</strong>(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='RegistrationOptions.html'>RegistrationOptions</a> <strong>options</strong> &#x3D; {});
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;startMessages&lt;/strong&gt;();
+  [NewObject] Promise&lt;<span>any</span>&gt; <strong>getRegistration</strong>(optional <span>USVString</span> <strong>clientURL</strong> &#x3D; &quot;&quot;);
+  [NewObject] Promise&lt;FrozenArray&lt;<a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a>&gt;&gt; <strong>getRegistrations</strong>();
+
+  <span>undefined</span> <strong>startMessages</strong>();<span class="comment">
 
 
-  // events
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncontrollerchange&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;; // event.source of message events is ServiceWorker object
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessageerror&lt;/strong&gt;;
+  &#x2F;&#x2F; events
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontrollerchange</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;<span class="comment"> &#x2F;&#x2F; event.source of message events is ServiceWorker object
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li></ul>
+  
+  <ul>
+    <li><a href="Navigator.html">Navigator</a></li><li><a href="WorkerNavigator.html">WorkerNavigator</a></li>
+  </ul>
 </section>
   

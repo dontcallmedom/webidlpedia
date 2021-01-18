@@ -6,36 +6,37 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;WebSocket&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional (&lt;span&gt;DOMString&lt;/span&gt; or sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;) &lt;strong&gt;protocols&lt;/strong&gt; = []);
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
+<pre class=webidl><code>
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<span>USVString</span> <strong>url</strong>, optional (<span>DOMString</span> or sequence&lt;<span>DOMString</span>&gt;) <strong>protocols</strong> &#x3D; []);
 
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
+  readonly attribute <span>USVString</span> <strong>url</strong>;<span class="comment">
 
-  // ready state
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CONNECTING&lt;/strong&gt; = 0;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;OPEN&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CLOSING&lt;/strong&gt; = 2;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CLOSED&lt;/strong&gt; = 3;
-  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;bufferedAmount&lt;/strong&gt;;
+  &#x2F;&#x2F; ready state
+  </span>const <span>unsigned short</span> <strong>CONNECTING</strong> &#x3D; 0;
+  const <span>unsigned short</span> <strong>OPEN</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>CLOSING</strong> &#x3D; 2;
+  const <span>unsigned short</span> <strong>CLOSED</strong> &#x3D; 3;
+  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  readonly attribute <span>unsigned long long</span> <strong>bufferedAmount</strong>;<span class="comment">
 
-  // networking
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onopen&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;extensions&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;protocol&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;(optional [Clamp] &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;code&lt;/strong&gt;, optional &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;reason&lt;/strong&gt;);
+  &#x2F;&#x2F; networking
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  readonly attribute <span>DOMString</span> <strong>extensions</strong>;
+  readonly attribute <span>DOMString</span> <strong>protocol</strong>;
+  <span>undefined</span> <strong>close</strong>(optional [Clamp] <span>unsigned short</span> <strong>code</strong>, optional <span>USVString</span> <strong>reason</strong>);<span class="comment">
 
-  // messaging
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
-  attribute &lt;a href=&#39;BinaryType.html&#39;&gt;BinaryType&lt;/a&gt; &lt;strong&gt;binaryType&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;ArrayBuffer&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;ArrayBufferView.html&#39;&gt;ArrayBufferView&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &#x2F;&#x2F; messaging
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
+  <span>undefined</span> <strong>send</strong>(<span>USVString</span> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<span>ArrayBuffer</span> <strong>data</strong>);
+  <span>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
 };</code></pre>
   
   

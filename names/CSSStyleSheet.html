@@ -6,45 +6,54 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://drafts.csswg.org/cssom/#cssstylesheet">CSS Object Model (CSSOM)</a> defines <code>CSSStyleSheet</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;CSSStyleSheet&lt;/strong&gt; : &lt;a href=&#39;StyleSheet.html&#39;&gt;StyleSheet&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;CSSRule.html&#39;&gt;CSSRule&lt;/a&gt;? &lt;strong&gt;ownerRule&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;CSSRuleList.html&#39;&gt;CSSRuleList&lt;/a&gt; &lt;strong&gt;cssRules&lt;/strong&gt;;
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;insertRule&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;rule&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;deleteRule&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom&#x2F;#cssstylesheet">CSS Object Model (CSSOM)</a> defines <code>CSSStyleSheet</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;
+  <span>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span>unsigned long</span> <strong>index</strong> &#x3D; 0);
+  <span>undefined</span> <strong>deleteRule</strong>(<span>unsigned long</span> <strong>index</strong>);
 };
 
-partial interface &lt;strong&gt;CSSStyleSheet&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;CSSRuleList.html&#39;&gt;CSSRuleList&lt;/a&gt; &lt;strong&gt;rules&lt;/strong&gt;;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;addRule&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;selector&lt;/strong&gt; = &quot;undefined&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;style&lt;/strong&gt; = &quot;undefined&quot;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeRule&lt;/strong&gt;(optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt; = 0);
+partial interface <strong>CSSStyleSheet</strong> {
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;
+  <span>long</span> <strong>addRule</strong>(optional <span>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>removeRule</strong>(optional <span>unsigned long</span> <strong>index</strong> &#x3D; 0);
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;CSSStyleSheet&lt;/strong&gt; {
-  constructor(optional &lt;a href=&#39;CSSStyleSheetInit.html&#39;&gt;CSSStyleSheetInit&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;CSSStyleSheet.html&#39;&gt;CSSStyleSheet&lt;/a&gt;&gt; &lt;strong&gt;replace&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;);
-  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;replaceSync&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;);
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;construct-stylesheets&#x2F;">Constructable Stylesheet Objects</a><pre class=webidl><code>partial interface <strong>CSSStyleSheet</strong> {
+  constructor(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span>USVString</span> <strong>text</strong>);
+  <a href='void.html'>void</a> <strong>replaceSync</strong>(<span>USVString</span> <strong>text</strong>);
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;CSSStyleSheet&lt;/strong&gt; : &lt;a href=&#39;StyleSheet.html&#39;&gt;StyleSheet&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;CSSRule.html&#39;&gt;CSSRule&lt;/a&gt;? &lt;strong&gt;ownerRule&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;CSSRuleList.html&#39;&gt;CSSRuleList&lt;/a&gt; &lt;strong&gt;cssRules&lt;/strong&gt;;
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;insertRule&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;rule&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;deleteRule&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  [SameObject] readonly attribute &lt;a href=&#39;CSSRuleList.html&#39;&gt;CSSRuleList&lt;/a&gt; &lt;strong&gt;rules&lt;/strong&gt;;
-  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;addRule&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;selector&lt;/strong&gt; = &quot;undefined&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;style&lt;/strong&gt; = &quot;undefined&quot;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeRule&lt;/strong&gt;(optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt; = 0);
-  constructor(optional &lt;a href=&#39;CSSStyleSheetInit.html&#39;&gt;CSSStyleSheetInit&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;CSSStyleSheet.html&#39;&gt;CSSStyleSheet&lt;/a&gt;&gt; &lt;strong&gt;replace&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;);
-  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;replaceSync&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;);
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;
+  <span>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span>unsigned long</span> <strong>index</strong> &#x3D; 0);
+  <span>undefined</span> <strong>deleteRule</strong>(<span>unsigned long</span> <strong>index</strong>);
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;
+  <span>long</span> <strong>addRule</strong>(optional <span>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>removeRule</strong>(optional <span>unsigned long</span> <strong>index</strong> &#x3D; 0);
+  constructor(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span>USVString</span> <strong>text</strong>);
+  <a href='void.html'>void</a> <strong>replaceSync</strong>(<span>USVString</span> <strong>text</strong>);
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="CSSStyleSheet.html">CSSStyleSheet</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="StyleSheet.html">StyleSheet</a></li><li><a href="StyleSheetList.html">StyleSheetList</a></li><li><a href="LinkStyle.html">LinkStyle</a></li><li><a href="CSSRule.html">CSSRule</a></li><li><a href="CSSImportRule.html">CSSImportRule</a></li></ul>
+  
+  <ul>
+    <li><a href="CSSStyleSheet.html">CSSStyleSheet</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li><li><a href="StyleSheet.html">StyleSheet</a></li><li><a href="StyleSheetList.html">StyleSheetList</a></li><li><a href="LinkStyle.html">LinkStyle</a></li><li><a href="CSSRule.html">CSSRule</a></li><li><a href="CSSImportRule.html">CSSImportRule</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> refers to <code>CSSStyleSheet</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;construct-stylesheets&#x2F;">Constructable Stylesheet Objects</a> refers to <code>CSSStyleSheet</code></li>
+  </ul></section>

@@ -6,53 +6,59 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/manifest/#dom-webappmanifest">Web App Manifest</a> defines <code>WebAppManifest</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;WebAppManifest&lt;/strong&gt; {
-   &lt;a href=&#39;TextDirectionType.html&#39;&gt;TextDirectionType&lt;/a&gt; &lt;strong&gt;dir&lt;/strong&gt; = &quot;auto&quot;;
-   &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;lang&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;short_name&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;description&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ManifestImageResource.html&#39;&gt;ManifestImageResource&lt;/a&gt;&gt; &lt;strong&gt;icons&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ManifestImageResource.html&#39;&gt;ManifestImageResource&lt;/a&gt;&gt; &lt;strong&gt;screenshots&lt;/strong&gt;;
-   sequence&lt;&lt;span&gt;USVString&lt;/span&gt;&gt; &lt;strong&gt;categories&lt;/strong&gt;;
-   &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;iarc_rating_id&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;start_url&lt;/strong&gt;;
-   &lt;a href=&#39;DisplayModeType.html&#39;&gt;DisplayModeType&lt;/a&gt; &lt;strong&gt;display&lt;/strong&gt; = &quot;browser&quot;;
-   &lt;a href=&#39;OrientationLockType.html&#39;&gt;OrientationLockType&lt;/a&gt; &lt;strong&gt;orientation&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;theme_color&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;background_color&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;scope&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ExternalApplicationResource.html&#39;&gt;ExternalApplicationResource&lt;/a&gt;&gt; &lt;strong&gt;related_applications&lt;/strong&gt;;
-   &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;prefer_related_applications&lt;/strong&gt; = &quot;false&quot;;
-   sequence&lt;&lt;a href=&#39;ShortcutItem.html&#39;&gt;ShortcutItem&lt;/a&gt;&gt; &lt;strong&gt;shortcuts&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;manifest&#x2F;#dom-webappmanifest">Web App Manifest</a> defines <code>WebAppManifest</code></p>
+<pre class=webidl><code>dictionary <strong>WebAppManifest</strong> {
+   <a href='TextDirectionType.html'>TextDirectionType</a> <strong>dir</strong> &#x3D; &quot;auto&quot;;
+   <span>DOMString</span> <strong>lang</strong>;
+   <span>USVString</span> <strong>name</strong>;
+   <span>USVString</span> <strong>short_name</strong>;
+   <span>USVString</span> <strong>description</strong>;
+   sequence&lt;<a href='ManifestImageResource.html'>ManifestImageResource</a>&gt; <strong>icons</strong>;
+   sequence&lt;<a href='ManifestImageResource.html'>ManifestImageResource</a>&gt; <strong>screenshots</strong>;
+   sequence&lt;<span>USVString</span>&gt; <strong>categories</strong>;
+   <span>DOMString</span> <strong>iarc_rating_id</strong>;
+   <span>USVString</span> <strong>start_url</strong>;
+   <a href='DisplayModeType.html'>DisplayModeType</a> <strong>display</strong> &#x3D; &quot;browser&quot;;
+   <a href='OrientationLockType.html'>OrientationLockType</a> <strong>orientation</strong>;
+   <span>USVString</span> <strong>theme_color</strong>;
+   <span>USVString</span> <strong>background_color</strong>;
+   <span>USVString</span> <strong>scope</strong>;
+   sequence&lt;<a href='ExternalApplicationResource.html'>ExternalApplicationResource</a>&gt; <strong>related_applications</strong>;
+   <span>boolean</span> <strong>prefer_related_applications</strong> &#x3D; &quot;false&quot;;
+   sequence&lt;<a href='ShortcutItem.html'>ShortcutItem</a>&gt; <strong>shortcuts</strong>;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/web-share-target/">Web Share Target API</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;WebAppManifest&lt;/strong&gt; {
-  &lt;a href=&#39;ShareTarget.html&#39;&gt;ShareTarget&lt;/a&gt; &lt;strong&gt;share_target&lt;/strong&gt;;
-};</code></pre></li></ol>
-  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>dictionary &lt;strong&gt;WebAppManifest&lt;/strong&gt; {
-   &lt;a href=&#39;TextDirectionType.html&#39;&gt;TextDirectionType&lt;/a&gt; &lt;strong&gt;dir&lt;/strong&gt; = &quot;auto&quot;;
-   &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;lang&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;short_name&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;description&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ManifestImageResource.html&#39;&gt;ManifestImageResource&lt;/a&gt;&gt; &lt;strong&gt;icons&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ManifestImageResource.html&#39;&gt;ManifestImageResource&lt;/a&gt;&gt; &lt;strong&gt;screenshots&lt;/strong&gt;;
-   sequence&lt;&lt;span&gt;USVString&lt;/span&gt;&gt; &lt;strong&gt;categories&lt;/strong&gt;;
-   &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;iarc_rating_id&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;start_url&lt;/strong&gt;;
-   &lt;a href=&#39;DisplayModeType.html&#39;&gt;DisplayModeType&lt;/a&gt; &lt;strong&gt;display&lt;/strong&gt; = &quot;browser&quot;;
-   &lt;a href=&#39;OrientationLockType.html&#39;&gt;OrientationLockType&lt;/a&gt; &lt;strong&gt;orientation&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;theme_color&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;background_color&lt;/strong&gt;;
-   &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;scope&lt;/strong&gt;;
-   sequence&lt;&lt;a href=&#39;ExternalApplicationResource.html&#39;&gt;ExternalApplicationResource&lt;/a&gt;&gt; &lt;strong&gt;related_applications&lt;/strong&gt;;
-   &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;prefer_related_applications&lt;/strong&gt; = &quot;false&quot;;
-   sequence&lt;&lt;a href=&#39;ShortcutItem.html&#39;&gt;ShortcutItem&lt;/a&gt;&gt; &lt;strong&gt;shortcuts&lt;/strong&gt;;
-  &lt;a href=&#39;ShareTarget.html&#39;&gt;ShareTarget&lt;/a&gt; &lt;strong&gt;share_target&lt;/strong&gt;;
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;web-share-target&#x2F;">Web Share Target API</a><pre class=webidl><code>
+
+partial dictionary <strong>WebAppManifest</strong> {
+  <a href='ShareTarget.html'>ShareTarget</a> <strong>share_target</strong>;
+};</code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>dictionary <strong>WebAppManifest</strong> {
+   <a href='TextDirectionType.html'>TextDirectionType</a> <strong>dir</strong> &#x3D; &quot;auto&quot;;
+   <span>DOMString</span> <strong>lang</strong>;
+   <span>USVString</span> <strong>name</strong>;
+   <span>USVString</span> <strong>short_name</strong>;
+   <span>USVString</span> <strong>description</strong>;
+   sequence&lt;<a href='ManifestImageResource.html'>ManifestImageResource</a>&gt; <strong>icons</strong>;
+   sequence&lt;<a href='ManifestImageResource.html'>ManifestImageResource</a>&gt; <strong>screenshots</strong>;
+   sequence&lt;<span>USVString</span>&gt; <strong>categories</strong>;
+   <span>DOMString</span> <strong>iarc_rating_id</strong>;
+   <span>USVString</span> <strong>start_url</strong>;
+   <a href='DisplayModeType.html'>DisplayModeType</a> <strong>display</strong> &#x3D; &quot;browser&quot;;
+   <a href='OrientationLockType.html'>OrientationLockType</a> <strong>orientation</strong>;
+   <span>USVString</span> <strong>theme_color</strong>;
+   <span>USVString</span> <strong>background_color</strong>;
+   <span>USVString</span> <strong>scope</strong>;
+   sequence&lt;<a href='ExternalApplicationResource.html'>ExternalApplicationResource</a>&gt; <strong>related_applications</strong>;
+   <span>boolean</span> <strong>prefer_related_applications</strong> &#x3D; &quot;false&quot;;
+   sequence&lt;<a href='ShortcutItem.html'>ShortcutItem</a>&gt; <strong>shortcuts</strong>;
+  <a href='ShareTarget.html'>ShareTarget</a> <strong>share_target</strong>;
 };</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/web-share-target/">Web Share Target API</a> refers to <code>WebAppManifest</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;web-share-target&#x2F;">Web Share Target API</a> refers to <code>WebAppManifest</code></li>
+  </ul></section>

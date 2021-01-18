@@ -6,44 +6,55 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/canvas.html#htmlcanvaselement">HTML Standard</a> defines <code>HTMLCanvasElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLCanvasElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;canvas.html#htmlcanvaselement">HTML Standard</a> defines <code>HTMLCanvasElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
 
-  &lt;a href=&#39;RenderingContext.html&#39;&gt;RenderingContext&lt;/a&gt;? &lt;strong&gt;getContext&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;contextId&lt;/strong&gt;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;options&lt;/strong&gt; = null);
+  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span>DOMString</span> <strong>contextId</strong>, optional <span>any</span> <strong>options</strong> &#x3D; null);
 
-  &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;toDataURL&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt; = &quot;image/png&quot;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;quality&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;toBlob&lt;/strong&gt;(&lt;a href=&#39;BlobCallback.html&#39;&gt;BlobCallback&lt;/a&gt; &lt;strong&gt;_callback&lt;/strong&gt;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt; = &quot;image/png&quot;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;quality&lt;/strong&gt;);
-  &lt;a href=&#39;OffscreenCanvas.html&#39;&gt;OffscreenCanvas&lt;/a&gt; &lt;strong&gt;transferControlToOffscreen&lt;/strong&gt;();
+  <span>USVString</span> <strong>toDataURL</strong>(optional <span>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span>any</span> <strong>quality</strong>);
+  <span>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span>any</span> <strong>quality</strong>);
+  <a href='OffscreenCanvas.html'>OffscreenCanvas</a> <strong>transferControlToOffscreen</strong>();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/mediacapture-fromelement/#methods-0">Media Capture from DOM Elements</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLCanvasElement&lt;/strong&gt; {
-    &lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt; &lt;strong&gt;captureStream&lt;/strong&gt; (optional &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;frameRequestRate&lt;/strong&gt;);
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;#methods-0">Media Capture from DOM Elements</a><pre class=webidl><code>
+
+partial interface <strong>HTMLCanvasElement</strong> {
+    <a href='MediaStream.html'>MediaStream</a> <strong>captureStream</strong> (optional <span>double</span> <strong>frameRequestRate</strong>);
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLCanvasElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
 
-  &lt;a href=&#39;RenderingContext.html&#39;&gt;RenderingContext&lt;/a&gt;? &lt;strong&gt;getContext&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;contextId&lt;/strong&gt;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;options&lt;/strong&gt; = null);
+  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span>DOMString</span> <strong>contextId</strong>, optional <span>any</span> <strong>options</strong> &#x3D; null);
 
-  &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;toDataURL&lt;/strong&gt;(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt; = &quot;image/png&quot;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;quality&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;toBlob&lt;/strong&gt;(&lt;a href=&#39;BlobCallback.html&#39;&gt;BlobCallback&lt;/a&gt; &lt;strong&gt;_callback&lt;/strong&gt;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt; = &quot;image/png&quot;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;quality&lt;/strong&gt;);
-  &lt;a href=&#39;OffscreenCanvas.html&#39;&gt;OffscreenCanvas&lt;/a&gt; &lt;strong&gt;transferControlToOffscreen&lt;/strong&gt;();
-    &lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt; &lt;strong&gt;captureStream&lt;/strong&gt; (optional &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;frameRequestRate&lt;/strong&gt;);
+  <span>USVString</span> <strong>toDataURL</strong>(optional <span>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span>any</span> <strong>quality</strong>);
+  <span>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span>any</span> <strong>quality</strong>);
+  <a href='OffscreenCanvas.html'>OffscreenCanvas</a> <strong>transferControlToOffscreen</strong>();
+    <a href='MediaStream.html'>MediaStream</a> <strong>captureStream</strong> (optional <span>double</span> <strong>frameRequestRate</strong>);
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></li><li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li><li><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></li></ul>
+  
+  <ul>
+    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></li><li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li><li><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> refers to <code>HTMLCanvasElement</code></li><li><a href="https://www.w3.org/TR/mediacapture-fromelement/">Media Capture from DOM Elements</a> refers to <code>HTMLCanvasElement</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.khronos.org&#x2F;registry&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;">WebGL Specification</a> refers to <code>HTMLCanvasElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;">Media Capture from DOM Elements</a> refers to <code>HTMLCanvasElement</code></li>
+  </ul></section>

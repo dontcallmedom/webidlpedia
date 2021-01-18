@@ -6,29 +6,30 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/mediacapture-record/#mediarecorder">MediaStream Recording</a> defines <code>MediaRecorder</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;MediaRecorder&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  constructor(&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt; &lt;strong&gt;stream&lt;/strong&gt;, optional &lt;a href=&#39;MediaRecorderOptions.html&#39;&gt;MediaRecorderOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  readonly attribute &lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt; &lt;strong&gt;stream&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;mimeType&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;RecordingState.html&#39;&gt;RecordingState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstart&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstop&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondataavailable&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpause&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onresume&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;videoBitsPerSecond&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;audioBitsPerSecond&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;BitrateMode.html&#39;&gt;BitrateMode&lt;/a&gt; &lt;strong&gt;audioBitrateMode&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;start&lt;/strong&gt;(optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;timeslice&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stop&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;pause&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;resume&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;requestData&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-record&#x2F;#mediarecorder">MediaStream Recording</a> defines <code>MediaRecorder</code></p>
+<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  constructor(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>, optional <a href='MediaRecorderOptions.html'>MediaRecorderOptions</a> <strong>options</strong> &#x3D; {});
+  readonly attribute <a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>;
+  readonly attribute <span>DOMString</span> <strong>mimeType</strong>;
+  readonly attribute <a href='RecordingState.html'>RecordingState</a> <strong>state</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstop</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondataavailable</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
+  readonly attribute <span>unsigned long</span> <strong>videoBitsPerSecond</strong>;
+  readonly attribute <span>unsigned long</span> <strong>audioBitsPerSecond</strong>;
+  readonly attribute <a href='BitrateMode.html'>BitrateMode</a> <strong>audioBitrateMode</strong>;
 
-  static &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isTypeSupported&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;);
+  <span>undefined</span> <strong>start</strong>(optional <span>unsigned long</span> <strong>timeslice</strong>);
+  <span>undefined</span> <strong>stop</strong>();
+  <span>undefined</span> <strong>pause</strong>();
+  <span>undefined</span> <strong>resume</strong>();
+  <span>undefined</span> <strong>requestData</strong>();
+
+  static <span>boolean</span> <strong>isTypeSupported</strong>(<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
   

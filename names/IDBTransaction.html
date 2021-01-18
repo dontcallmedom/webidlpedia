@@ -6,29 +6,34 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/IndexedDB/#idbtransaction">Indexed Database API 3.0</a> defines <code>IDBTransaction</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;IDBTransaction&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;DOMStringList.html&#39;&gt;DOMStringList&lt;/a&gt; &lt;strong&gt;objectStoreNames&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;IDBTransactionMode.html&#39;&gt;IDBTransactionMode&lt;/a&gt; &lt;strong&gt;mode&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;IDBTransactionDurability.html&#39;&gt;IDBTransactionDurability&lt;/a&gt; &lt;strong&gt;durability&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;IDBDatabase.html&#39;&gt;IDBDatabase&lt;/a&gt; &lt;strong&gt;db&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMException.html&#39;&gt;DOMException&lt;/a&gt;? &lt;strong&gt;error&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;IndexedDB&#x2F;#idbtransaction">Indexed Database API 3.0</a> defines <code>IDBTransaction</code></p>
+<pre class=webidl><code>
 
-  &lt;a href=&#39;IDBObjectStore.html&#39;&gt;IDBObjectStore&lt;/a&gt; &lt;strong&gt;objectStore&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;commit&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;abort&lt;/strong&gt;();
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>IDBTransaction</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>objectStoreNames</strong>;
+  readonly attribute <a href='IDBTransactionMode.html'>IDBTransactionMode</a> <strong>mode</strong>;
+  readonly attribute <a href='IDBTransactionDurability.html'>IDBTransactionDurability</a> <strong>durability</strong>;
+  [SameObject] readonly attribute <a href='IDBDatabase.html'>IDBDatabase</a> <strong>db</strong>;
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
 
-  // Event handlers:
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onabort&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncomplete&lt;/strong&gt;;
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
+  <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>objectStore</strong>(<span>DOMString</span> <strong>name</strong>);
+  <span>undefined</span> <strong>commit</strong>();
+  <span>undefined</span> <strong>abort</strong>();<span class="comment">
+
+  &#x2F;&#x2F; Event handlers:
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncomplete</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="IDBRequest.html">IDBRequest</a></li><li><a href="IDBDatabase.html">IDBDatabase</a></li><li><a href="IDBObjectStore.html">IDBObjectStore</a></li></ul>
+  
+  <ul>
+    <li><a href="IDBRequest.html">IDBRequest</a></li><li><a href="IDBDatabase.html">IDBDatabase</a></li><li><a href="IDBObjectStore.html">IDBObjectStore</a></li>
+  </ul>
 </section>
   

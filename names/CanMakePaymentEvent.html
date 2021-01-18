@@ -6,14 +6,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/payment-handler/#dom-canmakepaymentevent">Payment Handler API</a> defines <code>CanMakePaymentEvent</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;ServiceWorker.html&#39;&gt;ServiceWorker&lt;/a&gt;]
-interface &lt;strong&gt;CanMakePaymentEvent&lt;/strong&gt; : &lt;a href=&#39;ExtendableEvent.html&#39;&gt;ExtendableEvent&lt;/a&gt; {
-  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;a href=&#39;CanMakePaymentEventInit.html&#39;&gt;CanMakePaymentEventInit&lt;/a&gt; &lt;strong&gt;eventInitDict&lt;/strong&gt; = {});
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;topOrigin&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;paymentRequestOrigin&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;PaymentMethodData.html&#39;&gt;PaymentMethodData&lt;/a&gt;&gt; &lt;strong&gt;methodData&lt;/strong&gt;;
-  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;respondWith&lt;/strong&gt;(Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;canMakePaymentResponse&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-handler&#x2F;#dom-canmakepaymentevent">Payment Handler API</a> defines <code>CanMakePaymentEvent</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>]
+interface <strong>CanMakePaymentEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='CanMakePaymentEventInit.html'>CanMakePaymentEventInit</a> <strong>eventInitDict</strong> &#x3D; {});
+  readonly attribute <span>USVString</span> <strong>topOrigin</strong>;
+  readonly attribute <span>USVString</span> <strong>paymentRequestOrigin</strong>;
+  readonly attribute FrozenArray&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>;
+  <a href='void.html'>void</a> <strong>respondWith</strong>(Promise&lt;<span>boolean</span>&gt; <strong>canMakePaymentResponse</strong>);
 };</code></pre>
   
   

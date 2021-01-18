@@ -6,18 +6,23 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://dom.spec.whatwg.org/">DOM Standard</a> defines <code>XPathEvaluatorBase</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;XPathEvaluatorBase&lt;/strong&gt; {
-  [NewObject] &lt;a href=&#39;XPathExpression.html&#39;&gt;XPathExpression&lt;/a&gt; &lt;strong&gt;createExpression&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;expression&lt;/strong&gt;, optional &lt;a href=&#39;XPathNSResolver.html&#39;&gt;XPathNSResolver&lt;/a&gt;? &lt;strong&gt;resolver&lt;/strong&gt; = null);
-  &lt;a href=&#39;XPathNSResolver.html&#39;&gt;XPathNSResolver&lt;/a&gt; &lt;strong&gt;createNSResolver&lt;/strong&gt;(&lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;nodeResolver&lt;/strong&gt;);
-  // XPathResult.ANY_TYPE = 0
-  &lt;a href=&#39;XPathResult.html&#39;&gt;XPathResult&lt;/a&gt; &lt;strong&gt;evaluate&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;expression&lt;/strong&gt;, &lt;a href=&#39;Node.html&#39;&gt;Node&lt;/a&gt; &lt;strong&gt;contextNode&lt;/strong&gt;, optional &lt;a href=&#39;XPathNSResolver.html&#39;&gt;XPathNSResolver&lt;/a&gt;? &lt;strong&gt;resolver&lt;/strong&gt; = null, optional &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt; = 0, optional &lt;a href=&#39;XPathResult.html&#39;&gt;XPathResult&lt;/a&gt;? &lt;strong&gt;result&lt;/strong&gt; = null);
+  <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> defines <code>XPathEvaluatorBase</code></p>
+<pre class=webidl><code>
+
+interface mixin <strong>XPathEvaluatorBase</strong> {
+  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);
+  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);<span class="comment">
+  &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
+  </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Document.html">Document</a></li><li><a href="XPathEvaluator.html">XPathEvaluator</a></li></ul>
+  
+  <ul>
+    <li><a href="Document.html">Document</a></li><li><a href="XPathEvaluator.html">XPathEvaluator</a></li>
+  </ul>
 </section>
   

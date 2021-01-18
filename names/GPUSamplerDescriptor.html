@@ -6,24 +6,29 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://gpuweb.github.io/gpuweb/#dictdef-gpusamplerdescriptor">WebGPU</a> defines <code>GPUSamplerDescriptor</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;GPUSamplerDescriptor&lt;/strong&gt; : &lt;a href=&#39;GPUObjectDescriptorBase.html&#39;&gt;GPUObjectDescriptorBase&lt;/a&gt; {
-    &lt;a href=&#39;GPUAddressMode.html&#39;&gt;GPUAddressMode&lt;/a&gt; &lt;strong&gt;addressModeU&lt;/strong&gt; = &quot;clamp-to-edge&quot;;
-    &lt;a href=&#39;GPUAddressMode.html&#39;&gt;GPUAddressMode&lt;/a&gt; &lt;strong&gt;addressModeV&lt;/strong&gt; = &quot;clamp-to-edge&quot;;
-    &lt;a href=&#39;GPUAddressMode.html&#39;&gt;GPUAddressMode&lt;/a&gt; &lt;strong&gt;addressModeW&lt;/strong&gt; = &quot;clamp-to-edge&quot;;
-    &lt;a href=&#39;GPUFilterMode.html&#39;&gt;GPUFilterMode&lt;/a&gt; &lt;strong&gt;magFilter&lt;/strong&gt; = &quot;nearest&quot;;
-    &lt;a href=&#39;GPUFilterMode.html&#39;&gt;GPUFilterMode&lt;/a&gt; &lt;strong&gt;minFilter&lt;/strong&gt; = &quot;nearest&quot;;
-    &lt;a href=&#39;GPUFilterMode.html&#39;&gt;GPUFilterMode&lt;/a&gt; &lt;strong&gt;mipmapFilter&lt;/strong&gt; = &quot;nearest&quot;;
-    &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;lodMinClamp&lt;/strong&gt; = 0;
-    &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;lodMaxClamp&lt;/strong&gt; = 0xffffffff; // TODO: What should this be? Was Number.MAX_VALUE.
-    &lt;a href=&#39;GPUCompareFunction.html&#39;&gt;GPUCompareFunction&lt;/a&gt; &lt;strong&gt;compare&lt;/strong&gt;;
-    [Clamp] &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;maxAnisotropy&lt;/strong&gt; = 1;
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dictdef-gpusamplerdescriptor">WebGPU</a> defines <code>GPUSamplerDescriptor</code></p>
+<pre class=webidl><code>
+
+dictionary <strong>GPUSamplerDescriptor</strong> : <a href='GPUObjectDescriptorBase.html'>GPUObjectDescriptorBase</a> {
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeU</strong> &#x3D; &quot;clamp-to-edge&quot;;
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeV</strong> &#x3D; &quot;clamp-to-edge&quot;;
+    <a href='GPUAddressMode.html'>GPUAddressMode</a> <strong>addressModeW</strong> &#x3D; &quot;clamp-to-edge&quot;;
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>magFilter</strong> &#x3D; &quot;nearest&quot;;
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>minFilter</strong> &#x3D; &quot;nearest&quot;;
+    <a href='GPUFilterMode.html'>GPUFilterMode</a> <strong>mipmapFilter</strong> &#x3D; &quot;nearest&quot;;
+    <span>float</span> <strong>lodMinClamp</strong> &#x3D; 0;
+    <span>float</span> <strong>lodMaxClamp</strong> &#x3D; 0xffffffff;<span class="comment"> &#x2F;&#x2F; TODO: What should this be? Was Number.MAX_VALUE.
+    </span><a href='GPUCompareFunction.html'>GPUCompareFunction</a> <strong>compare</strong>;
+    [Clamp] <span>unsigned short</span> <strong>maxAnisotropy</strong> &#x3D; 1;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="GPUDevice.html">GPUDevice</a></li></ul>
+  
+  <ul>
+    <li><a href="GPUDevice.html">GPUDevice</a></li>
+  </ul>
 </section>
   

@@ -6,26 +6,33 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://dom.spec.whatwg.org/#domtokenlist">DOM Standard</a> defines <code>DOMTokenList</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;DOMTokenList&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;length&lt;/strong&gt;;
-  getter &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;item&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;contains&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;token&lt;/strong&gt;);
-  [CEReactions] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;add&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt;... &lt;strong&gt;tokens&lt;/strong&gt;);
-  [CEReactions] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;remove&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt;... &lt;strong&gt;tokens&lt;/strong&gt;);
-  [CEReactions] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;toggle&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;token&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;force&lt;/strong&gt;);
-  [CEReactions] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;replace&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;token&lt;/strong&gt;, &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;newToken&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;supports&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;token&lt;/strong&gt;);
-  [CEReactions] stringifier attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;;
-  iterable&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;;
+  <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#domtokenlist">DOM Standard</a> defines <code>DOMTokenList</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>DOMTokenList</strong> {
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
+  getter <span>DOMString</span>? <strong>item</strong>(<span>unsigned long</span> <strong>index</strong>);
+  <span>boolean</span> <strong>contains</strong>(<span>DOMString</span> <strong>token</strong>);
+  [CEReactions] <span>undefined</span> <strong>add</strong>(<span>DOMString</span>... <strong>tokens</strong>);
+  [CEReactions] <span>undefined</span> <strong>remove</strong>(<span>DOMString</span>... <strong>tokens</strong>);
+  [CEReactions] <span>boolean</span> <strong>toggle</strong>(<span>DOMString</span> <strong>token</strong>, optional <span>boolean</span> <strong>force</strong>);
+  [CEReactions] <span>boolean</span> <strong>replace</strong>(<span>DOMString</span> <strong>token</strong>, <span>DOMString</span> <strong>newToken</strong>);
+  <span>boolean</span> <strong>supports</strong>(<span>DOMString</span> <strong>token</strong>);
+  [CEReactions] stringifier attribute <span>DOMString</span> <strong>value</strong>;
+  iterable&lt;<span>DOMString</span>&gt;;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Element.html">Element</a></li><li><a href="HTMLLinkElement.html">HTMLLinkElement</a></li><li><a href="HTMLAnchorElement.html">HTMLAnchorElement</a></li><li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li><li><a href="HTMLAreaElement.html">HTMLAreaElement</a></li><li><a href="HTMLFormElement.html">HTMLFormElement</a></li><li><a href="HTMLOutputElement.html">HTMLOutputElement</a></li><li><a href="ElementInternals.html">ElementInternals</a></li><li><a href="Element.html">Element</a></li><li><a href="SVGAElement.html">SVGAElement</a></li></ul>
+  
+  <ul>
+    <li><a href="Element.html">Element</a></li><li><a href="HTMLLinkElement.html">HTMLLinkElement</a></li><li><a href="HTMLAnchorElement.html">HTMLAnchorElement</a></li><li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li><li><a href="HTMLAreaElement.html">HTMLAreaElement</a></li><li><a href="HTMLFormElement.html">HTMLFormElement</a></li><li><a href="HTMLOutputElement.html">HTMLOutputElement</a></li><li><a href="Element.html">Element</a></li><li><a href="SVGAElement.html">SVGAElement</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> refers to <code>DOMTokenList</code></li><li><a href="https://wicg.github.io/custom-state-pseudo-class/">Custom State Pseudo Class</a> refers to <code>DOMTokenList</code></li><li><a href="https://www.w3.org/TR/css-shadow-parts-1/">CSS Shadow Parts</a> refers to <code>DOMTokenList</code></li><li><a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a> refers to <code>DOMTokenList</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>DOMTokenList</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-shadow-parts-1&#x2F;">CSS Shadow Parts</a> refers to <code>DOMTokenList</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a> refers to <code>DOMTokenList</code></li>
+  </ul></section>

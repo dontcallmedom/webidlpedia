@@ -6,56 +6,64 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement">HTML Standard</a> defines <code>HTMLScriptElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLScriptElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#htmlscriptelement">HTML Standard</a> defines <code>HTMLScriptElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;noModule&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;async&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;defer&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;crossOrigin&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;integrity&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;<span class="comment">
 
-  // also has obsolete members
-};
+  &#x2F;&#x2F; also has obsolete members
+</span>};
 
-partial interface &lt;strong&gt;HTMLScriptElement&lt;/strong&gt; {
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;charset&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;event&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;htmlFor&lt;/strong&gt;;
+partial interface <strong>HTMLScriptElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/SRI/#HTMLScriptElement">Subresource Integrity</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLScriptElement&lt;/strong&gt; {
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;integrity&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SRI&#x2F;#HTMLScriptElement">Subresource Integrity</a><pre class=webidl><code>
+
+partial interface <strong>HTMLScriptElement</strong> {
+  attribute <span>DOMString</span> <strong>integrity</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLScriptElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;noModule&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;async&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;defer&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;crossOrigin&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;text&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;integrity&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;charset&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;event&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;htmlFor&lt;/strong&gt;;
-  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;integrity&lt;/strong&gt;;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
+  attribute <span>DOMString</span> <strong>integrity</strong>;<span class="comment">
 
-  // also has obsolete members
-};</code></pre></details>
+  &#x2F;&#x2F; also has obsolete members
+</span>};</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/SRI/">Subresource Integrity</a> refers to <code>HTMLScriptElement</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SRI&#x2F;">Subresource Integrity</a> refers to <code>HTMLScriptElement</code></li>
+  </ul></section>

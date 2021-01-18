@@ -6,22 +6,27 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/push-api/#dom-pushsubscription">Push API</a> defines <code>PushSubscription</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), SecureContext]
-interface &lt;strong&gt;PushSubscription&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;endpoint&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMTimeStamp.html&#39;&gt;DOMTimeStamp&lt;/a&gt;? &lt;strong&gt;expirationTime&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;PushSubscriptionOptions.html&#39;&gt;PushSubscriptionOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt;;
-  &lt;span&gt;ArrayBuffer&lt;/span&gt;? &lt;strong&gt;getKey&lt;/strong&gt;(&lt;a href=&#39;PushEncryptionKeyName.html&#39;&gt;PushEncryptionKeyName&lt;/a&gt; &lt;strong&gt;name&lt;/strong&gt;);
-  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;unsubscribe&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;push-api&#x2F;#dom-pushsubscription">Push API</a> defines <code>PushSubscription</code></p>
+<pre class=webidl><code>
 
-  &lt;a href=&#39;PushSubscriptionJSON.html&#39;&gt;PushSubscriptionJSON&lt;/a&gt; &lt;strong&gt;toJSON&lt;/strong&gt;();
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext]
+interface <strong>PushSubscription</strong> {
+  readonly attribute <span>USVString</span> <strong>endpoint</strong>;
+  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a>? <strong>expirationTime</strong>;
+  [SameObject] readonly attribute <a href='PushSubscriptionOptions.html'>PushSubscriptionOptions</a> <strong>options</strong>;
+  <span>ArrayBuffer</span>? <strong>getKey</strong>(<a href='PushEncryptionKeyName.html'>PushEncryptionKeyName</a> <strong>name</strong>);
+  Promise&lt;<span>boolean</span>&gt; <strong>unsubscribe</strong>();
+
+  <a href='PushSubscriptionJSON.html'>PushSubscriptionJSON</a> <strong>toJSON</strong>();
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="PushManager.html">PushManager</a></li><li><a href="PushSubscriptionChangeEvent.html">PushSubscriptionChangeEvent</a></li><li><a href="PushSubscriptionChangeEventInit.html">PushSubscriptionChangeEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="PushManager.html">PushManager</a></li><li><a href="PushSubscriptionChangeEvent.html">PushSubscriptionChangeEvent</a></li><li><a href="PushSubscriptionChangeEventInit.html">PushSubscriptionChangeEventInit</a></li>
+  </ul>
 </section>
   

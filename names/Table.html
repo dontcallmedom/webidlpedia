@@ -6,14 +6,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webassembly.github.io/spec/js-api/#table">WebAssembly JavaScript Interface</a> defines <code>Table</code></p>
-<pre class=webidl><code>[LegacyNamespace=&lt;a href=&#39;WebAssembly.html&#39;&gt;WebAssembly&lt;/a&gt;, Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;Worklet.html&#39;&gt;Worklet&lt;/a&gt;)]
-interface &lt;strong&gt;Table&lt;/strong&gt; {
-  constructor(&lt;a href=&#39;TableDescriptor.html&#39;&gt;TableDescriptor&lt;/a&gt; &lt;strong&gt;descriptor&lt;/strong&gt;);
-  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;grow&lt;/strong&gt;([EnforceRange] &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;delta&lt;/strong&gt;);
-  &lt;a href=&#39;Function.html&#39;&gt;Function&lt;/a&gt;? &lt;strong&gt;get&lt;/strong&gt;([EnforceRange] &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;set&lt;/strong&gt;([EnforceRange] &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;, &lt;a href=&#39;Function.html&#39;&gt;Function&lt;/a&gt;? &lt;strong&gt;value&lt;/strong&gt;);
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;length&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#table">WebAssembly JavaScript Interface</a> defines <code>Table</code></p>
+<pre class=webidl><code>
+
+[LegacyNamespace&#x3D;<a href='WebAssembly.html'>WebAssembly</a>, Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+interface <strong>Table</strong> {
+  constructor(<a href='TableDescriptor.html'>TableDescriptor</a> <strong>descriptor</strong>);
+  <span>unsigned long</span> <strong>grow</strong>([EnforceRange] <span>unsigned long</span> <strong>delta</strong>);
+  <a href='Function.html'>Function</a>? <strong>get</strong>([EnforceRange] <span>unsigned long</span> <strong>index</strong>);
+  <span>undefined</span> <strong>set</strong>([EnforceRange] <span>unsigned long</span> <strong>index</strong>, <a href='Function.html'>Function</a>? <strong>value</strong>);
+  readonly attribute <span>unsigned long</span> <strong>length</strong>;
 };</code></pre>
   
   

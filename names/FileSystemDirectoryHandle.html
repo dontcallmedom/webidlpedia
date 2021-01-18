@@ -6,23 +6,28 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/file-system-access/#filesystemdirectoryhandle">File System Access</a> defines <code>FileSystemDirectoryHandle</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), SecureContext, Serializable]
-interface &lt;strong&gt;FileSystemDirectoryHandle&lt;/strong&gt; : &lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt; {
-  async iterable&lt;&lt;span&gt;USVString&lt;/span&gt;, &lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt;&gt;;
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;#filesystemdirectoryhandle">File System Access</a> defines <code>FileSystemDirectoryHandle</code></p>
+<pre class=webidl><code>
 
-  Promise&lt;&lt;a href=&#39;FileSystemFileHandle.html&#39;&gt;FileSystemFileHandle&lt;/a&gt;&gt; &lt;strong&gt;getFileHandle&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;, optional &lt;a href=&#39;FileSystemGetFileOptions.html&#39;&gt;FileSystemGetFileOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;a href=&#39;FileSystemDirectoryHandle.html&#39;&gt;FileSystemDirectoryHandle&lt;/a&gt;&gt; &lt;strong&gt;getDirectoryHandle&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;, optional &lt;a href=&#39;FileSystemGetDirectoryOptions.html&#39;&gt;FileSystemGetDirectoryOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
+interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle.html'>FileSystemHandle</a> {
+  async iterable&lt;<span>USVString</span>, <a href='FileSystemHandle.html'>FileSystemHandle</a>&gt;;
 
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;removeEntry&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;, optional &lt;a href=&#39;FileSystemRemoveOptions.html&#39;&gt;FileSystemRemoveOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>getFileHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetFileOptions.html'>FileSystemGetFileOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>getDirectoryHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetDirectoryOptions.html'>FileSystemGetDirectoryOptions</a> <strong>options</strong> &#x3D; {});
 
-  Promise&lt;sequence&lt;&lt;span&gt;USVString&lt;/span&gt;&gt;?&gt; &lt;strong&gt;resolve&lt;/strong&gt;(&lt;a href=&#39;FileSystemHandle.html&#39;&gt;FileSystemHandle&lt;/a&gt; &lt;strong&gt;possibleDescendant&lt;/strong&gt;);
+  Promise&lt;<span>undefined</span>&gt; <strong>removeEntry</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemRemoveOptions.html'>FileSystemRemoveOptions</a> <strong>options</strong> &#x3D; {});
+
+  Promise&lt;sequence&lt;<span>USVString</span>&gt;?&gt; <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="FileSystemDirectoryHandle.html">FileSystemDirectoryHandle</a></li><li><a href="Window.html">Window</a></li><li><a href="StorageManager.html">StorageManager</a></li></ul>
+  
+  <ul>
+    <li><a href="FileSystemDirectoryHandle.html">FileSystemDirectoryHandle</a></li><li><a href="Window.html">Window</a></li><li><a href="StorageManager.html">StorageManager</a></li>
+  </ul>
 </section>
   

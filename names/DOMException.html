@@ -6,47 +6,53 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://heycam.github.io/webidl/#idl-DOMException">Web IDL</a> defines <code>DOMException</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;),
+  <p><a href="https:&#x2F;&#x2F;heycam.github.io&#x2F;webidl&#x2F;#idl-DOMException">Web IDL</a> defines <code>DOMException</code></p>
+<pre class=webidl><code>
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable]
-interface &lt;strong&gt;DOMException&lt;/strong&gt; { // but see below note about ECMAScript binding
-  constructor(optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt; = &quot;&quot;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt; = &quot;Error&quot;);
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;code&lt;/strong&gt;;
+interface <strong>DOMException</strong> {<span class="comment"> &#x2F;&#x2F; but see below note about ECMAScript binding
+  </span>constructor(optional <span>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>name</strong> &#x3D; &quot;Error&quot;);
+  readonly attribute <span>DOMString</span> <strong>name</strong>;
+  readonly attribute <span>DOMString</span> <strong>message</strong>;
+  readonly attribute <span>unsigned short</span> <strong>code</strong>;
 
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INDEX_SIZE_ERR&lt;/strong&gt; = 1;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;DOMSTRING_SIZE_ERR&lt;/strong&gt; = 2;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;HIERARCHY_REQUEST_ERR&lt;/strong&gt; = 3;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;WRONG_DOCUMENT_ERR&lt;/strong&gt; = 4;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INVALID_CHARACTER_ERR&lt;/strong&gt; = 5;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NO_DATA_ALLOWED_ERR&lt;/strong&gt; = 6;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NO_MODIFICATION_ALLOWED_ERR&lt;/strong&gt; = 7;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NOT_FOUND_ERR&lt;/strong&gt; = 8;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NOT_SUPPORTED_ERR&lt;/strong&gt; = 9;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INUSE_ATTRIBUTE_ERR&lt;/strong&gt; = 10;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INVALID_STATE_ERR&lt;/strong&gt; = 11;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SYNTAX_ERR&lt;/strong&gt; = 12;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INVALID_MODIFICATION_ERR&lt;/strong&gt; = 13;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NAMESPACE_ERR&lt;/strong&gt; = 14;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INVALID_ACCESS_ERR&lt;/strong&gt; = 15;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;VALIDATION_ERR&lt;/strong&gt; = 16;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TYPE_MISMATCH_ERR&lt;/strong&gt; = 17;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SECURITY_ERR&lt;/strong&gt; = 18;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NETWORK_ERR&lt;/strong&gt; = 19;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;ABORT_ERR&lt;/strong&gt; = 20;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;URL_MISMATCH_ERR&lt;/strong&gt; = 21;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;QUOTA_EXCEEDED_ERR&lt;/strong&gt; = 22;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;TIMEOUT_ERR&lt;/strong&gt; = 23;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;INVALID_NODE_TYPE_ERR&lt;/strong&gt; = 24;
-  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;DATA_CLONE_ERR&lt;/strong&gt; = 25;
+  const <span>unsigned short</span> <strong>INDEX_SIZE_ERR</strong> &#x3D; 1;
+  const <span>unsigned short</span> <strong>DOMSTRING_SIZE_ERR</strong> &#x3D; 2;
+  const <span>unsigned short</span> <strong>HIERARCHY_REQUEST_ERR</strong> &#x3D; 3;
+  const <span>unsigned short</span> <strong>WRONG_DOCUMENT_ERR</strong> &#x3D; 4;
+  const <span>unsigned short</span> <strong>INVALID_CHARACTER_ERR</strong> &#x3D; 5;
+  const <span>unsigned short</span> <strong>NO_DATA_ALLOWED_ERR</strong> &#x3D; 6;
+  const <span>unsigned short</span> <strong>NO_MODIFICATION_ALLOWED_ERR</strong> &#x3D; 7;
+  const <span>unsigned short</span> <strong>NOT_FOUND_ERR</strong> &#x3D; 8;
+  const <span>unsigned short</span> <strong>NOT_SUPPORTED_ERR</strong> &#x3D; 9;
+  const <span>unsigned short</span> <strong>INUSE_ATTRIBUTE_ERR</strong> &#x3D; 10;
+  const <span>unsigned short</span> <strong>INVALID_STATE_ERR</strong> &#x3D; 11;
+  const <span>unsigned short</span> <strong>SYNTAX_ERR</strong> &#x3D; 12;
+  const <span>unsigned short</span> <strong>INVALID_MODIFICATION_ERR</strong> &#x3D; 13;
+  const <span>unsigned short</span> <strong>NAMESPACE_ERR</strong> &#x3D; 14;
+  const <span>unsigned short</span> <strong>INVALID_ACCESS_ERR</strong> &#x3D; 15;
+  const <span>unsigned short</span> <strong>VALIDATION_ERR</strong> &#x3D; 16;
+  const <span>unsigned short</span> <strong>TYPE_MISMATCH_ERR</strong> &#x3D; 17;
+  const <span>unsigned short</span> <strong>SECURITY_ERR</strong> &#x3D; 18;
+  const <span>unsigned short</span> <strong>NETWORK_ERR</strong> &#x3D; 19;
+  const <span>unsigned short</span> <strong>ABORT_ERR</strong> &#x3D; 20;
+  const <span>unsigned short</span> <strong>URL_MISMATCH_ERR</strong> &#x3D; 21;
+  const <span>unsigned short</span> <strong>QUOTA_EXCEEDED_ERR</strong> &#x3D; 22;
+  const <span>unsigned short</span> <strong>TIMEOUT_ERR</strong> &#x3D; 23;
+  const <span>unsigned short</span> <strong>INVALID_NODE_TYPE_ERR</strong> &#x3D; 24;
+  const <span>unsigned short</span> <strong>DATA_CLONE_ERR</strong> &#x3D; 25;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="OverconstrainedError.html">OverconstrainedError</a></li><li><a href="RTCError.html">RTCError</a></li></ul>
+  
+  <ul>
+    <li><a href="OverconstrainedError.html">OverconstrainedError</a></li><li><a href="RTCError.html">RTCError</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/mediacapture-streams/">Media Capture and Streams</a> refers to <code>DOMException</code></li><li><a href="https://www.w3.org/TR/webrtc/">WebRTC 1.0: Real-Time Communication Between Browsers</a> refers to <code>DOMException</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-streams&#x2F;">Media Capture and Streams</a> refers to <code>DOMException</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc&#x2F;">WebRTC 1.0: Real-Time Communication Between Browsers</a> refers to <code>DOMException</code></li>
+  </ul></section>

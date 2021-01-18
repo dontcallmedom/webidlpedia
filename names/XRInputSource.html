@@ -6,38 +6,46 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://immersive-web.github.io/webxr/#xrinputsource">WebXR Device API</a> defines <code>XRInputSource</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;XRInputSource&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;XRHandedness.html&#39;&gt;XRHandedness&lt;/a&gt; &lt;strong&gt;handedness&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;XRTargetRayMode.html&#39;&gt;XRTargetRayMode&lt;/a&gt; &lt;strong&gt;targetRayMode&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;targetRaySpace&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt;? &lt;strong&gt;gripSpace&lt;/strong&gt;;
-  [SameObject] readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;profiles&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#xrinputsource">WebXR Device API</a> defines <code>XRInputSource</code></p>
+<pre class=webidl><code>
+
+[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>XRInputSource</strong> {
+  readonly attribute <a href='XRHandedness.html'>XRHandedness</a> <strong>handedness</strong>;
+  readonly attribute <a href='XRTargetRayMode.html'>XRTargetRayMode</a> <strong>targetRayMode</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a> <strong>targetRaySpace</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a>? <strong>gripSpace</strong>;
+  [SameObject] readonly attribute FrozenArray&lt;<span>DOMString</span>&gt; <strong>profiles</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/#xrinputsource-interface">WebXR Gamepads Module - Level 1</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;XRInputSource&lt;/strong&gt; {
-  [SameObject] readonly attribute &lt;a href=&#39;Gamepad.html&#39;&gt;Gamepad&lt;/a&gt;? &lt;strong&gt;gamepad&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/#xrinputsource-interface">WebXR Hand Input Module - Level 1</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;XRInputSource&lt;/strong&gt; {
-   readonly attribute &lt;a href=&#39;XRHand.html&#39;&gt;XRHand&lt;/a&gt;? &lt;strong&gt;hand&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-gamepads-module-1&#x2F;#xrinputsource-interface">WebXR Gamepads Module - Level 1</a><pre class=webidl><code>partial interface <strong>XRInputSource</strong> {
+  [SameObject] readonly attribute <a href='Gamepad.html'>Gamepad</a>? <strong>gamepad</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hand-input-1&#x2F;#xrinputsource-interface">WebXR Hand Input Module - Level 1</a><pre class=webidl><code>partial interface <strong>XRInputSource</strong> {
+   readonly attribute <a href='XRHand.html'>XRHand</a>? <strong>hand</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;XRInputSource&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;XRHandedness.html&#39;&gt;XRHandedness&lt;/a&gt; &lt;strong&gt;handedness&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;XRTargetRayMode.html&#39;&gt;XRTargetRayMode&lt;/a&gt; &lt;strong&gt;targetRayMode&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;targetRaySpace&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt;? &lt;strong&gt;gripSpace&lt;/strong&gt;;
-  [SameObject] readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;profiles&lt;/strong&gt;;
-  [SameObject] readonly attribute &lt;a href=&#39;Gamepad.html&#39;&gt;Gamepad&lt;/a&gt;? &lt;strong&gt;gamepad&lt;/strong&gt;;
-   readonly attribute &lt;a href=&#39;XRHand.html&#39;&gt;XRHand&lt;/a&gt;? &lt;strong&gt;hand&lt;/strong&gt;;
+[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>XRInputSource</strong> {
+  readonly attribute <a href='XRHandedness.html'>XRHandedness</a> <strong>handedness</strong>;
+  readonly attribute <a href='XRTargetRayMode.html'>XRTargetRayMode</a> <strong>targetRayMode</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a> <strong>targetRaySpace</strong>;
+  [SameObject] readonly attribute <a href='XRSpace.html'>XRSpace</a>? <strong>gripSpace</strong>;
+  [SameObject] readonly attribute FrozenArray&lt;<span>DOMString</span>&gt; <strong>profiles</strong>;
+  [SameObject] readonly attribute <a href='Gamepad.html'>Gamepad</a>? <strong>gamepad</strong>;
+   readonly attribute <a href='XRHand.html'>XRHand</a>? <strong>hand</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></li><li><a href="XRInputSourceArray.html">XRInputSourceArray</a></li><li><a href="XRInputSourceEvent.html">XRInputSourceEvent</a></li><li><a href="XRInputSourceEventInit.html">XRInputSourceEventInit</a></li><li><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li><li><a href="XRInputSourcesChangeEventInit.html">XRInputSourcesChangeEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></li><li><a href="XRInputSourceArray.html">XRInputSourceArray</a></li><li><a href="XRInputSourceEvent.html">XRInputSourceEvent</a></li><li><a href="XRInputSourceEventInit.html">XRInputSourceEventInit</a></li><li><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li><li><a href="XRInputSourcesChangeEventInit.html">XRInputSourcesChangeEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a> refers to <code>XRInputSource</code></li><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/">WebXR Gamepads Module - Level 1</a> refers to <code>XRInputSource</code></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/">WebXR Hand Input Module - Level 1</a> refers to <code>XRInputSource</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;hit-test&#x2F;">WebXR Hit Test Module</a> refers to <code>XRInputSource</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-gamepads-module-1&#x2F;">WebXR Gamepads Module - Level 1</a> refers to <code>XRInputSource</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hand-input-1&#x2F;">WebXR Hand Input Module - Level 1</a> refers to <code>XRInputSource</code></li>
+  </ul></section>

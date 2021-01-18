@@ -6,38 +6,49 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpReceiver</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;RTCRtpReceiver&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt; &lt;strong&gt;track&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;RTCDtlsTransport.html&#39;&gt;RTCDtlsTransport&lt;/a&gt;? &lt;strong&gt;transport&lt;/strong&gt;;
-  static &lt;a href=&#39;RTCRtpCapabilities.html&#39;&gt;RTCRtpCapabilities&lt;/a&gt;? &lt;strong&gt;getCapabilities&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;);
-  &lt;a href=&#39;RTCRtpReceiveParameters.html&#39;&gt;RTCRtpReceiveParameters&lt;/a&gt; &lt;strong&gt;getParameters&lt;/strong&gt;();
-  sequence&lt;&lt;a href=&#39;RTCRtpContributingSource.html&#39;&gt;RTCRtpContributingSource&lt;/a&gt;&gt; &lt;strong&gt;getContributingSources&lt;/strong&gt;();
-  sequence&lt;&lt;a href=&#39;RTCRtpSynchronizationSource.html&#39;&gt;RTCRtpSynchronizationSource&lt;/a&gt;&gt; &lt;strong&gt;getSynchronizationSources&lt;/strong&gt;();
-  Promise&lt;&lt;a href=&#39;RTCStatsReport.html&#39;&gt;RTCStatsReport&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-pc&#x2F;#dom-rtcrtpreceiver">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpReceiver</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>RTCRtpReceiver</strong> {
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span>DOMString</span> <strong>kind</strong>);
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();
+  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();
+  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;RTCRtpReceiver&lt;/strong&gt; {
-    &lt;a href=&#39;RTCInsertableStreams.html&#39;&gt;RTCInsertableStreams&lt;/a&gt; &lt;strong&gt;createEncodedStreams&lt;/strong&gt;();
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-insertable-streams&#x2F;">WebRTC Insertable Media using Streams</a><pre class=webidl><code>
+
+partial interface <strong>RTCRtpReceiver</strong> {
+    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;RTCRtpReceiver&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt; &lt;strong&gt;track&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;RTCDtlsTransport.html&#39;&gt;RTCDtlsTransport&lt;/a&gt;? &lt;strong&gt;transport&lt;/strong&gt;;
-  static &lt;a href=&#39;RTCRtpCapabilities.html&#39;&gt;RTCRtpCapabilities&lt;/a&gt;? &lt;strong&gt;getCapabilities&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;);
-  &lt;a href=&#39;RTCRtpReceiveParameters.html&#39;&gt;RTCRtpReceiveParameters&lt;/a&gt; &lt;strong&gt;getParameters&lt;/strong&gt;();
-  sequence&lt;&lt;a href=&#39;RTCRtpContributingSource.html&#39;&gt;RTCRtpContributingSource&lt;/a&gt;&gt; &lt;strong&gt;getContributingSources&lt;/strong&gt;();
-  sequence&lt;&lt;a href=&#39;RTCRtpSynchronizationSource.html&#39;&gt;RTCRtpSynchronizationSource&lt;/a&gt;&gt; &lt;strong&gt;getSynchronizationSources&lt;/strong&gt;();
-  Promise&lt;&lt;a href=&#39;RTCStatsReport.html&#39;&gt;RTCStatsReport&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
-    &lt;a href=&#39;RTCInsertableStreams.html&#39;&gt;RTCInsertableStreams&lt;/a&gt; &lt;strong&gt;createEncodedStreams&lt;/strong&gt;();
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>RTCRtpReceiver</strong> {
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span>DOMString</span> <strong>kind</strong>);
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();
+  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();
+  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();
+    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li><li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li><li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li><li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li><li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a> refers to <code>RTCRtpReceiver</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-insertable-streams&#x2F;">WebRTC Insertable Media using Streams</a> refers to <code>RTCRtpReceiver</code></li>
+  </ul></section>

@@ -6,88 +6,96 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement">HTML Standard</a> defines <code>HTMLImageElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
- LegacyFactoryFunction=&lt;span&gt;Image&lt;/span&gt;(optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;)]
-interface &lt;strong&gt;HTMLImageElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;embedded-content.html#htmlimageelement">HTML Standard</a> defines <code>HTMLImageElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>,
+ LegacyFactoryFunction&#x3D;<span>Image</span>(optional <span>unsigned long</span> <strong>width</strong>, optional <span>unsigned long</span> <strong>height</strong>)]
+interface <strong>HTMLImageElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;alt&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;srcset&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sizes&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;crossOrigin&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;useMap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isMap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;naturalWidth&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;naturalHeight&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;complete&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;currentSrc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;decoding&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;loading&lt;/strong&gt;;
+  [CEReactions] attribute <span>DOMString</span> <strong>alt</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>srcset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>sizes</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>isMap</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalHeight</strong>;
+  readonly attribute <span>boolean</span> <strong>complete</strong>;
+  readonly attribute <span>USVString</span> <strong>currentSrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>decoding</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
 
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;decode&lt;/strong&gt;();
+  Promise&lt;<span>undefined</span>&gt; <strong>decode</strong>();<span class="comment">
 
-  // also has obsolete members
-};
+  &#x2F;&#x2F; also has obsolete members
+</span>};
 
-partial interface &lt;strong&gt;HTMLImageElement&lt;/strong&gt; {
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;lowsrc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;hspace&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;vspace&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;longDesc&lt;/strong&gt;;
+partial interface <strong>HTMLImageElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>lowsrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;border&lt;/strong&gt;;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlimageelement-interface">CSSOM View Module</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLImageElement&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-htmlimageelement-interface">CSSOM View Module</a><pre class=webidl><code>
+
+partial interface <strong>HTMLImageElement</strong> {
+  readonly attribute <span>long</span> <strong>x</strong>;
+  readonly attribute <span>long</span> <strong>y</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,
- LegacyFactoryFunction=&lt;span&gt;Image&lt;/span&gt;(optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;)]
-interface &lt;strong&gt;HTMLImageElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>,
+ LegacyFactoryFunction&#x3D;<span>Image</span>(optional <span>unsigned long</span> <strong>width</strong>, optional <span>unsigned long</span> <strong>height</strong>)]
+interface <strong>HTMLImageElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;alt&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;srcset&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sizes&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;crossOrigin&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;useMap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isMap&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;naturalWidth&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;naturalHeight&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;complete&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;currentSrc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;decoding&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;loading&lt;/strong&gt;;
+  [CEReactions] attribute <span>DOMString</span> <strong>alt</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>srcset</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>sizes</strong>;
+  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>isMap</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>width</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>height</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalWidth</strong>;
+  readonly attribute <span>unsigned long</span> <strong>naturalHeight</strong>;
+  readonly attribute <span>boolean</span> <strong>complete</strong>;
+  readonly attribute <span>USVString</span> <strong>currentSrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>decoding</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
 
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;decode&lt;/strong&gt;();
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;lowsrc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;hspace&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;vspace&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;longDesc&lt;/strong&gt;;
+  Promise&lt;<span>undefined</span>&gt; <strong>decode</strong>();
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>lowsrc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
+  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;border&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
+  readonly attribute <span>long</span> <strong>x</strong>;
+  readonly attribute <span>long</span> <strong>y</strong>;<span class="comment">
 
-  // also has obsolete members
-};</code></pre></details>
+  &#x2F;&#x2F; also has obsolete members
+</span>};</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL Specification</a> refers to <code>HTMLImageElement</code></li><li><a href="https://www.w3.org/TR/cssom-view-1/">CSSOM View Module</a> refers to <code>HTMLImageElement</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.khronos.org&#x2F;registry&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;">WebGL Specification</a> refers to <code>HTMLImageElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>HTMLImageElement</code></li>
+  </ul></section>

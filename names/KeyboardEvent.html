@@ -6,64 +6,66 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/uievents/#keyboardevent">UI Events</a> defines <code>KeyboardEvent</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;KeyboardEvent&lt;/strong&gt; : &lt;a href=&#39;UIEvent.html&#39;&gt;UIEvent&lt;/a&gt; {
-  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;a href=&#39;KeyboardEventInit.html&#39;&gt;KeyboardEventInit&lt;/a&gt; &lt;strong&gt;eventInitDict&lt;/strong&gt;);
-  // KeyLocationCode
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_STANDARD&lt;/strong&gt; = 0x00;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_LEFT&lt;/strong&gt; = 0x01;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_RIGHT&lt;/strong&gt; = 0x02;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_NUMPAD&lt;/strong&gt; = 0x03;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;uievents&#x2F;#keyboardevent">UI Events</a> defines <code>KeyboardEvent</code></p>
+<pre class=webidl><code>
 
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;key&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;code&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;location&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);<span class="comment">
+  &#x2F;&#x2F; KeyLocationCode
+  </span>const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;
 
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ctrlKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;shiftKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;altKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;metaKey&lt;/strong&gt;;
+  readonly attribute <span>DOMString</span> <strong>key</strong>;
+  readonly attribute <span>DOMString</span> <strong>code</strong>;
+  readonly attribute <span>unsigned long</span> <strong>location</strong>;
 
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;repeat&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isComposing&lt;/strong&gt;;
+  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
+  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
+  readonly attribute <span>boolean</span> <strong>altKey</strong>;
+  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
 
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;getModifierState&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;keyArg&lt;/strong&gt;);
+  readonly attribute <span>boolean</span> <strong>repeat</strong>;
+  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
+
+  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);
 };
 
-partial interface &lt;strong&gt;KeyboardEvent&lt;/strong&gt; {
-  // The following support legacy user agents
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charCode&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;keyCode&lt;/strong&gt;;
+partial interface <strong>KeyboardEvent</strong> {<span class="comment">
+  &#x2F;&#x2F; The following support legacy user agents
+  </span>readonly attribute <span>unsigned long</span> <strong>charCode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>keyCode</strong>;
 };</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;KeyboardEvent&lt;/strong&gt; : &lt;a href=&#39;UIEvent.html&#39;&gt;UIEvent&lt;/a&gt; {
-  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;a href=&#39;KeyboardEventInit.html&#39;&gt;KeyboardEventInit&lt;/a&gt; &lt;strong&gt;eventInitDict&lt;/strong&gt;);
-  // KeyLocationCode
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_STANDARD&lt;/strong&gt; = 0x00;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_LEFT&lt;/strong&gt; = 0x01;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_RIGHT&lt;/strong&gt; = 0x02;
-  const &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;DOM_KEY_LOCATION_NUMPAD&lt;/strong&gt; = 0x03;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
+  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);<span class="comment">
+  &#x2F;&#x2F; KeyLocationCode
+  </span>const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;
+  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;
 
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;key&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;code&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;location&lt;/strong&gt;;
+  readonly attribute <span>DOMString</span> <strong>key</strong>;
+  readonly attribute <span>DOMString</span> <strong>code</strong>;
+  readonly attribute <span>unsigned long</span> <strong>location</strong>;
 
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ctrlKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;shiftKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;altKey&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;metaKey&lt;/strong&gt;;
+  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
+  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
+  readonly attribute <span>boolean</span> <strong>altKey</strong>;
+  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
 
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;repeat&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isComposing&lt;/strong&gt;;
+  readonly attribute <span>boolean</span> <strong>repeat</strong>;
+  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
 
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;getModifierState&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;keyArg&lt;/strong&gt;);
-  // The following support legacy user agents
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;charCode&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;keyCode&lt;/strong&gt;;
+  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);<span class="comment">
+  &#x2F;&#x2F; The following support legacy user agents
+  </span>readonly attribute <span>unsigned long</span> <strong>charCode</strong>;
+  readonly attribute <span>unsigned long</span> <strong>keyCode</strong>;
 };</code></pre></details>
 </section>
 

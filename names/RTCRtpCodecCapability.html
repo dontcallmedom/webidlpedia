@@ -6,30 +6,41 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpcodeccapability">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpCodecCapability</code></p>
-<pre class=webidl><code>dictionary &lt;strong&gt;RTCRtpCodecCapability&lt;/strong&gt; {
-  required &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;mimeType&lt;/strong&gt;;
-  required &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;clockRate&lt;/strong&gt;;
-  &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;channels&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sdpFmtpLine&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-pc&#x2F;#dom-rtcrtpcodeccapability">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpCodecCapability</code></p>
+<pre class=webidl><code>
+
+dictionary <strong>RTCRtpCodecCapability</strong> {
+  required <span>DOMString</span> <strong>mimeType</strong>;
+  required <span>unsigned long</span> <strong>clockRate</strong>;
+  <span>unsigned short</span> <strong>channels</strong>;
+  <span>DOMString</span> <strong>sdpFmtpLine</strong>;
 };</code></pre>
-  <p>This dictionary is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-svc/">Scalable Video Coding (SVC) Extension for WebRTC</a>
-<pre class=webidl><code>partial dictionary &lt;strong&gt;RTCRtpCodecCapability&lt;/strong&gt; {
-             sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;scalabilityModes&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a><pre class=webidl><code>
+
+partial dictionary <strong>RTCRtpCodecCapability</strong> {
+             sequence&lt;<span>DOMString</span>&gt; <strong>scalabilityModes</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-dictionary &lt;strong&gt;RTCRtpCodecCapability&lt;/strong&gt; {
-  required &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;mimeType&lt;/strong&gt;;
-  required &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;clockRate&lt;/strong&gt;;
-  &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;channels&lt;/strong&gt;;
-  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;sdpFmtpLine&lt;/strong&gt;;
-             sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;scalabilityModes&lt;/strong&gt;;
+dictionary <strong>RTCRtpCodecCapability</strong> {
+  required <span>DOMString</span> <strong>mimeType</strong>;
+  required <span>unsigned long</span> <strong>clockRate</strong>;
+  <span>unsigned short</span> <strong>channels</strong>;
+  <span>DOMString</span> <strong>sdpFmtpLine</strong>;
+             sequence&lt;<span>DOMString</span>&gt; <strong>scalabilityModes</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="RTCRtpCapabilities.html">RTCRtpCapabilities</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li></ul>
+  
+  <ul>
+    <li><a href="RTCRtpCapabilities.html">RTCRtpCapabilities</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/webrtc-svc/">Scalable Video Coding (SVC) Extension for WebRTC</a> refers to <code>RTCRtpCodecCapability</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a> refers to <code>RTCRtpCodecCapability</code></li>
+  </ul></section>

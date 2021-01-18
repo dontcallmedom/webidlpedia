@@ -6,34 +6,39 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://webaudio.github.io/web-audio-api/#audionode">Web Audio API</a> defines <code>AudioNode</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;AudioNode&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  &lt;a href=&#39;AudioNode.html&#39;&gt;AudioNode&lt;/a&gt; &lt;strong&gt;connect&lt;/strong&gt; (&lt;a href=&#39;AudioNode.html&#39;&gt;AudioNode&lt;/a&gt; &lt;strong&gt;destinationNode&lt;/strong&gt;,
-                     optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt; = 0,
-                     optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;input&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;connect&lt;/strong&gt; (&lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;destinationParam&lt;/strong&gt;, optional &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt; = 0);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; ();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;a href=&#39;AudioNode.html&#39;&gt;AudioNode&lt;/a&gt; &lt;strong&gt;destinationNode&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;a href=&#39;AudioNode.html&#39;&gt;AudioNode&lt;/a&gt; &lt;strong&gt;destinationNode&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;a href=&#39;AudioNode.html&#39;&gt;AudioNode&lt;/a&gt; &lt;strong&gt;destinationNode&lt;/strong&gt;,
-                        &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt;,
-                        &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;input&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;destinationParam&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;disconnect&lt;/strong&gt; (&lt;a href=&#39;AudioParam.html&#39;&gt;AudioParam&lt;/a&gt; &lt;strong&gt;destinationParam&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;output&lt;/strong&gt;);
-  readonly attribute &lt;a href=&#39;BaseAudioContext.html&#39;&gt;BaseAudioContext&lt;/a&gt; &lt;strong&gt;context&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;numberOfInputs&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;numberOfOutputs&lt;/strong&gt;;
-  attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;channelCount&lt;/strong&gt;;
-  attribute &lt;a href=&#39;ChannelCountMode.html&#39;&gt;ChannelCountMode&lt;/a&gt; &lt;strong&gt;channelCountMode&lt;/strong&gt;;
-  attribute &lt;a href=&#39;ChannelInterpretation.html&#39;&gt;ChannelInterpretation&lt;/a&gt; &lt;strong&gt;channelInterpretation&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#audionode">Web Audio API</a> defines <code>AudioNode</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>AudioNode</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  <a href='AudioNode.html'>AudioNode</a> <strong>connect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
+                     optional <span>unsigned long</span> <strong>output</strong> &#x3D; 0,
+                     optional <span>unsigned long</span> <strong>input</strong> &#x3D; 0);
+  <span>undefined</span> <strong>connect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, optional <span>unsigned long</span> <strong>output</strong> &#x3D; 0);
+  <span>undefined</span> <strong>disconnect</strong> ();
+  <span>undefined</span> <strong>disconnect</strong> (<span>unsigned long</span> <strong>output</strong>);
+  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>);
+  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>, <span>unsigned long</span> <strong>output</strong>);
+  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
+                        <span>unsigned long</span> <strong>output</strong>,
+                        <span>unsigned long</span> <strong>input</strong>);
+  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>);
+  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, <span>unsigned long</span> <strong>output</strong>);
+  readonly attribute <a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfInputs</strong>;
+  readonly attribute <span>unsigned long</span> <strong>numberOfOutputs</strong>;
+  attribute <span>unsigned long</span> <strong>channelCount</strong>;
+  attribute <a href='ChannelCountMode.html'>ChannelCountMode</a> <strong>channelCountMode</strong>;
+  attribute <a href='ChannelInterpretation.html'>ChannelInterpretation</a> <strong>channelInterpretation</strong>;
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></li><li><a href="AnalyserNode.html">AnalyserNode</a></li><li><a href="AudioDestinationNode.html">AudioDestinationNode</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ChannelMergerNode.html">ChannelMergerNode</a></li><li><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></li><li><a href="ConvolverNode.html">ConvolverNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="IIRFilterNode.html">IIRFilterNode</a></li><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="ScriptProcessorNode.html">ScriptProcessorNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="WaveShaperNode.html">WaveShaperNode</a></li><li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li></ul>
+  
+  <ul>
+    <li><a href="AudioNode.html">AudioNode</a></li><li><a href="AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></li><li><a href="AnalyserNode.html">AnalyserNode</a></li><li><a href="AudioDestinationNode.html">AudioDestinationNode</a></li><li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li><li><a href="ChannelMergerNode.html">ChannelMergerNode</a></li><li><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></li><li><a href="ConvolverNode.html">ConvolverNode</a></li><li><a href="DelayNode.html">DelayNode</a></li><li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li><li><a href="GainNode.html">GainNode</a></li><li><a href="IIRFilterNode.html">IIRFilterNode</a></li><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li><li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li><li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li><li><a href="PannerNode.html">PannerNode</a></li><li><a href="ScriptProcessorNode.html">ScriptProcessorNode</a></li><li><a href="StereoPannerNode.html">StereoPannerNode</a></li><li><a href="WaveShaperNode.html">WaveShaperNode</a></li><li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li>
+  </ul>
 </section>
   

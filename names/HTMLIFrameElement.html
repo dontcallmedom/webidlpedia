@@ -6,76 +6,83 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement">HTML Standard</a> defines <code>HTMLIFrameElement</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLIFrameElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;iframe-embed-object.html#htmliframeelement">HTML Standard</a> defines <code>HTMLIFrameElement</code></p>
+<pre class=webidl><code>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;srcdoc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [SameObject, PutForwards=&lt;span&gt;value&lt;/span&gt;] readonly attribute &lt;a href=&#39;DOMTokenList.html&#39;&gt;DOMTokenList&lt;/a&gt; &lt;strong&gt;sandbox&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;allow&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;allowFullscreen&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;loading&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt;? &lt;strong&gt;contentDocument&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;contentWindow&lt;/strong&gt;;
-  &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt;? &lt;strong&gt;getSVGDocument&lt;/strong&gt;();
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>srcdoc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [SameObject, PutForwards&#x3D;<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sandbox</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>allow</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>allowFullscreen</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();<span class="comment">
 
-  // also has obsolete members
-};
+  &#x2F;&#x2F; also has obsolete members
+</span>};
 
-partial interface &lt;strong&gt;HTMLIFrameElement&lt;/strong&gt; {
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scrolling&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;frameBorder&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;longDesc&lt;/strong&gt;;
+partial interface <strong>HTMLIFrameElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>scrolling</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>frameBorder</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;marginHeight&lt;/strong&gt;;
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;marginWidth&lt;/strong&gt;;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginHeight</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginWidth</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/csp-embedded-enforcement/#csp-attribute">Content Security Policy: Embedded Enforcement</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLIFrameElement&lt;/strong&gt; {
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;csp&lt;/strong&gt;;
-};</code></pre></li><li><a href="https://www.w3.org/TR/permissions-policy-1/#the-policy-object">Permissions Policy</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;HTMLIFrameElement&lt;/strong&gt; {
-    [SameObject] readonly attribute &lt;a href=&#39;PermissionsPolicy.html&#39;&gt;PermissionsPolicy&lt;/a&gt; &lt;strong&gt;permissionsPolicy&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;csp-embedded-enforcement&#x2F;#csp-attribute">Content Security Policy: Embedded Enforcement</a><pre class=webidl><code>partial interface <strong>HTMLIFrameElement</strong> {
+  [CEReactions] attribute <span>DOMString</span> <strong>csp</strong>;
+};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;#the-policy-object">Permissions Policy</a><pre class=webidl><code>
+
+partial interface <strong>HTMLIFrameElement</strong> {
+    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;HTMLIFrameElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;src&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;srcdoc&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
-  [SameObject, PutForwards=&lt;span&gt;value&lt;/span&gt;] readonly attribute &lt;a href=&#39;DOMTokenList.html&#39;&gt;DOMTokenList&lt;/a&gt; &lt;strong&gt;sandbox&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;allow&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;allowFullscreen&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;width&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;height&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;referrerPolicy&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;loading&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt;? &lt;strong&gt;contentDocument&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;WindowProxy.html&#39;&gt;WindowProxy&lt;/a&gt;? &lt;strong&gt;contentWindow&lt;/strong&gt;;
-  &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt;? &lt;strong&gt;getSVGDocument&lt;/strong&gt;();
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;align&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scrolling&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;frameBorder&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;longDesc&lt;/strong&gt;;
+  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>srcdoc</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
+  [SameObject, PutForwards&#x3D;<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sandbox</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>allow</strong>;
+  [CEReactions] attribute <span>boolean</span> <strong>allowFullscreen</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>loading</strong>;
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
+  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>scrolling</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>frameBorder</strong>;
+  [CEReactions] attribute <span>USVString</span> <strong>longDesc</strong>;
 
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;marginHeight&lt;/strong&gt;;
-  [CEReactions] attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;marginWidth&lt;/strong&gt;;
-  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;csp&lt;/strong&gt;;
-    [SameObject] readonly attribute &lt;a href=&#39;PermissionsPolicy.html&#39;&gt;PermissionsPolicy&lt;/a&gt; &lt;strong&gt;permissionsPolicy&lt;/strong&gt;;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginHeight</strong>;
+  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>marginWidth</strong>;
+  [CEReactions] attribute <span>DOMString</span> <strong>csp</strong>;
+    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;<span class="comment">
 
-  // also has obsolete members
-};</code></pre></details>
+  &#x2F;&#x2F; also has obsolete members
+</span>};</code></pre></details>
 </section>
 
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/csp-embedded-enforcement/">Content Security Policy: Embedded Enforcement</a> refers to <code>HTMLIFrameElement</code></li><li><a href="https://www.w3.org/TR/permissions-policy-1/">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;csp-embedded-enforcement&#x2F;">Content Security Policy: Embedded Enforcement</a> refers to <code>HTMLIFrameElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li>
+  </ul></section>

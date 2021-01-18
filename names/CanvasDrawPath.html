@@ -6,26 +6,31 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>CanvasDrawPath</code></p>
-<pre class=webidl><code>interface mixin &lt;strong&gt;CanvasDrawPath&lt;/strong&gt; {
-  // path API (see also CanvasPath)
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;beginPath&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;fill&lt;/strong&gt;(optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;fill&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stroke&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stroke&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clip&lt;/strong&gt;(optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clip&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInPath&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInPath&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;, optional &lt;a href=&#39;CanvasFillRule.html&#39;&gt;CanvasFillRule&lt;/a&gt; &lt;strong&gt;fillRule&lt;/strong&gt; = &quot;nonzero&quot;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInStroke&lt;/strong&gt;(&lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
-  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isPointInStroke&lt;/strong&gt;(&lt;a href=&#39;Path2D.html&#39;&gt;Path2D&lt;/a&gt; &lt;strong&gt;path&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;x&lt;/strong&gt;, &lt;span&gt;unrestricted double&lt;/span&gt; &lt;strong&gt;y&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>CanvasDrawPath</code></p>
+<pre class=webidl><code>
+
+interface mixin <strong>CanvasDrawPath</strong> {<span class="comment">
+  &#x2F;&#x2F; path API (see also CanvasPath)
+  </span><span>undefined</span> <strong>beginPath</strong>();
+  <span>undefined</span> <strong>fill</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>fill</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>stroke</strong>();
+  <span>undefined</span> <strong>stroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);
+  <span>undefined</span> <strong>clip</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>undefined</span> <strong>clip</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInPath</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);
+  <span>boolean</span> <strong>isPointInStroke</strong>(<span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
+  <span>boolean</span> <strong>isPointInStroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span>unrestricted double</span> <strong>x</strong>, <span>unrestricted double</span> <strong>y</strong>);
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li></ul>
+  
+  <ul>
+    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li><li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li>
+  </ul>
 </section>
   

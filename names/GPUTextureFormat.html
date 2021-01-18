@@ -6,90 +6,95 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat">WebGPU</a> defines <code>GPUTextureFormat</code></p>
-<pre class=webidl><code>enum &lt;strong&gt;GPUTextureFormat&lt;/strong&gt; {
-    // 8-bit formats
-    &quot;&lt;strong&gt;r8unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r8snorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r8uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r8sint&lt;/strong&gt;&quot;,
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#enumdef-gputextureformat">WebGPU</a> defines <code>GPUTextureFormat</code></p>
+<pre class=webidl><code>
 
-    // 16-bit formats
-    &quot;&lt;strong&gt;r16uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r16sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r16float&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg8unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg8snorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg8uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg8sint&lt;/strong&gt;&quot;,
+enum <strong>GPUTextureFormat</strong> {<span class="comment">
+    &#x2F;&#x2F; 8-bit formats
+    </span>&quot;<strong>r8unorm</strong>&quot;,
+    &quot;<strong>r8snorm</strong>&quot;,
+    &quot;<strong>r8uint</strong>&quot;,
+    &quot;<strong>r8sint</strong>&quot;,<span class="comment">
 
-    // 32-bit formats
-    &quot;&lt;strong&gt;r32uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r32sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;r32float&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg16uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg16sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg16float&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba8unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba8unorm-srgb&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba8snorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba8uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba8sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bgra8unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bgra8unorm-srgb&lt;/strong&gt;&quot;,
-    // Packed 32-bit formats
-    &quot;&lt;strong&gt;rgb9e5ufloat&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgb10a2unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg11b10ufloat&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; 16-bit formats
+    </span>&quot;<strong>r16uint</strong>&quot;,
+    &quot;<strong>r16sint</strong>&quot;,
+    &quot;<strong>r16float</strong>&quot;,
+    &quot;<strong>rg8unorm</strong>&quot;,
+    &quot;<strong>rg8snorm</strong>&quot;,
+    &quot;<strong>rg8uint</strong>&quot;,
+    &quot;<strong>rg8sint</strong>&quot;,<span class="comment">
 
-    // 64-bit formats
-    &quot;&lt;strong&gt;rg32uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg32sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rg32float&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba16uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba16sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba16float&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; 32-bit formats
+    </span>&quot;<strong>r32uint</strong>&quot;,
+    &quot;<strong>r32sint</strong>&quot;,
+    &quot;<strong>r32float</strong>&quot;,
+    &quot;<strong>rg16uint</strong>&quot;,
+    &quot;<strong>rg16sint</strong>&quot;,
+    &quot;<strong>rg16float</strong>&quot;,
+    &quot;<strong>rgba8unorm</strong>&quot;,
+    &quot;<strong>rgba8unorm-srgb</strong>&quot;,
+    &quot;<strong>rgba8snorm</strong>&quot;,
+    &quot;<strong>rgba8uint</strong>&quot;,
+    &quot;<strong>rgba8sint</strong>&quot;,
+    &quot;<strong>bgra8unorm</strong>&quot;,
+    &quot;<strong>bgra8unorm-srgb</strong>&quot;,<span class="comment">
+    &#x2F;&#x2F; Packed 32-bit formats
+    </span>&quot;<strong>rgb9e5ufloat</strong>&quot;,
+    &quot;<strong>rgb10a2unorm</strong>&quot;,
+    &quot;<strong>rg11b10ufloat</strong>&quot;,<span class="comment">
 
-    // 128-bit formats
-    &quot;&lt;strong&gt;rgba32uint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba32sint&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;rgba32float&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; 64-bit formats
+    </span>&quot;<strong>rg32uint</strong>&quot;,
+    &quot;<strong>rg32sint</strong>&quot;,
+    &quot;<strong>rg32float</strong>&quot;,
+    &quot;<strong>rgba16uint</strong>&quot;,
+    &quot;<strong>rgba16sint</strong>&quot;,
+    &quot;<strong>rgba16float</strong>&quot;,<span class="comment">
 
-    // Depth and stencil formats
-    &quot;&lt;strong&gt;stencil8&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;depth16unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;depth24plus&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;depth24plus-stencil8&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;depth32float&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; 128-bit formats
+    </span>&quot;<strong>rgba32uint</strong>&quot;,
+    &quot;<strong>rgba32sint</strong>&quot;,
+    &quot;<strong>rgba32float</strong>&quot;,<span class="comment">
 
-    // BC compressed formats usable if &quot;texture-compression-bc&quot; is both
-    // supported by the device/user agent and enabled in requestDevice.
-    &quot;&lt;strong&gt;bc1-rgba-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc1-rgba-unorm-srgb&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc2-rgba-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc2-rgba-unorm-srgb&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc3-rgba-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc3-rgba-unorm-srgb&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc4-r-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc4-r-snorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc5-rg-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc5-rg-snorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc6h-rgb-ufloat&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc6h-rgb-float&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc7-rgba-unorm&lt;/strong&gt;&quot;,
-    &quot;&lt;strong&gt;bc7-rgba-unorm-srgb&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; Depth and stencil formats
+    </span>&quot;<strong>stencil8</strong>&quot;,
+    &quot;<strong>depth16unorm</strong>&quot;,
+    &quot;<strong>depth24plus</strong>&quot;,
+    &quot;<strong>depth24plus-stencil8</strong>&quot;,
+    &quot;<strong>depth32float</strong>&quot;,<span class="comment">
 
-    // &quot;depth24unorm-stencil8&quot; feature
-    &quot;&lt;strong&gt;depth24unorm-stencil8&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; BC compressed formats usable if &quot;texture-compression-bc&quot; is both
+    &#x2F;&#x2F; supported by the device&#x2F;user agent and enabled in requestDevice.
+    </span>&quot;<strong>bc1-rgba-unorm</strong>&quot;,
+    &quot;<strong>bc1-rgba-unorm-srgb</strong>&quot;,
+    &quot;<strong>bc2-rgba-unorm</strong>&quot;,
+    &quot;<strong>bc2-rgba-unorm-srgb</strong>&quot;,
+    &quot;<strong>bc3-rgba-unorm</strong>&quot;,
+    &quot;<strong>bc3-rgba-unorm-srgb</strong>&quot;,
+    &quot;<strong>bc4-r-unorm</strong>&quot;,
+    &quot;<strong>bc4-r-snorm</strong>&quot;,
+    &quot;<strong>bc5-rg-unorm</strong>&quot;,
+    &quot;<strong>bc5-rg-snorm</strong>&quot;,
+    &quot;<strong>bc6h-rgb-ufloat</strong>&quot;,
+    &quot;<strong>bc6h-rgb-float</strong>&quot;,
+    &quot;<strong>bc7-rgba-unorm</strong>&quot;,
+    &quot;<strong>bc7-rgba-unorm-srgb</strong>&quot;,<span class="comment">
 
-    // &quot;depth32float-stencil8&quot; feature
-    &quot;&lt;strong&gt;depth32float-stencil8&lt;/strong&gt;&quot;,
+    &#x2F;&#x2F; &quot;depth24unorm-stencil8&quot; feature
+    </span>&quot;<strong>depth24unorm-stencil8</strong>&quot;,<span class="comment">
+
+    &#x2F;&#x2F; &quot;depth32float-stencil8&quot; feature
+    </span>&quot;<strong>depth32float-stencil8</strong>&quot;,
 };</code></pre>
   
   
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="GPUTextureDescriptor.html">GPUTextureDescriptor</a></li><li><a href="GPUTextureViewDescriptor.html">GPUTextureViewDescriptor</a></li><li><a href="GPUStorageTextureBindingLayout.html">GPUStorageTextureBindingLayout</a></li><li><a href="GPUColorStateDescriptor.html">GPUColorStateDescriptor</a></li><li><a href="GPUDepthStencilStateDescriptor.html">GPUDepthStencilStateDescriptor</a></li><li><a href="GPURenderBundleEncoderDescriptor.html">GPURenderBundleEncoderDescriptor</a></li><li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li><li><a href="GPUSwapChainDescriptor.html">GPUSwapChainDescriptor</a></li></ul>
+  
+  <ul>
+    <li><a href="GPUTextureDescriptor.html">GPUTextureDescriptor</a></li><li><a href="GPUTextureViewDescriptor.html">GPUTextureViewDescriptor</a></li><li><a href="GPUStorageTextureBindingLayout.html">GPUStorageTextureBindingLayout</a></li><li><a href="GPUColorStateDescriptor.html">GPUColorStateDescriptor</a></li><li><a href="GPUDepthStencilStateDescriptor.html">GPUDepthStencilStateDescriptor</a></li><li><a href="GPURenderBundleEncoderDescriptor.html">GPURenderBundleEncoderDescriptor</a></li><li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li><li><a href="GPUSwapChainDescriptor.html">GPUSwapChainDescriptor</a></li>
+  </ul>
 </section>
   

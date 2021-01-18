@@ -6,17 +6,20 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/web-codecs/#videoencoder">WebCodecs</a> defines <code>VideoEncoder</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;VideoEncoder&lt;/strong&gt; {
-  constructor(&lt;a href=&#39;VideoEncoderInit.html&#39;&gt;VideoEncoderInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt;);
-  readonly attribute &lt;a href=&#39;CodecState.html&#39;&gt;CodecState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;encodeQueueSize&lt;/strong&gt;;
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;configure&lt;/strong&gt;(&lt;a href=&#39;VideoEncoderConfig.html&#39;&gt;VideoEncoderConfig&lt;/a&gt; &lt;strong&gt;config&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;encode&lt;/strong&gt;(&lt;a href=&#39;VideoFrame.html&#39;&gt;VideoFrame&lt;/a&gt; &lt;strong&gt;frame&lt;/strong&gt;, optional &lt;a href=&#39;VideoEncoderEncodeOptions.html&#39;&gt;VideoEncoderEncodeOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;flush&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;reset&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-codecs&#x2F;#videoencoder">WebCodecs</a> defines <code>VideoEncoder</code></p>
+<pre class=webidl><code>
+
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>VideoEncoder</strong> {
+  constructor(<a href='VideoEncoderInit.html'>VideoEncoderInit</a> <strong>init</strong>);
+  readonly attribute <a href='CodecState.html'>CodecState</a> <strong>state</strong>;
+  readonly attribute <span>long</span> <strong>encodeQueueSize</strong>;
+  <span>undefined</span> <strong>configure</strong>(<a href='VideoEncoderConfig.html'>VideoEncoderConfig</a> <strong>config</strong>);
+  <span>undefined</span> <strong>encode</strong>(<a href='VideoFrame.html'>VideoFrame</a> <strong>frame</strong>, optional <a href='VideoEncoderEncodeOptions.html'>VideoEncoderEncodeOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<span>undefined</span>&gt; <strong>flush</strong>();
+  <span>undefined</span> <strong>reset</strong>();
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
   

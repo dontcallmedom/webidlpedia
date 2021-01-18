@@ -6,56 +6,67 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://html.spec.whatwg.org/multipage/media.html#texttrack">HTML Standard</a> defines <code>TextTrack</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;TextTrack&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;TextTrackKind.html&#39;&gt;TextTrackKind&lt;/a&gt; &lt;strong&gt;kind&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;label&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;language&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#texttrack">HTML Standard</a> defines <code>TextTrack</code></p>
+<pre class=webidl><code>
 
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;inBandMetadataTrackDispatchType&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>TextTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='TextTrackKind.html'>TextTrackKind</a> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>label</strong>;
+  readonly attribute <span>DOMString</span> <strong>language</strong>;
 
-  attribute &lt;a href=&#39;TextTrackMode.html&#39;&gt;TextTrackMode&lt;/a&gt; &lt;strong&gt;mode&lt;/strong&gt;;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>DOMString</span> <strong>inBandMetadataTrackDispatchType</strong>;
 
-  readonly attribute &lt;a href=&#39;TextTrackCueList.html&#39;&gt;TextTrackCueList&lt;/a&gt;? &lt;strong&gt;cues&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;TextTrackCueList.html&#39;&gt;TextTrackCueList&lt;/a&gt;? &lt;strong&gt;activeCues&lt;/strong&gt;;
+  attribute <a href='TextTrackMode.html'>TextTrackMode</a> <strong>mode</strong>;
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;addCue&lt;/strong&gt;(&lt;a href=&#39;TextTrackCue.html&#39;&gt;TextTrackCue&lt;/a&gt; &lt;strong&gt;cue&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeCue&lt;/strong&gt;(&lt;a href=&#39;TextTrackCue.html&#39;&gt;TextTrackCue&lt;/a&gt; &lt;strong&gt;cue&lt;/strong&gt;);
+  readonly attribute <a href='TextTrackCueList.html'>TextTrackCueList</a>? <strong>cues</strong>;
+  readonly attribute <a href='TextTrackCueList.html'>TextTrackCueList</a>? <strong>activeCues</strong>;
 
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncuechange&lt;/strong&gt;;
+  <span>undefined</span> <strong>addCue</strong>(<a href='TextTrackCue.html'>TextTrackCue</a> <strong>cue</strong>);
+  <span>undefined</span> <strong>removeCue</strong>(<a href='TextTrackCue.html'>TextTrackCue</a> <strong>cue</strong>);
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/media-source/#attributes-4">Media Source Extensions™</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;TextTrack&lt;/strong&gt; {
-    readonly        attribute &lt;a href=&#39;SourceBuffer.html&#39;&gt;SourceBuffer&lt;/a&gt;? &lt;strong&gt;sourceBuffer&lt;/strong&gt;;
-};</code></pre></li></ol>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-source&#x2F;#attributes-4">Media Source Extensions™</a><pre class=webidl><code>
+
+partial interface <strong>TextTrack</strong> {
+    readonly        attribute <a href='SourceBuffer.html'>SourceBuffer</a>? <strong>sourceBuffer</strong>;
+};</code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
-interface &lt;strong&gt;TextTrack&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
-  readonly attribute &lt;a href=&#39;TextTrackKind.html&#39;&gt;TextTrackKind&lt;/a&gt; &lt;strong&gt;kind&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;label&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;language&lt;/strong&gt;;
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>TextTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {
+  readonly attribute <a href='TextTrackKind.html'>TextTrackKind</a> <strong>kind</strong>;
+  readonly attribute <span>DOMString</span> <strong>label</strong>;
+  readonly attribute <span>DOMString</span> <strong>language</strong>;
 
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;inBandMetadataTrackDispatchType&lt;/strong&gt;;
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>DOMString</span> <strong>inBandMetadataTrackDispatchType</strong>;
 
-  attribute &lt;a href=&#39;TextTrackMode.html&#39;&gt;TextTrackMode&lt;/a&gt; &lt;strong&gt;mode&lt;/strong&gt;;
+  attribute <a href='TextTrackMode.html'>TextTrackMode</a> <strong>mode</strong>;
 
-  readonly attribute &lt;a href=&#39;TextTrackCueList.html&#39;&gt;TextTrackCueList&lt;/a&gt;? &lt;strong&gt;cues&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;TextTrackCueList.html&#39;&gt;TextTrackCueList&lt;/a&gt;? &lt;strong&gt;activeCues&lt;/strong&gt;;
+  readonly attribute <a href='TextTrackCueList.html'>TextTrackCueList</a>? <strong>cues</strong>;
+  readonly attribute <a href='TextTrackCueList.html'>TextTrackCueList</a>? <strong>activeCues</strong>;
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;addCue&lt;/strong&gt;(&lt;a href=&#39;TextTrackCue.html&#39;&gt;TextTrackCue&lt;/a&gt; &lt;strong&gt;cue&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;removeCue&lt;/strong&gt;(&lt;a href=&#39;TextTrackCue.html&#39;&gt;TextTrackCue&lt;/a&gt; &lt;strong&gt;cue&lt;/strong&gt;);
+  <span>undefined</span> <strong>addCue</strong>(<a href='TextTrackCue.html'>TextTrackCue</a> <strong>cue</strong>);
+  <span>undefined</span> <strong>removeCue</strong>(<a href='TextTrackCue.html'>TextTrackCue</a> <strong>cue</strong>);
 
-  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncuechange&lt;/strong&gt;;
-    readonly        attribute &lt;a href=&#39;SourceBuffer.html&#39;&gt;SourceBuffer&lt;/a&gt;? &lt;strong&gt;sourceBuffer&lt;/strong&gt;;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;
+    readonly        attribute <a href='SourceBuffer.html'>SourceBuffer</a>? <strong>sourceBuffer</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="HTMLTrackElement.html">HTMLTrackElement</a></li><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="TextTrackList.html">TextTrackList</a></li><li><a href="TextTrackCue.html">TextTrackCue</a></li><li><a href="TrackEvent.html">TrackEvent</a></li><li><a href="TrackEventInit.html">TrackEventInit</a></li></ul>
+  
+  <ul>
+    <li><a href="HTMLTrackElement.html">HTMLTrackElement</a></li><li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li><li><a href="TextTrackList.html">TextTrackList</a></li><li><a href="TextTrackCue.html">TextTrackCue</a></li><li><a href="TrackEvent.html">TrackEvent</a></li><li><a href="TrackEventInit.html">TrackEventInit</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://www.w3.org/TR/media-source/">Media Source Extensions™</a> refers to <code>TextTrack</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-source&#x2F;">Media Source Extensions™</a> refers to <code>TextTrack</code></li>
+  </ul></section>

@@ -6,42 +6,51 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://w3c.github.io/gamepad/#dom-gamepad">Gamepad</a> defines <code>Gamepad</code></p>
-<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
-interface &lt;strong&gt;Gamepad&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;connected&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMHighResTimeStamp.html&#39;&gt;DOMHighResTimeStamp&lt;/a&gt; &lt;strong&gt;timestamp&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;GamepadMappingType.html&#39;&gt;GamepadMappingType&lt;/a&gt; &lt;strong&gt;mapping&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;span&gt;double&lt;/span&gt;&gt; &lt;strong&gt;axes&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadButton.html&#39;&gt;GamepadButton&lt;/a&gt;&gt; &lt;strong&gt;buttons&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;#dom-gamepad">Gamepad</a> defines <code>Gamepad</code></p>
+<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Gamepad</strong> {
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>long</span> <strong>index</strong>;
+  readonly attribute <span>boolean</span> <strong>connected</strong>;
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;
+  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;
+  readonly attribute FrozenArray&lt;<span>double</span>&gt; <strong>axes</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;
 };</code></pre>
-  <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface">Gamepad Extensions</a>
-<pre class=webidl><code>partial interface &lt;strong&gt;Gamepad&lt;/strong&gt; {
-  readonly attribute &lt;a href=&#39;GamepadHand.html&#39;&gt;GamepadHand&lt;/a&gt; &lt;strong&gt;hand&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadHapticActuator.html&#39;&gt;GamepadHapticActuator&lt;/a&gt;&gt; &lt;strong&gt;hapticActuators&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;GamepadPose.html&#39;&gt;GamepadPose&lt;/a&gt;? &lt;strong&gt;pose&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadTouch.html&#39;&gt;GamepadTouch&lt;/a&gt;&gt;? &lt;strong&gt;touchEvents&lt;/strong&gt;;
-};</code></pre></li></ol>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
-interface &lt;strong&gt;Gamepad&lt;/strong&gt; {
-  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;id&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;index&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;connected&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;DOMHighResTimeStamp.html&#39;&gt;DOMHighResTimeStamp&lt;/a&gt; &lt;strong&gt;timestamp&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;GamepadMappingType.html&#39;&gt;GamepadMappingType&lt;/a&gt; &lt;strong&gt;mapping&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;span&gt;double&lt;/span&gt;&gt; &lt;strong&gt;axes&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadButton.html&#39;&gt;GamepadButton&lt;/a&gt;&gt; &lt;strong&gt;buttons&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;GamepadHand.html&#39;&gt;GamepadHand&lt;/a&gt; &lt;strong&gt;hand&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadHapticActuator.html&#39;&gt;GamepadHapticActuator&lt;/a&gt;&gt; &lt;strong&gt;hapticActuators&lt;/strong&gt;;
-  readonly attribute &lt;a href=&#39;GamepadPose.html&#39;&gt;GamepadPose&lt;/a&gt;? &lt;strong&gt;pose&lt;/strong&gt;;
-  readonly attribute FrozenArray&lt;&lt;a href=&#39;GamepadTouch.html&#39;&gt;GamepadTouch&lt;/a&gt;&gt;? &lt;strong&gt;touchEvents&lt;/strong&gt;;
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;extensions.html#partial-gamepad-interface">Gamepad Extensions</a><pre class=webidl><code>
+
+partial interface <strong>Gamepad</strong> {
+  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;
+  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;
+};</code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Gamepad</strong> {
+  readonly attribute <span>DOMString</span> <strong>id</strong>;
+  readonly attribute <span>long</span> <strong>index</strong>;
+  readonly attribute <span>boolean</span> <strong>connected</strong>;
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;
+  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;
+  readonly attribute FrozenArray&lt;<span>double</span>&gt; <strong>axes</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;
+  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;
+  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;
+  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;
 };</code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
-  <ul><li><a href="Navigator.html">Navigator</a></li><li><a href="GamepadEvent.html">GamepadEvent</a></li><li><a href="GamepadEventInit.html">GamepadEventInit</a></li><li><a href="XRInputSource.html">XRInputSource</a></li></ul>
+  
+  <ul>
+    <li><a href="Navigator.html">Navigator</a></li><li><a href="GamepadEvent.html">GamepadEvent</a></li><li><a href="GamepadEventInit.html">GamepadEventInit</a></li><li><a href="XRInputSource.html">XRInputSource</a></li>
+  </ul>
 </section>
-  <section><h3>Refering specifications</h3><ul><li><a href="https://w3c.github.io/gamepad/extensions.html">Gamepad Extensions</a> refers to <code>Gamepad</code></li><li><a href="https://www.w3.org/TR/webxr-gamepads-module-1/">WebXR Gamepads Module - Level 1</a> refers to <code>Gamepad</code></li></ul>
-</section>
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;extensions.html">Gamepad Extensions</a> refers to <code>Gamepad</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-gamepads-module-1&#x2F;">WebXR Gamepads Module - Level 1</a> refers to <code>Gamepad</code></li>
+  </ul></section>

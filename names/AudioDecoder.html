@@ -6,18 +6,19 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/web-codecs/#audiodecoder">WebCodecs</a> defines <code>AudioDecoder</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;AudioDecoder&lt;/strong&gt; {
-  constructor(&lt;a href=&#39;AudioDecoderInit.html&#39;&gt;AudioDecoderInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt;);
-  readonly attribute &lt;a href=&#39;CodecState.html&#39;&gt;CodecState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;decodeQueueSize&lt;/strong&gt;;
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-codecs&#x2F;#audiodecoder">WebCodecs</a> defines <code>AudioDecoder</code></p>
+<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>AudioDecoder</strong> {
+  constructor(<a href='AudioDecoderInit.html'>AudioDecoderInit</a> <strong>init</strong>);
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;configure&lt;/strong&gt;(&lt;a href=&#39;AudioDecoderConfig.html&#39;&gt;AudioDecoderConfig&lt;/a&gt; &lt;strong&gt;config&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;decode&lt;/strong&gt;(&lt;a href=&#39;EncodedAudioChunk.html&#39;&gt;EncodedAudioChunk&lt;/a&gt; &lt;strong&gt;chunk&lt;/strong&gt;);
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;flush&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;reset&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+  readonly attribute <a href='CodecState.html'>CodecState</a> <strong>state</strong>;
+  readonly attribute <span>long</span> <strong>decodeQueueSize</strong>;
+
+  <span>undefined</span> <strong>configure</strong>(<a href='AudioDecoderConfig.html'>AudioDecoderConfig</a> <strong>config</strong>);
+  <span>undefined</span> <strong>decode</strong>(<a href='EncodedAudioChunk.html'>EncodedAudioChunk</a> <strong>chunk</strong>);
+  Promise&lt;<span>undefined</span>&gt; <strong>flush</strong>();
+  <span>undefined</span> <strong>reset</strong>();
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
   

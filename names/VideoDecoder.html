@@ -6,19 +6,22 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https://wicg.github.io/web-codecs/#videodecoder">WebCodecs</a> defines <code>VideoDecoder</code></p>
-<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
-interface &lt;strong&gt;VideoDecoder&lt;/strong&gt; {
-  constructor(&lt;a href=&#39;VideoDecoderInit.html&#39;&gt;VideoDecoderInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt;);
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-codecs&#x2F;#videodecoder">WebCodecs</a> defines <code>VideoDecoder</code></p>
+<pre class=webidl><code>
 
-  readonly attribute &lt;a href=&#39;CodecState.html&#39;&gt;CodecState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
-  readonly attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;decodeQueueSize&lt;/strong&gt;;
 
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;configure&lt;/strong&gt;(&lt;a href=&#39;VideoDecoderConfig.html&#39;&gt;VideoDecoderConfig&lt;/a&gt; &lt;strong&gt;config&lt;/strong&gt;);
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;decode&lt;/strong&gt;(&lt;a href=&#39;EncodedVideoChunk.html&#39;&gt;EncodedVideoChunk&lt;/a&gt; &lt;strong&gt;chunk&lt;/strong&gt;);
-  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;flush&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;reset&lt;/strong&gt;();
-  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>VideoDecoder</strong> {
+  constructor(<a href='VideoDecoderInit.html'>VideoDecoderInit</a> <strong>init</strong>);
+
+  readonly attribute <a href='CodecState.html'>CodecState</a> <strong>state</strong>;
+  readonly attribute <span>long</span> <strong>decodeQueueSize</strong>;
+
+  <span>undefined</span> <strong>configure</strong>(<a href='VideoDecoderConfig.html'>VideoDecoderConfig</a> <strong>config</strong>);
+  <span>undefined</span> <strong>decode</strong>(<a href='EncodedVideoChunk.html'>EncodedVideoChunk</a> <strong>chunk</strong>);
+  Promise&lt;<span>undefined</span>&gt; <strong>flush</strong>();
+  <span>undefined</span> <strong>reset</strong>();
+  <span>undefined</span> <strong>close</strong>();
 };</code></pre>
   
   
