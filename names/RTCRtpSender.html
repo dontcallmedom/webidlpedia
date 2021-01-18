@@ -7,40 +7,40 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCRtpSender</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>RTCRtpSender</strong> {
-  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>track</strong>;
-  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span>DOMString</span> <strong>kind</strong>);
-  Promise<<span>undefined</span>> <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>);
-  <a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>getParameters</strong>();
-  Promise<<span>undefined</span>> <strong>replaceTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>withTrack</strong>);
-  <span>undefined</span> <strong>setStreams</strong>(<a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);
-  Promise<<a href='RTCStatsReport.html'>RTCStatsReport</a>> <strong>getStats</strong>();
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;RTCRtpSender&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt;? &lt;strong&gt;track&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;RTCDtlsTransport.html&#39;&gt;RTCDtlsTransport&lt;/a&gt;? &lt;strong&gt;transport&lt;/strong&gt;;
+  static &lt;a href=&#39;RTCRtpCapabilities.html&#39;&gt;RTCRtpCapabilities&lt;/a&gt;? &lt;strong&gt;getCapabilities&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;);
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setParameters&lt;/strong&gt;(&lt;a href=&#39;RTCRtpSendParameters.html&#39;&gt;RTCRtpSendParameters&lt;/a&gt; &lt;strong&gt;parameters&lt;/strong&gt;);
+  &lt;a href=&#39;RTCRtpSendParameters.html&#39;&gt;RTCRtpSendParameters&lt;/a&gt; &lt;strong&gt;getParameters&lt;/strong&gt;();
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;replaceTrack&lt;/strong&gt;(&lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt;? &lt;strong&gt;withTrack&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setStreams&lt;/strong&gt;(&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;... &lt;strong&gt;streams&lt;/strong&gt;);
+  Promise&lt;&lt;a href=&#39;RTCStatsReport.html&#39;&gt;RTCStatsReport&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
 };
 
-partial interface <strong>RTCRtpSender</strong> {
-  readonly attribute <a href='RTCDTMFSender.html'>RTCDTMFSender</a>? <strong>dtmf</strong>;
+partial interface &lt;strong&gt;RTCRtpSender&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;RTCDTMFSender.html&#39;&gt;RTCDTMFSender&lt;/a&gt;? &lt;strong&gt;dtmf&lt;/strong&gt;;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://w3c.github.io/webrtc-insertable-streams/">WebRTC Insertable Media using Streams</a>
 <pre class=webidl><code>// New methods for RTCRtpSender and RTCRtpReceiver
-partial interface <strong>RTCRtpSender</strong> {
-    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();
+partial interface &lt;strong&gt;RTCRtpSender&lt;/strong&gt; {
+    &lt;a href=&#39;RTCInsertableStreams.html&#39;&gt;RTCInsertableStreams&lt;/a&gt; &lt;strong&gt;createEncodedStreams&lt;/strong&gt;();
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>RTCRtpSender</strong> {
-  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>track</strong>;
-  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span>DOMString</span> <strong>kind</strong>);
-  Promise<<span>undefined</span>> <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>);
-  <a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>getParameters</strong>();
-  Promise<<span>undefined</span>> <strong>replaceTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>withTrack</strong>);
-  <span>undefined</span> <strong>setStreams</strong>(<a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);
-  Promise<<a href='RTCStatsReport.html'>RTCStatsReport</a>> <strong>getStats</strong>();
-  readonly attribute <a href='RTCDTMFSender.html'>RTCDTMFSender</a>? <strong>dtmf</strong>;
-    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;RTCRtpSender&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt;? &lt;strong&gt;track&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;RTCDtlsTransport.html&#39;&gt;RTCDtlsTransport&lt;/a&gt;? &lt;strong&gt;transport&lt;/strong&gt;;
+  static &lt;a href=&#39;RTCRtpCapabilities.html&#39;&gt;RTCRtpCapabilities&lt;/a&gt;? &lt;strong&gt;getCapabilities&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;kind&lt;/strong&gt;);
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setParameters&lt;/strong&gt;(&lt;a href=&#39;RTCRtpSendParameters.html&#39;&gt;RTCRtpSendParameters&lt;/a&gt; &lt;strong&gt;parameters&lt;/strong&gt;);
+  &lt;a href=&#39;RTCRtpSendParameters.html&#39;&gt;RTCRtpSendParameters&lt;/a&gt; &lt;strong&gt;getParameters&lt;/strong&gt;();
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;replaceTrack&lt;/strong&gt;(&lt;a href=&#39;MediaStreamTrack.html&#39;&gt;MediaStreamTrack&lt;/a&gt;? &lt;strong&gt;withTrack&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setStreams&lt;/strong&gt;(&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;... &lt;strong&gt;streams&lt;/strong&gt;);
+  Promise&lt;&lt;a href=&#39;RTCStatsReport.html&#39;&gt;RTCStatsReport&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
+  readonly attribute &lt;a href=&#39;RTCDTMFSender.html&#39;&gt;RTCDTMFSender&lt;/a&gt;? &lt;strong&gt;dtmf&lt;/strong&gt;;
+    &lt;a href=&#39;RTCInsertableStreams.html&#39;&gt;RTCInsertableStreams&lt;/a&gt; &lt;strong&gt;createEncodedStreams&lt;/strong&gt;();
 };</code></pre></details>
 </section>
 <section>

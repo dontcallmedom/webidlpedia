@@ -7,36 +7,36 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://webbluetoothcg.github.io/web-bluetooth/#bluetooth">Web Bluetooth</a> defines <code>Bluetooth</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  Promise<<span>boolean</span>> <strong>getAvailability</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onavailabilitychanged</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+interface &lt;strong&gt;Bluetooth&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;getAvailability&lt;/strong&gt;();
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onavailabilitychanged&lt;/strong&gt;;
   [SameObject]
-  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a>? <strong>referringDevice</strong>;
-  Promise<sequence<<a href='BluetoothDevice.html'>BluetoothDevice</a>>> <strong>getDevices</strong>();
-  Promise<<a href='BluetoothDevice.html'>BluetoothDevice</a>> <strong>requestDevice</strong>(optional <a href='RequestDeviceOptions.html'>RequestDeviceOptions</a> <strong>options</strong> = {});
+  readonly attribute &lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;? &lt;strong&gt;referringDevice&lt;/strong&gt;;
+  Promise&lt;sequence&lt;&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;&gt;&gt; &lt;strong&gt;getDevices&lt;/strong&gt;();
+  Promise&lt;&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;&gt; &lt;strong&gt;requestDevice&lt;/strong&gt;(optional &lt;a href=&#39;RequestDeviceOptions.html&#39;&gt;RequestDeviceOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 };
 
-<a href='Bluetooth.html'>Bluetooth</a> includes <a href='BluetoothDeviceEventHandlers.html'>BluetoothDeviceEventHandlers</a>;
-<a href='Bluetooth.html'>Bluetooth</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;
-<a href='Bluetooth.html'>Bluetooth</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</code></pre>
+&lt;a href=&#39;Bluetooth.html&#39;&gt;Bluetooth&lt;/a&gt; includes &lt;a href=&#39;BluetoothDeviceEventHandlers.html&#39;&gt;BluetoothDeviceEventHandlers&lt;/a&gt;;
+&lt;a href=&#39;Bluetooth.html&#39;&gt;Bluetooth&lt;/a&gt; includes &lt;a href=&#39;CharacteristicEventHandlers.html&#39;&gt;CharacteristicEventHandlers&lt;/a&gt;;
+&lt;a href=&#39;Bluetooth.html&#39;&gt;Bluetooth&lt;/a&gt; includes &lt;a href=&#39;ServiceEventHandlers.html&#39;&gt;ServiceEventHandlers&lt;/a&gt;;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  Promise<<span>boolean</span>> <strong>getAvailability</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onavailabilitychanged</strong>;
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+interface &lt;strong&gt;Bluetooth&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  Promise&lt;&lt;span&gt;boolean&lt;/span&gt;&gt; &lt;strong&gt;getAvailability&lt;/strong&gt;();
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onavailabilitychanged&lt;/strong&gt;;
   [SameObject]
-  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a>? <strong>referringDevice</strong>;
-  Promise<sequence<<a href='BluetoothDevice.html'>BluetoothDevice</a>>> <strong>getDevices</strong>();
-  Promise<<a href='BluetoothDevice.html'>BluetoothDevice</a>> <strong>requestDevice</strong>(optional <a href='RequestDeviceOptions.html'>RequestDeviceOptions</a> <strong>options</strong> = {});
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onadvertisementreceived</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ongattserverdisconnected</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;
+  readonly attribute &lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;? &lt;strong&gt;referringDevice&lt;/strong&gt;;
+  Promise&lt;sequence&lt;&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;&gt;&gt; &lt;strong&gt;getDevices&lt;/strong&gt;();
+  Promise&lt;&lt;a href=&#39;BluetoothDevice.html&#39;&gt;BluetoothDevice&lt;/a&gt;&gt; &lt;strong&gt;requestDevice&lt;/strong&gt;(optional &lt;a href=&#39;RequestDeviceOptions.html&#39;&gt;RequestDeviceOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onadvertisementreceived&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ongattserverdisconnected&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;oncharacteristicvaluechanged&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onserviceadded&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onservicechanged&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onserviceremoved&lt;/strong&gt;;
 };</code></pre></details>
 </section>
 <section>

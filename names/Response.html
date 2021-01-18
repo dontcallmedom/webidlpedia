@@ -7,50 +7,50 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://fetch.spec.whatwg.org/#response">Fetch Standard</a> defines <code>Response</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]interface <strong>Response</strong> {
-  constructor(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> = null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> = {});
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]interface &lt;strong&gt;Response&lt;/strong&gt; {
+  constructor(optional &lt;a href=&#39;BodyInit.html&#39;&gt;BodyInit&lt;/a&gt;? &lt;strong&gt;body&lt;/strong&gt; = null, optional &lt;a href=&#39;ResponseInit.html&#39;&gt;ResponseInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt; = {});
 
-  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();
-  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span>USVString</span> <strong>url</strong>, optional <span>unsigned short</span> <strong>status</strong> = 302);
+  [NewObject] static &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;error&lt;/strong&gt;();
+  [NewObject] static &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;redirect&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt; = 302);
 
-  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;
+  readonly attribute &lt;a href=&#39;ResponseType.html&#39;&gt;ResponseType&lt;/a&gt; &lt;strong&gt;type&lt;/strong&gt;;
 
-  readonly attribute <span>USVString</span> <strong>url</strong>;
-  readonly attribute <span>boolean</span> <strong>redirected</strong>;
-  readonly attribute <span>unsigned short</span> <strong>status</strong>;
-  readonly attribute <span>boolean</span> <strong>ok</strong>;
-  readonly attribute <span>ByteString</span> <strong>statusText</strong>;
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;redirected&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ok&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;statusText&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;Headers.html&#39;&gt;Headers&lt;/a&gt; &lt;strong&gt;headers&lt;/strong&gt;;
 
-  [NewObject] <a href='Response.html'>Response</a> <strong>clone</strong>();
+  [NewObject] &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;clone&lt;/strong&gt;();
 };
-<a href='Response.html'>Response</a> includes <a href='Body.html'>Body</a>;</code></pre>
+&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; includes &lt;a href=&#39;Body.html&#39;&gt;Body&lt;/a&gt;;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]interface <strong>Response</strong> {
-  constructor(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> = null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> = {});
+[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]interface &lt;strong&gt;Response&lt;/strong&gt; {
+  constructor(optional &lt;a href=&#39;BodyInit.html&#39;&gt;BodyInit&lt;/a&gt;? &lt;strong&gt;body&lt;/strong&gt; = null, optional &lt;a href=&#39;ResponseInit.html&#39;&gt;ResponseInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt; = {});
 
-  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();
-  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span>USVString</span> <strong>url</strong>, optional <span>unsigned short</span> <strong>status</strong> = 302);
+  [NewObject] static &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;error&lt;/strong&gt;();
+  [NewObject] static &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;redirect&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt; = 302);
 
-  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;
+  readonly attribute &lt;a href=&#39;ResponseType.html&#39;&gt;ResponseType&lt;/a&gt; &lt;strong&gt;type&lt;/strong&gt;;
 
-  readonly attribute <span>USVString</span> <strong>url</strong>;
-  readonly attribute <span>boolean</span> <strong>redirected</strong>;
-  readonly attribute <span>unsigned short</span> <strong>status</strong>;
-  readonly attribute <span>boolean</span> <strong>ok</strong>;
-  readonly attribute <span>ByteString</span> <strong>statusText</strong>;
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;redirected&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ok&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;statusText&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;Headers.html&#39;&gt;Headers&lt;/a&gt; &lt;strong&gt;headers&lt;/strong&gt;;
 
-  [NewObject] <a href='Response.html'>Response</a> <strong>clone</strong>();
-  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;
-  readonly attribute <span>boolean</span> <strong>bodyUsed</strong>;
-  [NewObject] Promise<<span>ArrayBuffer</span>> <strong>arrayBuffer</strong>();
-  [NewObject] Promise<<a href='Blob.html'>Blob</a>> <strong>blob</strong>();
-  [NewObject] Promise<<a href='FormData.html'>FormData</a>> <strong>formData</strong>();
-  [NewObject] Promise<<span>any</span>> <strong>json</strong>();
-  [NewObject] Promise<<span>USVString</span>> <strong>text</strong>();
+  [NewObject] &lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt; &lt;strong&gt;clone&lt;/strong&gt;();
+  readonly attribute &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt;? &lt;strong&gt;body&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;bodyUsed&lt;/strong&gt;;
+  [NewObject] Promise&lt;&lt;span&gt;ArrayBuffer&lt;/span&gt;&gt; &lt;strong&gt;arrayBuffer&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt;&gt; &lt;strong&gt;blob&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;a href=&#39;FormData.html&#39;&gt;FormData&lt;/a&gt;&gt; &lt;strong&gt;formData&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;span&gt;any&lt;/span&gt;&gt; &lt;strong&gt;json&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;span&gt;USVString&lt;/span&gt;&gt; &lt;strong&gt;text&lt;/strong&gt;();
 };</code></pre></details>
 </section>
 <section>

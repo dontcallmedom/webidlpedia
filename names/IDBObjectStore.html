@@ -7,37 +7,37 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/IndexedDB/#idbobjectstore">Indexed Database API 3.0</a> defines <code>IDBObjectStore</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>IDBObjectStore</strong> {
-  attribute <span>DOMString</span> <strong>name</strong>;
-  readonly attribute <span>any</span> <strong>keyPath</strong>;
-  readonly attribute <a href='DOMStringList.html'>DOMStringList</a> <strong>indexNames</strong>;
-  [SameObject] readonly attribute <a href='IDBTransaction.html'>IDBTransaction</a> <strong>transaction</strong>;
-  readonly attribute <span>boolean</span> <strong>autoIncrement</strong>;
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;IDBObjectStore&lt;/strong&gt; {
+  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;keyPath&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;DOMStringList.html&#39;&gt;DOMStringList&lt;/a&gt; &lt;strong&gt;indexNames&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;IDBTransaction.html&#39;&gt;IDBTransaction&lt;/a&gt; &lt;strong&gt;transaction&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;autoIncrement&lt;/strong&gt;;
 
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>put</strong>(<span>any</span> <strong>value</strong>, optional <span>any</span> <strong>key</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>add</strong>(<span>any</span> <strong>value</strong>, optional <span>any</span> <strong>key</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>delete</strong>(<span>any</span> <strong>query</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>clear</strong>();
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>get</strong>(<span>any</span> <strong>query</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getKey</strong>(<span>any</span> <strong>query</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAll</strong>(optional <span>any</span> <strong>query</strong>,
-                                optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAllKeys</strong>(optional <span>any</span> <strong>query</strong>,
-                                    optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>count</strong>(optional <span>any</span> <strong>query</strong>);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;put&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;key&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;add&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;, optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;key&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;delete&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;clear&lt;/strong&gt;();
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;get&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;getKey&lt;/strong&gt;(&lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;getAll&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;,
+                                optional [EnforceRange] &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;count&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;getAllKeys&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;,
+                                    optional [EnforceRange] &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;count&lt;/strong&gt;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;count&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;);
 
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openCursor</strong>(optional <span>any</span> <strong>query</strong>,
-                                    optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openKeyCursor</strong>(optional <span>any</span> <strong>query</strong>,
-                                       optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;openCursor&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;,
+                                    optional &lt;a href=&#39;IDBCursorDirection.html&#39;&gt;IDBCursorDirection&lt;/a&gt; &lt;strong&gt;direction&lt;/strong&gt; = &quot;next&quot;);
+  [NewObject] &lt;a href=&#39;IDBRequest.html&#39;&gt;IDBRequest&lt;/a&gt; &lt;strong&gt;openKeyCursor&lt;/strong&gt;(optional &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;query&lt;/strong&gt;,
+                                       optional &lt;a href=&#39;IDBCursorDirection.html&#39;&gt;IDBCursorDirection&lt;/a&gt; &lt;strong&gt;direction&lt;/strong&gt; = &quot;next&quot;);
 
-  <a href='IDBIndex.html'>IDBIndex</a> <strong>index</strong>(<span>DOMString</span> <strong>name</strong>);
+  &lt;a href=&#39;IDBIndex.html&#39;&gt;IDBIndex&lt;/a&gt; &lt;strong&gt;index&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
 
-  [NewObject] <a href='IDBIndex.html'>IDBIndex</a> <strong>createIndex</strong>(<span>DOMString</span> <strong>name</strong>,
-                                   (<span>DOMString</span> or sequence<<span>DOMString</span>>) <strong>keyPath</strong>,
-                                   optional <a href='IDBIndexParameters.html'>IDBIndexParameters</a> <strong>options</strong> = {});
-  <span>undefined</span> <strong>deleteIndex</strong>(<span>DOMString</span> <strong>name</strong>);
+  [NewObject] &lt;a href=&#39;IDBIndex.html&#39;&gt;IDBIndex&lt;/a&gt; &lt;strong&gt;createIndex&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;,
+                                   (&lt;span&gt;DOMString&lt;/span&gt; or sequence&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt;) &lt;strong&gt;keyPath&lt;/strong&gt;,
+                                   optional &lt;a href=&#39;IDBIndexParameters.html&#39;&gt;IDBIndexParameters&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;deleteIndex&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
 };</code></pre>
   
   

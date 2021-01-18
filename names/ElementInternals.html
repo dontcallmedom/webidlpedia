@@ -7,110 +7,110 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#elementinternals">HTML Standard</a> defines <code>ElementInternals</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>ElementInternals</strong> {
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;ElementInternals&lt;/strong&gt; {
   // Shadow root access
-  readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;
+  readonly attribute &lt;a href=&#39;ShadowRoot.html&#39;&gt;ShadowRoot&lt;/a&gt;? &lt;strong&gt;shadowRoot&lt;/strong&gt;;
 
   // Form-associated custom elements
-  <span>undefined</span> <strong>setFormValue</strong>((<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>value</strong>,
-                         optional (<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setFormValue&lt;/strong&gt;((&lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt; or &lt;span&gt;USVString&lt;/span&gt; or &lt;a href=&#39;FormData.html&#39;&gt;FormData&lt;/a&gt;)? &lt;strong&gt;value&lt;/strong&gt;,
+                         optional (&lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt; or &lt;span&gt;USVString&lt;/span&gt; or &lt;a href=&#39;FormData.html&#39;&gt;FormData&lt;/a&gt;)? &lt;strong&gt;state&lt;/strong&gt;);
 
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  readonly attribute &lt;a href=&#39;HTMLFormElement.html&#39;&gt;HTMLFormElement&lt;/a&gt;? &lt;strong&gt;form&lt;/strong&gt;;
 
-  <span>undefined</span> <strong>setValidity</strong>(optional <a href='ValidityStateFlags.html'>ValidityStateFlags</a> <strong>flags</strong> = {},
-                        optional <span>DOMString</span> <strong>message</strong>,
-                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);
-  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
-  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
-  <span>boolean</span> <strong>checkValidity</strong>();
-  <span>boolean</span> <strong>reportValidity</strong>();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setValidity&lt;/strong&gt;(optional &lt;a href=&#39;ValidityStateFlags.html&#39;&gt;ValidityStateFlags&lt;/a&gt; &lt;strong&gt;flags&lt;/strong&gt; = {},
+                        optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;,
+                        optional &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; &lt;strong&gt;anchor&lt;/strong&gt;);
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;willValidate&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;ValidityState.html&#39;&gt;ValidityState&lt;/a&gt; &lt;strong&gt;validity&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;validationMessage&lt;/strong&gt;;
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkValidity&lt;/strong&gt;();
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;reportValidity&lt;/strong&gt;();
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
+  readonly attribute &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;labels&lt;/strong&gt;;
 };
 
 // Accessibility semantics
-<a href='ElementInternals.html'>ElementInternals</a> includes <a href='ARIAMixin.html'>ARIAMixin</a>;</code></pre>
+&lt;a href=&#39;ElementInternals.html&#39;&gt;ElementInternals&lt;/a&gt; includes &lt;a href=&#39;ARIAMixin.html&#39;&gt;ARIAMixin&lt;/a&gt;;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://wicg.github.io/custom-state-pseudo-class/#exposing">Custom State Pseudo Class</a>
-<pre class=webidl><code>partial interface <strong>ElementInternals</strong> {
-  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>states</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;ElementInternals&lt;/strong&gt; {
+  [SameObject, PutForwards=&lt;span&gt;value&lt;/span&gt;] readonly attribute &lt;a href=&#39;DOMTokenList.html&#39;&gt;DOMTokenList&lt;/a&gt; &lt;strong&gt;states&lt;/strong&gt;;
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>ElementInternals</strong> {
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;ElementInternals&lt;/strong&gt; {
   // Shadow root access
-  readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;
+  readonly attribute &lt;a href=&#39;ShadowRoot.html&#39;&gt;ShadowRoot&lt;/a&gt;? &lt;strong&gt;shadowRoot&lt;/strong&gt;;
 
   // Form-associated custom elements
-  <span>undefined</span> <strong>setFormValue</strong>((<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>value</strong>,
-                         optional (<a href='File.html'>File</a> or <span>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setFormValue&lt;/strong&gt;((&lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt; or &lt;span&gt;USVString&lt;/span&gt; or &lt;a href=&#39;FormData.html&#39;&gt;FormData&lt;/a&gt;)? &lt;strong&gt;value&lt;/strong&gt;,
+                         optional (&lt;a href=&#39;File.html&#39;&gt;File&lt;/a&gt; or &lt;span&gt;USVString&lt;/span&gt; or &lt;a href=&#39;FormData.html&#39;&gt;FormData&lt;/a&gt;)? &lt;strong&gt;state&lt;/strong&gt;);
 
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
+  readonly attribute &lt;a href=&#39;HTMLFormElement.html&#39;&gt;HTMLFormElement&lt;/a&gt;? &lt;strong&gt;form&lt;/strong&gt;;
 
-  <span>undefined</span> <strong>setValidity</strong>(optional <a href='ValidityStateFlags.html'>ValidityStateFlags</a> <strong>flags</strong> = {},
-                        optional <span>DOMString</span> <strong>message</strong>,
-                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);
-  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
-  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
-  <span>boolean</span> <strong>checkValidity</strong>();
-  <span>boolean</span> <strong>reportValidity</strong>();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setValidity&lt;/strong&gt;(optional &lt;a href=&#39;ValidityStateFlags.html&#39;&gt;ValidityStateFlags&lt;/a&gt; &lt;strong&gt;flags&lt;/strong&gt; = {},
+                        optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;message&lt;/strong&gt;,
+                        optional &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; &lt;strong&gt;anchor&lt;/strong&gt;);
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;willValidate&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;ValidityState.html&#39;&gt;ValidityState&lt;/a&gt; &lt;strong&gt;validity&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;validationMessage&lt;/strong&gt;;
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkValidity&lt;/strong&gt;();
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;reportValidity&lt;/strong&gt;();
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
-	attribute <span>DOMString</span>? <strong>role</strong>;
+  readonly attribute &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;labels&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt;? &lt;strong&gt;role&lt;/strong&gt;;
 
 
-	attribute <span>DOMString</span> <strong>ariaAtomic</strong>;
-	attribute <span>DOMString</span> <strong>ariaAutoComplete</strong>;
-	attribute <span>DOMString</span> <strong>ariaBusy</strong>;
-	attribute <span>DOMString</span> <strong>ariaChecked</strong>;
-	attribute <span>DOMString</span> <strong>ariaColCount</strong>;
-	attribute <span>DOMString</span> <strong>ariaColIndex</strong>;
-	attribute <span>DOMString</span> <strong>ariaColIndexText</strong>;
-	attribute <span>DOMString</span> <strong>ariaColSpan</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaAtomic&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaAutoComplete&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaBusy&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaChecked&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaColCount&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaColIndex&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaColIndexText&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaColSpan&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaCurrent</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaCurrent&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaDescription</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaDescription&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaDisabled</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaDisabled&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaExpanded</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaExpanded&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaHasPopup</strong>;
-	attribute <span>DOMString</span> <strong>ariaHidden</strong>;
-	attribute <span>DOMString</span> <strong>ariaInvalid</strong>;
-	attribute <span>DOMString</span> <strong>ariaKeyShortcuts</strong>;
-	attribute <span>DOMString</span> <strong>ariaLabel</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaHasPopup&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaHidden&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaInvalid&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaKeyShortcuts&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaLabel&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaLevel</strong>;
-	attribute <span>DOMString</span> <strong>ariaLive</strong>;
-	attribute <span>DOMString</span> <strong>ariaModal</strong>;
-	attribute <span>DOMString</span> <strong>ariaMultiLine</strong>;
-	attribute <span>DOMString</span> <strong>ariaMultiSelectable</strong>;
-	attribute <span>DOMString</span> <strong>ariaOrientation</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaLevel&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaLive&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaModal&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaMultiLine&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaMultiSelectable&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaOrientation&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaPlaceholder</strong>;
-	attribute <span>DOMString</span> <strong>ariaPosInSet</strong>;
-	attribute <span>DOMString</span> <strong>ariaPressed</strong>;
-	attribute <span>DOMString</span> <strong>ariaReadOnly</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaPlaceholder&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaPosInSet&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaPressed&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaReadOnly&lt;/strong&gt;;
 
-	attribute <span>DOMString</span> <strong>ariaRequired</strong>;
-	attribute <span>DOMString</span> <strong>ariaRoleDescription</strong>;
-	attribute <span>DOMString</span> <strong>ariaRowCount</strong>;
-	attribute <span>DOMString</span> <strong>ariaRowIndex</strong>;
-	attribute <span>DOMString</span> <strong>ariaRowIndexText</strong>;
-	attribute <span>DOMString</span> <strong>ariaRowSpan</strong>;
-	attribute <span>DOMString</span> <strong>ariaSelected</strong>;
-	attribute <span>DOMString</span> <strong>ariaSetSize</strong>;
-	attribute <span>DOMString</span> <strong>ariaSort</strong>;
-	attribute <span>DOMString</span> <strong>ariaValueMax</strong>;
-	attribute <span>DOMString</span> <strong>ariaValueMin</strong>;
-	attribute <span>DOMString</span> <strong>ariaValueNow</strong>;
-	attribute <span>DOMString</span> <strong>ariaValueText</strong>;
-  [SameObject, PutForwards=<span>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>states</strong>;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRequired&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRoleDescription&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRowCount&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRowIndex&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRowIndexText&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaRowSpan&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaSelected&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaSetSize&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaSort&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaValueMax&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaValueMin&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaValueNow&lt;/strong&gt;;
+	attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;ariaValueText&lt;/strong&gt;;
+  [SameObject, PutForwards=&lt;span&gt;value&lt;/span&gt;] readonly attribute &lt;a href=&#39;DOMTokenList.html&#39;&gt;DOMTokenList&lt;/a&gt; &lt;strong&gt;states&lt;/strong&gt;;
 };</code></pre></details>
 </section>
 <section>

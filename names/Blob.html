@@ -7,22 +7,22 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-Blob">File API</a> defines <code>Blob</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), Serializable]
-interface <strong>Blob</strong> {
-  constructor(optional sequence<<a href='BlobPart.html'>BlobPart</a>> <strong>blobParts</strong>,
-              optional <a href='BlobPropertyBag.html'>BlobPropertyBag</a> <strong>options</strong> = {});
-  readonly attribute <span>unsigned long long</span> <strong>size</strong>;
-  readonly attribute <span>DOMString</span> <strong>type</strong>;
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;), Serializable]
+interface &lt;strong&gt;Blob&lt;/strong&gt; {
+  constructor(optional sequence&lt;&lt;a href=&#39;BlobPart.html&#39;&gt;BlobPart&lt;/a&gt;&gt; &lt;strong&gt;blobParts&lt;/strong&gt;,
+              optional &lt;a href=&#39;BlobPropertyBag.html&#39;&gt;BlobPropertyBag&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  readonly attribute &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;size&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
 
   // slice Blob into byte-ranged chunks
-  <a href='Blob.html'>Blob</a> <strong>slice</strong>(optional [Clamp] <span>long long</span> <strong>start</strong>,
-            optional [Clamp] <span>long long</span> <strong>end</strong>,
-            optional <span>DOMString</span> <strong>contentType</strong>);
+  &lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;slice&lt;/strong&gt;(optional [Clamp] &lt;span&gt;long long&lt;/span&gt; &lt;strong&gt;start&lt;/strong&gt;,
+            optional [Clamp] &lt;span&gt;long long&lt;/span&gt; &lt;strong&gt;end&lt;/strong&gt;,
+            optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;contentType&lt;/strong&gt;);
 
   // read from the Blob.
-  [NewObject] <a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>();
-  [NewObject] Promise<<span>USVString</span>> <strong>text</strong>();
-  [NewObject] Promise<<span>ArrayBuffer</span>> <strong>arrayBuffer</strong>();
+  [NewObject] &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;stream&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;span&gt;USVString&lt;/span&gt;&gt; &lt;strong&gt;text&lt;/strong&gt;();
+  [NewObject] Promise&lt;&lt;span&gt;ArrayBuffer&lt;/span&gt;&gt; &lt;strong&gt;arrayBuffer&lt;/strong&gt;();
 };</code></pre>
   
   

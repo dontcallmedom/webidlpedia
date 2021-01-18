@@ -7,36 +7,36 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/FileAPI/#dfn-filereader">File API</a> defines <code>FileReader</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a> {
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;FileReader&lt;/strong&gt;: &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
   constructor();
   // async read methods
-  <span>undefined</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span>DOMString</span> <strong>encoding</strong>);
-  <span>undefined</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;readAsArrayBuffer&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;blob&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;readAsBinaryString&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;blob&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;readAsText&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;blob&lt;/strong&gt;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;encoding&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;readAsDataURL&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;blob&lt;/strong&gt;);
 
-  <span>undefined</span> <strong>abort</strong>();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;abort&lt;/strong&gt;();
 
   // states
-  const <span>unsigned short</span> <strong>EMPTY</strong> = 0;
-  const <span>unsigned short</span> <strong>LOADING</strong> = 1;
-  const <span>unsigned short</span> <strong>DONE</strong> = 2;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;EMPTY&lt;/strong&gt; = 0;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;LOADING&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;DONE&lt;/strong&gt; = 2;
 
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
 
   // File or Blob data
-  readonly attribute (<span>DOMString</span> or <span>ArrayBuffer</span>)? <strong>result</strong>;
+  readonly attribute (&lt;span&gt;DOMString&lt;/span&gt; or &lt;span&gt;ArrayBuffer&lt;/span&gt;)? &lt;strong&gt;result&lt;/strong&gt;;
 
-  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
+  readonly attribute &lt;a href=&#39;DOMException.html&#39;&gt;DOMException&lt;/a&gt;? &lt;strong&gt;error&lt;/strong&gt;;
 
   // event handler content attributes
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadstart&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onprogress&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onload&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onabort&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadend&lt;/strong&gt;;
 };</code></pre>
   
   

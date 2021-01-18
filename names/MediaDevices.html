@@ -7,33 +7,33 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/mediacapture-main/#dom-mediadevices">Media Capture and Streams</a> defines <code>MediaDevices</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;
-  Promise<sequence<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>>> <strong>enumerateDevices</strong>();
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+interface &lt;strong&gt;MediaDevices&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondevicechange&lt;/strong&gt;;
+  Promise&lt;sequence&lt;&lt;a href=&#39;MediaDeviceInfo.html&#39;&gt;MediaDeviceInfo&lt;/a&gt;&gt;&gt; &lt;strong&gt;enumerateDevices&lt;/strong&gt;();
 };
 
-partial interface <strong>MediaDevices</strong> {
-  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();
-  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> = {});
+partial interface &lt;strong&gt;MediaDevices&lt;/strong&gt; {
+  &lt;a href=&#39;MediaTrackSupportedConstraints.html&#39;&gt;MediaTrackSupportedConstraints&lt;/a&gt; &lt;strong&gt;getSupportedConstraints&lt;/strong&gt;();
+  Promise&lt;&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;&gt; &lt;strong&gt;getUserMedia&lt;/strong&gt;(optional &lt;a href=&#39;MediaStreamConstraints.html&#39;&gt;MediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt; = {});
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/audio-output/#methods-0">Audio Output Devices API</a>
-<pre class=webidl><code>partial interface <strong>MediaDevices</strong> {
-  Promise<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>> <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> = {});
+<pre class=webidl><code>partial interface &lt;strong&gt;MediaDevices&lt;/strong&gt; {
+  Promise&lt;&lt;a href=&#39;MediaDeviceInfo.html&#39;&gt;MediaDeviceInfo&lt;/a&gt;&gt; &lt;strong&gt;selectAudioOutput&lt;/strong&gt;(optional &lt;a href=&#39;AudioOutputOptions.html&#39;&gt;AudioOutputOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-capture/#mediadevices-additions">Screen Capture</a>
-<pre class=webidl><code>partial interface <strong>MediaDevices</strong> {
-  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> = {});
+<pre class=webidl><code>partial interface &lt;strong&gt;MediaDevices&lt;/strong&gt; {
+  Promise&lt;&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;&gt; &lt;strong&gt;getDisplayMedia&lt;/strong&gt;(optional &lt;a href=&#39;DisplayMediaStreamConstraints.html&#39;&gt;DisplayMediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt; = {});
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;
-  Promise<sequence<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>>> <strong>enumerateDevices</strong>();
-  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();
-  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> = {});
-  Promise<<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>> <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> = {});
-  Promise<<a href='MediaStream.html'>MediaStream</a>> <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> = {});
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+interface &lt;strong&gt;MediaDevices&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ondevicechange&lt;/strong&gt;;
+  Promise&lt;sequence&lt;&lt;a href=&#39;MediaDeviceInfo.html&#39;&gt;MediaDeviceInfo&lt;/a&gt;&gt;&gt; &lt;strong&gt;enumerateDevices&lt;/strong&gt;();
+  &lt;a href=&#39;MediaTrackSupportedConstraints.html&#39;&gt;MediaTrackSupportedConstraints&lt;/a&gt; &lt;strong&gt;getSupportedConstraints&lt;/strong&gt;();
+  Promise&lt;&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;&gt; &lt;strong&gt;getUserMedia&lt;/strong&gt;(optional &lt;a href=&#39;MediaStreamConstraints.html&#39;&gt;MediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt; = {});
+  Promise&lt;&lt;a href=&#39;MediaDeviceInfo.html&#39;&gt;MediaDeviceInfo&lt;/a&gt;&gt; &lt;strong&gt;selectAudioOutput&lt;/strong&gt;(optional &lt;a href=&#39;AudioOutputOptions.html&#39;&gt;AudioOutputOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  Promise&lt;&lt;a href=&#39;MediaStream.html&#39;&gt;MediaStream&lt;/a&gt;&gt; &lt;strong&gt;getDisplayMedia&lt;/strong&gt;(optional &lt;a href=&#39;DisplayMediaStreamConstraints.html&#39;&gt;DisplayMediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt; = {});
 };</code></pre></details>
 </section>
 <section>

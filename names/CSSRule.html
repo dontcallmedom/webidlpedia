@@ -7,65 +7,65 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/cssom/#cssrule">CSS Object Model (CSSOM)</a> defines <code>CSSRule</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>CSSRule</strong> {
-  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+  attribute &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;cssText&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;CSSRule.html&#39;&gt;CSSRule&lt;/a&gt;? &lt;strong&gt;parentRule&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;CSSStyleSheet.html&#39;&gt;CSSStyleSheet&lt;/a&gt;? &lt;strong&gt;parentStyleSheet&lt;/strong&gt;;
 
   // the following attribute and constants are historical
-  readonly attribute <span>unsigned short</span> <strong>type</strong>;
-  const <span>unsigned short</span> <strong>STYLE_RULE</strong> = 1;
-  const <span>unsigned short</span> <strong>CHARSET_RULE</strong> = 2;
-  const <span>unsigned short</span> <strong>IMPORT_RULE</strong> = 3;
-  const <span>unsigned short</span> <strong>MEDIA_RULE</strong> = 4;
-  const <span>unsigned short</span> <strong>FONT_FACE_RULE</strong> = 5;
-  const <span>unsigned short</span> <strong>PAGE_RULE</strong> = 6;
-  const <span>unsigned short</span> <strong>MARGIN_RULE</strong> = 9;
-  const <span>unsigned short</span> <strong>NAMESPACE_RULE</strong> = 10;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;STYLE_RULE&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CHARSET_RULE&lt;/strong&gt; = 2;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;IMPORT_RULE&lt;/strong&gt; = 3;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;MEDIA_RULE&lt;/strong&gt; = 4;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_FACE_RULE&lt;/strong&gt; = 5;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;PAGE_RULE&lt;/strong&gt; = 6;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;MARGIN_RULE&lt;/strong&gt; = 9;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NAMESPACE_RULE&lt;/strong&gt; = 10;
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/css-animations-1/#interface-cssrule-idl">CSS Animations Level 1</a>
-<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
-    const <span>unsigned short</span> <strong>KEYFRAMES_RULE</strong> = 7;
-    const <span>unsigned short</span> <strong>KEYFRAME_RULE</strong> = 8;
+<pre class=webidl><code>partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;KEYFRAMES_RULE&lt;/strong&gt; = 7;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;KEYFRAME_RULE&lt;/strong&gt; = 8;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-conditional-3/#extentions-to-cssrule-interface">CSS Conditional Rules Module Level 3</a>
-<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
-    const <span>unsigned short</span> <strong>SUPPORTS_RULE</strong> = 12;
+<pre class=webidl><code>partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SUPPORTS_RULE&lt;/strong&gt; = 12;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-counter-styles-3/#extentions-to-cssrule-interface">CSS Counter Styles Level 3</a>
-<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
-    const <span>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> = 11;
+<pre class=webidl><code>partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;COUNTER_STYLE_RULE&lt;/strong&gt; = 11;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-device-adapt-1/#css-rule-interface">CSS Device Adaptation Module Level 1</a>
-<pre class=webidl><code>partial interface <strong>CSSRule</strong> {
-    const <span>unsigned short</span> <strong>VIEWPORT_RULE</strong> = 15;
+<pre class=webidl><code>partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;VIEWPORT_RULE&lt;/strong&gt; = 15;
 };</code></pre></li><li><a href="https://www.w3.org/TR/css-fonts-4/#om-fontfeaturevalues">CSS Fonts Module Level 4</a>
-<pre class=webidl><code>partial interface <strong>CSSRule</strong> {  const <span>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> = 14;
+<pre class=webidl><code>partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_FEATURE_VALUES_RULE&lt;/strong&gt; = 14;
 };
 
-partial interface <strong>CSSRule</strong> {  const <span>unsigned short</span> <strong>FONT_PALETTE_VALUES_RULE</strong> = 15;
+partial interface &lt;strong&gt;CSSRule&lt;/strong&gt; {  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_PALETTE_VALUES_RULE&lt;/strong&gt; = 15;
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>CSSRule</strong> {
-  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;CSSRule&lt;/strong&gt; {
+  attribute &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;cssText&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;CSSRule.html&#39;&gt;CSSRule&lt;/a&gt;? &lt;strong&gt;parentRule&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;CSSStyleSheet.html&#39;&gt;CSSStyleSheet&lt;/a&gt;? &lt;strong&gt;parentStyleSheet&lt;/strong&gt;;
 
   // the following attribute and constants are historical
-  readonly attribute <span>unsigned short</span> <strong>type</strong>;
-  const <span>unsigned short</span> <strong>STYLE_RULE</strong> = 1;
-  const <span>unsigned short</span> <strong>CHARSET_RULE</strong> = 2;
-  const <span>unsigned short</span> <strong>IMPORT_RULE</strong> = 3;
-  const <span>unsigned short</span> <strong>MEDIA_RULE</strong> = 4;
-  const <span>unsigned short</span> <strong>FONT_FACE_RULE</strong> = 5;
-  const <span>unsigned short</span> <strong>PAGE_RULE</strong> = 6;
-  const <span>unsigned short</span> <strong>MARGIN_RULE</strong> = 9;
-  const <span>unsigned short</span> <strong>NAMESPACE_RULE</strong> = 10;
-    const <span>unsigned short</span> <strong>KEYFRAMES_RULE</strong> = 7;
-    const <span>unsigned short</span> <strong>KEYFRAME_RULE</strong> = 8;
-    const <span>unsigned short</span> <strong>SUPPORTS_RULE</strong> = 12;
-    const <span>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> = 11;
-    const <span>unsigned short</span> <strong>VIEWPORT_RULE</strong> = 15;  const <span>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> = 14;  const <span>unsigned short</span> <strong>FONT_PALETTE_VALUES_RULE</strong> = 15;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;STYLE_RULE&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CHARSET_RULE&lt;/strong&gt; = 2;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;IMPORT_RULE&lt;/strong&gt; = 3;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;MEDIA_RULE&lt;/strong&gt; = 4;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_FACE_RULE&lt;/strong&gt; = 5;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;PAGE_RULE&lt;/strong&gt; = 6;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;MARGIN_RULE&lt;/strong&gt; = 9;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NAMESPACE_RULE&lt;/strong&gt; = 10;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;KEYFRAMES_RULE&lt;/strong&gt; = 7;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;KEYFRAME_RULE&lt;/strong&gt; = 8;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;SUPPORTS_RULE&lt;/strong&gt; = 12;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;COUNTER_STYLE_RULE&lt;/strong&gt; = 11;
+    const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;VIEWPORT_RULE&lt;/strong&gt; = 15;  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_FEATURE_VALUES_RULE&lt;/strong&gt; = 14;  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;FONT_PALETTE_VALUES_RULE&lt;/strong&gt; = 15;
 };</code></pre></details>
 </section>
 <section>

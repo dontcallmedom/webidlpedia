@@ -7,113 +7,113 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://svgwg.org/svg2-draft/struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;SVGSVGElement&lt;/strong&gt; : &lt;a href=&#39;SVGGraphicsElement.html&#39;&gt;SVGGraphicsElement&lt;/a&gt; {
 
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;x&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;y&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;width&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;height&lt;/strong&gt;;
 
-  attribute <span>float</span> <strong>currentScale</strong>;
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;
+  attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;currentScale&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;DOMPointReadOnly.html&#39;&gt;DOMPointReadOnly&lt;/a&gt; &lt;strong&gt;currentTranslate&lt;/strong&gt;;
 
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
-  <span>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
-  <span>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
+  &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;getIntersectionList&lt;/strong&gt;(&lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;, &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt;? &lt;strong&gt;referenceElement&lt;/strong&gt;);
+  &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;getEnclosureList&lt;/strong&gt;(&lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;, &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt;? &lt;strong&gt;referenceElement&lt;/strong&gt;);
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkIntersection&lt;/strong&gt;(&lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; &lt;strong&gt;element&lt;/strong&gt;, &lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;);
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkEnclosure&lt;/strong&gt;(&lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; &lt;strong&gt;element&lt;/strong&gt;, &lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;);
 
-  <a href='void.html'>void</a> <strong>deselectAll</strong>();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;deselectAll&lt;/strong&gt;();
 
-  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();
-  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();
-  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();
-  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();
-  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong>);
+  &lt;a href=&#39;SVGNumber.html&#39;&gt;SVGNumber&lt;/a&gt; &lt;strong&gt;createSVGNumber&lt;/strong&gt;();
+  &lt;a href=&#39;SVGLength.html&#39;&gt;SVGLength&lt;/a&gt; &lt;strong&gt;createSVGLength&lt;/strong&gt;();
+  &lt;a href=&#39;SVGAngle.html&#39;&gt;SVGAngle&lt;/a&gt; &lt;strong&gt;createSVGAngle&lt;/strong&gt;();
+  &lt;a href=&#39;DOMPoint.html&#39;&gt;DOMPoint&lt;/a&gt; &lt;strong&gt;createSVGPoint&lt;/strong&gt;();
+  &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;createSVGMatrix&lt;/strong&gt;();
+  &lt;a href=&#39;DOMRect.html&#39;&gt;DOMRect&lt;/a&gt; &lt;strong&gt;createSVGRect&lt;/strong&gt;();
+  &lt;a href=&#39;SVGTransform.html&#39;&gt;SVGTransform&lt;/a&gt; &lt;strong&gt;createSVGTransform&lt;/strong&gt;();
+  &lt;a href=&#39;SVGTransform.html&#39;&gt;SVGTransform&lt;/a&gt; &lt;strong&gt;createSVGTransformFromMatrix&lt;/strong&gt;(optional &lt;a href=&#39;DOMMatrix2DInit.html&#39;&gt;DOMMatrix2DInit&lt;/a&gt; &lt;strong&gt;matrix&lt;/strong&gt;);
 
-  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span>DOMString</span> <strong>elementId</strong>);
+  &lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt; &lt;strong&gt;getElementById&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;elementId&lt;/strong&gt;);
 
   // Deprecated methods that have no effect when called,
   // but which are kept for compatibility reasons.
-  <span>unsigned long</span> <strong>suspendRedraw</strong>(<span>unsigned long</span> <strong>maxWaitMilliseconds</strong>);
-  <a href='void.html'>void</a> <strong>unsuspendRedraw</strong>(<span>unsigned long</span> <strong>suspendHandleID</strong>);
-  <a href='void.html'>void</a> <strong>unsuspendRedrawAll</strong>();
-  <a href='void.html'>void</a> <strong>forceRedraw</strong>();
+  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;suspendRedraw&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;maxWaitMilliseconds&lt;/strong&gt;);
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unsuspendRedraw&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;suspendHandleID&lt;/strong&gt;);
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unsuspendRedrawAll&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;forceRedraw&lt;/strong&gt;();
 };
 
-<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='SVGFitToViewBox.html'>SVGFitToViewBox</a>;
-<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;</code></pre>
+&lt;a href=&#39;SVGSVGElement.html&#39;&gt;SVGSVGElement&lt;/a&gt; includes &lt;a href=&#39;SVGFitToViewBox.html&#39;&gt;SVGFitToViewBox&lt;/a&gt;;
+&lt;a href=&#39;SVGSVGElement.html&#39;&gt;SVGSVGElement&lt;/a&gt; includes &lt;a href=&#39;WindowEventHandlers.html&#39;&gt;WindowEventHandlers&lt;/a&gt;;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://svgwg.org/specs/animations/">SVG Animations</a>
-<pre class=webidl><code>partial interface <strong>SVGSVGElement</strong> {
-  <a href='void.html'>void</a> <strong>pauseAnimations</strong>();
-  <a href='void.html'>void</a> <strong>unpauseAnimations</strong>();
-  <span>boolean</span> <strong>animationsPaused</strong>();
-  <span>float</span> <strong>getCurrentTime</strong>();
-  <a href='void.html'>void</a> <strong>setCurrentTime</strong>(<span>float</span> <strong>seconds</strong>);
+<pre class=webidl><code>partial interface &lt;strong&gt;SVGSVGElement&lt;/strong&gt; {
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;pauseAnimations&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unpauseAnimations&lt;/strong&gt;();
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;animationsPaused&lt;/strong&gt;();
+  &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;getCurrentTime&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;setCurrentTime&lt;/strong&gt;(&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;seconds&lt;/strong&gt;);
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;SVGSVGElement&lt;/strong&gt; : &lt;a href=&#39;SVGGraphicsElement.html&#39;&gt;SVGGraphicsElement&lt;/a&gt; {
 
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;x&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;y&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;width&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedLength.html&#39;&gt;SVGAnimatedLength&lt;/a&gt; &lt;strong&gt;height&lt;/strong&gt;;
 
-  attribute <span>float</span> <strong>currentScale</strong>;
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;
+  attribute &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;currentScale&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;DOMPointReadOnly.html&#39;&gt;DOMPointReadOnly&lt;/a&gt; &lt;strong&gt;currentTranslate&lt;/strong&gt;;
 
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);
-  <span>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
-  <span>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);
+  &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;getIntersectionList&lt;/strong&gt;(&lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;, &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt;? &lt;strong&gt;referenceElement&lt;/strong&gt;);
+  &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;getEnclosureList&lt;/strong&gt;(&lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;, &lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt;? &lt;strong&gt;referenceElement&lt;/strong&gt;);
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkIntersection&lt;/strong&gt;(&lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; &lt;strong&gt;element&lt;/strong&gt;, &lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;);
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkEnclosure&lt;/strong&gt;(&lt;a href=&#39;SVGElement.html&#39;&gt;SVGElement&lt;/a&gt; &lt;strong&gt;element&lt;/strong&gt;, &lt;a href=&#39;DOMRectReadOnly.html&#39;&gt;DOMRectReadOnly&lt;/a&gt; &lt;strong&gt;rect&lt;/strong&gt;);
 
-  <a href='void.html'>void</a> <strong>deselectAll</strong>();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;deselectAll&lt;/strong&gt;();
 
-  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();
-  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();
-  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();
-  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();
-  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong>);
+  &lt;a href=&#39;SVGNumber.html&#39;&gt;SVGNumber&lt;/a&gt; &lt;strong&gt;createSVGNumber&lt;/strong&gt;();
+  &lt;a href=&#39;SVGLength.html&#39;&gt;SVGLength&lt;/a&gt; &lt;strong&gt;createSVGLength&lt;/strong&gt;();
+  &lt;a href=&#39;SVGAngle.html&#39;&gt;SVGAngle&lt;/a&gt; &lt;strong&gt;createSVGAngle&lt;/strong&gt;();
+  &lt;a href=&#39;DOMPoint.html&#39;&gt;DOMPoint&lt;/a&gt; &lt;strong&gt;createSVGPoint&lt;/strong&gt;();
+  &lt;a href=&#39;DOMMatrix.html&#39;&gt;DOMMatrix&lt;/a&gt; &lt;strong&gt;createSVGMatrix&lt;/strong&gt;();
+  &lt;a href=&#39;DOMRect.html&#39;&gt;DOMRect&lt;/a&gt; &lt;strong&gt;createSVGRect&lt;/strong&gt;();
+  &lt;a href=&#39;SVGTransform.html&#39;&gt;SVGTransform&lt;/a&gt; &lt;strong&gt;createSVGTransform&lt;/strong&gt;();
+  &lt;a href=&#39;SVGTransform.html&#39;&gt;SVGTransform&lt;/a&gt; &lt;strong&gt;createSVGTransformFromMatrix&lt;/strong&gt;(optional &lt;a href=&#39;DOMMatrix2DInit.html&#39;&gt;DOMMatrix2DInit&lt;/a&gt; &lt;strong&gt;matrix&lt;/strong&gt;);
 
-  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span>DOMString</span> <strong>elementId</strong>);
+  &lt;a href=&#39;Element.html&#39;&gt;Element&lt;/a&gt; &lt;strong&gt;getElementById&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;elementId&lt;/strong&gt;);
 
   // Deprecated methods that have no effect when called,
   // but which are kept for compatibility reasons.
-  <span>unsigned long</span> <strong>suspendRedraw</strong>(<span>unsigned long</span> <strong>maxWaitMilliseconds</strong>);
-  <a href='void.html'>void</a> <strong>unsuspendRedraw</strong>(<span>unsigned long</span> <strong>suspendHandleID</strong>);
-  <a href='void.html'>void</a> <strong>unsuspendRedrawAll</strong>();
-  <a href='void.html'>void</a> <strong>forceRedraw</strong>();
-  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;
-  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;
-  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;
-  <a href='void.html'>void</a> <strong>pauseAnimations</strong>();
-  <a href='void.html'>void</a> <strong>unpauseAnimations</strong>();
-  <span>boolean</span> <strong>animationsPaused</strong>();
-  <span>float</span> <strong>getCurrentTime</strong>();
-  <a href='void.html'>void</a> <strong>setCurrentTime</strong>(<span>float</span> <strong>seconds</strong>);
+  &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;suspendRedraw&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;maxWaitMilliseconds&lt;/strong&gt;);
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unsuspendRedraw&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;suspendHandleID&lt;/strong&gt;);
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unsuspendRedrawAll&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;forceRedraw&lt;/strong&gt;();
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedRect.html&#39;&gt;SVGAnimatedRect&lt;/a&gt; &lt;strong&gt;viewBox&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;SVGAnimatedPreserveAspectRatio.html&#39;&gt;SVGAnimatedPreserveAspectRatio&lt;/a&gt; &lt;strong&gt;preserveAspectRatio&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onafterprint&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbeforeprint&lt;/strong&gt;;
+  attribute &lt;a href=&#39;OnBeforeUnloadEventHandler.html&#39;&gt;OnBeforeUnloadEventHandler&lt;/a&gt; &lt;strong&gt;onbeforeunload&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onhashchange&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onlanguagechange&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessageerror&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onoffline&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;ononline&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpagehide&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpageshow&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onpopstate&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onrejectionhandled&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstorage&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunhandledrejection&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onunload&lt;/strong&gt;;
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;pauseAnimations&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;unpauseAnimations&lt;/strong&gt;();
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;animationsPaused&lt;/strong&gt;();
+  &lt;span&gt;float&lt;/span&gt; &lt;strong&gt;getCurrentTime&lt;/strong&gt;();
+  &lt;a href=&#39;void.html&#39;&gt;void&lt;/a&gt; &lt;strong&gt;setCurrentTime&lt;/strong&gt;(&lt;span&gt;float&lt;/span&gt; &lt;strong&gt;seconds&lt;/strong&gt;);
 };</code></pre></details>
 </section>
 <section>

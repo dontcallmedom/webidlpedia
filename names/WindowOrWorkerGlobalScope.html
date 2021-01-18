@@ -7,76 +7,76 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> defines <code>WindowOrWorkerGlobalScope</code></p>
-<pre class=webidl><code>interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
-  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
-  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;
+<pre class=webidl><code>interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [Replaceable] readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;origin&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isSecureContext&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;crossOriginIsolated&lt;/strong&gt;;
 
   // base64 utility methods
-  <span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
-  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);
+  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;btoa&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;atob&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
 
   // timers
-  <span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
-  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> = 0);
-  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
-  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setTimeout&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearTimeout&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
+  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setInterval&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearInterval&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
 
   // microtask queuing
-  <span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;queueMicrotask&lt;/strong&gt;(&lt;a href=&#39;VoidFunction.html&#39;&gt;VoidFunction&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
 
   // ImageBitmap
-  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
-  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
+  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sx&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sy&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sw&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sh&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 };</code></pre>
   <p>This interface mixin is extended in the following specifications:</p><ol><li><a href="https://fetch.spec.whatwg.org/">Fetch Standard</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [NewObject] Promise<<a href='Response.html'>Response</a>> <strong>fetch</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> = {});
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [NewObject] Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;fetch&lt;/strong&gt;(&lt;a href=&#39;RequestInfo.html&#39;&gt;RequestInfo&lt;/a&gt; &lt;strong&gt;input&lt;/strong&gt;, optional &lt;a href=&#39;RequestInit.html&#39;&gt;RequestInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt; = {});
 };</code></pre></li><li><a href="https://wicg.github.io/origin-policy/#monkeypatch-html-windoworworkerglobalscope">Origin Policy</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  readonly attribute FrozenArray<<span>DOMString</span>> <strong>originPolicyIds</strong>;
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;originPolicyIds&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/hr-time-3/#the-performance-attribute">High Resolution Time</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [Replaceable] readonly attribute <a href='Performance.html'>Performance</a> <strong>performance</strong>;
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [Replaceable] readonly attribute &lt;a href=&#39;Performance.html&#39;&gt;Performance&lt;/a&gt; &lt;strong&gt;performance&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/IndexedDB-2/#factory-interface">Indexed Database API 3.0</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [SameObject] readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong>indexedDB</strong>;
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;IDBFactory.html&#39;&gt;IDBFactory&lt;/a&gt; &lt;strong&gt;indexedDB&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#global-caches">Service Workers Nightly</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong>caches</strong>;
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;CacheStorage.html&#39;&gt;CacheStorage&lt;/a&gt; &lt;strong&gt;caches&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/WebCryptoAPI/#crypto-interface">Web Cryptography API</a>
-<pre class=webidl><code>partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [SameObject] readonly attribute <a href='Crypto.html'>Crypto</a> <strong>crypto</strong>;
+<pre class=webidl><code>partial interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;Crypto.html&#39;&gt;Crypto&lt;/a&gt; &lt;strong&gt;crypto&lt;/strong&gt;;
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code>
 
-interface mixin <strong>WindowOrWorkerGlobalScope</strong> {
-  [Replaceable] readonly attribute <span>USVString</span> <strong>origin</strong>;
-  readonly attribute <span>boolean</span> <strong>isSecureContext</strong>;
-  readonly attribute <span>boolean</span> <strong>crossOriginIsolated</strong>;
+interface mixin &lt;strong&gt;WindowOrWorkerGlobalScope&lt;/strong&gt; {
+  [Replaceable] readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;origin&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isSecureContext&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;crossOriginIsolated&lt;/strong&gt;;
 
   // base64 utility methods
-  <span>DOMString</span> <strong>btoa</strong>(<span>DOMString</span> <strong>data</strong>);
-  <span>ByteString</span> <strong>atob</strong>(<span>DOMString</span> <strong>data</strong>);
+  &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;btoa&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;atob&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
 
   // timers
-  <span>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
-  <span>undefined</span> <strong>clearTimeout</strong>(optional <span>long</span> <strong>handle</strong> = 0);
-  <span>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span>long</span> <strong>timeout</strong> = 0, <span>any</span>... <strong>arguments</strong>);
-  <span>undefined</span> <strong>clearInterval</strong>(optional <span>long</span> <strong>handle</strong> = 0);
+  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setTimeout&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearTimeout&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
+  &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;setInterval&lt;/strong&gt;(&lt;a href=&#39;TimerHandler.html&#39;&gt;TimerHandler&lt;/a&gt; &lt;strong&gt;handler&lt;/strong&gt;, optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt; = 0, &lt;span&gt;any&lt;/span&gt;... &lt;strong&gt;arguments&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clearInterval&lt;/strong&gt;(optional &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;handle&lt;/strong&gt; = 0);
 
   // microtask queuing
-  <span>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;queueMicrotask&lt;/strong&gt;(&lt;a href=&#39;VoidFunction.html&#39;&gt;VoidFunction&lt;/a&gt; &lt;strong&gt;callback&lt;/strong&gt;);
 
   // ImageBitmap
-  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
-  Promise<<a href='ImageBitmap.html'>ImageBitmap</a>> <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span>long</span> <strong>sx</strong>, <span>long</span> <strong>sy</strong>, <span>long</span> <strong>sw</strong>, <span>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> = {});
-  [NewObject] Promise<<a href='Response.html'>Response</a>> <strong>fetch</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> = {});
-  readonly attribute FrozenArray<<span>DOMString</span>> <strong>originPolicyIds</strong>;
-  [Replaceable] readonly attribute <a href='Performance.html'>Performance</a> <strong>performance</strong>;
-  [SameObject] readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong>indexedDB</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong>caches</strong>;
-  [SameObject] readonly attribute <a href='Crypto.html'>Crypto</a> <strong>crypto</strong>;
+  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  Promise&lt;&lt;a href=&#39;ImageBitmap.html&#39;&gt;ImageBitmap&lt;/a&gt;&gt; &lt;strong&gt;createImageBitmap&lt;/strong&gt;(&lt;a href=&#39;ImageBitmapSource.html&#39;&gt;ImageBitmapSource&lt;/a&gt; &lt;strong&gt;image&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sx&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sy&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sw&lt;/strong&gt;, &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;sh&lt;/strong&gt;, optional &lt;a href=&#39;ImageBitmapOptions.html&#39;&gt;ImageBitmapOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  [NewObject] Promise&lt;&lt;a href=&#39;Response.html&#39;&gt;Response&lt;/a&gt;&gt; &lt;strong&gt;fetch&lt;/strong&gt;(&lt;a href=&#39;RequestInfo.html&#39;&gt;RequestInfo&lt;/a&gt; &lt;strong&gt;input&lt;/strong&gt;, optional &lt;a href=&#39;RequestInit.html&#39;&gt;RequestInit&lt;/a&gt; &lt;strong&gt;init&lt;/strong&gt; = {});
+  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;originPolicyIds&lt;/strong&gt;;
+  [Replaceable] readonly attribute &lt;a href=&#39;Performance.html&#39;&gt;Performance&lt;/a&gt; &lt;strong&gt;performance&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;IDBFactory.html&#39;&gt;IDBFactory&lt;/a&gt; &lt;strong&gt;indexedDB&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;CacheStorage.html&#39;&gt;CacheStorage&lt;/a&gt; &lt;strong&gt;caches&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;Crypto.html&#39;&gt;Crypto&lt;/a&gt; &lt;strong&gt;crypto&lt;/strong&gt;;
 };</code></pre></details>
 </section>
 <section>

@@ -7,24 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#eventsource">HTML Standard</a> defines <code>EventSource</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>EventSource</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(<span>USVString</span> <strong>url</strong>, optional <a href='EventSourceInit.html'>EventSourceInit</a> <strong>eventSourceInitDict</strong> = {});
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;EventSource&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;a href=&#39;EventSourceInit.html&#39;&gt;EventSourceInit&lt;/a&gt; &lt;strong&gt;eventSourceInitDict&lt;/strong&gt; = {});
 
-  readonly attribute <span>USVString</span> <strong>url</strong>;
-  readonly attribute <span>boolean</span> <strong>withCredentials</strong>;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;withCredentials&lt;/strong&gt;;
 
   // ready state
-  const <span>unsigned short</span> <strong>CONNECTING</strong> = 0;
-  const <span>unsigned short</span> <strong>OPEN</strong> = 1;
-  const <span>unsigned short</span> <strong>CLOSED</strong> = 2;
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CONNECTING&lt;/strong&gt; = 0;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;OPEN&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CLOSED&lt;/strong&gt; = 2;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
 
   // networking
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  <span>undefined</span> <strong>close</strong>();
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onopen&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
 };</code></pre>
   
   

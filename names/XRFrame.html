@@ -7,45 +7,45 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://immersive-web.github.io/webxr/#xrframe">WebXR Device API</a> defines <code>XRFrame</code></p>
-<pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRFrame</strong> {
-  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong>session</strong>;
+<pre class=webidl><code>[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;XRSession.html&#39;&gt;XRSession&lt;/a&gt; &lt;strong&gt;session&lt;/strong&gt;;
 
-  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);
-  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
+  &lt;a href=&#39;XRViewerPose.html&#39;&gt;XRViewerPose&lt;/a&gt;? &lt;strong&gt;getViewerPose&lt;/strong&gt;(&lt;a href=&#39;XRReferenceSpace.html&#39;&gt;XRReferenceSpace&lt;/a&gt; &lt;strong&gt;referenceSpace&lt;/strong&gt;);
+  &lt;a href=&#39;XRPose.html&#39;&gt;XRPose&lt;/a&gt;? &lt;strong&gt;getPose&lt;/strong&gt;(&lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;space&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://immersive-web.github.io/anchors/">WebXR Anchors Module</a>
-<pre class=webidl><code>partial interface <strong>XRFrame</strong> {
-  Promise<<a href='XRAnchor.html'>XRAnchor</a>> <strong>createAnchor</strong>(<a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>pose</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>);
+<pre class=webidl><code>partial interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+  Promise&lt;&lt;a href=&#39;XRAnchor.html&#39;&gt;XRAnchor&lt;/a&gt;&gt; &lt;strong&gt;createAnchor&lt;/strong&gt;(&lt;a href=&#39;XRRigidTransform.html&#39;&gt;XRRigidTransform&lt;/a&gt; &lt;strong&gt;pose&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;space&lt;/strong&gt;);
 };
 
-partial interface <strong>XRFrame</strong> {
-  [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;
+partial interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;XRAnchorSet.html&#39;&gt;XRAnchorSet&lt;/a&gt; &lt;strong&gt;trackedAnchors&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://immersive-web.github.io/hit-test/">WebXR Hit Test Module</a>
-<pre class=webidl><code>partial interface <strong>XRFrame</strong> {
-  FrozenArray<<a href='XRHitTestResult.html'>XRHitTestResult</a>> <strong>getHitTestResults</strong>(<a href='XRHitTestSource.html'>XRHitTestSource</a> <strong>hitTestSource</strong>);
-  FrozenArray<<a href='XRTransientInputHitTestResult.html'>XRTransientInputHitTestResult</a>> <strong>getHitTestResultsForTransientInput</strong>(<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a> <strong>hitTestSource</strong>);
+<pre class=webidl><code>partial interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+  FrozenArray&lt;&lt;a href=&#39;XRHitTestResult.html&#39;&gt;XRHitTestResult&lt;/a&gt;&gt; &lt;strong&gt;getHitTestResults&lt;/strong&gt;(&lt;a href=&#39;XRHitTestSource.html&#39;&gt;XRHitTestSource&lt;/a&gt; &lt;strong&gt;hitTestSource&lt;/strong&gt;);
+  FrozenArray&lt;&lt;a href=&#39;XRTransientInputHitTestResult.html&#39;&gt;XRTransientInputHitTestResult&lt;/a&gt;&gt; &lt;strong&gt;getHitTestResultsForTransientInput&lt;/strong&gt;(&lt;a href=&#39;XRTransientInputHitTestSource.html&#39;&gt;XRTransientInputHitTestSource&lt;/a&gt; &lt;strong&gt;hitTestSource&lt;/strong&gt;);
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr-hand-input-1/">WebXR Hand Input Module - Level 1</a>
-<pre class=webidl><code>partial interface <strong>XRFrame</strong> {
-    <a href='XRJointPose.html'>XRJointPose</a>? <strong>getJointPose</strong>(<a href='XRJointSpace.html'>XRJointSpace</a> <strong>joint</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
-    <span>boolean</span> <strong>fillJointRadii</strong>(sequence<<a href='XRJointSpace.html'>XRJointSpace</a>> <strong>jointSpaces</strong>, <span>Float32Array</span> <strong>radii</strong>);
+<pre class=webidl><code>partial interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+    &lt;a href=&#39;XRJointPose.html&#39;&gt;XRJointPose&lt;/a&gt;? &lt;strong&gt;getJointPose&lt;/strong&gt;(&lt;a href=&#39;XRJointSpace.html&#39;&gt;XRJointSpace&lt;/a&gt; &lt;strong&gt;joint&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;);
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;fillJointRadii&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;XRJointSpace.html&#39;&gt;XRJointSpace&lt;/a&gt;&gt; &lt;strong&gt;jointSpaces&lt;/strong&gt;, &lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;radii&lt;/strong&gt;);
 
-    <span>boolean</span> <strong>fillPoses</strong>(sequence<<a href='XRSpace.html'>XRSpace</a>> <strong>spaces</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>, <span>Float32Array</span> <strong>transforms</strong>);
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;fillPoses&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt;&gt; &lt;strong&gt;spaces&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;, &lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;transforms&lt;/strong&gt;);
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[SecureContext, Exposed=<a href='Window.html'>Window</a>] interface <strong>XRFrame</strong> {
-  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong>session</strong>;
+[SecureContext, Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] interface &lt;strong&gt;XRFrame&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;XRSession.html&#39;&gt;XRSession&lt;/a&gt; &lt;strong&gt;session&lt;/strong&gt;;
 
-  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);
-  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
-  Promise<<a href='XRAnchor.html'>XRAnchor</a>> <strong>createAnchor</strong>(<a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>pose</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>);
-  [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;
-  FrozenArray<<a href='XRHitTestResult.html'>XRHitTestResult</a>> <strong>getHitTestResults</strong>(<a href='XRHitTestSource.html'>XRHitTestSource</a> <strong>hitTestSource</strong>);
-  FrozenArray<<a href='XRTransientInputHitTestResult.html'>XRTransientInputHitTestResult</a>> <strong>getHitTestResultsForTransientInput</strong>(<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a> <strong>hitTestSource</strong>);
-    <a href='XRJointPose.html'>XRJointPose</a>? <strong>getJointPose</strong>(<a href='XRJointSpace.html'>XRJointSpace</a> <strong>joint</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);
-    <span>boolean</span> <strong>fillJointRadii</strong>(sequence<<a href='XRJointSpace.html'>XRJointSpace</a>> <strong>jointSpaces</strong>, <span>Float32Array</span> <strong>radii</strong>);
+  &lt;a href=&#39;XRViewerPose.html&#39;&gt;XRViewerPose&lt;/a&gt;? &lt;strong&gt;getViewerPose&lt;/strong&gt;(&lt;a href=&#39;XRReferenceSpace.html&#39;&gt;XRReferenceSpace&lt;/a&gt; &lt;strong&gt;referenceSpace&lt;/strong&gt;);
+  &lt;a href=&#39;XRPose.html&#39;&gt;XRPose&lt;/a&gt;? &lt;strong&gt;getPose&lt;/strong&gt;(&lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;space&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;);
+  Promise&lt;&lt;a href=&#39;XRAnchor.html&#39;&gt;XRAnchor&lt;/a&gt;&gt; &lt;strong&gt;createAnchor&lt;/strong&gt;(&lt;a href=&#39;XRRigidTransform.html&#39;&gt;XRRigidTransform&lt;/a&gt; &lt;strong&gt;pose&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;space&lt;/strong&gt;);
+  [SameObject] readonly attribute &lt;a href=&#39;XRAnchorSet.html&#39;&gt;XRAnchorSet&lt;/a&gt; &lt;strong&gt;trackedAnchors&lt;/strong&gt;;
+  FrozenArray&lt;&lt;a href=&#39;XRHitTestResult.html&#39;&gt;XRHitTestResult&lt;/a&gt;&gt; &lt;strong&gt;getHitTestResults&lt;/strong&gt;(&lt;a href=&#39;XRHitTestSource.html&#39;&gt;XRHitTestSource&lt;/a&gt; &lt;strong&gt;hitTestSource&lt;/strong&gt;);
+  FrozenArray&lt;&lt;a href=&#39;XRTransientInputHitTestResult.html&#39;&gt;XRTransientInputHitTestResult&lt;/a&gt;&gt; &lt;strong&gt;getHitTestResultsForTransientInput&lt;/strong&gt;(&lt;a href=&#39;XRTransientInputHitTestSource.html&#39;&gt;XRTransientInputHitTestSource&lt;/a&gt; &lt;strong&gt;hitTestSource&lt;/strong&gt;);
+    &lt;a href=&#39;XRJointPose.html&#39;&gt;XRJointPose&lt;/a&gt;? &lt;strong&gt;getJointPose&lt;/strong&gt;(&lt;a href=&#39;XRJointSpace.html&#39;&gt;XRJointSpace&lt;/a&gt; &lt;strong&gt;joint&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;);
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;fillJointRadii&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;XRJointSpace.html&#39;&gt;XRJointSpace&lt;/a&gt;&gt; &lt;strong&gt;jointSpaces&lt;/strong&gt;, &lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;radii&lt;/strong&gt;);
 
-    <span>boolean</span> <strong>fillPoses</strong>(sequence<<a href='XRSpace.html'>XRSpace</a>> <strong>spaces</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>, <span>Float32Array</span> <strong>transforms</strong>);
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;fillPoses&lt;/strong&gt;(sequence&lt;&lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt;&gt; &lt;strong&gt;spaces&lt;/strong&gt;, &lt;a href=&#39;XRSpace.html&#39;&gt;XRSpace&lt;/a&gt; &lt;strong&gt;baseSpace&lt;/strong&gt;, &lt;span&gt;Float32Array&lt;/span&gt; &lt;strong&gt;transforms&lt;/strong&gt;);
 };</code></pre></details>
 </section>
 <section>

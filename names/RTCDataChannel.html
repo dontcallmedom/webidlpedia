@@ -7,62 +7,62 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel">WebRTC 1.0: Real-Time Communication Between Browsers</a> defines <code>RTCDataChannel</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  readonly attribute <span>USVString</span> <strong>label</strong>;
-  readonly attribute <span>boolean</span> <strong>ordered</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>maxPacketLifeTime</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>maxRetransmits</strong>;
-  readonly attribute <span>USVString</span> <strong>protocol</strong>;
-  readonly attribute <span>boolean</span> <strong>negotiated</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>id</strong>;
-  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;
-  readonly attribute <span>unsigned long</span> <strong>bufferedAmount</strong>;
-  [EnforceRange] attribute <span>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
-  <span>undefined</span> <strong>close</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
-  <span>undefined</span> <strong>send</strong>(<span>USVString</span> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<span>ArrayBuffer</span> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;RTCDataChannel&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;label&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ordered&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;maxPacketLifeTime&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;maxRetransmits&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;protocol&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;negotiated&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;id&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;RTCDataChannelState.html&#39;&gt;RTCDataChannelState&lt;/a&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;bufferedAmount&lt;/strong&gt;;
+  [EnforceRange] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;bufferedAmountLowThreshold&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onopen&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbufferedamountlow&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclosing&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
+  attribute &lt;a href=&#39;BinaryType.html&#39;&gt;BinaryType&lt;/a&gt; &lt;strong&gt;binaryType&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;ArrayBuffer&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;ArrayBufferView.html&#39;&gt;ArrayBufferView&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
 };</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://www.w3.org/TR/webrtc-priority/#new-rtcdatachannel-attribute">WebRTC Priority Control API</a>
-<pre class=webidl><code>partial interface <strong>RTCDataChannel</strong> {
-  readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;RTCDataChannel&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;RTCPriorityType.html&#39;&gt;RTCPriorityType&lt;/a&gt; &lt;strong&gt;priority&lt;/strong&gt;;
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  readonly attribute <span>USVString</span> <strong>label</strong>;
-  readonly attribute <span>boolean</span> <strong>ordered</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>maxPacketLifeTime</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>maxRetransmits</strong>;
-  readonly attribute <span>USVString</span> <strong>protocol</strong>;
-  readonly attribute <span>boolean</span> <strong>negotiated</strong>;
-  readonly attribute <span>unsigned short</span>? <strong>id</strong>;
-  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;
-  readonly attribute <span>unsigned long</span> <strong>bufferedAmount</strong>;
-  [EnforceRange] attribute <span>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
-  <span>undefined</span> <strong>close</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
-  <span>undefined</span> <strong>send</strong>(<span>USVString</span> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<span>ArrayBuffer</span> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
-  readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;RTCDataChannel&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;label&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;ordered&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;maxPacketLifeTime&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;maxRetransmits&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;protocol&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;negotiated&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt;? &lt;strong&gt;id&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;RTCDataChannelState.html&#39;&gt;RTCDataChannelState&lt;/a&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;bufferedAmount&lt;/strong&gt;;
+  [EnforceRange] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;bufferedAmountLowThreshold&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onopen&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onbufferedamountlow&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onerror&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclosing&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onclose&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;();
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onmessage&lt;/strong&gt;;
+  attribute &lt;a href=&#39;BinaryType.html&#39;&gt;BinaryType&lt;/a&gt; &lt;strong&gt;binaryType&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;Blob.html&#39;&gt;Blob&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;span&gt;ArrayBuffer&lt;/span&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(&lt;a href=&#39;ArrayBufferView.html&#39;&gt;ArrayBufferView&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt;);
+  readonly attribute &lt;a href=&#39;RTCPriorityType.html&#39;&gt;RTCPriorityType&lt;/a&gt; &lt;strong&gt;priority&lt;/strong&gt;;
 };</code></pre></details>
 </section>
 <section>

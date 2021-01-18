@@ -7,210 +7,210 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/system-state.html#navigator">HTML Standard</a> defines <code>Navigator</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>Navigator</strong> {
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;Navigator&lt;/strong&gt; {
   // objects implementing this interface also implement the interfaces given below
 };
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorID.html'>NavigatorID</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLanguage.html'>NavigatorLanguage</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorOnLine.html'>NavigatorOnLine</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorContentUtils.html'>NavigatorContentUtils</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorCookies.html'>NavigatorCookies</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorPlugins.html'>NavigatorPlugins</a>;
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorConcurrentHardware.html'>NavigatorConcurrentHardware</a>;</code></pre>
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorID.html&#39;&gt;NavigatorID&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorLanguage.html&#39;&gt;NavigatorLanguage&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorOnLine.html&#39;&gt;NavigatorOnLine&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorContentUtils.html&#39;&gt;NavigatorContentUtils&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorCookies.html&#39;&gt;NavigatorCookies&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorPlugins.html&#39;&gt;NavigatorPlugins&lt;/a&gt;;
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorConcurrentHardware.html&#39;&gt;NavigatorConcurrentHardware&lt;/a&gt;;</code></pre>
   <p>This interface is extended in the following specifications:</p><ol><li><a href="https://gpuweb.github.io/gpuweb/#navigator-gpu">WebGPU</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-    [SameObject] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    [SameObject] readonly attribute &lt;a href=&#39;GPU.html&#39;&gt;GPU&lt;/a&gt; &lt;strong&gt;gpu&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://storage.spec.whatwg.org/">Storage Standard</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorStorage.html'>NavigatorStorage</a>;</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorStorage.html&#39;&gt;NavigatorStorage&lt;/a&gt;;</code></pre></li><li><a href="https://w3c.github.io/badging/#setclientbadge-method">Badging API</a>
 <pre class=webidl><code>// Methods only exposed on documents.
 [SecureContext]
-partial interface <strong>Navigator</strong> {
-  Promise<<span>undefined</span>> <strong>setClientBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
-  Promise<<span>undefined</span>> <strong>clearClientBadge</strong>();
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setClientBadge&lt;/strong&gt;(optional [EnforceRange] &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;contents&lt;/strong&gt;);
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;clearClientBadge&lt;/strong&gt;();
 };
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorBadge.html'>NavigatorBadge</a>;</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
+&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorBadge.html&#39;&gt;NavigatorBadge&lt;/a&gt;;</code></pre></li><li><a href="https://webbluetoothcg.github.io/web-bluetooth/#navigator-extensions">Web Bluetooth</a>
 <pre class=webidl><code>[SecureContext]
-partial interface <strong>Navigator</strong> {
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
   [SameObject]
-  readonly attribute <a href='Bluetooth.html'>Bluetooth</a> <strong>bluetooth</strong>;
+  readonly attribute &lt;a href=&#39;Bluetooth.html&#39;&gt;Bluetooth&lt;/a&gt; &lt;strong&gt;bluetooth&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/contact-api/spec/#extensions-to-navigator">Contact Picker API</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ContactsManager.html&#39;&gt;ContactsManager&lt;/a&gt; &lt;strong&gt;contacts&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/get-installed-related-apps/spec/">Get Installed Related Apps API</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  [SecureContext] Promise<sequence<<a href='RelatedApplication.html'>RelatedApplication</a>>> <strong>getInstalledRelatedApps</strong>();
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext] Promise&lt;sequence&lt;&lt;a href=&#39;RelatedApplication.html&#39;&gt;RelatedApplication&lt;/a&gt;&gt;&gt; &lt;strong&gt;getInstalledRelatedApps&lt;/strong&gt;();
 };</code></pre></li><li><a href="https://wicg.github.io/is-input-pending/#extensions-to-the-navigator-interface">Early detection of input events</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  readonly attribute <a href='Scheduling.html'>Scheduling</a> <strong>scheduling</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;Scheduling.html&#39;&gt;Scheduling&lt;/a&gt; &lt;strong&gt;scheduling&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/keyboard-lock/#navigator-interface">Keyboard Lock</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Keyboard.html&#39;&gt;Keyboard&lt;/a&gt; &lt;strong&gt;keyboard&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/keyboard-map/#navigator-interface">Keyboard Map</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Keyboard.html&#39;&gt;Keyboard&lt;/a&gt; &lt;strong&gt;keyboard&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/local-font-access/">Local Font Access API</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorFonts.html'>NavigatorFonts</a>;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorNetworkInformation.html'>NavigatorNetworkInformation</a>;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorFonts.html&#39;&gt;NavigatorFonts&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/netinfo/">Network Information API</a>
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorNetworkInformation.html&#39;&gt;NavigatorNetworkInformation&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/serial/#serial-attribute">Web Serial API</a>
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;Serial.html&#39;&gt;Serial&lt;/a&gt; &lt;strong&gt;serial&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
-<pre class=webidl><code>[SecureContext] partial interface <strong>Navigator</strong> {
-    [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorUA.html&#39;&gt;NavigatorUA&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/web-locks/">Web Locks API</a>
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorLocks.html&#39;&gt;NavigatorLocks&lt;/a&gt;;</code></pre></li><li><a href="https://wicg.github.io/webhid/#enumeration">WebHID API</a>
+<pre class=webidl><code>[SecureContext] partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    [SameObject] readonly attribute &lt;a href=&#39;HID.html&#39;&gt;HID&lt;/a&gt; &lt;strong&gt;hid&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://wicg.github.io/webusb/#enumeration">WebUSB API</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>, SecureContext]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;, SecureContext]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;USB.html&#39;&gt;USB&lt;/a&gt; &lt;strong&gt;usb&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/battery-status/#the-navigator-interface">Battery Status API</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  Promise<<a href='BatteryManager.html'>BatteryManager</a>> <strong>getBattery</strong>();
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  Promise&lt;&lt;a href=&#39;BatteryManager.html&#39;&gt;BatteryManager&lt;/a&gt;&gt; &lt;strong&gt;getBattery&lt;/strong&gt;();
 };</code></pre></li><li><a href="https://www.w3.org/TR/beacon/#sendbeacon-method">Beacon</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-    <span>boolean</span> <strong>sendBeacon</strong>(<span>USVString</span> <strong>url</strong>, optional <a href='BodyInit.html'>BodyInit</a>? <strong>data</strong> = null);
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;sendBeacon&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;a href=&#39;BodyInit.html&#39;&gt;BodyInit&lt;/a&gt;? &lt;strong&gt;data&lt;/strong&gt; = null);
 };</code></pre></li><li><a href="https://www.w3.org/TR/clipboard-apis/#navigator-interface">Clipboard API and events</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Clipboard.html&#39;&gt;Clipboard&lt;/a&gt; &lt;strong&gt;clipboard&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/credential-management-1/#framework-credential-management">Credential Management Level 1</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='CredentialsContainer.html'>CredentialsContainer</a> <strong>credentials</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;CredentialsContainer.html&#39;&gt;CredentialsContainer&lt;/a&gt; &lt;strong&gt;credentials&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/device-memory-1/">Device Memory 1</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorDeviceMemory.html'>NavigatorDeviceMemory</a>;</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-    [SecureContext] Promise<<a href='MediaKeySystemAccess.html'>MediaKeySystemAccess</a>> <strong>requestMediaKeySystemAccess</strong> (<span>DOMString</span> <strong>keySystem</strong>, sequence<<a href='MediaKeySystemConfiguration.html'>MediaKeySystemConfiguration</a>> <strong>supportedConfigurations</strong>);
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorDeviceMemory.html&#39;&gt;NavigatorDeviceMemory&lt;/a&gt;;</code></pre></li><li><a href="https://www.w3.org/TR/encrypted-media/#methods">Encrypted Media Extensions</a>
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    [SecureContext] Promise&lt;&lt;a href=&#39;MediaKeySystemAccess.html&#39;&gt;MediaKeySystemAccess&lt;/a&gt;&gt; &lt;strong&gt;requestMediaKeySystemAccess&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;keySystem&lt;/strong&gt;, sequence&lt;&lt;a href=&#39;MediaKeySystemConfiguration.html&#39;&gt;MediaKeySystemConfiguration&lt;/a&gt;&gt; &lt;strong&gt;supportedConfigurations&lt;/strong&gt;);
 };</code></pre></li><li><a href="https://www.w3.org/TR/gamepad/#navigator-interface-extension">Gamepad</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  sequence<<a href='Gamepad.html'>Gamepad</a>?> <strong>getGamepads</strong>();
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  sequence&lt;&lt;a href=&#39;Gamepad.html&#39;&gt;Gamepad&lt;/a&gt;?&gt; &lt;strong&gt;getGamepads&lt;/strong&gt;();
 };</code></pre></li><li><a href="https://www.w3.org/TR/geolocation-API/#geolocation-attribute">Geolocation API Specification</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='Geolocation.html'>Geolocation</a> <strong>geolocation</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;Geolocation.html&#39;&gt;Geolocation&lt;/a&gt; &lt;strong&gt;geolocation&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/media-capabilities/#navigators-extensions">Media Capabilities</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;MediaCapabilities.html&#39;&gt;MediaCapabilities&lt;/a&gt; &lt;strong&gt;mediaCapabilities&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediacapture-streams/#attributes-3">Media Capture and Streams</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SameObject, SecureContext] readonly attribute <a href='MediaDevices.html'>MediaDevices</a> <strong>mediaDevices</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject, SecureContext] readonly attribute &lt;a href=&#39;MediaDevices.html&#39;&gt;MediaDevices&lt;/a&gt; &lt;strong&gt;mediaDevices&lt;/strong&gt;;
 };
 
-partial interface <strong>Navigator</strong> {
-  [SecureContext] <span>undefined</span> <strong>getUserMedia</strong>(<a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong>,
-                                    <a href='NavigatorUserMediaSuccessCallback.html'>NavigatorUserMediaSuccessCallback</a> <strong>successCallback</strong>,
-                                    <a href='NavigatorUserMediaErrorCallback.html'>NavigatorUserMediaErrorCallback</a> <strong>errorCallback</strong>);
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;getUserMedia&lt;/strong&gt;(&lt;a href=&#39;MediaStreamConstraints.html&#39;&gt;MediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt;,
+                                    &lt;a href=&#39;NavigatorUserMediaSuccessCallback.html&#39;&gt;NavigatorUserMediaSuccessCallback&lt;/a&gt; &lt;strong&gt;successCallback&lt;/strong&gt;,
+                                    &lt;a href=&#39;NavigatorUserMediaErrorCallback.html&#39;&gt;NavigatorUserMediaErrorCallback&lt;/a&gt; &lt;strong&gt;errorCallback&lt;/strong&gt;);
 };</code></pre></li><li><a href="https://www.w3.org/TR/mediasession/#the-mediasession-interface">Media Session Standard</a>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='MediaSession.html'>MediaSession</a> <strong>mediaSession</strong>;
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;MediaSession.html&#39;&gt;MediaSession&lt;/a&gt; &lt;strong&gt;mediaSession&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/permissions/#navigator-and-workernavigator-extension">Permissions</a>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>)]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;)]
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;Permissions.html&#39;&gt;Permissions&lt;/a&gt; &lt;strong&gt;permissions&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/pointerevents3/#extensions-to-the-navigator-interface">Pointer Events</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-    readonly  attribute <span>long</span> <strong>maxTouchPoints</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    readonly  attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;maxTouchPoints&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/presentation-api/#interface-presentation">Presentation API</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='Presentation.html'>Presentation</a> <strong>presentation</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Presentation.html&#39;&gt;Presentation&lt;/a&gt; &lt;strong&gt;presentation&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/screen-wake-lock/#extensions-to-the-navigator-interface">Screen Wake Lock API</a>
 <pre class=webidl><code>[SecureContext]
-partial interface <strong>Navigator</strong> {
-  [SameObject] readonly attribute <a href='WakeLock.html'>WakeLock</a> <strong>wakeLock</strong>;
+partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SameObject] readonly attribute &lt;a href=&#39;WakeLock.html&#39;&gt;WakeLock&lt;/a&gt; &lt;strong&gt;wakeLock&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/service-workers-1/#navigator-serviceworker">Service Workers Nightly</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ServiceWorkerContainer.html&#39;&gt;ServiceWorkerContainer&lt;/a&gt; &lt;strong&gt;serviceWorker&lt;/strong&gt;;
 };</code></pre></li><li><a href="https://www.w3.org/TR/vibration/#vibration-interface">Vibration API (Second Edition)</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-    <span>boolean</span> <strong>vibrate</strong> (<a href='VibratePattern.html'>VibratePattern</a> <strong>pattern</strong>);
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;vibrate&lt;/strong&gt; (&lt;a href=&#39;VibratePattern.html&#39;&gt;VibratePattern&lt;/a&gt; &lt;strong&gt;pattern&lt;/strong&gt;);
 };</code></pre></li><li><a href="https://www.w3.org/TR/web-share/#share-method">Web Share API</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext] Promise<<span>undefined</span>> <strong>share</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> = {});
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext] Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;share&lt;/strong&gt;(optional &lt;a href=&#39;ShareData.html&#39;&gt;ShareData&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt; = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webdriver2/">WebDriver</a>
-<pre class=webidl><code><a href='Navigator.html'>Navigator</a> includes <a href='NavigatorAutomationInformation.html'>NavigatorAutomationInformation</a>;</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
+<pre class=webidl><code>&lt;a href=&#39;Navigator.html&#39;&gt;Navigator&lt;/a&gt; includes &lt;a href=&#39;NavigatorAutomationInformation.html&#39;&gt;NavigatorAutomationInformation&lt;/a&gt;;</code></pre></li><li><a href="https://www.w3.org/TR/webmidi/#extensions-to-the-navigator-interface">Web MIDI API</a>
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
   [SecureContext]
-  Promise <<a href='MIDIAccess.html'>MIDIAccess</a>> <strong>requestMIDIAccess</strong>(optional <a href='MIDIOptions.html'>MIDIOptions</a> <strong>options</strong> = {});
+  Promise &lt;&lt;a href=&#39;MIDIAccess.html&#39;&gt;MIDIAccess&lt;/a&gt;&gt; &lt;strong&gt;requestMIDIAccess&lt;/strong&gt;(optional &lt;a href=&#39;MIDIOptions.html&#39;&gt;MIDIOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 };</code></pre></li><li><a href="https://www.w3.org/TR/webxr/#navigator-xr-attribute">WebXR Device API</a>
-<pre class=webidl><code>partial interface <strong>Navigator</strong> {
-  [SecureContext, SameObject] readonly attribute <a href='XRSystem.html'>XRSystem</a> <strong>xr</strong>;
+<pre class=webidl><code>partial interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;XRSystem.html&#39;&gt;XRSystem&lt;/a&gt; &lt;strong&gt;xr&lt;/strong&gt;;
 };</code></pre></li></ol>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>Navigator</strong> {
-  readonly attribute <span>DOMString</span> <strong>appCodeName</strong>; // constant "Mozilla"
-  readonly attribute <span>DOMString</span> <strong>appName</strong>; // constant "Netscape"
-  readonly attribute <span>DOMString</span> <strong>appVersion</strong>;
-  readonly attribute <span>DOMString</span> <strong>platform</strong>;
-  readonly attribute <span>DOMString</span> <strong>product</strong>; // constant "Gecko"
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>productSub</strong>;
-  readonly attribute <span>DOMString</span> <strong>userAgent</strong>;
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendor</strong>;
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>vendorSub</strong>;
-  [Exposed=<a href='Window.html'>Window</a>] <span>boolean</span> <strong>taintEnabled</strong>(); // constant false
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <span>DOMString</span> <strong>oscpu</strong>;
-  readonly attribute <span>DOMString</span> <strong>language</strong>;
-  readonly attribute FrozenArray<<span>DOMString</span>> <strong>languages</strong>;
-  readonly attribute <span>boolean</span> <strong>onLine</strong>;
-  [SecureContext] <span>undefined</span> <strong>registerProtocolHandler</strong>(<span>DOMString</span> <strong>scheme</strong>, <span>USVString</span> <strong>url</strong>);
-  [SecureContext] <span>undefined</span> <strong>unregisterProtocolHandler</strong>(<span>DOMString</span> <strong>scheme</strong>, <span>USVString</span> <strong>url</strong>);
-  readonly attribute <span>boolean</span> <strong>cookieEnabled</strong>;
-  [SameObject] readonly attribute <a href='PluginArray.html'>PluginArray</a> <strong>plugins</strong>;
-  [SameObject] readonly attribute <a href='MimeTypeArray.html'>MimeTypeArray</a> <strong>mimeTypes</strong>;
-  <span>boolean</span> <strong>javaEnabled</strong>();
-  readonly attribute <span>unsigned long long</span> <strong>hardwareConcurrency</strong>;
-    [SameObject] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;
-  [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;
-  Promise<<span>undefined</span>> <strong>setClientBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
-  Promise<<span>undefined</span>> <strong>clearClientBadge</strong>();
-  Promise<<span>undefined</span>> <strong>setAppBadge</strong>(optional [EnforceRange] <span>unsigned long long</span> <strong>contents</strong>);
-  Promise<<span>undefined</span>> <strong>clearAppBadge</strong>();
+[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;Navigator&lt;/strong&gt; {
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appCodeName&lt;/strong&gt;; // constant &quot;Mozilla&quot;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appName&lt;/strong&gt;; // constant &quot;Netscape&quot;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;appVersion&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;platform&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;product&lt;/strong&gt;; // constant &quot;Gecko&quot;
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;productSub&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;userAgent&lt;/strong&gt;;
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendor&lt;/strong&gt;;
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;vendorSub&lt;/strong&gt;;
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;taintEnabled&lt;/strong&gt;(); // constant false
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;oscpu&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;language&lt;/strong&gt;;
+  readonly attribute FrozenArray&lt;&lt;span&gt;DOMString&lt;/span&gt;&gt; &lt;strong&gt;languages&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;onLine&lt;/strong&gt;;
+  [SecureContext] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;registerProtocolHandler&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scheme&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
+  [SecureContext] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;unregisterProtocolHandler&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;scheme&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;cookieEnabled&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;PluginArray.html&#39;&gt;PluginArray&lt;/a&gt; &lt;strong&gt;plugins&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;MimeTypeArray.html&#39;&gt;MimeTypeArray&lt;/a&gt; &lt;strong&gt;mimeTypes&lt;/strong&gt;;
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;javaEnabled&lt;/strong&gt;();
+  readonly attribute &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;hardwareConcurrency&lt;/strong&gt;;
+    [SameObject] readonly attribute &lt;a href=&#39;GPU.html&#39;&gt;GPU&lt;/a&gt; &lt;strong&gt;gpu&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;StorageManager.html&#39;&gt;StorageManager&lt;/a&gt; &lt;strong&gt;storage&lt;/strong&gt;;
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setClientBadge&lt;/strong&gt;(optional [EnforceRange] &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;contents&lt;/strong&gt;);
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;clearClientBadge&lt;/strong&gt;();
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;setAppBadge&lt;/strong&gt;(optional [EnforceRange] &lt;span&gt;unsigned long long&lt;/span&gt; &lt;strong&gt;contents&lt;/strong&gt;);
+  Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;clearAppBadge&lt;/strong&gt;();
   [SameObject]
-  readonly attribute <a href='Bluetooth.html'>Bluetooth</a> <strong>bluetooth</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;
-  [SecureContext] Promise<sequence<<a href='RelatedApplication.html'>RelatedApplication</a>>> <strong>getInstalledRelatedApps</strong>();
-  readonly attribute <a href='Scheduling.html'>Scheduling</a> <strong>scheduling</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;
-  [SameObject] readonly attribute <a href='FontManager.html'>FontManager</a> <strong>fonts</strong>;
-  [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;
-  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;
-  [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;
-  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;
-    [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;
-  [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;
-  Promise<<a href='BatteryManager.html'>BatteryManager</a>> <strong>getBattery</strong>();
-    <span>boolean</span> <strong>sendBeacon</strong>(<span>USVString</span> <strong>url</strong>, optional <a href='BodyInit.html'>BodyInit</a>? <strong>data</strong> = null);
-  [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='CredentialsContainer.html'>CredentialsContainer</a> <strong>credentials</strong>;
-    readonly attribute <span>double</span> <strong>deviceMemory</strong>;
-    [SecureContext] Promise<<a href='MediaKeySystemAccess.html'>MediaKeySystemAccess</a>> <strong>requestMediaKeySystemAccess</strong> (<span>DOMString</span> <strong>keySystem</strong>, sequence<<a href='MediaKeySystemConfiguration.html'>MediaKeySystemConfiguration</a>> <strong>supportedConfigurations</strong>);
-  sequence<<a href='Gamepad.html'>Gamepad</a>?> <strong>getGamepads</strong>();
-  [SameObject] readonly attribute <a href='Geolocation.html'>Geolocation</a> <strong>geolocation</strong>;
-  [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;
-  [SameObject, SecureContext] readonly attribute <a href='MediaDevices.html'>MediaDevices</a> <strong>mediaDevices</strong>;
-  [SecureContext] <span>undefined</span> <strong>getUserMedia</strong>(<a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong>,
-                                    <a href='NavigatorUserMediaSuccessCallback.html'>NavigatorUserMediaSuccessCallback</a> <strong>successCallback</strong>,
-                                    <a href='NavigatorUserMediaErrorCallback.html'>NavigatorUserMediaErrorCallback</a> <strong>errorCallback</strong>);
-  [SameObject] readonly attribute <a href='MediaSession.html'>MediaSession</a> <strong>mediaSession</strong>;
-  [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;
-    readonly  attribute <span>long</span> <strong>maxTouchPoints</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='Presentation.html'>Presentation</a> <strong>presentation</strong>;
-  [SameObject] readonly attribute <a href='WakeLock.html'>WakeLock</a> <strong>wakeLock</strong>;
-  [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;
-    <span>boolean</span> <strong>vibrate</strong> (<a href='VibratePattern.html'>VibratePattern</a> <strong>pattern</strong>);
-  [SecureContext] Promise<<span>undefined</span>> <strong>share</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> = {});
-  readonly attribute <span>boolean</span> <strong>webdriver</strong>;
+  readonly attribute &lt;a href=&#39;Bluetooth.html&#39;&gt;Bluetooth&lt;/a&gt; &lt;strong&gt;bluetooth&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ContactsManager.html&#39;&gt;ContactsManager&lt;/a&gt; &lt;strong&gt;contacts&lt;/strong&gt;;
+  [SecureContext] Promise&lt;sequence&lt;&lt;a href=&#39;RelatedApplication.html&#39;&gt;RelatedApplication&lt;/a&gt;&gt;&gt; &lt;strong&gt;getInstalledRelatedApps&lt;/strong&gt;();
+  readonly attribute &lt;a href=&#39;Scheduling.html&#39;&gt;Scheduling&lt;/a&gt; &lt;strong&gt;scheduling&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Keyboard.html&#39;&gt;Keyboard&lt;/a&gt; &lt;strong&gt;keyboard&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Keyboard.html&#39;&gt;Keyboard&lt;/a&gt; &lt;strong&gt;keyboard&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;FontManager.html&#39;&gt;FontManager&lt;/a&gt; &lt;strong&gt;fonts&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;NetworkInformation.html&#39;&gt;NetworkInformation&lt;/a&gt; &lt;strong&gt;connection&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;Serial.html&#39;&gt;Serial&lt;/a&gt; &lt;strong&gt;serial&lt;/strong&gt;;
+  [SecureContext] readonly attribute &lt;a href=&#39;NavigatorUAData.html&#39;&gt;NavigatorUAData&lt;/a&gt; &lt;strong&gt;userAgentData&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;LockManager.html&#39;&gt;LockManager&lt;/a&gt; &lt;strong&gt;locks&lt;/strong&gt;;
+    [SameObject] readonly attribute &lt;a href=&#39;HID.html&#39;&gt;HID&lt;/a&gt; &lt;strong&gt;hid&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;USB.html&#39;&gt;USB&lt;/a&gt; &lt;strong&gt;usb&lt;/strong&gt;;
+  Promise&lt;&lt;a href=&#39;BatteryManager.html&#39;&gt;BatteryManager&lt;/a&gt;&gt; &lt;strong&gt;getBattery&lt;/strong&gt;();
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;sendBeacon&lt;/strong&gt;(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;a href=&#39;BodyInit.html&#39;&gt;BodyInit&lt;/a&gt;? &lt;strong&gt;data&lt;/strong&gt; = null);
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Clipboard.html&#39;&gt;Clipboard&lt;/a&gt; &lt;strong&gt;clipboard&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;CredentialsContainer.html&#39;&gt;CredentialsContainer&lt;/a&gt; &lt;strong&gt;credentials&lt;/strong&gt;;
+    readonly attribute &lt;span&gt;double&lt;/span&gt; &lt;strong&gt;deviceMemory&lt;/strong&gt;;
+    [SecureContext] Promise&lt;&lt;a href=&#39;MediaKeySystemAccess.html&#39;&gt;MediaKeySystemAccess&lt;/a&gt;&gt; &lt;strong&gt;requestMediaKeySystemAccess&lt;/strong&gt; (&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;keySystem&lt;/strong&gt;, sequence&lt;&lt;a href=&#39;MediaKeySystemConfiguration.html&#39;&gt;MediaKeySystemConfiguration&lt;/a&gt;&gt; &lt;strong&gt;supportedConfigurations&lt;/strong&gt;);
+  sequence&lt;&lt;a href=&#39;Gamepad.html&#39;&gt;Gamepad&lt;/a&gt;?&gt; &lt;strong&gt;getGamepads&lt;/strong&gt;();
+  [SameObject] readonly attribute &lt;a href=&#39;Geolocation.html&#39;&gt;Geolocation&lt;/a&gt; &lt;strong&gt;geolocation&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;MediaCapabilities.html&#39;&gt;MediaCapabilities&lt;/a&gt; &lt;strong&gt;mediaCapabilities&lt;/strong&gt;;
+  [SameObject, SecureContext] readonly attribute &lt;a href=&#39;MediaDevices.html&#39;&gt;MediaDevices&lt;/a&gt; &lt;strong&gt;mediaDevices&lt;/strong&gt;;
+  [SecureContext] &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;getUserMedia&lt;/strong&gt;(&lt;a href=&#39;MediaStreamConstraints.html&#39;&gt;MediaStreamConstraints&lt;/a&gt; &lt;strong&gt;constraints&lt;/strong&gt;,
+                                    &lt;a href=&#39;NavigatorUserMediaSuccessCallback.html&#39;&gt;NavigatorUserMediaSuccessCallback&lt;/a&gt; &lt;strong&gt;successCallback&lt;/strong&gt;,
+                                    &lt;a href=&#39;NavigatorUserMediaErrorCallback.html&#39;&gt;NavigatorUserMediaErrorCallback&lt;/a&gt; &lt;strong&gt;errorCallback&lt;/strong&gt;);
+  [SameObject] readonly attribute &lt;a href=&#39;MediaSession.html&#39;&gt;MediaSession&lt;/a&gt; &lt;strong&gt;mediaSession&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;Permissions.html&#39;&gt;Permissions&lt;/a&gt; &lt;strong&gt;permissions&lt;/strong&gt;;
+    readonly  attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;maxTouchPoints&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;Presentation.html&#39;&gt;Presentation&lt;/a&gt; &lt;strong&gt;presentation&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;WakeLock.html&#39;&gt;WakeLock&lt;/a&gt; &lt;strong&gt;wakeLock&lt;/strong&gt;;
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;ServiceWorkerContainer.html&#39;&gt;ServiceWorkerContainer&lt;/a&gt; &lt;strong&gt;serviceWorker&lt;/strong&gt;;
+    &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;vibrate&lt;/strong&gt; (&lt;a href=&#39;VibratePattern.html&#39;&gt;VibratePattern&lt;/a&gt; &lt;strong&gt;pattern&lt;/strong&gt;);
+  [SecureContext] Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;share&lt;/strong&gt;(optional &lt;a href=&#39;ShareData.html&#39;&gt;ShareData&lt;/a&gt; &lt;strong&gt;data&lt;/strong&gt; = {});
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;webdriver&lt;/strong&gt;;
   [SecureContext]
-  Promise <<a href='MIDIAccess.html'>MIDIAccess</a>> <strong>requestMIDIAccess</strong>(optional <a href='MIDIOptions.html'>MIDIOptions</a> <strong>options</strong> = {});
-  [SecureContext, SameObject] readonly attribute <a href='XRSystem.html'>XRSystem</a> <strong>xr</strong>;
+  Promise &lt;&lt;a href=&#39;MIDIAccess.html&#39;&gt;MIDIAccess&lt;/a&gt;&gt; &lt;strong&gt;requestMIDIAccess&lt;/strong&gt;(optional &lt;a href=&#39;MIDIOptions.html&#39;&gt;MIDIOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
+  [SecureContext, SameObject] readonly attribute &lt;a href=&#39;XRSystem.html&#39;&gt;XRSystem&lt;/a&gt; &lt;strong&gt;xr&lt;/strong&gt;;
   // objects implementing this interface also implement the interfaces given below
 };</code></pre></details>
 </section>

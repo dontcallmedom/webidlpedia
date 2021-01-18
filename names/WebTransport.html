@@ -7,44 +7,44 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/#webtransport">WebTransport</a> defines <code>WebTransport</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>WebTransport</strong> {
-  constructor(<span>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> = {});
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;WebTransport&lt;/strong&gt; {
+  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;a href=&#39;WebTransportOptions.html&#39;&gt;WebTransportOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 
-  Promise<<a href='WebTransportStats.html'>WebTransportStats</a>> <strong>getStats</strong>();
-  readonly attribute <a href='WebTransportState.html'>WebTransportState</a> <strong>state</strong>;
-  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
-  readonly attribute Promise<<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>> <strong>closed</strong>;
-  <span>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> = {});
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+  Promise&lt;&lt;a href=&#39;WebTransportStats.html&#39;&gt;WebTransportStats&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
+  readonly attribute &lt;a href=&#39;WebTransportState.html&#39;&gt;WebTransportState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;ready&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;a href=&#39;WebTransportCloseInfo.html&#39;&gt;WebTransportCloseInfo&lt;/a&gt;&gt; &lt;strong&gt;closed&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;(optional &lt;a href=&#39;WebTransportCloseInfo.html&#39;&gt;WebTransportCloseInfo&lt;/a&gt; &lt;strong&gt;closeInfo&lt;/strong&gt; = {});
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstatechange&lt;/strong&gt;;
 };
 
-<a href='WebTransport.html'>WebTransport</a> includes <a href='UnidirectionalStreamsTransport.html'>UnidirectionalStreamsTransport</a>;
-<a href='WebTransport.html'>WebTransport</a> includes <a href='BidirectionalStreamsTransport.html'>BidirectionalStreamsTransport</a>;
-<a href='WebTransport.html'>WebTransport</a> includes <a href='DatagramTransport.html'>DatagramTransport</a>;</code></pre>
+&lt;a href=&#39;WebTransport.html&#39;&gt;WebTransport&lt;/a&gt; includes &lt;a href=&#39;UnidirectionalStreamsTransport.html&#39;&gt;UnidirectionalStreamsTransport&lt;/a&gt;;
+&lt;a href=&#39;WebTransport.html&#39;&gt;WebTransport&lt;/a&gt; includes &lt;a href=&#39;BidirectionalStreamsTransport.html&#39;&gt;BidirectionalStreamsTransport&lt;/a&gt;;
+&lt;a href=&#39;WebTransport.html&#39;&gt;WebTransport&lt;/a&gt; includes &lt;a href=&#39;DatagramTransport.html&#39;&gt;DatagramTransport&lt;/a&gt;;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>WebTransport</strong> {
-  constructor(<span>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> = {});
+[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;WebTransport&lt;/strong&gt; {
+  constructor(&lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, optional &lt;a href=&#39;WebTransportOptions.html&#39;&gt;WebTransportOptions&lt;/a&gt; &lt;strong&gt;options&lt;/strong&gt; = {});
 
-  Promise<<a href='WebTransportStats.html'>WebTransportStats</a>> <strong>getStats</strong>();
-  readonly attribute <a href='WebTransportState.html'>WebTransportState</a> <strong>state</strong>;
-  readonly attribute Promise<<span>undefined</span>> <strong>ready</strong>;
-  readonly attribute Promise<<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>> <strong>closed</strong>;
-  <span>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> = {});
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
-  Promise<<a href='SendStream.html'>SendStream</a>> <strong>createUnidirectionalStream</strong>(optional <a href='SendStreamParameters.html'>SendStreamParameters</a> <strong>parameters</strong> = {});
+  Promise&lt;&lt;a href=&#39;WebTransportStats.html&#39;&gt;WebTransportStats&lt;/a&gt;&gt; &lt;strong&gt;getStats&lt;/strong&gt;();
+  readonly attribute &lt;a href=&#39;WebTransportState.html&#39;&gt;WebTransportState&lt;/a&gt; &lt;strong&gt;state&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;span&gt;undefined&lt;/span&gt;&gt; &lt;strong&gt;ready&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;a href=&#39;WebTransportCloseInfo.html&#39;&gt;WebTransportCloseInfo&lt;/a&gt;&gt; &lt;strong&gt;closed&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;close&lt;/strong&gt;(optional &lt;a href=&#39;WebTransportCloseInfo.html&#39;&gt;WebTransportCloseInfo&lt;/a&gt; &lt;strong&gt;closeInfo&lt;/strong&gt; = {});
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onstatechange&lt;/strong&gt;;
+  Promise&lt;&lt;a href=&#39;SendStream.html&#39;&gt;SendStream&lt;/a&gt;&gt; &lt;strong&gt;createUnidirectionalStream&lt;/strong&gt;(optional &lt;a href=&#39;SendStreamParameters.html&#39;&gt;SendStreamParameters&lt;/a&gt; &lt;strong&gt;parameters&lt;/strong&gt; = {});
   /* a ReadableStream of ReceiveStream objects */
-  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;
-    Promise<<a href='BidirectionalStream.html'>BidirectionalStream</a>> <strong>createBidirectionalStream</strong>();
+  readonly attribute &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;incomingUnidirectionalStreams&lt;/strong&gt;;
+    Promise&lt;&lt;a href=&#39;BidirectionalStream.html&#39;&gt;BidirectionalStream&lt;/a&gt;&gt; &lt;strong&gt;createBidirectionalStream&lt;/strong&gt;();
     /* a ReadableStream of BidirectionalStream objects */
-    readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;
-    readonly attribute <span>unsigned short</span> <strong>maxDatagramSize</strong>;
+    readonly attribute &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;incomingBidirectionalStreams&lt;/strong&gt;;
+    readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;maxDatagramSize&lt;/strong&gt;;
     /* both streams are streams of Uint8Array objects */
-    readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>datagramReadable</strong>;
-    readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>datagramWritable</strong>;
+    readonly attribute &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;datagramReadable&lt;/strong&gt;;
+    readonly attribute &lt;a href=&#39;WritableStream.html&#39;&gt;WritableStream&lt;/a&gt; &lt;strong&gt;datagramWritable&lt;/strong&gt;;
 };</code></pre></details>
 </section>
 

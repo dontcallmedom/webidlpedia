@@ -7,23 +7,23 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://w3c.github.io/webtransport/#bidirectionalstream">WebTransport</a> defines <code>BidirectionalStream</code></p>
-<pre class=webidl><code>[ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
-interface <strong>BidirectionalStream</strong> {
+<pre class=webidl><code>[ Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;) ]
+interface &lt;strong&gt;BidirectionalStream&lt;/strong&gt; {
 };
-<a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='OutgoingStream.html'>OutgoingStream</a>;
-<a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='IncomingStream.html'>IncomingStream</a>;</code></pre>
+&lt;a href=&#39;BidirectionalStream.html&#39;&gt;BidirectionalStream&lt;/a&gt; includes &lt;a href=&#39;OutgoingStream.html&#39;&gt;OutgoingStream&lt;/a&gt;;
+&lt;a href=&#39;BidirectionalStream.html&#39;&gt;BidirectionalStream&lt;/a&gt; includes &lt;a href=&#39;IncomingStream.html&#39;&gt;IncomingStream&lt;/a&gt;;</code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
 
-[ Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
-interface <strong>BidirectionalStream</strong> {
-  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;
-  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>writingAborted</strong>;
-  <span>undefined</span> <strong>abortWriting</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
+[ Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;) ]
+interface &lt;strong&gt;BidirectionalStream&lt;/strong&gt; {
+  readonly attribute &lt;a href=&#39;WritableStream.html&#39;&gt;WritableStream&lt;/a&gt; &lt;strong&gt;writable&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;a href=&#39;StreamAbortInfo.html&#39;&gt;StreamAbortInfo&lt;/a&gt;&gt; &lt;strong&gt;writingAborted&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;abortWriting&lt;/strong&gt;(optional &lt;a href=&#39;StreamAbortInfo.html&#39;&gt;StreamAbortInfo&lt;/a&gt; &lt;strong&gt;abortInfo&lt;/strong&gt; = {});
   /* a ReadableStream of Uint8Array */
-  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;
-  readonly attribute Promise<<a href='StreamAbortInfo.html'>StreamAbortInfo</a>> <strong>readingAborted</strong>;
-  <span>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> = {});
+  readonly attribute &lt;a href=&#39;ReadableStream.html&#39;&gt;ReadableStream&lt;/a&gt; &lt;strong&gt;readable&lt;/strong&gt;;
+  readonly attribute Promise&lt;&lt;a href=&#39;StreamAbortInfo.html&#39;&gt;StreamAbortInfo&lt;/a&gt;&gt; &lt;strong&gt;readingAborted&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;abortReading&lt;/strong&gt;(optional &lt;a href=&#39;StreamAbortInfo.html&#39;&gt;StreamAbortInfo&lt;/a&gt; &lt;strong&gt;abortInfo&lt;/strong&gt; = {});
 };</code></pre></details>
 </section>
 <section>

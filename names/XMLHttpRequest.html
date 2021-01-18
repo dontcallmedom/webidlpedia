@@ -7,42 +7,42 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://xhr.spec.whatwg.org/#xmlhttprequest">XMLHttpRequest Standard</a> defines <code>XMLHttpRequest</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
-interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.html'>XMLHttpRequestEventTarget</a> {
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;span&gt;DedicatedWorker&lt;/span&gt;,&lt;a href=&#39;SharedWorker.html&#39;&gt;SharedWorker&lt;/a&gt;)]
+interface &lt;strong&gt;XMLHttpRequest&lt;/strong&gt; : &lt;a href=&#39;XMLHttpRequestEventTarget.html&#39;&gt;XMLHttpRequestEventTarget&lt;/a&gt; {
   constructor();
 
   // event handler
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onreadystatechange&lt;/strong&gt;;
 
   // states
-  const <span>unsigned short</span> <strong>UNSENT</strong> = 0;
-  const <span>unsigned short</span> <strong>OPENED</strong> = 1;
-  const <span>unsigned short</span> <strong>HEADERS_RECEIVED</strong> = 2;
-  const <span>unsigned short</span> <strong>LOADING</strong> = 3;
-  const <span>unsigned short</span> <strong>DONE</strong> = 4;
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;UNSENT&lt;/strong&gt; = 0;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;OPENED&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;HEADERS_RECEIVED&lt;/strong&gt; = 2;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;LOADING&lt;/strong&gt; = 3;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;DONE&lt;/strong&gt; = 4;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;readyState&lt;/strong&gt;;
 
   // request
-  <span>undefined</span> <strong>open</strong>(<span>ByteString</span> <strong>method</strong>, <span>USVString</span> <strong>url</strong>);
-  <span>undefined</span> <strong>open</strong>(<span>ByteString</span> <strong>method</strong>, <span>USVString</span> <strong>url</strong>, <span>boolean</span> <strong>async</strong>, optional <span>USVString</span>? <strong>username</strong> = null, optional <span>USVString</span>? <strong>password</strong> = null);
-  <span>undefined</span> <strong>setRequestHeader</strong>(<span>ByteString</span> <strong>name</strong>, <span>ByteString</span> <strong>value</strong>);
-           attribute <span>unsigned long</span> <strong>timeout</strong>;
-           attribute <span>boolean</span> <strong>withCredentials</strong>;
-  [SameObject] readonly attribute <a href='XMLHttpRequestUpload.html'>XMLHttpRequestUpload</a> <strong>upload</strong>;
-  <span>undefined</span> <strong>send</strong>(optional (<a href='Document.html'>Document</a> or <a href='XMLHttpRequestBodyInit.html'>XMLHttpRequestBodyInit</a>)? <strong>body</strong> = null);
-  <span>undefined</span> <strong>abort</strong>();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;open&lt;/strong&gt;(&lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;method&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;open&lt;/strong&gt;(&lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;method&lt;/strong&gt;, &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;url&lt;/strong&gt;, &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;async&lt;/strong&gt;, optional &lt;span&gt;USVString&lt;/span&gt;? &lt;strong&gt;username&lt;/strong&gt; = null, optional &lt;span&gt;USVString&lt;/span&gt;? &lt;strong&gt;password&lt;/strong&gt; = null);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setRequestHeader&lt;/strong&gt;(&lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;, &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;);
+           attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;timeout&lt;/strong&gt;;
+           attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;withCredentials&lt;/strong&gt;;
+  [SameObject] readonly attribute &lt;a href=&#39;XMLHttpRequestUpload.html&#39;&gt;XMLHttpRequestUpload&lt;/a&gt; &lt;strong&gt;upload&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;send&lt;/strong&gt;(optional (&lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt; or &lt;a href=&#39;XMLHttpRequestBodyInit.html&#39;&gt;XMLHttpRequestBodyInit&lt;/a&gt;)? &lt;strong&gt;body&lt;/strong&gt; = null);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;abort&lt;/strong&gt;();
 
   // response
-  readonly attribute <span>USVString</span> <strong>responseURL</strong>;
-  readonly attribute <span>unsigned short</span> <strong>status</strong>;
-  readonly attribute <span>ByteString</span> <strong>statusText</strong>;
-  <span>ByteString</span>? <strong>getResponseHeader</strong>(<span>ByteString</span> <strong>name</strong>);
-  <span>ByteString</span> <strong>getAllResponseHeaders</strong>();
-  <span>undefined</span> <strong>overrideMimeType</strong>(<span>DOMString</span> <strong>mime</strong>);
-           attribute <a href='XMLHttpRequestResponseType.html'>XMLHttpRequestResponseType</a> <strong>responseType</strong>;
-  readonly attribute <span>any</span> <strong>response</strong>;
-  readonly attribute <span>USVString</span> <strong>responseText</strong>;
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <a href='Document.html'>Document</a>? <strong>responseXML</strong>;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;responseURL&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;status&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;statusText&lt;/strong&gt;;
+  &lt;span&gt;ByteString&lt;/span&gt;? &lt;strong&gt;getResponseHeader&lt;/strong&gt;(&lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;);
+  &lt;span&gt;ByteString&lt;/span&gt; &lt;strong&gt;getAllResponseHeaders&lt;/strong&gt;();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;overrideMimeType&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;mime&lt;/strong&gt;);
+           attribute &lt;a href=&#39;XMLHttpRequestResponseType.html&#39;&gt;XMLHttpRequestResponseType&lt;/a&gt; &lt;strong&gt;responseType&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;any&lt;/span&gt; &lt;strong&gt;response&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;USVString&lt;/span&gt; &lt;strong&gt;responseText&lt;/strong&gt;;
+  [Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;] readonly attribute &lt;a href=&#39;Document.html&#39;&gt;Document&lt;/a&gt;? &lt;strong&gt;responseXML&lt;/strong&gt;;
 };</code></pre>
   
   

@@ -7,45 +7,45 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#htmltextareaelement">HTML Standard</a> defines <code>HTMLTextAreaElement</code></p>
-<pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>HTMLTextAreaElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
+<pre class=webidl><code>[Exposed=&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;]
+interface &lt;strong&gt;HTMLTextAreaElement&lt;/strong&gt; : &lt;a href=&#39;HTMLElement.html&#39;&gt;HTMLElement&lt;/a&gt; {
   [HTMLConstructor] constructor();
 
-  [CEReactions] attribute <span>DOMString</span> <strong>autocomplete</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>cols</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>dirName</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>disabled</strong>;
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
-  [CEReactions] attribute <span>long</span> <strong>maxLength</strong>;
-  [CEReactions] attribute <span>long</span> <strong>minLength</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>placeholder</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>readOnly</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>required</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>rows</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>wrap</strong>;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;autocomplete&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;cols&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;dirName&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;disabled&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;HTMLFormElement.html&#39;&gt;HTMLFormElement&lt;/a&gt;? &lt;strong&gt;form&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;maxLength&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;long&lt;/span&gt; &lt;strong&gt;minLength&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;name&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;placeholder&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;readOnly&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;required&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;rows&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;wrap&lt;/strong&gt;;
 
-  readonly attribute <span>DOMString</span> <strong>type</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>defaultValue</strong>;
-  attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>value</strong>;
-  readonly attribute <span>unsigned long</span> <strong>textLength</strong>;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
+  [CEReactions] attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;defaultValue&lt;/strong&gt;;
+  attribute [LegacyNullToEmptyString] &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;value&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;textLength&lt;/strong&gt;;
 
-  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
-  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
-  <span>boolean</span> <strong>checkValidity</strong>();
-  <span>boolean</span> <strong>reportValidity</strong>();
-  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;willValidate&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;ValidityState.html&#39;&gt;ValidityState&lt;/a&gt; &lt;strong&gt;validity&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;validationMessage&lt;/strong&gt;;
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;checkValidity&lt;/strong&gt;();
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;reportValidity&lt;/strong&gt;();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setCustomValidity&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;error&lt;/strong&gt;);
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;
+  readonly attribute &lt;a href=&#39;NodeList.html&#39;&gt;NodeList&lt;/a&gt; &lt;strong&gt;labels&lt;/strong&gt;;
 
-  <span>undefined</span> <strong>select</strong>();
-  attribute <span>unsigned long</span> <strong>selectionStart</strong>;
-  attribute <span>unsigned long</span> <strong>selectionEnd</strong>;
-  attribute <span>DOMString</span> <strong>selectionDirection</strong>;
-  <span>undefined</span> <strong>setRangeText</strong>(<span>DOMString</span> <strong>replacement</strong>);
-  <span>undefined</span> <strong>setRangeText</strong>(<span>DOMString</span> <strong>replacement</strong>, <span>unsigned long</span> <strong>start</strong>, <span>unsigned long</span> <strong>end</strong>, optional <a href='SelectionMode.html'>SelectionMode</a> <strong>selectionMode</strong> = "preserve");
-  <span>undefined</span> <strong>setSelectionRange</strong>(<span>unsigned long</span> <strong>start</strong>, <span>unsigned long</span> <strong>end</strong>, optional <span>DOMString</span> <strong>direction</strong>);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;select&lt;/strong&gt;();
+  attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;selectionStart&lt;/strong&gt;;
+  attribute &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;selectionEnd&lt;/strong&gt;;
+  attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;selectionDirection&lt;/strong&gt;;
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setRangeText&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;replacement&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setRangeText&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;replacement&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;start&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;end&lt;/strong&gt;, optional &lt;a href=&#39;SelectionMode.html&#39;&gt;SelectionMode&lt;/a&gt; &lt;strong&gt;selectionMode&lt;/strong&gt; = &quot;preserve&quot;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;setSelectionRange&lt;/strong&gt;(&lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;start&lt;/strong&gt;, &lt;span&gt;unsigned long&lt;/span&gt; &lt;strong&gt;end&lt;/strong&gt;, optional &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;direction&lt;/strong&gt;);
 };</code></pre>
   
   

@@ -7,34 +7,34 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://drafts.csswg.org/css-font-loading/#fontfaceset">CSS Font Loading Module Level 3</a> defines <code>FontFaceSet</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>FontFaceSet</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(sequence<<a href='FontFace.html'>FontFace</a>> <strong>initialFaces</strong>);
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;)]
+interface &lt;strong&gt;FontFaceSet&lt;/strong&gt; : &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt; {
+  constructor(sequence&lt;&lt;a href=&#39;FontFace.html&#39;&gt;FontFace&lt;/a&gt;&gt; &lt;strong&gt;initialFaces&lt;/strong&gt;);
 
   // FontFaceSet is Set-like!
-  setlike<<a href='FontFace.html'>FontFace</a>>;
-  <a href='FontFaceSet.html'>FontFaceSet</a> <strong>add</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);
-  <span>boolean</span> <strong>delete</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);
-  <span>undefined</span> <strong>clear</strong>();
+  setlike&lt;&lt;a href=&#39;FontFace.html&#39;&gt;FontFace&lt;/a&gt;&gt;;
+  &lt;a href=&#39;FontFaceSet.html&#39;&gt;FontFaceSet&lt;/a&gt; &lt;strong&gt;add&lt;/strong&gt;(&lt;a href=&#39;FontFace.html&#39;&gt;FontFace&lt;/a&gt; &lt;strong&gt;font&lt;/strong&gt;);
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;delete&lt;/strong&gt;(&lt;a href=&#39;FontFace.html&#39;&gt;FontFace&lt;/a&gt; &lt;strong&gt;font&lt;/strong&gt;);
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;clear&lt;/strong&gt;();
 
   // events for when loading state changes
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloading</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingdone</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingerror</strong>;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloading&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadingdone&lt;/strong&gt;;
+  attribute &lt;a href=&#39;EventHandler.html&#39;&gt;EventHandler&lt;/a&gt; &lt;strong&gt;onloadingerror&lt;/strong&gt;;
 
   // check and start loads if appropriate
   // and fulfill promise when all loads complete
-  Promise<sequence<<a href='FontFace.html'>FontFace</a>>> <strong>load</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> = " ");
+  Promise&lt;sequence&lt;&lt;a href=&#39;FontFace.html&#39;&gt;FontFace&lt;/a&gt;&gt;&gt; &lt;strong&gt;load&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;font&lt;/strong&gt;, optional &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;text&lt;/strong&gt; = &quot; &quot;);
 
   // return whether all fonts in the fontlist are loaded
   // (does not initiate load if not available)
-  <span>boolean</span> <strong>check</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> = " ");
+  &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;check&lt;/strong&gt;(&lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;font&lt;/strong&gt;, optional &lt;a href=&#39;CSSOMString.html&#39;&gt;CSSOMString&lt;/a&gt; &lt;strong&gt;text&lt;/strong&gt; = &quot; &quot;);
 
   // async notification that font loading and layout operations are done
-  readonly attribute Promise<<a href='FontFaceSet.html'>FontFaceSet</a>> <strong>ready</strong>;
+  readonly attribute Promise&lt;&lt;a href=&#39;FontFaceSet.html&#39;&gt;FontFaceSet&lt;/a&gt;&gt; &lt;strong&gt;ready&lt;/strong&gt;;
 
-  // loading state, "loading" while one or more fonts loading, "loaded" otherwise
-  readonly attribute <a href='FontFaceSetLoadStatus.html'>FontFaceSetLoadStatus</a> <strong>status</strong>;
+  // loading state, &quot;loading&quot; while one or more fonts loading, &quot;loaded&quot; otherwise
+  readonly attribute &lt;a href=&#39;FontFaceSetLoadStatus.html&#39;&gt;FontFaceSetLoadStatus&lt;/a&gt; &lt;strong&gt;status&lt;/strong&gt;;
 };</code></pre>
   
   

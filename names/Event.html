@@ -7,36 +7,36 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https://dom.spec.whatwg.org/#event">DOM Standard</a> defines <code>Event</code></p>
-<pre class=webidl><code>[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>)]
-interface <strong>Event</strong> {
-  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='EventInit.html'>EventInit</a> <strong>eventInitDict</strong> = {});
-  readonly attribute <span>DOMString</span> <strong>type</strong>;
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>target</strong>;
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>srcElement</strong>; // legacy
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>currentTarget</strong>;
-  sequence<<a href='EventTarget.html'>EventTarget</a>> <strong>composedPath</strong>();
+<pre class=webidl><code>[Exposed=(&lt;a href=&#39;Window.html&#39;&gt;Window&lt;/a&gt;,&lt;a href=&#39;Worker.html&#39;&gt;Worker&lt;/a&gt;,&lt;a href=&#39;AudioWorklet.html&#39;&gt;AudioWorklet&lt;/a&gt;)]
+interface &lt;strong&gt;Event&lt;/strong&gt; {
+  constructor(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;a href=&#39;EventInit.html&#39;&gt;EventInit&lt;/a&gt; &lt;strong&gt;eventInitDict&lt;/strong&gt; = {});
+  readonly attribute &lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;? &lt;strong&gt;target&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;? &lt;strong&gt;srcElement&lt;/strong&gt;; // legacy
+  readonly attribute &lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;? &lt;strong&gt;currentTarget&lt;/strong&gt;;
+  sequence&lt;&lt;a href=&#39;EventTarget.html&#39;&gt;EventTarget&lt;/a&gt;&gt; &lt;strong&gt;composedPath&lt;/strong&gt;();
 
-  const <span>unsigned short</span> <strong>NONE</strong> = 0;
-  const <span>unsigned short</span> <strong>CAPTURING_PHASE</strong> = 1;
-  const <span>unsigned short</span> <strong>AT_TARGET</strong> = 2;
-  const <span>unsigned short</span> <strong>BUBBLING_PHASE</strong> = 3;
-  readonly attribute <span>unsigned short</span> <strong>eventPhase</strong>;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;NONE&lt;/strong&gt; = 0;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;CAPTURING_PHASE&lt;/strong&gt; = 1;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;AT_TARGET&lt;/strong&gt; = 2;
+  const &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;BUBBLING_PHASE&lt;/strong&gt; = 3;
+  readonly attribute &lt;span&gt;unsigned short&lt;/span&gt; &lt;strong&gt;eventPhase&lt;/strong&gt;;
 
-  <span>undefined</span> <strong>stopPropagation</strong>();
-           attribute <span>boolean</span> <strong>cancelBubble</strong>; // legacy alias of .stopPropagation()
-  <span>undefined</span> <strong>stopImmediatePropagation</strong>();
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stopPropagation&lt;/strong&gt;();
+           attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;cancelBubble&lt;/strong&gt;; // legacy alias of .stopPropagation()
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;stopImmediatePropagation&lt;/strong&gt;();
 
-  readonly attribute <span>boolean</span> <strong>bubbles</strong>;
-  readonly attribute <span>boolean</span> <strong>cancelable</strong>;
-           attribute <span>boolean</span> <strong>returnValue</strong>;  // legacy
-  <span>undefined</span> <strong>preventDefault</strong>();
-  readonly attribute <span>boolean</span> <strong>defaultPrevented</strong>;
-  readonly attribute <span>boolean</span> <strong>composed</strong>;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;bubbles&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;cancelable&lt;/strong&gt;;
+           attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;returnValue&lt;/strong&gt;;  // legacy
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;preventDefault&lt;/strong&gt;();
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;defaultPrevented&lt;/strong&gt;;
+  readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;composed&lt;/strong&gt;;
 
-  [LegacyUnforgeable] readonly attribute <span>boolean</span> <strong>isTrusted</strong>;
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeStamp</strong>;
+  [LegacyUnforgeable] readonly attribute &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;isTrusted&lt;/strong&gt;;
+  readonly attribute &lt;a href=&#39;DOMHighResTimeStamp.html&#39;&gt;DOMHighResTimeStamp&lt;/a&gt; &lt;strong&gt;timeStamp&lt;/strong&gt;;
 
-  <span>undefined</span> <strong>initEvent</strong>(<span>DOMString</span> <strong>type</strong>, optional <span>boolean</span> <strong>bubbles</strong> = false, optional <span>boolean</span> <strong>cancelable</strong> = false); // legacy
+  &lt;span&gt;undefined&lt;/span&gt; &lt;strong&gt;initEvent&lt;/strong&gt;(&lt;span&gt;DOMString&lt;/span&gt; &lt;strong&gt;type&lt;/strong&gt;, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;bubbles&lt;/strong&gt; = false, optional &lt;span&gt;boolean&lt;/span&gt; &lt;strong&gt;cancelable&lt;/strong&gt; = false); // legacy
 };</code></pre>
   
   
