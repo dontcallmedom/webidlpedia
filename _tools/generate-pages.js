@@ -1,6 +1,7 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 const webidl = require("webidl2");
+const escapeHtml = require('escape-html')
 
 const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idl && s.idl.idlNames;
@@ -130,8 +131,8 @@ function interfaceDetails(data, name, used_by, templates) {
         needsConsolidation = true;
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
       });
-      mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
-<pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre>`;
+      mainDef += `<p><a href="${idlDfnLink(name, spec)}">${escapeHtml(spec.title)}</a> defines <code>${name}</code></p>
+<pre class=webidl><code>${escapeHtml(webidl.write(idlparsed, {templates})).replace(/^\n+/m, '')}</code></pre>`;
     });
 
   let partialDef = ``;
@@ -149,8 +150,8 @@ function interfaceDetails(data, name, used_by, templates) {
         let mixinMembers = extractSerializableIDLMembersFromPlatform(i.includes, "interface mixin", data);
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
       });
-      partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${spec.title}</a>
-<pre class=webidl><code>${webidl.write(idlparsed, {templates}).replace(/^\n+/m, '')}</code></pre></li>`;
+      partialDef += `<li><a href="${extendedIdlDfnLink(name, spec)}">${escapeHtml(spec.title)}</a>
+<pre class=webidl><code>${escapeHtml(webidl.write(idlparsed, {templates})).replace(/^\n+/m, '')}</code></pre></li>`;
     });
   if (partialDef) {
     partialDef = `<p>This ${type} is extended in the following specifications:</p><ol>${partialDef}</ol>`;
@@ -158,7 +159,7 @@ function interfaceDetails(data, name, used_by, templates) {
 
   let consolidatedDef = ``;
   if (needsConsolidation) {
-    consolidatedDef = `<details><summary>Consolidated IDL (across ${consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
+    consolidatedDef = `<details><summary>Consolidated IDL (across ${consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${escapeHtml(webidl.write([consolidatedIdlDef], {templates}))}</code></pre></details>`;
   }
 
   let usedBy = ``;
@@ -175,7 +176,7 @@ function interfaceDetails(data, name, used_by, templates) {
   let refs = ``;
   data.filter(s => s.idl && s.idl.externalDependencies && s.idl.externalDependencies.indexOf(name) !== -1)
     .forEach(spec => {
-      refs += `<li><a href="${spec.url}">${spec.title}</a> refers to <code>${name}</code></li>`;
+      refs += `<li><a href="${spec.url}">${escapeHtml(spec.title)}</a> refers to <code>${name}</code></li>`;
     });
   if (refs) {
     refs = `<section><h3>Refering specifications</h3><ul>${refs}</ul>
@@ -217,9 +218,9 @@ function enumNames(data) {
   uniqueEnumValues.forEach(e => {
     let specList = "";
     e.specs.forEach(s => {
-      specList += `<li><a href="${s.url}">${s.title}</a> in enum <code><a href="names/${s.enumName}.html">${s.enumName}</a></code></li>`;
+      specList += `<li><a href="${s.url}">${escapeHtml(s.title)}</a> in enum <code><a href="names/${s.enumName}.html">${s.enumName}</a></code></li>`;
     });
-    list += `<li id='x-${e.value}'><code>"${e.value}"</code><ol>${specList}</ol></li>`;
+    list += `<li id='x-${escapeHtml(e.value)}'><code>"${escapeHtml(e.value)}"</code><ol>${specList}</ol></li>`;
   });
   return `<p>Strings used as enumeration values:</p><ol>${list}</ol>`;
 }
@@ -245,7 +246,7 @@ function extAttrUsage(data) {
       const notInWebIdlSpec = {"CEReactions": "https://html.spec.whatwg.org/multipage/custom-elements.html#cereactions", "WebGLHandlesContextLoss": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14", "HTMLConstructor": "https://html.spec.whatwg.org/multipage/dom.html#htmlconstructor"};
       let applyList = "";
       extAttr[e].forEach(a => {
-        applyList += `<li>used on ${a.applyTo.type} <code>${a.applyTo.name}</code> in <a href="${a.url}">${a.title}</a></li>`;
+        applyList += `<li>used on ${a.applyTo.type} <code>${a.applyTo.name}</code> in <a href="${a.url}">${escapeHtml(a.title)}</a></li>`;
       });
       list += `<li><a href="${notInWebIdlSpec[e] ? notInWebIdlSpec[e] : "http://heycam.github.io/webidl/#" + e}">${e}</a> <ol>${applyList}</ol></li>`;
     });
@@ -278,7 +279,7 @@ function memberNames(data, sort) {
   uniqueMemberNames.forEach(e => {
     let specList = "";
     e.specs.forEach(s => {
-      specList += `<li>used as <strong>${s.type}</strong> in ${s.containerType} <code><a href="../names/${s.containerName}.html">${s.containerName}</a> in <a href="${s.url}">${s.title}</a></li>`;
+      specList += `<li>used as <strong>${s.type}</strong> in ${s.containerType} <code><a href="../names/${s.containerName}.html">${s.containerName}</a></code> in <a href="${s.url}">${escapeHtml(s.title)}</a></li>`;
     })
     list += `<li><code>${e.value}</code><ul>${specList}</ul></li>`;
   });
