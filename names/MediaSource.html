@@ -25,25 +25,7 @@ interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget<
     static <span>boolean</span> <strong>isTypeSupported</strong> (<span>DOMString</span> <strong>type</strong>);
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget</a> {
-    constructor();
-    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>sourceBuffers</strong>;
-    readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>activeSourceBuffers</strong>;
-    readonly        attribute <a href='ReadyState.html'>ReadyState</a>          <strong>readyState</strong>;
-                    attribute <span>unrestricted double</span> <strong>duration</strong>;
-                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceopen</strong>;
-                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceended</strong>;
-                    attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceclose</strong>;
-    <a href='SourceBuffer.html'>SourceBuffer</a>   <strong>addSourceBuffer</strong> (<span>DOMString</span> <strong>type</strong>);
-    <span>undefined</span>           <strong>removeSourceBuffer</strong> (<a href='SourceBuffer.html'>SourceBuffer</a> <strong>sourceBuffer</strong>);
-    <span>undefined</span>           <strong>endOfStream</strong> (optional <a href='EndOfStreamError.html'>EndOfStreamError</a> <strong>error</strong>);
-    <span>undefined</span>           <strong>setLiveSeekableRange</strong> (<span>double</span> <strong>start</strong>, <span>double</span> <strong>end</strong>);
-    <span>undefined</span>           <strong>clearLiveSeekableRange</strong> ();
-    static <span>boolean</span> <strong>isTypeSupported</strong> (<span>DOMString</span> <strong>type</strong>);
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

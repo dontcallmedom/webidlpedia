@@ -27,27 +27,7 @@ interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>
   <a href='void.html'>void</a> <strong>respondWith</strong>(Promise<<a href='PaymentHandlerResponse.html'>PaymentHandlerResponse</a>> <strong>handlerResponsePromise</strong>);
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='ServiceWorker.html'>ServiceWorker</a>]
-interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {
-  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='PaymentRequestEventInit.html'>PaymentRequestEventInit</a> <strong>eventInitDict</strong> = {});
-  readonly attribute <span>USVString</span> <strong>topOrigin</strong>;
-  readonly attribute <span>USVString</span> <strong>paymentRequestOrigin</strong>;
-  readonly attribute <span>DOMString</span> <strong>paymentRequestId</strong>;
-  readonly attribute FrozenArray<<a href='PaymentMethodData.html'>PaymentMethodData</a>> <strong>methodData</strong>;
-  readonly attribute <span>object</span> <strong>total</strong>;
-  readonly attribute FrozenArray<<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>> <strong>modifiers</strong>;
-  readonly attribute <span>DOMString</span> <strong>instrumentKey</strong>;
-  readonly attribute <span>boolean</span> <strong>requestBillingAddress</strong>;
-  readonly attribute <span>object</span>? <strong>paymentOptions</strong>;
-  readonly attribute FrozenArray<<a href='PaymentShippingOption.html'>PaymentShippingOption</a>>? <strong>shippingOptions</strong>;
-  Promise<<a href='WindowClient.html'>WindowClient</a>?> <strong>openWindow</strong>(<span>USVString</span> <strong>url</strong>);
-  Promise<<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?> <strong>changePaymentMethod</strong>(<span>DOMString</span> <strong>methodName</strong>, optional <span>object</span>? <strong>methodDetails</strong> = null);
-  Promise<<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?> <strong>changeShippingAddress</strong>(optional <a href='AddressInit.html'>AddressInit</a> <strong>shippingAddress</strong> = {});
-  Promise<<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?> <strong>changeShippingOption</strong>(<span>DOMString</span> <strong>shippingOption</strong>);
-  <a href='void.html'>void</a> <strong>respondWith</strong>(Promise<<a href='PaymentHandlerResponse.html'>PaymentHandlerResponse</a>> <strong>handlerResponsePromise</strong>);
-};</code></pre></details>
+  
 </section>
 
   

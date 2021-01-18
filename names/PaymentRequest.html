@@ -30,29 +30,7 @@ interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarg
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[SecureContext, Exposed=<a href='Window.html'>Window</a>]
-interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(
-    sequence<<a href='PaymentMethodData.html'>PaymentMethodData</a>> <strong>methodData</strong>,
-    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>,
-    optional <a href='PaymentOptions.html'>PaymentOptions</a> <strong>options</strong> = {}
-  );
-  [NewObject]
-  Promise<<a href='PaymentResponse.html'>PaymentResponse</a>> <strong>show</strong>(optional Promise<<a href='PaymentDetailsUpdate.html'>PaymentDetailsUpdate</a>> <strong>detailsPromise</strong>);
-  [NewObject]
-  Promise<<span>undefined</span>> <strong>abort</strong>();
-  [NewObject]
-  Promise<<span>boolean</span>> <strong>canMakePayment</strong>();
-
-  readonly attribute <span>DOMString</span> <strong>id</strong>;
-  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
-  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
-  readonly attribute <a href='PaymentShippingType.html'>PaymentShippingType</a>? <strong>shippingType</strong>;
-
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingaddresschange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingoptionchange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;
-};</code></pre></details>
+  
 </section>
 
   

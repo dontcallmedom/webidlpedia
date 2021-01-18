@@ -30,30 +30,7 @@ interface <strong>AudioNode</strong> : <a href='EventTarget.html'>EventTarget</a
   attribute <a href='ChannelInterpretation.html'>ChannelInterpretation</a> <strong>channelInterpretation</strong>;
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>AudioNode</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  <a href='AudioNode.html'>AudioNode</a> <strong>connect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
-                     optional <span>unsigned long</span> <strong>output</strong> = 0,
-                     optional <span>unsigned long</span> <strong>input</strong> = 0);
-  <span>undefined</span> <strong>connect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, optional <span>unsigned long</span> <strong>output</strong> = 0);
-  <span>undefined</span> <strong>disconnect</strong> ();
-  <span>undefined</span> <strong>disconnect</strong> (<span>unsigned long</span> <strong>output</strong>);
-  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>);
-  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>, <span>unsigned long</span> <strong>output</strong>);
-  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
-                        <span>unsigned long</span> <strong>output</strong>,
-                        <span>unsigned long</span> <strong>input</strong>);
-  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>);
-  <span>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, <span>unsigned long</span> <strong>output</strong>);
-  readonly attribute <a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>;
-  readonly attribute <span>unsigned long</span> <strong>numberOfInputs</strong>;
-  readonly attribute <span>unsigned long</span> <strong>numberOfOutputs</strong>;
-  attribute <span>unsigned long</span> <strong>channelCount</strong>;
-  attribute <a href='ChannelCountMode.html'>ChannelCountMode</a> <strong>channelCountMode</strong>;
-  attribute <a href='ChannelInterpretation.html'>ChannelInterpretation</a> <strong>channelInterpretation</strong>;
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

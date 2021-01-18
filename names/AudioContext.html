@@ -23,23 +23,7 @@ interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAu
   <a href='MediaStreamAudioDestinationNode.html'>MediaStreamAudioDestinationNode</a> <strong>createMediaStreamDestination</strong> ();
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {
-  constructor (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> = {});
-  readonly attribute <span>double</span> <strong>baseLatency</strong>;
-  readonly attribute <span>double</span> <strong>outputLatency</strong>;
-  <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();
-  Promise<<span>undefined</span>> <strong>resume</strong> ();
-  Promise<<span>undefined</span>> <strong>suspend</strong> ();
-  Promise<<span>undefined</span>> <strong>close</strong> ();
-  <a href='MediaElementAudioSourceNode.html'>MediaElementAudioSourceNode</a> <strong>createMediaElementSource</strong> (<a href='HTMLMediaElement.html'>HTMLMediaElement</a> <strong>mediaElement</strong>);
-  <a href='MediaStreamAudioSourceNode.html'>MediaStreamAudioSourceNode</a> <strong>createMediaStreamSource</strong> (<a href='MediaStream.html'>MediaStream</a> <strong>mediaStream</strong>);
-  <a href='MediaStreamTrackAudioSourceNode.html'>MediaStreamTrackAudioSourceNode</a> <strong>createMediaStreamTrackSource</strong> (
-    <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>mediaStreamTrack</strong>);
-  <a href='MediaStreamAudioDestinationNode.html'>MediaStreamAudioDestinationNode</a> <strong>createMediaStreamDestination</strong> ();
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

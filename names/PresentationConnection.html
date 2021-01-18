@@ -27,27 +27,7 @@ interface <strong>PresentationConnection</strong> : <a href='EventTarget.html'>E
   <span>undefined</span> <strong>send</strong> (<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[SecureContext, Exposed=<a href='Window.html'>Window</a>]
-interface <strong>PresentationConnection</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  readonly attribute <span>USVString</span> <strong>id</strong>;
-  readonly attribute <span>USVString</span> <strong>url</strong>;
-  readonly attribute <a href='PresentationConnectionState.html'>PresentationConnectionState</a> <strong>state</strong>;
-  <span>undefined</span> <strong>close</strong>();
-  <span>undefined</span> <strong>terminate</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onterminate</strong>;
-
-  // Communication
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  <span>undefined</span> <strong>send</strong> (<span>DOMString</span> <strong>message</strong>);
-  <span>undefined</span> <strong>send</strong> (<a href='Blob.html'>Blob</a> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong> (<span>ArrayBuffer</span> <strong>data</strong>);
-  <span>undefined</span> <strong>send</strong> (<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

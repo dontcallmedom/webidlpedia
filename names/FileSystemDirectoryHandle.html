@@ -19,19 +19,7 @@ interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle
   Promise<sequence<<span>USVString</span>>?> <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
-interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle.html'>FileSystemHandle</a> {
-  async iterable<<span>USVString</span>, <a href='FileSystemHandle.html'>FileSystemHandle</a>>;
-
-  Promise<<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>> <strong>getFileHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetFileOptions.html'>FileSystemGetFileOptions</a> <strong>options</strong> = {});
-  Promise<<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>> <strong>getDirectoryHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetDirectoryOptions.html'>FileSystemGetDirectoryOptions</a> <strong>options</strong> = {});
-
-  Promise<<span>undefined</span>> <strong>removeEntry</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemRemoveOptions.html'>FileSystemRemoveOptions</a> <strong>options</strong> = {});
-
-  Promise<sequence<<span>USVString</span>>?> <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

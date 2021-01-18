@@ -39,39 +39,7 @@ interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a> {
-  constructor();
-  // async read methods
-  <span>undefined</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span>DOMString</span> <strong>encoding</strong>);
-  <span>undefined</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-
-  <span>undefined</span> <strong>abort</strong>();
-
-  // states
-  const <span>unsigned short</span> <strong>EMPTY</strong> = 0;
-  const <span>unsigned short</span> <strong>LOADING</strong> = 1;
-  const <span>unsigned short</span> <strong>DONE</strong> = 2;
-
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
-
-  // File or Blob data
-  readonly attribute (<span>DOMString</span> or <span>ArrayBuffer</span>)? <strong>result</strong>;
-
-  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;
-
-  // event handler content attributes
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;
-};</code></pre></details>
+  
 </section>
 
   

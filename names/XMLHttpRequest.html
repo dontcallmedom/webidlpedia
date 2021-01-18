@@ -45,45 +45,7 @@ interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.h
   [Exposed=<a href='Window.html'>Window</a>] readonly attribute <a href='Document.html'>Document</a>? <strong>responseXML</strong>;
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
-interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.html'>XMLHttpRequestEventTarget</a> {
-  constructor();
-
-  // event handler
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;
-
-  // states
-  const <span>unsigned short</span> <strong>UNSENT</strong> = 0;
-  const <span>unsigned short</span> <strong>OPENED</strong> = 1;
-  const <span>unsigned short</span> <strong>HEADERS_RECEIVED</strong> = 2;
-  const <span>unsigned short</span> <strong>LOADING</strong> = 3;
-  const <span>unsigned short</span> <strong>DONE</strong> = 4;
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;
-
-  // request
-  <span>undefined</span> <strong>open</strong>(<span>ByteString</span> <strong>method</strong>, <span>USVString</span> <strong>url</strong>);
-  <span>undefined</span> <strong>open</strong>(<span>ByteString</span> <strong>method</strong>, <span>USVString</span> <strong>url</strong>, <span>boolean</span> <strong>async</strong>, optional <span>USVString</span>? <strong>username</strong> = null, optional <span>USVString</span>? <strong>password</strong> = null);
-  <span>undefined</span> <strong>setRequestHeader</strong>(<span>ByteString</span> <strong>name</strong>, <span>ByteString</span> <strong>value</strong>);
-           attribute <span>unsigned long</span> <strong>timeout</strong>;
-           attribute <span>boolean</span> <strong>withCredentials</strong>;
-  [SameObject] readonly attribute <a href='XMLHttpRequestUpload.html'>XMLHttpRequestUpload</a> <strong>upload</strong>;
-  <span>undefined</span> <strong>send</strong>(optional (<a href='Document.html'>Document</a> or <a href='XMLHttpRequestBodyInit.html'>XMLHttpRequestBodyInit</a>)? <strong>body</strong> = null);
-  <span>undefined</span> <strong>abort</strong>();
-
-  // response
-  readonly attribute <span>USVString</span> <strong>responseURL</strong>;
-  readonly attribute <span>unsigned short</span> <strong>status</strong>;
-  readonly attribute <span>ByteString</span> <strong>statusText</strong>;
-  <span>ByteString</span>? <strong>getResponseHeader</strong>(<span>ByteString</span> <strong>name</strong>);
-  <span>ByteString</span> <strong>getAllResponseHeaders</strong>();
-  <span>undefined</span> <strong>overrideMimeType</strong>(<span>DOMString</span> <strong>mime</strong>);
-           attribute <a href='XMLHttpRequestResponseType.html'>XMLHttpRequestResponseType</a> <strong>responseType</strong>;
-  readonly attribute <span>any</span> <strong>response</strong>;
-  readonly attribute <span>USVString</span> <strong>responseText</strong>;
-  [Exposed=<a href='Window.html'>Window</a>] readonly attribute <a href='Document.html'>Document</a>? <strong>responseXML</strong>;
-};</code></pre></details>
+  
 </section>
 
   

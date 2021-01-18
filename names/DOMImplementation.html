@@ -16,16 +16,7 @@ interface <strong>DOMImplementation</strong> {
   <span>boolean</span> <strong>hasFeature</strong>(); // useless; always returns true
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>DOMImplementation</strong> {
-  [NewObject] <a href='DocumentType.html'>DocumentType</a> <strong>createDocumentType</strong>(<span>DOMString</span> <strong>qualifiedName</strong>, <span>DOMString</span> <strong>publicId</strong>, <span>DOMString</span> <strong>systemId</strong>);
-  [NewObject] <a href='XMLDocument.html'>XMLDocument</a> <strong>createDocument</strong>(<span>DOMString</span>? <strong>namespace</strong>, [LegacyNullToEmptyString] <span>DOMString</span> <strong>qualifiedName</strong>, optional <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong> = null);
-  [NewObject] <a href='Document.html'>Document</a> <strong>createHTMLDocument</strong>(optional <span>DOMString</span> <strong>title</strong>);
-
-  <span>boolean</span> <strong>hasFeature</strong>(); // useless; always returns true
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

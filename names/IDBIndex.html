@@ -29,29 +29,7 @@ interface <strong>IDBIndex</strong> {
                                        optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>IDBIndex</strong> {
-  attribute <span>DOMString</span> <strong>name</strong>;
-  [SameObject] readonly attribute <a href='IDBObjectStore.html'>IDBObjectStore</a> <strong>objectStore</strong>;
-  readonly attribute <span>any</span> <strong>keyPath</strong>;
-  readonly attribute <span>boolean</span> <strong>multiEntry</strong>;
-  readonly attribute <span>boolean</span> <strong>unique</strong>;
-
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>get</strong>(<span>any</span> <strong>query</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getKey</strong>(<span>any</span> <strong>query</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAll</strong>(optional <span>any</span> <strong>query</strong>,
-                                optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>getAllKeys</strong>(optional <span>any</span> <strong>query</strong>,
-                                    optional [EnforceRange] <span>unsigned long</span> <strong>count</strong>);
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>count</strong>(optional <span>any</span> <strong>query</strong>);
-
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openCursor</strong>(optional <span>any</span> <strong>query</strong>,
-                                    optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
-  [NewObject] <a href='IDBRequest.html'>IDBRequest</a> <strong>openKeyCursor</strong>(optional <span>any</span> <strong>query</strong>,
-                                       optional <a href='IDBCursorDirection.html'>IDBCursorDirection</a> <strong>direction</strong> = "next");
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

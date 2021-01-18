@@ -35,35 +35,7 @@ interface <strong>Animation</strong> : <a href='EventTarget.html'>EventTarget</a
     <span>undefined</span> <strong>commitStyles</strong>();
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
-
-[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>Animation</strong> : <a href='EventTarget.html'>EventTarget</a> {
-    constructor(optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> = null,
-                optional <a href='AnimationTimeline.html'>AnimationTimeline</a>? <strong>timeline</strong>);
-             attribute <span>DOMString</span>                <strong>id</strong>;
-             attribute <a href='AnimationEffect.html'>AnimationEffect</a>?         <strong>effect</strong>;
-             attribute <a href='AnimationTimeline.html'>AnimationTimeline</a>?       <strong>timeline</strong>;
-             attribute <span>double</span>?                  <strong>startTime</strong>;
-             attribute <span>double</span>?                  <strong>currentTime</strong>;
-             attribute <span>double</span>                   <strong>playbackRate</strong>;
-    readonly attribute <a href='AnimationPlayState.html'>AnimationPlayState</a>       <strong>playState</strong>;
-    readonly attribute <a href='AnimationReplaceState.html'>AnimationReplaceState</a>    <strong>replaceState</strong>;
-    readonly attribute <span>boolean</span>                  <strong>pending</strong>;
-    readonly attribute Promise<<a href='Animation.html'>Animation</a>>       <strong>ready</strong>;
-    readonly attribute Promise<<a href='Animation.html'>Animation</a>>       <strong>finished</strong>;
-             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onfinish</strong>;
-             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>oncancel</strong>;
-             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onremove</strong>;
-    <span>undefined</span> <strong>cancel</strong>();
-    <span>undefined</span> <strong>finish</strong>();
-    <span>undefined</span> <strong>play</strong>();
-    <span>undefined</span> <strong>pause</strong>();
-    <span>undefined</span> <strong>updatePlaybackRate</strong>(<span>double</span> <strong>playbackRate</strong>);
-    <span>undefined</span> <strong>reverse</strong>();
-    <span>undefined</span> <strong>persist</strong>();
-    <span>undefined</span> <strong>commitStyles</strong>();
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

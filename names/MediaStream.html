@@ -25,23 +25,7 @@ interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget<
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onremovetrack</strong>;
 };</code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed=<a href='Window.html'>Window</a>]
-interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor();
-  constructor(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>);
-  constructor(sequence<<a href='MediaStreamTrack.html'>MediaStreamTrack</a>> <strong>tracks</strong>);
-  readonly attribute <span>DOMString</span> <strong>id</strong>;
-  sequence<<a href='MediaStreamTrack.html'>MediaStreamTrack</a>> <strong>getAudioTracks</strong>();
-  sequence<<a href='MediaStreamTrack.html'>MediaStreamTrack</a>> <strong>getVideoTracks</strong>();
-  sequence<<a href='MediaStreamTrack.html'>MediaStreamTrack</a>> <strong>getTracks</strong>();
-  <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>getTrackById</strong>(<span>DOMString</span> <strong>trackId</strong>);
-  <span>undefined</span> <strong>addTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>);
-  <span>undefined</span> <strong>removeTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>);
-  <a href='MediaStream.html'>MediaStream</a> <strong>clone</strong>();
-  readonly attribute <span>boolean</span> <strong>active</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onaddtrack</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onremovetrack</strong>;
-};</code></pre></details>
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
