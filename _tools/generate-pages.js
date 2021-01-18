@@ -91,6 +91,7 @@ function interfaceDetails(data, name, used_by, templates) {
   let mainDefSpecs = [];
   let consolidatedIdlDef;
   let consolidatedIdlMembers = [] ;
+  let needsConsolidation = false;
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlNames[name])
     .forEach(spec => {
@@ -114,16 +115,19 @@ function interfaceDetails(data, name, used_by, templates) {
         let def = mainIdlDef;
         while (def.inheritance) {
           let members = extractSerializableIDLMembersFromPlatform(def.inheritance, type, data);
+          needsConsolidation = true;
           consolidatedIdlMembers = consolidatedIdlMembers.concat(members);
           def = data.find(s => s.idl && s.idl.idlNames && s.idl.idlNames[def.inheritance]).idl.idlNames[def.inheritance];
         }
       }
       */
       idlparsed.filter(i => i.partial).forEach(i => {
+        needsConsolidation = true;
         consolidatedIdlMembers =  consolidatedIdlMembers.concat(i.members);
       });
       idlparsed.filter(i => i.type === "includes").forEach(i => {
         let mixinMembers = extractSerializableIDLMembersFromPlatform(i.includes, "interface mixin", data);
+        needsConsolidation = true;
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
       });
       mainDef += `<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
@@ -135,11 +139,13 @@ function interfaceDetails(data, name, used_by, templates) {
   data.filter(hasIdlDef)
     .filter(spec => spec.idl.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
     .forEach(spec => {
+      needsConsolidation = true;
       const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
       idlparsed.filter(i => i.partial).forEach(i => {
         consolidatedIdlMembers = consolidatedIdlMembers.concat(i.members);
       });
       idlparsed.filter(i => i.type === "includes").forEach(i => {
+        needsConsolidation = true;
         let mixinMembers = extractSerializableIDLMembersFromPlatform(i.includes, "interface mixin", data);
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
       });
@@ -151,7 +157,7 @@ function interfaceDetails(data, name, used_by, templates) {
   }
 
   let consolidatedDef = ``;
-  if (consolidatedIdlMembers.length) {
+  if (needsConsolidation) {
     consolidatedDef = `<details><summary>Consolidated IDL (across ${consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
   }
 
