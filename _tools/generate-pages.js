@@ -311,6 +311,12 @@ fetch("https://w3c.github.io/webref/ed/crawl.json")
 
     const webidlTemplate = {
       wrap: items => html.join(items, ''),
+      trivia: t => {
+        if (!t.trim()) {
+          return t;
+        }
+        return html`<span class="comment">${t}</span>`;
+      },
       name: name => html`<strong>${name}</strong>`,
       reference: name => used_by[name] ? html`<a href='${name}.html'>${name}</a>` : html`<span>${name}</span>`
     };
