@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    branches:
+      - gh-pages
+name: Validate pages
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 8
+    - name: Setup environment
+      run: npm install
+    - name: Generate pages
+      run: node _tools/generate-pages.js
+    - name: Validate resultsCommit updates
+      run: java -jar ./node_modules/vnu-jar/build/dist/vnu.jar _site/*.html _site/names/*.html
