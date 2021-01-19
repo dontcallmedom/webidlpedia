@@ -7,24 +7,24 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;#dom-hiddevice">WebHID API</a> defines <code>HIDDevice</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [
     Exposed&#x3D;<a href='Window.html'>Window</a>,
     SecureContext
-] interface <strong>HIDDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputreport</strong>;
-    readonly attribute <span>boolean</span> <strong>opened</strong>;
-    readonly attribute <span>unsigned short</span> <strong>vendorId</strong>;
-    readonly attribute <span>unsigned short</span> <strong>productId</strong>;
-    readonly attribute <span>DOMString</span> <strong>productName</strong>;
-    readonly attribute FrozenArray&lt;<a href='HIDCollectionInfo.html'>HIDCollectionInfo</a>&gt; <strong>collections</strong>;
-    Promise&lt;<span>undefined</span>&gt; <strong>open</strong>();
-    Promise&lt;<span>undefined</span>&gt; <strong>close</strong>();
-    Promise&lt;<span>undefined</span>&gt; <strong>sendReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
-    Promise&lt;<span>undefined</span>&gt; <strong>sendFeatureReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);
-    Promise&lt;<span>DataView</span>&gt; <strong>receiveFeatureReport</strong>([EnforceRange] <span>octet</span> <strong>reportId</strong>);
-};</code></pre>
+] interface <strong>HIDDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputreport</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>boolean</span> <strong>opened</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unsigned short</span> <strong>vendorId</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unsigned short</span> <strong>productId</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>DOMString</span> <strong>productName</strong>;</span><span class=def>
+    readonly attribute FrozenArray&lt;<a href='HIDCollectionInfo.html'>HIDCollectionInfo</a>&gt; <strong>collections</strong>;</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>open</strong>();</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong>();</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendReport</strong>([EnforceRange] <span class=primitive>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendFeatureReport</strong>([EnforceRange] <span class=primitive>octet</span> <strong>reportId</strong>, <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+    Promise&lt;<span class=primitive>DataView</span>&gt; <strong>receiveFeatureReport</strong>([EnforceRange] <span class=primitive>octet</span> <strong>reportId</strong>);</span>
+};</span></code></pre>
   
   
 </section>

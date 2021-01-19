@@ -7,95 +7,95 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpucommandencoder">WebGPU</a> defines <code>GPUCommandEncoder</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
-interface <strong>GPUCommandEncoder</strong> {
-    <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong>beginRenderPass</strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong>beginComputePass</strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});
+interface <strong>GPUCommandEncoder</strong> {<span class=def>
+    <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong>beginRenderPass</strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong>beginComputePass</strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
 
-    <span>undefined</span> <strong>copyBufferToBuffer</strong>(
+    <span class=primitive>undefined</span> <strong>copyBufferToBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>sourceOffset</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyBufferToTexture</strong>(
+    <span class=primitive>undefined</span> <strong>copyBufferToTexture</strong>(
         <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>source</strong>,
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyTextureToBuffer</strong>(
+    <span class=primitive>undefined</span> <strong>copyTextureToBuffer</strong>(
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
         <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyTextureToTexture</strong>(
+    <span class=primitive>undefined</span> <strong>copyTextureToTexture</strong>(
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
-    <span>undefined</span> <strong>popDebugGroup</strong>();
-    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
+    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span class=primitive>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>resolveQuerySet</strong>(
+    <span class=primitive>undefined</span> <strong>resolveQuerySet</strong>(
         <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>,
         <a href='GPUSize32.html'>GPUSize32</a> <strong>firstQuery</strong>,
         <a href='GPUSize32.html'>GPUSize32</a> <strong>queryCount</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);</span><span class=def>
 
-    <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});
-};
-<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
+    <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>
+};</span><span class=def>
+<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-interface <strong>GPUCommandEncoder</strong> {
-    <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong>beginRenderPass</strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong>beginComputePass</strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});
+interface <strong>GPUCommandEncoder</strong> {<span class=def>
+    <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong>beginRenderPass</strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong>beginComputePass</strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
 
-    <span>undefined</span> <strong>copyBufferToBuffer</strong>(
+    <span class=primitive>undefined</span> <strong>copyBufferToBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>sourceOffset</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyBufferToTexture</strong>(
+    <span class=primitive>undefined</span> <strong>copyBufferToTexture</strong>(
         <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>source</strong>,
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyTextureToBuffer</strong>(
+    <span class=primitive>undefined</span> <strong>copyTextureToBuffer</strong>(
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
         <a href='GPUBufferCopyView.html'>GPUBufferCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>copyTextureToTexture</strong>(
+    <span class=primitive>undefined</span> <strong>copyTextureToTexture</strong>(
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>source</strong>,
         <a href='GPUTextureCopyView.html'>GPUTextureCopyView</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>pushDebugGroup</strong>(<span>USVString</span> <strong>groupLabel</strong>);
-    <span>undefined</span> <strong>popDebugGroup</strong>();
-    <span>undefined</span> <strong>insertDebugMarker</strong>(<span>USVString</span> <strong>markerLabel</strong>);
+    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);
+    <span class=primitive>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
 
-    <span>undefined</span> <strong>resolveQuerySet</strong>(
+    <span class=primitive>undefined</span> <strong>resolveQuerySet</strong>(
         <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>,
         <a href='GPUSize32.html'>GPUSize32</a> <strong>firstQuery</strong>,
         <a href='GPUSize32.html'>GPUSize32</a> <strong>queryCount</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);
+        <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);</span><span class=def>
 
-    <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});
-    attribute <span>USVString</span>? <strong>label</strong>;
-};</code></pre></details>
+    <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
+    attribute <span class=primitive>USVString</span>? <strong>label</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

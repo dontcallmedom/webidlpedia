@@ -7,41 +7,41 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;#dom-gamepad">Gamepad</a> defines <code>Gamepad</code></p>
-<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>Gamepad</strong> {
-  readonly attribute <span>DOMString</span> <strong>id</strong>;
-  readonly attribute <span>long</span> <strong>index</strong>;
-  readonly attribute <span>boolean</span> <strong>connected</strong>;
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;
-  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;
-  readonly attribute FrozenArray&lt;<span>double</span>&gt; <strong>axes</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;
-};</code></pre>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Gamepad</strong> {<span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>index</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>connected</strong>;</span><span class=def>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;</span><span class=def>
+  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<span class=primitive>double</span>&gt; <strong>axes</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;</span>
+};</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;extensions.html#partial-gamepad-interface">Gamepad Extensions</a><pre class=webidl><code>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;gamepad&#x2F;extensions.html#partial-gamepad-interface">Gamepad Extensions</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Gamepad</strong> {
-  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;
-  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;
-};</code></pre></li>
+partial interface <strong>Gamepad</strong> {<span class=def>
+  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;</span><span class=def>
+  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;</span>
+};</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>Gamepad</strong> {
-  readonly attribute <span>DOMString</span> <strong>id</strong>;
-  readonly attribute <span>long</span> <strong>index</strong>;
-  readonly attribute <span>boolean</span> <strong>connected</strong>;
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;
-  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;
-  readonly attribute FrozenArray&lt;<span>double</span>&gt; <strong>axes</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;
-  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;
-  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;
-  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;
-};</code></pre></details>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
+interface <strong>Gamepad</strong> {<span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>index</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>connected</strong>;</span><span class=def>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timestamp</strong>;</span><span class=def>
+  readonly attribute <a href='GamepadMappingType.html'>GamepadMappingType</a> <strong>mapping</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<span class=primitive>double</span>&gt; <strong>axes</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadButton.html'>GamepadButton</a>&gt; <strong>buttons</strong>;</span><span class=def>
+  readonly attribute <a href='GamepadHand.html'>GamepadHand</a> <strong>hand</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadHapticActuator.html'>GamepadHapticActuator</a>&gt; <strong>hapticActuators</strong>;</span><span class=def>
+  readonly attribute <a href='GamepadPose.html'>GamepadPose</a>? <strong>pose</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='GamepadTouch.html'>GamepadTouch</a>&gt;? <strong>touchEvents</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -7,29 +7,29 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;streams.spec.whatwg.org&#x2F;#readablestreamdefaultreader">Streams Standard</a> defines <code>ReadableStreamDefaultReader</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
-interface <strong>ReadableStreamDefaultReader</strong> {
-  constructor(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);
+interface <strong>ReadableStreamDefaultReader</strong> {<span class=def>
+  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def>
 
-  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();
-  <span>undefined</span> <strong>releaseLock</strong>();
-};
-<a href='ReadableStreamDefaultReader.html'>ReadableStreamDefaultReader</a> includes <a href='ReadableStreamGenericReader.html'>ReadableStreamGenericReader</a>;</code></pre>
+  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>releaseLock</strong>();</span>
+};</span><span class=def>
+<a href='ReadableStreamDefaultReader.html'>ReadableStreamDefaultReader</a> includes <a href='ReadableStreamGenericReader.html'>ReadableStreamGenericReader</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
-interface <strong>ReadableStreamDefaultReader</strong> {
-  constructor(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);
+interface <strong>ReadableStreamDefaultReader</strong> {<span class=def>
+  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def>
 
-  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();
-  <span>undefined</span> <strong>releaseLock</strong>();
-  readonly attribute Promise&lt;<span>undefined</span>&gt; <strong>closed</strong>;
+  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>releaseLock</strong>();</span><span class=def>
+  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>closed</strong>;</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>cancel</strong>(optional <span>any</span> <strong>reason</strong>);
-};</code></pre></details>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>cancel</strong>(optional <span class=primitive>any</span> <strong>reason</strong>);</span>
+};</span></code></pre></details>
 </section>
 
   

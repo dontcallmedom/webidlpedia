@@ -7,54 +7,54 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-stats&#x2F;#dom-rtcinboundrtpstreamstats">Identifiers for WebRTC&#39;s Statistics API</a> defines <code>RTCInboundRtpStreamStats</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
-dictionary <strong>RTCInboundRtpStreamStats</strong> : <a href='RTCReceivedRtpStreamStats.html'>RTCReceivedRtpStreamStats</a> {
- required <span>DOMString</span>   <strong>receiverId</strong>;
- <span>DOMString</span>            <strong>remoteId</strong>;
- <span>unsigned long</span>        <strong>framesDecoded</strong>;
- <span>unsigned long</span>        <strong>keyFramesDecoded</strong>;
- <span>unsigned long</span>        <strong>frameWidth</strong>;
- <span>unsigned long</span>        <strong>frameHeight</strong>;
- <span>unsigned long</span>        <strong>frameBitDepth</strong>;
- <span>double</span>               <strong>framesPerSecond</strong>;
- <span>unsigned long long</span>   <strong>qpSum</strong>;
- <span>double</span>               <strong>totalDecodeTime</strong>;
- <span>double</span>               <strong>totalInterFrameDelay</strong>;
- <span>double</span>               <strong>totalSquaredInterFrameDelay</strong>;
- <span>boolean</span>              <strong>voiceActivityFlag</strong>;
- <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>lastPacketReceivedTimestamp</strong>;
- <span>double</span>               <strong>averageRtcpInterval</strong>;
- <span>unsigned long long</span>   <strong>headerBytesReceived</strong>;
- <span>unsigned long long</span>   <strong>fecPacketsReceived</strong>;
- <span>unsigned long long</span>   <strong>fecPacketsDiscarded</strong>;
- <span>unsigned long long</span>   <strong>bytesReceived</strong>;
- <span>unsigned long long</span>   <strong>packetsFailedDecryption</strong>;
- <span>unsigned long long</span>   <strong>packetsDuplicated</strong>;
- record&lt;<span>USVString</span>, <span>unsigned long long</span>&gt; <strong>perDscpPacketsReceived</strong>;
- <span>unsigned long</span>        <strong>nackCount</strong>;
- <span>unsigned long</span>        <strong>firCount</strong>;
- <span>unsigned long</span>        <strong>pliCount</strong>;
- <span>unsigned long</span>        <strong>sliCount</strong>;
- <span>double</span>               <strong>totalProcessingDelay</strong>;
- <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>estimatedPlayoutTimestamp</strong>;
- <span>double</span>               <strong>jitterBufferDelay</strong>;
- <span>unsigned long long</span>   <strong>jitterBufferEmittedCount</strong>;
- <span>unsigned long long</span>   <strong>totalSamplesReceived</strong>;
- <span>unsigned long long</span>   <strong>totalSamplesDecoded</strong>;
- <span>unsigned long long</span>   <strong>samplesDecodedWithSilk</strong>;
- <span>unsigned long long</span>   <strong>samplesDecodedWithCelt</strong>;
- <span>unsigned long long</span>   <strong>concealedSamples</strong>;
- <span>unsigned long long</span>   <strong>silentConcealedSamples</strong>;
- <span>unsigned long long</span>   <strong>concealmentEvents</strong>;
- <span>unsigned long long</span>   <strong>insertedSamplesForDeceleration</strong>;
- <span>unsigned long long</span>   <strong>removedSamplesForAcceleration</strong>;
- <span>double</span>               <strong>audioLevel</strong>;
- <span>double</span>               <strong>totalAudioEnergy</strong>;
- <span>double</span>               <strong>totalSamplesDuration</strong>;
- <span>unsigned long</span>        <strong>framesReceived</strong>;
- <span>DOMString</span>            <strong>decoderImplementation</strong>;
-};</code></pre>
+dictionary <strong>RTCInboundRtpStreamStats</strong> : <a href='RTCReceivedRtpStreamStats.html'>RTCReceivedRtpStreamStats</a> {<span class=def>
+ required <span class=primitive>DOMString</span>   <strong>receiverId</strong>;</span><span class=def>
+ <span class=primitive>DOMString</span>            <strong>remoteId</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>framesDecoded</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>keyFramesDecoded</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>frameWidth</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>frameHeight</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>frameBitDepth</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>framesPerSecond</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>qpSum</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalDecodeTime</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalInterFrameDelay</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalSquaredInterFrameDelay</strong>;</span><span class=def>
+ <span class=primitive>boolean</span>              <strong>voiceActivityFlag</strong>;</span><span class=def>
+ <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>lastPacketReceivedTimestamp</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>averageRtcpInterval</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>headerBytesReceived</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>fecPacketsReceived</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>fecPacketsDiscarded</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>bytesReceived</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>packetsFailedDecryption</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>packetsDuplicated</strong>;</span><span class=def>
+ record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned long long</span>&gt; <strong>perDscpPacketsReceived</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>nackCount</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>firCount</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>pliCount</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>sliCount</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalProcessingDelay</strong>;</span><span class=def>
+ <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>estimatedPlayoutTimestamp</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>jitterBufferDelay</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>jitterBufferEmittedCount</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>totalSamplesReceived</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>totalSamplesDecoded</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>samplesDecodedWithSilk</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>samplesDecodedWithCelt</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>concealedSamples</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>silentConcealedSamples</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>concealmentEvents</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>insertedSamplesForDeceleration</strong>;</span><span class=def>
+ <span class=primitive>unsigned long long</span>   <strong>removedSamplesForAcceleration</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>audioLevel</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalAudioEnergy</strong>;</span><span class=def>
+ <span class=primitive>double</span>               <strong>totalSamplesDuration</strong>;</span><span class=def>
+ <span class=primitive>unsigned long</span>        <strong>framesReceived</strong>;</span><span class=def>
+ <span class=primitive>DOMString</span>            <strong>decoderImplementation</strong>;</span>
+};</span></code></pre>
   
   
 </section>

@@ -7,39 +7,39 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-filereader">File API</a> defines <code>FileReader</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a> {
-  constructor();<span class="comment">
+interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  <strong>constructor</strong>();</span><span class=def><span class="comment">
   &#x2F;&#x2F; async read methods
-  </span><span>undefined</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
-  <span>undefined</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span>DOMString</span> <strong>encoding</strong>);
-  <span>undefined</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);
+  </span><span class=primitive>undefined</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span class=primitive>DOMString</span> <strong>encoding</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def>
 
-  <span>undefined</span> <strong>abort</strong>();<span class="comment">
+  <span class=primitive>undefined</span> <strong>abort</strong>();</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; states
-  </span>const <span>unsigned short</span> <strong>EMPTY</strong> &#x3D; 0;
-  const <span>unsigned short</span> <strong>LOADING</strong> &#x3D; 1;
-  const <span>unsigned short</span> <strong>DONE</strong> &#x3D; 2;
+  </span>const <span class=primitive>unsigned short</span> <strong>EMPTY</strong> &#x3D; 0;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>LOADING</strong> &#x3D; 1;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DONE</strong> &#x3D; 2;</span><span class=def>
 
-  readonly attribute <span>unsigned short</span> <strong>readyState</strong>;<span class="comment">
+  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; File or Blob data
-  </span>readonly attribute (<span>DOMString</span> or <span>ArrayBuffer</span>)? <strong>result</strong>;
+  </span>readonly attribute (<span class=primitive>DOMString</span> or <span class=primitive>ArrayBuffer</span>)? <strong>result</strong>;</span><span class=def>
 
-  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;<span class="comment">
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; event handler content attributes
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;
-};</code></pre>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;</span>
+};</span></code></pre>
   
   
 </section>

@@ -7,84 +7,84 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;iframe-embed-object.html#htmlobjectelement">HTML Standard</a> defines <code>HTMLObjectElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
-  [HTMLConstructor] constructor();
+interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
 
-  [CEReactions] attribute <span>USVString</span> <strong>data</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
-  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
-  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
-  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>data</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>useMap</strong>;</span><span class=def>
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def>
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;</span><span class=def>
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;</span><span class=def>
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
-  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
-  <span>boolean</span> <strong>checkValidity</strong>();
-  <span>boolean</span> <strong>reportValidity</strong>();
-  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);<span class="comment">
+  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def>
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def>
+  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setCustomValidity</strong>(<span class=primitive>DOMString</span> <strong>error</strong>);</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
-</span>};
+</span>};</span><span class=def>
 
-partial interface <strong>HTMLObjectElement</strong> {
-  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>archive</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>code</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>declare</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>standby</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>codeBase</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>codeType</strong>;
+partial interface <strong>HTMLObjectElement</strong> {<span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>archive</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>code</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>declare</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>hspace</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>standby</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>vspace</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>codeBase</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>codeType</strong>;</span><span class=def>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;
-};</code></pre>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>border</strong>;</span>
+};</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
-  [HTMLConstructor] constructor();
+interface <strong>HTMLObjectElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
 
-  [CEReactions] attribute <span>USVString</span> <strong>data</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>name</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>useMap</strong>;
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>width</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>height</strong>;
-  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;
-  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;
-  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>data</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>useMap</strong>;</span><span class=def>
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def>
+  readonly attribute <a href='Document.html'>Document</a>? <strong>contentDocument</strong>;</span><span class=def>
+  readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>contentWindow</strong>;</span><span class=def>
+  <a href='Document.html'>Document</a>? <strong>getSVGDocument</strong>();</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>willValidate</strong>;
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;
-  readonly attribute <span>DOMString</span> <strong>validationMessage</strong>;
-  <span>boolean</span> <strong>checkValidity</strong>();
-  <span>boolean</span> <strong>reportValidity</strong>();
-  <span>undefined</span> <strong>setCustomValidity</strong>(<span>DOMString</span> <strong>error</strong>);
-  [CEReactions] attribute <span>DOMString</span> <strong>align</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>archive</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>code</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>declare</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>hspace</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>standby</strong>;
-  [CEReactions] attribute <span>unsigned long</span> <strong>vspace</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>codeBase</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>codeType</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def>
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def>
+  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setCustomValidity</strong>(<span class=primitive>DOMString</span> <strong>error</strong>);</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>archive</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>code</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>declare</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>hspace</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>standby</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>vspace</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>codeBase</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>codeType</strong>;</span><span class=def>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span>DOMString</span> <strong>border</strong>;<span class="comment">
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>border</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
-</span>};</code></pre></details>
+</span>};</span></code></pre></details>
 </section>
 
   

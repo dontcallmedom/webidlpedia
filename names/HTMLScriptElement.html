@@ -7,60 +7,60 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#htmlscriptelement">HTML Standard</a> defines <code>HTMLScriptElement</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
-  [HTMLConstructor] constructor();
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
 
-  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
-  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;<span class="comment">
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>src</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>noModule</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>async</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>defer</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
-</span>};
+</span>};</span><span class=def>
 
-partial interface <strong>HTMLScriptElement</strong> {
-  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
-};</code></pre>
+partial interface <strong>HTMLScriptElement</strong> {<span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span>
+};</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SRI&#x2F;#HTMLScriptElement">Subresource Integrity</a><pre class=webidl><code>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SRI&#x2F;#HTMLScriptElement">Subresource Integrity</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLScriptElement</strong> {
-  attribute <span>DOMString</span> <strong>integrity</strong>;
-};</code></pre></li>
+partial interface <strong>HTMLScriptElement</strong> {<span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span>
+};</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {
-  [HTMLConstructor] constructor();
+interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
 
-  [CEReactions] attribute <span>USVString</span> <strong>src</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>type</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>noModule</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>async</strong>;
-  [CEReactions] attribute <span>boolean</span> <strong>defer</strong>;
-  [CEReactions] attribute <span>DOMString</span>? <strong>crossOrigin</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>text</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>integrity</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>referrerPolicy</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>charset</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>event</strong>;
-  [CEReactions] attribute <span>DOMString</span> <strong>htmlFor</strong>;
-  attribute <span>DOMString</span> <strong>integrity</strong>;<span class="comment">
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>src</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>noModule</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>async</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>defer</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
-</span>};</code></pre></details>
+</span>};</span></code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3>

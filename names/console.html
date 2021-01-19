@@ -7,35 +7,35 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;console.spec.whatwg.org&#x2F;#namespacedef-console">Console Standard</a> defines <code>console</code></p>
-<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
-namespace <strong>console</strong> {<span class="comment"> &#x2F;&#x2F; but see namespace object requirements below
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>)]
+namespace <strong>console</strong> {<span class=def><span class="comment"> &#x2F;&#x2F; but see namespace object requirements below
   &#x2F;&#x2F; Logging
-  </span><span>undefined</span> <strong>assert</strong>(optional <span>boolean</span> <strong>condition</strong> &#x3D; false, <span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>clear</strong>();
-  <span>undefined</span> <strong>debug</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>error</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>info</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>log</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>table</strong>(optional <span>any</span> <strong>tabularData</strong>, optional sequence&lt;<span>DOMString</span>&gt; <strong>properties</strong>);
-  <span>undefined</span> <strong>trace</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>warn</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>dir</strong>(optional <span>any</span> <strong>item</strong>, optional <span>object</span>? <strong>options</strong>);
-  <span>undefined</span> <strong>dirxml</strong>(<span>any</span>... <strong>data</strong>);<span class="comment">
+  </span><span class=primitive>undefined</span> <strong>assert</strong>(optional <span class=primitive>boolean</span> <strong>condition</strong> &#x3D; false, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>debug</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>error</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>info</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>log</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>table</strong>(optional <span class=primitive>any</span> <strong>tabularData</strong>, optional sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>properties</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>trace</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>warn</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>dir</strong>(optional <span class=primitive>any</span> <strong>item</strong>, optional <span class=primitive>object</span>? <strong>options</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>dirxml</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Counting
-  </span><span>undefined</span> <strong>count</strong>(optional <span>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);
-  <span>undefined</span> <strong>countReset</strong>(optional <span>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);<span class="comment">
+  </span><span class=primitive>undefined</span> <strong>count</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>countReset</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Grouping
-  </span><span>undefined</span> <strong>group</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>groupCollapsed</strong>(<span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>groupEnd</strong>();<span class="comment">
+  </span><span class=primitive>undefined</span> <strong>group</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>groupCollapsed</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>groupEnd</strong>();</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Timing
-  </span><span>undefined</span> <strong>time</strong>(optional <span>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);
-  <span>undefined</span> <strong>timeLog</strong>(optional <span>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;, <span>any</span>... <strong>data</strong>);
-  <span>undefined</span> <strong>timeEnd</strong>(optional <span>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);
-};</code></pre>
+  </span><span class=primitive>undefined</span> <strong>time</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>timeLog</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>timeEnd</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span>
+};</span></code></pre>
   
   
 </section>

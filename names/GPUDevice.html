@@ -7,90 +7,90 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpudevice">WebGPU</a> defines <code>GPUDevice</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>), Serializable]
-interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
-    [SameObject] readonly attribute <a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>;
-    readonly attribute FrozenArray&lt;<a href='GPUFeatureName.html'>GPUFeatureName</a>&gt; <strong>features</strong>;
-    readonly attribute <span>object</span> <strong>limits</strong>;
+[Exposed&#x3D;(<a href='Window.html'>Window</a>, <span class=primitive>DedicatedWorker</span>), Serializable]
+interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+    [SameObject] readonly attribute <a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>;</span><span class=def>
+    readonly attribute FrozenArray&lt;<a href='GPUFeatureName.html'>GPUFeatureName</a>&gt; <strong>features</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>object</span> <strong>limits</strong>;</span><span class=def>
 
-    [SameObject] readonly attribute <a href='GPUQueue.html'>GPUQueue</a> <strong>defaultQueue</strong>;
+    [SameObject] readonly attribute <a href='GPUQueue.html'>GPUQueue</a> <strong>defaultQueue</strong>;</span><span class=def>
 
-    <span>undefined</span> <strong>destroy</strong>();
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def>
 
-    <a href='GPUBuffer.html'>GPUBuffer</a> <strong>createBuffer</strong>(<a href='GPUBufferDescriptor.html'>GPUBufferDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUTexture.html'>GPUTexture</a> <strong>createTexture</strong>(<a href='GPUTextureDescriptor.html'>GPUTextureDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUSampler.html'>GPUSampler</a> <strong>createSampler</strong>(optional <a href='GPUSamplerDescriptor.html'>GPUSamplerDescriptor</a> <strong>descriptor</strong> &#x3D; {});
+    <a href='GPUBuffer.html'>GPUBuffer</a> <strong>createBuffer</strong>(<a href='GPUBufferDescriptor.html'>GPUBufferDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUTexture.html'>GPUTexture</a> <strong>createTexture</strong>(<a href='GPUTextureDescriptor.html'>GPUTextureDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUSampler.html'>GPUSampler</a> <strong>createSampler</strong>(optional <a href='GPUSamplerDescriptor.html'>GPUSamplerDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
 
-    <a href='GPUBindGroupLayout.html'>GPUBindGroupLayout</a> <strong>createBindGroupLayout</strong>(<a href='GPUBindGroupLayoutDescriptor.html'>GPUBindGroupLayoutDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUPipelineLayout.html'>GPUPipelineLayout</a> <strong>createPipelineLayout</strong>(<a href='GPUPipelineLayoutDescriptor.html'>GPUPipelineLayoutDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>createBindGroup</strong>(<a href='GPUBindGroupDescriptor.html'>GPUBindGroupDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUBindGroupLayout.html'>GPUBindGroupLayout</a> <strong>createBindGroupLayout</strong>(<a href='GPUBindGroupLayoutDescriptor.html'>GPUBindGroupLayoutDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUPipelineLayout.html'>GPUPipelineLayout</a> <strong>createPipelineLayout</strong>(<a href='GPUPipelineLayoutDescriptor.html'>GPUPipelineLayoutDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>createBindGroup</strong>(<a href='GPUBindGroupDescriptor.html'>GPUBindGroupDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUShaderModule.html'>GPUShaderModule</a> <strong>createShaderModule</strong>(<a href='GPUShaderModuleDescriptor.html'>GPUShaderModuleDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>createComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>createRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
-    Promise&lt;<a href='GPUComputePipeline.html'>GPUComputePipeline</a>&gt; <strong>createReadyComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
-    Promise&lt;<a href='GPURenderPipeline.html'>GPURenderPipeline</a>&gt; <strong>createReadyRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUShaderModule.html'>GPUShaderModule</a> <strong>createShaderModule</strong>(<a href='GPUShaderModuleDescriptor.html'>GPUShaderModuleDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>createComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>createRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    Promise&lt;<a href='GPUComputePipeline.html'>GPUComputePipeline</a>&gt; <strong>createReadyComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    Promise&lt;<a href='GPURenderPipeline.html'>GPURenderPipeline</a>&gt; <strong>createReadyRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> <strong>createCommandEncoder</strong>(optional <a href='GPUCommandEncoderDescriptor.html'>GPUCommandEncoderDescriptor</a> <strong>descriptor</strong> &#x3D; {});
-    <a href='GPURenderBundleEncoder.html'>GPURenderBundleEncoder</a> <strong>createRenderBundleEncoder</strong>(<a href='GPURenderBundleEncoderDescriptor.html'>GPURenderBundleEncoderDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> <strong>createCommandEncoder</strong>(optional <a href='GPUCommandEncoderDescriptor.html'>GPUCommandEncoderDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
+    <a href='GPURenderBundleEncoder.html'>GPURenderBundleEncoder</a> <strong>createRenderBundleEncoder</strong>(<a href='GPURenderBundleEncoderDescriptor.html'>GPURenderBundleEncoderDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>createQuerySet</strong>(<a href='GPUQuerySetDescriptor.html'>GPUQuerySetDescriptor</a> <strong>descriptor</strong>);
-};
-<a href='GPUDevice.html'>GPUDevice</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;
+    <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>createQuerySet</strong>(<a href='GPUQuerySetDescriptor.html'>GPUQuerySetDescriptor</a> <strong>descriptor</strong>);</span>
+};</span><span class=def>
+<a href='GPUDevice.html'>GPUDevice</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span><span class=def>
 
-partial interface <strong>GPUDevice</strong> {
-    readonly attribute Promise&lt;<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>&gt; <strong>lost</strong>;
-};
+partial interface <strong>GPUDevice</strong> {<span class=def>
+    readonly attribute Promise&lt;<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>&gt; <strong>lost</strong>;</span>
+};</span><span class=def>
 
-partial interface <strong>GPUDevice</strong> {
-    <span>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);
-    Promise&lt;<a href='GPUError.html'>GPUError</a>?&gt; <strong>popErrorScope</strong>();
-};
+partial interface <strong>GPUDevice</strong> {<span class=def>
+    <span class=primitive>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);</span><span class=def>
+    Promise&lt;<a href='GPUError.html'>GPUError</a>?&gt; <strong>popErrorScope</strong>();</span>
+};</span><span class=def>
 
-partial interface <strong>GPUDevice</strong> {
-    [Exposed&#x3D;(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>)]
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;
-};</code></pre>
+partial interface <strong>GPUDevice</strong> {<span class=def>
+    [Exposed&#x3D;(<a href='Window.html'>Window</a>, <span class=primitive>DedicatedWorker</span>)]
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;</span>
+};</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>), Serializable]
-interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {
-    [SameObject] readonly attribute <a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>;
-    readonly attribute FrozenArray&lt;<a href='GPUFeatureName.html'>GPUFeatureName</a>&gt; <strong>features</strong>;
-    readonly attribute <span>object</span> <strong>limits</strong>;
+[Exposed&#x3D;(<a href='Window.html'>Window</a>, <span class=primitive>DedicatedWorker</span>), Serializable]
+interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+    [SameObject] readonly attribute <a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>;</span><span class=def>
+    readonly attribute FrozenArray&lt;<a href='GPUFeatureName.html'>GPUFeatureName</a>&gt; <strong>features</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>object</span> <strong>limits</strong>;</span><span class=def>
 
-    [SameObject] readonly attribute <a href='GPUQueue.html'>GPUQueue</a> <strong>defaultQueue</strong>;
+    [SameObject] readonly attribute <a href='GPUQueue.html'>GPUQueue</a> <strong>defaultQueue</strong>;</span><span class=def>
 
-    <span>undefined</span> <strong>destroy</strong>();
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def>
 
-    <a href='GPUBuffer.html'>GPUBuffer</a> <strong>createBuffer</strong>(<a href='GPUBufferDescriptor.html'>GPUBufferDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUTexture.html'>GPUTexture</a> <strong>createTexture</strong>(<a href='GPUTextureDescriptor.html'>GPUTextureDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUSampler.html'>GPUSampler</a> <strong>createSampler</strong>(optional <a href='GPUSamplerDescriptor.html'>GPUSamplerDescriptor</a> <strong>descriptor</strong> &#x3D; {});
+    <a href='GPUBuffer.html'>GPUBuffer</a> <strong>createBuffer</strong>(<a href='GPUBufferDescriptor.html'>GPUBufferDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUTexture.html'>GPUTexture</a> <strong>createTexture</strong>(<a href='GPUTextureDescriptor.html'>GPUTextureDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUSampler.html'>GPUSampler</a> <strong>createSampler</strong>(optional <a href='GPUSamplerDescriptor.html'>GPUSamplerDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
 
-    <a href='GPUBindGroupLayout.html'>GPUBindGroupLayout</a> <strong>createBindGroupLayout</strong>(<a href='GPUBindGroupLayoutDescriptor.html'>GPUBindGroupLayoutDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUPipelineLayout.html'>GPUPipelineLayout</a> <strong>createPipelineLayout</strong>(<a href='GPUPipelineLayoutDescriptor.html'>GPUPipelineLayoutDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>createBindGroup</strong>(<a href='GPUBindGroupDescriptor.html'>GPUBindGroupDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUBindGroupLayout.html'>GPUBindGroupLayout</a> <strong>createBindGroupLayout</strong>(<a href='GPUBindGroupLayoutDescriptor.html'>GPUBindGroupLayoutDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUPipelineLayout.html'>GPUPipelineLayout</a> <strong>createPipelineLayout</strong>(<a href='GPUPipelineLayoutDescriptor.html'>GPUPipelineLayoutDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>createBindGroup</strong>(<a href='GPUBindGroupDescriptor.html'>GPUBindGroupDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUShaderModule.html'>GPUShaderModule</a> <strong>createShaderModule</strong>(<a href='GPUShaderModuleDescriptor.html'>GPUShaderModuleDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>createComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
-    <a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>createRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
-    Promise&lt;<a href='GPUComputePipeline.html'>GPUComputePipeline</a>&gt; <strong>createReadyComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);
-    Promise&lt;<a href='GPURenderPipeline.html'>GPURenderPipeline</a>&gt; <strong>createReadyRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUShaderModule.html'>GPUShaderModule</a> <strong>createShaderModule</strong>(<a href='GPUShaderModuleDescriptor.html'>GPUShaderModuleDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>createComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    <a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>createRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    Promise&lt;<a href='GPUComputePipeline.html'>GPUComputePipeline</a>&gt; <strong>createReadyComputePipeline</strong>(<a href='GPUComputePipelineDescriptor.html'>GPUComputePipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    Promise&lt;<a href='GPURenderPipeline.html'>GPURenderPipeline</a>&gt; <strong>createReadyRenderPipeline</strong>(<a href='GPURenderPipelineDescriptor.html'>GPURenderPipelineDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> <strong>createCommandEncoder</strong>(optional <a href='GPUCommandEncoderDescriptor.html'>GPUCommandEncoderDescriptor</a> <strong>descriptor</strong> &#x3D; {});
-    <a href='GPURenderBundleEncoder.html'>GPURenderBundleEncoder</a> <strong>createRenderBundleEncoder</strong>(<a href='GPURenderBundleEncoderDescriptor.html'>GPURenderBundleEncoderDescriptor</a> <strong>descriptor</strong>);
+    <a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> <strong>createCommandEncoder</strong>(optional <a href='GPUCommandEncoderDescriptor.html'>GPUCommandEncoderDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
+    <a href='GPURenderBundleEncoder.html'>GPURenderBundleEncoder</a> <strong>createRenderBundleEncoder</strong>(<a href='GPURenderBundleEncoderDescriptor.html'>GPURenderBundleEncoderDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
 
-    <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>createQuerySet</strong>(<a href='GPUQuerySetDescriptor.html'>GPUQuerySetDescriptor</a> <strong>descriptor</strong>);
-    readonly attribute Promise&lt;<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>&gt; <strong>lost</strong>;
-    <span>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);
-    Promise&lt;<a href='GPUError.html'>GPUError</a>?&gt; <strong>popErrorScope</strong>();
-    [Exposed&#x3D;(<a href='Window.html'>Window</a>, <span>DedicatedWorker</span>)]
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;
-    attribute <span>USVString</span>? <strong>label</strong>;
-};</code></pre></details>
+    <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>createQuerySet</strong>(<a href='GPUQuerySetDescriptor.html'>GPUQuerySetDescriptor</a> <strong>descriptor</strong>);</span><span class=def>
+    readonly attribute Promise&lt;<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>&gt; <strong>lost</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);</span><span class=def>
+    Promise&lt;<a href='GPUError.html'>GPUError</a>?&gt; <strong>popErrorScope</strong>();</span><span class=def>
+    [Exposed&#x3D;(<a href='Window.html'>Window</a>, <span class=primitive>DedicatedWorker</span>)]
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;</span><span class=def>
+    attribute <span class=primitive>USVString</span>? <strong>label</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

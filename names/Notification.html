@@ -7,38 +7,38 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;#notification">Notifications API Standard</a> defines <code>Notification</code></p>
-<pre class=webidl><code>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>Notification</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(<span>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>Notification</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  static readonly attribute <a href='NotificationPermission.html'>NotificationPermission</a> <strong>permission</strong>;
-  [Exposed&#x3D;<a href='Window.html'>Window</a>] static Promise&lt;<a href='NotificationPermission.html'>NotificationPermission</a>&gt; <strong>requestPermission</strong>(optional <a href='NotificationPermissionCallback.html'>NotificationPermissionCallback</a> <strong>deprecatedCallback</strong>);
+  static readonly attribute <a href='NotificationPermission.html'>NotificationPermission</a> <strong>permission</strong>;</span><span class=def>
+  [Exposed&#x3D;<a href='Window.html'>Window</a>] static Promise&lt;<a href='NotificationPermission.html'>NotificationPermission</a>&gt; <strong>requestPermission</strong>(optional <a href='NotificationPermissionCallback.html'>NotificationPermissionCallback</a> <strong>deprecatedCallback</strong>);</span><span class=def>
 
-  static readonly attribute <span>unsigned long</span> <strong>maxActions</strong>;
+  static readonly attribute <span class=primitive>unsigned long</span> <strong>maxActions</strong>;</span><span class=def>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshow</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshow</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
 
-  readonly attribute <span>DOMString</span> <strong>title</strong>;
-  readonly attribute <a href='NotificationDirection.html'>NotificationDirection</a> <strong>dir</strong>;
-  readonly attribute <span>DOMString</span> <strong>lang</strong>;
-  readonly attribute <span>DOMString</span> <strong>body</strong>;
-  readonly attribute <span>DOMString</span> <strong>tag</strong>;
-  readonly attribute <span>USVString</span> <strong>image</strong>;
-  readonly attribute <span>USVString</span> <strong>icon</strong>;
-  readonly attribute <span>USVString</span> <strong>badge</strong>;
-  [SameObject] readonly attribute FrozenArray&lt;<span>unsigned long</span>&gt; <strong>vibrate</strong>;
-  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a> <strong>timestamp</strong>;
-  readonly attribute <span>boolean</span> <strong>renotify</strong>;
-  readonly attribute <span>boolean</span> <strong>silent</strong>;
-  readonly attribute <span>boolean</span> <strong>requireInteraction</strong>;
-  [SameObject] readonly attribute <span>any</span> <strong>data</strong>;
-  [SameObject] readonly attribute FrozenArray&lt;<a href='NotificationAction.html'>NotificationAction</a>&gt; <strong>actions</strong>;
+  readonly attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def>
+  readonly attribute <a href='NotificationDirection.html'>NotificationDirection</a> <strong>dir</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>lang</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>body</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>tag</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>image</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>icon</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>badge</strong>;</span><span class=def>
+  [SameObject] readonly attribute FrozenArray&lt;<span class=primitive>unsigned long</span>&gt; <strong>vibrate</strong>;</span><span class=def>
+  readonly attribute <a href='DOMTimeStamp.html'>DOMTimeStamp</a> <strong>timestamp</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>renotify</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>silent</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>requireInteraction</strong>;</span><span class=def>
+  [SameObject] readonly attribute <span class=primitive>any</span> <strong>data</strong>;</span><span class=def>
+  [SameObject] readonly attribute FrozenArray&lt;<a href='NotificationAction.html'>NotificationAction</a>&gt; <strong>actions</strong>;</span><span class=def>
 
-  <span>undefined</span> <strong>close</strong>();
-};</code></pre>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span>
+};</span></code></pre>
   
   
 </section>

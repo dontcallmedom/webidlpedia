@@ -7,52 +7,52 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#baseaudiocontext">Web Audio API</a> defines <code>BaseAudioContext</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  readonly attribute <a href='AudioDestinationNode.html'>AudioDestinationNode</a> <strong>destination</strong>;
-  readonly attribute <span>float</span> <strong>sampleRate</strong>;
-  readonly attribute <span>double</span> <strong>currentTime</strong>;
-  readonly attribute <a href='AudioListener.html'>AudioListener</a> <strong>listener</strong>;
-  readonly attribute <a href='AudioContextState.html'>AudioContextState</a> <strong>state</strong>;
+interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  readonly attribute <a href='AudioDestinationNode.html'>AudioDestinationNode</a> <strong>destination</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>float</span> <strong>sampleRate</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>double</span> <strong>currentTime</strong>;</span><span class=def>
+  readonly attribute <a href='AudioListener.html'>AudioListener</a> <strong>listener</strong>;</span><span class=def>
+  readonly attribute <a href='AudioContextState.html'>AudioContextState</a> <strong>state</strong>;</span><span class=def>
   [SameObject, SecureContext]
-  readonly attribute <a href='AudioWorklet.html'>AudioWorklet</a> <strong>audioWorklet</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;
+  readonly attribute <a href='AudioWorklet.html'>AudioWorklet</a> <strong>audioWorklet</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;</span><span class=def>
 
-  <a href='AnalyserNode.html'>AnalyserNode</a> <strong>createAnalyser</strong> ();
-  <a href='BiquadFilterNode.html'>BiquadFilterNode</a> <strong>createBiquadFilter</strong> ();
-  <a href='AudioBuffer.html'>AudioBuffer</a> <strong>createBuffer</strong> (<span>unsigned long</span> <strong>numberOfChannels</strong>,
-                            <span>unsigned long</span> <strong>length</strong>,
-                            <span>float</span> <strong>sampleRate</strong>);
-  <a href='AudioBufferSourceNode.html'>AudioBufferSourceNode</a> <strong>createBufferSource</strong> ();
-  <a href='ChannelMergerNode.html'>ChannelMergerNode</a> <strong>createChannelMerger</strong> (optional <span>unsigned long</span> <strong>numberOfInputs</strong> &#x3D; 6);
+  <a href='AnalyserNode.html'>AnalyserNode</a> <strong>createAnalyser</strong> ();</span><span class=def>
+  <a href='BiquadFilterNode.html'>BiquadFilterNode</a> <strong>createBiquadFilter</strong> ();</span><span class=def>
+  <a href='AudioBuffer.html'>AudioBuffer</a> <strong>createBuffer</strong> (<span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>,
+                            <span class=primitive>unsigned long</span> <strong>length</strong>,
+                            <span class=primitive>float</span> <strong>sampleRate</strong>);</span><span class=def>
+  <a href='AudioBufferSourceNode.html'>AudioBufferSourceNode</a> <strong>createBufferSource</strong> ();</span><span class=def>
+  <a href='ChannelMergerNode.html'>ChannelMergerNode</a> <strong>createChannelMerger</strong> (optional <span class=primitive>unsigned long</span> <strong>numberOfInputs</strong> &#x3D; 6);</span><span class=def>
   <a href='ChannelSplitterNode.html'>ChannelSplitterNode</a> <strong>createChannelSplitter</strong> (
-    optional <span>unsigned long</span> <strong>numberOfOutputs</strong> &#x3D; 6);
-  <a href='ConstantSourceNode.html'>ConstantSourceNode</a> <strong>createConstantSource</strong> ();
-  <a href='ConvolverNode.html'>ConvolverNode</a> <strong>createConvolver</strong> ();
-  <a href='DelayNode.html'>DelayNode</a> <strong>createDelay</strong> (optional <span>double</span> <strong>maxDelayTime</strong> &#x3D; 1.0);
-  <a href='DynamicsCompressorNode.html'>DynamicsCompressorNode</a> <strong>createDynamicsCompressor</strong> ();
-  <a href='GainNode.html'>GainNode</a> <strong>createGain</strong> ();
-  <a href='IIRFilterNode.html'>IIRFilterNode</a> <strong>createIIRFilter</strong> (sequence&lt;<span>double</span>&gt; <strong>feedforward</strong>,
-                                 sequence&lt;<span>double</span>&gt; <strong>feedback</strong>);
-  <a href='OscillatorNode.html'>OscillatorNode</a> <strong>createOscillator</strong> ();
-  <a href='PannerNode.html'>PannerNode</a> <strong>createPanner</strong> ();
-  <a href='PeriodicWave.html'>PeriodicWave</a> <strong>createPeriodicWave</strong> (sequence&lt;<span>float</span>&gt; <strong>real</strong>,
-                                   sequence&lt;<span>float</span>&gt; <strong>imag</strong>,
-                                   optional <a href='PeriodicWaveConstraints.html'>PeriodicWaveConstraints</a> <strong>constraints</strong> &#x3D; {});
+    optional <span class=primitive>unsigned long</span> <strong>numberOfOutputs</strong> &#x3D; 6);</span><span class=def>
+  <a href='ConstantSourceNode.html'>ConstantSourceNode</a> <strong>createConstantSource</strong> ();</span><span class=def>
+  <a href='ConvolverNode.html'>ConvolverNode</a> <strong>createConvolver</strong> ();</span><span class=def>
+  <a href='DelayNode.html'>DelayNode</a> <strong>createDelay</strong> (optional <span class=primitive>double</span> <strong>maxDelayTime</strong> &#x3D; 1.0);</span><span class=def>
+  <a href='DynamicsCompressorNode.html'>DynamicsCompressorNode</a> <strong>createDynamicsCompressor</strong> ();</span><span class=def>
+  <a href='GainNode.html'>GainNode</a> <strong>createGain</strong> ();</span><span class=def>
+  <a href='IIRFilterNode.html'>IIRFilterNode</a> <strong>createIIRFilter</strong> (sequence&lt;<span class=primitive>double</span>&gt; <strong>feedforward</strong>,
+                                 sequence&lt;<span class=primitive>double</span>&gt; <strong>feedback</strong>);</span><span class=def>
+  <a href='OscillatorNode.html'>OscillatorNode</a> <strong>createOscillator</strong> ();</span><span class=def>
+  <a href='PannerNode.html'>PannerNode</a> <strong>createPanner</strong> ();</span><span class=def>
+  <a href='PeriodicWave.html'>PeriodicWave</a> <strong>createPeriodicWave</strong> (sequence&lt;<span class=primitive>float</span>&gt; <strong>real</strong>,
+                                   sequence&lt;<span class=primitive>float</span>&gt; <strong>imag</strong>,
+                                   optional <a href='PeriodicWaveConstraints.html'>PeriodicWaveConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def>
   <a href='ScriptProcessorNode.html'>ScriptProcessorNode</a> <strong>createScriptProcessor</strong>(
-    optional <span>unsigned long</span> <strong>bufferSize</strong> &#x3D; 0,
-    optional <span>unsigned long</span> <strong>numberOfInputChannels</strong> &#x3D; 2,
-    optional <span>unsigned long</span> <strong>numberOfOutputChannels</strong> &#x3D; 2);
-  <a href='StereoPannerNode.html'>StereoPannerNode</a> <strong>createStereoPanner</strong> ();
-  <a href='WaveShaperNode.html'>WaveShaperNode</a> <strong>createWaveShaper</strong> ();
+    optional <span class=primitive>unsigned long</span> <strong>bufferSize</strong> &#x3D; 0,
+    optional <span class=primitive>unsigned long</span> <strong>numberOfInputChannels</strong> &#x3D; 2,
+    optional <span class=primitive>unsigned long</span> <strong>numberOfOutputChannels</strong> &#x3D; 2);</span><span class=def>
+  <a href='StereoPannerNode.html'>StereoPannerNode</a> <strong>createStereoPanner</strong> ();</span><span class=def>
+  <a href='WaveShaperNode.html'>WaveShaperNode</a> <strong>createWaveShaper</strong> ();</span><span class=def>
 
   Promise&lt;<a href='AudioBuffer.html'>AudioBuffer</a>&gt; <strong>decodeAudioData</strong> (
-    <span>ArrayBuffer</span> <strong>audioData</strong>,
+    <span class=primitive>ArrayBuffer</span> <strong>audioData</strong>,
     optional <a href='DecodeSuccessCallback.html'>DecodeSuccessCallback</a>? <strong>successCallback</strong>,
-    optional <a href='DecodeErrorCallback.html'>DecodeErrorCallback</a>? <strong>errorCallback</strong>);
-};</code></pre>
+    optional <a href='DecodeErrorCallback.html'>DecodeErrorCallback</a>? <strong>errorCallback</strong>);</span>
+};</span></code></pre>
   
   
 </section>

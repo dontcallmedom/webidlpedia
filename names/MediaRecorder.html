@@ -7,30 +7,30 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-record&#x2F;#mediarecorder">MediaStream Recording</a> defines <code>MediaRecorder</code></p>
-<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>, optional <a href='MediaRecorderOptions.html'>MediaRecorderOptions</a> <strong>options</strong> &#x3D; {});
-  readonly attribute <a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>;
-  readonly attribute <span>DOMString</span> <strong>mimeType</strong>;
-  readonly attribute <a href='RecordingState.html'>RecordingState</a> <strong>state</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstop</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondataavailable</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-  readonly attribute <span>unsigned long</span> <strong>videoBitsPerSecond</strong>;
-  readonly attribute <span>unsigned long</span> <strong>audioBitsPerSecond</strong>;
-  readonly attribute <a href='BitrateMode.html'>BitrateMode</a> <strong>audioBitrateMode</strong>;
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>MediaRecorder</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  <strong>constructor</strong>(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>, optional <a href='MediaRecorderOptions.html'>MediaRecorderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  readonly attribute <a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>mimeType</strong>;</span><span class=def>
+  readonly attribute <a href='RecordingState.html'>RecordingState</a> <strong>state</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstop</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondataavailable</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>videoBitsPerSecond</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>audioBitsPerSecond</strong>;</span><span class=def>
+  readonly attribute <a href='BitrateMode.html'>BitrateMode</a> <strong>audioBitrateMode</strong>;</span><span class=def>
 
-  <span>undefined</span> <strong>start</strong>(optional <span>unsigned long</span> <strong>timeslice</strong>);
-  <span>undefined</span> <strong>stop</strong>();
-  <span>undefined</span> <strong>pause</strong>();
-  <span>undefined</span> <strong>resume</strong>();
-  <span>undefined</span> <strong>requestData</strong>();
+  <span class=primitive>undefined</span> <strong>start</strong>(optional <span class=primitive>unsigned long</span> <strong>timeslice</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>pause</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>resume</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>requestData</strong>();</span><span class=def>
 
-  static <span>boolean</span> <strong>isTypeSupported</strong>(<span>DOMString</span> <strong>type</strong>);
-};</code></pre>
+  static <span class=primitive>boolean</span> <strong>isTypeSupported</strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span>
+};</span></code></pre>
   
   
 </section>

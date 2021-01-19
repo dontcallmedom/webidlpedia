@@ -7,28 +7,28 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;permissions&#x2F;#permissions">Permissions</a> defines <code>Permissions</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>Permissions</strong> {
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>query</strong>(<span>object</span> <strong>permissionDesc</strong>);
-};</code></pre>
+interface <strong>Permissions</strong> {<span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>query</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span>
+};</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;permissions-request&#x2F;">Requesting Permissions</a><pre class=webidl><code>partial interface <strong>Permissions</strong> {
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>request</strong>(<span>object</span> <strong>permissionDesc</strong>);
-};</code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;permissions-revoke&#x2F;">Relinquishing Permissions</a><pre class=webidl><code>partial interface <strong>Permissions</strong> {
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>revoke</strong>(<span>object</span> <strong>permissionDesc</strong>);
-};</code></pre></li>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;permissions-request&#x2F;">Requesting Permissions</a><pre class=webidl><code><span class=def>partial interface <strong>Permissions</strong> {<span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>request</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;permissions-revoke&#x2F;">Relinquishing Permissions</a><pre class=webidl><code><span class=def>partial interface <strong>Permissions</strong> {<span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>revoke</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span>
+};</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>Permissions</strong> {
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>query</strong>(<span>object</span> <strong>permissionDesc</strong>);
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>request</strong>(<span>object</span> <strong>permissionDesc</strong>);
-  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>revoke</strong>(<span>object</span> <strong>permissionDesc</strong>);
-};</code></pre></details>
+interface <strong>Permissions</strong> {<span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>query</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span><span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>request</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span><span class=def>
+  Promise&lt;<a href='PermissionStatus.html'>PermissionStatus</a>&gt; <strong>revoke</strong>(<span class=primitive>object</span> <strong>permissionDesc</strong>);</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

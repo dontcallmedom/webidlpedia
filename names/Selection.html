@@ -7,32 +7,32 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;selection-api&#x2F;#dom-selection">Selection API</a> defines <code>Selection</code></p>
-<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>Selection</strong> {
-  readonly attribute <a href='Node.html'>Node</a>? <strong>anchorNode</strong>;
-  readonly attribute <span>unsigned long</span> <strong>anchorOffset</strong>;
-  readonly attribute <a href='Node.html'>Node</a>? <strong>focusNode</strong>;
-  readonly attribute <span>unsigned long</span> <strong>focusOffset</strong>;
-  readonly attribute <span>boolean</span> <strong>isCollapsed</strong>;
-  readonly attribute <span>unsigned long</span> <strong>rangeCount</strong>;
-  readonly attribute <span>DOMString</span> <strong>type</strong>;
-  <a href='Range.html'>Range</a> <strong>getRangeAt</strong>(<span>unsigned long</span> <strong>index</strong>);
-  <span>undefined</span> <strong>addRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
-  <span>undefined</span> <strong>removeRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);
-  <span>undefined</span> <strong>removeAllRanges</strong>();
-  <span>undefined</span> <strong>empty</strong>();
-  <span>undefined</span> <strong>collapse</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
-  <span>undefined</span> <strong>setPosition</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
-  <span>undefined</span> <strong>collapseToStart</strong>();
-  <span>undefined</span> <strong>collapseToEnd</strong>();
-  <span>undefined</span> <strong>extend</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>unsigned long</span> <strong>offset</strong> &#x3D; 0);
-  <span>undefined</span> <strong>setBaseAndExtent</strong>(<a href='Node.html'>Node</a> <strong>anchorNode</strong>, <span>unsigned long</span> <strong>anchorOffset</strong>, <a href='Node.html'>Node</a> <strong>focusNode</strong>, <span>unsigned long</span> <strong>focusOffset</strong>);
-  <span>undefined</span> <strong>selectAllChildren</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Selection</strong> {<span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>anchorNode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>anchorOffset</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>focusNode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>focusOffset</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isCollapsed</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>rangeCount</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+  <a href='Range.html'>Range</a> <strong>getRangeAt</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>addRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>removeRange</strong>(<a href='Range.html'>Range</a> <strong>range</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>removeAllRanges</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>empty</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>collapse</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span class=primitive>unsigned long</span> <strong>offset</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setPosition</strong>(<a href='Node.html'>Node</a>? <strong>node</strong>, optional <span class=primitive>unsigned long</span> <strong>offset</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>collapseToStart</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>collapseToEnd</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>extend</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>unsigned long</span> <strong>offset</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setBaseAndExtent</strong>(<a href='Node.html'>Node</a> <strong>anchorNode</strong>, <span class=primitive>unsigned long</span> <strong>anchorOffset</strong>, <a href='Node.html'>Node</a> <strong>focusNode</strong>, <span class=primitive>unsigned long</span> <strong>focusOffset</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>selectAllChildren</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def>
   [CEReactions]
-  <span>undefined</span> <strong>deleteFromDocument</strong>();
-  <span>boolean</span> <strong>containsNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span>boolean</span> <strong>allowPartialContainment</strong> &#x3D; false);
-  stringifier <span>DOMString</span> ();
-};</code></pre>
+  <span class=primitive>undefined</span> <strong>deleteFromDocument</strong>();</span><span class=def>
+  <span class=primitive>boolean</span> <strong>containsNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>boolean</span> <strong>allowPartialContainment</strong> &#x3D; false);</span><span class=def>
+  <strong>stringifier</strong> <span class=primitive>DOMString</span> ();</span>
+};</span></code></pre>
   
   
 </section>

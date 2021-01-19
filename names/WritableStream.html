@@ -7,18 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;streams.spec.whatwg.org&#x2F;#writablestream">Streams Standard</a> defines <code>WritableStream</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='Worklet.html'>Worklet</a>), Transferable]
-interface <strong>WritableStream</strong> {
-  constructor(optional <span>object</span> <strong>underlyingSink</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> &#x3D; {});
+interface <strong>WritableStream</strong> {<span class=def>
+  <strong>constructor</strong>(optional <span class=primitive>object</span> <strong>underlyingSink</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> &#x3D; {});</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>locked</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>locked</strong>;</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>abort</strong>(optional <span>any</span> <strong>reason</strong>);
-  Promise&lt;<span>undefined</span>&gt; <strong>close</strong>();
-  <a href='WritableStreamDefaultWriter.html'>WritableStreamDefaultWriter</a> <strong>getWriter</strong>();
-};</code></pre>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>abort</strong>(optional <span class=primitive>any</span> <strong>reason</strong>);</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong>();</span><span class=def>
+  <a href='WritableStreamDefaultWriter.html'>WritableStreamDefaultWriter</a> <strong>getWriter</strong>();</span>
+};</span></code></pre>
   
   
 </section>

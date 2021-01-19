@@ -7,29 +7,29 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpubuffer">WebGPU</a> defines <code>GPUBuffer</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Serializable]
-interface <strong>GPUBuffer</strong> {
-    Promise&lt;<span>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
-    <span>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
-    <span>undefined</span> <strong>unmap</strong>();
+interface <strong>GPUBuffer</strong> {<span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+    <span class=primitive>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>unmap</strong>();</span><span class=def>
 
-    <span>undefined</span> <strong>destroy</strong>();
-};
-<a href='GPUBuffer.html'>GPUBuffer</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</code></pre>
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span>
+};</span><span class=def>
+<a href='GPUBuffer.html'>GPUBuffer</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Serializable]
-interface <strong>GPUBuffer</strong> {
-    Promise&lt;<span>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
-    <span>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);
-    <span>undefined</span> <strong>unmap</strong>();
+interface <strong>GPUBuffer</strong> {<span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+    <span class=primitive>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>unmap</strong>();</span><span class=def>
 
-    <span>undefined</span> <strong>destroy</strong>();
-    attribute <span>USVString</span>? <strong>label</strong>;
-};</code></pre></details>
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def>
+    attribute <span class=primitive>USVString</span>? <strong>label</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

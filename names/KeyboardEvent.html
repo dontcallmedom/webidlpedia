@@ -7,66 +7,66 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;uievents&#x2F;#keyboardevent">UI Events</a> defines <code>KeyboardEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
-  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);<span class="comment">
+interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);</span><span class=def><span class="comment">
   &#x2F;&#x2F; KeyLocationCode
-  </span>const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;
+  </span>const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;</span><span class=def>
 
-  readonly attribute <span>DOMString</span> <strong>key</strong>;
-  readonly attribute <span>DOMString</span> <strong>code</strong>;
-  readonly attribute <span>unsigned long</span> <strong>location</strong>;
+  readonly attribute <span class=primitive>DOMString</span> <strong>key</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>code</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>location</strong>;</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
-  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
-  readonly attribute <span>boolean</span> <strong>altKey</strong>;
-  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>repeat</strong>;
-  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>repeat</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isComposing</strong>;</span><span class=def>
 
-  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);
-};
+  <span class=primitive>boolean</span> <strong>getModifierState</strong>(<span class=primitive>DOMString</span> <strong>keyArg</strong>);</span>
+};</span><span class=def>
 
-partial interface <strong>KeyboardEvent</strong> {<span class="comment">
+partial interface <strong>KeyboardEvent</strong> {<span class=def><span class="comment">
   &#x2F;&#x2F; The following support legacy user agents
-  </span>readonly attribute <span>unsigned long</span> <strong>charCode</strong>;
-  readonly attribute <span>unsigned long</span> <strong>keyCode</strong>;
-};</code></pre>
+  </span>readonly attribute <span class=primitive>unsigned long</span> <strong>charCode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>keyCode</strong>;</span>
+};</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {
-  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);<span class="comment">
+interface <strong>KeyboardEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='KeyboardEventInit.html'>KeyboardEventInit</a> <strong>eventInitDict</strong>);</span><span class=def><span class="comment">
   &#x2F;&#x2F; KeyLocationCode
-  </span>const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;
-  const <span>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;
+  </span>const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_STANDARD</strong> &#x3D; 0x00;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_LEFT</strong> &#x3D; 0x01;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_RIGHT</strong> &#x3D; 0x02;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_KEY_LOCATION_NUMPAD</strong> &#x3D; 0x03;</span><span class=def>
 
-  readonly attribute <span>DOMString</span> <strong>key</strong>;
-  readonly attribute <span>DOMString</span> <strong>code</strong>;
-  readonly attribute <span>unsigned long</span> <strong>location</strong>;
+  readonly attribute <span class=primitive>DOMString</span> <strong>key</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>code</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>location</strong>;</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>ctrlKey</strong>;
-  readonly attribute <span>boolean</span> <strong>shiftKey</strong>;
-  readonly attribute <span>boolean</span> <strong>altKey</strong>;
-  readonly attribute <span>boolean</span> <strong>metaKey</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>repeat</strong>;
-  readonly attribute <span>boolean</span> <strong>isComposing</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>repeat</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isComposing</strong>;</span><span class=def>
 
-  <span>boolean</span> <strong>getModifierState</strong>(<span>DOMString</span> <strong>keyArg</strong>);<span class="comment">
+  <span class=primitive>boolean</span> <strong>getModifierState</strong>(<span class=primitive>DOMString</span> <strong>keyArg</strong>);</span><span class=def><span class="comment">
   &#x2F;&#x2F; The following support legacy user agents
-  </span>readonly attribute <span>unsigned long</span> <strong>charCode</strong>;
-  readonly attribute <span>unsigned long</span> <strong>keyCode</strong>;
-};</code></pre></details>
+  </span>readonly attribute <span class=primitive>unsigned long</span> <strong>charCode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>keyCode</strong>;</span>
+};</span></code></pre></details>
 </section>
 
   

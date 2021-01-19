@@ -7,18 +7,18 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;IndexedDB&#x2F;#idbfactory">Indexed Database API 3.0</a> defines <code>IDBFactory</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>IDBFactory</strong> {
-  [NewObject] <a href='IDBOpenDBRequest.html'>IDBOpenDBRequest</a> <strong>open</strong>(<span>DOMString</span> <strong>name</strong>,
-                                    optional [EnforceRange] <span>unsigned long long</span> <strong>version</strong>);
-  [NewObject] <a href='IDBOpenDBRequest.html'>IDBOpenDBRequest</a> <strong>deleteDatabase</strong>(<span>DOMString</span> <strong>name</strong>);
+interface <strong>IDBFactory</strong> {<span class=def>
+  [NewObject] <a href='IDBOpenDBRequest.html'>IDBOpenDBRequest</a> <strong>open</strong>(<span class=primitive>DOMString</span> <strong>name</strong>,
+                                    optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>version</strong>);</span><span class=def>
+  [NewObject] <a href='IDBOpenDBRequest.html'>IDBOpenDBRequest</a> <strong>deleteDatabase</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def>
 
-  Promise&lt;sequence&lt;<a href='IDBDatabaseInfo.html'>IDBDatabaseInfo</a>&gt;&gt; <strong>databases</strong>();
+  Promise&lt;sequence&lt;<a href='IDBDatabaseInfo.html'>IDBDatabaseInfo</a>&gt;&gt; <strong>databases</strong>();</span><span class=def>
 
-  <span>short</span> <strong>cmp</strong>(<span>any</span> <strong>first</strong>, <span>any</span> <strong>second</strong>);
-};</code></pre>
+  <span class=primitive>short</span> <strong>cmp</strong>(<span class=primitive>any</span> <strong>first</strong>, <span class=primitive>any</span> <strong>second</strong>);</span>
+};</span></code></pre>
   
   
 </section>

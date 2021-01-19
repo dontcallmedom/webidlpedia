@@ -7,28 +7,28 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse">Payment Request API</a> defines <code>PaymentResponse</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTarget</a>  {
-  [Default] <span>object</span> <strong>toJSON</strong>();
+interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTarget</a>  {<span class=def>
+  [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
 
-  readonly attribute <span>DOMString</span> <strong>requestId</strong>;
-  readonly attribute <span>DOMString</span> <strong>methodName</strong>;
-  readonly attribute <span>object</span> <strong>details</strong>;
-  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;
-  readonly attribute <span>DOMString</span>? <strong>shippingOption</strong>;
-  readonly attribute <span>DOMString</span>? <strong>payerName</strong>;
-  readonly attribute <span>DOMString</span>? <strong>payerEmail</strong>;
-  readonly attribute <span>DOMString</span>? <strong>payerPhone</strong>;
+  readonly attribute <span class=primitive>DOMString</span> <strong>requestId</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>methodName</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>object</span> <strong>details</strong>;</span><span class=def>
+  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>shippingOption</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>payerName</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>payerEmail</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>payerPhone</strong>;</span><span class=def>
 
   [NewObject]
-  Promise&lt;<span>undefined</span>&gt; <strong>complete</strong>(optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> &#x3D; &quot;unknown&quot;);
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>complete</strong>(optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> &#x3D; &quot;unknown&quot;);</span><span class=def>
   [NewObject]
-  Promise&lt;<span>undefined</span>&gt; <strong>retry</strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> &#x3D; {});
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>retry</strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> &#x3D; {});</span><span class=def>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpayerdetailchange</strong>;
-};</code></pre>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpayerdetailchange</strong>;</span>
+};</span></code></pre>
   
   
 </section>

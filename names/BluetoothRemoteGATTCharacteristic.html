@@ -7,47 +7,47 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;#bluetoothremotegattcharacteristic">Web Bluetooth</a> defines <code>BluetoothRemoteGATTCharacteristic</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTCharacteristic</strong> : <a href='EventTarget.html'>EventTarget</a> {
+interface <strong>BluetoothRemoteGATTCharacteristic</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
   [SameObject]
-  readonly attribute <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> <strong>service</strong>;
-  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;
-  readonly attribute <a href='BluetoothCharacteristicProperties.html'>BluetoothCharacteristicProperties</a> <strong>properties</strong>;
-  readonly attribute <span>DataView</span>? <strong>value</strong>;
-  Promise&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt; <strong>getDescriptor</strong>(<a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);
+  readonly attribute <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> <strong>service</strong>;</span><span class=def>
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def>
+  readonly attribute <a href='BluetoothCharacteristicProperties.html'>BluetoothCharacteristicProperties</a> <strong>properties</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DataView</span>? <strong>value</strong>;</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt; <strong>getDescriptor</strong>(<a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);</span><span class=def>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt;&gt;
-    <strong>getDescriptors</strong>(optional <a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);
-  Promise&lt;<span>DataView</span>&gt; <strong>readValue</strong>();
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithoutResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>startNotifications</strong>();
-  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>stopNotifications</strong>();
-};
-<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;</code></pre>
+    <strong>getDescriptors</strong>(optional <a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);</span><span class=def>
+  Promise&lt;<span class=primitive>DataView</span>&gt; <strong>readValue</strong>();</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithoutResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>startNotifications</strong>();</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>stopNotifications</strong>();</span>
+};</span><span class=def>
+<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTCharacteristic</strong> : <a href='EventTarget.html'>EventTarget</a> {
+interface <strong>BluetoothRemoteGATTCharacteristic</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
   [SameObject]
-  readonly attribute <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> <strong>service</strong>;
-  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;
-  readonly attribute <a href='BluetoothCharacteristicProperties.html'>BluetoothCharacteristicProperties</a> <strong>properties</strong>;
-  readonly attribute <span>DataView</span>? <strong>value</strong>;
-  Promise&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt; <strong>getDescriptor</strong>(<a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);
+  readonly attribute <a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a> <strong>service</strong>;</span><span class=def>
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def>
+  readonly attribute <a href='BluetoothCharacteristicProperties.html'>BluetoothCharacteristicProperties</a> <strong>properties</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DataView</span>? <strong>value</strong>;</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt; <strong>getDescriptor</strong>(<a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);</span><span class=def>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTDescriptor.html'>BluetoothRemoteGATTDescriptor</a>&gt;&gt;
-    <strong>getDescriptors</strong>(optional <a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);
-  Promise&lt;<span>DataView</span>&gt; <strong>readValue</strong>();
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithoutResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);
-  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>startNotifications</strong>();
-  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>stopNotifications</strong>();
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;
-};</code></pre></details>
+    <strong>getDescriptors</strong>(optional <a href='BluetoothDescriptorUUID.html'>BluetoothDescriptorUUID</a> <strong>descriptor</strong>);</span><span class=def>
+  Promise&lt;<span class=primitive>DataView</span>&gt; <strong>readValue</strong>();</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='void.html'>void</a>&gt; <strong>writeValueWithoutResponse</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>startNotifications</strong>();</span><span class=def>
+  Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt; <strong>stopNotifications</strong>();</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

@@ -7,19 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;remote-playback&#x2F;#dom-remoteplayback">Remote Playback API</a> defines <code>RemotePlayback</code></p>
-<pre class=webidl><code>[Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  Promise&lt;<span>long</span>&gt; <strong>watchAvailability</strong>(<a href='RemotePlaybackAvailabilityCallback.html'>RemotePlaybackAvailabilityCallback</a> <strong>callback</strong>);
-  Promise&lt;<span>undefined</span>&gt; <strong>cancelWatchAvailability</strong>(optional <span>long</span> <strong>id</strong>);
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  Promise&lt;<span class=primitive>long</span>&gt; <strong>watchAvailability</strong>(<a href='RemotePlaybackAvailabilityCallback.html'>RemotePlaybackAvailabilityCallback</a> <strong>callback</strong>);</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>cancelWatchAvailability</strong>(optional <span class=primitive>long</span> <strong>id</strong>);</span><span class=def>
 
-  readonly attribute <a href='RemotePlaybackState.html'>RemotePlaybackState</a> <strong>state</strong>;
+  readonly attribute <a href='RemotePlaybackState.html'>RemotePlaybackState</a> <strong>state</strong>;</span><span class=def>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnecting</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnecting</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>prompt</strong>();
-};</code></pre>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>prompt</strong>();</span>
+};</span></code></pre>
   
   
 </section>

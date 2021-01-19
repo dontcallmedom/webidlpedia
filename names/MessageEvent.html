@@ -7,20 +7,20 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;comms.html#messageevent">HTML Standard</a> defines <code>MessageEvent</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>,<a href='AudioWorklet.html'>AudioWorklet</a>)]
-interface <strong>MessageEvent</strong> : <a href='Event.html'>Event</a> {
-  constructor(<span>DOMString</span> <strong>type</strong>, optional <a href='MessageEventInit.html'>MessageEventInit</a> <strong>eventInitDict</strong> &#x3D; {});
+interface <strong>MessageEvent</strong> : <a href='Event.html'>Event</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='MessageEventInit.html'>MessageEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
 
-  readonly attribute <span>any</span> <strong>data</strong>;
-  readonly attribute <span>USVString</span> <strong>origin</strong>;
-  readonly attribute <span>DOMString</span> <strong>lastEventId</strong>;
-  readonly attribute <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong>;
-  readonly attribute FrozenArray&lt;<a href='MessagePort.html'>MessagePort</a>&gt; <strong>ports</strong>;
+  readonly attribute <span class=primitive>any</span> <strong>data</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>lastEventId</strong>;</span><span class=def>
+  readonly attribute <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='MessagePort.html'>MessagePort</a>&gt; <strong>ports</strong>;</span><span class=def>
 
-  <span>undefined</span> <strong>initMessageEvent</strong>(<span>DOMString</span> <strong>type</strong>, optional <span>boolean</span> <strong>bubbles</strong> &#x3D; false, optional <span>boolean</span> <strong>cancelable</strong> &#x3D; false, optional <span>any</span> <strong>data</strong> &#x3D; null, optional <span>USVString</span> <strong>origin</strong> &#x3D; &quot;&quot;, optional <span>DOMString</span> <strong>lastEventId</strong> &#x3D; &quot;&quot;, optional <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong> &#x3D; null, optional sequence&lt;<a href='MessagePort.html'>MessagePort</a>&gt; <strong>ports</strong> &#x3D; []);
-};</code></pre>
+  <span class=primitive>undefined</span> <strong>initMessageEvent</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <span class=primitive>boolean</span> <strong>bubbles</strong> &#x3D; false, optional <span class=primitive>boolean</span> <strong>cancelable</strong> &#x3D; false, optional <span class=primitive>any</span> <strong>data</strong> &#x3D; null, optional <span class=primitive>USVString</span> <strong>origin</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>lastEventId</strong> &#x3D; &quot;&quot;, optional <a href='MessageEventSource.html'>MessageEventSource</a>? <strong>source</strong> &#x3D; null, optional sequence&lt;<a href='MessagePort.html'>MessagePort</a>&gt; <strong>ports</strong> &#x3D; []);</span>
+};</span></code></pre>
   
   
 </section>

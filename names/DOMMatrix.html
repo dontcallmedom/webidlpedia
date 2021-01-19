@@ -7,74 +7,74 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;drafts.fxtf.org&#x2F;geometry&#x2F;#dommatrix">Geometry Interfaces Module Level 1</a> defines <code>DOMMatrix</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable,
- LegacyWindowAlias&#x3D;(<span>SVGMatrix</span>,<span>WebKitCSSMatrix</span>)]
-interface <strong>DOMMatrix</strong> : <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> {
-    constructor(optional (<span>DOMString</span> or sequence&lt;<span>unrestricted double</span>&gt;) <strong>init</strong>);
+ LegacyWindowAlias&#x3D;(<span class=primitive>SVGMatrix</span>,<span class=primitive>WebKitCSSMatrix</span>)]
+interface <strong>DOMMatrix</strong> : <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> {<span class=def>
+    <strong>constructor</strong>(optional (<span class=primitive>DOMString</span> or sequence&lt;<span class=primitive>unrestricted double</span>&gt;) <strong>init</strong>);</span><span class=def>
 
-    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromMatrix</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});
-    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromFloat32Array</strong>(<span>Float32Array</span> <strong>array32</strong>);
-    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromFloat64Array</strong>(<span>Float64Array</span> <strong>array64</strong>);<span class="comment">
+    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromMatrix</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromFloat32Array</strong>(<span class=primitive>Float32Array</span> <strong>array32</strong>);</span><span class=def>
+    [NewObject] static <a href='DOMMatrix.html'>DOMMatrix</a> <strong>fromFloat64Array</strong>(<span class=primitive>Float64Array</span> <strong>array64</strong>);</span><span class=def><span class="comment">
 
     &#x2F;&#x2F; These attributes are simple aliases for certain elements of the 4x4 matrix
-    </span>inherit attribute <span>unrestricted double</span> <strong>a</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>b</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>c</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>d</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>e</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>f</strong>;
+    </span>inherit attribute <span class=primitive>unrestricted double</span> <strong>a</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>b</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>c</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>d</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>e</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>f</strong>;</span><span class=def>
 
-    inherit attribute <span>unrestricted double</span> <strong>m11</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m12</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m13</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m14</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m21</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m22</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m23</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m24</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m31</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m32</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m33</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m34</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m41</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m42</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m43</strong>;
-    inherit attribute <span>unrestricted double</span> <strong>m44</strong>;<span class="comment">
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m11</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m12</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m13</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m14</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m21</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m22</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m23</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m24</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m31</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m32</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m33</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m34</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m41</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m42</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m43</strong>;</span><span class=def>
+    inherit attribute <span class=primitive>unrestricted double</span> <strong>m44</strong>;</span><span class=def><span class="comment">
 
     &#x2F;&#x2F; Mutable transform methods
-    </span><a href='DOMMatrix.html'>DOMMatrix</a> <strong>multiplySelf</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>preMultiplySelf</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>translateSelf</strong>(optional <span>unrestricted double</span> <strong>tx</strong> &#x3D; 0,
-                            optional <span>unrestricted double</span> <strong>ty</strong> &#x3D; 0,
-                            optional <span>unrestricted double</span> <strong>tz</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scaleSelf</strong>(optional <span>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
-                        optional <span>unrestricted double</span> <strong>scaleY</strong>,
-                        optional <span>unrestricted double</span> <strong>scaleZ</strong> &#x3D; 1,
-                        optional <span>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
-                        optional <span>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
-                        optional <span>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale3dSelf</strong>(optional <span>unrestricted double</span> <strong>scale</strong> &#x3D; 1,
-                          optional <span>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
-                          optional <span>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
-                          optional <span>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateSelf</strong>(optional <span>unrestricted double</span> <strong>rotX</strong> &#x3D; 0,
-                         optional <span>unrestricted double</span> <strong>rotY</strong>,
-                         optional <span>unrestricted double</span> <strong>rotZ</strong>);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateFromVectorSelf</strong>(optional <span>unrestricted double</span> <strong>x</strong> &#x3D; 0,
-                                   optional <span>unrestricted double</span> <strong>y</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateAxisAngleSelf</strong>(optional <span>unrestricted double</span> <strong>x</strong> &#x3D; 0,
-                                  optional <span>unrestricted double</span> <strong>y</strong> &#x3D; 0,
-                                  optional <span>unrestricted double</span> <strong>z</strong> &#x3D; 0,
-                                  optional <span>unrestricted double</span> <strong>angle</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewXSelf</strong>(optional <span>unrestricted double</span> <strong>sx</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewYSelf</strong>(optional <span>unrestricted double</span> <strong>sy</strong> &#x3D; 0);
-    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>invertSelf</strong>();
+    </span><a href='DOMMatrix.html'>DOMMatrix</a> <strong>multiplySelf</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>preMultiplySelf</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>translateSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>tx</strong> &#x3D; 0,
+                            optional <span class=primitive>unrestricted double</span> <strong>ty</strong> &#x3D; 0,
+                            optional <span class=primitive>unrestricted double</span> <strong>tz</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scaleSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
+                        optional <span class=primitive>unrestricted double</span> <strong>scaleY</strong>,
+                        optional <span class=primitive>unrestricted double</span> <strong>scaleZ</strong> &#x3D; 1,
+                        optional <span class=primitive>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                        optional <span class=primitive>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                        optional <span class=primitive>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale3dSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>scale</strong> &#x3D; 1,
+                          optional <span class=primitive>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                          optional <span class=primitive>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                          optional <span class=primitive>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>rotX</strong> &#x3D; 0,
+                         optional <span class=primitive>unrestricted double</span> <strong>rotY</strong>,
+                         optional <span class=primitive>unrestricted double</span> <strong>rotZ</strong>);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateFromVectorSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                   optional <span class=primitive>unrestricted double</span> <strong>y</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateAxisAngleSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                  optional <span class=primitive>unrestricted double</span> <strong>y</strong> &#x3D; 0,
+                                  optional <span class=primitive>unrestricted double</span> <strong>z</strong> &#x3D; 0,
+                                  optional <span class=primitive>unrestricted double</span> <strong>angle</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewXSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>sx</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewYSelf</strong>(optional <span class=primitive>unrestricted double</span> <strong>sy</strong> &#x3D; 0);</span><span class=def>
+    <a href='DOMMatrix.html'>DOMMatrix</a> <strong>invertSelf</strong>();</span><span class=def>
 
-    [Exposed&#x3D;<a href='Window.html'>Window</a>] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>setMatrixValue</strong>(<span>DOMString</span> <strong>transformList</strong>);
-};</code></pre>
+    [Exposed&#x3D;<a href='Window.html'>Window</a>] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>setMatrixValue</strong>(<span class=primitive>DOMString</span> <strong>transformList</strong>);</span>
+};</span></code></pre>
   
   
 </section>

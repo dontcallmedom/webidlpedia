@@ -7,65 +7,65 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#node">DOM Standard</a> defines <code>Node</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>Node</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  const <span>unsigned short</span> <strong>ELEMENT_NODE</strong> &#x3D; 1;
-  const <span>unsigned short</span> <strong>ATTRIBUTE_NODE</strong> &#x3D; 2;
-  const <span>unsigned short</span> <strong>TEXT_NODE</strong> &#x3D; 3;
-  const <span>unsigned short</span> <strong>CDATA_SECTION_NODE</strong> &#x3D; 4;
-  const <span>unsigned short</span> <strong>ENTITY_REFERENCE_NODE</strong> &#x3D; 5;<span class="comment"> &#x2F;&#x2F; legacy
-  </span>const <span>unsigned short</span> <strong>ENTITY_NODE</strong> &#x3D; 6;<span class="comment"> &#x2F;&#x2F; legacy
-  </span>const <span>unsigned short</span> <strong>PROCESSING_INSTRUCTION_NODE</strong> &#x3D; 7;
-  const <span>unsigned short</span> <strong>COMMENT_NODE</strong> &#x3D; 8;
-  const <span>unsigned short</span> <strong>DOCUMENT_NODE</strong> &#x3D; 9;
-  const <span>unsigned short</span> <strong>DOCUMENT_TYPE_NODE</strong> &#x3D; 10;
-  const <span>unsigned short</span> <strong>DOCUMENT_FRAGMENT_NODE</strong> &#x3D; 11;
-  const <span>unsigned short</span> <strong>NOTATION_NODE</strong> &#x3D; 12;<span class="comment"> &#x2F;&#x2F; legacy
-  </span>readonly attribute <span>unsigned short</span> <strong>nodeType</strong>;
-  readonly attribute <span>DOMString</span> <strong>nodeName</strong>;
+interface <strong>Node</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  const <span class=primitive>unsigned short</span> <strong>ELEMENT_NODE</strong> &#x3D; 1;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>ATTRIBUTE_NODE</strong> &#x3D; 2;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>TEXT_NODE</strong> &#x3D; 3;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>CDATA_SECTION_NODE</strong> &#x3D; 4;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>ENTITY_REFERENCE_NODE</strong> &#x3D; 5;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  </span>const <span class=primitive>unsigned short</span> <strong>ENTITY_NODE</strong> &#x3D; 6;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  </span>const <span class=primitive>unsigned short</span> <strong>PROCESSING_INSTRUCTION_NODE</strong> &#x3D; 7;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>COMMENT_NODE</strong> &#x3D; 8;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_NODE</strong> &#x3D; 9;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_TYPE_NODE</strong> &#x3D; 10;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_FRAGMENT_NODE</strong> &#x3D; 11;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>NOTATION_NODE</strong> &#x3D; 12;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  </span>readonly attribute <span class=primitive>unsigned short</span> <strong>nodeType</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>nodeName</strong>;</span><span class=def>
 
-  readonly attribute <span>USVString</span> <strong>baseURI</strong>;
+  readonly attribute <span class=primitive>USVString</span> <strong>baseURI</strong>;</span><span class=def>
 
-  readonly attribute <span>boolean</span> <strong>isConnected</strong>;
-  readonly attribute <a href='Document.html'>Document</a>? <strong>ownerDocument</strong>;
-  <a href='Node.html'>Node</a> <strong>getRootNode</strong>(optional <a href='GetRootNodeOptions.html'>GetRootNodeOptions</a> <strong>options</strong> &#x3D; {});
-  readonly attribute <a href='Node.html'>Node</a>? <strong>parentNode</strong>;
-  readonly attribute <a href='Element.html'>Element</a>? <strong>parentElement</strong>;
-  <span>boolean</span> <strong>hasChildNodes</strong>();
-  [SameObject] readonly attribute <a href='NodeList.html'>NodeList</a> <strong>childNodes</strong>;
-  readonly attribute <a href='Node.html'>Node</a>? <strong>firstChild</strong>;
-  readonly attribute <a href='Node.html'>Node</a>? <strong>lastChild</strong>;
-  readonly attribute <a href='Node.html'>Node</a>? <strong>previousSibling</strong>;
-  readonly attribute <a href='Node.html'>Node</a>? <strong>nextSibling</strong>;
+  readonly attribute <span class=primitive>boolean</span> <strong>isConnected</strong>;</span><span class=def>
+  readonly attribute <a href='Document.html'>Document</a>? <strong>ownerDocument</strong>;</span><span class=def>
+  <a href='Node.html'>Node</a> <strong>getRootNode</strong>(optional <a href='GetRootNodeOptions.html'>GetRootNodeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>parentNode</strong>;</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>parentElement</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>hasChildNodes</strong>();</span><span class=def>
+  [SameObject] readonly attribute <a href='NodeList.html'>NodeList</a> <strong>childNodes</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>firstChild</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>lastChild</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>previousSibling</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>nextSibling</strong>;</span><span class=def>
 
-  [CEReactions] attribute <span>DOMString</span>? <strong>nodeValue</strong>;
-  [CEReactions] attribute <span>DOMString</span>? <strong>textContent</strong>;
-  [CEReactions] <span>undefined</span> <strong>normalize</strong>();
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>nodeValue</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>textContent</strong>;</span><span class=def>
+  [CEReactions] <span class=primitive>undefined</span> <strong>normalize</strong>();</span><span class=def>
 
-  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>cloneNode</strong>(optional <span>boolean</span> <strong>deep</strong> &#x3D; false);
-  <span>boolean</span> <strong>isEqualNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);
-  <span>boolean</span> <strong>isSameNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);<span class="comment"> &#x2F;&#x2F; legacy alias of &#x3D;&#x3D;&#x3D;
+  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>cloneNode</strong>(optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>isEqualNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>isSameNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of &#x3D;&#x3D;&#x3D;
 
-  </span>const <span>unsigned short</span> <strong>DOCUMENT_POSITION_DISCONNECTED</strong> &#x3D; 0x01;
-  const <span>unsigned short</span> <strong>DOCUMENT_POSITION_PRECEDING</strong> &#x3D; 0x02;
-  const <span>unsigned short</span> <strong>DOCUMENT_POSITION_FOLLOWING</strong> &#x3D; 0x04;
-  const <span>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINS</strong> &#x3D; 0x08;
-  const <span>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINED_BY</strong> &#x3D; 0x10;
-  const <span>unsigned short</span> <strong>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</strong> &#x3D; 0x20;
-  <span>unsigned short</span> <strong>compareDocumentPosition</strong>(<a href='Node.html'>Node</a> <strong>other</strong>);
-  <span>boolean</span> <strong>contains</strong>(<a href='Node.html'>Node</a>? <strong>other</strong>);
+  </span>const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_DISCONNECTED</strong> &#x3D; 0x01;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_PRECEDING</strong> &#x3D; 0x02;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_FOLLOWING</strong> &#x3D; 0x04;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINS</strong> &#x3D; 0x08;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINED_BY</strong> &#x3D; 0x10;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</strong> &#x3D; 0x20;</span><span class=def>
+  <span class=primitive>unsigned short</span> <strong>compareDocumentPosition</strong>(<a href='Node.html'>Node</a> <strong>other</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>contains</strong>(<a href='Node.html'>Node</a>? <strong>other</strong>);</span><span class=def>
 
-  <span>DOMString</span>? <strong>lookupPrefix</strong>(<span>DOMString</span>? <strong>namespace</strong>);
-  <span>DOMString</span>? <strong>lookupNamespaceURI</strong>(<span>DOMString</span>? <strong>prefix</strong>);
-  <span>boolean</span> <strong>isDefaultNamespace</strong>(<span>DOMString</span>? <strong>namespace</strong>);
+  <span class=primitive>DOMString</span>? <strong>lookupPrefix</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def>
+  <span class=primitive>DOMString</span>? <strong>lookupNamespaceURI</strong>(<span class=primitive>DOMString</span>? <strong>prefix</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>isDefaultNamespace</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def>
 
-  [CEReactions] <a href='Node.html'>Node</a> <strong>insertBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a>? <strong>child</strong>);
-  [CEReactions] <a href='Node.html'>Node</a> <strong>appendChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);
-  [CEReactions] <a href='Node.html'>Node</a> <strong>replaceChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a> <strong>child</strong>);
-  [CEReactions] <a href='Node.html'>Node</a> <strong>removeChild</strong>(<a href='Node.html'>Node</a> <strong>child</strong>);
-};</code></pre>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>insertBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a>? <strong>child</strong>);</span><span class=def>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>appendChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>replaceChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a> <strong>child</strong>);</span><span class=def>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>removeChild</strong>(<a href='Node.html'>Node</a> <strong>child</strong>);</span>
+};</span></code></pre>
   
   
 </section>

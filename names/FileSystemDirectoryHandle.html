@@ -7,19 +7,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;#filesystemdirectoryhandle">File System Access</a> defines <code>FileSystemDirectoryHandle</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext, Serializable]
-interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle.html'>FileSystemHandle</a> {
-  async iterable&lt;<span>USVString</span>, <a href='FileSystemHandle.html'>FileSystemHandle</a>&gt;;
+interface <strong>FileSystemDirectoryHandle</strong> : <a href='FileSystemHandle.html'>FileSystemHandle</a> {<span class=def>
+  async iterable&lt;<span class=primitive>USVString</span>, <a href='FileSystemHandle.html'>FileSystemHandle</a>&gt;;</span><span class=def>
 
-  Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>getFileHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetFileOptions.html'>FileSystemGetFileOptions</a> <strong>options</strong> &#x3D; {});
-  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>getDirectoryHandle</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetDirectoryOptions.html'>FileSystemGetDirectoryOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>getFileHandle</strong>(<span class=primitive>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetFileOptions.html'>FileSystemGetFileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>getDirectoryHandle</strong>(<span class=primitive>USVString</span> <strong>name</strong>, optional <a href='FileSystemGetDirectoryOptions.html'>FileSystemGetDirectoryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>removeEntry</strong>(<span>USVString</span> <strong>name</strong>, optional <a href='FileSystemRemoveOptions.html'>FileSystemRemoveOptions</a> <strong>options</strong> &#x3D; {});
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>removeEntry</strong>(<span class=primitive>USVString</span> <strong>name</strong>, optional <a href='FileSystemRemoveOptions.html'>FileSystemRemoveOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  Promise&lt;sequence&lt;<span>USVString</span>&gt;?&gt; <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);
-};</code></pre>
+  Promise&lt;sequence&lt;<span class=primitive>USVString</span>&gt;?&gt; <strong>resolve</strong>(<a href='FileSystemHandle.html'>FileSystemHandle</a> <strong>possibleDescendant</strong>);</span>
+};</span></code></pre>
   
   
 </section>

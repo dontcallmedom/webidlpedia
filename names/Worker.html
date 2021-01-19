@@ -7,36 +7,36 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;workers.html#worker">HTML Standard</a> defines <code>Worker</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
-interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  <span>undefined</span> <strong>terminate</strong>();
+  <span class=primitive>undefined</span> <strong>terminate</strong>();</span><span class=def>
 
-  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence&lt;<span>object</span>&gt; <strong>transfer</strong>);
-  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
-};
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span>
+};</span><span class=def>
 
-<a href='Worker.html'>Worker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</code></pre>
+<a href='Worker.html'>Worker</a> includes <a href='AbstractWorker.html'>AbstractWorker</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
-interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
-  constructor(<span>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  <span>undefined</span> <strong>terminate</strong>();
+  <span class=primitive>undefined</span> <strong>terminate</strong>();</span><span class=def>
 
-  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, sequence&lt;<span>object</span>&gt; <strong>transfer</strong>);
-  <span>undefined</span> <strong>postMessage</strong>(<span>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;
-};</code></pre></details>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span>
+};</span></code></pre></details>
 </section>
 
   

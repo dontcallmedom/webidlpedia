@@ -7,92 +7,92 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#xrsession">WebXR Device API</a> defines <code>XRSession</code></p>
-<pre class=webidl><code>
+<pre class=webidl><code><span class=def>
 
-[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class="comment">
+[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;
-  [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;
-  [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;<span class="comment">
+  </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Methods
-  </span><span>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});
-  [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);
+  </span><span class=primitive>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});</span><span class=def>
+  [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);</span><span class=def>
 
-  <span>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);
-  <span>undefined</span> <strong>cancelAnimationFrame</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>end</strong>();<span class="comment">
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>end</strong>();</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Events
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputsourceschange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;
-};</code></pre>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputsourceschange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectstart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span>
+};</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;#xrsession">WebXR DOM Overlays Module</a><pre class=webidl><code>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;#xrsession">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRSession</strong> {
-  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;
-};</code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;hit-test&#x2F;">WebXR Hit Test Module</a><pre class=webidl><code>
+partial interface <strong>XRSession</strong> {<span class=def>
+  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;hit-test&#x2F;">WebXR Hit Test Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRSession</strong> {
-  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);
-  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);
-};</code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code>
+partial interface <strong>XRSession</strong> {<span class=def>
+  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
+  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRSession</strong> {<span class="comment">
+partial interface <strong>XRSession</strong> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;
-};
+  </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;</span>
+};</span><span class=def>
 
-partial interface <strong>XRSession</strong> {<span class="comment">
+partial interface <strong>XRSession</strong> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;
-};</code></pre></li>
+  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span>
+};</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class="comment">
+[SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;
-  [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;
-  [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;<span class="comment">
+  </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Methods
-  </span><span>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});
-  [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);
+  </span><span class=primitive>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});</span><span class=def>
+  [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);</span><span class=def>
 
-  <span>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);
-  <span>undefined</span> <strong>cancelAnimationFrame</strong>(<span>unsigned long</span> <strong>handle</strong>);
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
 
-  Promise&lt;<span>undefined</span>&gt; <strong>end</strong>();<span class="comment">
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>end</strong>();</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Events
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputsourceschange</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectstart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;
-  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;
-  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);
-  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);<span class="comment">
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninputsourceschange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectstart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselectend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
+  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span><span class=def>
+  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
+  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;<span class="comment">
+  </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;</span><span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;
-};</code></pre></details>
+  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
