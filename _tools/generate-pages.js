@@ -317,8 +317,10 @@ fetch("https://w3c.github.io/webref/ed/crawl.json")
         }
         return html`<span class="comment">${t}</span>`;
       },
+      definition: content => html`<span class=def>${content}</span>`,
       name: name => html`<strong>${name}</strong>`,
-      reference: name => used_by[name] ? html`<a href='${name}.html'>${name}</a>` : html`<span>${name}</span>`
+      nameless: kw => html`<strong>${kw}</strong>`,
+      reference: name => used_by[name] ? html`<a href='${name}.html'>${name}</a>` : html`<span class=primitive>${name}</span>`
     };
 
     // Generating referenceable name pages
