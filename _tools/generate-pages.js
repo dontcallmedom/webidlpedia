@@ -106,7 +106,7 @@ function interfaceDetails(data, name, used_by, templates) {
       const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
       // We use a proxy to keep the parseability of the objects created by WebIDL
       // while being able to replace the list of members
-      const mainIdlDef = idlparsed.find(i => !i.partial);
+      const mainIdlDef = idlparsed.find(i => !i.partial && !i.includes);
       consolidatedIdlDef = new Proxy(mainIdlDef, {
         get(target, propKey, receiver) {
           if (propKey === "members") return consolidatedIdlMembers;
