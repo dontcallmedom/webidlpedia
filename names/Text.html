@@ -23,8 +23,20 @@ interface <strong>Text</strong> : <a href='CharacterData.html'>CharacterData</a>
 
 <a href='Text.html'>Text</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
-<a href='Text.html'>Text</a> includes <a href='Slottable.html'>Slottable</a>;</span></code></pre></details>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Text</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def>
+  <strong>constructor</strong>(optional <span class=primitive>DOMString</span> <strong>data</strong> &#x3D; &quot;&quot;);</span><span class=def>
+
+  [NewObject] <a href='Text.html'>Text</a> <strong>splitText</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>);</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>wholeText</strong>;</span><span class=def>
+  readonly attribute <a href='HTMLSlotElement.html'>HTMLSlotElement</a>? <strong>assignedSlot</strong>;</span><span class=def>
+  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

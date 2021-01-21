@@ -127,8 +127,165 @@ partial interface <strong>Element</strong> {<span class=def>
 
 <a href='Element.html'>Element</a> includes <a href='Animatable.html'>Animatable</a>;</span></code></pre></li>
   </ul>
-  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
-<a href='Element.html'>Element</a> includes <a href='ParentNode.html'>ParentNode</a>;</span></code></pre></details>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>namespaceURI</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>prefix</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>localName</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>tagName</strong>;</span><span class=def>
+
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>className</strong>;</span><span class=def>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>classList</strong>;</span><span class=def>
+  [CEReactions, Unscopable] attribute <span class=primitive>DOMString</span> <strong>slot</strong>;</span><span class=def>
+
+  <span class=primitive>boolean</span> <strong>hasAttributes</strong>();</span><span class=def>
+  [SameObject] readonly attribute <a href='NamedNodeMap.html'>NamedNodeMap</a> <strong>attributes</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getAttributeNames</strong>();</span><span class=def>
+  <span class=primitive>DOMString</span>? <strong>getAttribute</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  <span class=primitive>DOMString</span>? <strong>getAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setAttribute</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def>
+  [CEReactions] <span class=primitive>undefined</span> <strong>removeAttribute</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  [CEReactions] <span class=primitive>undefined</span> <strong>removeAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
+  [CEReactions] <span class=primitive>boolean</span> <strong>toggleAttribute</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional <span class=primitive>boolean</span> <strong>force</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>hasAttribute</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>hasAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
+
+  <a href='Attr.html'>Attr</a>? <strong>getAttributeNode</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  <a href='Attr.html'>Attr</a>? <strong>getAttributeNodeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
+  [CEReactions] <a href='Attr.html'>Attr</a>? <strong>setAttributeNode</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);</span><span class=def>
+  [CEReactions] <a href='Attr.html'>Attr</a>? <strong>setAttributeNodeNS</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);</span><span class=def>
+  [CEReactions] <a href='Attr.html'>Attr</a> <strong>removeAttributeNode</strong>(<a href='Attr.html'>Attr</a> <strong>attr</strong>);</span><span class=def>
+
+  <a href='ShadowRoot.html'>ShadowRoot</a> <strong>attachShadow</strong>(<a href='ShadowRootInit.html'>ShadowRootInit</a> <strong>init</strong>);</span><span class=def>
+  readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;</span><span class=def>
+
+  <a href='Element.html'>Element</a>? <strong>closest</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>matches</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>webkitMatchesSelector</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .matches
+
+  </span><a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span class=primitive>DOMString</span> <strong>classNames</strong>);</span><span class=def>
+
+  [CEReactions] <a href='Element.html'>Element</a>? <strong>insertAdjacentElement</strong>(<span class=primitive>DOMString</span> <strong>where</strong>, <a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  </span><span class=primitive>undefined</span> <strong>insertAdjacentText</strong>(<span class=primitive>DOMString</span> <strong>where</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>children</strong>;</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>firstElementChild</strong>;</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>lastElementChild</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>childElementCount</strong>;</span><span class=def>
+
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>prepend</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>append</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceChildren</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+
+  <a href='Element.html'>Element</a>? <strong>querySelector</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
+  [NewObject] <a href='NodeList.html'>NodeList</a> <strong>querySelectorAll</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>previousElementSibling</strong>;</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>nextElementSibling</strong>;</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>before</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>after</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceWith</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>remove</strong>();</span><span class=def>
+  readonly attribute <a href='HTMLSlotElement.html'>HTMLSlotElement</a>? <strong>assignedSlot</strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestFullscreen</strong>(optional <a href='FullscreenOptions.html'>FullscreenOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def>
+    <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def>
+    sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def>
+    <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong>pseudo</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);</span><span class=def>
+  readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>regionOverset</strong>;</span><span class=def>
+  sequence&lt;<a href='Range.html'>Range</a>&gt;? <strong>getRegionFlowRanges</strong>();</span><span class=def>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>part</strong>;</span><span class=def>
+  <a href='DOMRectList.html'>DOMRectList</a> <strong>getClientRects</strong>();</span><span class=def>
+  [NewObject] <a href='DOMRect.html'>DOMRect</a> <strong>getBoundingClientRect</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scrollIntoView</strong>(optional (<span class=primitive>boolean</span> or <a href='ScrollIntoViewOptions.html'>ScrollIntoViewOptions</a>) <strong>arg</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+  attribute <span class=primitive>unrestricted double</span> <strong>scrollTop</strong>;</span><span class=def>
+  attribute <span class=primitive>unrestricted double</span> <strong>scrollLeft</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>scrollWidth</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>scrollHeight</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>clientTop</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>clientLeft</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>clientWidth</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>long</span> <strong>clientHeight</strong>;</span><span class=def>
+  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerHTML</strong>;</span><span class=def>
+  [CEReactions] <a href='void.html'>void</a> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <span class=primitive>DOMString</span> <strong>text</strong>);</span><span class=def>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerHTML</strong>;</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>releasePointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>hasPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>requestPointerLock</strong>();</span><span class=def>
+	attribute <span class=primitive>DOMString</span>? <strong>role</strong>;</span><span class=def>
+
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaAtomic</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaAutoComplete</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaBusy</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaChecked</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaColCount</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaColIndex</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaColIndexText</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaColSpan</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaCurrent</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaDescription</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaDisabled</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaExpanded</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaHasPopup</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaHidden</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaInvalid</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaKeyShortcuts</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaLabel</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaLevel</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaLive</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaModal</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaMultiLine</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaMultiSelectable</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaOrientation</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaPlaceholder</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaPosInSet</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaPressed</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaReadOnly</strong>;</span><span class=def>
+
+	attribute <span class=primitive>DOMString</span> <strong>ariaRequired</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaRoleDescription</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaRowCount</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaRowIndex</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaRowIndexText</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaRowSpan</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaSelected</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaSetSize</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaSort</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaValueMax</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaValueMin</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaValueNow</strong>;</span><span class=def>
+	attribute <span class=primitive>DOMString</span> <strong>ariaValueText</strong>;</span><span class=def>
+    <a href='Animation.html'>Animation</a>           <strong>animate</strong>(<span class=primitive>object</span>? <strong>keyframes</strong>,
+                                optional (<span class=primitive>unrestricted double</span> or <a href='KeyframeAnimationOptions.html'>KeyframeAnimationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
+    sequence&lt;<a href='Animation.html'>Animation</a>&gt; <strong>getAnimations</strong>(optional <a href='GetAnimationsOptions.html'>GetAnimationsOptions</a> <strong>options</strong> &#x3D; {});</span><span class="comment"> &#x2F;&#x2F; legacy
+</span>};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>

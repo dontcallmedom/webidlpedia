@@ -23,8 +23,22 @@ interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalSco
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span>
 };</span></code></pre>
   
-  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
-<a href='DedicatedWorkerGlobalScope.html'>DedicatedWorkerGlobalScope</a> includes <a href='AnimationFrameProvider.html'>AnimationFrameProvider</a>;</span></code></pre></details>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Global&#x3D;(<a href='Worker.html'>Worker</a>,<span class=primitive>DedicatedWorker</span>),Exposed&#x3D;<span class=primitive>DedicatedWorker</span>]
+interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def>
+  [Replaceable] readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='PostMessageOptions.html'>PostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span>
+};</span></code></pre></details>
 </section>
 
   
