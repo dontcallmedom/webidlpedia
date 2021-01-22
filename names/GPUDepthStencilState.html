@@ -1,0 +1,41 @@
+---
+title: <code>GPUDepthStencilState</code> dictionary
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dictdef-gpudepthstencilstate">WebGPU</a> defines <code>GPUDepthStencilState</code></p>
+<pre class=webidl><code><span class=def>
+
+dictionary <strong>GPUDepthStencilState</strong> {<span class=def>
+    required <a href='GPUTextureFormat.html'>GPUTextureFormat</a> <strong>format</strong>;</span><span class=def>
+
+    <span class=primitive>boolean</span> <strong>depthWriteEnabled</strong> &#x3D; false;</span><span class=def>
+    <a href='GPUCompareFunction.html'>GPUCompareFunction</a> <strong>depthCompare</strong> &#x3D; &quot;always&quot;;</span><span class=def>
+
+    <a href='GPUStencilFaceState.html'>GPUStencilFaceState</a> <strong>stencilFront</strong> &#x3D; {};</span><span class=def>
+    <a href='GPUStencilFaceState.html'>GPUStencilFaceState</a> <strong>stencilBack</strong> &#x3D; {};</span><span class=def>
+
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilReadMask</strong> &#x3D; 0xFFFFFFFF;</span><span class=def>
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilWriteMask</strong> &#x3D; 0xFFFFFFFF;</span><span class=def>
+
+    <a href='GPUDepthBias.html'>GPUDepthBias</a> <strong>depthBias</strong> &#x3D; 0;</span><span class=def>
+    <span class=primitive>float</span> <strong>depthBiasSlopeScale</strong> &#x3D; 0;</span><span class=def>
+    <span class=primitive>float</span> <strong>depthBiasClamp</strong> &#x3D; 0;</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; Enable depth clamping (requires &quot;depth-clamping&quot; feature)
+    </span><span class=primitive>boolean</span> <strong>clampDepth</strong> &#x3D; false;</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><a href="GPURenderPipelineDescriptor.html">GPURenderPipelineDescriptor</a></li>
+  </ul>
+</section>
+  
