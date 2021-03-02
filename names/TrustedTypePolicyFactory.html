@@ -1,0 +1,41 @@
+---
+title: <code>TrustedTypePolicyFactory</code> interface
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webappsec-trusted-types&#x2F;dist&#x2F;spec&#x2F;#trustedtypepolicyfactory">Trusted Types</a> defines <code>TrustedTypePolicyFactory</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>, SecureContext] interface <strong>TrustedTypePolicyFactory</strong> {<span class=def>
+    <a href='TrustedTypePolicy.html'>TrustedTypePolicy</a> <strong>createPolicy</strong>(
+        <span class=primitive>DOMString</span> <strong>policyName</strong>, optional <a href='TrustedTypePolicyOptions.html'>TrustedTypePolicyOptions</a> <strong>policyOptions</strong> &#x3D; {});</span><span class=def>
+    <span class=primitive>boolean</span> <strong>isHTML</strong>(<span class=primitive>any</span> <strong>value</strong>);</span><span class=def>
+    <span class=primitive>boolean</span> <strong>isScript</strong>(<span class=primitive>any</span> <strong>value</strong>);</span><span class=def>
+    <span class=primitive>boolean</span> <strong>isScriptURL</strong>(<span class=primitive>any</span> <strong>value</strong>);</span><span class=def>
+    readonly attribute <a href='TrustedHTML.html'>TrustedHTML</a> <strong>emptyHTML</strong>;</span><span class=def>
+    readonly attribute <a href='TrustedScript.html'>TrustedScript</a> <strong>emptyScript</strong>;</span><span class=def>
+    <span class=primitive>DOMString</span>? <strong>getAttributeType</strong>(
+        <span class=primitive>DOMString</span> <strong>tagName</strong>,
+        <span class=primitive>DOMString</span> <strong>attribute</strong>,
+        optional <span class=primitive>DOMString</span> <strong>elementNs</strong> &#x3D; &quot;&quot;,
+        optional <span class=primitive>DOMString</span> <strong>attrNs</strong> &#x3D; &quot;&quot;);</span><span class=def>
+    <span class=primitive>DOMString</span>? <strong>getPropertyType</strong>(
+        <span class=primitive>DOMString</span> <strong>tagName</strong>,
+        <span class=primitive>DOMString</span> <strong>property</strong>,
+        optional <span class=primitive>DOMString</span> <strong>elementNs</strong> &#x3D; &quot;&quot;);</span><span class=def>
+    readonly attribute <a href='TrustedTypePolicy.html'>TrustedTypePolicy</a>? <strong>defaultPolicy</strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><a href="Window.html">Window</a></li>
+  </ul>
+</section>
+  
