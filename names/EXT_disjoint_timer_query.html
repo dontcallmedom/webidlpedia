@@ -9,7 +9,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;www.khronos.org&#x2F;registry&#x2F;webgl&#x2F;extensions&#x2F;EXT_disjoint_timer_query&#x2F;">WebGL EXT_disjoint_timer_query Extension Specification</a> defines <code>EXT_disjoint_timer_query</code></p>
 <pre class=webidl><code><span class=def>
 
-[LegacyNoInterfaceObject]
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), LegacyNoInterfaceObject]
 interface <strong>EXT_disjoint_timer_query</strong> {<span class=def>
   const <a href='GLenum.html'>GLenum</a> <strong>QUERY_COUNTER_BITS_EXT</strong>      &#x3D; 0x8864;</span><span class=def>
   const <a href='GLenum.html'>GLenum</a> <strong>CURRENT_QUERY_EXT</strong>           &#x3D; 0x8865;</span><span class=def>
@@ -20,11 +20,11 @@ interface <strong>EXT_disjoint_timer_query</strong> {<span class=def>
   const <a href='GLenum.html'>GLenum</a> <strong>GPU_DISJOINT_EXT</strong>            &#x3D; 0x8FBB;</span><span class=def>
 
   <a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a>? <strong>createQueryEXT</strong>();</span><span class=def>
-  <a href='void.html'>void</a> <strong>deleteQueryEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a>? <strong>query</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>deleteQueryEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a>? <strong>query</strong>);</span><span class=def>
   [WebGLHandlesContextLoss] <span class=primitive>boolean</span> <strong>isQueryEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a>? <strong>query</strong>);</span><span class=def>
-  <a href='void.html'>void</a> <strong>beginQueryEXT</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a> <strong>query</strong>);</span><span class=def>
-  <a href='void.html'>void</a> <strong>endQueryEXT</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def>
-  <a href='void.html'>void</a> <strong>queryCounterEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a> <strong>query</strong>, <a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>beginQueryEXT</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a> <strong>query</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>endQueryEXT</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>queryCounterEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a> <strong>query</strong>, <a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def>
   <span class=primitive>any</span> <strong>getQueryEXT</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def>
   <span class=primitive>any</span> <strong>getQueryObjectEXT</strong>(<a href='WebGLTimerQueryEXT.html'>WebGLTimerQueryEXT</a> <strong>query</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span>
 };</span></code></pre>
