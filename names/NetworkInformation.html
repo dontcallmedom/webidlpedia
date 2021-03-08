@@ -18,8 +18,24 @@ interface <strong>NetworkInformation</strong> : <a href='EventTarget.html'>Event
   readonly attribute <a href='Millisecond.html'>Millisecond</a> <strong>rtt</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;savedata&#x2F;">Save Data API</a><pre class=webidl><code><span class=def>
+
+<a href='NetworkInformation.html'>NetworkInformation</a> includes <a href='NetworkInformationSaveData.html'>NetworkInformationSaveData</a>;</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>NetworkInformation</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  readonly attribute <a href='ConnectionType.html'>ConnectionType</a> <strong>type</strong>;</span><span class=def>
+  readonly attribute <a href='EffectiveConnectionType.html'>EffectiveConnectionType</a> <strong>effectiveType</strong>;</span><span class=def>
+  readonly attribute <a href='Megabit.html'>Megabit</a> <strong>downlinkMax</strong>;</span><span class=def>
+  readonly attribute <a href='Megabit.html'>Megabit</a> <strong>downlink</strong>;</span><span class=def>
+  readonly attribute <a href='Millisecond.html'>Millisecond</a> <strong>rtt</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
+  [SameObject] readonly attribute <span class=primitive>boolean</span> <strong>saveData</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
