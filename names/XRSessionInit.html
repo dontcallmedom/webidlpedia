@@ -15,7 +15,11 @@ dictionary <strong>XRSessionInit</strong> {<span class=def>
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;depth-sensing&#x2F;">WebXR Depth Sensing Module</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>XRSessionInit</strong> {<span class=def>
+  <a href='XRDepthStateInit.html'>XRDepthStateInit</a> <strong>depthSensing</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
 
 partial dictionary <strong>XRSessionInit</strong> {<span class=def>
   <a href='XRDOMOverlayInit.html'>XRDOMOverlayInit</a>? <strong>domOverlay</strong>;</span>
@@ -26,6 +30,7 @@ partial dictionary <strong>XRSessionInit</strong> {<span class=def>
 dictionary <strong>XRSessionInit</strong> {<span class=def>
   sequence&lt;<span class=primitive>any</span>&gt; <strong>requiredFeatures</strong>;</span><span class=def>
   sequence&lt;<span class=primitive>any</span>&gt; <strong>optionalFeatures</strong>;</span><span class=def>
+  <a href='XRDepthStateInit.html'>XRDepthStateInit</a> <strong>depthSensing</strong>;</span><span class=def>
   <a href='XRDOMOverlayInit.html'>XRDOMOverlayInit</a>? <strong>domOverlay</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -38,5 +43,5 @@ dictionary <strong>XRSessionInit</strong> {<span class=def>
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;">WebXR DOM Overlays Module</a> refers to <code>XRSessionInit</code></li>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;depth-sensing&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRSessionInit</code></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;">WebXR DOM Overlays Module</a> refers to <code>XRSessionInit</code></li>
   </ul></section>
