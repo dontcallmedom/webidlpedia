@@ -16,7 +16,11 @@ interface <strong>CSSStyleRule</strong> : <a href='CSSRule.html'>CSSRule</a> {<s
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;#declared-stylepropertymap-objects">CSS Typed OM Level 1</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-nesting-1&#x2F;#cssom-style">CSS Nesting Module</a><pre class=webidl><code><span class=def>partial interface <strong>CSSStyleRule</strong> {<span class=def>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def>
+  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;#declared-stylepropertymap-objects">CSS Typed OM Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>CSSStyleRule</strong> {<span class=def>
     [SameObject] readonly attribute <a href='StylePropertyMap.html'>StylePropertyMap</a> <strong>styleMap</strong>;</span>
@@ -28,11 +32,14 @@ partial interface <strong>CSSStyleRule</strong> {<span class=def>
 interface <strong>CSSStyleRule</strong> : <a href='CSSRule.html'>CSSRule</a> {<span class=def>
   attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>selectorText</strong>;</span><span class=def>
   [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def>
+  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
     [SameObject] readonly attribute <a href='StylePropertyMap.html'>StylePropertyMap</a> <strong>styleMap</strong>;</span>
 };</span></code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;">CSS Typed OM Level 1</a> refers to <code>CSSStyleRule</code></li>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-nesting-1&#x2F;">CSS Nesting Module</a> refers to <code>CSSStyleRule</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;">CSS Typed OM Level 1</a> refers to <code>CSSStyleRule</code></li>
   </ul></section>
