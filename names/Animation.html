@@ -1,12 +1,41 @@
 ---
-title: <code>Animation</code> undefined
+title: <code>Animation</code> interface
 layout: base
 base: ../
 ---
 
 <section>
   <h3>Definition</h3>
-  
+  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-1&#x2F;#animation">Web Animations</a> defines <code>Animation</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Animation</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+    <strong>constructor</strong>(optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null,
+                optional <a href='AnimationTimeline.html'>AnimationTimeline</a>? <strong>timeline</strong>);</span><span class=def>
+             attribute <span class=primitive>DOMString</span>                <strong>id</strong>;</span><span class=def>
+             attribute <a href='AnimationEffect.html'>AnimationEffect</a>?         <strong>effect</strong>;</span><span class=def>
+             attribute <a href='AnimationTimeline.html'>AnimationTimeline</a>?       <strong>timeline</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>?                  <strong>startTime</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>?                  <strong>currentTime</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>                   <strong>playbackRate</strong>;</span><span class=def>
+    readonly attribute <a href='AnimationPlayState.html'>AnimationPlayState</a>       <strong>playState</strong>;</span><span class=def>
+    readonly attribute <a href='AnimationReplaceState.html'>AnimationReplaceState</a>    <strong>replaceState</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>boolean</span>                  <strong>pending</strong>;</span><span class=def>
+    readonly attribute Promise&lt;<a href='Animation.html'>Animation</a>&gt;       <strong>ready</strong>;</span><span class=def>
+    readonly attribute Promise&lt;<a href='Animation.html'>Animation</a>&gt;       <strong>finished</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onfinish</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>oncancel</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onremove</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>cancel</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>finish</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>play</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>pause</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>updatePlaybackRate</strong>(<span class=primitive>double</span> <strong>playbackRate</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>reverse</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>persist</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>commitStyles</strong>();</span>
+};</span></code></pre>
   
   
 </section>
@@ -14,7 +43,7 @@ base: ../
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSAnimation.html">CSSAnimation</a></li><li><a href="CSSTransition.html">CSSTransition</a></li><li><a href="WorkletAnimation.html">WorkletAnimation</a></li><li><a href="ShadowAnimation.html">ShadowAnimation</a></li>
+    <li><a href="CSSAnimation.html">CSSAnimation</a></li><li><a href="CSSTransition.html">CSSTransition</a></li><li><a href="WorkletAnimation.html">WorkletAnimation</a></li><li><a href="ShadowAnimation.html">ShadowAnimation</a></li><li><a href="Animation.html">Animation</a></li><li><a href="Animatable.html">Animatable</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
