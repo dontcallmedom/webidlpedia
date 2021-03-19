@@ -34,42 +34,8 @@ interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarg
   <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>ArrayBuffer</span> <strong>data</strong>);</span><span class=def>
   <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span>
 };</span></code></pre>
-  <p>This interface is extended in the following specifications:</p>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;#new-rtcdatachannel-attribute">WebRTC Priority Control API</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>RTCDataChannel</strong> {<span class=def>
-  readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;</span>
-};</span></code></pre></li>
-  </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>label</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>ordered</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxPacketLifeTime</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxRetransmits</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>negotiated</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>id</strong>;</span><span class=def>
-  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>bufferedAmount</strong>;</span><span class=def>
-  [EnforceRange] attribute <span class=primitive>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>ArrayBuffer</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span><span class=def>
-  readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;</span>
-};</span></code></pre></details>
+  
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
@@ -78,7 +44,4 @@ interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarg
     <li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></li><li><a href="RTCDataChannelEventInit.html">RTCDataChannelEventInit</a></li>
   </ul>
 </section>
-  <section><h3>Refering specifications</h3>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;">WebRTC Priority Control API</a> refers to <code>RTCDataChannel</code></li>
-  </ul></section>
+  
