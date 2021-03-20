@@ -85,23 +85,7 @@ partial interface <strong>Window</strong> {<span class=def>
 
 partial interface <strong>Window</strong> {<span class=def>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
-</span>};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#Window">Cookie Store API</a><pre class=webidl><code><span class=def>
-
-[SecureContext]
-partial interface <strong>Window</strong> {<span class=def>
-  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a><pre class=webidl><code><span class=def>
-
-[SecureContext]
-partial interface <strong>Window</strong> {<span class=def>
-    Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;#the-portal-element">Portals</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def>
-    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
+</span>};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span>
@@ -168,10 +152,6 @@ partial interface <strong>Window</strong> {<span class=def>
 };</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def>
   <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;#extensions-to-window-interface">Selection API</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def>
-  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span>
 };</span></code></pre></li>
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -328,7 +308,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>handle</strong> &#x3D; 0);</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; microtask queuing
-  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<span class=primitive>VoidFunction</span> <strong>callback</strong>);</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; ImageBitmap
   </span>Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
@@ -340,11 +320,6 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
-    Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def>
   [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def>
     <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def>
@@ -387,8 +362,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;</span><span class=def>
     [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;</span><span class=def>
   <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
-  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class="comment">
+  <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
@@ -397,10 +371,10 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="TimeEvent.html">TimeEvent</a></li><li><a href="UIEvent.html">UIEvent</a></li><li><a href="UIEventInit.html">UIEventInit</a></li>
+    <li><a href="TimeEvent.html">TimeEvent</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;uievents&#x2F;">UI Events</a> refers to <code>Window</code></li>
+    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li>
   </ul></section>
