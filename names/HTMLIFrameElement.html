@@ -41,7 +41,9 @@ partial interface <strong>HTMLIFrameElement</strong> {<span class=def>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;#the-policy-object">Permissions Policy</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;csp-embedded-enforcement&#x2F;#csp-attribute">Content Security Policy: Embedded Enforcement</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLIFrameElement</strong> {<span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>csp</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;#the-policy-object">Permissions Policy</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>HTMLIFrameElement</strong> {<span class=def>
     [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span>
@@ -73,6 +75,7 @@ interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLEl
 
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginHeight</strong>;</span><span class=def>
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginWidth</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>csp</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
@@ -81,5 +84,5 @@ interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLEl
 
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;csp-embedded-enforcement&#x2F;">Content Security Policy: Embedded Enforcement</a> refers to <code>HTMLIFrameElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li>
   </ul></section>

@@ -70,7 +70,10 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;#attributes-3">Encrypted Media Extensions</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-output&#x2F;#attributes">Audio Output Devices API</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLMediaElement</strong> {<span class=def>
+  [SecureContext] readonly attribute <span class=primitive>DOMString</span> <strong>sinkId</strong>;</span><span class=def>
+  [SecureContext] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setSinkId</strong> (<span class=primitive>DOMString</span> <strong>sinkId</strong>);</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;#attributes-3">Encrypted Media Extensions</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>] partial interface <strong>HTMLMediaElement</strong> {<span class=def>
     [SecureContext] readonly        attribute <a href='MediaKeys.html'>MediaKeys</a>?   <strong>mediaKeys</strong>;</span><span class=def>
@@ -147,6 +150,8 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   [SameObject] readonly attribute <a href='VideoTrackList.html'>VideoTrackList</a> <strong>videoTracks</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='TextTrackList.html'>TextTrackList</a> <strong>textTracks</strong>;</span><span class=def>
   <a href='TextTrack.html'>TextTrack</a> <strong>addTextTrack</strong>(<a href='TextTrackKind.html'>TextTrackKind</a> <strong>kind</strong>, optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>language</strong> &#x3D; &quot;&quot;);</span><span class=def>
+  [SecureContext] readonly attribute <span class=primitive>DOMString</span> <strong>sinkId</strong>;</span><span class=def>
+  [SecureContext] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setSinkId</strong> (<span class=primitive>DOMString</span> <strong>sinkId</strong>);</span><span class=def>
     [SecureContext] readonly        attribute <a href='MediaKeys.html'>MediaKeys</a>?   <strong>mediaKeys</strong>;</span><span class=def>
                                     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onencrypted</strong>;</span><span class=def>
                                     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaitingforkey</strong>;</span><span class=def>
@@ -161,10 +166,10 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="HTMLVideoElement.html">HTMLVideoElement</a></li><li><a href="HTMLAudioElement.html">HTMLAudioElement</a></li>
+    <li><a href="HTMLVideoElement.html">HTMLVideoElement</a></li><li><a href="HTMLAudioElement.html">HTMLAudioElement</a></li><li><a href="AudioContext.html">AudioContext</a></li><li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li><li><a href="MediaElementAudioSourceOptions.html">MediaElementAudioSourceOptions</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;">Encrypted Media Extensions</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;">Media Capture from DOM Elements</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;remote-playback&#x2F;">Remote Playback API</a> refers to <code>HTMLMediaElement</code></li>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-output&#x2F;">Audio Output Devices API</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;">Encrypted Media Extensions</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;">Media Capture from DOM Elements</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;remote-playback&#x2F;">Remote Playback API</a> refers to <code>HTMLMediaElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webaudio&#x2F;">Web Audio API</a> refers to <code>HTMLMediaElement</code></li>
   </ul></section>
