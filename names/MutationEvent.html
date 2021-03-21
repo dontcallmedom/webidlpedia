@@ -1,0 +1,30 @@
+---
+title: <code>MutationEvent</code> interface
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;uievents&#x2F;#mutationevent">UI Events</a> defines <code>MutationEvent</code></p>
+<pre class=webidl><code><span class=def>
+
+interface <strong>MutationEvent</strong> : <a href='Event.html'>Event</a> {<span class=def><span class="comment">
+  &#x2F;&#x2F; attrChangeType
+  </span>const <span class=primitive>unsigned short</span> <strong>MODIFICATION</strong> &#x3D; 1;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>ADDITION</strong> &#x3D; 2;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>REMOVAL</strong> &#x3D; 3;</span><span class=def>
+
+  readonly attribute <a href='Node.html'>Node</a>? <strong>relatedNode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>prevValue</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>newValue</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>attrName</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>attrChange</strong>;</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>initMutationEvent</strong>();</span>
+};</span></code></pre>
+  
+  
+</section>
+
+  

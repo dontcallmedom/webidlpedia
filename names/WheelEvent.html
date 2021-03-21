@@ -21,9 +21,30 @@ interface <strong>WheelEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a>
   readonly attribute <span class=primitive>double</span> <strong>deltaY</strong>;</span><span class=def>
   readonly attribute <span class=primitive>double</span> <strong>deltaZ</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>deltaMode</strong>;</span>
+};</span><span class=def>
+
+partial interface <strong>WheelEvent</strong> {<span class=def><span class="comment">
+  &#x2F;&#x2F; Originally introduced (and deprecated) in this specification
+  </span><span class=primitive>undefined</span> <strong>initWheelEvent</strong>();</span>
 };</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>WheelEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='WheelEventInit.html'>WheelEventInit</a> <strong>eventInitDict</strong>);</span><span class=def><span class="comment">
+  &#x2F;&#x2F; DeltaModeCode
+  </span>const <span class=primitive>unsigned long</span> <strong>DOM_DELTA_PIXEL</strong> &#x3D; 0x00;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_DELTA_LINE</strong>  &#x3D; 0x01;</span><span class=def>
+  const <span class=primitive>unsigned long</span> <strong>DOM_DELTA_PAGE</strong>  &#x3D; 0x02;</span><span class=def>
+
+  readonly attribute <span class=primitive>double</span> <strong>deltaX</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>double</span> <strong>deltaY</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>double</span> <strong>deltaZ</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>deltaMode</strong>;</span><span class=def><span class="comment">
+  &#x2F;&#x2F; Originally introduced (and deprecated) in this specification
+  </span><span class=primitive>undefined</span> <strong>initWheelEvent</strong>();</span>
+};</span></code></pre></details>
 </section>
 
   
