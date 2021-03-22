@@ -19,8 +19,29 @@ interface <strong>RTCRtpReceiver</strong> {<span class=def>
   sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def>
   Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-encoded-transform&#x2F;">WebRTC Encoded Transform</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>RTCRtpReceiver</strong> {<span class=def>
+    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();</span><span class=def>
+    attribute <a href='RTCRtpTransform.html'>RTCRtpTransform</a>? <strong>transform</strong>;</span>
+};</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>RTCRtpReceiver</strong> {<span class=def>
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;</span><span class=def>
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def>
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def>
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();</span><span class=def>
+  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();</span><span class=def>
+  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def>
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();</span><span class=def>
+    <a href='RTCInsertableStreams.html'>RTCInsertableStreams</a> <strong>createEncodedStreams</strong>();</span><span class=def>
+    attribute <a href='RTCRtpTransform.html'>RTCRtpTransform</a>? <strong>transform</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
@@ -29,4 +50,7 @@ interface <strong>RTCRtpReceiver</strong> {<span class=def>
     <li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li><li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li><li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li><li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li>
   </ul>
 </section>
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-encoded-transform&#x2F;">WebRTC Encoded Transform</a> refers to <code>RTCRtpReceiver</code></li>
+  </ul></section>
