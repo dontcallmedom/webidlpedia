@@ -17,8 +17,25 @@ dictionary <strong>RTCDataChannelInit</strong> {<span class=def>
   <span class=primitive>boolean</span> <strong>negotiated</strong> &#x3D; false;</span><span class=def>
   [EnforceRange] <span class=primitive>unsigned short</span> <strong>id</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;">WebRTC Priority Control API</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>RTCDataChannelInit</strong> {<span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> &#x3D; &quot;low&quot;;</span>
+};</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>RTCDataChannelInit</strong> {<span class=def>
+  <span class=primitive>boolean</span> <strong>ordered</strong> &#x3D; true;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned short</span> <strong>maxPacketLifeTime</strong>;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned short</span> <strong>maxRetransmits</strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>protocol</strong> &#x3D; &quot;&quot;;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>negotiated</strong> &#x3D; false;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned short</span> <strong>id</strong>;</span><span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> &#x3D; &quot;low&quot;;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
@@ -27,4 +44,7 @@ dictionary <strong>RTCDataChannelInit</strong> {<span class=def>
     <li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li>
   </ul>
 </section>
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;">WebRTC Priority Control API</a> refers to <code>RTCDataChannelInit</code></li>
+  </ul></section>

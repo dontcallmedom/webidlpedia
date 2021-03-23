@@ -16,7 +16,12 @@ dictionary <strong>RTCRtpEncodingParameters</strong> : <a href='RTCRtpCodingPara
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a><pre class=webidl><code><span class=def>partial dictionary <strong>RTCRtpEncodingParameters</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;">WebRTC Priority Control API</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>RTCRtpEncodingParameters</strong> {<span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> &#x3D; &quot;low&quot;;</span><span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>networkPriority</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a><pre class=webidl><code><span class=def>partial dictionary <strong>RTCRtpEncodingParameters</strong> {<span class=def>
              <span class=primitive>DOMString</span> <strong>scalabilityMode</strong>;</span>
 };</span></code></pre></li>
   </ul>
@@ -26,6 +31,8 @@ dictionary <strong>RTCRtpEncodingParameters</strong> : <a href='RTCRtpCodingPara
   <span class=primitive>boolean</span> <strong>active</strong> &#x3D; true;</span><span class=def>
   <span class=primitive>unsigned long</span> <strong>maxBitrate</strong>;</span><span class=def>
   <span class=primitive>double</span> <strong>scaleResolutionDownBy</strong>;</span><span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong> &#x3D; &quot;low&quot;;</span><span class=def>
+  <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>networkPriority</strong>;</span><span class=def>
              <span class=primitive>DOMString</span> <strong>scalabilityMode</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -38,5 +45,5 @@ dictionary <strong>RTCRtpEncodingParameters</strong> : <a href='RTCRtpCodingPara
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a> refers to <code>RTCRtpEncodingParameters</code></li>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;">WebRTC Priority Control API</a> refers to <code>RTCRtpEncodingParameters</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-svc&#x2F;">Scalable Video Coding (SVC) Extension for WebRTC</a> refers to <code>RTCRtpEncodingParameters</code></li>
   </ul></section>
