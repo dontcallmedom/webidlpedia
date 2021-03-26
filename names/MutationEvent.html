@@ -21,7 +21,14 @@ interface <strong>MutationEvent</strong> : <a href='Event.html'>Event</a> {<span
   readonly attribute <span class=primitive>DOMString</span> <strong>attrName</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned short</span> <strong>attrChange</strong>;</span><span class=def>
 
-  <span class=primitive>undefined</span> <strong>initMutationEvent</strong>();</span>
+  <span class=primitive>undefined</span> <strong>initMutationEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
+    optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
+    optional <span class=primitive>boolean</span> <strong>cancelableArg</strong> &#x3D; false,
+    optional <a href='Node.html'>Node</a>? <strong>relatedNodeArg</strong> &#x3D; null,
+    optional <span class=primitive>DOMString</span> <strong>prevValueArg</strong> &#x3D; &quot;&quot;,
+    optional <span class=primitive>DOMString</span> <strong>newValueArg</strong> &#x3D; &quot;&quot;,
+    optional <span class=primitive>DOMString</span> <strong>attrNameArg</strong> &#x3D; &quot;&quot;,
+    optional <span class=primitive>unsigned short</span> <strong>attrChangeArg</strong> &#x3D; 0);</span>
 };</span></code></pre>
   
   

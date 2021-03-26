@@ -17,7 +17,11 @@ interface <strong>CompositionEvent</strong> : <a href='UIEvent.html'>UIEvent</a>
 
 partial interface <strong>CompositionEvent</strong> {<span class=def><span class="comment">
   &#x2F;&#x2F; Originally introduced (and deprecated) in this specification
-  </span><span class=primitive>undefined</span> <strong>initCompositionEvent</strong>();</span>
+  </span><span class=primitive>undefined</span> <strong>initCompositionEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
+    optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
+    optional <span class=primitive>boolean</span> <strong>cancelableArg</strong> &#x3D; false,
+    optional <a href='WindowProxy.html'>WindowProxy</a>? <strong>viewArg</strong> &#x3D; null,
+    optional <span class=primitive>DOMString</span> <strong>dataArg</strong> &#x3D; &quot;&quot;);</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -27,7 +31,11 @@ interface <strong>CompositionEvent</strong> : <a href='UIEvent.html'>UIEvent</a>
   <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='CompositionEventInit.html'>CompositionEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
   readonly attribute <span class=primitive>DOMString</span> <strong>data</strong>;</span><span class=def><span class="comment">
   &#x2F;&#x2F; Originally introduced (and deprecated) in this specification
-  </span><span class=primitive>undefined</span> <strong>initCompositionEvent</strong>();</span>
+  </span><span class=primitive>undefined</span> <strong>initCompositionEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
+    optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
+    optional <span class=primitive>boolean</span> <strong>cancelableArg</strong> &#x3D; false,
+    optional <a href='WindowProxy.html'>WindowProxy</a>? <strong>viewArg</strong> &#x3D; null,
+    optional <span class=primitive>DOMString</span> <strong>dataArg</strong> &#x3D; &quot;&quot;);</span>
 };</span></code></pre></details>
 </section>
 
