@@ -9,7 +9,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpubuffer">WebGPU</a> defines <code>GPUBuffer</code></p>
 <pre class=webidl><code><span class=def>
 
-[Serializable]
+[Exposed&#x3D;<a href='Window.html'>Window</a>, Serializable]
 interface <strong>GPUBuffer</strong> {<span class=def>
     Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
     <span class=primitive>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
@@ -21,7 +21,7 @@ interface <strong>GPUBuffer</strong> {<span class=def>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Serializable]
+[Exposed&#x3D;<a href='Window.html'>Window</a>, Serializable]
 interface <strong>GPUBuffer</strong> {<span class=def>
     Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
     <span class=primitive>ArrayBuffer</span> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
