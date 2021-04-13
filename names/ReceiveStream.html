@@ -10,19 +10,18 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
-interface <strong>ReceiveStream</strong> {
-};</span><span class=def>
-<a href='ReceiveStream.html'>ReceiveStream</a> includes <a href='IncomingStream.html'>IncomingStream</a>;</span></code></pre>
-  
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
-interface <strong>ReceiveStream</strong> {<span class=def><span class="comment">
-  &#x2F;* a ReadableStream of Uint8Array *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def>
+interface <strong>ReceiveStream</strong> : <a href='ReadableStream.html'>ReadableStream</a><span class="comment"> &#x2F;* of Uint8Array *&#x2F; </span>{<span class=def>
   readonly attribute Promise&lt;<a href='StreamAbortInfo.html'>StreamAbortInfo</a>&gt; <strong>readingAborted</strong>;</span><span class=def>
   <span class=primitive>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> &#x3D; {});</span>
-};</span></code></pre></details>
+};</span></code></pre>
+  
+  
 </section>
-
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><a href="BidirectionalStream.html">BidirectionalStream</a></li>
+  </ul>
+</section>
   

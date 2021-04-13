@@ -10,23 +10,12 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
-interface <strong>BidirectionalStream</strong> {
-};</span><span class=def>
-<a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='OutgoingStream.html'>OutgoingStream</a>;</span><span class=def>
-<a href='BidirectionalStream.html'>BidirectionalStream</a> includes <a href='IncomingStream.html'>IncomingStream</a>;</span></code></pre>
-  
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[ Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>) ]
 interface <strong>BidirectionalStream</strong> {<span class=def>
-  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;</span><span class=def>
-  readonly attribute Promise&lt;<a href='StreamAbortInfo.html'>StreamAbortInfo</a>&gt; <strong>writingAborted</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>abortWriting</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> &#x3D; {});</span><span class=def><span class="comment">
-  &#x2F;* a ReadableStream of Uint8Array *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def>
-  readonly attribute Promise&lt;<a href='StreamAbortInfo.html'>StreamAbortInfo</a>&gt; <strong>readingAborted</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>abortReading</strong>(optional <a href='StreamAbortInfo.html'>StreamAbortInfo</a> <strong>abortInfo</strong> &#x3D; {});</span>
-};</span></code></pre></details>
+  readonly attribute <a href='ReceiveStream.html'>ReceiveStream</a> <strong>readable</strong>;</span><span class=def>
+  readonly attribute <a href='SendStream.html'>SendStream</a> <strong>writable</strong>;</span>
+};</span></code></pre>
+  
+  
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
