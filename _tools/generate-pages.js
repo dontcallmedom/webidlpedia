@@ -1,7 +1,8 @@
 const fs = require("fs");
-const fetch = require("node-fetch");
 const webidl = require("webidl2");
 const html = require('escape-html-template-tag')
+
+const { expandCrawlResult } = require('reffy/src/lib/util');
 
 const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idl && s.idl.idlNames;
@@ -288,9 +289,10 @@ function memberNames(data, sort) {
   return html`<p>Names used for attributes/members/methods:</p>${htmlList(list)}`;
 }
 
-fetch("https://w3c.github.io/webref/ed/crawl.json")
-  .then(r => r.json())
-  .then(({results}) => {
+fs.promises.readFile("./webref/ed/index.json", "utf-8")
+  .then(async jsonIndex => {
+    const index = JSON.parse(jsonIndex);
+    const {results} = await expandCrawlResult(index, './webref/ed/');
     let used_by = {};
     results.forEach(s => {
       if (s.idl && s.idl.idlNames) {
