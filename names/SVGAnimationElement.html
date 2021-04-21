@@ -9,6 +9,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> defines <code>SVGAnimationElement</code></p>
 <pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
 interface <strong>SVGAnimationElement</strong> : <a href='SVGElement.html'>SVGElement</a> {<span class=def>
 
   readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>targetElement</strong>;</span><span class=def>
@@ -21,16 +22,17 @@ interface <strong>SVGAnimationElement</strong> : <a href='SVGElement.html'>SVGEl
   <span class=primitive>float</span> <strong>getCurrentTime</strong>();</span><span class=def>
   <span class=primitive>float</span> <strong>getSimpleDuration</strong>();</span><span class=def>
 
-  <a href='void.html'>void</a> <strong>beginElement</strong>();</span><span class=def>
-  <a href='void.html'>void</a> <strong>beginElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span><span class=def>
-  <a href='void.html'>void</a> <strong>endElement</strong>();</span><span class=def>
-  <a href='void.html'>void</a> <strong>endElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span>
+  <span class=primitive>undefined</span> <strong>beginElement</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>beginElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>endElement</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>endElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span>
 };</span><span class=def>
 
 <a href='SVGAnimationElement.html'>SVGAnimationElement</a> includes <a href='SVGTests.html'>SVGTests</a>;</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
 interface <strong>SVGAnimationElement</strong> : <a href='SVGElement.html'>SVGElement</a> {<span class=def>
 
   readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>targetElement</strong>;</span><span class=def>
@@ -43,10 +45,12 @@ interface <strong>SVGAnimationElement</strong> : <a href='SVGElement.html'>SVGEl
   <span class=primitive>float</span> <strong>getCurrentTime</strong>();</span><span class=def>
   <span class=primitive>float</span> <strong>getSimpleDuration</strong>();</span><span class=def>
 
-  <a href='void.html'>void</a> <strong>beginElement</strong>();</span><span class=def>
-  <a href='void.html'>void</a> <strong>beginElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span><span class=def>
-  <a href='void.html'>void</a> <strong>endElement</strong>();</span><span class=def>
-  <a href='void.html'>void</a> <strong>endElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span>
+  <span class=primitive>undefined</span> <strong>beginElement</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>beginElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>endElement</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>endElementAt</strong>(<span class=primitive>float</span> <strong>offset</strong>);</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
