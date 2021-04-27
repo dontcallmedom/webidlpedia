@@ -6,7 +6,30 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def><span class="comment">
+
+  &#x2F;&#x2F; lengthAdjust Types
+  </span>const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> &#x3D; 0;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> &#x3D; 1;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> &#x3D; 2;</span><span class=def>
+
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;</span><span class=def>
+
+  <span class=primitive>long</span> <strong>getNumberOfChars</strong>();</span><span class=def>
+  <span class=primitive>float</span> <strong>getComputedTextLength</strong>();</span><span class=def>
+  <span class=primitive>float</span> <strong>getSubStringLength</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>, <span class=primitive>unsigned long</span> <strong>nchars</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
+  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
+  <span class=primitive>float</span> <strong>getRotationOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
+  <span class=primitive>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>selectSubString</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>, <span class=primitive>unsigned long</span> <strong>nchars</strong>);</span>
+};</span></code></pre><p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;text.html#InterfaceSVGTextContentElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGTextContentElement</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
@@ -37,7 +60,7 @@ interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.h
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li>
+    <li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li><li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li><li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li>
   </ul>
 </section>
   

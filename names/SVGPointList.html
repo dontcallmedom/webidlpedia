@@ -6,7 +6,24 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;shapes.html#InterfaceSVGPointList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGPointList</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGPointList</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>SVGPointList</strong> {<span class=def>
+
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfItems</strong>;</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>initialize</strong>(<a href='DOMPoint.html'>DOMPoint</a> <strong>newItem</strong>);</span><span class=def>
+  getter <a href='DOMPoint.html'>DOMPoint</a> <strong>getItem</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>insertItemBefore</strong>(<a href='DOMPoint.html'>DOMPoint</a> <strong>newItem</strong>, <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>replaceItem</strong>(<a href='DOMPoint.html'>DOMPoint</a> <strong>newItem</strong>, <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>removeItem</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>appendItem</strong>(<a href='DOMPoint.html'>DOMPoint</a> <strong>newItem</strong>);</span><span class=def>
+  <strong>setter</strong> <span class=primitive>undefined</span> (<span class=primitive>unsigned long</span> <strong>index</strong>, <a href='DOMPoint.html'>DOMPoint</a> <strong>newItem</strong>);</span>
+};</span></code></pre><p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;shapes.html#InterfaceSVGPointList">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGPointList</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
@@ -31,7 +48,7 @@ interface <strong>SVGPointList</strong> {<span class=def>
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGAnimatedPoints.html">SVGAnimatedPoints</a></li>
+    <li><a href="SVGAnimatedPoints.html">SVGAnimatedPoints</a></li><li><a href="SVGAnimatedPoints.html">SVGAnimatedPoints</a></li>
   </ul>
 </section>
   
