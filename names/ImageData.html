@@ -12,12 +12,13 @@ base: ../
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
  Serializable]
 interface <strong>ImageData</strong> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>unsigned long</span> <strong>sw</strong>, <span class=primitive>unsigned long</span> <strong>sh</strong>);</span><span class=def>
-  <strong>constructor</strong>(<span class=primitive>Uint8ClampedArray</span> <strong>data</strong>, <span class=primitive>unsigned long</span> <strong>sw</strong>, optional <span class=primitive>unsigned long</span> <strong>sh</strong>);</span><span class=def>
+  <strong>constructor</strong>(<span class=primitive>unsigned long</span> <strong>sw</strong>, <span class=primitive>unsigned long</span> <strong>sh</strong>, optional <a href='ImageDataSettings.html'>ImageDataSettings</a> <strong>settings</strong> &#x3D; {});</span><span class=def>
+  <strong>constructor</strong>(<span class=primitive>Uint8ClampedArray</span> <strong>data</strong>, <span class=primitive>unsigned long</span> <strong>sw</strong>, optional <span class=primitive>unsigned long</span> <strong>sh</strong>, optional <a href='ImageDataSettings.html'>ImageDataSettings</a> <strong>settings</strong> &#x3D; {});</span><span class=def>
 
   readonly attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>Uint8ClampedArray</span> <strong>data</strong>;</span>
+  readonly attribute <span class=primitive>Uint8ClampedArray</span> <strong>data</strong>;</span><span class=def>
+  readonly attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>colorSpace</strong>;</span>
 };</span></code></pre>
   
   
