@@ -21,8 +21,29 @@ interface <strong>KeyframeEffect</strong> : <a href='AnimationEffect.html'>Anima
     sequence&lt;<span class=primitive>object</span>&gt; <strong>getKeyframes</strong>();</span><span class=def>
     <span class=primitive>undefined</span>        <strong>setKeyframes</strong>(<span class=primitive>object</span>? <strong>keyframes</strong>);</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;#the-keyframeeffect-interface">Web Animations Level 2</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>KeyframeEffect</strong> {<span class=def>
+    attribute <a href='IterationCompositeOperation.html'>IterationCompositeOperation</a>    <strong>iterationComposite</strong>;</span>
+};</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>KeyframeEffect</strong> : <a href='AnimationEffect.html'>AnimationEffect</a> {<span class=def>
+    <strong>constructor</strong>(<a href='Element.html'>Element</a>? <strong>target</strong>,
+                <span class=primitive>object</span>? <strong>keyframes</strong>,
+                optional (<span class=primitive>unrestricted double</span> or <a href='KeyframeEffectOptions.html'>KeyframeEffectOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
+    <strong>constructor</strong>(<a href='KeyframeEffect.html'>KeyframeEffect</a> <strong>source</strong>);</span><span class=def>
+    attribute <a href='Element.html'>Element</a>?           <strong>target</strong>;</span><span class=def>
+    attribute <a href='CSSOMString.html'>CSSOMString</a>?       <strong>pseudoElement</strong>;</span><span class=def>
+    attribute <a href='CompositeOperation.html'>CompositeOperation</a> <strong>composite</strong>;</span><span class=def>
+    sequence&lt;<span class=primitive>object</span>&gt; <strong>getKeyframes</strong>();</span><span class=def>
+    <span class=primitive>undefined</span>        <strong>setKeyframes</strong>(<span class=primitive>object</span>? <strong>keyframes</strong>);</span><span class=def>
+    attribute <a href='IterationCompositeOperation.html'>IterationCompositeOperation</a>    <strong>iterationComposite</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
@@ -31,4 +52,7 @@ interface <strong>KeyframeEffect</strong> : <a href='AnimationEffect.html'>Anima
     <li><a href="KeyframeEffect.html">KeyframeEffect</a></li>
   </ul>
 </section>
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;">Web Animations Level 2</a> refers to <code>KeyframeEffect</code></li>
+  </ul></section>
