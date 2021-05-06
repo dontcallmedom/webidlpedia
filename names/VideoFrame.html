@@ -11,12 +11,12 @@ base: ../
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>)]
 interface <strong>VideoFrame</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='ImageBitmap.html'>ImageBitmap</a> <strong>imageBitmap</strong>, optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>frameInit</strong> &#x3D; {});</span><span class=def>
-  <strong>constructor</strong>(<a href='PixelFormat.html'>PixelFormat</a> <strong>pixelFormat</strong>, sequence&lt;(<a href='Plane.html'>Plane</a> or <a href='PlaneInit.html'>PlaneInit</a>)&gt; <strong>planes</strong>,
-              optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>frameInit</strong> &#x3D; {});</span><span class=def>
+  <strong>constructor</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+  <strong>constructor</strong>(sequence&lt;(<a href='Plane.html'>Plane</a> or <a href='PlaneInit.html'>PlaneInit</a>)&gt; <strong>planes</strong>,
+              <a href='VideoFramePlaneInit.html'>VideoFramePlaneInit</a> <strong>init</strong>);</span><span class=def>
 
   readonly attribute <a href='PixelFormat.html'>PixelFormat</a> <strong>format</strong>;</span><span class=def>
-  readonly attribute FrozenArray&lt;<a href='Plane.html'>Plane</a>&gt; <strong>planes</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<a href='Plane.html'>Plane</a>&gt;? <strong>planes</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>codedWidth</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>codedHeight</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>cropLeft</strong>;</span><span class=def>
@@ -28,12 +28,8 @@ interface <strong>VideoFrame</strong> {<span class=def>
   readonly attribute <span class=primitive>unsigned long long</span>? <strong>duration</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long long</span>? <strong>timestamp</strong>;</span><span class=def>
 
-  <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def>
   <a href='VideoFrame.html'>VideoFrame</a> <strong>clone</strong>();</span><span class=def>
-
-  Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(
-    optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span>
-
+  <span class=primitive>undefined</span> <strong>close</strong>();</span>
 };</span></code></pre>
   
   
