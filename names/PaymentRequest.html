@@ -16,8 +16,7 @@ base: ../
 interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
   <strong>constructor</strong>(
     sequence&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>,
-    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>,
-    optional <a href='PaymentOptions.html'>PaymentOptions</a> <strong>options</strong> &#x3D; {}
+    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>
   );</span><span class=def>
   [NewObject]
   Promise&lt;<a href='PaymentResponse.html'>PaymentResponse</a>&gt; <strong>show</strong>(optional Promise&lt;<a href='PaymentDetailsUpdate.html'>PaymentDetailsUpdate</a>&gt; <strong>detailsPromise</strong>);</span><span class=def>
@@ -27,12 +26,7 @@ interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarg
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>canMakePayment</strong>();</span><span class=def>
 
   readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
-  readonly attribute <a href='PaymentAddress.html'>PaymentAddress</a>? <strong>shippingAddress</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>shippingOption</strong>;</span><span class=def>
-  readonly attribute <a href='PaymentShippingType.html'>PaymentShippingType</a>? <strong>shippingType</strong>;</span><span class=def>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingaddresschange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onshippingoptionchange</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;</span>
 };</span></code></pre>
   
