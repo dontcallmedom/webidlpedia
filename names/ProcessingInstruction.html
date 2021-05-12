@@ -12,14 +12,27 @@ base: ../
 interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def>
   readonly attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
+
+<a href='ProcessingInstruction.html'>ProcessingInstruction</a> includes <a href='LinkStyle.html'>LinkStyle</a>;</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span><span class=def>
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
+    <li><a href="Document.html">Document</a></li><li><a href="StyleSheet.html">StyleSheet</a></li>
   </ul>
 </section>
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>ProcessingInstruction</code></li>
+  </ul></section>
