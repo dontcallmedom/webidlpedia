@@ -21,11 +21,14 @@ interface <strong>WebTransport</strong> {<span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;</span><span class=def>
 
   readonly attribute <span class=primitive>unsigned short</span> <strong>maxDatagramSize</strong>;</span><span class=def>
-  readonly attribute <a href='DatagramDuplexStream.html'>DatagramDuplexStream</a> <strong>datagrams</strong>;</span>
+  readonly attribute <a href='DatagramDuplexStream.html'>DatagramDuplexStream</a> <strong>datagrams</strong>;</span><span class=def>
+
+  Promise&lt;<a href='BidirectionalStream.html'>BidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def><span class="comment">
+  &#x2F;* a ReadableStream of BidirectionalStream objects *&#x2F;
+  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span>
 };</span><span class=def>
 
-<a href='WebTransport.html'>WebTransport</a> includes <a href='UnidirectionalStreamsTransport.html'>UnidirectionalStreamsTransport</a>;</span><span class=def>
-<a href='WebTransport.html'>WebTransport</a> includes <a href='BidirectionalStreamsTransport.html'>BidirectionalStreamsTransport</a>;</span></code></pre>
+<a href='WebTransport.html'>WebTransport</a> includes <a href='UnidirectionalStreamsTransport.html'>UnidirectionalStreamsTransport</a>;</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
@@ -42,12 +45,13 @@ interface <strong>WebTransport</strong> {<span class=def>
 
   readonly attribute <span class=primitive>unsigned short</span> <strong>maxDatagramSize</strong>;</span><span class=def>
   readonly attribute <a href='DatagramDuplexStream.html'>DatagramDuplexStream</a> <strong>datagrams</strong>;</span><span class=def>
+
+  Promise&lt;<a href='BidirectionalStream.html'>BidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def><span class="comment">
+  &#x2F;* a ReadableStream of BidirectionalStream objects *&#x2F;
+  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span><span class=def>
   Promise&lt;<a href='SendStream.html'>SendStream</a>&gt; <strong>createUnidirectionalStream</strong>(optional <a href='SendStreamParameters.html'>SendStreamParameters</a> <strong>parameters</strong> &#x3D; {});</span><span class=def><span class="comment">
   &#x2F;* a ReadableStream of ReceiveStream objects *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span><span class=def>
-    Promise&lt;<a href='BidirectionalStream.html'>BidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def><span class="comment">
-    &#x2F;* a ReadableStream of BidirectionalStream objects *&#x2F;
-    </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span>
+  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span>
 };</span></code></pre></details>
 </section>
 
