@@ -1,12 +1,90 @@
 ---
-title: <code>DOMMatrixReadOnly</code> undefined
+title: <code>DOMMatrixReadOnly</code> interface
 layout: base
 base: ../
 ---
 
 <section>
   <h3>Definition</h3>
-  
+  <p><a href="https:&#x2F;&#x2F;drafts.fxtf.org&#x2F;geometry&#x2F;#dommatrixreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMMatrixReadOnly</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+ Serializable]
+interface <strong>DOMMatrixReadOnly</strong> {<span class=def>
+    <strong>constructor</strong>(optional (<span class=primitive>DOMString</span> or sequence&lt;<span class=primitive>unrestricted double</span>&gt;) <strong>init</strong>);</span><span class=def>
+
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromMatrix</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromFloat32Array</strong>(<span class=primitive>Float32Array</span> <strong>array32</strong>);</span><span class=def>
+    [NewObject] static <a href='DOMMatrixReadOnly.html'>DOMMatrixReadOnly</a> <strong>fromFloat64Array</strong>(<span class=primitive>Float64Array</span> <strong>array64</strong>);</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; These attributes are simple aliases for certain elements of the 4x4 matrix
+    </span>readonly attribute <span class=primitive>unrestricted double</span> <strong>a</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>b</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>c</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>d</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>e</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>f</strong>;</span><span class=def>
+
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m11</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m12</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m13</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m14</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m21</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m22</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m23</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m24</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m31</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m32</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m33</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m34</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m41</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m42</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m43</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>m44</strong>;</span><span class=def>
+
+    readonly attribute <span class=primitive>boolean</span> <strong>is2D</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>boolean</span> <strong>isIdentity</strong>;</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; Immutable transform methods
+    </span>[NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>translate</strong>(optional <span class=primitive>unrestricted double</span> <strong>tx</strong> &#x3D; 0,
+                                    optional <span class=primitive>unrestricted double</span> <strong>ty</strong> &#x3D; 0,
+                                    optional <span class=primitive>unrestricted double</span> <strong>tz</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale</strong>(optional <span class=primitive>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
+                                optional <span class=primitive>unrestricted double</span> <strong>scaleY</strong>,
+                                optional <span class=primitive>unrestricted double</span> <strong>scaleZ</strong> &#x3D; 1,
+                                optional <span class=primitive>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                                optional <span class=primitive>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                                optional <span class=primitive>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scaleNonUniform</strong>(optional <span class=primitive>unrestricted double</span> <strong>scaleX</strong> &#x3D; 1,
+                                          optional <span class=primitive>unrestricted double</span> <strong>scaleY</strong> &#x3D; 1);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>scale3d</strong>(optional <span class=primitive>unrestricted double</span> <strong>scale</strong> &#x3D; 1,
+                                  optional <span class=primitive>unrestricted double</span> <strong>originX</strong> &#x3D; 0,
+                                  optional <span class=primitive>unrestricted double</span> <strong>originY</strong> &#x3D; 0,
+                                  optional <span class=primitive>unrestricted double</span> <strong>originZ</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotate</strong>(optional <span class=primitive>unrestricted double</span> <strong>rotX</strong> &#x3D; 0,
+                                 optional <span class=primitive>unrestricted double</span> <strong>rotY</strong>,
+                                 optional <span class=primitive>unrestricted double</span> <strong>rotZ</strong>);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateFromVector</strong>(optional <span class=primitive>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                           optional <span class=primitive>unrestricted double</span> <strong>y</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>rotateAxisAngle</strong>(optional <span class=primitive>unrestricted double</span> <strong>x</strong> &#x3D; 0,
+                                          optional <span class=primitive>unrestricted double</span> <strong>y</strong> &#x3D; 0,
+                                          optional <span class=primitive>unrestricted double</span> <strong>z</strong> &#x3D; 0,
+                                          optional <span class=primitive>unrestricted double</span> <strong>angle</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewX</strong>(optional <span class=primitive>unrestricted double</span> <strong>sx</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>skewY</strong>(optional <span class=primitive>unrestricted double</span> <strong>sy</strong> &#x3D; 0);</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>multiply</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>flipX</strong>();</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>flipY</strong>();</span><span class=def>
+    [NewObject] <a href='DOMMatrix.html'>DOMMatrix</a> <strong>inverse</strong>();</span><span class=def>
+
+    [NewObject] <a href='DOMPoint.html'>DOMPoint</a> <strong>transformPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def>
+    [NewObject] <span class=primitive>Float32Array</span> <strong>toFloat32Array</strong>();</span><span class=def>
+    [NewObject] <span class=primitive>Float64Array</span> <strong>toFloat64Array</strong>();</span><span class=def>
+
+    [Exposed&#x3D;<a href='Window.html'>Window</a>] <strong>stringifier</strong>;</span><span class=def>
+    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
+};</span></code></pre>
   
   
 </section>
@@ -14,7 +92,7 @@ base: ../
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSMatrixComponent.html">CSSMatrixComponent</a></li>
+    <li><a href="CSSMatrixComponent.html">CSSMatrixComponent</a></li><li><a href="DOMMatrixReadOnly.html">DOMMatrixReadOnly</a></li><li><a href="DOMMatrix.html">DOMMatrix</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
