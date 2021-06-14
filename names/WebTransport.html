@@ -25,34 +25,14 @@ interface <strong>WebTransport</strong> {<span class=def>
 
   Promise&lt;<a href='BidirectionalStream.html'>BidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def><span class="comment">
   &#x2F;* a ReadableStream of BidirectionalStream objects *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span>
-};</span><span class=def>
-
-<a href='WebTransport.html'>WebTransport</a> includes <a href='UnidirectionalStreamsTransport.html'>UnidirectionalStreamsTransport</a>;</span></code></pre>
-  
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
-interface <strong>WebTransport</strong> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-
-  Promise&lt;<a href='WebTransportStats.html'>WebTransportStats</a>&gt; <strong>getStats</strong>();</span><span class=def>
-  readonly attribute <a href='WebTransportState.html'>WebTransportState</a> <strong>state</strong>;</span><span class=def>
-  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>ready</strong>;</span><span class=def>
-  readonly attribute Promise&lt;<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>&gt; <strong>closed</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> &#x3D; {});</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstatechange</strong>;</span><span class=def>
-
-  readonly attribute <span class=primitive>unsigned short</span> <strong>maxDatagramSize</strong>;</span><span class=def>
-  readonly attribute <a href='DatagramDuplexStream.html'>DatagramDuplexStream</a> <strong>datagrams</strong>;</span><span class=def>
-
-  Promise&lt;<a href='BidirectionalStream.html'>BidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def><span class="comment">
-  &#x2F;* a ReadableStream of BidirectionalStream objects *&#x2F;
   </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span><span class=def>
+
   Promise&lt;<a href='SendStream.html'>SendStream</a>&gt; <strong>createUnidirectionalStream</strong>(optional <a href='SendStreamParameters.html'>SendStreamParameters</a> <strong>parameters</strong> &#x3D; {});</span><span class=def><span class="comment">
   &#x2F;* a ReadableStream of ReceiveStream objects *&#x2F;
   </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span>
-};</span></code></pre></details>
+};</span></code></pre>
+  
+  
 </section>
 
   
