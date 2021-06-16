@@ -6,48 +6,7 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
-<pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def>
-
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;</span><span class=def>
-
-  attribute <span class=primitive>float</span> <strong>currentScale</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;</span><span class=def>
-
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def>
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);</span><span class=def>
-
-  <span class=primitive>undefined</span> <strong>deselectAll</strong>();</span><span class=def>
-
-  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();</span><span class=def>
-  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();</span><span class=def>
-  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();</span><span class=def>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();</span><span class=def>
-  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();</span><span class=def>
-  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();</span><span class=def>
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();</span><span class=def>
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def>
-
-  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def><span class="comment">
-
-  &#x2F;&#x2F; Deprecated methods that have no effect when called,
-  &#x2F;&#x2F; but which are kept for compatibility reasons.
-  </span><span class=primitive>unsigned long</span> <strong>suspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>unsuspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>unsuspendRedrawAll</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>forceRedraw</strong>();</span>
-};</span><span class=def>
-
-<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='SVGFitToViewBox.html'>SVGFitToViewBox</a>;</span><span class=def>
-<a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;</span></code></pre><p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
+  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
@@ -140,61 +99,6 @@ interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVG
   <span class=primitive>undefined</span> <strong>forceRedraw</strong>();</span><span class=def>
   [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def>
-  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def>
-
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>x</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>y</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>width</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>height</strong>;</span><span class=def>
-
-  attribute <span class=primitive>float</span> <strong>currentScale</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>currentTranslate</strong>;</span><span class=def>
-
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def>
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>);</span><span class=def>
-
-  <span class=primitive>undefined</span> <strong>deselectAll</strong>();</span><span class=def>
-
-  <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();</span><span class=def>
-  <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();</span><span class=def>
-  <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();</span><span class=def>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>createSVGPoint</strong>();</span><span class=def>
-  <a href='DOMMatrix.html'>DOMMatrix</a> <strong>createSVGMatrix</strong>();</span><span class=def>
-  <a href='DOMRect.html'>DOMRect</a> <strong>createSVGRect</strong>();</span><span class=def>
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();</span><span class=def>
-  <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def>
-
-  <a href='Element.html'>Element</a> <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def><span class="comment">
-
-  &#x2F;&#x2F; Deprecated methods that have no effect when called,
-  &#x2F;&#x2F; but which are kept for compatibility reasons.
-  </span><span class=primitive>unsigned long</span> <strong>suspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>unsuspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>unsuspendRedrawAll</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>forceRedraw</strong>();</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def>
   attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def>
@@ -222,7 +126,7 @@ interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVG
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGElement.html">SVGElement</a></li><li><a href="Document.html">Document</a></li><li><a href="SVGElement.html">SVGElement</a></li><li><a href="Document.html">Document</a></li>
+    <li><a href="SVGElement.html">SVGElement</a></li><li><a href="Document.html">Document</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
