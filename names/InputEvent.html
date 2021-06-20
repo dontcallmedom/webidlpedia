@@ -16,8 +16,32 @@ interface <strong>InputEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<spa
   readonly attribute <span class=primitive>boolean</span> <strong>isComposing</strong>;</span><span class=def>
   readonly attribute <span class=primitive>DOMString</span> <strong>inputType</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;input-events-2&#x2F;#interface-InputEvent-Attributes">Input Events Level 2</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+&#x2F;&#x2F; Content was automatically extracted by Reffy into webref
+&#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
+&#x2F;&#x2F; Source: Input Events Level 2 (https:&#x2F;&#x2F;w3c.github.io&#x2F;input-events&#x2F;)
+
+</span>partial interface <strong>InputEvent</strong> {<span class=def>
+   readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;</span><span class=def>
+   sequence&lt;<a href='StaticRange.html'>StaticRange</a>&gt; <strong>getTargetRanges</strong>();</span>
+};</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>InputEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='InputEventInit.html'>InputEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>data</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isComposing</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>inputType</strong>;</span><span class=def>
+   readonly attribute <a href='DataTransfer.html'>DataTransfer</a>? <strong>dataTransfer</strong>;</span><span class=def>
+   sequence&lt;<a href='StaticRange.html'>StaticRange</a>&gt; <strong>getTargetRanges</strong>();</span>
+};</span></code></pre></details>
 </section>
 
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;input-events-2&#x2F;">Input Events Level 2</a> refers to <code>InputEvent</code></li>
+  </ul></section>
