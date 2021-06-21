@@ -65,6 +65,20 @@ partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
 
 </span>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;#oncanmakepayment-attribute">Payment Handler API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span>
+};</span><span class=def>
+
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;#extensions-to-the-serviceworkerglobalscope-interface">Push API</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
 };</span></code></pre></li>
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -94,11 +108,15 @@ interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
 };</span></code></pre></details>
 </section>
 
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;">Background Fetch</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;">Web Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;">Content Index</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li>
+    <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;">Background Fetch</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;">Web Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;">Content Index</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;">Payment Handler API</a> refers to <code>ServiceWorkerGlobalScope</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;">Push API</a> refers to <code>ServiceWorkerGlobalScope</code></li>
   </ul></section>
