@@ -118,7 +118,9 @@ partial interface <strong>Navigator</strong> {<span class=def>
 
 partial interface <strong>Navigator</strong> {<span class=def>
   [SecureContext, SameObject] readonly attribute <a href='CredentialsContainer.html'>CredentialsContainer</a> <strong>credentials</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-posture&#x2F;#extensions-to-the-navigator-interface">Device Posture API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-memory-1&#x2F;">Device Memory 1</a><pre class=webidl><code><span class=def>
+
+<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorDeviceMemory.html'>NavigatorDeviceMemory</a>;</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-posture&#x2F;#extensions-to-the-navigator-interface">Device Posture API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
 &#x2F;&#x2F; Source: Device Posture API (https:&#x2F;&#x2F;w3c.github.io&#x2F;device-posture&#x2F;)
@@ -276,6 +278,7 @@ interface <strong>Navigator</strong> {<span class=def>
     <span class=primitive>boolean</span> <strong>sendBeacon</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='BodyInit.html'>BodyInit</a>? <strong>data</strong> &#x3D; null);</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='CredentialsContainer.html'>CredentialsContainer</a> <strong>credentials</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>double</span> <strong>deviceMemory</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='DevicePosture.html'>DevicePosture</a> <strong>devicePosture</strong>;</span><span class=def>
     [SecureContext] Promise&lt;<a href='MediaKeySystemAccess.html'>MediaKeySystemAccess</a>&gt; <strong>requestMediaKeySystemAccess</strong> (<span class=primitive>DOMString</span> <strong>keySystem</strong>, sequence&lt;<a href='MediaKeySystemConfiguration.html'>MediaKeySystemConfiguration</a>&gt; <strong>supportedConfigurations</strong>);</span><span class=def>
   sequence&lt;<a href='Gamepad.html'>Gamepad</a>?&gt; <strong>getGamepads</strong>();</span><span class=def>
