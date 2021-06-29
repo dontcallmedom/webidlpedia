@@ -42,7 +42,7 @@ const htmlList = items => html`
     ${items.map(item => html`<li>${item}</li>`)}
   </ul>`;
 
-function fullList(data, used_by) {
+function fullList(data, used_by, exposed_on) {
   let sections = [];
   [{type:"interface", title: "Interfaces"}, {type:"interface mixin", title: "Interface Mixins"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}, {type:"callback", title: "Callbacks"}, {type: "namespace", title: "Namespaces"}].forEach(
       type => {
@@ -56,7 +56,8 @@ function fullList(data, used_by) {
         const list = htmlList(names.map(name => {
           const usage = used_by[name] ? used_by[name].length : 0;
           const link = htmlLink(name, name + ".html");
-          return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span>`;
+          const exposed = (exposed_on[name] || []).map(n => html`<span class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet')}" title="exposed on ${n}">${n}</span>`);
+          return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span> ${exposed}`;
         }));
         sections.push(htmlSection(type.title, list));
       });
@@ -164,7 +165,7 @@ function interfaceDetails(data, name, used_by, templates) {
 
   let consolidatedDef = html``;
   if (needsConsolidation) {
-    consolidatedDef = html`<details><summary>Consolidated IDL (across ${consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
+    consolidatedDef = html`<details><summary>Consolidated IDL (across ${consolidatedIdlDef && consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
   }
 
   let usedBy = html``;
@@ -293,10 +294,24 @@ fs.promises.readFile("./webref/ed/index.json", "utf-8")
   .then(async jsonIndex => {
     const index = JSON.parse(jsonIndex);
     const {results} = await expandCrawlResult(index, './webref/ed/');
+    let exposed_on = {};
     let used_by = {};
     results.forEach(s => {
       if (s.idl && s.idl.idlNames) {
-        Object.keys(s.idl.idlNames).forEach(n => { if (!used_by[n]) used_by[n] = [];});
+        Object.keys(s.idl.idlNames).forEach(n => {
+          if (!used_by[n]) used_by[n] = [];
+          if (s.idl.idlNames[n].type === "interface") {
+            exposed_on[n] = ["Window"]; // default if no ext attr specified
+            let exposedEA;
+            if (s.idl.idlNames[n].extAttrs && (exposedEA = s.idl.idlNames[n].extAttrs.find(ea => ea.name = "Exposed")) && exposedEA.rhs) {
+              if (Array.isArray(exposedEA.rhs.value)) {
+                exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
+              } else if (exposedEA.rhs.value) {
+                exposed_on[n] = [exposedEA.rhs.value];
+              }
+            }
+          }
+        });
         Object.keys(s.idl.dependencies).forEach( n => {
           s.idl.dependencies[n].forEach(d => {
             if (!used_by[d]) {
@@ -309,7 +324,7 @@ fs.promises.readFile("./webref/ed/index.json", "utf-8")
     });
 
     // Generating referenceable names page
-    generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by));
+    generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by, exposed_on));
 
     const webidlTemplate = {
       wrap: items => html.join(items, ''),
