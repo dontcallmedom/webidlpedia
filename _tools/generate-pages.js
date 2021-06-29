@@ -264,7 +264,7 @@ function memberNames(data, sort) {
         .map(spec =>
              Object.keys(spec.idl.idlNames)
              .filter(n => n!=="_dependencies")
-             .filter(n => ["interface", "dictionary"].includes(spec.idl.idlNames[n].type))
+             .filter(n => ["interface", "interface mixin", "dictionary"].includes(spec.idl.idlNames[n].type))
              .map(n => spec.idl.idlNames[n].members.filter(v => v.name)
                   .map(v =>
                        {return {url: spec.url,title: spec.title, containerType: spec.idl.idlNames[n].type, containerName: n, value: v.name, type: v.type};})
