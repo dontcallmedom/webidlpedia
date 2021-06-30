@@ -237,10 +237,10 @@ function extAttrUsage(data) {
              Object.keys(spec.idl.idlNames)
              .filter(n => n!=="_dependencies")
              .map(n => (spec.idl.idlNames[n].extAttrs || []).map(
-               e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='../names/${n}.html'>${n}</a>`, type: spec.idl.idlNames[n].type} };}
+               e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>`, type: spec.idl.idlNames[n].type} };}
              )
                   .concat((spec.idl.idlNames[n].members || []).map(
-                    m => (m.extAttrs || []).map( e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='../names/${n}.html'>${n}</a>${m.name ? "." + m.name : ""}`, type: m.type}};}).reduce((a,b) => a.concat(b), [])))
+                    m => (m.extAttrs || []).map( e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>${m.name ? "." + m.name : ""}`, type: m.type}};}).reduce((a,b) => a.concat(b), [])))
                   .reduce((a,b) => a.concat(b), []))
              // TODO missing extended attributes on arguments, types (?)
                   ).reduce((a,b) => a.concat(b), [])
@@ -283,7 +283,7 @@ function memberNames(data, sort) {
   let list = [];
   uniqueMemberNames.forEach(e => {
     let specList = e.specs.map(s =>
-      html`used as <strong>${s.type}</strong> in ${s.containerType} <code><a href="../names/${s.containerName}.html">${s.containerName}</a></code> in <a href="${s.url}">${s.title}</a>`
+      html`used as <strong>${s.type}</strong> in ${s.containerType} <code><a href="names/${s.containerName}.html">${s.containerName}</a></code> in <a href="${s.url}">${s.title}</a>`
                               );
     list.push(html`<code>${e.value}</code>${htmlList(specList)}`);
   });
