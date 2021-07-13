@@ -9,8 +9,10 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpupresentationcontext">WebGPU</a> defines <code>GPUPresentationContext</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a href='Window.html'>Window</a>]
+[Exposed&#x3D;(<a href='Window.html'>Window</a>, <span class=primitive>DedicatedWorker</span>)]
 interface <strong>GPUPresentationContext</strong> {<span class=def>
+    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def>
+
     <span class=primitive>undefined</span> <strong>configure</strong>(<a href='GPUPresentationConfiguration.html'>GPUPresentationConfiguration</a> <strong>configuration</strong>);</span><span class=def>
     <span class=primitive>undefined</span> <strong>unconfigure</strong>();</span><span class=def>
 
