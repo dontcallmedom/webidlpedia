@@ -12,11 +12,14 @@ base: ../
 [SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
   </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>float</span>? <strong>frameRate</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>Float32Array</span>? <strong>supportedFrameRates</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Methods
   </span><span class=primitive>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>updateTargetFrameRate</strong>(<span class=primitive>float</span> <strong>rate</strong>);</span><span class=def>
   [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);</span><span class=def>
 
   <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
@@ -33,7 +36,8 @@ base: ../
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueeze</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onframeratechange</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -73,11 +77,14 @@ partial interface <strong>XRSession</strong> {<span class=def><span class="comme
 [SecureContext, Exposed&#x3D;<a href='Window.html'>Window</a>] interface <strong>XRSession</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
   </span>readonly attribute <a href='XRVisibilityState.html'>XRVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>float</span>? <strong>frameRate</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>Float32Array</span>? <strong>supportedFrameRates</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='XRRenderState.html'>XRRenderState</a> <strong>renderState</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='XRInputSourceArray.html'>XRInputSourceArray</a> <strong>inputSources</strong>;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; Methods
   </span><span class=primitive>undefined</span> <strong>updateRenderState</strong>(optional <a href='XRRenderStateInit.html'>XRRenderStateInit</a> <strong>state</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>updateTargetFrameRate</strong>(<span class=primitive>float</span> <strong>rate</strong>);</span><span class=def>
   [NewObject] Promise&lt;<a href='XRReferenceSpace.html'>XRReferenceSpace</a>&gt; <strong>requestReferenceSpace</strong>(<a href='XRReferenceSpaceType.html'>XRReferenceSpaceType</a> <strong>type</strong>);</span><span class=def>
 
   <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='XRFrameRequestCallback.html'>XRFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
@@ -95,6 +102,7 @@ partial interface <strong>XRSession</strong> {<span class=def><span class="comme
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onframeratechange</strong>;</span><span class=def>
   readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def>
   readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span><span class=def>
   readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span><span class=def>
