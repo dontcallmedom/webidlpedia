@@ -56,7 +56,15 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <a href='Document.html'>Document</a> includes <a href='XPathEvaluatorBase.html'>XPathEvaluatorBase</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;#api">Fullscreen API Standard</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+&#x2F;&#x2F; Content was automatically extracted by Reffy into webref
+&#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
+&#x2F;&#x2F; Source: Font Metrics API Level 1 (https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;)
+
+</span>partial interface <strong>Document</strong> {<span class=def>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;#api">Fullscreen API Standard</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def>
   [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def>
@@ -159,7 +167,24 @@ partial interface <strong>Document</strong> {<span class=def>
 
 partial interface <strong>Document</strong> {<span class=def>
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;page-visibility-2&#x2F;#hidden-attribute">Page Visibility Level 2</a><pre class=webidl><code><span class=def>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-font-loading-3&#x2F;">CSS Font Loading Module Level 3</a><pre class=webidl><code><span class=def>
+
+<a href='Document.html'>Document</a> includes <a href='FontFaceSource.html'>FontFaceSource</a>;</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;#the-namedflow-interface">CSS Regions Module Level 1</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+&#x2F;&#x2F; Content was automatically extracted by Reffy into webref
+&#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
+&#x2F;&#x2F; Source: CSS Regions Module Level 1 (https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-regions&#x2F;)
+
+</span>partial interface <strong>Document</strong> {<span class=def>
+  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def>
+  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span>
+};</span><span class=def>
+<a href='Document.html'>Document</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;page-visibility-2&#x2F;#hidden-attribute">Page Visibility Level 2</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def>
   readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
@@ -189,6 +214,10 @@ partial interface <strong>Document</strong> {<span class=def>
 
 partial interface <strong>Document</strong> {<span class=def>
   readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;#extensions-to-the-document-interface">Web Animations</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def>
+    readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;</span>
 };</span></code></pre></li>
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -249,6 +278,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def><span class="comment">
   &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
   </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span><span class=def>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span><span class=def>
   [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def>
   [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; historical
 
@@ -389,6 +420,16 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def>
     readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def>
+  readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def>
+  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def>
+  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span><span class=def>
+  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
   readonly attribute <a href='VisibilityState.html'>VisibilityState</a> <strong>visibilityState</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
@@ -400,7 +441,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def>
   <span class=primitive>undefined</span> <strong>exitPointerLock</strong>();</span><span class=def>
   <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def>
-  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span>
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span><span class=def>
+    readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -412,5 +454,5 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;floc&#x2F;">Federated Learning of Cohorts</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;">Text Fragments</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;intersection-observer&#x2F;">Intersection Observer</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;page-visibility-2&#x2F;">Page Visibility Level 2</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;">Pointer Lock 2.0</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;xhr.spec.whatwg.org&#x2F;">XMLHttpRequest Standard</a> refers to <code>Document</code></li>
+    <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;floc&#x2F;">Federated Learning of Cohorts</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;">Text Fragments</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;">CSS Regions Module Level 1</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;intersection-observer&#x2F;">Intersection Observer</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;page-visibility-2&#x2F;">Page Visibility Level 2</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;">Pointer Lock 2.0</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;">Web Animations</a> refers to <code>Document</code></li><li><a href="https:&#x2F;&#x2F;xhr.spec.whatwg.org&#x2F;">XMLHttpRequest Standard</a> refers to <code>Document</code></li>
   </ul></section>

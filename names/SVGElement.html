@@ -25,7 +25,12 @@ interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<spa
 <a href='SVGElement.html'>SVGElement</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;</span><span class=def>
 <a href='SVGElement.html'>SVGElement</a> includes <a href='SVGElementInstance.html'>SVGElementInstance</a>;</span><span class=def>
 <a href='SVGElement.html'>SVGElement</a> includes <a href='HTMLOrSVGElement.html'>HTMLOrSVGElement</a>;</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
+
+<a href='SVGElement.html'>SVGElement</a> includes <a href='ElementCSSInlineStyle.html'>ElementCSSInlineStyle</a>;</span></code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
@@ -115,17 +120,18 @@ interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<spa
   </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def>
   [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def>
   <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>blur</strong>();</span>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def>
+  [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGAnimationElement.html">SVGAnimationElement</a></li><li><a href="SVGMPathElement.html">SVGMPathElement</a></li><li><a href="SVGElement.html">SVGElement</a></li><li><a href="SVGGraphicsElement.html">SVGGraphicsElement</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li><li><a href="SVGDescElement.html">SVGDescElement</a></li><li><a href="SVGMetadataElement.html">SVGMetadataElement</a></li><li><a href="SVGTitleElement.html">SVGTitleElement</a></li><li><a href="SVGUseElement.html">SVGUseElement</a></li><li><a href="SVGElementInstance.html">SVGElementInstance</a></li><li><a href="SVGStyleElement.html">SVGStyleElement</a></li><li><a href="SVGMarkerElement.html">SVGMarkerElement</a></li><li><a href="SVGGradientElement.html">SVGGradientElement</a></li><li><a href="SVGStopElement.html">SVGStopElement</a></li><li><a href="SVGPatternElement.html">SVGPatternElement</a></li><li><a href="SVGScriptElement.html">SVGScriptElement</a></li><li><a href="SVGViewElement.html">SVGViewElement</a></li>
+    <li><a href="SVGAnimationElement.html">SVGAnimationElement</a></li><li><a href="SVGMPathElement.html">SVGMPathElement</a></li><li><a href="SVGClipPathElement.html">SVGClipPathElement</a></li><li><a href="SVGMaskElement.html">SVGMaskElement</a></li><li><a href="SVGFilterElement.html">SVGFilterElement</a></li><li><a href="SVGFEBlendElement.html">SVGFEBlendElement</a></li><li><a href="SVGFEColorMatrixElement.html">SVGFEColorMatrixElement</a></li><li><a href="SVGFEComponentTransferElement.html">SVGFEComponentTransferElement</a></li><li><a href="SVGComponentTransferFunctionElement.html">SVGComponentTransferFunctionElement</a></li><li><a href="SVGFECompositeElement.html">SVGFECompositeElement</a></li><li><a href="SVGFEConvolveMatrixElement.html">SVGFEConvolveMatrixElement</a></li><li><a href="SVGFEDiffuseLightingElement.html">SVGFEDiffuseLightingElement</a></li><li><a href="SVGFEDistantLightElement.html">SVGFEDistantLightElement</a></li><li><a href="SVGFEPointLightElement.html">SVGFEPointLightElement</a></li><li><a href="SVGFESpotLightElement.html">SVGFESpotLightElement</a></li><li><a href="SVGFEDisplacementMapElement.html">SVGFEDisplacementMapElement</a></li><li><a href="SVGFEDropShadowElement.html">SVGFEDropShadowElement</a></li><li><a href="SVGFEFloodElement.html">SVGFEFloodElement</a></li><li><a href="SVGFEGaussianBlurElement.html">SVGFEGaussianBlurElement</a></li><li><a href="SVGFEImageElement.html">SVGFEImageElement</a></li><li><a href="SVGFEMergeElement.html">SVGFEMergeElement</a></li><li><a href="SVGFEMergeNodeElement.html">SVGFEMergeNodeElement</a></li><li><a href="SVGFEMorphologyElement.html">SVGFEMorphologyElement</a></li><li><a href="SVGFEOffsetElement.html">SVGFEOffsetElement</a></li><li><a href="SVGFESpecularLightingElement.html">SVGFESpecularLightingElement</a></li><li><a href="SVGFETileElement.html">SVGFETileElement</a></li><li><a href="SVGFETurbulenceElement.html">SVGFETurbulenceElement</a></li><li><a href="SVGElement.html">SVGElement</a></li><li><a href="SVGGraphicsElement.html">SVGGraphicsElement</a></li><li><a href="SVGSVGElement.html">SVGSVGElement</a></li><li><a href="SVGDescElement.html">SVGDescElement</a></li><li><a href="SVGMetadataElement.html">SVGMetadataElement</a></li><li><a href="SVGTitleElement.html">SVGTitleElement</a></li><li><a href="SVGUseElement.html">SVGUseElement</a></li><li><a href="SVGElementInstance.html">SVGElementInstance</a></li><li><a href="SVGStyleElement.html">SVGStyleElement</a></li><li><a href="SVGMarkerElement.html">SVGMarkerElement</a></li><li><a href="SVGGradientElement.html">SVGGradientElement</a></li><li><a href="SVGStopElement.html">SVGStopElement</a></li><li><a href="SVGPatternElement.html">SVGPatternElement</a></li><li><a href="SVGScriptElement.html">SVGScriptElement</a></li><li><a href="SVGViewElement.html">SVGViewElement</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>SVGElement</code></li>
+    <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>SVGElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-masking-1&#x2F;">CSS Masking Module Level 1</a> refers to <code>SVGElement</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;filter-effects-1&#x2F;">Filter Effects Module Level 1</a> refers to <code>SVGElement</code></li>
   </ul></section>
