@@ -10,7 +10,19 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
-interface <strong>ContactAddress</strong> : <a href='PaymentAddress.html'>PaymentAddress</a> {};</span></code></pre>
+interface <strong>ContactAddress</strong> {<span class=def>
+  [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>city</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>country</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>dependentLocality</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>organization</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>phone</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>postalCode</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>recipient</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>region</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>sortingCode</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>addressLine</strong>;</span>
+};</span></code></pre>
   
   
 </section>
