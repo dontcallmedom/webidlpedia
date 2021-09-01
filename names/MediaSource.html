@@ -9,7 +9,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-source&#x2F;#dom-mediasource">Media Source Extensions™</a> defines <code>MediaSource</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a href='Window.html'>Window</a>]
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>)]
 interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
     <strong>constructor</strong>();</span><span class=def>
     readonly        attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>sourceBuffers</strong>;</span><span class=def>
@@ -19,6 +19,7 @@ interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget<
                     attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceopen</strong>;</span><span class=def>
                     attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceended</strong>;</span><span class=def>
                     attribute <a href='EventHandler.html'>EventHandler</a>        <strong>onsourceclose</strong>;</span><span class=def>
+    static readonly attribute <span class=primitive>boolean</span> <strong>canConstructInDedicatedWorker</strong>;</span><span class=def>
     <a href='SourceBuffer.html'>SourceBuffer</a>   <strong>addSourceBuffer</strong> (<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def>
     <span class=primitive>undefined</span>           <strong>removeSourceBuffer</strong> (<a href='SourceBuffer.html'>SourceBuffer</a> <strong>sourceBuffer</strong>);</span><span class=def>
     <span class=primitive>undefined</span>           <strong>endOfStream</strong> (optional <a href='EndOfStreamError.html'>EndOfStreamError</a> <strong>error</strong>);</span><span class=def>
