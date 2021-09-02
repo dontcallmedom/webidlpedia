@@ -41,21 +41,7 @@ base: ../
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;depth-sensing&#x2F;#session-configuration">WebXR Depth Sensing Module</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>XRSession</strong> {<span class=def>
-  readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def>
-  readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;#xrsession">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>XRSession</strong> {<span class=def>
-  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;hit-test&#x2F;">WebXR Hit Test Module</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>XRSession</strong> {<span class=def>
-  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
-  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;lighting-estimation&#x2F;">WebXR Lighting Estimation API Level 1</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;lighting-estimation&#x2F;">WebXR Lighting Estimation API Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>XRSession</strong> {<span class=def>
   Promise&lt;<a href='XRLightProbe.html'>XRLightProbe</a>&gt; <strong>requestLightProbe</strong>(optional <a href='XRLightProbeInit.html'>XRLightProbeInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
@@ -70,6 +56,20 @@ partial interface <strong>XRSession</strong> {<span class=def><span class="comme
 partial interface <strong>XRSession</strong> {<span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
   </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;#session-configuration">WebXR Depth Sensing Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XRSession</strong> {<span class=def>
+  readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def>
+  readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-dom-overlays-1&#x2F;#xrsession">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XRSession</strong> {<span class=def>
+  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span>
+};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hit-test-1&#x2F;">WebXR Hit Test Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XRSession</strong> {<span class=def>
+  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
+  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span>
 };</span></code></pre></li>
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -103,17 +103,17 @@ partial interface <strong>XRSession</strong> {<span class=def><span class="comme
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onframeratechange</strong>;</span><span class=def>
-  readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def>
-  readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span><span class=def>
-  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span><span class=def>
-  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
-  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
   Promise&lt;<a href='XRLightProbe.html'>XRLightProbe</a>&gt; <strong>requestLightProbe</strong>(optional <a href='XRLightProbeInit.html'>XRLightProbeInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   readonly attribute <a href='XRReflectionFormat.html'>XRReflectionFormat</a> <strong>preferredReflectionFormat</strong>;</span><span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
   </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;</span><span class=def><span class="comment">
   &#x2F;&#x2F; Attributes
-  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span>
+  </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span><span class=def>
+  readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def>
+  readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span><span class=def>
+  readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span><span class=def>
+  Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def>
+  Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -125,5 +125,5 @@ partial interface <strong>XRSession</strong> {<span class=def><span class="comme
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;depth-sensing&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;dom-overlays&#x2F;">WebXR DOM Overlays Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;hit-test&#x2F;">WebXR Hit Test Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;lighting-estimation&#x2F;">WebXR Lighting Estimation API Level 1</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxrlayers-1&#x2F;">WebXR Layers API Level 1</a> refers to <code>XRSession</code></li>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;lighting-estimation&#x2F;">WebXR Lighting Estimation API Level 1</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-dom-overlays-1&#x2F;">WebXR DOM Overlays Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hit-test-1&#x2F;">WebXR Hit Test Module</a> refers to <code>XRSession</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxrlayers-1&#x2F;">WebXR Layers API Level 1</a> refers to <code>XRSession</code></li>
   </ul></section>
