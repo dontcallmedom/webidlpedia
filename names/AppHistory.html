@@ -1,0 +1,43 @@
+---
+title: <code>AppHistory</code> interface
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;#apphistory">App History API</a> defines <code>AppHistory</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>AppHistory</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+  sequence&lt;<a href='AppHistoryEntry.html'>AppHistoryEntry</a>&gt; <strong>entries</strong>();</span><span class=def>
+  readonly attribute <a href='AppHistoryEntry.html'>AppHistoryEntry</a>? <strong>current</strong>;</span><span class=def>
+  <span class=primitive>undefined</span> <strong>updateCurrent</strong>(<a href='AppHistoryUpdateCurrentOptions.html'>AppHistoryUpdateCurrentOptions</a> <strong>options</strong>);</span><span class=def>
+  readonly attribute <a href='AppHistoryTransition.html'>AppHistoryTransition</a>? <strong>transition</strong>;</span><span class=def>
+
+  readonly attribute <span class=primitive>boolean</span> <strong>canGoBack</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>canGoForward</strong>;</span><span class=def>
+
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>navigate</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='AppHistoryNavigateOptions.html'>AppHistoryNavigateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>reload</strong>(optional <a href='AppHistoryReloadOptions.html'>AppHistoryReloadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>goTo</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>back</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>forward</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigate</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigatesuccess</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigateerror</strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+  <h3>Refering IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><a href="Window.html">Window</a></li>
+  </ul>
+</section>
+  

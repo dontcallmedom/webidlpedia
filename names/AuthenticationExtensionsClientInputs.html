@@ -31,7 +31,14 @@ partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span 
 partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
     <a href='AuthenticationExtensionsLargeBlobInputs.html'>AuthenticationExtensionsLargeBlobInputs</a> <strong>largeBlob</strong>;</span>
 };</span></code></pre>
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <a href='AuthenticationExtensionsPaymentInputs.html'>AuthenticationExtensionsPaymentInputs</a> <strong>payment</strong>;</span>
+};</span></code></pre></li>
+  </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
 dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
@@ -39,14 +46,18 @@ dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=de
   <span class=primitive>USVString</span> <strong>appidExclude</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>uvm</strong>;</span><span class=def>
     <span class=primitive>boolean</span> <strong>credProps</strong>;</span><span class=def>
-    <a href='AuthenticationExtensionsLargeBlobInputs.html'>AuthenticationExtensionsLargeBlobInputs</a> <strong>largeBlob</strong>;</span>
+    <a href='AuthenticationExtensionsLargeBlobInputs.html'>AuthenticationExtensionsLargeBlobInputs</a> <strong>largeBlob</strong>;</span><span class=def>
+  <a href='AuthenticationExtensionsPaymentInputs.html'>AuthenticationExtensionsPaymentInputs</a> <strong>payment</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="PublicKeyCredentialCreationOptions.html">PublicKeyCredentialCreationOptions</a></li><li><a href="PublicKeyCredentialRequestOptions.html">PublicKeyCredentialRequestOptions</a></li>
+    <li><a href="SecurePaymentConfirmationRequest.html">SecurePaymentConfirmationRequest</a></li><li><a href="PublicKeyCredentialCreationOptions.html">PublicKeyCredentialCreationOptions</a></li><li><a href="PublicKeyCredentialRequestOptions.html">PublicKeyCredentialRequestOptions</a></li>
   </ul>
 </section>
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a> refers to <code>AuthenticationExtensionsClientInputs</code></li>
+  </ul></section>
