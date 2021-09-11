@@ -30,9 +30,41 @@ interface <strong>FontFace</strong> {<span class=def>
 
   Promise&lt;<a href='FontFace.html'>FontFace</a>&gt; <strong>load</strong>();</span><span class=def>
   readonly attribute Promise&lt;<a href='FontFace.html'>FontFace</a>&gt; <strong>loaded</strong>;</span>
+};</span><span class=def>
+
+partial interface <strong>FontFace</strong> {<span class=def>
+  readonly attribute <a href='FontFaceFeatures.html'>FontFaceFeatures</a> <strong>features</strong>;</span><span class=def>
+  readonly attribute <a href='FontFaceVariations.html'>FontFaceVariations</a> <strong>variations</strong>;</span><span class=def>
+  readonly attribute <a href='FontFacePalettes.html'>FontFacePalettes</a> <strong>palettes</strong>;</span>
 };</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
+interface <strong>FontFace</strong> {<span class=def>
+  <strong>constructor</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>, (<a href='CSSOMString.html'>CSSOMString</a> or <a href='BinaryData.html'>BinaryData</a>) <strong>source</strong>,
+                optional <a href='FontFaceDescriptors.html'>FontFaceDescriptors</a> <strong>descriptors</strong> &#x3D; {});</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>family</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>style</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>weight</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>stretch</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>unicodeRange</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variant</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>featureSettings</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>variationSettings</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>display</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>ascentOverride</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>descentOverride</strong>;</span><span class=def>
+  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>lineGapOverride</strong>;</span><span class=def>
+
+  readonly attribute <a href='FontFaceLoadStatus.html'>FontFaceLoadStatus</a> <strong>status</strong>;</span><span class=def>
+
+  Promise&lt;<a href='FontFace.html'>FontFace</a>&gt; <strong>load</strong>();</span><span class=def>
+  readonly attribute Promise&lt;<a href='FontFace.html'>FontFace</a>&gt; <strong>loaded</strong>;</span><span class=def>
+  readonly attribute <a href='FontFaceFeatures.html'>FontFaceFeatures</a> <strong>features</strong>;</span><span class=def>
+  readonly attribute <a href='FontFaceVariations.html'>FontFaceVariations</a> <strong>variations</strong>;</span><span class=def>
+  readonly attribute <a href='FontFacePalettes.html'>FontFacePalettes</a> <strong>palettes</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
