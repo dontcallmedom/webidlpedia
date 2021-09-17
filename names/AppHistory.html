@@ -19,12 +19,12 @@ interface <strong>AppHistory</strong> : <a href='EventTarget.html'>EventTarget</
   readonly attribute <span class=primitive>boolean</span> <strong>canGoBack</strong>;</span><span class=def>
   readonly attribute <span class=primitive>boolean</span> <strong>canGoForward</strong>;</span><span class=def>
 
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>navigate</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='AppHistoryNavigateOptions.html'>AppHistoryNavigateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>reload</strong>(optional <a href='AppHistoryReloadOptions.html'>AppHistoryReloadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>navigate</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='AppHistoryNavigateOptions.html'>AppHistoryNavigateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>reload</strong>(optional <a href='AppHistoryReloadOptions.html'>AppHistoryReloadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>goTo</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>back</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>forward</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>goTo</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>back</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>forward</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigate</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigatesuccess</strong>;</span><span class=def>
