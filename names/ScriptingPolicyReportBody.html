@@ -1,0 +1,25 @@
+---
+title: <code>ScriptingPolicyReportBody</code> interface
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;csp-next&#x2F;scripting-policy.html#scriptingpolicyreportbody">Scripting Policy</a> defines <code>ScriptingPolicyReportBody</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>), SecureContext]
+interface <strong>ScriptingPolicyReportBody</strong> : <a href='ReportBody.html'>ReportBody</a> {<span class=def>
+  [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span>     <strong>violationType</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span>?    <strong>violationURL</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span>?    <strong>violationSample</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>lineno</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>colno</strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+
+  
