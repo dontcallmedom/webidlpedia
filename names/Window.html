@@ -125,50 +125,6 @@ partial interface <strong>Window</strong> {<span class=def>
 
 </span>partial interface <strong>Window</strong> {<span class=def>
   [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def>
-    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def>
-  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span>
-};</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def>
-    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def>
-    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; browsing context
-    </span><span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>moveBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeTo</strong>(<span class=primitive>long</span> <strong>width</strong>, <span class=primitive>long</span> <strong>height</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; viewport
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerHeight</strong>;</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; viewport scrolling
-    </span>[Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageXOffset</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageYOffset</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; client
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenLeft</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenTop</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerHeight</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>devicePixelRatio</strong>;</span>
 };</span></code></pre></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;#deviceorientation">DeviceOrientation Event Specification</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
@@ -384,41 +340,6 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def>
   [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def>
-  [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span><span class=def>
-    [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def>
-    [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; browsing context
-    </span><span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>moveBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeTo</strong>(<span class=primitive>long</span> <strong>width</strong>, <span class=primitive>long</span> <strong>height</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; viewport
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerHeight</strong>;</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; viewport scrolling
-    </span>[Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageXOffset</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageYOffset</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def><span class="comment">
-
-    &#x2F;&#x2F; client
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenLeft</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenTop</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerHeight</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>devicePixelRatio</strong>;</span><span class=def>
     [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;</span><span class=def>
     [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;</span><span class=def>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;</span><span class=def>
@@ -439,5 +360,5 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;">App History API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;uievents&#x2F;">UI Events</a> refers to <code>Window</code></li>
+    <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;">App History API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Window</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;uievents&#x2F;">UI Events</a> refers to <code>Window</code></li>
   </ul></section>
