@@ -36,17 +36,56 @@ interface <strong>Animation</strong> : <a href='EventTarget.html'>EventTarget</a
     <span class=primitive>undefined</span> <strong>persist</strong>();</span><span class=def>
     <span class=primitive>undefined</span> <strong>commitStyles</strong>();</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;#the-animation-interface">Web Animations Level 2</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+partial interface <strong>Animation</strong> {<span class=def>
+    attribute <a href='CSSNumberish.html'>CSSNumberish</a>?       <strong>startTime</strong>;</span><span class=def>
+    attribute <a href='CSSNumberish.html'>CSSNumberish</a>?       <strong>currentTime</strong>;</span>
+};</span></code></pre></li>
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>Animation</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+    <strong>constructor</strong>(optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null,
+                optional <a href='AnimationTimeline.html'>AnimationTimeline</a>? <strong>timeline</strong>);</span><span class=def>
+             attribute <span class=primitive>DOMString</span>                <strong>id</strong>;</span><span class=def>
+             attribute <a href='AnimationEffect.html'>AnimationEffect</a>?         <strong>effect</strong>;</span><span class=def>
+             attribute <a href='AnimationTimeline.html'>AnimationTimeline</a>?       <strong>timeline</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>?                  <strong>startTime</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>?                  <strong>currentTime</strong>;</span><span class=def>
+             attribute <span class=primitive>double</span>                   <strong>playbackRate</strong>;</span><span class=def>
+    readonly attribute <a href='AnimationPlayState.html'>AnimationPlayState</a>       <strong>playState</strong>;</span><span class=def>
+    readonly attribute <a href='AnimationReplaceState.html'>AnimationReplaceState</a>    <strong>replaceState</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>boolean</span>                  <strong>pending</strong>;</span><span class=def>
+    readonly attribute Promise&lt;<a href='Animation.html'>Animation</a>&gt;       <strong>ready</strong>;</span><span class=def>
+    readonly attribute Promise&lt;<a href='Animation.html'>Animation</a>&gt;       <strong>finished</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onfinish</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>oncancel</strong>;</span><span class=def>
+             attribute <a href='EventHandler.html'>EventHandler</a>             <strong>onremove</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>cancel</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>finish</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>play</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>pause</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>updatePlaybackRate</strong>(<span class=primitive>double</span> <strong>playbackRate</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>reverse</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>persist</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>commitStyles</strong>();</span><span class=def>
+    attribute <a href='CSSNumberish.html'>CSSNumberish</a>?       <strong>startTime</strong>;</span><span class=def>
+    attribute <a href='CSSNumberish.html'>CSSNumberish</a>?       <strong>currentTime</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSAnimation.html">CSSAnimation</a></li><li><a href="CSSTransition.html">CSSTransition</a></li><li><a href="WorkletAnimation.html">WorkletAnimation</a></li><li><a href="ShadowAnimation.html">ShadowAnimation</a></li><li><a href="Animation.html">Animation</a></li><li><a href="Animatable.html">Animatable</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li>
+    <li><a href="CSSAnimation.html">CSSAnimation</a></li><li><a href="CSSTransition.html">CSSTransition</a></li><li><a href="AnimationTimeline.html">AnimationTimeline</a></li><li><a href="WorkletAnimation.html">WorkletAnimation</a></li><li><a href="ShadowAnimation.html">ShadowAnimation</a></li><li><a href="Animation.html">Animation</a></li><li><a href="Animatable.html">Animatable</a></li><li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-animations-2&#x2F;">CSS Animations Level 2</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-2&#x2F;">CSS Transitions Level 2</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animation-worklet-1&#x2F;">CSS Animation Worklet API</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a> refers to <code>Animation</code></li>
+    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-animations-2&#x2F;">CSS Animations Level 2</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-2&#x2F;">CSS Transitions Level 2</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;">Web Animations Level 2</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animation-worklet-1&#x2F;">CSS Animation Worklet API</a> refers to <code>Animation</code></li><li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a> refers to <code>Animation</code></li>
   </ul></section>
