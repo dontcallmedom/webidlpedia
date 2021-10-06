@@ -1,12 +1,32 @@
 ---
-title: <code>PointerEvent</code> undefined
+title: <code>PointerEvent</code> interface
 layout: base
 base: ../
 ---
 
 <section>
   <h3>Definition</h3>
-  
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;pointerevents&#x2F;#dom-pointerevent">Pointer Events</a> defines <code>PointerEvent</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a href='Window.html'>Window</a>]
+interface <strong>PointerEvent</strong> : <a href='MouseEvent.html'>MouseEvent</a> {<span class=def>
+    <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='PointerEventInit.html'>PointerEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
+    readonly        attribute <span class=primitive>long</span>        <strong>pointerId</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>double</span>      <strong>width</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>double</span>      <strong>height</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>float</span>       <strong>pressure</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>float</span>       <strong>tangentialPressure</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>long</span>        <strong>tiltX</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>long</span>        <strong>tiltY</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>long</span>        <strong>twist</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>double</span>      <strong>altitudeAngle</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>double</span>      <strong>azimuthAngle</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>DOMString</span>   <strong>pointerType</strong>;</span><span class=def>
+    readonly        attribute <span class=primitive>boolean</span>     <strong>isPrimary</strong>;</span><span class=def>
+    [SecureContext] sequence&lt;<a href='PointerEvent.html'>PointerEvent</a>&gt; <strong>getCoalescedEvents</strong>();</span><span class=def>
+    sequence&lt;<a href='PointerEvent.html'>PointerEvent</a>&gt; <strong>getPredictedEvents</strong>();</span>
+};</span></code></pre>
   
   
 </section>
@@ -14,7 +34,7 @@ base: ../
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="InkPresenter.html">InkPresenter</a></li>
+    <li><a href="InkPresenter.html">InkPresenter</a></li><li><a href="PointerEventInit.html">PointerEventInit</a></li><li><a href="PointerEvent.html">PointerEvent</a></li>
   </ul>
 </section>
   <section><h3>Refering specifications</h3>
