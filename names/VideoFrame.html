@@ -12,7 +12,7 @@ base: ../
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>), Serializable, Transferable]
 interface <strong>VideoFrame</strong> {<span class=def>
   <strong>constructor</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <strong>constructor</strong>([AllowShared] <span class=primitive>BufferSource</span> <strong>data</strong>, <a href='VideoFrameBufferInit.html'>VideoFrameBufferInit</a> <strong>init</strong>);</span><span class=def>
+  <strong>constructor</strong>([AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>, <a href='VideoFrameBufferInit.html'>VideoFrameBufferInit</a> <strong>init</strong>);</span><span class=def>
 
   readonly attribute <a href='VideoPixelFormat.html'>VideoPixelFormat</a>? <strong>format</strong>;</span><span class=def>
   readonly attribute <span class=primitive>unsigned long</span> <strong>codedWidth</strong>;</span><span class=def>
@@ -28,7 +28,7 @@ interface <strong>VideoFrame</strong> {<span class=def>
   <span class=primitive>unsigned long</span> <strong>allocationSize</strong>(
       optional <a href='VideoFrameCopyToOptions.html'>VideoFrameCopyToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   Promise&lt;sequence&lt;<a href='PlaneLayout.html'>PlaneLayout</a>&gt;&gt; <strong>copyTo</strong>(
-      [AllowShared] <span class=primitive>BufferSource</span> <strong>destination</strong>,
+      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>destination</strong>,
       optional <a href='VideoFrameCopyToOptions.html'>VideoFrameCopyToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   <a href='VideoFrame.html'>VideoFrame</a> <strong>clone</strong>();</span><span class=def>
   <span class=primitive>undefined</span> <strong>close</strong>();</span>

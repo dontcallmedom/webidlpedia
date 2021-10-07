@@ -13,19 +13,19 @@ base: ../
 interface <strong>SubtleCrypto</strong> {<span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>encrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                       <span class=primitive>BufferSource</span> <strong>data</strong>);</span><span class=def>
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>decrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                       <span class=primitive>BufferSource</span> <strong>data</strong>);</span><span class=def>
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>sign</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                     <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                    <span class=primitive>BufferSource</span> <strong>data</strong>);</span><span class=def>
+                    <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>verify</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                       <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                      <span class=primitive>BufferSource</span> <strong>signature</strong>,
-                      <span class=primitive>BufferSource</span> <strong>data</strong>);</span><span class=def>
+                      <a href='BufferSource.html'>BufferSource</a> <strong>signature</strong>,
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>digest</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
-                      <span class=primitive>BufferSource</span> <strong>data</strong>);</span><span class=def>
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
 
   Promise&lt;<span class=primitive>any</span>&gt; <strong>generateKey</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                           <span class=primitive>boolean</span> <strong>extractable</strong>,
@@ -40,7 +40,7 @@ interface <strong>SubtleCrypto</strong> {<span class=def>
                           <span class=primitive>unsigned long</span> <strong>length</strong>);</span><span class=def>
 
   Promise&lt;<a href='CryptoKey.html'>CryptoKey</a>&gt; <strong>importKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
-                         (<span class=primitive>BufferSource</span> or <a href='JsonWebKey.html'>JsonWebKey</a>) <strong>keyData</strong>,
+                         (<a href='BufferSource.html'>BufferSource</a> or <a href='JsonWebKey.html'>JsonWebKey</a>) <strong>keyData</strong>,
                          <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                          <span class=primitive>boolean</span> <strong>extractable</strong>,
                          sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def>
@@ -51,7 +51,7 @@ interface <strong>SubtleCrypto</strong> {<span class=def>
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>wrappingKey</strong>,
                        <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>wrapAlgorithm</strong>);</span><span class=def>
   Promise&lt;<a href='CryptoKey.html'>CryptoKey</a>&gt; <strong>unwrapKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
-                         <span class=primitive>BufferSource</span> <strong>wrappedKey</strong>,
+                         <a href='BufferSource.html'>BufferSource</a> <strong>wrappedKey</strong>,
                          <a href='CryptoKey.html'>CryptoKey</a> <strong>unwrappingKey</strong>,
                          <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>unwrapAlgorithm</strong>,
                          <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>unwrappedKeyAlgorithm</strong>,
