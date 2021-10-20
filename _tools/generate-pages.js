@@ -302,8 +302,8 @@ fs.promises.readFile("./webref/ed/index.json", "utf-8")
           if (!used_by[n]) used_by[n] = [];
           if (s.idl.idlNames[n].type === "interface") {
             exposed_on[n] = ["Window"]; // default if no ext attr specified
-            let exposedEA;
-            if (s.idl.idlNames[n].extAttrs && (exposedEA = s.idl.idlNames[n].extAttrs.find(ea => ea.name = "Exposed")) && exposedEA.rhs) {
+            const exposedEA = s.idl.idlNames[n].extAttrs ? s.idl.idlNames[n].extAttrs.find(ea => ea.name === "Exposed") || {} : {};
+            if (exposedEA.rhs) {
               if (Array.isArray(exposedEA.rhs.value)) {
                 exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
               } else if (exposedEA.rhs.value) {
