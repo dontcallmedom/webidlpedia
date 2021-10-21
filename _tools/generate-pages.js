@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs/promises");
 const webidl = require("webidl2");
 const html = require('escape-html-template-tag')
 
@@ -26,14 +26,25 @@ function extractSerializableIDLMembersFromPlatform(name, type, data) {
   return members;
 }
 
-function generatePage(path, title, content) {
-  fs.writeFileSync(path, `---
+async function generatePage(path, title, content) {
+  await fs.writeFile(path, `---
 title: ${title}
 layout: base
 ${path.includes('/') ? "base: ../" : ""}
 ---
 ${content}`);
 }
+
+async function deprecatePage(targetFile) {
+  let content = await fs.readFile(targetFile, "utf-8");
+  if (!content.match(/^deprecated: /)) {
+    const deprecated = new Date().toLocaleString("en-US", {year: 'numeric', month: 'long', day: 'numeric'});
+    content = content.replace(/---/, `---
+deprecated: "${deprecated}"`);
+    await fs.writeFile(targetFile, content);
+  }
+}
+
 
 const htmlLink = (text, href) => html`<a href="${href}">${text}</a>`;
 const htmlSection = (title, content) => html`<section><h2>${title}</h2>${content}</section>`;
@@ -290,7 +301,7 @@ function memberNames(data, sort) {
   return html`<p>Names used for attributes/members/methods:</p>${htmlList(list)}`;
 }
 
-fs.promises.readFile("./webref/ed/index.json", "utf-8")
+fs.readFile("./webref/ed/index.json", "utf-8")
   .then(async jsonIndex => {
     const index = JSON.parse(jsonIndex);
     const {results} = await expandCrawlResult(index, './webref/ed/');
@@ -343,15 +354,23 @@ fs.promises.readFile("./webref/ed/index.json", "utf-8")
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
       const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate);
-      generatePage("names/" + n + ".html", title, content);
+      await generatePage("names/" + n + ".html", title, content);
     }
 
     // Generating enum value list
-    generatePage("enum.html", "Enum values", enumNames(results));
+    await generatePage("enum.html", "Enum values", enumNames(results));
 
     // Generating IDL member names list
-    generatePage("members.html", "IDL member names", memberNames(results));
+    await generatePage("members.html", "IDL member names", memberNames(results));
 
     // Generating list of extended attributes
-    generatePage("extended-attributes.html", "Extended Attributes", extAttrUsage(results));
+    await generatePage("extended-attributes.html", "Extended Attributes", extAttrUsage(results));
+
+    const dir = await fs.readdir("names/");
+    for (let filename of dir) {
+      const idlname = filename.split(".")[0];
+      if (!Object.keys(used_by).includes(idlname)) {
+        await deprecatePage("names/" + filename);
+      }
+    }
   });

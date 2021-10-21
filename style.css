@@ -419,8 +419,8 @@ address {
 }
 
 
-pre { white-space: pre-wrap; background-color: #def; color: black;}
-pre span.primitive { color: #161;}
+main:not(.deprecated) pre { white-space: pre-wrap; background-color: #def; color: black;}
+main:not(.deprecated) pre span.primitive { color: #161;}
 .comment { color: #555;}
 
 a[href^="http"]::after { content: url("ext-link.svg"); }
@@ -447,3 +447,7 @@ a[href^="http"]::after { content: url("ext-link.svg"); }
 
 .sharedworker { background-color: #f18701; color: #fff;}
 
+main.deprecated section {
+    background-color: #eee !important;
+    color: #555 !important;
+}
