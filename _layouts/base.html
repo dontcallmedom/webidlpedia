@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"{% if page.deprecated %} class="deprecated"{%endif%}>
   <head>
     <meta charset="utf-8">
     <title>
@@ -47,7 +47,7 @@
 {% include horizontal-nav.html %}
       {% endif %}
     </header>
-    <main{% if page.deprecated %} class="deprecated"{%endif%}>
+    <main>
       {% if page.deprecated %}
       <p>As of {{page.deprecated}}, this name is <strong>no longer defined</strong> by a Web Platform specification</p>
       {% endif %}

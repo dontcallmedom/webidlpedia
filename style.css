@@ -43,47 +43,6 @@ header #translations {
   float: right;
 }
 
-/*
-#top {
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 454px;
-  color: white;
-  position: relative;
-}
-
-#top.small {
-    background-color: black;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 100px;
-  position: relative;
-}
-
-#top h1,
-#top h2 {
-  padding: 1rem;
-  color: white;
-  text-shadow: 4px 4px 20px black;
-}
-@media all and (min-width: 787px) {
-  #top h1,
-  #top h2 {
-    margin-left: 450px;
-  }
-}
-
-#top.small h1 {
-    text-shadow: none;
-    margin-left: 100px;
-}
-
-
-#top h1 a:link, #top h1 a:visited { color: white;}
-
-#top a.credit { position: absolute; bottom:0; right:0;}
-*/
-
 .footer :last-child {
   margin-bottom: 0;
 }
@@ -107,6 +66,10 @@ h1,
 h2,
 .menu a.active-tab {
   color: #005a9c;
+}
+
+html.deprecated h2 {
+    color: black;
 }
 
 a:hover {
@@ -326,6 +289,9 @@ address {
   html {
     background: #005a9c;
   }
+  html.deprecated {
+    background: #9C9C9C;
+  }
 }
 
 @media all and (max-width: 860px) {
@@ -419,8 +385,8 @@ address {
 }
 
 
-main:not(.deprecated) pre { white-space: pre-wrap; background-color: #def; color: black;}
-main:not(.deprecated) pre span.primitive { color: #161;}
+html:not(.deprecated) pre { white-space: pre-wrap; background-color: #def; color: black;}
+html:not(.deprecated) pre span.primitive { color: #161;}
 .comment { color: #555;}
 
 a[href^="http"]::after { content: url("ext-link.svg"); }
@@ -447,7 +413,7 @@ a[href^="http"]::after { content: url("ext-link.svg"); }
 
 .sharedworker { background-color: #f18701; color: #fff;}
 
-main.deprecated section {
+html.deprecated section {
     background-color: #eee !important;
     color: #555 !important;
 }
