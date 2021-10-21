@@ -37,7 +37,7 @@ ${content}`);
 
 async function deprecatePage(targetFile) {
   let content = await fs.readFile(targetFile, "utf-8");
-  if (!content.match(/^deprecated: /)) {
+  if (!content.match(/deprecated: /)) {
     const deprecated = new Date().toLocaleString("en-US", {year: 'numeric', month: 'long', day: 'numeric'});
     content = content.replace(/---/, `---
 deprecated: "${deprecated}"`);
