@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      {{ page.title | strip_html }} - WebIDLpedia
+      {% if page.deprecated %}[DEPRECATED] {% endif %} {{ page.title | strip_html }} - WebIDLpedia
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ page.base }}style.css">
@@ -42,12 +42,15 @@
         {% endfor %}
         </ul>
       </nav>
-      <h2>{{page.title}}</h2>
+      <h2>{% if page.deprecated %}[DEPRECATED] {% endif %} {{page.title}}</h2>
       {% if page.uplink %}
 {% include horizontal-nav.html %}
       {% endif %}
     </header>
-    <main>
+    <main{% if page.deprecated %} class="deprecated"{%endif%}>
+      {% if page.deprecated %}
+      <p>As of {{page.deprecated}}, this name is <strong>no longer defined</strong> by a Web Platform specification</p>
+      {% endif %}
       {{ content }}
     </main>
     <footer class="footer" id="footer">
