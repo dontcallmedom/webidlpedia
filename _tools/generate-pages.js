@@ -369,7 +369,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     const dir = await fs.readdir("names/");
     for (let filename of dir) {
       const idlname = filename.split(".")[0];
-      if (!Object.keys(used_by).includes(idlname)) {
+      if (!Object.keys(used_by).includes(idlname) && idname !== "index") {
         await deprecatePage("names/" + filename);
       }
     }
