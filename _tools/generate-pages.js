@@ -328,14 +328,14 @@ fs.readFile("./webref/ed/index.json", "utf-8")
             if (!used_by[d]) {
               used_by[d] = [];
             }
-        used_by[d].push(n);
+            used_by[d].push(n);
           });
         });
       }
     });
 
     // Generating referenceable names page
-    generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by, exposed_on));
+    await generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by, exposed_on));
 
     const webidlTemplate = {
       wrap: items => html.join(items, ''),
