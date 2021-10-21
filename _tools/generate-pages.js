@@ -50,7 +50,7 @@ const htmlLink = (text, href) => html`<a href="${href}">${text}</a>`;
 const htmlSection = (title, content) => html`<section><h2>${title}</h2>${content}</section>`;
 const htmlList = items => html`
   <ul>
-    ${items.map(item => html`<li>${item}</li>`)}
+    ${items.map(item => html`<li>${item}</li>` + "\n")}
   </ul>`;
 
 function fullList(data, used_by, exposed_on) {
