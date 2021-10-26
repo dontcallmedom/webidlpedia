@@ -54,8 +54,29 @@ const htmlList = items => html`
 `)}
   </ul>`;
 
+const primitives = [ "ArrayBuffer", "DataView", "Int8Array", "Int16Array",
+                     "Int32Array", "Uint8Array", "Uint16Array", "Uint32Array",
+                     "Uint8ClampedArray", "Float32Array", "Float64Array",
+                     "BigUint64Array", "BigInt64Array"];
+
 function fullList(data, used_by, exposed_on) {
   let sections = [];
+  // dealing with WebIDL primitives
+  const primitiveList = htmlList(primitives.map(name => {
+    if (!used_by[name]) {
+      used_by[name] = [];
+    }
+    const usage = used_by[name].length;
+    const link = htmlLink(name, name + ".html");
+    return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span>`;
+  }));
+  const webidl = data.find(s => s.shortname === "webidl").idl.idlNames;
+  primitives.forEach(p => {
+    webidl[p] = {
+      type: "WebIDL primitive"
+    }
+  });
+  sections.push(htmlSection("WebIDL primitives", primitiveList));
   [{type:"interface", title: "Interfaces"}, {type:"interface mixin", title: "Interface Mixins"}, {type: "dictionary", title:"Dictionaries"}, {type:"typedef", title:"Typedefs"}, {type:"enum", title: "Enums"}, {type:"callback", title: "Callbacks"}, {type: "namespace", title: "Namespaces"}].forEach(
       type => {
         const names = data.filter(hasIdlDef)
@@ -121,13 +142,15 @@ function interfaceDetails(data, name, used_by, templates) {
       // We use a proxy to keep the parseability of the objects created by WebIDL
       // while being able to replace the list of members
       const mainIdlDef = idlparsed.find(i => !i.partial && !i.includes);
-      consolidatedIdlDef = new Proxy(mainIdlDef, {
-        get(target, propKey, receiver) {
-          if (propKey === "members") return consolidatedIdlMembers;
-          return Reflect.get(...arguments);
-        }
-      });
-      consolidatedIdlMembers = consolidatedIdlMembers.concat(mainIdlDef.members);
+      if (mainIdlDef) {
+        consolidatedIdlDef = new Proxy(mainIdlDef, {
+          get(target, propKey, receiver) {
+            if (propKey === "members") return consolidatedIdlMembers;
+            return Reflect.get(...arguments);
+          }
+        });
+        consolidatedIdlMembers = consolidatedIdlMembers.concat(mainIdlDef.members);
+      }
       /* not sure whether to consolidate across inheritance chain yet
          since inheritance has more impact than merging list of members
          it feels like it's probably left alone?
