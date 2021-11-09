@@ -46,6 +46,11 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+  <a href='MLOperand.html'>MLOperand</a> <strong>convTranspose2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
+                            optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span><span class=def>
+
+partial interface <strong>MLGraphBuilder</strong> {<span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
@@ -221,6 +226,8 @@ interface <strong>MLGraphBuilder</strong> {<span class=def><span class="comment"
   <a href='MLOperator.html'>MLOperator</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, <span class=primitive>long</span> <strong>axis</strong>);</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='MLOperand.html'>MLOperand</a> <strong>convTranspose2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
+                            optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
