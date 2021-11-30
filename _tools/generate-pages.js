@@ -89,7 +89,7 @@ function fullList(data, used_by, exposed_on) {
         const list = htmlList(names.map(name => {
           const usage = used_by[name] ? used_by[name].length : 0;
           const link = htmlLink(name, name + ".html");
-          const exposed = (exposed_on[name] || []).map(n => html`<span class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet')}" title="exposed on ${n}">${n}</span>`);
+          const exposed = (exposed_on[name] || []).map(n => html`<span class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet').replace('*', 'everywhere')}" title="exposed on ${n}">${n}</span>`);
           return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span> ${exposed}`;
         }));
         sections.push(htmlSection(type.title, list));
