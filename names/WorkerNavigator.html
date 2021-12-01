@@ -33,6 +33,8 @@ partial interface <strong>WorkerNavigator</strong> {<span class=def>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 <a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;#enumeration">WebUSB API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<span class=primitive>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>), SecureContext]
@@ -90,6 +92,7 @@ interface <strong>WorkerNavigator</strong> {<span class=def>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def>
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def>
     readonly attribute <span class=primitive>double</span> <strong>deviceMemory</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;</span><span class=def>
