@@ -74,9 +74,8 @@ partial interface <strong>Element</strong> {<span class=def>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>
-
 partial interface <strong>Element</strong> {<span class=def>
-  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <a href='Sanitizer.html'>Sanitizer</a> <strong>sanitizer</strong>);</span>
+  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code><span class=def>
 
@@ -228,7 +227,7 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <a href='Sanitizer.html'>Sanitizer</a> <strong>sanitizer</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def>
     <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
