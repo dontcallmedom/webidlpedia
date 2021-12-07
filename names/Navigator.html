@@ -37,6 +37,8 @@ partial interface <strong>Navigator</strong> {<span class=def>
 };</span><span class=def>
 
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorBadge.html'>NavigatorBadge</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
+<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;#navigator-extensions">Web Bluetooth</a><pre class=webidl><code><span class=def>
 
 [SecureContext]
@@ -95,8 +97,6 @@ partial interface <strong>Navigator</strong> {<span class=def>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;#hid-attribute">WebHID API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
@@ -173,7 +173,7 @@ partial interface <strong>Navigator</strong> {<span class=def>
 partial interface <strong>Navigator</strong> {<span class=def>
   sequence&lt;<a href='Gamepad.html'>Gamepad</a>?&gt; <strong>getGamepads</strong>();</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;geolocation-API&#x2F;#navigator_interface">Geolocation API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;geolocation&#x2F;#navigator_interface">Geolocation API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
 &#x2F;&#x2F; Source: Geolocation API (https:&#x2F;&#x2F;w3c.github.io&#x2F;geolocation-api&#x2F;)
@@ -322,6 +322,7 @@ interface <strong>Navigator</strong> {<span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearClientBadge</strong>();</span><span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setAppBadge</strong>(optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>contents</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearAppBadge</strong>();</span><span class=def>
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def>
   [SameObject]
   readonly attribute <a href='Bluetooth.html'>Bluetooth</a> <strong>bluetooth</strong>;</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span><span class=def>
@@ -333,7 +334,6 @@ interface <strong>Navigator</strong> {<span class=def>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def>
-  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='WindowControlsOverlay.html'>WindowControlsOverlay</a> <strong>windowControlsOverlay</strong>;</span><span class=def>
@@ -399,7 +399,7 @@ interface <strong>Navigator</strong> {<span class=def>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-posture&#x2F;">Device Posture API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;">Encrypted Media Extensions</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;gamepad&#x2F;">Gamepad</a> refers to <code>Navigator</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;geolocation-API&#x2F;">Geolocation API</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;geolocation&#x2F;">Geolocation API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-capabilities&#x2F;">Media Capabilities</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-streams&#x2F;">Media Capture and Streams</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediasession&#x2F;">Media Session Standard</a> refers to <code>Navigator</code></li>
