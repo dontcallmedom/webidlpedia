@@ -21,7 +21,8 @@ interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget<
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
 partial interface <strong>Performance</strong> {<span class=def>
-    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span>
+    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def>
+    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a><pre class=webidl><code><span class=def>
 
@@ -72,6 +73,7 @@ interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget<
     readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def>
     [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
     [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def>
+    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span><span class=def>
   [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='ServiceWorker.html'>ServiceWorker</a>,<a href='SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span><span class=def>
   [SameObject]
   readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def>
