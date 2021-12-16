@@ -33,7 +33,15 @@ interface <strong>Request</strong> {<span class=def>
   [NewObject] <a href='Request.html'>Request</a> <strong>clone</strong>();</span>
 };</span><span class=def>
 <a href='Request.html'>Request</a> includes <a href='Body.html'>Body</a>;</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#fetch-integration">Priority Hints</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Request</strong> {<span class=def>
+  readonly attribute <a href='Importance.html'>Importance</a> <strong>importance</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>)]
@@ -64,7 +72,8 @@ interface <strong>Request</strong> {<span class=def>
   [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def>
   [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def>
   [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span>
+  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def>
+  readonly attribute <a href='Importance.html'>Importance</a> <strong>importance</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -82,6 +91,7 @@ interface <strong>Request</strong> {<span class=def>
   <section><h3>Refering specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;">Background Fetch</a> refers to <code>Request</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;">Priority Hints</a> refers to <code>Request</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers-1&#x2F;">Service Workers Nightly</a> refers to <code>Request</code></li>
 
   </ul></section>

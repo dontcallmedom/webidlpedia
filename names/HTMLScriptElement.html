@@ -33,7 +33,15 @@ partial interface <strong>HTMLScriptElement</strong> {<span class=def>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span>
 };</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#script">Priority Hints</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>HTMLScriptElement</strong> {<span class=def>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>importance</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
@@ -53,10 +61,15 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   static <span class=primitive>boolean</span> <strong>supports</strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class="comment">
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class=def>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>importance</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
 </section>
 
-  
+  <section><h3>Refering specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;">Priority Hints</a> refers to <code>HTMLScriptElement</code></li>
+
+  </ul></section>
