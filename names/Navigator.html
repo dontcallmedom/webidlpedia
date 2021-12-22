@@ -37,6 +37,15 @@ partial interface <strong>Navigator</strong> {<span class=def>
 };</span><span class=def>
 
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorBadge.html'>NavigatorBadge</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;contact-api&#x2F;spec&#x2F;#extensions-to-navigator">Contact Picker API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
+&#x2F;&#x2F; Content was automatically extracted by Reffy into webref
+&#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
+&#x2F;&#x2F; Source: Contact Picker API (https:&#x2F;&#x2F;w3c.github.io&#x2F;contact-api&#x2F;spec&#x2F;)
+
+</span>[Exposed&#x3D;<a href='Window.html'>Window</a>]
+partial interface <strong>Navigator</strong> {<span class=def>
+  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;#navigator-extensions">Web Bluetooth</a><pre class=webidl><code><span class=def>
@@ -73,9 +82,6 @@ partial interface <strong>Navigator</strong> {<span class=def>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a><pre class=webidl><code><span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorFonts.html'>NavigatorFonts</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;netinfo&#x2F;">Network Information API</a><pre class=webidl><code><span class=def>
-
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorNetworkInformation.html'>NavigatorNetworkInformation</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;#serial-attribute">Web Serial API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
 &#x2F;&#x2F; Content was automatically extracted by Reffy into webref
 &#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
@@ -261,15 +267,6 @@ partial interface <strong>Navigator</strong> {<span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorAutomationInformation.html'>NavigatorAutomationInformation</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webgpu&#x2F;">WebGPU</a><pre class=webidl><code><span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorGPU.html'>NavigatorGPU</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webmidi&#x2F;#extensions-to-the-navigator-interface">Web MIDI API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
-&#x2F;&#x2F; Content was automatically extracted by Reffy into webref
-&#x2F;&#x2F; (https:&#x2F;&#x2F;github.com&#x2F;w3c&#x2F;webref)
-&#x2F;&#x2F; Source: Web MIDI API (https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-midi-api&#x2F;)
-
-</span>partial interface <strong>Navigator</strong> {<span class=def>
-  [SecureContext]
-  Promise &lt;<a href='MIDIAccess.html'>MIDIAccess</a>&gt; <strong>requestMIDIAccess</strong>(optional <a href='MIDIOptions.html'>MIDIOptions</a> <strong>options</strong> &#x3D; {});</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webnn&#x2F;">Web Neural Network API</a><pre class=webidl><code><span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorML.html'>NavigatorML</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr&#x2F;#navigator-xr-attribute">WebXR Device API</a><pre class=webidl><code><span class=def><span class="comment">&#x2F;&#x2F; GENERATED CONTENT - DO NOT EDIT
@@ -313,6 +310,7 @@ interface <strong>Navigator</strong> {<span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearClientBadge</strong>();</span><span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setAppBadge</strong>(optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>contents</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearAppBadge</strong>();</span><span class=def>
+  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span><span class=def>
   readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def>
   [SameObject]
   readonly attribute <a href='Bluetooth.html'>Bluetooth</a> <strong>bluetooth</strong>;</span><span class=def>
@@ -321,7 +319,6 @@ interface <strong>Navigator</strong> {<span class=def>
   readonly attribute <a href='Scheduling.html'>Scheduling</a> <strong>scheduling</strong>;</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='FontManager.html'>FontManager</a> <strong>fonts</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def>
@@ -354,8 +351,6 @@ interface <strong>Navigator</strong> {<span class=def>
   [SecureContext] <span class=primitive>boolean</span> <strong>canShare</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> &#x3D; {});</span><span class=def>
   readonly attribute <span class=primitive>boolean</span> <strong>webdriver</strong>;</span><span class=def>
     [SameObject, SecureContext] readonly attribute <a href='GPU.html'>GPU</a> <strong>gpu</strong>;</span><span class=def>
-  [SecureContext]
-  Promise &lt;<a href='MIDIAccess.html'>MIDIAccess</a>&gt; <strong>requestMIDIAccess</strong>(optional <a href='MIDIOptions.html'>MIDIOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='ML.html'>ML</a> <strong>ml</strong>;</span><span class=def>
   [SecureContext, SameObject] readonly attribute <a href='XRSystem.html'>XRSystem</a> <strong>xr</strong>;</span><span class="comment">
   &#x2F;&#x2F; objects implementing this interface also implement the interfaces given below
@@ -372,6 +367,7 @@ interface <strong>Navigator</strong> {<span class=def>
   <section><h3>Refering specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;badging&#x2F;">Badging API</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;contact-api&#x2F;spec&#x2F;">Contact Picker API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;">Web Bluetooth</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;get-installed-related-apps&#x2F;spec&#x2F;">Get Installed Related Apps API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ink-enhancement&#x2F;">Ink API</a> refers to <code>Navigator</code></li>
@@ -400,7 +396,6 @@ interface <strong>Navigator</strong> {<span class=def>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;vibration&#x2F;">Vibration API (Second Edition)</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;virtual-keyboard&#x2F;">VirtualKeyboard API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-share&#x2F;">Web Share API</a> refers to <code>Navigator</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webmidi&#x2F;">Web MIDI API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr&#x2F;">WebXR Device API</a> refers to <code>Navigator</code></li>
 
   </ul></section>
