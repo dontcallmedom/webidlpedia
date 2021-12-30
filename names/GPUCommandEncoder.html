@@ -41,10 +41,6 @@ interface <strong>GPUCommandEncoder</strong> {<span class=def>
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
 
-    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
-    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
-
     <span class=primitive>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
 
     <span class=primitive>undefined</span> <strong>resolveQuerySet</strong>(
@@ -56,7 +52,9 @@ interface <strong>GPUCommandEncoder</strong> {<span class=def>
 
     <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>
 };</span><span class=def>
-<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span></code></pre>
+<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span><span class=def>
+<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUCommandsMixin.html'>GPUCommandsMixin</a>;</span><span class=def>
+<a href='GPUCommandEncoder.html'>GPUCommandEncoder</a> includes <a href='GPUDebugCommandsMixin.html'>GPUDebugCommandsMixin</a>;</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
@@ -92,10 +90,6 @@ interface <strong>GPUCommandEncoder</strong> {<span class=def>
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
 
-    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
-    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
-
     <span class=primitive>undefined</span> <strong>writeTimestamp</strong>(<a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>, <a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
 
     <span class=primitive>undefined</span> <strong>resolveQuerySet</strong>(
@@ -106,7 +100,10 @@ interface <strong>GPUCommandEncoder</strong> {<span class=def>
         <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>);</span><span class=def>
 
     <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def>
-    attribute <span class=primitive>USVString</span>? <strong>label</strong>;</span>
+    attribute <span class=primitive>USVString</span>? <strong>label</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span>
 };</span></code></pre></details>
 </section>
 <section>
