@@ -5,19 +5,19 @@ const html = require('escape-html-template-tag')
 const { expandCrawlResult } = require('reffy/src/lib/util');
 
 const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
-const hasIdlDef = s => s.idl && s.idl.idlNames;
+const hasIdlDef = s => s.idlparsed && s.idlparsed.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
 
 // webidl2 cannot serialize its JSON output, only its "live" output
 // so we start from the unparse IDL & reparse it to make it serializable
 function extractSerializableIDLFromSpec(name, type, spec) {
-  return webidl.parse(spec.idl.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
+  return webidl.parse(spec.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
 }
 
 function extractSerializableIDLMembersFromPlatform(name, type, data) {
-  const relevantSpecs = data.filter(s => s.idl && s.idl.idlNames && s.idl.idlNames[name] && s.idl.idlNames[name].type === type);
+  const relevantSpecs = data.filter(s => s?.idlparsed?.idlNames && s.idlparsed.idlNames[name]?.type === type);
   if (!relevantSpecs) { return []; }
-  const idlparsed = webidl.parse(relevantSpecs.map(s => s.idl.idl).join("\n"))
+  const idlparsed = webidl.parse(relevantSpecs.map(s => s.idl).join("\n"))
         .filter(i => i.name === name && i.type === type);
   let members = [];
   idlparsed.forEach(i => {
@@ -70,7 +70,7 @@ function fullList(data, used_by, exposed_on) {
     const link = htmlLink(name, name + ".html");
     return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span>`;
   }));
-  const webidl = data.find(s => s.shortname === "webidl").idl.idlNames;
+  const webidl = data.find(s => s.shortname === "webidl").idlparsed.idlNames;
   primitives.forEach(p => {
     webidl[p] = {
       type: "WebIDL primitive"
@@ -81,9 +81,9 @@ function fullList(data, used_by, exposed_on) {
       type => {
         const names = data.filter(hasIdlDef)
               .map(spec =>
-                   Object.keys(spec.idl.idlNames)
+                   Object.keys(spec.idlparsed.idlNames)
                    .filter(n => n!=="_dependencies")
-                   .filter(n => spec.idl.idlNames[n].type === type.type)
+                   .filter(n => spec.idlparsed.idlNames[n].type === type.type)
                   ).reduce((a,b) => a.concat(b), [])
               .sort();
         const list = htmlList(names.map(name => {
@@ -99,7 +99,7 @@ function fullList(data, used_by, exposed_on) {
 
 function idlDfnLink(name, spec) {
   let url = spec.url;
-  const type = (spec.idl.idlNames[name] || {}).type;
+  const type = (spec.idlparsed.idlNames[name] || {}).type;
   // Look for anchor among definitions to give more specific link if possible
   if (spec.dfns && type) {
     const dfn = spec.dfns.find(dfn => dfn.type === type.replace("callback interface", "callback") && dfn.linkingText.includes(name));
@@ -112,10 +112,10 @@ function idlDfnLink(name, spec) {
 
 function extendedIdlDfnLink(name, spec) {
   let url = spec.url;
-  if (!spec.idl.idlExtendedNames[name] || !spec.idl.idlExtendedNames[name].length) return url;
+  if (!spec.idlparsed.idlExtendedNames[name] || !spec.idlparsed.idlExtendedNames[name].length) return url;
   // Look for anchor among definitions to give more specific link if possible
   // we use the first member of the object since partials aren't dfn'd
-  const firstMember = (spec.idl.idlExtendedNames[name][0].members || [])[0];
+  const firstMember = (spec.idlparsed.idlExtendedNames[name][0].members || [])[0];
   if (spec.dfns && firstMember) {
     const dfn = spec.dfns.find(dfn => dfn.type === firstMember.type.replace("operation", "method") && dfn.for.includes(name) && (dfn.linkingText.includes(firstMember.name) || dfn.localLinkingText.includes(firstMember.name)));
     if (dfn) {
@@ -134,10 +134,10 @@ function interfaceDetails(data, name, used_by, templates) {
   let consolidatedIdlMembers = [] ;
   let needsConsolidation = false;
   data.filter(hasIdlDef)
-    .filter(spec => spec.idl.idlNames[name])
+    .filter(spec => spec.idlparsed.idlNames[name])
     .forEach(spec => {
       mainDefSpecs.push(spec.url);
-      type = (spec.idl.idlNames[name] || {}).type;
+      type = (spec.idlparsed.idlNames[name] || {}).type;
       const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
       // We use a proxy to keep the parseability of the objects created by WebIDL
       // while being able to replace the list of members
@@ -179,7 +179,7 @@ function interfaceDetails(data, name, used_by, templates) {
 
   let partialDefItems = [];
   data.filter(hasIdlDef)
-    .filter(spec => spec.idl.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
+    .filter(spec => spec.idlparsed.idlExtendedNames[name] && !mainDefSpecs.includes(spec.url))
     .forEach(spec => {
       needsConsolidation = true;
       const idlparsed = extractSerializableIDLFromSpec(name, type, spec);
@@ -217,7 +217,7 @@ function interfaceDetails(data, name, used_by, templates) {
 
   let refs = html``;
   let refList = [];
-  data.filter(s => s.idl && s.idl.externalDependencies && s.idl.externalDependencies.indexOf(name) !== -1)
+  data.filter(s => s.idl && s.idlparsed.externalDependencies && s.idlparsed.externalDependencies.indexOf(name) !== -1)
     .forEach(spec => {
       refList.push( html`<a href="${spec.url}">${spec.title}</a> refers to <code>${name}</code>`);
     });
@@ -240,10 +240,10 @@ function enumNames(data) {
   data.filter(hasIdlDef)
   const enumValues = data.filter(hasIdlDef)
         .map(spec =>
-             Object.keys(spec.idl.idlNames)
+             Object.keys(spec.idlparsed.idlNames)
              .filter(n => n!=="_dependencies")
-             .filter(n => spec.idl.idlNames[n].type === "enum")
-             .map(n => spec.idl.idlNames[n].values.map(v =>
+             .filter(n => spec.idlparsed.idlNames[n].type === "enum")
+             .map(n => spec.idlparsed.idlNames[n].values.map(v =>
                                                        {return {url: spec.url,title: spec.title, enumName: n, value: v.value};})
                   .reduce((a,b) => a.concat(b), [])))
         .reduce((a,b) => a.concat(b), [])
@@ -269,12 +269,12 @@ function enumNames(data) {
 function extAttrUsage(data) {
   const extAttr = data.filter(hasIdlDef)
         .map(spec =>
-             Object.keys(spec.idl.idlNames)
+             Object.keys(spec.idlparsed.idlNames)
              .filter(n => n!=="_dependencies")
-             .map(n => (spec.idl.idlNames[n].extAttrs || []).map(
-               e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>`, type: spec.idl.idlNames[n].type} };}
+             .map(n => (spec.idlparsed.idlNames[n].extAttrs || []).map(
+               e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>`, type: spec.idlparsed.idlNames[n].type} };}
              )
-                  .concat((spec.idl.idlNames[n].members || []).map(
+                  .concat((spec.idlparsed.idlNames[n].members || []).map(
                     m => (m.extAttrs || []).map( e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>${m.name ? "." + m.name : ""}`, type: m.type}};}).reduce((a,b) => a.concat(b), [])))
                   .reduce((a,b) => a.concat(b), []))
              // TODO missing extended attributes on arguments, types (?)
@@ -297,12 +297,12 @@ function memberNames(data, sort) {
   data.filter(hasIdlDef)
   const memberNames = data.filter(hasIdlDef)
         .map(spec =>
-             Object.keys(spec.idl.idlNames)
+             Object.keys(spec.idlparsed.idlNames)
              .filter(n => n!=="_dependencies")
-             .filter(n => ["interface", "interface mixin", "dictionary"].includes(spec.idl.idlNames[n].type))
-             .map(n => spec.idl.idlNames[n].members.filter(v => v.name)
+             .filter(n => ["interface", "interface mixin", "dictionary"].includes(spec.idlparsed.idlNames[n].type))
+             .map(n => spec.idlparsed.idlNames[n].members.filter(v => v.name)
                   .map(v =>
-                       {return {url: spec.url,title: spec.title, containerType: spec.idl.idlNames[n].type, containerName: n, value: v.name, type: v.type};})
+                       {return {url: spec.url,title: spec.title, containerType: spec.idlparsed.idlNames[n].type, containerName: n, value: v.name, type: v.type};})
                   .reduce((a,b) => a.concat(b), [])))
         .reduce((a,b) => a.concat(b), [])
         .reduce((a,b) => a.concat(b), [])
@@ -332,12 +332,12 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     let exposed_on = {};
     let used_by = {};
     results.forEach(s => {
-      if (s.idl && s.idl.idlNames) {
-        Object.keys(s.idl.idlNames).forEach(n => {
+      if (s.idlparsed && s.idlparsed.idlNames) {
+        Object.keys(s.idlparsed.idlNames).forEach(n => {
           if (!used_by[n]) used_by[n] = [];
-          if (s.idl.idlNames[n].type === "interface") {
+          if (s.idlparsed.idlNames[n].type === "interface") {
             exposed_on[n] = ["Window"]; // default if no ext attr specified
-            const exposedEA = s.idl.idlNames[n].extAttrs ? s.idl.idlNames[n].extAttrs.find(ea => ea.name === "Exposed") || {} : {};
+            const exposedEA = s.idlparsed.idlNames[n].extAttrs ? s.idlparsed.idlNames[n].extAttrs.find(ea => ea.name === "Exposed") || {} : {};
             if (exposedEA.rhs) {
               if (Array.isArray(exposedEA.rhs.value)) {
                 exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
@@ -347,8 +347,8 @@ fs.readFile("./webref/ed/index.json", "utf-8")
             }
           }
         });
-        Object.keys(s.idl.dependencies).forEach( n => {
-          s.idl.dependencies[n].forEach(d => {
+        Object.keys(s.idlparsed.dependencies).forEach( n => {
+          s.idlparsed.dependencies[n].forEach(d => {
             if (!used_by[d]) {
               used_by[d] = [];
             }
