@@ -17,7 +17,13 @@ interface <strong>Text</strong> : <a href='CharacterData.html'>CharacterData</a>
   [NewObject] <a href='Text.html'>Text</a> <strong>splitText</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>);</span><span class=def>
   readonly attribute <span class=primitive>DOMString</span> <strong>wholeText</strong>;</span>
 };</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
+
+<a href='Text.html'>Text</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
+
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a href='Window.html'>Window</a>]
@@ -26,7 +32,11 @@ interface <strong>Text</strong> : <a href='CharacterData.html'>CharacterData</a>
 
   [NewObject] <a href='Text.html'>Text</a> <strong>splitText</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>);</span><span class=def>
   readonly attribute <span class=primitive>DOMString</span> <strong>wholeText</strong>;</span><span class=def>
-  readonly attribute <a href='HTMLSlotElement.html'>HTMLSlotElement</a>? <strong>assignedSlot</strong>;</span>
+  readonly attribute <a href='HTMLSlotElement.html'>HTMLSlotElement</a>? <strong>assignedSlot</strong>;</span><span class=def>
+  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -43,5 +53,6 @@ interface <strong>Text</strong> : <a href='CharacterData.html'>CharacterData</a>
   <section><h3>Refering specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Text</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Text</code></li>
 
   </ul></section>
