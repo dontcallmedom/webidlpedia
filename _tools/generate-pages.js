@@ -8,8 +8,12 @@ const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idlparsed && s.idlparsed.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
 
+// FIXME: this global variable is filled in interfaceDetails()
+// and used in globalDetails
+let consolidatedIdlMembersByInterface = {};
+
 // webidl2 cannot serialize its JSON output, only its "live" output
-// so we start from the unparse IDL & reparse it to make it serializable
+// so we start from the unparsed IDL & reparse it to make it serializable
 function extractSerializableIDLFromSpec(name, type, spec) {
   return webidl.parse(spec.idl).filter(i => (i.name === name && i.type === type) || (i.target === name & i.type === "includes"));
 }
@@ -59,7 +63,7 @@ const primitives = [ "ArrayBuffer", "DataView", "Int8Array", "Int16Array",
                      "Uint8ClampedArray", "Float32Array", "Float64Array",
                      "BigUint64Array", "BigInt64Array"];
 
-function fullList(data, used_by, exposed_on) {
+function idlNameList(data, used_by, exposed_on) {
   let sections = [];
   // dealing with WebIDL primitives
   const primitiveList = htmlList(primitives.map(name => {
@@ -89,12 +93,16 @@ function fullList(data, used_by, exposed_on) {
         const list = htmlList(names.map(name => {
           const usage = used_by[name] ? used_by[name].length : 0;
           const link = htmlLink(name, name + ".html");
-          const exposed = (exposed_on[name] || []).map(n => html`<span class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet').replace('*', 'everywhere')}" title="exposed on ${n}">${n}</span>`);
+          const exposed = (exposed_on[name] || []).map(n => html`<a href="../globals/${n !== '*' ? n : 'index'}.html" class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet').replace('*', 'everywhere')}" title="exposed on ${n}">${n}</a>`);
           return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span> ${exposed}`;
         }));
         sections.push(htmlSection(type.title, list));
       });
   return html.join(sections, '');
+}
+
+function globalList(globals) {
+  return htmlList(Object.keys(globals).map(g => htmlLink(g, g + ".html")));
 }
 
 function idlDfnLink(name, spec) {
@@ -125,7 +133,6 @@ function extendedIdlDfnLink(name, spec) {
   return url;
 }
 
-
 function interfaceDetails(data, name, used_by, templates) {
   let type;
   let mainDefItems = [];
@@ -151,19 +158,7 @@ function interfaceDetails(data, name, used_by, templates) {
         });
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mainIdlDef.members);
       }
-      /* not sure whether to consolidate across inheritance chain yet
-         since inheritance has more impact than merging list of members
-         it feels like it's probably left alone?
-      if (mainIdlDef.inheritance) {
-        let def = mainIdlDef;
-        while (def.inheritance) {
-          let members = extractSerializableIDLMembersFromPlatform(def.inheritance, type, data);
-          needsConsolidation = true;
-          consolidatedIdlMembers = consolidatedIdlMembers.concat(members);
-          def = data.find(s => s.idl && s.idl.idlNames && s.idl.idlNames[def.inheritance]).idl.idlNames[def.inheritance];
-        }
-      }
-      */
+      /* not consolidating across inheritance here */
       idlparsed.filter(i => i.partial).forEach(i => {
         needsConsolidation = true;
         consolidatedIdlMembers =  consolidatedIdlMembers.concat(i.members);
@@ -197,7 +192,7 @@ function interfaceDetails(data, name, used_by, templates) {
   if (partialDefItems.length) {
     partialDef = html.join([html`<p>This ${type} is extended in the following specifications:</p>`, htmlList(partialDefItems)], '');
   }
-
+  consolidatedIdlMembersByInterface[name] =  consolidatedIdlMembers;
   let consolidatedDef = html``;
   if (needsConsolidation) {
     consolidatedDef = html`<details><summary>Consolidated IDL (across ${consolidatedIdlDef && consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
@@ -205,7 +200,7 @@ function interfaceDetails(data, name, used_by, templates) {
 
   let usedBy = html``;
   let usedByList = [];
-  (used_by[name] || []).forEach(n => {
+  (used_by[name].sort() || []).forEach(n => {
     usedByList.push(html`<a href="${n}.html">${n}</a>`);
   });
   if (usedByList.length) {
@@ -235,9 +230,65 @@ ${usedBy}
   ${refs}`};
 }
 
+function globalDetails(name, {globalObject, subrealms, exposes}, data, templates) {
+  const exclusiveExposeList = htmlList(exposes.exclusive.sort().map(iname => htmlLink(iname, `../names/${iname}.html`)));
+  const htmlExclusiveExposeList =  exposes.exclusive.length ? html`<p>The following interfaces are exposed exclusively in the corresponding realms:</p>
+${exclusiveExposeList}
+` :  '' ;
+
+  const exposeList = htmlList(exposes.others.sort().map(iname => htmlLink(iname, `../names/${iname}.html`)));
+  const htmlExposeList = exposes.others.length ? html`<p>The following interfaces are also exposed in the corresponding realms:</p>
+${exposeList}
+` :  '' ;
+
+  if (globalObject) {
+  let consolidatedIdlMembers = consolidatedIdlMembersByInterface[globalObject];
+  // ensure we add a given inherited interface only once
+  let processedInterfaces = new Set([globalObject]);
+  let needInheritanceCheckingInterfaces = [globalObject];
+  let cur = 0;
+  while (cur < needInheritanceCheckingInterfaces.length) {
+    let iname = needInheritanceCheckingInterfaces[cur];
+    data.filter(hasIdlDef)
+      .filter(spec => spec.idlparsed.idlNames[iname])
+      .forEach(spec => {
+        const type = (spec.idlparsed.idlNames[iname] || {}).type;
+        const mainIdlDef = extractSerializableIDLFromSpec(iname, type, spec).find(i => !i.partial && !i.includes);
+        if (!needInheritanceCheckingInterfaces.includes(mainIdlDef.inheritance)) {
+          needInheritanceCheckingInterfaces.push(mainIdlDef.inheritance);
+        }
+        if (!processedInterfaces.has(mainIdlDef.inheritance)) {
+          let members = extractSerializableIDLMembersFromPlatform(mainIdlDef.inheritance, type, data);
+          // constructors aren't inherited, filtering them out
+          consolidatedIdlMembers = consolidatedIdlMembers.concat(members.filter(m => m.type !== 'constructor'));
+          processedInterfaces.add(mainIdlDef.inheritance);
+        }
+      });
+    cur++;
+  }
+    return {title: `<code>${name}</code> Exposure`, content: html`
+<section>
+  <h3>Definition</h3>
+<p><code>${name}</code> realm execution contexts use <code><a href="../names/${globalObject}.html">${globalObject}</a></code> as a basis for their global object.</p>
+<p>This means their global object exposes the following members:</p>
+          <pre class=webidl><code>${webidl.write(consolidatedIdlMembers, {templates})}</code></pre>
+${htmlExclusiveExposeList}
+${htmlExposeList}
+`};
+  } else {
+    return {title: `<code>${name}</code> Exposure set`, content: html`
+<section>
+  <h3>Definition</h3>
+<p>Realms from the <code>${name}</code> exposure set encompass the following realm exposures:</p>
+${htmlList(subrealms.map(r => htmlLink(r, r + '.html')))}
+${htmlExclusiveExposeList}
+${htmlExposeList}
+`};
+  }
+}
+
 function enumNames(data) {
   let list = [];
-  data.filter(hasIdlDef)
   const enumValues = data.filter(hasIdlDef)
         .map(spec =>
              Object.keys(spec.idlparsed.idlNames)
@@ -330,6 +381,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     const index = JSON.parse(jsonIndex);
     const {results} = await expandCrawlResult(index, './webref/ed/');
     let exposed_on = {};
+    let globals = {};
     let used_by = {};
     results.forEach(s => {
       if (s.idlparsed && s.idlparsed.idlNames) {
@@ -345,6 +397,18 @@ fs.readFile("./webref/ed/index.json", "utf-8")
                 exposed_on[n] = [exposedEA.rhs.value];
               }
             }
+            const globalEA = s.idlparsed.idlNames[n].extAttrs ? s.idlparsed.idlNames[n].extAttrs.find(ea => ea.name === "Global") || {} : {};
+            if (globalEA.rhs) {
+              let globalValues = arrayify(globalEA.rhs.value);
+              for (const {value} of globalValues)  {
+                // '*' is not a name
+                if (value === '*') break;
+                if (!globals[value]) {
+                  globals[value] = {components: [], exposes: {exclusive: [], others: []}};
+                }
+                globals[value].components.push(n);
+              }
+            }
           }
         });
         Object.keys(s.idlparsed.dependencies).forEach( n => {
@@ -357,28 +421,78 @@ fs.readFile("./webref/ed/index.json", "utf-8")
         });
       }
     });
+    for (const name of Object.keys(exposed_on)) {
+      let globalValues = exposed_on[name];
+      if (exposed_on[name].includes('*')) {
+        globalValues = Object.keys(globals);
+      }
+      for (const global of globalValues) {
+        if (!globals[global]) {
+          console.error("unknown global: " + global);
+          continue;
+        }
+        if (exposed_on[name].length === 1) {
+          globals[global].exposes.exclusive.push(name);
+        } else {
+          globals[global].exposes.others.push(name);
+        }
+      }
+    }
+    for (const global of Object.keys(globals)) {
+      let subrealms = [];
+      // If several interfaces use this name as a Global EA
+      // it serves as a grouping of realms rather than as a realm definition
+      if (globals[global].components.length > 1) {
+        subrealms = Object.keys(globals).filter(g => globals[g].components.length === 1 && globals[global].components.includes(globals[g].components[0]));
+
+        // the said subrealms all expose the interfaces of their parent
+        for (const sub of subrealms) {
+          globals[sub].exposes.others = [...new Set(globals[sub].exposes.others.concat(globals[global].exposes.exclusive).concat(globals[global].exposes.others))];
+        }
+      } else {
+        globals[global].globalObject = globals[global].components[0];
+      }
+      globals[global].subrealms = subrealms;
+    }
 
     // Generating referenceable names page
-    await generatePage("names/index.html", "Referenceable IDL names", fullList(results, used_by, exposed_on));
+    await generatePage("names/index.html", "Referenceable IDL names", idlNameList(results, used_by, exposed_on));
 
-    const webidlTemplate = {
-      wrap: items => html.join(items, ''),
-      trivia: t => {
-        if (!t.trim()) {
-          return t;
+    const webidlTemplate = (base = '') => {
+      return {
+        wrap: items => html.join(items, ''),
+        trivia: t => {
+          if (!t.trim()) {
+            return t;
+          }
+          return html`<span class="comment">${t}</span>`;
+        },
+        definition: content => html`<span class=def>${content}</span>`,
+        name: name => html`<strong>${name}</strong>`,
+        nameless: kw => html`<strong>${kw}</strong>`,
+        reference: (name, _, context) => {
+          // distinguish case where we're dealing with realm types rather than IDL tyeps
+          if (context.type === "extended-attribute" && ["Exposed", "Global"].includes(context.name)) {
+            return globals[name] ? html`<a class=realm href='../globals/${name}.html'>${name}</a>` : html`<span class=realm>${name}</span>`;
+          }
+          return used_by[name] ? html`<a href='${base}${name}.html'>${name}</a>` : html`<span class=primitive>${name}</span>`;
         }
-        return html`<span class="comment">${t}</span>`;
-      },
-      definition: content => html`<span class=def>${content}</span>`,
-      name: name => html`<strong>${name}</strong>`,
-      nameless: kw => html`<strong>${kw}</strong>`,
-      reference: name => used_by[name] ? html`<a href='${name}.html'>${name}</a>` : html`<span class=primitive>${name}</span>`
+      };
     };
 
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
-      const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate);
+      const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate());
       await generatePage("names/" + n + ".html", title, content);
+    }
+
+    // Generating index of globals
+    await generatePage("globals/index.html", "Types of realms", globalList(globals));
+
+    // Generating named global pages
+    for (let n of Object.keys(globals)) {
+      const {title, content} = globalDetails(n, globals[n], results, webidlTemplate('../names/'));
+      await generatePage("globals/" + n + ".html", title, content);
     }
 
     // Generating enum value list
