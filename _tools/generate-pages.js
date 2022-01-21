@@ -102,7 +102,9 @@ function idlNameList(data, used_by, exposed_on) {
 }
 
 function globalList(globals) {
-  return htmlList(Object.keys(globals).map(g => htmlLink(g, g + ".html")));
+  return html`
+<p>Web browsers can create <a href="https://tc39.es/ecma262/#sec-code-realms">JavaScript realm</a> with different global objects and exposing different WebIDL interfaces, based on their <em>global names</em> as defined below:</p>
+${htmlList(Object.keys(globals).map(g => htmlLink(g, g + ".html")))}`;
 }
 
 function idlDfnLink(name, spec) {
@@ -266,20 +268,20 @@ ${exposeList}
       });
     cur++;
   }
-    return {title: `<code>${name}</code> Exposure`, content: html`
+    return {title: `<code>${name}</code> Global name`, content: html`
 <section>
   <h3>Definition</h3>
-<p><code>${name}</code> realm execution contexts use <code><a href="../names/${globalObject}.html">${globalObject}</a></code> as a basis for their global object.</p>
+<p>Realm execution contexts tied to the <code>${name}</code> Global name  use <code><a href="../names/${globalObject}.html">${globalObject}</a></code> as a basis for their global object.</p>
 <p>This means their global object exposes the following members:</p>
           <pre class=webidl><code>${webidl.write(consolidatedIdlMembers, {templates})}</code></pre>
 ${htmlExclusiveExposeList}
 ${htmlExposeList}
 `};
   } else {
-    return {title: `<code>${name}</code> Exposure set`, content: html`
+    return {title: `<code>${name}</code> Global name`, content: html`
 <section>
   <h3>Definition</h3>
-<p>Realms from the <code>${name}</code> exposure set encompass the following realm exposures:</p>
+<p>The <code>${name}</code> Global name encompass the following other Global names:</p>
 ${htmlList(subrealms.map(r => htmlLink(r, r + '.html')))}
 ${htmlExclusiveExposeList}
 ${htmlExposeList}
@@ -387,6 +389,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
       if (s.idlparsed && s.idlparsed.idlNames) {
         Object.keys(s.idlparsed.idlNames).forEach(n => {
           if (!used_by[n]) used_by[n] = [];
+          // TODO: uses idlparsed.exposed && idlparsed.globals instead
           if (s.idlparsed.idlNames[n].type === "interface") {
             exposed_on[n] = ["Window"]; // default if no ext attr specified
             const exposedEA = s.idlparsed.idlNames[n].extAttrs ? s.idlparsed.idlNames[n].extAttrs.find(ea => ea.name === "Exposed") || {} : {};
@@ -487,7 +490,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     }
 
     // Generating index of globals
-    await generatePage("globals/index.html", "Types of realms", globalList(globals));
+    await generatePage("globals/index.html", "Global names", globalList(globals));
 
     // Generating named global pages
     for (let n of Object.keys(globals)) {
