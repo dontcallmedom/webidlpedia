@@ -207,7 +207,7 @@ function interfaceDetails(data, name, used_by, templates) {
   });
   if (usedByList.length) {
     usedBy = html`<section>
-  <h3>Refering IDL interfaces/dictionaries</h3>
+  <h3>Referring IDL interfaces/dictionaries</h3>
   ${htmlList(usedByList)}
 </section>`;
   }
@@ -219,7 +219,7 @@ function interfaceDetails(data, name, used_by, templates) {
       refList.push( html`<a href="${spec.url}">${spec.title}</a> refers to <code>${name}</code>`);
     });
   if (refList.length) {
-    refs = html`<section><h3>Refering specifications</h3>${htmlList(refList)}</section>`;
+    refs = html`<section><h3>Referring specifications</h3>${htmlList(refList)}</section>`;
   }
   return {title: `<code>${name}</code> ${type}`, content: html`
 <section>
