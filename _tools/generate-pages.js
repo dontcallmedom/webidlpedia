@@ -30,10 +30,11 @@ function extractSerializableIDLMembersFromPlatform(name, type, data) {
   return members;
 }
 
-async function generatePage(path, title, content) {
+async function generatePage(path, title, content, parent) {
   await fs.writeFile(path, `---
 title: ${title}
 layout: base
+${parent ? `parent: ${parent}` : ''}
 ${path.includes('/') ? "base: ../" : ""}
 ---
 ${content}`);
@@ -486,7 +487,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
       const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate());
-      await generatePage("names/" + n + ".html", title, content);
+      await generatePage("names/" + n + ".html", title, content, 'names/');
     }
 
     // Generating index of globals
@@ -495,7 +496,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     // Generating named global pages
     for (let n of Object.keys(globals)) {
       const {title, content} = globalDetails(n, globals[n], results, webidlTemplate('../names/'));
-      await generatePage("globals/" + n + ".html", title, content);
+      await generatePage("globals/" + n + ".html", title, content, 'globals/');
     }
 
     // Generating enum value list
