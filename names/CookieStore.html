@@ -7,7 +7,7 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#cookiestore">Cookie Store API</a> defines <code>CookieStore</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a href='ServiceWorker.html'>ServiceWorker</a>,<a href='Window.html'>Window</a>),
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>),
  SecureContext]
 interface <strong>CookieStore</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
   Promise&lt;<a href='CookieListItem.html'>CookieListItem</a>?&gt; <strong>get</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
@@ -22,7 +22,7 @@ interface <strong>CookieStore</strong> : <a href='EventTarget.html'>EventTarget<
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>delete</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>delete</strong>(<a href='CookieStoreDeleteOptions.html'>CookieStoreDeleteOptions</a> <strong>options</strong>);</span><span class=def>
 
-  [Exposed&#x3D;<a href='Window.html'>Window</a>]
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span>
 };</span></code></pre>
   
@@ -32,8 +32,8 @@ interface <strong>CookieStore</strong> : <a href='EventTarget.html'>EventTarget<
   <h3>Refering IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Window.html">Window</a></li>
-<li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li>
+    <li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li>
+<li><a href="Window.html">Window</a></li>
 
   </ul>
 </section>

@@ -1,0 +1,1194 @@
+---
+title: <code>Window</code> Global name
+layout: base
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+<p>Realm execution contexts tied to the <code>Window</code> Global name  use <code><a href="../names/Window.html">Window</a></code> as a basis for their global object.</p>
+<p>This means their global object exposes the following members:</p>
+          <pre class=webidl><code><span class=def><span class="comment">
+  &#x2F;&#x2F; the current browsing context
+  </span>[LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>window</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>self</strong>;</span><span class=def>
+  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Document.html'>Document</a> <strong>document</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+  [PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Location.html'>Location</a> <strong>location</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;History.html'>History</a> <strong>history</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>locationbar</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>menubar</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>personalbar</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>scrollbars</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>statusbar</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>toolbar</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>status</strong>;</span><span class=def>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>closed</strong>;</span><span class=def>
+  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>focus</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; other browsing contexts
+  </span>[Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
+  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;</span><span class=def>
+  attribute <span class=primitive>any</span> <strong>opener</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;Element.html'>Element</a>? <strong>frameElement</strong>;</span><span class=def>
+  <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span class=primitive>USVString</span> <strong>url</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>target</strong> &#x3D; &quot;_blank&quot;, optional [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>features</strong> &#x3D; &quot;&quot;);</span><span class=def>
+  <strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def><span class="comment">
+  &#x2F;&#x2F; Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
+  &#x2F;&#x2F; object on the prototype chain. Indeed, this does not make the global object an exotic object.
+  &#x2F;&#x2F; Indexed access is taken care of by the WindowProxy exotic object.
+
+  &#x2F;&#x2F; the user agent
+  </span>readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>navigator</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>clientInformation</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .navigator
+  </span>readonly attribute <span class=primitive>boolean</span> <strong>originAgentCluster</strong>;</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; user prompts
+  </span><span class=primitive>undefined</span> <strong>alert</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>alert</strong>(<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def>
+  <span class=primitive>boolean</span> <strong>confirm</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def>
+  <span class=primitive>DOMString</span>? <strong>prompt</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>default</strong> &#x3D; &quot;&quot;);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>print</strong>();</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, <span class=primitive>USVString</span> <strong>targetOrigin</strong>, optional sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong> &#x3D; []);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='..&#x2F;names&#x2F;WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def>
+
+  [Replaceable, SameObject] readonly attribute <a href='..&#x2F;names&#x2F;External.html'>External</a> <strong>external</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def>
+  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def>
+  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def>
+  [Replaceable] readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isSecureContext</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>crossOriginIsolated</strong>;</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>reportError</strong>(<span class=primitive>any</span> <strong>e</strong>);</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; base64 utility methods
+  </span><span class=primitive>DOMString</span> <strong>btoa</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
+  <span class=primitive>ByteString</span> <strong>atob</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; timers
+  </span><span class=primitive>long</span> <strong>setTimeout</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>clearTimeout</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def>
+  <span class=primitive>long</span> <strong>setInterval</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; microtask queuing
+  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='..&#x2F;names&#x2F;VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; ImageBitmap
+  </span>Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span class=primitive>long</span> <strong>sx</strong>, <span class=primitive>long</span> <strong>sy</strong>, <span class=primitive>long</span> <strong>sw</strong>, <span class=primitive>long</span> <strong>sh</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def><span class="comment">
+
+  &#x2F;&#x2F; structured cloning
+  </span><span class=primitive>any</span> <strong>structuredClone</strong>(<span class=primitive>any</span> <strong>value</strong>, optional <a href='..&#x2F;names&#x2F;StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='..&#x2F;names&#x2F;FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>sessionStorage</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def>
+    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def>
+  [Replaceable] readonly attribute (<a href='..&#x2F;names&#x2F;Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;AppHistory.html'>AppHistory</a> <strong>appHistory</strong>;</span><span class=def>
+  readonly attribute <a href='..&#x2F;names&#x2F;AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
+    Promise&lt;sequence&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='..&#x2F;names&#x2F;DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def>
+    readonly attribute <a href='..&#x2F;names&#x2F;PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def>
+    [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def>
+  [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='..&#x2F;names&#x2F;SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def>
+  [NewObject] <a href='..&#x2F;names&#x2F;CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='..&#x2F;names&#x2F;Element.html'>Element</a> <strong>elt</strong>, optional <a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span><span class=def>
+    [NewObject] <a href='..&#x2F;names&#x2F;MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def>
+    [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; browsing context
+    </span><span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>moveBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>resizeTo</strong>(<span class=primitive>long</span> <strong>width</strong>, <span class=primitive>long</span> <strong>height</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>resizeBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; viewport
+    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerWidth</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerHeight</strong>;</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; viewport scrolling
+    </span>[Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollX</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageXOffset</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollY</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageYOffset</strong>;</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def><span class="comment">
+
+    &#x2F;&#x2F; client
+    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenLeft</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenTop</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerWidth</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerHeight</strong>;</span><span class=def>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>devicePixelRatio</strong>;</span><span class=def>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;</span><span class=def>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;</span><span class=def>
+    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;</span><span class=def>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;</span><span class=def>
+  <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='..&#x2F;names&#x2F;IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='..&#x2F;names&#x2F;IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
+  <a href='..&#x2F;names&#x2F;Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def>
+
+  <span class=primitive>undefined</span> <strong>addEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>removeEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>boolean</span> <strong>dispatchEvent</strong>(<a href='..&#x2F;names&#x2F;Event.html'>Event</a> <strong>event</strong>);</span></code></pre>
+<p>The following interfaces are exposed exclusively in the corresponding realms:</p>
+
+  <ul>
+    <li><a href="..&#x2F;names&#x2F;AbsoluteOrientationSensor.html">AbsoluteOrientationSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;AbstractRange.html">AbstractRange</a></li>
+<li><a href="..&#x2F;names&#x2F;Accelerometer.html">Accelerometer</a></li>
+<li><a href="..&#x2F;names&#x2F;AmbientLightSensor.html">AmbientLightSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;AnalyserNode.html">AnalyserNode</a></li>
+<li><a href="..&#x2F;names&#x2F;Animation.html">Animation</a></li>
+<li><a href="..&#x2F;names&#x2F;AnimationEffect.html">AnimationEffect</a></li>
+<li><a href="..&#x2F;names&#x2F;AnimationEvent.html">AnimationEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;AnimationNodeList.html">AnimationNodeList</a></li>
+<li><a href="..&#x2F;names&#x2F;AnimationPlaybackEvent.html">AnimationPlaybackEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;AnimationTimeline.html">AnimationTimeline</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistory.html">AppHistory</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistoryCurrentChangeEvent.html">AppHistoryCurrentChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistoryDestination.html">AppHistoryDestination</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistoryEntry.html">AppHistoryEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;AppHistoryTransition.html">AppHistoryTransition</a></li>
+<li><a href="..&#x2F;names&#x2F;Attr.html">Attr</a></li>
+<li><a href="..&#x2F;names&#x2F;AttributionReporting.html">AttributionReporting</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioBuffer.html">AudioBuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioBufferSourceNode.html">AudioBufferSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioContext.html">AudioContext</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioDestinationNode.html">AudioDestinationNode</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioListener.html">AudioListener</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioNode.html">AudioNode</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioParam.html">AudioParam</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioParamMap.html">AudioParamMap</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioProcessingEvent.html">AudioProcessingEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioTrack.html">AudioTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioTrackList.html">AudioTrackList</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioWorklet.html">AudioWorklet</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioWorkletNode.html">AudioWorkletNode</a></li>
+<li><a href="..&#x2F;names&#x2F;AuthenticatorAssertionResponse.html">AuthenticatorAssertionResponse</a></li>
+<li><a href="..&#x2F;names&#x2F;AuthenticatorAttestationResponse.html">AuthenticatorAttestationResponse</a></li>
+<li><a href="..&#x2F;names&#x2F;AuthenticatorResponse.html">AuthenticatorResponse</a></li>
+<li><a href="..&#x2F;names&#x2F;BarProp.html">BarProp</a></li>
+<li><a href="..&#x2F;names&#x2F;BaseAudioContext.html">BaseAudioContext</a></li>
+<li><a href="..&#x2F;names&#x2F;Baseline.html">Baseline</a></li>
+<li><a href="..&#x2F;names&#x2F;BatteryManager.html">BatteryManager</a></li>
+<li><a href="..&#x2F;names&#x2F;BeforeInstallPromptEvent.html">BeforeInstallPromptEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;BeforeUnloadEvent.html">BeforeUnloadEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;BiquadFilterNode.html">BiquadFilterNode</a></li>
+<li><a href="..&#x2F;names&#x2F;BlobEvent.html">BlobEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Bluetooth.html">Bluetooth</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothCharacteristicProperties.html">BluetoothCharacteristicProperties</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothDevice.html">BluetoothDevice</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothManufacturerDataMap.html">BluetoothManufacturerDataMap</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothPermissionResult.html">BluetoothPermissionResult</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothRemoteGATTDescriptor.html">BluetoothRemoteGATTDescriptor</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothServiceDataMap.html">BluetoothServiceDataMap</a></li>
+<li><a href="..&#x2F;names&#x2F;BluetoothUUID.html">BluetoothUUID</a></li>
+<li><a href="..&#x2F;names&#x2F;CDATASection.html">CDATASection</a></li>
+<li><a href="..&#x2F;names&#x2F;CSPViolationReportBody.html">CSPViolationReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSAnimation.html">CSSAnimation</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSConditionRule.html">CSSConditionRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSCounterStyleRule.html">CSSCounterStyleRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSFontFaceRule.html">CSSFontFaceRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSFontFeatureValuesMap.html">CSSFontFeatureValuesMap</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSFontFeatureValuesRule.html">CSSFontFeatureValuesRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSFontPaletteValuesRule.html">CSSFontPaletteValuesRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSGroupingRule.html">CSSGroupingRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSImportRule.html">CSSImportRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSKeyframeRule.html">CSSKeyframeRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSKeyframesRule.html">CSSKeyframesRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSLayerBlockRule.html">CSSLayerBlockRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSLayerStatementRule.html">CSSLayerStatementRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMarginRule.html">CSSMarginRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMediaRule.html">CSSMediaRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSNamespaceRule.html">CSSNamespaceRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSNestingRule.html">CSSNestingRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSPageRule.html">CSSPageRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserAtRule.html">CSSParserAtRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserBlock.html">CSSParserBlock</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserDeclaration.html">CSSParserDeclaration</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserFunction.html">CSSParserFunction</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserQualifiedRule.html">CSSParserQualifiedRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserRule.html">CSSParserRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSParserValue.html">CSSParserValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSPropertyRule.html">CSSPropertyRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSPseudoElement.html">CSSPseudoElement</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSRule.html">CSSRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSRuleList.html">CSSRuleList</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSScrollTimelineRule.html">CSSScrollTimelineRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSStyleDeclaration.html">CSSStyleDeclaration</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSStyleRule.html">CSSStyleRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSStyleSheet.html">CSSStyleSheet</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSSupportsRule.html">CSSSupportsRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSTransition.html">CSSTransition</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSViewportRule.html">CSSViewportRule</a></li>
+<li><a href="..&#x2F;names&#x2F;CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li>
+<li><a href="..&#x2F;names&#x2F;CaretPosition.html">CaretPosition</a></li>
+<li><a href="..&#x2F;names&#x2F;ChannelMergerNode.html">ChannelMergerNode</a></li>
+<li><a href="..&#x2F;names&#x2F;ChannelSplitterNode.html">ChannelSplitterNode</a></li>
+<li><a href="..&#x2F;names&#x2F;CharacterBoundsUpdateEvent.html">CharacterBoundsUpdateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;CharacterData.html">CharacterData</a></li>
+<li><a href="..&#x2F;names&#x2F;Clipboard.html">Clipboard</a></li>
+<li><a href="..&#x2F;names&#x2F;ClipboardEvent.html">ClipboardEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;ClipboardItem.html">ClipboardItem</a></li>
+<li><a href="..&#x2F;names&#x2F;CloseWatcher.html">CloseWatcher</a></li>
+<li><a href="..&#x2F;names&#x2F;Comment.html">Comment</a></li>
+<li><a href="..&#x2F;names&#x2F;CompositionEvent.html">CompositionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;ComputePressureObserver.html">ComputePressureObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;ConstantSourceNode.html">ConstantSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;ContactAddress.html">ContactAddress</a></li>
+<li><a href="..&#x2F;names&#x2F;ContactsManager.html">ContactsManager</a></li>
+<li><a href="..&#x2F;names&#x2F;ConvolverNode.html">ConvolverNode</a></li>
+<li><a href="..&#x2F;names&#x2F;CookieChangeEvent.html">CookieChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Credential.html">Credential</a></li>
+<li><a href="..&#x2F;names&#x2F;CredentialsContainer.html">CredentialsContainer</a></li>
+<li><a href="..&#x2F;names&#x2F;CustomElementRegistry.html">CustomElementRegistry</a></li>
+<li><a href="..&#x2F;names&#x2F;CustomStateSet.html">CustomStateSet</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMImplementation.html">DOMImplementation</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMParser.html">DOMParser</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMRectList.html">DOMRectList</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMStringMap.html">DOMStringMap</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMTokenList.html">DOMTokenList</a></li>
+<li><a href="..&#x2F;names&#x2F;DataCue.html">DataCue</a></li>
+<li><a href="..&#x2F;names&#x2F;DataTransfer.html">DataTransfer</a></li>
+<li><a href="..&#x2F;names&#x2F;DataTransferItem.html">DataTransferItem</a></li>
+<li><a href="..&#x2F;names&#x2F;DataTransferItemList.html">DataTransferItemList</a></li>
+<li><a href="..&#x2F;names&#x2F;DelayNode.html">DelayNode</a></li>
+<li><a href="..&#x2F;names&#x2F;DeviceMotionEvent.html">DeviceMotionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;DeviceMotionEventAcceleration.html">DeviceMotionEventAcceleration</a></li>
+<li><a href="..&#x2F;names&#x2F;DeviceMotionEventRotationRate.html">DeviceMotionEventRotationRate</a></li>
+<li><a href="..&#x2F;names&#x2F;DeviceOrientationEvent.html">DeviceOrientationEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;DevicePosture.html">DevicePosture</a></li>
+<li><a href="..&#x2F;names&#x2F;Document.html">Document</a></li>
+<li><a href="..&#x2F;names&#x2F;DocumentFragment.html">DocumentFragment</a></li>
+<li><a href="..&#x2F;names&#x2F;DocumentTimeline.html">DocumentTimeline</a></li>
+<li><a href="..&#x2F;names&#x2F;DocumentType.html">DocumentType</a></li>
+<li><a href="..&#x2F;names&#x2F;DragEvent.html">DragEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;DynamicsCompressorNode.html">DynamicsCompressorNode</a></li>
+<li><a href="..&#x2F;names&#x2F;EditContext.html">EditContext</a></li>
+<li><a href="..&#x2F;names&#x2F;Element.html">Element</a></li>
+<li><a href="..&#x2F;names&#x2F;ElementInternals.html">ElementInternals</a></li>
+<li><a href="..&#x2F;names&#x2F;EventCounts.html">EventCounts</a></li>
+<li><a href="..&#x2F;names&#x2F;External.html">External</a></li>
+<li><a href="..&#x2F;names&#x2F;EyeDropper.html">EyeDropper</a></li>
+<li><a href="..&#x2F;names&#x2F;FederatedCredential.html">FederatedCredential</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystem.html">FileSystem</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemDirectoryEntry.html">FileSystemDirectoryEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemDirectoryReader.html">FileSystemDirectoryReader</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemEntry.html">FileSystemEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemFileEntry.html">FileSystemFileEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;FocusEvent.html">FocusEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Font.html">Font</a></li>
+<li><a href="..&#x2F;names&#x2F;FontManager.html">FontManager</a></li>
+<li><a href="..&#x2F;names&#x2F;FontMetadata.html">FontMetadata</a></li>
+<li><a href="..&#x2F;names&#x2F;FontMetrics.html">FontMetrics</a></li>
+<li><a href="..&#x2F;names&#x2F;FormDataEvent.html">FormDataEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;FragmentDirective.html">FragmentDirective</a></li>
+<li><a href="..&#x2F;names&#x2F;GainNode.html">GainNode</a></li>
+<li><a href="..&#x2F;names&#x2F;Gamepad.html">Gamepad</a></li>
+<li><a href="..&#x2F;names&#x2F;GamepadButton.html">GamepadButton</a></li>
+<li><a href="..&#x2F;names&#x2F;GamepadEvent.html">GamepadEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;GamepadHapticActuator.html">GamepadHapticActuator</a></li>
+<li><a href="..&#x2F;names&#x2F;GamepadPose.html">GamepadPose</a></li>
+<li><a href="..&#x2F;names&#x2F;GamepadTouch.html">GamepadTouch</a></li>
+<li><a href="..&#x2F;names&#x2F;Geolocation.html">Geolocation</a></li>
+<li><a href="..&#x2F;names&#x2F;GeolocationCoordinates.html">GeolocationCoordinates</a></li>
+<li><a href="..&#x2F;names&#x2F;GeolocationPosition.html">GeolocationPosition</a></li>
+<li><a href="..&#x2F;names&#x2F;GeolocationPositionError.html">GeolocationPositionError</a></li>
+<li><a href="..&#x2F;names&#x2F;GravitySensor.html">GravitySensor</a></li>
+<li><a href="..&#x2F;names&#x2F;GroupEffect.html">GroupEffect</a></li>
+<li><a href="..&#x2F;names&#x2F;Gyroscope.html">Gyroscope</a></li>
+<li><a href="..&#x2F;names&#x2F;HID.html">HID</a></li>
+<li><a href="..&#x2F;names&#x2F;HIDConnectionEvent.html">HIDConnectionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;HIDDevice.html">HIDDevice</a></li>
+<li><a href="..&#x2F;names&#x2F;HIDInputReportEvent.html">HIDInputReportEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLAllCollection.html">HTMLAllCollection</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLAnchorElement.html">HTMLAnchorElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLAreaElement.html">HTMLAreaElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLAudioElement.html">HTMLAudioElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLBRElement.html">HTMLBRElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLBaseElement.html">HTMLBaseElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLBodyElement.html">HTMLBodyElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLButtonElement.html">HTMLButtonElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLCanvasElement.html">HTMLCanvasElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLCollection.html">HTMLCollection</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDListElement.html">HTMLDListElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDataElement.html">HTMLDataElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDataListElement.html">HTMLDataListElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDetailsElement.html">HTMLDetailsElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDialogElement.html">HTMLDialogElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDirectoryElement.html">HTMLDirectoryElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLDivElement.html">HTMLDivElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLElement.html">HTMLElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLEmbedElement.html">HTMLEmbedElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFieldSetElement.html">HTMLFieldSetElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFontElement.html">HTMLFontElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFormControlsCollection.html">HTMLFormControlsCollection</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFormElement.html">HTMLFormElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFrameElement.html">HTMLFrameElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLFrameSetElement.html">HTMLFrameSetElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLHRElement.html">HTMLHRElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLHeadElement.html">HTMLHeadElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLHeadingElement.html">HTMLHeadingElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLHtmlElement.html">HTMLHtmlElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLIFrameElement.html">HTMLIFrameElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLImageElement.html">HTMLImageElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLInputElement.html">HTMLInputElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLLIElement.html">HTMLLIElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLLabelElement.html">HTMLLabelElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLLegendElement.html">HTMLLegendElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLLinkElement.html">HTMLLinkElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMapElement.html">HTMLMapElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMarqueeElement.html">HTMLMarqueeElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMediaElement.html">HTMLMediaElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMenuElement.html">HTMLMenuElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMetaElement.html">HTMLMetaElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLMeterElement.html">HTMLMeterElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLModElement.html">HTMLModElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLOListElement.html">HTMLOListElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLObjectElement.html">HTMLObjectElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLOptGroupElement.html">HTMLOptGroupElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLOptionElement.html">HTMLOptionElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLOptionsCollection.html">HTMLOptionsCollection</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLOutputElement.html">HTMLOutputElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLParagraphElement.html">HTMLParagraphElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLParamElement.html">HTMLParamElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLPictureElement.html">HTMLPictureElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLPortalElement.html">HTMLPortalElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLPreElement.html">HTMLPreElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLProgressElement.html">HTMLProgressElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLQuoteElement.html">HTMLQuoteElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLScriptElement.html">HTMLScriptElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLSelectElement.html">HTMLSelectElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLSlotElement.html">HTMLSlotElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLSourceElement.html">HTMLSourceElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLSpanElement.html">HTMLSpanElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLStyleElement.html">HTMLStyleElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableCaptionElement.html">HTMLTableCaptionElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableCellElement.html">HTMLTableCellElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableColElement.html">HTMLTableColElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableElement.html">HTMLTableElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableRowElement.html">HTMLTableRowElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTableSectionElement.html">HTMLTableSectionElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTemplateElement.html">HTMLTemplateElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTextAreaElement.html">HTMLTextAreaElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTimeElement.html">HTMLTimeElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTitleElement.html">HTMLTitleElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLTrackElement.html">HTMLTrackElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLUListElement.html">HTMLUListElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLUnknownElement.html">HTMLUnknownElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HTMLVideoElement.html">HTMLVideoElement</a></li>
+<li><a href="..&#x2F;names&#x2F;HashChangeEvent.html">HashChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Highlight.html">Highlight</a></li>
+<li><a href="..&#x2F;names&#x2F;HighlightRegistry.html">HighlightRegistry</a></li>
+<li><a href="..&#x2F;names&#x2F;History.html">History</a></li>
+<li><a href="..&#x2F;names&#x2F;IIRFilterNode.html">IIRFilterNode</a></li>
+<li><a href="..&#x2F;names&#x2F;IdleDeadline.html">IdleDeadline</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageCapture.html">ImageCapture</a></li>
+<li><a href="..&#x2F;names&#x2F;Ink.html">Ink</a></li>
+<li><a href="..&#x2F;names&#x2F;InkPresenter.html">InkPresenter</a></li>
+<li><a href="..&#x2F;names&#x2F;InputDeviceCapabilities.html">InputDeviceCapabilities</a></li>
+<li><a href="..&#x2F;names&#x2F;InputDeviceInfo.html">InputDeviceInfo</a></li>
+<li><a href="..&#x2F;names&#x2F;InputEvent.html">InputEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;InteractionCounts.html">InteractionCounts</a></li>
+<li><a href="..&#x2F;names&#x2F;IntersectionObserver.html">IntersectionObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;IntersectionObserverEntry.html">IntersectionObserverEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;Keyboard.html">Keyboard</a></li>
+<li><a href="..&#x2F;names&#x2F;KeyboardEvent.html">KeyboardEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;KeyboardLayoutMap.html">KeyboardLayoutMap</a></li>
+<li><a href="..&#x2F;names&#x2F;KeyframeEffect.html">KeyframeEffect</a></li>
+<li><a href="..&#x2F;names&#x2F;LargestContentfulPaint.html">LargestContentfulPaint</a></li>
+<li><a href="..&#x2F;names&#x2F;LayoutShift.html">LayoutShift</a></li>
+<li><a href="..&#x2F;names&#x2F;LayoutShiftAttribution.html">LayoutShiftAttribution</a></li>
+<li><a href="..&#x2F;names&#x2F;LinearAccelerationSensor.html">LinearAccelerationSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;Location.html">Location</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIAccess.html">MIDIAccess</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIConnectionEvent.html">MIDIConnectionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIInput.html">MIDIInput</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIInputMap.html">MIDIInputMap</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIMessageEvent.html">MIDIMessageEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIOutput.html">MIDIOutput</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIOutputMap.html">MIDIOutputMap</a></li>
+<li><a href="..&#x2F;names&#x2F;MIDIPort.html">MIDIPort</a></li>
+<li><a href="..&#x2F;names&#x2F;Magnetometer.html">Magnetometer</a></li>
+<li><a href="..&#x2F;names&#x2F;MathMLElement.html">MathMLElement</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaDeviceInfo.html">MediaDeviceInfo</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaDevices.html">MediaDevices</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaEncryptedEvent.html">MediaEncryptedEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaError.html">MediaError</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaKeyMessageEvent.html">MediaKeyMessageEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaKeySession.html">MediaKeySession</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaKeyStatusMap.html">MediaKeyStatusMap</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaKeySystemAccess.html">MediaKeySystemAccess</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaKeys.html">MediaKeys</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaList.html">MediaList</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaMetadata.html">MediaMetadata</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaQueryList.html">MediaQueryList</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaQueryListEvent.html">MediaQueryListEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaRecorder.html">MediaRecorder</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaRecorderErrorEvent.html">MediaRecorderErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaSession.html">MediaSession</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStream.html">MediaStream</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStreamTrack.html">MediaStreamTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaStreamTrackEvent.html">MediaStreamTrackEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MimeType.html">MimeType</a></li>
+<li><a href="..&#x2F;names&#x2F;MimeTypeArray.html">MimeTypeArray</a></li>
+<li><a href="..&#x2F;names&#x2F;MouseEvent.html">MouseEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MutationEvent.html">MutationEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MutationObserver.html">MutationObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;MutationRecord.html">MutationRecord</a></li>
+<li><a href="..&#x2F;names&#x2F;NDEFMessage.html">NDEFMessage</a></li>
+<li><a href="..&#x2F;names&#x2F;NDEFReader.html">NDEFReader</a></li>
+<li><a href="..&#x2F;names&#x2F;NDEFReadingEvent.html">NDEFReadingEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;NDEFRecord.html">NDEFRecord</a></li>
+<li><a href="..&#x2F;names&#x2F;NamedFlow.html">NamedFlow</a></li>
+<li><a href="..&#x2F;names&#x2F;NamedFlowMap.html">NamedFlowMap</a></li>
+<li><a href="..&#x2F;names&#x2F;NamedNodeMap.html">NamedNodeMap</a></li>
+<li><a href="..&#x2F;names&#x2F;NavigationEvent.html">NavigationEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Navigator.html">Navigator</a></li>
+<li><a href="..&#x2F;names&#x2F;Node.html">Node</a></li>
+<li><a href="..&#x2F;names&#x2F;NodeIterator.html">NodeIterator</a></li>
+<li><a href="..&#x2F;names&#x2F;NodeList.html">NodeList</a></li>
+<li><a href="..&#x2F;names&#x2F;OTPCredential.html">OTPCredential</a></li>
+<li><a href="..&#x2F;names&#x2F;OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;OfflineAudioContext.html">OfflineAudioContext</a></li>
+<li><a href="..&#x2F;names&#x2F;OrientationSensor.html">OrientationSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;OscillatorNode.html">OscillatorNode</a></li>
+<li><a href="..&#x2F;names&#x2F;OverconstrainedError.html">OverconstrainedError</a></li>
+<li><a href="..&#x2F;names&#x2F;PageTransitionEvent.html">PageTransitionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PannerNode.html">PannerNode</a></li>
+<li><a href="..&#x2F;names&#x2F;PasswordCredential.html">PasswordCredential</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentMethodChangeEvent.html">PaymentMethodChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentRequest.html">PaymentRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentRequestUpdateEvent.html">PaymentRequestUpdateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentResponse.html">PaymentResponse</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceElementTiming.html">PerformanceElementTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceEventTiming.html">PerformanceEventTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceLongTaskTiming.html">PerformanceLongTaskTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceNavigation.html">PerformanceNavigation</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceNavigationTiming.html">PerformanceNavigationTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformancePaintTiming.html">PerformancePaintTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceTiming.html">PerformanceTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PeriodicWave.html">PeriodicWave</a></li>
+<li><a href="..&#x2F;names&#x2F;PermissionsPolicy.html">PermissionsPolicy</a></li>
+<li><a href="..&#x2F;names&#x2F;PermissionsPolicyViolationReportBody.html">PermissionsPolicyViolationReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;PictureInPictureEvent.html">PictureInPictureEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PictureInPictureWindow.html">PictureInPictureWindow</a></li>
+<li><a href="..&#x2F;names&#x2F;Plugin.html">Plugin</a></li>
+<li><a href="..&#x2F;names&#x2F;PluginArray.html">PluginArray</a></li>
+<li><a href="..&#x2F;names&#x2F;PointerEvent.html">PointerEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PopStateEvent.html">PopStateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PortalActivateEvent.html">PortalActivateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PortalHost.html">PortalHost</a></li>
+<li><a href="..&#x2F;names&#x2F;Presentation.html">Presentation</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationAvailability.html">PresentationAvailability</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationConnection.html">PresentationConnection</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationConnectionCloseEvent.html">PresentationConnectionCloseEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationConnectionList.html">PresentationConnectionList</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationReceiver.html">PresentationReceiver</a></li>
+<li><a href="..&#x2F;names&#x2F;PresentationRequest.html">PresentationRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;ProcessingInstruction.html">ProcessingInstruction</a></li>
+<li><a href="..&#x2F;names&#x2F;Profiler.html">Profiler</a></li>
+<li><a href="..&#x2F;names&#x2F;ProximitySensor.html">ProximitySensor</a></li>
+<li><a href="..&#x2F;names&#x2F;PublicKeyCredential.html">PublicKeyCredential</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCCertificate.html">RTCCertificate</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCDTMFSender.html">RTCDTMFSender</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCDTMFToneChangeEvent.html">RTCDTMFToneChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCDataChannel.html">RTCDataChannel</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCDataChannelEvent.html">RTCDataChannelEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCDtlsTransport.html">RTCDtlsTransport</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCError.html">RTCError</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCErrorEvent.html">RTCErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCIceCandidate.html">RTCIceCandidate</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCIceTransport.html">RTCIceTransport</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCIdentityAssertion.html">RTCIdentityAssertion</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCPeerConnection.html">RTCPeerConnection</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCPeerConnectionIceErrorEvent.html">RTCPeerConnectionIceErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCRtpReceiver.html">RTCRtpReceiver</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCRtpScriptTransform.html">RTCRtpScriptTransform</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCRtpSender.html">RTCRtpSender</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCRtpTransceiver.html">RTCRtpTransceiver</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCSctpTransport.html">RTCSctpTransport</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCSessionDescription.html">RTCSessionDescription</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCStatsReport.html">RTCStatsReport</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCTrackEvent.html">RTCTrackEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;RadioNodeList.html">RadioNodeList</a></li>
+<li><a href="..&#x2F;names&#x2F;Range.html">Range</a></li>
+<li><a href="..&#x2F;names&#x2F;RelativeOrientationSensor.html">RelativeOrientationSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;RemotePlayback.html">RemotePlayback</a></li>
+<li><a href="..&#x2F;names&#x2F;ResizeObserver.html">ResizeObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;ResizeObserverEntry.html">ResizeObserverEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;ResizeObserverSize.html">ResizeObserverSize</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAElement.html">SVGAElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAngle.html">SVGAngle</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimateElement.html">SVGAnimateElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimateMotionElement.html">SVGAnimateMotionElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimateTransformElement.html">SVGAnimateTransformElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedAngle.html">SVGAnimatedAngle</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedBoolean.html">SVGAnimatedBoolean</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedEnumeration.html">SVGAnimatedEnumeration</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedInteger.html">SVGAnimatedInteger</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedLength.html">SVGAnimatedLength</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedLengthList.html">SVGAnimatedLengthList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedNumber.html">SVGAnimatedNumber</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedNumberList.html">SVGAnimatedNumberList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedPreserveAspectRatio.html">SVGAnimatedPreserveAspectRatio</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedRect.html">SVGAnimatedRect</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedString.html">SVGAnimatedString</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimatedTransformList.html">SVGAnimatedTransformList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGAnimationElement.html">SVGAnimationElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGCircleElement.html">SVGCircleElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGClipPathElement.html">SVGClipPathElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGComponentTransferFunctionElement.html">SVGComponentTransferFunctionElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGDefsElement.html">SVGDefsElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGDescElement.html">SVGDescElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGDiscardElement.html">SVGDiscardElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGElement.html">SVGElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGEllipseElement.html">SVGEllipseElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEBlendElement.html">SVGFEBlendElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEColorMatrixElement.html">SVGFEColorMatrixElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEComponentTransferElement.html">SVGFEComponentTransferElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFECompositeElement.html">SVGFECompositeElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEConvolveMatrixElement.html">SVGFEConvolveMatrixElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEDiffuseLightingElement.html">SVGFEDiffuseLightingElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEDisplacementMapElement.html">SVGFEDisplacementMapElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEDistantLightElement.html">SVGFEDistantLightElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEDropShadowElement.html">SVGFEDropShadowElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEFloodElement.html">SVGFEFloodElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEFuncAElement.html">SVGFEFuncAElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEFuncBElement.html">SVGFEFuncBElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEFuncGElement.html">SVGFEFuncGElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEFuncRElement.html">SVGFEFuncRElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEGaussianBlurElement.html">SVGFEGaussianBlurElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEImageElement.html">SVGFEImageElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEMergeElement.html">SVGFEMergeElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEMergeNodeElement.html">SVGFEMergeNodeElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEMorphologyElement.html">SVGFEMorphologyElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEOffsetElement.html">SVGFEOffsetElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFEPointLightElement.html">SVGFEPointLightElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFESpecularLightingElement.html">SVGFESpecularLightingElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFESpotLightElement.html">SVGFESpotLightElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFETileElement.html">SVGFETileElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFETurbulenceElement.html">SVGFETurbulenceElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGFilterElement.html">SVGFilterElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGForeignObjectElement.html">SVGForeignObjectElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGGElement.html">SVGGElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGGeometryElement.html">SVGGeometryElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGGradientElement.html">SVGGradientElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGGraphicsElement.html">SVGGraphicsElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGImageElement.html">SVGImageElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGLength.html">SVGLength</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGLengthList.html">SVGLengthList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGLineElement.html">SVGLineElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGLinearGradientElement.html">SVGLinearGradientElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGMPathElement.html">SVGMPathElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGMarkerElement.html">SVGMarkerElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGMaskElement.html">SVGMaskElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGMetadataElement.html">SVGMetadataElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGNumber.html">SVGNumber</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGNumberList.html">SVGNumberList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPathElement.html">SVGPathElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPatternElement.html">SVGPatternElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPointList.html">SVGPointList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPolygonElement.html">SVGPolygonElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPolylineElement.html">SVGPolylineElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGPreserveAspectRatio.html">SVGPreserveAspectRatio</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGRadialGradientElement.html">SVGRadialGradientElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGRectElement.html">SVGRectElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGSVGElement.html">SVGSVGElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGScriptElement.html">SVGScriptElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGSetElement.html">SVGSetElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGStopElement.html">SVGStopElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGStringList.html">SVGStringList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGStyleElement.html">SVGStyleElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGSwitchElement.html">SVGSwitchElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGSymbolElement.html">SVGSymbolElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTSpanElement.html">SVGTSpanElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTextContentElement.html">SVGTextContentElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTextElement.html">SVGTextElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTextPathElement.html">SVGTextPathElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTextPositioningElement.html">SVGTextPositioningElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTitleElement.html">SVGTitleElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTransform.html">SVGTransform</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGTransformList.html">SVGTransformList</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGUnitTypes.html">SVGUnitTypes</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGUseElement.html">SVGUseElement</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGUseElementShadowRoot.html">SVGUseElementShadowRoot</a></li>
+<li><a href="..&#x2F;names&#x2F;SVGViewElement.html">SVGViewElement</a></li>
+<li><a href="..&#x2F;names&#x2F;Sanitizer.html">Sanitizer</a></li>
+<li><a href="..&#x2F;names&#x2F;Scheduling.html">Scheduling</a></li>
+<li><a href="..&#x2F;names&#x2F;Screen.html">Screen</a></li>
+<li><a href="..&#x2F;names&#x2F;ScreenOrientation.html">ScreenOrientation</a></li>
+<li><a href="..&#x2F;names&#x2F;ScriptProcessorNode.html">ScriptProcessorNode</a></li>
+<li><a href="..&#x2F;names&#x2F;ScrollTimeline.html">ScrollTimeline</a></li>
+<li><a href="..&#x2F;names&#x2F;Selection.html">Selection</a></li>
+<li><a href="..&#x2F;names&#x2F;SequenceEffect.html">SequenceEffect</a></li>
+<li><a href="..&#x2F;names&#x2F;ShadowAnimation.html">ShadowAnimation</a></li>
+<li><a href="..&#x2F;names&#x2F;ShadowRoot.html">ShadowRoot</a></li>
+<li><a href="..&#x2F;names&#x2F;SharedWorker.html">SharedWorker</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechGrammar.html">SpeechGrammar</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechGrammarList.html">SpeechGrammarList</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognition.html">SpeechRecognition</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognitionAlternative.html">SpeechRecognitionAlternative</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognitionErrorEvent.html">SpeechRecognitionErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognitionEvent.html">SpeechRecognitionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognitionResult.html">SpeechRecognitionResult</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechRecognitionResultList.html">SpeechRecognitionResultList</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechSynthesis.html">SpeechSynthesis</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechSynthesisErrorEvent.html">SpeechSynthesisErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechSynthesisEvent.html">SpeechSynthesisEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechSynthesisUtterance.html">SpeechSynthesisUtterance</a></li>
+<li><a href="..&#x2F;names&#x2F;SpeechSynthesisVoice.html">SpeechSynthesisVoice</a></li>
+<li><a href="..&#x2F;names&#x2F;StaticRange.html">StaticRange</a></li>
+<li><a href="..&#x2F;names&#x2F;StereoPannerNode.html">StereoPannerNode</a></li>
+<li><a href="..&#x2F;names&#x2F;Storage.html">Storage</a></li>
+<li><a href="..&#x2F;names&#x2F;StorageEvent.html">StorageEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;StylePropertyMap.html">StylePropertyMap</a></li>
+<li><a href="..&#x2F;names&#x2F;StyleSheet.html">StyleSheet</a></li>
+<li><a href="..&#x2F;names&#x2F;StyleSheetList.html">StyleSheetList</a></li>
+<li><a href="..&#x2F;names&#x2F;SubmitEvent.html">SubmitEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TaskAttributionTiming.html">TaskAttributionTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;Text.html">Text</a></li>
+<li><a href="..&#x2F;names&#x2F;TextFormat.html">TextFormat</a></li>
+<li><a href="..&#x2F;names&#x2F;TextFormatUpdateEvent.html">TextFormatUpdateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TextTrack.html">TextTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;TextTrackCue.html">TextTrackCue</a></li>
+<li><a href="..&#x2F;names&#x2F;TextTrackCueList.html">TextTrackCueList</a></li>
+<li><a href="..&#x2F;names&#x2F;TextTrackList.html">TextTrackList</a></li>
+<li><a href="..&#x2F;names&#x2F;TextUpdateEvent.html">TextUpdateEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TimeEvent.html">TimeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TimeRanges.html">TimeRanges</a></li>
+<li><a href="..&#x2F;names&#x2F;Touch.html">Touch</a></li>
+<li><a href="..&#x2F;names&#x2F;TouchEvent.html">TouchEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TouchList.html">TouchList</a></li>
+<li><a href="..&#x2F;names&#x2F;TrackEvent.html">TrackEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TransitionEvent.html">TransitionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TreeWalker.html">TreeWalker</a></li>
+<li><a href="..&#x2F;names&#x2F;UIEvent.html">UIEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;UncalibratedMagnetometer.html">UncalibratedMagnetometer</a></li>
+<li><a href="..&#x2F;names&#x2F;VTTCue.html">VTTCue</a></li>
+<li><a href="..&#x2F;names&#x2F;VTTRegion.html">VTTRegion</a></li>
+<li><a href="..&#x2F;names&#x2F;ValidityState.html">ValidityState</a></li>
+<li><a href="..&#x2F;names&#x2F;ValueEvent.html">ValueEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoPlaybackQuality.html">VideoPlaybackQuality</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoTrack.html">VideoTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoTrackList.html">VideoTrackList</a></li>
+<li><a href="..&#x2F;names&#x2F;VirtualKeyboard.html">VirtualKeyboard</a></li>
+<li><a href="..&#x2F;names&#x2F;VisualViewport.html">VisualViewport</a></li>
+<li><a href="..&#x2F;names&#x2F;WakeLock.html">WakeLock</a></li>
+<li><a href="..&#x2F;names&#x2F;WakeLockSentinel.html">WakeLockSentinel</a></li>
+<li><a href="..&#x2F;names&#x2F;WaveShaperNode.html">WaveShaperNode</a></li>
+<li><a href="..&#x2F;names&#x2F;WheelEvent.html">WheelEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Window.html">Window</a></li>
+<li><a href="..&#x2F;names&#x2F;WindowControlsOverlay.html">WindowControlsOverlay</a></li>
+<li><a href="..&#x2F;names&#x2F;WindowControlsOverlayGeometryChangeEvent.html">WindowControlsOverlayGeometryChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Worklet.html">Worklet</a></li>
+<li><a href="..&#x2F;names&#x2F;WorkletAnimation.html">WorkletAnimation</a></li>
+<li><a href="..&#x2F;names&#x2F;XMLDocument.html">XMLDocument</a></li>
+<li><a href="..&#x2F;names&#x2F;XMLSerializer.html">XMLSerializer</a></li>
+<li><a href="..&#x2F;names&#x2F;XPathEvaluator.html">XPathEvaluator</a></li>
+<li><a href="..&#x2F;names&#x2F;XPathExpression.html">XPathExpression</a></li>
+<li><a href="..&#x2F;names&#x2F;XPathResult.html">XPathResult</a></li>
+<li><a href="..&#x2F;names&#x2F;XRAnchor.html">XRAnchor</a></li>
+<li><a href="..&#x2F;names&#x2F;XRAnchorSet.html">XRAnchorSet</a></li>
+<li><a href="..&#x2F;names&#x2F;XRBoundedReferenceSpace.html">XRBoundedReferenceSpace</a></li>
+<li><a href="..&#x2F;names&#x2F;XRCPUDepthInformation.html">XRCPUDepthInformation</a></li>
+<li><a href="..&#x2F;names&#x2F;XRCompositionLayer.html">XRCompositionLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRCubeLayer.html">XRCubeLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRCylinderLayer.html">XRCylinderLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRDepthInformation.html">XRDepthInformation</a></li>
+<li><a href="..&#x2F;names&#x2F;XREquirectLayer.html">XREquirectLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRFrame.html">XRFrame</a></li>
+<li><a href="..&#x2F;names&#x2F;XRHand.html">XRHand</a></li>
+<li><a href="..&#x2F;names&#x2F;XRHitTestResult.html">XRHitTestResult</a></li>
+<li><a href="..&#x2F;names&#x2F;XRHitTestSource.html">XRHitTestSource</a></li>
+<li><a href="..&#x2F;names&#x2F;XRInputSource.html">XRInputSource</a></li>
+<li><a href="..&#x2F;names&#x2F;XRInputSourceArray.html">XRInputSourceArray</a></li>
+<li><a href="..&#x2F;names&#x2F;XRInputSourceEvent.html">XRInputSourceEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;XRJointPose.html">XRJointPose</a></li>
+<li><a href="..&#x2F;names&#x2F;XRJointSpace.html">XRJointSpace</a></li>
+<li><a href="..&#x2F;names&#x2F;XRLayer.html">XRLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRLayerEvent.html">XRLayerEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;XRLightEstimate.html">XRLightEstimate</a></li>
+<li><a href="..&#x2F;names&#x2F;XRLightProbe.html">XRLightProbe</a></li>
+<li><a href="..&#x2F;names&#x2F;XRMediaBinding.html">XRMediaBinding</a></li>
+<li><a href="..&#x2F;names&#x2F;XRPermissionStatus.html">XRPermissionStatus</a></li>
+<li><a href="..&#x2F;names&#x2F;XRPose.html">XRPose</a></li>
+<li><a href="..&#x2F;names&#x2F;XRProjectionLayer.html">XRProjectionLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRQuadLayer.html">XRQuadLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRRay.html">XRRay</a></li>
+<li><a href="..&#x2F;names&#x2F;XRReferenceSpace.html">XRReferenceSpace</a></li>
+<li><a href="..&#x2F;names&#x2F;XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;XRRenderState.html">XRRenderState</a></li>
+<li><a href="..&#x2F;names&#x2F;XRRigidTransform.html">XRRigidTransform</a></li>
+<li><a href="..&#x2F;names&#x2F;XRSession.html">XRSession</a></li>
+<li><a href="..&#x2F;names&#x2F;XRSessionEvent.html">XRSessionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;XRSpace.html">XRSpace</a></li>
+<li><a href="..&#x2F;names&#x2F;XRSubImage.html">XRSubImage</a></li>
+<li><a href="..&#x2F;names&#x2F;XRSystem.html">XRSystem</a></li>
+<li><a href="..&#x2F;names&#x2F;XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></li>
+<li><a href="..&#x2F;names&#x2F;XRTransientInputHitTestSource.html">XRTransientInputHitTestSource</a></li>
+<li><a href="..&#x2F;names&#x2F;XRView.html">XRView</a></li>
+<li><a href="..&#x2F;names&#x2F;XRViewerPose.html">XRViewerPose</a></li>
+<li><a href="..&#x2F;names&#x2F;XRViewport.html">XRViewport</a></li>
+<li><a href="..&#x2F;names&#x2F;XRWebGLBinding.html">XRWebGLBinding</a></li>
+<li><a href="..&#x2F;names&#x2F;XRWebGLDepthInformation.html">XRWebGLDepthInformation</a></li>
+<li><a href="..&#x2F;names&#x2F;XRWebGLLayer.html">XRWebGLLayer</a></li>
+<li><a href="..&#x2F;names&#x2F;XRWebGLSubImage.html">XRWebGLSubImage</a></li>
+<li><a href="..&#x2F;names&#x2F;XSLTProcessor.html">XSLTProcessor</a></li>
+
+  </ul>
+
+<p>The following interfaces are also exposed in the corresponding realms:</p>
+
+  <ul>
+    <li><a href="..&#x2F;names&#x2F;ANGLE_instanced_arrays.html">ANGLE_instanced_arrays</a></li>
+<li><a href="..&#x2F;names&#x2F;AbortController.html">AbortController</a></li>
+<li><a href="..&#x2F;names&#x2F;AbortSignal.html">AbortSignal</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioData.html">AudioData</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioDecoder.html">AudioDecoder</a></li>
+<li><a href="..&#x2F;names&#x2F;AudioEncoder.html">AudioEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;BackgroundFetchManager.html">BackgroundFetchManager</a></li>
+<li><a href="..&#x2F;names&#x2F;BackgroundFetchRecord.html">BackgroundFetchRecord</a></li>
+<li><a href="..&#x2F;names&#x2F;BackgroundFetchRegistration.html">BackgroundFetchRegistration</a></li>
+<li><a href="..&#x2F;names&#x2F;BarcodeDetector.html">BarcodeDetector</a></li>
+<li><a href="..&#x2F;names&#x2F;Blob.html">Blob</a></li>
+<li><a href="..&#x2F;names&#x2F;BroadcastChannel.html">BroadcastChannel</a></li>
+<li><a href="..&#x2F;names&#x2F;ByteLengthQueuingStrategy.html">ByteLengthQueuingStrategy</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSColor.html">CSSColor</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSColorValue.html">CSSColorValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSDeviceCMYK.html">CSSDeviceCMYK</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSHSL.html">CSSHSL</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSHWB.html">CSSHWB</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSImageValue.html">CSSImageValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSKeywordValue.html">CSSKeywordValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSLCH.html">CSSLCH</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSLab.html">CSSLab</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathClamp.html">CSSMathClamp</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathInvert.html">CSSMathInvert</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathMax.html">CSSMathMax</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathMin.html">CSSMathMin</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathNegate.html">CSSMathNegate</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathProduct.html">CSSMathProduct</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathSum.html">CSSMathSum</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMathValue.html">CSSMathValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSMatrixComponent.html">CSSMatrixComponent</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSNumericArray.html">CSSNumericArray</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSNumericValue.html">CSSNumericValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSPerspective.html">CSSPerspective</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSRGB.html">CSSRGB</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSRotate.html">CSSRotate</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSScale.html">CSSScale</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSSkew.html">CSSSkew</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSSkewX.html">CSSSkewX</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSSkewY.html">CSSSkewY</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSStyleValue.html">CSSStyleValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSTransformComponent.html">CSSTransformComponent</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSTransformValue.html">CSSTransformValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSTranslate.html">CSSTranslate</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSUnitValue.html">CSSUnitValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSUnparsedValue.html">CSSUnparsedValue</a></li>
+<li><a href="..&#x2F;names&#x2F;CSSVariableReferenceValue.html">CSSVariableReferenceValue</a></li>
+<li><a href="..&#x2F;names&#x2F;Cache.html">Cache</a></li>
+<li><a href="..&#x2F;names&#x2F;CacheStorage.html">CacheStorage</a></li>
+<li><a href="..&#x2F;names&#x2F;CanvasFilter.html">CanvasFilter</a></li>
+<li><a href="..&#x2F;names&#x2F;CanvasGradient.html">CanvasGradient</a></li>
+<li><a href="..&#x2F;names&#x2F;CanvasPattern.html">CanvasPattern</a></li>
+<li><a href="..&#x2F;names&#x2F;CloseEvent.html">CloseEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;ContentIndex.html">ContentIndex</a></li>
+<li><a href="..&#x2F;names&#x2F;CookieStore.html">CookieStore</a></li>
+<li><a href="..&#x2F;names&#x2F;CookieStoreManager.html">CookieStoreManager</a></li>
+<li><a href="..&#x2F;names&#x2F;CountQueuingStrategy.html">CountQueuingStrategy</a></li>
+<li><a href="..&#x2F;names&#x2F;CrashReportBody.html">CrashReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;Crypto.html">Crypto</a></li>
+<li><a href="..&#x2F;names&#x2F;CryptoKey.html">CryptoKey</a></li>
+<li><a href="..&#x2F;names&#x2F;CustomEvent.html">CustomEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMException.html">DOMException</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMMatrix.html">DOMMatrix</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMMatrixReadOnly.html">DOMMatrixReadOnly</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMPoint.html">DOMPoint</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMPointReadOnly.html">DOMPointReadOnly</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMQuad.html">DOMQuad</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMRect.html">DOMRect</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMRectReadOnly.html">DOMRectReadOnly</a></li>
+<li><a href="..&#x2F;names&#x2F;DOMStringList.html">DOMStringList</a></li>
+<li><a href="..&#x2F;names&#x2F;DeprecationReportBody.html">DeprecationReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_blend_minmax.html">EXT_blend_minmax</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_clip_cull_distance.html">EXT_clip_cull_distance</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_color_buffer_float.html">EXT_color_buffer_float</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_color_buffer_half_float.html">EXT_color_buffer_half_float</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_disjoint_timer_query.html">EXT_disjoint_timer_query</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_disjoint_timer_query_webgl2.html">EXT_disjoint_timer_query_webgl2</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_float_blend.html">EXT_float_blend</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_frag_depth.html">EXT_frag_depth</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_sRGB.html">EXT_sRGB</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_shader_texture_lod.html">EXT_shader_texture_lod</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_texture_compression_bptc.html">EXT_texture_compression_bptc</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_texture_compression_rgtc.html">EXT_texture_compression_rgtc</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_texture_filter_anisotropic.html">EXT_texture_filter_anisotropic</a></li>
+<li><a href="..&#x2F;names&#x2F;EXT_texture_norm16.html">EXT_texture_norm16</a></li>
+<li><a href="..&#x2F;names&#x2F;EncodedAudioChunk.html">EncodedAudioChunk</a></li>
+<li><a href="..&#x2F;names&#x2F;EncodedVideoChunk.html">EncodedVideoChunk</a></li>
+<li><a href="..&#x2F;names&#x2F;ErrorEvent.html">ErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Event.html">Event</a></li>
+<li><a href="..&#x2F;names&#x2F;EventSource.html">EventSource</a></li>
+<li><a href="..&#x2F;names&#x2F;EventTarget.html">EventTarget</a></li>
+<li><a href="..&#x2F;names&#x2F;FaceDetector.html">FaceDetector</a></li>
+<li><a href="..&#x2F;names&#x2F;File.html">File</a></li>
+<li><a href="..&#x2F;names&#x2F;FileList.html">FileList</a></li>
+<li><a href="..&#x2F;names&#x2F;FileReader.html">FileReader</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemDirectoryHandle.html">FileSystemDirectoryHandle</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemFileHandle.html">FileSystemFileHandle</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemHandle.html">FileSystemHandle</a></li>
+<li><a href="..&#x2F;names&#x2F;FileSystemWritableFileStream.html">FileSystemWritableFileStream</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFace.html">FontFace</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFaceFeatures.html">FontFaceFeatures</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFacePalette.html">FontFacePalette</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFacePalettes.html">FontFacePalettes</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFaceSet.html">FontFaceSet</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFaceSetLoadEvent.html">FontFaceSetLoadEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFaceVariationAxis.html">FontFaceVariationAxis</a></li>
+<li><a href="..&#x2F;names&#x2F;FontFaceVariations.html">FontFaceVariations</a></li>
+<li><a href="..&#x2F;names&#x2F;FormData.html">FormData</a></li>
+<li><a href="..&#x2F;names&#x2F;GPU.html">GPU</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUAdapter.html">GPUAdapter</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUBindGroup.html">GPUBindGroup</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUBindGroupLayout.html">GPUBindGroupLayout</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUBuffer.html">GPUBuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUCanvasContext.html">GPUCanvasContext</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUCommandBuffer.html">GPUCommandBuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUCommandEncoder.html">GPUCommandEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUCompilationInfo.html">GPUCompilationInfo</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUCompilationMessage.html">GPUCompilationMessage</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUComputePassEncoder.html">GPUComputePassEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUComputePipeline.html">GPUComputePipeline</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUDevice.html">GPUDevice</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUDeviceLostInfo.html">GPUDeviceLostInfo</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUExternalTexture.html">GPUExternalTexture</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUOutOfMemoryError.html">GPUOutOfMemoryError</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUPipelineLayout.html">GPUPipelineLayout</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUQuerySet.html">GPUQuerySet</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUQueue.html">GPUQueue</a></li>
+<li><a href="..&#x2F;names&#x2F;GPURenderBundle.html">GPURenderBundle</a></li>
+<li><a href="..&#x2F;names&#x2F;GPURenderBundleEncoder.html">GPURenderBundleEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;GPURenderPassEncoder.html">GPURenderPassEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;GPURenderPipeline.html">GPURenderPipeline</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUSampler.html">GPUSampler</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUShaderModule.html">GPUShaderModule</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUSupportedFeatures.html">GPUSupportedFeatures</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUSupportedLimits.html">GPUSupportedLimits</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUTexture.html">GPUTexture</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUTextureView.html">GPUTextureView</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUUncapturedErrorEvent.html">GPUUncapturedErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;GPUValidationError.html">GPUValidationError</a></li>
+<li><a href="..&#x2F;names&#x2F;GeolocationSensor.html">GeolocationSensor</a></li>
+<li><a href="..&#x2F;names&#x2F;Global.html">Global</a></li>
+<li><a href="..&#x2F;names&#x2F;Headers.html">Headers</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBCursor.html">IDBCursor</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBCursorWithValue.html">IDBCursorWithValue</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBDatabase.html">IDBDatabase</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBFactory.html">IDBFactory</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBIndex.html">IDBIndex</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBKeyRange.html">IDBKeyRange</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBObjectStore.html">IDBObjectStore</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBOpenDBRequest.html">IDBOpenDBRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBRequest.html">IDBRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBTransaction.html">IDBTransaction</a></li>
+<li><a href="..&#x2F;names&#x2F;IDBVersionChangeEvent.html">IDBVersionChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;IdleDetector.html">IdleDetector</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageBitmap.html">ImageBitmap</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageData.html">ImageData</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageDecoder.html">ImageDecoder</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageTrack.html">ImageTrack</a></li>
+<li><a href="..&#x2F;names&#x2F;ImageTrackList.html">ImageTrackList</a></li>
+<li><a href="..&#x2F;names&#x2F;Instance.html">Instance</a></li>
+<li><a href="..&#x2F;names&#x2F;InterventionReportBody.html">InterventionReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;KHR_parallel_shader_compile.html">KHR_parallel_shader_compile</a></li>
+<li><a href="..&#x2F;names&#x2F;Lock.html">Lock</a></li>
+<li><a href="..&#x2F;names&#x2F;LockManager.html">LockManager</a></li>
+<li><a href="..&#x2F;names&#x2F;ML.html">ML</a></li>
+<li><a href="..&#x2F;names&#x2F;MLContext.html">MLContext</a></li>
+<li><a href="..&#x2F;names&#x2F;MLGraph.html">MLGraph</a></li>
+<li><a href="..&#x2F;names&#x2F;MLGraphBuilder.html">MLGraphBuilder</a></li>
+<li><a href="..&#x2F;names&#x2F;MLOperand.html">MLOperand</a></li>
+<li><a href="..&#x2F;names&#x2F;MLOperator.html">MLOperator</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaCapabilities.html">MediaCapabilities</a></li>
+<li><a href="..&#x2F;names&#x2F;MediaSource.html">MediaSource</a></li>
+<li><a href="..&#x2F;names&#x2F;Memory.html">Memory</a></li>
+<li><a href="..&#x2F;names&#x2F;MessageChannel.html">MessageChannel</a></li>
+<li><a href="..&#x2F;names&#x2F;MessageEvent.html">MessageEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;MessagePort.html">MessagePort</a></li>
+<li><a href="..&#x2F;names&#x2F;Module.html">Module</a></li>
+<li><a href="..&#x2F;names&#x2F;NavigationPreloadManager.html">NavigationPreloadManager</a></li>
+<li><a href="..&#x2F;names&#x2F;NavigatorUAData.html">NavigatorUAData</a></li>
+<li><a href="..&#x2F;names&#x2F;NetworkInformation.html">NetworkInformation</a></li>
+<li><a href="..&#x2F;names&#x2F;Notification.html">Notification</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_draw_buffers_indexed.html">OES_draw_buffers_indexed</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_element_index_uint.html">OES_element_index_uint</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_fbo_render_mipmap.html">OES_fbo_render_mipmap</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_standard_derivatives.html">OES_standard_derivatives</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_texture_float.html">OES_texture_float</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_texture_float_linear.html">OES_texture_float_linear</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_texture_half_float.html">OES_texture_half_float</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_texture_half_float_linear.html">OES_texture_half_float_linear</a></li>
+<li><a href="..&#x2F;names&#x2F;OES_vertex_array_object.html">OES_vertex_array_object</a></li>
+<li><a href="..&#x2F;names&#x2F;OVR_multiview2.html">OVR_multiview2</a></li>
+<li><a href="..&#x2F;names&#x2F;OffscreenCanvas.html">OffscreenCanvas</a></li>
+<li><a href="..&#x2F;names&#x2F;OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li>
+<li><a href="..&#x2F;names&#x2F;Path2D.html">Path2D</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentInstruments.html">PaymentInstruments</a></li>
+<li><a href="..&#x2F;names&#x2F;PaymentManager.html">PaymentManager</a></li>
+<li><a href="..&#x2F;names&#x2F;Performance.html">Performance</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceEntry.html">PerformanceEntry</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceMark.html">PerformanceMark</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceMeasure.html">PerformanceMeasure</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceObserver.html">PerformanceObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceObserverEntryList.html">PerformanceObserverEntryList</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceResourceTiming.html">PerformanceResourceTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PerformanceServerTiming.html">PerformanceServerTiming</a></li>
+<li><a href="..&#x2F;names&#x2F;PeriodicSyncManager.html">PeriodicSyncManager</a></li>
+<li><a href="..&#x2F;names&#x2F;PermissionStatus.html">PermissionStatus</a></li>
+<li><a href="..&#x2F;names&#x2F;Permissions.html">Permissions</a></li>
+<li><a href="..&#x2F;names&#x2F;ProgressEvent.html">ProgressEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PromiseRejectionEvent.html">PromiseRejectionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;PushManager.html">PushManager</a></li>
+<li><a href="..&#x2F;names&#x2F;PushSubscription.html">PushSubscription</a></li>
+<li><a href="..&#x2F;names&#x2F;PushSubscriptionOptions.html">PushSubscriptionOptions</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCEncodedAudioFrame.html">RTCEncodedAudioFrame</a></li>
+<li><a href="..&#x2F;names&#x2F;RTCEncodedVideoFrame.html">RTCEncodedVideoFrame</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableByteStreamController.html">ReadableByteStreamController</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableStream.html">ReadableStream</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableStreamBYOBReader.html">ReadableStreamBYOBReader</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableStreamBYOBRequest.html">ReadableStreamBYOBRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableStreamDefaultController.html">ReadableStreamDefaultController</a></li>
+<li><a href="..&#x2F;names&#x2F;ReadableStreamDefaultReader.html">ReadableStreamDefaultReader</a></li>
+<li><a href="..&#x2F;names&#x2F;Report.html">Report</a></li>
+<li><a href="..&#x2F;names&#x2F;ReportBody.html">ReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;ReportingObserver.html">ReportingObserver</a></li>
+<li><a href="..&#x2F;names&#x2F;Request.html">Request</a></li>
+<li><a href="..&#x2F;names&#x2F;Response.html">Response</a></li>
+<li><a href="..&#x2F;names&#x2F;SFrameTransform.html">SFrameTransform</a></li>
+<li><a href="..&#x2F;names&#x2F;SFrameTransformErrorEvent.html">SFrameTransformErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Scheduler.html">Scheduler</a></li>
+<li><a href="..&#x2F;names&#x2F;ScriptingPolicyReportBody.html">ScriptingPolicyReportBody</a></li>
+<li><a href="..&#x2F;names&#x2F;SecurityPolicyViolationEvent.html">SecurityPolicyViolationEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Sensor.html">Sensor</a></li>
+<li><a href="..&#x2F;names&#x2F;SensorErrorEvent.html">SensorErrorEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;Serial.html">Serial</a></li>
+<li><a href="..&#x2F;names&#x2F;SerialPort.html">SerialPort</a></li>
+<li><a href="..&#x2F;names&#x2F;ServiceWorker.html">ServiceWorker</a></li>
+<li><a href="..&#x2F;names&#x2F;ServiceWorkerContainer.html">ServiceWorkerContainer</a></li>
+<li><a href="..&#x2F;names&#x2F;ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+<li><a href="..&#x2F;names&#x2F;SourceBuffer.html">SourceBuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;SourceBufferList.html">SourceBufferList</a></li>
+<li><a href="..&#x2F;names&#x2F;StorageManager.html">StorageManager</a></li>
+<li><a href="..&#x2F;names&#x2F;StylePropertyMapReadOnly.html">StylePropertyMapReadOnly</a></li>
+<li><a href="..&#x2F;names&#x2F;SubtleCrypto.html">SubtleCrypto</a></li>
+<li><a href="..&#x2F;names&#x2F;SyncManager.html">SyncManager</a></li>
+<li><a href="..&#x2F;names&#x2F;Table.html">Table</a></li>
+<li><a href="..&#x2F;names&#x2F;TaskController.html">TaskController</a></li>
+<li><a href="..&#x2F;names&#x2F;TaskPriorityChangeEvent.html">TaskPriorityChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;TaskSignal.html">TaskSignal</a></li>
+<li><a href="..&#x2F;names&#x2F;TextDecoder.html">TextDecoder</a></li>
+<li><a href="..&#x2F;names&#x2F;TextDecoderStream.html">TextDecoderStream</a></li>
+<li><a href="..&#x2F;names&#x2F;TextDetector.html">TextDetector</a></li>
+<li><a href="..&#x2F;names&#x2F;TextEncoder.html">TextEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;TextEncoderStream.html">TextEncoderStream</a></li>
+<li><a href="..&#x2F;names&#x2F;TextMetrics.html">TextMetrics</a></li>
+<li><a href="..&#x2F;names&#x2F;TransformStream.html">TransformStream</a></li>
+<li><a href="..&#x2F;names&#x2F;TransformStreamDefaultController.html">TransformStreamDefaultController</a></li>
+<li><a href="..&#x2F;names&#x2F;TrustedHTML.html">TrustedHTML</a></li>
+<li><a href="..&#x2F;names&#x2F;TrustedScript.html">TrustedScript</a></li>
+<li><a href="..&#x2F;names&#x2F;TrustedScriptURL.html">TrustedScriptURL</a></li>
+<li><a href="..&#x2F;names&#x2F;TrustedTypePolicy.html">TrustedTypePolicy</a></li>
+<li><a href="..&#x2F;names&#x2F;TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a></li>
+<li><a href="..&#x2F;names&#x2F;URL.html">URL</a></li>
+<li><a href="..&#x2F;names&#x2F;URLPattern.html">URLPattern</a></li>
+<li><a href="..&#x2F;names&#x2F;URLSearchParams.html">URLSearchParams</a></li>
+<li><a href="..&#x2F;names&#x2F;USB.html">USB</a></li>
+<li><a href="..&#x2F;names&#x2F;USBAlternateInterface.html">USBAlternateInterface</a></li>
+<li><a href="..&#x2F;names&#x2F;USBConfiguration.html">USBConfiguration</a></li>
+<li><a href="..&#x2F;names&#x2F;USBConnectionEvent.html">USBConnectionEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;USBDevice.html">USBDevice</a></li>
+<li><a href="..&#x2F;names&#x2F;USBEndpoint.html">USBEndpoint</a></li>
+<li><a href="..&#x2F;names&#x2F;USBInTransferResult.html">USBInTransferResult</a></li>
+<li><a href="..&#x2F;names&#x2F;USBInterface.html">USBInterface</a></li>
+<li><a href="..&#x2F;names&#x2F;USBIsochronousInTransferPacket.html">USBIsochronousInTransferPacket</a></li>
+<li><a href="..&#x2F;names&#x2F;USBIsochronousInTransferResult.html">USBIsochronousInTransferResult</a></li>
+<li><a href="..&#x2F;names&#x2F;USBIsochronousOutTransferPacket.html">USBIsochronousOutTransferPacket</a></li>
+<li><a href="..&#x2F;names&#x2F;USBIsochronousOutTransferResult.html">USBIsochronousOutTransferResult</a></li>
+<li><a href="..&#x2F;names&#x2F;USBOutTransferResult.html">USBOutTransferResult</a></li>
+<li><a href="..&#x2F;names&#x2F;USBPermissionResult.html">USBPermissionResult</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoColorSpace.html">VideoColorSpace</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoDecoder.html">VideoDecoder</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoEncoder.html">VideoEncoder</a></li>
+<li><a href="..&#x2F;names&#x2F;VideoFrame.html">VideoFrame</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_blend_equation_advanced_coherent.html">WEBGL_blend_equation_advanced_coherent</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_color_buffer_float.html">WEBGL_color_buffer_float</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_astc.html">WEBGL_compressed_texture_astc</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_etc.html">WEBGL_compressed_texture_etc</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_etc1.html">WEBGL_compressed_texture_etc1</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_pvrtc.html">WEBGL_compressed_texture_pvrtc</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_s3tc.html">WEBGL_compressed_texture_s3tc</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_compressed_texture_s3tc_srgb.html">WEBGL_compressed_texture_s3tc_srgb</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_debug_renderer_info.html">WEBGL_debug_renderer_info</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_debug_shaders.html">WEBGL_debug_shaders</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_depth_texture.html">WEBGL_depth_texture</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_draw_buffers.html">WEBGL_draw_buffers</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_draw_instanced_base_vertex_base_instance.html">WEBGL_draw_instanced_base_vertex_base_instance</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_lose_context.html">WEBGL_lose_context</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_multi_draw.html">WEBGL_multi_draw</a></li>
+<li><a href="..&#x2F;names&#x2F;WEBGL_multi_draw_instanced_base_vertex_base_instance.html">WEBGL_multi_draw_instanced_base_vertex_base_instance</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGL2RenderingContext.html">WebGL2RenderingContext</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLActiveInfo.html">WebGLActiveInfo</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLBuffer.html">WebGLBuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLContextEvent.html">WebGLContextEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLFramebuffer.html">WebGLFramebuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLObject.html">WebGLObject</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLProgram.html">WebGLProgram</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLQuery.html">WebGLQuery</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLRenderbuffer.html">WebGLRenderbuffer</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLRenderingContext.html">WebGLRenderingContext</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLSampler.html">WebGLSampler</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLShader.html">WebGLShader</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLShaderPrecisionFormat.html">WebGLShaderPrecisionFormat</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLSync.html">WebGLSync</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLTexture.html">WebGLTexture</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLTimerQueryEXT.html">WebGLTimerQueryEXT</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLTransformFeedback.html">WebGLTransformFeedback</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLUniformLocation.html">WebGLUniformLocation</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLVertexArrayObject.html">WebGLVertexArrayObject</a></li>
+<li><a href="..&#x2F;names&#x2F;WebGLVertexArrayObjectOES.html">WebGLVertexArrayObjectOES</a></li>
+<li><a href="..&#x2F;names&#x2F;WebSocket.html">WebSocket</a></li>
+<li><a href="..&#x2F;names&#x2F;WebTransport.html">WebTransport</a></li>
+<li><a href="..&#x2F;names&#x2F;WebTransportBidirectionalStream.html">WebTransportBidirectionalStream</a></li>
+<li><a href="..&#x2F;names&#x2F;WebTransportDatagramDuplexStream.html">WebTransportDatagramDuplexStream</a></li>
+<li><a href="..&#x2F;names&#x2F;WebTransportError.html">WebTransportError</a></li>
+<li><a href="..&#x2F;names&#x2F;Worker.html">Worker</a></li>
+<li><a href="..&#x2F;names&#x2F;WritableStream.html">WritableStream</a></li>
+<li><a href="..&#x2F;names&#x2F;WritableStreamDefaultController.html">WritableStreamDefaultController</a></li>
+<li><a href="..&#x2F;names&#x2F;WritableStreamDefaultWriter.html">WritableStreamDefaultWriter</a></li>
+<li><a href="..&#x2F;names&#x2F;XMLHttpRequest.html">XMLHttpRequest</a></li>
+<li><a href="..&#x2F;names&#x2F;XMLHttpRequestEventTarget.html">XMLHttpRequestEventTarget</a></li>
+<li><a href="..&#x2F;names&#x2F;XMLHttpRequestUpload.html">XMLHttpRequestUpload</a></li>
+
+  </ul>
+

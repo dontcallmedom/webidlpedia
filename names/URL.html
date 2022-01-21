@@ -7,7 +7,7 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;url.spec.whatwg.org&#x2F;#url">URL Standard</a> defines <code>URL</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
  LegacyWindowAlias&#x3D;<span class=primitive>webkitURL</span>]
 interface <strong>URL</strong> {<span class=def>
   <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>USVString</span> <strong>base</strong>);</span><span class=def>
@@ -31,14 +31,14 @@ interface <strong>URL</strong> {<span class=def>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;FileAPI&#x2F;">File API</a><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a href='Window.html'>Window</a>,<span class=primitive>DedicatedWorker</span>,<a href='SharedWorker.html'>SharedWorker</a>)]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>)]
 partial interface <strong>URL</strong> {<span class=def>
   static <span class=primitive>DOMString</span> <strong>createObjectURL</strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);</span><span class=def>
   static <span class=primitive>undefined</span> <strong>revokeObjectURL</strong>(<span class=primitive>DOMString</span> <strong>url</strong>);</span>
 };</span></code></pre></li>
 
   </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a href='Window.html'>Window</a>,<a href='Worker.html'>Worker</a>),
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
  LegacyWindowAlias&#x3D;<span class=primitive>webkitURL</span>]
 interface <strong>URL</strong> {<span class=def>
   <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>USVString</span> <strong>base</strong>);</span><span class=def>
