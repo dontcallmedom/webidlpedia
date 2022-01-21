@@ -89,13 +89,22 @@ function idlNameList(data, used_by, exposed_on) {
                    Object.keys(spec.idlparsed.idlNames)
                    .filter(n => n!=="_dependencies")
                    .filter(n => spec.idlparsed.idlNames[n].type === type.type)
+                   .map(n => {
+                     const iface = spec.idlparsed.idlNames[n];
+                     let displayPrefix = '';
+                     if (spec.idlparsed.idlNames[n].type === "interface" && !iface.partial && !iface.includes) {
+                       const namespace = iface.extAttrs?.find(ea => ea.name === "LegacyNamespace")?.rhs?.value || undefined;
+                       displayPrefix = namespace ? namespace + '.' : '';
+                     }
+                     return {name: n, displayPrefix};
+                   })
                   ).reduce((a,b) => a.concat(b), [])
-              .sort();
-        const list = htmlList(names.map(name => {
+              .sort((a, b) => (a.displayPrefix + a.name).localeCompare(b.displayPrefix + b.name));
+        const list = htmlList(names.map(({name, displayPrefix}) => {
           const usage = used_by[name] ? used_by[name].length : 0;
           const link = htmlLink(name, name + ".html");
           const exposed = (exposed_on[name] || []).map(n => html`<a href="../globals/${n !== '*' ? n : 'index'}.html" class="exposed ${n.toLowerCase().replace(/^.*worklet$/, 'worklet').replace('*', 'everywhere')}" title="exposed on ${n}">${n}</a>`);
-          return html`${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span> ${exposed}`;
+          return html`${displayPrefix}${link} <span title='used by ${usage} other IDL fragments'>(${usage})</span> ${exposed}`;
         }));
         sections.push(htmlSection(type.title, list));
       });
@@ -143,6 +152,8 @@ function interfaceDetails(data, name, used_by, templates) {
   let consolidatedIdlDef;
   let consolidatedIdlMembers = [] ;
   let needsConsolidation = false;
+  let namespace;
+  let displayName = name;
   data.filter(hasIdlDef)
     .filter(spec => spec.idlparsed.idlNames[name])
     .forEach(spec => {
@@ -153,6 +164,8 @@ function interfaceDetails(data, name, used_by, templates) {
       // while being able to replace the list of members
       const mainIdlDef = idlparsed.find(i => !i.partial && !i.includes);
       if (mainIdlDef) {
+        namespace = mainIdlDef.extAttrs?.find(ea => ea.name === "LegacyNamespace")?.rhs?.value || undefined;
+        displayName = namespace ? namespace + '.' + name : displayName;
         consolidatedIdlDef = new Proxy(mainIdlDef, {
           get(target, propKey, receiver) {
             if (propKey === "members") return consolidatedIdlMembers;
@@ -171,7 +184,7 @@ function interfaceDetails(data, name, used_by, templates) {
         needsConsolidation = true;
         consolidatedIdlMembers = consolidatedIdlMembers.concat(mixinMembers);
       });
-      mainDefItems.push(html`<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${name}</code></p>
+      mainDefItems.push(html`<p><a href="${idlDfnLink(name, spec)}">${spec.title}</a> defines <code>${displayName}</code></p>
 <pre class=webidl><code>${webidl.write(idlparsed, {templates})}</code></pre>`);
     });
 
@@ -217,12 +230,12 @@ function interfaceDetails(data, name, used_by, templates) {
   let refList = [];
   data.filter(s => s.idl && s.idlparsed.externalDependencies && s.idlparsed.externalDependencies.indexOf(name) !== -1)
     .forEach(spec => {
-      refList.push( html`<a href="${spec.url}">${spec.title}</a> refers to <code>${name}</code>`);
+      refList.push( html`<a href="${spec.url}">${spec.title}</a> refers to <code>${displayName}</code>`);
     });
   if (refList.length) {
     refs = html`<section><h3>Referring specifications</h3>${htmlList(refList)}</section>`;
   }
-  return {title: `<code>${name}</code> ${type}`, content: html`
+  return {title: `<code>${displayName}</code> ${type}`, content: html`
 <section>
   <h3>Definition</h3>
   ${html.join(mainDefItems, '')}
