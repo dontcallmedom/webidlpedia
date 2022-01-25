@@ -13,11 +13,13 @@ base: ../
 dictionary <strong>GPURenderPassDepthStencilAttachment</strong> {<span class=def>
     required <a href='GPUTextureView.html'>GPUTextureView</a> <strong>view</strong>;</span><span class=def>
 
-    required (<a href='GPULoadOp.html'>GPULoadOp</a> or <span class=primitive>float</span>) <strong>depthLoadValue</strong>;</span><span class=def>
+    <span class=primitive>float</span> <strong>depthClearValue</strong> &#x3D; 0;</span><span class=def>
+    required <a href='GPULoadOp.html'>GPULoadOp</a> <strong>depthLoadOp</strong>;</span><span class=def>
     required <a href='GPUStoreOp.html'>GPUStoreOp</a> <strong>depthStoreOp</strong>;</span><span class=def>
     <span class=primitive>boolean</span> <strong>depthReadOnly</strong> &#x3D; false;</span><span class=def>
 
-    required (<a href='GPULoadOp.html'>GPULoadOp</a> or <a href='GPUStencilValue.html'>GPUStencilValue</a>) <strong>stencilLoadValue</strong>;</span><span class=def>
+    <a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>stencilClearValue</strong> &#x3D; 0;</span><span class=def>
+    required <a href='GPULoadOp.html'>GPULoadOp</a> <strong>stencilLoadOp</strong>;</span><span class=def>
     required <a href='GPUStoreOp.html'>GPUStoreOp</a> <strong>stencilStoreOp</strong>;</span><span class=def>
     <span class=primitive>boolean</span> <strong>stencilReadOnly</strong> &#x3D; false;</span>
 };</span></code></pre>
