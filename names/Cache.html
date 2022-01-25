@@ -11,23 +11,31 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Cache</strong> {<span class=def>
-  [NewObject] Promise&lt;(<a href='Response.html'>Response</a> or <span class=primitive>undefined</span>)&gt; <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] Promise&lt;FrozenArray&lt;<a href='Response.html'>Response</a>&gt;&gt; <strong>matchAll</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>add</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addAll</strong>(sequence&lt;<a href='RequestInfo.html'>RequestInfo</a>&gt; <strong>requests</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>put</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, <a href='Response.html'>Response</a> <strong>response</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+interface <strong>Cache</strong> {<span class=def id=operation-match-RequestInfo-CacheQueryOptions>
+  [NewObject] Promise&lt;(<a href='Response.html'>Response</a> or <span class=primitive>undefined</span>)&gt; <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-matchAll-RequestInfo-CacheQueryOptions>
+  [NewObject] Promise&lt;FrozenArray&lt;<a href='Response.html'>Response</a>&gt;&gt; <strong>matchAll</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-add-RequestInfo>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>add</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>);</span><span class=def id=operation-addAll-RequestInfo>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addAll</strong>(sequence&lt;<a href='RequestInfo.html'>RequestInfo</a>&gt; <strong>requests</strong>);</span><span class=def id=operation-put-RequestInfo-Response>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>put</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, <a href='Response.html'>Response</a> <strong>response</strong>);</span><span class=def id=operation-delete-RequestInfo-CacheQueryOptions>
+  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-keys-RequestInfo-CacheQueryOptions>
   [NewObject] Promise&lt;FrozenArray&lt;<a href='Request.html'>Request</a>&gt;&gt; <strong>keys</strong>(optional <a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='CacheQueryOptions.html'>CacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Cache</code></h3>
+
+  <ul>
+    <li><code><a href="CacheStorage.html">CacheStorage</a><a href=CacheStorage.html#operation-open-DOMString>.open()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CacheStorage.html">CacheStorage</a></li>
+    <li><code><a href="CacheStorage.html">CacheStorage</a></code></li>
 
   </ul>
 </section>

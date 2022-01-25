@@ -11,23 +11,31 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>PerformanceNavigation</strong> {<span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TYPE_NAVIGATE</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TYPE_RELOAD</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TYPE_BACK_FORWARD</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TYPE_RESERVED</strong> &#x3D; 255;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>redirectCount</strong>;</span><span class=def>
+interface <strong>PerformanceNavigation</strong> {<span class=def id=const-TYPE_NAVIGATE>
+  const <span class=primitive>unsigned short</span> <strong>TYPE_NAVIGATE</strong> &#x3D; 0;</span><span class=def id=const-TYPE_RELOAD>
+  const <span class=primitive>unsigned short</span> <strong>TYPE_RELOAD</strong> &#x3D; 1;</span><span class=def id=const-TYPE_BACK_FORWARD>
+  const <span class=primitive>unsigned short</span> <strong>TYPE_BACK_FORWARD</strong> &#x3D; 2;</span><span class=def id=const-TYPE_RESERVED>
+  const <span class=primitive>unsigned short</span> <strong>TYPE_RESERVED</strong> &#x3D; 255;</span><span class=def id=attribute-type>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def id=attribute-redirectCount>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>redirectCount</strong>;</span><span class=def id=operation-toJSON>
   [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PerformanceNavigation</code></h3>
+
+  <ul>
+    <li><code><a href="Performance.html">Performance</a><a href=Performance.html#attribute-navigation>.navigation</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Performance.html">Performance</a></li>
+    <li><code><a href="Performance.html">Performance</a></code></li>
 
   </ul>
 </section>

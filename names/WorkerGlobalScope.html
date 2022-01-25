@@ -12,17 +12,17 @@ base: ../
 <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> includes <a href='WindowOrWorkerGlobalScope.html'>WindowOrWorkerGlobalScope</a>;</span><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Worker.html'>Worker</a>]
-interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> <strong>self</strong>;</span><span class=def>
-  readonly attribute <a href='WorkerLocation.html'>WorkerLocation</a> <strong>location</strong>;</span><span class=def>
-  readonly attribute <a href='WorkerNavigator.html'>WorkerNavigator</a> <strong>navigator</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>importScripts</strong>(<span class=primitive>USVString</span>... <strong>urls</strong>);</span><span class=def>
+interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-self>
+  readonly attribute <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> <strong>self</strong>;</span><span class=def id=attribute-location>
+  readonly attribute <a href='WorkerLocation.html'>WorkerLocation</a> <strong>location</strong>;</span><span class=def id=attribute-navigator>
+  readonly attribute <a href='WorkerNavigator.html'>WorkerNavigator</a> <strong>navigator</strong>;</span><span class=def id=operation-importScripts-USVString>
+  <span class=primitive>undefined</span> <strong>importScripts</strong>(<span class=primitive>USVString</span>... <strong>urls</strong>);</span><span class=def id=attribute-onerror>
 
-  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onlanguagechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def id=attribute-onoffline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def id=attribute-ononline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def id=attribute-onrejectionhandled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def id=attribute-onunhandledrejection>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
@@ -34,55 +34,63 @@ interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventT
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Worker.html'>Worker</a>]
-interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> <strong>self</strong>;</span><span class=def>
-  readonly attribute <a href='WorkerLocation.html'>WorkerLocation</a> <strong>location</strong>;</span><span class=def>
-  readonly attribute <a href='WorkerNavigator.html'>WorkerNavigator</a> <strong>navigator</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>importScripts</strong>(<span class=primitive>USVString</span>... <strong>urls</strong>);</span><span class=def>
+interface <strong>WorkerGlobalScope</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-self>
+  readonly attribute <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> <strong>self</strong>;</span><span class=def id=attribute-location>
+  readonly attribute <a href='WorkerLocation.html'>WorkerLocation</a> <strong>location</strong>;</span><span class=def id=attribute-navigator>
+  readonly attribute <a href='WorkerNavigator.html'>WorkerNavigator</a> <strong>navigator</strong>;</span><span class=def id=operation-importScripts-USVString>
+  <span class=primitive>undefined</span> <strong>importScripts</strong>(<span class=primitive>USVString</span>... <strong>urls</strong>);</span><span class=def id=attribute-onerror>
 
-  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isSecureContext</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>crossOriginIsolated</strong>;</span><span class=def>
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onlanguagechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def id=attribute-onoffline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def id=attribute-ononline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def id=attribute-onrejectionhandled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def id=attribute-onunhandledrejection>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def id=attribute-origin>
+  [Replaceable] readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def id=attribute-isSecureContext>
+  readonly attribute <span class=primitive>boolean</span> <strong>isSecureContext</strong>;</span><span class=def id=attribute-crossOriginIsolated>
+  readonly attribute <span class=primitive>boolean</span> <strong>crossOriginIsolated</strong>;</span><span class=def id=operation-reportError-any>
 
-  <span class=primitive>undefined</span> <strong>reportError</strong>(<span class=primitive>any</span> <strong>e</strong>);</span><span class=def><span class="comment">
+  <span class=primitive>undefined</span> <strong>reportError</strong>(<span class=primitive>any</span> <strong>e</strong>);</span><span class=def id=operation-btoa-DOMString><span class="comment">
 
   &#x2F;&#x2F; base64 utility methods
-  </span><span class=primitive>DOMString</span> <strong>btoa</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>ByteString</span> <strong>atob</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>DOMString</span> <strong>btoa</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-atob-DOMString>
+  <span class=primitive>ByteString</span> <strong>atob</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-setTimeout-TimerHandler-long-any><span class="comment">
 
   &#x2F;&#x2F; timers
-  </span><span class=primitive>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearTimeout</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def><span class="comment">
+  </span><span class=primitive>long</span> <strong>setTimeout</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-clearTimeout-long>
+  <span class=primitive>undefined</span> <strong>clearTimeout</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def id=operation-setInterval-TimerHandler-long-any>
+  <span class=primitive>long</span> <strong>setInterval</strong>(<a href='TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-clearInterval-long>
+  <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def id=operation-queueMicrotask-VoidFunction><span class="comment">
 
   &#x2F;&#x2F; microtask queuing
-  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def id=operation-createImageBitmap-ImageBitmapSource-ImageBitmapOptions><span class="comment">
 
   &#x2F;&#x2F; ImageBitmap
-  </span>Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span class=primitive>long</span> <strong>sx</strong>, <span class=primitive>long</span> <strong>sy</strong>, <span class=primitive>long</span> <strong>sw</strong>, <span class=primitive>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def><span class="comment">
+  </span>Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createImageBitmap-ImageBitmapSource-long-long-long-long-ImageBitmapOptions>
+  Promise&lt;<a href='ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span class=primitive>long</span> <strong>sx</strong>, <span class=primitive>long</span> <strong>sy</strong>, <span class=primitive>long</span> <strong>sw</strong>, <span class=primitive>long</span> <strong>sh</strong>, optional <a href='ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-structuredClone-any-StructuredSerializeOptions><span class="comment">
 
   &#x2F;&#x2F; structured cloning
-  </span><span class=primitive>any</span> <strong>structuredClone</strong>(<span class=primitive>any</span> <strong>value</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  </span><span class=primitive>any</span> <strong>structuredClone</strong>(<span class=primitive>any</span> <strong>value</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-fonts>
   readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>WorkerGlobalScope</code></h3>
+
+  <ul>
+    <li><code><a href="WorkerGlobalScope.html">WorkerGlobalScope</a><a href=WorkerGlobalScope.html#attribute-self>.self</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a></li>
-<li><a href="RTCIdentityProviderGlobalScope.html">RTCIdentityProviderGlobalScope</a></li>
-<li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li>
-<li><a href="SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a></li>
-<li><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></li>
+    <li><code><a href="DedicatedWorkerGlobalScope.html">DedicatedWorkerGlobalScope</a></code></li>
+<li><code><a href="RTCIdentityProviderGlobalScope.html">RTCIdentityProviderGlobalScope</a></code></li>
+<li><code><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></code></li>
+<li><code><a href="SharedWorkerGlobalScope.html">SharedWorkerGlobalScope</a></code></li>
+<li><code><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

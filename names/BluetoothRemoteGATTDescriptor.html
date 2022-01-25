@@ -11,22 +11,31 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTDescriptor</strong> {<span class=def>
+interface <strong>BluetoothRemoteGATTDescriptor</strong> {<span class=def id=attribute-characteristic>
   [SameObject]
-  readonly attribute <a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a> <strong>characteristic</strong>;</span><span class=def>
-  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def>
-  readonly attribute <a href='DataView.html'>DataView</a>? <strong>value</strong>;</span><span class=def>
-  Promise&lt;<a href='DataView.html'>DataView</a>&gt; <strong>readValue</strong>();</span><span class=def>
+  readonly attribute <a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a> <strong>characteristic</strong>;</span><span class=def id=attribute-uuid>
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def id=attribute-value>
+  readonly attribute <a href='DataView.html'>DataView</a>? <strong>value</strong>;</span><span class=def id=operation-readValue>
+  Promise&lt;<a href='DataView.html'>DataView</a>&gt; <strong>readValue</strong>();</span><span class=def id=operation-writeValue-BufferSource>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>writeValue</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>value</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>BluetoothRemoteGATTDescriptor</code></h3>
+
+  <ul>
+    <li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a><a href=BluetoothRemoteGATTCharacteristic.html#operation-getDescriptor-BluetoothDescriptorUUID>.getDescriptor()</a></code></li>
+<li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a><a href=BluetoothRemoteGATTCharacteristic.html#operation-getDescriptors-BluetoothDescriptorUUID>.getDescriptors()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li>
+    <li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></code></li>
 
   </ul>
 </section>

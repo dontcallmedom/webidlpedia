@@ -12,31 +12,40 @@ base: ../
 <a href='DocumentType.html'>DocumentType</a> includes <a href='ChildNode.html'>ChildNode</a>;</span><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>DocumentType</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>publicId</strong>;</span><span class=def>
+interface <strong>DocumentType</strong> : <a href='Node.html'>Node</a> {<span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-publicId>
+  readonly attribute <span class=primitive>DOMString</span> <strong>publicId</strong>;</span><span class=def id=attribute-systemId>
   readonly attribute <span class=primitive>DOMString</span> <strong>systemId</strong>;</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>DocumentType</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>publicId</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>systemId</strong>;</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>before</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>after</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceWith</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+interface <strong>DocumentType</strong> : <a href='Node.html'>Node</a> {<span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-publicId>
+  readonly attribute <span class=primitive>DOMString</span> <strong>publicId</strong>;</span><span class=def id=attribute-systemId>
+  readonly attribute <span class=primitive>DOMString</span> <strong>systemId</strong>;</span><span class=def id=operation-before-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>before</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-after-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>after</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-replaceWith-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceWith</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-remove>
   [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>remove</strong>();</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>DocumentType</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#attribute-doctype>.doctype</a></code></li>
+<li><code><a href="DOMImplementation.html">DOMImplementation</a><a href=DOMImplementation.html#operation-createDocumentType-DOMString-DOMString-DOMString>.createDocumentType()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DOMImplementation.html">DOMImplementation</a></li>
-<li><a href="Document.html">Document</a></li>
+    <li><code><a href="DOMImplementation.html">DOMImplementation</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
 
   </ul>
 </section>

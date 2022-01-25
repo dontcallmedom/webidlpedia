@@ -11,35 +11,43 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AppHistory</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  sequence&lt;<a href='AppHistoryEntry.html'>AppHistoryEntry</a>&gt; <strong>entries</strong>();</span><span class=def>
-  readonly attribute <a href='AppHistoryEntry.html'>AppHistoryEntry</a>? <strong>current</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>updateCurrent</strong>(<a href='AppHistoryUpdateCurrentOptions.html'>AppHistoryUpdateCurrentOptions</a> <strong>options</strong>);</span><span class=def>
-  readonly attribute <a href='AppHistoryTransition.html'>AppHistoryTransition</a>? <strong>transition</strong>;</span><span class=def>
+interface <strong>AppHistory</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-entries>
+  sequence&lt;<a href='AppHistoryEntry.html'>AppHistoryEntry</a>&gt; <strong>entries</strong>();</span><span class=def id=attribute-current>
+  readonly attribute <a href='AppHistoryEntry.html'>AppHistoryEntry</a>? <strong>current</strong>;</span><span class=def id=operation-updateCurrent-AppHistoryUpdateCurrentOptions>
+  <span class=primitive>undefined</span> <strong>updateCurrent</strong>(<a href='AppHistoryUpdateCurrentOptions.html'>AppHistoryUpdateCurrentOptions</a> <strong>options</strong>);</span><span class=def id=attribute-transition>
+  readonly attribute <a href='AppHistoryTransition.html'>AppHistoryTransition</a>? <strong>transition</strong>;</span><span class=def id=attribute-canGoBack>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>canGoBack</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>canGoForward</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>canGoBack</strong>;</span><span class=def id=attribute-canGoForward>
+  readonly attribute <span class=primitive>boolean</span> <strong>canGoForward</strong>;</span><span class=def id=operation-navigate-USVString-AppHistoryNavigateOptions>
 
-  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>navigate</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='AppHistoryNavigateOptions.html'>AppHistoryNavigateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>reload</strong>(optional <a href='AppHistoryReloadOptions.html'>AppHistoryReloadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>navigate</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='AppHistoryNavigateOptions.html'>AppHistoryNavigateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reload-AppHistoryReloadOptions>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>reload</strong>(optional <a href='AppHistoryReloadOptions.html'>AppHistoryReloadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-goTo-DOMString-AppHistoryNavigationOptions>
 
-  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>goTo</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>back</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>forward</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>goTo</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-back-AppHistoryNavigationOptions>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>back</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-forward-AppHistoryNavigationOptions>
+  <a href='AppHistoryResult.html'>AppHistoryResult</a> <strong>forward</strong>(optional <a href='AppHistoryNavigationOptions.html'>AppHistoryNavigationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onnavigate>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigatesuccess</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigateerror</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigate</strong>;</span><span class=def id=attribute-onnavigatesuccess>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigatesuccess</strong>;</span><span class=def id=attribute-onnavigateerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnavigateerror</strong>;</span><span class=def id=attribute-oncurrentchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncurrentchange</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AppHistory</code></h3>
+
+  <ul>
+    <li><code><a href="Window.html">Window</a><a href=Window.html#attribute-appHistory>.appHistory</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Window.html">Window</a></li>
+    <li><code><a href="Window.html">Window</a></code></li>
 
   </ul>
 </section>

@@ -11,27 +11,27 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>clientX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>clientY</strong>;</span><span class=def>
+interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def id=constructor-DOMString-MouseEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-screenX>
+  readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def id=attribute-screenY>
+  readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def id=attribute-clientX>
+  readonly attribute <span class=primitive>long</span> <strong>clientX</strong>;</span><span class=def id=attribute-clientY>
+  readonly attribute <span class=primitive>long</span> <strong>clientY</strong>;</span><span class=def id=attribute-ctrlKey>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def id=attribute-shiftKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def id=attribute-altKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def id=attribute-metaKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def id=attribute-button>
 
-  readonly attribute <span class=primitive>short</span> <strong>button</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>buttons</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>short</span> <strong>button</strong>;</span><span class=def id=attribute-buttons>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>buttons</strong>;</span><span class=def id=attribute-relatedTarget>
 
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;</span><span class=def>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;</span><span class=def id=operation-getModifierState-DOMString>
 
   <span class=primitive>boolean</span> <strong>getModifierState</strong>(<span class=primitive>DOMString</span> <strong>keyArg</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MouseEvent</strong> {<span class=def><span class="comment">
+partial interface <strong>MouseEvent</strong> {<span class=def id=operation-initMouseEvent-DOMString-boolean-boolean-Window-long-long-long-long-long-boolean-boolean-boolean-boolean-short-EventTarget><span class="comment">
   &#x2F;&#x2F; Deprecated in this specification
   </span><span class=primitive>undefined</span> <strong>initMouseEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
     optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
@@ -53,22 +53,22 @@ partial interface <strong>MouseEvent</strong> {<span class=def><span class="comm
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-mouseevent-interface">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>MouseEvent</strong> {<span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>screenX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>screenY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>pageX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>pageY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>clientX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>clientY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>x</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>y</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>offsetX</strong>;</span><span class=def>
+partial interface <strong>MouseEvent</strong> {<span class=def id=attribute-screenX>
+  readonly attribute <span class=primitive>double</span> <strong>screenX</strong>;</span><span class=def id=attribute-screenY>
+  readonly attribute <span class=primitive>double</span> <strong>screenY</strong>;</span><span class=def id=attribute-pageX>
+  readonly attribute <span class=primitive>double</span> <strong>pageX</strong>;</span><span class=def id=attribute-pageY>
+  readonly attribute <span class=primitive>double</span> <strong>pageY</strong>;</span><span class=def id=attribute-clientX>
+  readonly attribute <span class=primitive>double</span> <strong>clientX</strong>;</span><span class=def id=attribute-clientY>
+  readonly attribute <span class=primitive>double</span> <strong>clientY</strong>;</span><span class=def id=attribute-x>
+  readonly attribute <span class=primitive>double</span> <strong>x</strong>;</span><span class=def id=attribute-y>
+  readonly attribute <span class=primitive>double</span> <strong>y</strong>;</span><span class=def id=attribute-offsetX>
+  readonly attribute <span class=primitive>double</span> <strong>offsetX</strong>;</span><span class=def id=attribute-offsetY>
   readonly attribute <span class=primitive>double</span> <strong>offsetY</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;#extensions-to-the-mouseevent-interface">Pointer Lock 2.0</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>MouseEvent</strong> {<span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>movementX</strong>;</span><span class=def>
+partial interface <strong>MouseEvent</strong> {<span class=def id=attribute-movementX>
+  readonly attribute <span class=primitive>double</span> <strong>movementX</strong>;</span><span class=def id=attribute-movementY>
   readonly attribute <span class=primitive>double</span> <strong>movementY</strong>;</span>
 };</span></code></pre></li>
 
@@ -76,24 +76,24 @@ partial interface <strong>MouseEvent</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>clientX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>clientY</strong>;</span><span class=def>
+interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<span class=def id=constructor-DOMString-MouseEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='MouseEventInit.html'>MouseEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-screenX>
+  readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def id=attribute-screenY>
+  readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def id=attribute-clientX>
+  readonly attribute <span class=primitive>long</span> <strong>clientX</strong>;</span><span class=def id=attribute-clientY>
+  readonly attribute <span class=primitive>long</span> <strong>clientY</strong>;</span><span class=def id=attribute-ctrlKey>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>ctrlKey</strong>;</span><span class=def id=attribute-shiftKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>shiftKey</strong>;</span><span class=def id=attribute-altKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>altKey</strong>;</span><span class=def id=attribute-metaKey>
+  readonly attribute <span class=primitive>boolean</span> <strong>metaKey</strong>;</span><span class=def id=attribute-button>
 
-  readonly attribute <span class=primitive>short</span> <strong>button</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>buttons</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>short</span> <strong>button</strong>;</span><span class=def id=attribute-buttons>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>buttons</strong>;</span><span class=def id=attribute-relatedTarget>
 
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;</span><span class=def>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTarget</strong>;</span><span class=def id=operation-getModifierState-DOMString>
 
-  <span class=primitive>boolean</span> <strong>getModifierState</strong>(<span class=primitive>DOMString</span> <strong>keyArg</strong>);</span><span class=def><span class="comment">
+  <span class=primitive>boolean</span> <strong>getModifierState</strong>(<span class=primitive>DOMString</span> <strong>keyArg</strong>);</span><span class=def id=operation-initMouseEvent-DOMString-boolean-boolean-Window-long-long-long-long-long-boolean-boolean-boolean-boolean-short-EventTarget><span class="comment">
   &#x2F;&#x2F; Deprecated in this specification
   </span><span class=primitive>undefined</span> <strong>initMouseEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
     optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
@@ -109,28 +109,36 @@ interface <strong>MouseEvent</strong> : <a href='UIEvent.html'>UIEvent</a> {<spa
     optional <span class=primitive>boolean</span> <strong>shiftKeyArg</strong> &#x3D; false,
     optional <span class=primitive>boolean</span> <strong>metaKeyArg</strong> &#x3D; false,
     optional <span class=primitive>short</span> <strong>buttonArg</strong> &#x3D; 0,
-    optional <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTargetArg</strong> &#x3D; null);</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>screenX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>screenY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>pageX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>pageY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>clientX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>clientY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>x</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>y</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>offsetX</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>offsetY</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>movementX</strong>;</span><span class=def>
+    optional <a href='EventTarget.html'>EventTarget</a>? <strong>relatedTargetArg</strong> &#x3D; null);</span><span class=def id=attribute-screenX>
+  readonly attribute <span class=primitive>double</span> <strong>screenX</strong>;</span><span class=def id=attribute-screenY>
+  readonly attribute <span class=primitive>double</span> <strong>screenY</strong>;</span><span class=def id=attribute-pageX>
+  readonly attribute <span class=primitive>double</span> <strong>pageX</strong>;</span><span class=def id=attribute-pageY>
+  readonly attribute <span class=primitive>double</span> <strong>pageY</strong>;</span><span class=def id=attribute-clientX>
+  readonly attribute <span class=primitive>double</span> <strong>clientX</strong>;</span><span class=def id=attribute-clientY>
+  readonly attribute <span class=primitive>double</span> <strong>clientY</strong>;</span><span class=def id=attribute-x>
+  readonly attribute <span class=primitive>double</span> <strong>x</strong>;</span><span class=def id=attribute-y>
+  readonly attribute <span class=primitive>double</span> <strong>y</strong>;</span><span class=def id=attribute-offsetX>
+  readonly attribute <span class=primitive>double</span> <strong>offsetX</strong>;</span><span class=def id=attribute-offsetY>
+  readonly attribute <span class=primitive>double</span> <strong>offsetY</strong>;</span><span class=def id=attribute-movementX>
+  readonly attribute <span class=primitive>double</span> <strong>movementX</strong>;</span><span class=def id=attribute-movementY>
   readonly attribute <span class=primitive>double</span> <strong>movementY</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>MouseEvent</code></h3>
+
+  <ul>
+    <li><code><a href="MouseEvent.html">MouseEvent</a><a href=MouseEvent.html#constructor-DOMString-MouseEventInit>()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DragEvent.html">DragEvent</a></li>
-<li><a href="PointerEvent.html">PointerEvent</a></li>
-<li><a href="WheelEvent.html">WheelEvent</a></li>
+    <li><code><a href="DragEvent.html">DragEvent</a></code></li>
+<li><code><a href="PointerEvent.html">PointerEvent</a></code></li>
+<li><code><a href="WheelEvent.html">WheelEvent</a></code></li>
 
   </ul>
 </section>

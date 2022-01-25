@@ -10,37 +10,45 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
 <pre class=webidl><code><span class=def>
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional (<span class=primitive>DOMString</span> or sequence&lt;<span class=primitive>DOMString</span>&gt;) <strong>protocols</strong> &#x3D; []);</span><span class=def>
+interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-USVString-DOMString-DOMString>
+  <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional (<span class=primitive>DOMString</span> or sequence&lt;<span class=primitive>DOMString</span>&gt;) <strong>protocols</strong> &#x3D; []);</span><span class=def id=attribute-url>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def><span class="comment">
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=const-CONNECTING><span class="comment">
 
   &#x2F;&#x2F; ready state
-  </span>const <span class=primitive>unsigned short</span> <strong>CONNECTING</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>OPEN</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>CLOSING</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>CLOSED</strong> &#x3D; 3;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long long</span> <strong>bufferedAmount</strong>;</span><span class=def><span class="comment">
+  </span>const <span class=primitive>unsigned short</span> <strong>CONNECTING</strong> &#x3D; 0;</span><span class=def id=const-OPEN>
+  const <span class=primitive>unsigned short</span> <strong>OPEN</strong> &#x3D; 1;</span><span class=def id=const-CLOSING>
+  const <span class=primitive>unsigned short</span> <strong>CLOSING</strong> &#x3D; 2;</span><span class=def id=const-CLOSED>
+  const <span class=primitive>unsigned short</span> <strong>CLOSED</strong> &#x3D; 3;</span><span class=def id=attribute-readyState>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def id=attribute-bufferedAmount>
+  readonly attribute <span class=primitive>unsigned long long</span> <strong>bufferedAmount</strong>;</span><span class=def id=attribute-onopen><span class="comment">
 
   &#x2F;&#x2F; networking
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>extensions</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>protocol</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>(optional [Clamp] <span class=primitive>unsigned short</span> <strong>code</strong>, optional <span class=primitive>USVString</span> <strong>reason</strong>);</span><span class=def><span class="comment">
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-extensions>
+  readonly attribute <span class=primitive>DOMString</span> <strong>extensions</strong>;</span><span class=def id=attribute-protocol>
+  readonly attribute <span class=primitive>DOMString</span> <strong>protocol</strong>;</span><span class=def id=operation-close-unsigned short-USVString>
+  <span class=primitive>undefined</span> <strong>close</strong>(optional [Clamp] <span class=primitive>unsigned short</span> <strong>code</strong>, optional <span class=primitive>USVString</span> <strong>reason</strong>);</span><span class=def id=attribute-onmessage><span class="comment">
 
   &#x2F;&#x2F; messaging
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-binaryType>
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=operation-send-USVString>
+  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def id=operation-send-Blob>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBuffer>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBufferView>
   <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span>
 };</span></code></pre>
   
   
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>WebSocket</code></h3>
+
+  <ul>
+    <li><code><a href="WebSocket.html">WebSocket</a><a href=WebSocket.html#constructor-USVString-DOMString-DOMString>()</a></code></li>
+
+  </ul>
 </section>
 
   

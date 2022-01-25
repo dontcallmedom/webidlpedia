@@ -11,12 +11,12 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AppHistoryDestination</strong> {<span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>key</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>id</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long long</span> <strong>index</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>sameDocument</strong>;</span><span class=def>
+interface <strong>AppHistoryDestination</strong> {<span class=def id=attribute-url>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-key>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>key</strong>;</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>id</strong>;</span><span class=def id=attribute-index>
+  readonly attribute <span class=primitive>long long</span> <strong>index</strong>;</span><span class=def id=attribute-sameDocument>
+  readonly attribute <span class=primitive>boolean</span> <strong>sameDocument</strong>;</span><span class=def id=operation-getState>
 
   <span class=primitive>any</span> <strong>getState</strong>();</span>
 };</span></code></pre>
@@ -24,11 +24,19 @@ interface <strong>AppHistoryDestination</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AppHistoryDestination</code></h3>
+
+  <ul>
+    <li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a><a href=AppHistoryNavigateEvent.html#attribute-destination>.destination</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></li>
-<li><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></li>
+    <li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></code></li>
+<li><code><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></code></li>
 
   </ul>
 </section>

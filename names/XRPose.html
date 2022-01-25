@@ -10,10 +10,10 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#xrpose">WebXR Device API</a> defines <code>XRPose</code></p>
 <pre class=webidl><code><span class=def>
 
-[SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRPose</strong> {<span class=def>
-  [SameObject] readonly attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a>? <strong>linearVelocity</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a>? <strong>angularVelocity</strong>;</span><span class=def>
+[SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRPose</strong> {<span class=def id=attribute-transform>
+  [SameObject] readonly attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;</span><span class=def id=attribute-linearVelocity>
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a>? <strong>linearVelocity</strong>;</span><span class=def id=attribute-angularVelocity>
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a>? <strong>angularVelocity</strong>;</span><span class=def id=attribute-emulatedPosition>
 
   readonly attribute <span class=primitive>boolean</span> <strong>emulatedPosition</strong>;</span>
 };</span></code></pre>
@@ -21,13 +21,22 @@ base: ../
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>XRPose</code></h3>
+
+  <ul>
+    <li><code><a href="XRHitTestResult.html">XRHitTestResult</a><a href=XRHitTestResult.html#operation-getPose-XRSpace>.getPose()</a></code></li>
+<li><code><a href="XRFrame.html">XRFrame</a><a href=XRFrame.html#operation-getPose-XRSpace-XRSpace>.getPose()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="XRFrame.html">XRFrame</a></li>
-<li><a href="XRHitTestResult.html">XRHitTestResult</a></li>
-<li><a href="XRJointPose.html">XRJointPose</a></li>
-<li><a href="XRViewerPose.html">XRViewerPose</a></li>
+    <li><code><a href="XRFrame.html">XRFrame</a></code></li>
+<li><code><a href="XRHitTestResult.html">XRHitTestResult</a></code></li>
+<li><code><a href="XRJointPose.html">XRJointPose</a></code></li>
+<li><code><a href="XRViewerPose.html">XRViewerPose</a></code></li>
 
   </ul>
 </section>

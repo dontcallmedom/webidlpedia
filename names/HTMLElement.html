@@ -11,26 +11,26 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def><span class="comment">
+interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-title><span class="comment">
 
   &#x2F;&#x2F; metadata attributes
-  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>lang</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>translate</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def><span class="comment">
+  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def id=attribute-lang>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>lang</strong>;</span><span class=def id=attribute-translate>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>translate</strong>;</span><span class=def id=attribute-dir>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def id=attribute-hidden><span class="comment">
 
   &#x2F;&#x2F; user interaction
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>click</strong>();</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>accessKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>accessKeyLabel</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>draggable</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>spellcheck</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>autocapitalize</strong>;</span><span class=def>
+  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def id=operation-click>
+  <span class=primitive>undefined</span> <strong>click</strong>();</span><span class=def id=attribute-accessKey>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>accessKey</strong>;</span><span class=def id=attribute-accessKeyLabel>
+  readonly attribute <span class=primitive>DOMString</span> <strong>accessKeyLabel</strong>;</span><span class=def id=attribute-draggable>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>draggable</strong>;</span><span class=def id=attribute-spellcheck>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>spellcheck</strong>;</span><span class=def id=attribute-autocapitalize>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>autocapitalize</strong>;</span><span class=def id=attribute-innerText>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerText</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerText</strong>;</span><span class=def>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerText</strong>;</span><span class=def id=attribute-outerText>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerText</strong>;</span><span class=def id=operation-attachInternals>
 
   <a href='ElementInternals.html'>ElementInternals</a> <strong>attachInternals</strong>();</span>
 };</span><span class=def>
@@ -46,11 +46,11 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
 <a href='HTMLElement.html'>HTMLElement</a> includes <a href='ElementCSSInlineStyle.html'>ElementCSSInlineStyle</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-htmlelement-interface">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLElement</strong> {<span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetWidth</strong>;</span><span class=def>
+partial interface <strong>HTMLElement</strong> {<span class=def id=attribute-offsetParent>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def id=attribute-offsetTop>
+  readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def id=attribute-offsetLeft>
+  readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def id=attribute-offsetWidth>
+  readonly attribute <span class=primitive>long</span> <strong>offsetWidth</strong>;</span><span class=def id=attribute-offsetHeight>
   readonly attribute <span class=primitive>long</span> <strong>offsetHeight</strong>;</span>
 };</span></code></pre></li>
 
@@ -58,196 +58,208 @@ partial interface <strong>HTMLElement</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def><span class="comment">
+interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-title><span class="comment">
 
   &#x2F;&#x2F; metadata attributes
-  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>lang</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>translate</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def><span class="comment">
+  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def id=attribute-lang>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>lang</strong>;</span><span class=def id=attribute-translate>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>translate</strong>;</span><span class=def id=attribute-dir>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def id=attribute-hidden><span class="comment">
 
   &#x2F;&#x2F; user interaction
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>click</strong>();</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>accessKey</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>accessKeyLabel</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>draggable</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>spellcheck</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>autocapitalize</strong>;</span><span class=def>
+  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def id=operation-click>
+  <span class=primitive>undefined</span> <strong>click</strong>();</span><span class=def id=attribute-accessKey>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>accessKey</strong>;</span><span class=def id=attribute-accessKeyLabel>
+  readonly attribute <span class=primitive>DOMString</span> <strong>accessKeyLabel</strong>;</span><span class=def id=attribute-draggable>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>draggable</strong>;</span><span class=def id=attribute-spellcheck>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>spellcheck</strong>;</span><span class=def id=attribute-autocapitalize>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>autocapitalize</strong>;</span><span class=def id=attribute-innerText>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerText</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerText</strong>;</span><span class=def>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerText</strong>;</span><span class=def id=attribute-outerText>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerText</strong>;</span><span class=def id=operation-attachInternals>
 
-  <a href='ElementInternals.html'>ElementInternals</a> <strong>attachInternals</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>contentEditable</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>enterKeyHint</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isContentEditable</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>inputMode</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>nonce</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; intentionally no [CEReactions]
+  <a href='ElementInternals.html'>ElementInternals</a> <strong>attachInternals</strong>();</span><span class=def id=attribute-onabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def id=attribute-onauxclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def id=attribute-onblur>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def id=attribute-oncancel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-oncanplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def id=attribute-oncanplaythrough>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def id=attribute-onchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def id=attribute-onclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-oncontextlost>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextmenu>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def id=attribute-oncontextrestored>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncuechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-ondblclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def id=attribute-ondrag>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def id=attribute-ondragend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def id=attribute-ondragenter>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def id=attribute-ondragleave>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def id=attribute-ondragover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def id=attribute-ondragstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def id=attribute-ondrop>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def id=attribute-ondurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def id=attribute-onemptied>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onfocus>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def id=attribute-onformdata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def id=attribute-oninput>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def id=attribute-oninvalid>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def id=attribute-onkeydown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def id=attribute-onkeypress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def id=attribute-onkeyup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def id=attribute-onload>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def id=attribute-onloadeddata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def id=attribute-onloadedmetadata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def id=attribute-onloadstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def id=attribute-onmousedown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def id=attribute-onmouseenter>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def id=attribute-onmouseleave>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def id=attribute-onmousemove>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def id=attribute-onmouseout>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def id=attribute-onmouseover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def id=attribute-onmouseup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpause>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def id=attribute-onplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def id=attribute-onplaying>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def id=attribute-onprogress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def id=attribute-onratechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def id=attribute-onreset>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def id=attribute-onresize>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def id=attribute-onscroll>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def id=attribute-onsecuritypolicyviolation>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def id=attribute-onseeked>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def id=attribute-onseeking>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def id=attribute-onselect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def id=attribute-onslotchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=attribute-onstalled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def id=attribute-onsubmit>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def id=attribute-onsuspend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def id=attribute-ontimeupdate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def id=attribute-ontoggle>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def id=attribute-onvolumechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def id=attribute-onwaiting>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def id=attribute-onwebkitanimationend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def id=attribute-onwebkitanimationiteration>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-oncopy>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncut>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-onpaste>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=attribute-contentEditable>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>contentEditable</strong>;</span><span class=def id=attribute-enterKeyHint>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>enterKeyHint</strong>;</span><span class=def id=attribute-isContentEditable>
+  readonly attribute <span class=primitive>boolean</span> <strong>isContentEditable</strong>;</span><span class=def id=attribute-inputMode>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>inputMode</strong>;</span><span class=def id=attribute-dataset>
+  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;</span><span class=def id=attribute-nonce>
+  attribute <span class=primitive>DOMString</span> <strong>nonce</strong>;</span><span class=def id=attribute-autofocus><span class="comment"> &#x2F;&#x2F; intentionally no [CEReactions]
 
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def>
-  [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>offsetWidth</strong>;</span><span class=def>
+  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def id=attribute-tabIndex>
+  [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def id=operation-focus-FocusOptions>
+  <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-blur>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-style>
+  [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span><span class=def id=attribute-offsetParent>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def id=attribute-offsetTop>
+  readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def id=attribute-offsetLeft>
+  readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def id=attribute-offsetWidth>
+  readonly attribute <span class=primitive>long</span> <strong>offsetWidth</strong>;</span><span class=def id=attribute-offsetHeight>
   readonly attribute <span class=primitive>long</span> <strong>offsetHeight</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLElement.html">HTMLElement</a><a href=HTMLElement.html#constructor>()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-body>.body</a></code></li>
+<li><code><a href="HTMLLabelElement.html">HTMLLabelElement</a><a href=HTMLLabelElement.html#attribute-control>.control</a></code></li>
+<li><code><a href="HTMLInputElement.html">HTMLInputElement</a><a href=HTMLInputElement.html#attribute-list>.list</a></code></li>
+<li><code><a href="SubmitEvent.html">SubmitEvent</a><a href=SubmitEvent.html#attribute-submitter>.submitter</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="Document.html">Document</a></li>
-<li><a href="ElementInternals.html">ElementInternals</a></li>
-<li><a href="HTMLAnchorElement.html">HTMLAnchorElement</a></li>
-<li><a href="HTMLAreaElement.html">HTMLAreaElement</a></li>
-<li><a href="HTMLBRElement.html">HTMLBRElement</a></li>
-<li><a href="HTMLBaseElement.html">HTMLBaseElement</a></li>
-<li><a href="HTMLBodyElement.html">HTMLBodyElement</a></li>
-<li><a href="HTMLButtonElement.html">HTMLButtonElement</a></li>
-<li><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></li>
-<li><a href="HTMLDListElement.html">HTMLDListElement</a></li>
-<li><a href="HTMLDataElement.html">HTMLDataElement</a></li>
-<li><a href="HTMLDataListElement.html">HTMLDataListElement</a></li>
-<li><a href="HTMLDetailsElement.html">HTMLDetailsElement</a></li>
-<li><a href="HTMLDialogElement.html">HTMLDialogElement</a></li>
-<li><a href="HTMLDirectoryElement.html">HTMLDirectoryElement</a></li>
-<li><a href="HTMLDivElement.html">HTMLDivElement</a></li>
-<li><a href="HTMLEmbedElement.html">HTMLEmbedElement</a></li>
-<li><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a></li>
-<li><a href="HTMLFontElement.html">HTMLFontElement</a></li>
-<li><a href="HTMLFormElement.html">HTMLFormElement</a></li>
-<li><a href="HTMLFrameElement.html">HTMLFrameElement</a></li>
-<li><a href="HTMLFrameSetElement.html">HTMLFrameSetElement</a></li>
-<li><a href="HTMLHRElement.html">HTMLHRElement</a></li>
-<li><a href="HTMLHeadElement.html">HTMLHeadElement</a></li>
-<li><a href="HTMLHeadingElement.html">HTMLHeadingElement</a></li>
-<li><a href="HTMLHtmlElement.html">HTMLHtmlElement</a></li>
-<li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li>
-<li><a href="HTMLImageElement.html">HTMLImageElement</a></li>
-<li><a href="HTMLInputElement.html">HTMLInputElement</a></li>
-<li><a href="HTMLLIElement.html">HTMLLIElement</a></li>
-<li><a href="HTMLLabelElement.html">HTMLLabelElement</a></li>
-<li><a href="HTMLLegendElement.html">HTMLLegendElement</a></li>
-<li><a href="HTMLLinkElement.html">HTMLLinkElement</a></li>
-<li><a href="HTMLMapElement.html">HTMLMapElement</a></li>
-<li><a href="HTMLMarqueeElement.html">HTMLMarqueeElement</a></li>
-<li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li>
-<li><a href="HTMLMenuElement.html">HTMLMenuElement</a></li>
-<li><a href="HTMLMetaElement.html">HTMLMetaElement</a></li>
-<li><a href="HTMLMeterElement.html">HTMLMeterElement</a></li>
-<li><a href="HTMLModElement.html">HTMLModElement</a></li>
-<li><a href="HTMLOListElement.html">HTMLOListElement</a></li>
-<li><a href="HTMLObjectElement.html">HTMLObjectElement</a></li>
-<li><a href="HTMLOptGroupElement.html">HTMLOptGroupElement</a></li>
-<li><a href="HTMLOptionElement.html">HTMLOptionElement</a></li>
-<li><a href="HTMLOptionsCollection.html">HTMLOptionsCollection</a></li>
-<li><a href="HTMLOutputElement.html">HTMLOutputElement</a></li>
-<li><a href="HTMLParagraphElement.html">HTMLParagraphElement</a></li>
-<li><a href="HTMLParamElement.html">HTMLParamElement</a></li>
-<li><a href="HTMLPictureElement.html">HTMLPictureElement</a></li>
-<li><a href="HTMLPortalElement.html">HTMLPortalElement</a></li>
-<li><a href="HTMLPreElement.html">HTMLPreElement</a></li>
-<li><a href="HTMLProgressElement.html">HTMLProgressElement</a></li>
-<li><a href="HTMLQuoteElement.html">HTMLQuoteElement</a></li>
-<li><a href="HTMLScriptElement.html">HTMLScriptElement</a></li>
-<li><a href="HTMLSelectElement.html">HTMLSelectElement</a></li>
-<li><a href="HTMLSlotElement.html">HTMLSlotElement</a></li>
-<li><a href="HTMLSourceElement.html">HTMLSourceElement</a></li>
-<li><a href="HTMLSpanElement.html">HTMLSpanElement</a></li>
-<li><a href="HTMLStyleElement.html">HTMLStyleElement</a></li>
-<li><a href="HTMLTableCaptionElement.html">HTMLTableCaptionElement</a></li>
-<li><a href="HTMLTableCellElement.html">HTMLTableCellElement</a></li>
-<li><a href="HTMLTableColElement.html">HTMLTableColElement</a></li>
-<li><a href="HTMLTableElement.html">HTMLTableElement</a></li>
-<li><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></li>
-<li><a href="HTMLTableSectionElement.html">HTMLTableSectionElement</a></li>
-<li><a href="HTMLTemplateElement.html">HTMLTemplateElement</a></li>
-<li><a href="HTMLTextAreaElement.html">HTMLTextAreaElement</a></li>
-<li><a href="HTMLTimeElement.html">HTMLTimeElement</a></li>
-<li><a href="HTMLTitleElement.html">HTMLTitleElement</a></li>
-<li><a href="HTMLTrackElement.html">HTMLTrackElement</a></li>
-<li><a href="HTMLUListElement.html">HTMLUListElement</a></li>
-<li><a href="HTMLUnknownElement.html">HTMLUnknownElement</a></li>
-<li><a href="SubmitEvent.html">SubmitEvent</a></li>
-<li><a href="SubmitEventInit.html">SubmitEventInit</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="ElementInternals.html">ElementInternals</a></code></li>
+<li><code><a href="HTMLAnchorElement.html">HTMLAnchorElement</a></code></li>
+<li><code><a href="HTMLAreaElement.html">HTMLAreaElement</a></code></li>
+<li><code><a href="HTMLBRElement.html">HTMLBRElement</a></code></li>
+<li><code><a href="HTMLBaseElement.html">HTMLBaseElement</a></code></li>
+<li><code><a href="HTMLBodyElement.html">HTMLBodyElement</a></code></li>
+<li><code><a href="HTMLButtonElement.html">HTMLButtonElement</a></code></li>
+<li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></code></li>
+<li><code><a href="HTMLDListElement.html">HTMLDListElement</a></code></li>
+<li><code><a href="HTMLDataElement.html">HTMLDataElement</a></code></li>
+<li><code><a href="HTMLDataListElement.html">HTMLDataListElement</a></code></li>
+<li><code><a href="HTMLDetailsElement.html">HTMLDetailsElement</a></code></li>
+<li><code><a href="HTMLDialogElement.html">HTMLDialogElement</a></code></li>
+<li><code><a href="HTMLDirectoryElement.html">HTMLDirectoryElement</a></code></li>
+<li><code><a href="HTMLDivElement.html">HTMLDivElement</a></code></li>
+<li><code><a href="HTMLEmbedElement.html">HTMLEmbedElement</a></code></li>
+<li><code><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a></code></li>
+<li><code><a href="HTMLFontElement.html">HTMLFontElement</a></code></li>
+<li><code><a href="HTMLFormElement.html">HTMLFormElement</a></code></li>
+<li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a></code></li>
+<li><code><a href="HTMLFrameSetElement.html">HTMLFrameSetElement</a></code></li>
+<li><code><a href="HTMLHRElement.html">HTMLHRElement</a></code></li>
+<li><code><a href="HTMLHeadElement.html">HTMLHeadElement</a></code></li>
+<li><code><a href="HTMLHeadingElement.html">HTMLHeadingElement</a></code></li>
+<li><code><a href="HTMLHtmlElement.html">HTMLHtmlElement</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></code></li>
+<li><code><a href="HTMLImageElement.html">HTMLImageElement</a></code></li>
+<li><code><a href="HTMLInputElement.html">HTMLInputElement</a></code></li>
+<li><code><a href="HTMLLIElement.html">HTMLLIElement</a></code></li>
+<li><code><a href="HTMLLabelElement.html">HTMLLabelElement</a></code></li>
+<li><code><a href="HTMLLegendElement.html">HTMLLegendElement</a></code></li>
+<li><code><a href="HTMLLinkElement.html">HTMLLinkElement</a></code></li>
+<li><code><a href="HTMLMapElement.html">HTMLMapElement</a></code></li>
+<li><code><a href="HTMLMarqueeElement.html">HTMLMarqueeElement</a></code></li>
+<li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a></code></li>
+<li><code><a href="HTMLMenuElement.html">HTMLMenuElement</a></code></li>
+<li><code><a href="HTMLMetaElement.html">HTMLMetaElement</a></code></li>
+<li><code><a href="HTMLMeterElement.html">HTMLMeterElement</a></code></li>
+<li><code><a href="HTMLModElement.html">HTMLModElement</a></code></li>
+<li><code><a href="HTMLOListElement.html">HTMLOListElement</a></code></li>
+<li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a></code></li>
+<li><code><a href="HTMLOptGroupElement.html">HTMLOptGroupElement</a></code></li>
+<li><code><a href="HTMLOptionElement.html">HTMLOptionElement</a></code></li>
+<li><code><a href="HTMLOptionsCollection.html">HTMLOptionsCollection</a></code></li>
+<li><code><a href="HTMLOutputElement.html">HTMLOutputElement</a></code></li>
+<li><code><a href="HTMLParagraphElement.html">HTMLParagraphElement</a></code></li>
+<li><code><a href="HTMLParamElement.html">HTMLParamElement</a></code></li>
+<li><code><a href="HTMLPictureElement.html">HTMLPictureElement</a></code></li>
+<li><code><a href="HTMLPortalElement.html">HTMLPortalElement</a></code></li>
+<li><code><a href="HTMLPreElement.html">HTMLPreElement</a></code></li>
+<li><code><a href="HTMLProgressElement.html">HTMLProgressElement</a></code></li>
+<li><code><a href="HTMLQuoteElement.html">HTMLQuoteElement</a></code></li>
+<li><code><a href="HTMLScriptElement.html">HTMLScriptElement</a></code></li>
+<li><code><a href="HTMLSelectElement.html">HTMLSelectElement</a></code></li>
+<li><code><a href="HTMLSlotElement.html">HTMLSlotElement</a></code></li>
+<li><code><a href="HTMLSourceElement.html">HTMLSourceElement</a></code></li>
+<li><code><a href="HTMLSpanElement.html">HTMLSpanElement</a></code></li>
+<li><code><a href="HTMLStyleElement.html">HTMLStyleElement</a></code></li>
+<li><code><a href="HTMLTableCaptionElement.html">HTMLTableCaptionElement</a></code></li>
+<li><code><a href="HTMLTableCellElement.html">HTMLTableCellElement</a></code></li>
+<li><code><a href="HTMLTableColElement.html">HTMLTableColElement</a></code></li>
+<li><code><a href="HTMLTableElement.html">HTMLTableElement</a></code></li>
+<li><code><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></code></li>
+<li><code><a href="HTMLTableSectionElement.html">HTMLTableSectionElement</a></code></li>
+<li><code><a href="HTMLTemplateElement.html">HTMLTemplateElement</a></code></li>
+<li><code><a href="HTMLTextAreaElement.html">HTMLTextAreaElement</a></code></li>
+<li><code><a href="HTMLTimeElement.html">HTMLTimeElement</a></code></li>
+<li><code><a href="HTMLTitleElement.html">HTMLTitleElement</a></code></li>
+<li><code><a href="HTMLTrackElement.html">HTMLTrackElement</a></code></li>
+<li><code><a href="HTMLUListElement.html">HTMLUListElement</a></code></li>
+<li><code><a href="HTMLUnknownElement.html">HTMLUnknownElement</a></code></li>
+<li><code><a href="SubmitEvent.html">SubmitEvent</a></code></li>
+<li><code><a href="SubmitEventInit.html">SubmitEventInit</a></code></li>
 
   </ul>
 </section>

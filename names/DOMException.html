@@ -11,48 +11,56 @@ base: ../
 <pre class=webidl><code><span class=def>
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
  Serializable]
-interface <strong>DOMException</strong> {<span class=def><span class="comment"> &#x2F;&#x2F; but see below note about ECMAScript binding
-  </span><strong>constructor</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>name</strong> &#x3D; &quot;Error&quot;);</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>message</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>code</strong>;</span><span class=def>
+interface <strong>DOMException</strong> {<span class=def id=constructor-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; but see below note about ECMAScript binding
+  </span><strong>constructor</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>name</strong> &#x3D; &quot;Error&quot;);</span><span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-message>
+  readonly attribute <span class=primitive>DOMString</span> <strong>message</strong>;</span><span class=def id=attribute-code>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>code</strong>;</span><span class=def id=const-INDEX_SIZE_ERR>
 
-  const <span class=primitive>unsigned short</span> <strong>INDEX_SIZE_ERR</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOMSTRING_SIZE_ERR</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>HIERARCHY_REQUEST_ERR</strong> &#x3D; 3;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>WRONG_DOCUMENT_ERR</strong> &#x3D; 4;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INVALID_CHARACTER_ERR</strong> &#x3D; 5;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NO_DATA_ALLOWED_ERR</strong> &#x3D; 6;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NO_MODIFICATION_ALLOWED_ERR</strong> &#x3D; 7;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NOT_FOUND_ERR</strong> &#x3D; 8;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NOT_SUPPORTED_ERR</strong> &#x3D; 9;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INUSE_ATTRIBUTE_ERR</strong> &#x3D; 10;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INVALID_STATE_ERR</strong> &#x3D; 11;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SYNTAX_ERR</strong> &#x3D; 12;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INVALID_MODIFICATION_ERR</strong> &#x3D; 13;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NAMESPACE_ERR</strong> &#x3D; 14;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INVALID_ACCESS_ERR</strong> &#x3D; 15;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>VALIDATION_ERR</strong> &#x3D; 16;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TYPE_MISMATCH_ERR</strong> &#x3D; 17;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SECURITY_ERR</strong> &#x3D; 18;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NETWORK_ERR</strong> &#x3D; 19;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>ABORT_ERR</strong> &#x3D; 20;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>URL_MISMATCH_ERR</strong> &#x3D; 21;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>QUOTA_EXCEEDED_ERR</strong> &#x3D; 22;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TIMEOUT_ERR</strong> &#x3D; 23;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>INVALID_NODE_TYPE_ERR</strong> &#x3D; 24;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>INDEX_SIZE_ERR</strong> &#x3D; 1;</span><span class=def id=const-DOMSTRING_SIZE_ERR>
+  const <span class=primitive>unsigned short</span> <strong>DOMSTRING_SIZE_ERR</strong> &#x3D; 2;</span><span class=def id=const-HIERARCHY_REQUEST_ERR>
+  const <span class=primitive>unsigned short</span> <strong>HIERARCHY_REQUEST_ERR</strong> &#x3D; 3;</span><span class=def id=const-WRONG_DOCUMENT_ERR>
+  const <span class=primitive>unsigned short</span> <strong>WRONG_DOCUMENT_ERR</strong> &#x3D; 4;</span><span class=def id=const-INVALID_CHARACTER_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INVALID_CHARACTER_ERR</strong> &#x3D; 5;</span><span class=def id=const-NO_DATA_ALLOWED_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NO_DATA_ALLOWED_ERR</strong> &#x3D; 6;</span><span class=def id=const-NO_MODIFICATION_ALLOWED_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NO_MODIFICATION_ALLOWED_ERR</strong> &#x3D; 7;</span><span class=def id=const-NOT_FOUND_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NOT_FOUND_ERR</strong> &#x3D; 8;</span><span class=def id=const-NOT_SUPPORTED_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NOT_SUPPORTED_ERR</strong> &#x3D; 9;</span><span class=def id=const-INUSE_ATTRIBUTE_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INUSE_ATTRIBUTE_ERR</strong> &#x3D; 10;</span><span class=def id=const-INVALID_STATE_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INVALID_STATE_ERR</strong> &#x3D; 11;</span><span class=def id=const-SYNTAX_ERR>
+  const <span class=primitive>unsigned short</span> <strong>SYNTAX_ERR</strong> &#x3D; 12;</span><span class=def id=const-INVALID_MODIFICATION_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INVALID_MODIFICATION_ERR</strong> &#x3D; 13;</span><span class=def id=const-NAMESPACE_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NAMESPACE_ERR</strong> &#x3D; 14;</span><span class=def id=const-INVALID_ACCESS_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INVALID_ACCESS_ERR</strong> &#x3D; 15;</span><span class=def id=const-VALIDATION_ERR>
+  const <span class=primitive>unsigned short</span> <strong>VALIDATION_ERR</strong> &#x3D; 16;</span><span class=def id=const-TYPE_MISMATCH_ERR>
+  const <span class=primitive>unsigned short</span> <strong>TYPE_MISMATCH_ERR</strong> &#x3D; 17;</span><span class=def id=const-SECURITY_ERR>
+  const <span class=primitive>unsigned short</span> <strong>SECURITY_ERR</strong> &#x3D; 18;</span><span class=def id=const-NETWORK_ERR>
+  const <span class=primitive>unsigned short</span> <strong>NETWORK_ERR</strong> &#x3D; 19;</span><span class=def id=const-ABORT_ERR>
+  const <span class=primitive>unsigned short</span> <strong>ABORT_ERR</strong> &#x3D; 20;</span><span class=def id=const-URL_MISMATCH_ERR>
+  const <span class=primitive>unsigned short</span> <strong>URL_MISMATCH_ERR</strong> &#x3D; 21;</span><span class=def id=const-QUOTA_EXCEEDED_ERR>
+  const <span class=primitive>unsigned short</span> <strong>QUOTA_EXCEEDED_ERR</strong> &#x3D; 22;</span><span class=def id=const-TIMEOUT_ERR>
+  const <span class=primitive>unsigned short</span> <strong>TIMEOUT_ERR</strong> &#x3D; 23;</span><span class=def id=const-INVALID_NODE_TYPE_ERR>
+  const <span class=primitive>unsigned short</span> <strong>INVALID_NODE_TYPE_ERR</strong> &#x3D; 24;</span><span class=def id=const-DATA_CLONE_ERR>
   const <span class=primitive>unsigned short</span> <strong>DATA_CLONE_ERR</strong> &#x3D; 25;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>DOMException</code></h3>
+
+  <ul>
+    <li><code><a href="DOMException.html">DOMException</a><a href=DOMException.html#constructor-DOMString-DOMString>()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="OverconstrainedError.html">OverconstrainedError</a></li>
-<li><a href="RTCError.html">RTCError</a></li>
-<li><a href="WebTransportError.html">WebTransportError</a></li>
+    <li><code><a href="OverconstrainedError.html">OverconstrainedError</a></code></li>
+<li><code><a href="RTCError.html">RTCError</a></code></li>
+<li><code><a href="WebTransportError.html">WebTransportError</a></code></li>
 
   </ul>
 </section>

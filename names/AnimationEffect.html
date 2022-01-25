@@ -11,9 +11,9 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AnimationEffect</strong> {<span class=def>
-    <a href='EffectTiming.html'>EffectTiming</a>         <strong>getTiming</strong>();</span><span class=def>
-    <a href='ComputedEffectTiming.html'>ComputedEffectTiming</a> <strong>getComputedTiming</strong>();</span><span class=def>
+interface <strong>AnimationEffect</strong> {<span class=def id=operation-getTiming>
+    <a href='EffectTiming.html'>EffectTiming</a>         <strong>getTiming</strong>();</span><span class=def id=operation-getComputedTiming>
+    <a href='ComputedEffectTiming.html'>ComputedEffectTiming</a> <strong>getComputedTiming</strong>();</span><span class=def id=operation-updateTiming-OptionalEffectTiming>
     <span class=primitive>undefined</span>            <strong>updateTiming</strong>(optional <a href='OptionalEffectTiming.html'>OptionalEffectTiming</a> <strong>timing</strong> &#x3D; {});</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
@@ -21,15 +21,15 @@ interface <strong>AnimationEffect</strong> {<span class=def>
     <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;#the-animationeffect-interface">Web Animations Level 2</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-partial interface <strong>AnimationEffect</strong> {<span class=def><span class="comment">
+partial interface <strong>AnimationEffect</strong> {<span class=def id=attribute-parent><span class="comment">
     &#x2F;&#x2F; Timing hierarchy
-    </span>readonly attribute <a href='GroupEffect.html'>GroupEffect</a>?     <strong>parent</strong>;</span><span class=def>
-    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>previousSibling</strong>;</span><span class=def>
-    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>nextSibling</strong>;</span><span class=def>
+    </span>readonly attribute <a href='GroupEffect.html'>GroupEffect</a>?     <strong>parent</strong>;</span><span class=def id=attribute-previousSibling>
+    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>previousSibling</strong>;</span><span class=def id=attribute-nextSibling>
+    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>nextSibling</strong>;</span><span class=def id=operation-before-AnimationEffect>
 
-    <span class=primitive>undefined</span> <strong>before</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>after</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>replace</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>before</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-after-AnimationEffect>
+    <span class=primitive>undefined</span> <strong>after</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-replace-AnimationEffect>
+    <span class=primitive>undefined</span> <strong>replace</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-remove>
     <span class=primitive>undefined</span> <strong>remove</strong> ();</span>
 };</span></code></pre></li>
 
@@ -37,33 +37,46 @@ partial interface <strong>AnimationEffect</strong> {<span class=def><span class=
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AnimationEffect</strong> {<span class=def>
-    <a href='EffectTiming.html'>EffectTiming</a>         <strong>getTiming</strong>();</span><span class=def>
-    <a href='ComputedEffectTiming.html'>ComputedEffectTiming</a> <strong>getComputedTiming</strong>();</span><span class=def>
-    <span class=primitive>undefined</span>            <strong>updateTiming</strong>(optional <a href='OptionalEffectTiming.html'>OptionalEffectTiming</a> <strong>timing</strong> &#x3D; {});</span><span class=def><span class="comment">
+interface <strong>AnimationEffect</strong> {<span class=def id=operation-getTiming>
+    <a href='EffectTiming.html'>EffectTiming</a>         <strong>getTiming</strong>();</span><span class=def id=operation-getComputedTiming>
+    <a href='ComputedEffectTiming.html'>ComputedEffectTiming</a> <strong>getComputedTiming</strong>();</span><span class=def id=operation-updateTiming-OptionalEffectTiming>
+    <span class=primitive>undefined</span>            <strong>updateTiming</strong>(optional <a href='OptionalEffectTiming.html'>OptionalEffectTiming</a> <strong>timing</strong> &#x3D; {});</span><span class=def id=attribute-parent><span class="comment">
     &#x2F;&#x2F; Timing hierarchy
-    </span>readonly attribute <a href='GroupEffect.html'>GroupEffect</a>?     <strong>parent</strong>;</span><span class=def>
-    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>previousSibling</strong>;</span><span class=def>
-    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>nextSibling</strong>;</span><span class=def>
+    </span>readonly attribute <a href='GroupEffect.html'>GroupEffect</a>?     <strong>parent</strong>;</span><span class=def id=attribute-previousSibling>
+    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>previousSibling</strong>;</span><span class=def id=attribute-nextSibling>
+    readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>nextSibling</strong>;</span><span class=def id=operation-before-AnimationEffect>
 
-    <span class=primitive>undefined</span> <strong>before</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>after</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>replace</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>before</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-after-AnimationEffect>
+    <span class=primitive>undefined</span> <strong>after</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-replace-AnimationEffect>
+    <span class=primitive>undefined</span> <strong>replace</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-remove>
     <span class=primitive>undefined</span> <strong>remove</strong> ();</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>AnimationEffect</code></h3>
+
+  <ul>
+    <li><code><a href="AnimationEffect.html">AnimationEffect</a><a href=AnimationEffect.html#attribute-previousSibling>.previousSibling</a></code></li>
+<li><code><a href="AnimationEffect.html">AnimationEffect</a><a href=AnimationEffect.html#attribute-nextSibling>.nextSibling</a></code></li>
+<li><code><a href="GroupEffect.html">GroupEffect</a><a href=GroupEffect.html#attribute-firstChild>.firstChild</a></code></li>
+<li><code><a href="GroupEffect.html">GroupEffect</a><a href=GroupEffect.html#attribute-lastChild>.lastChild</a></code></li>
+<li><code><a href="AnimationNodeList.html">AnimationNodeList</a><a href=AnimationNodeList.html#operation-getter>.item()</a></code></li>
+<li><code><a href="Animation.html">Animation</a><a href=Animation.html#attribute-effect>.effect</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Animation.html">Animation</a></li>
-<li><a href="AnimationEffect.html">AnimationEffect</a></li>
-<li><a href="AnimationNodeList.html">AnimationNodeList</a></li>
-<li><a href="AnimationTimeline.html">AnimationTimeline</a></li>
-<li><a href="GroupEffect.html">GroupEffect</a></li>
-<li><a href="KeyframeEffect.html">KeyframeEffect</a></li>
-<li><a href="SequenceEffect.html">SequenceEffect</a></li>
-<li><a href="WorkletAnimation.html">WorkletAnimation</a></li>
+    <li><code><a href="Animation.html">Animation</a></code></li>
+<li><code><a href="AnimationEffect.html">AnimationEffect</a></code></li>
+<li><code><a href="AnimationNodeList.html">AnimationNodeList</a></code></li>
+<li><code><a href="AnimationTimeline.html">AnimationTimeline</a></code></li>
+<li><code><a href="GroupEffect.html">GroupEffect</a></code></li>
+<li><code><a href="KeyframeEffect.html">KeyframeEffect</a></code></li>
+<li><code><a href="SequenceEffect.html">SequenceEffect</a></code></li>
+<li><code><a href="WorkletAnimation.html">WorkletAnimation</a></code></li>
 
   </ul>
 </section>

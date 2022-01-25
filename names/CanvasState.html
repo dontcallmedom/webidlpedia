@@ -10,23 +10,24 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>CanvasState</code></p>
 <pre class=webidl><code><span class=def>
 
-interface mixin <strong>CanvasState</strong> {<span class=def><span class="comment">
+interface mixin <strong>CanvasState</strong> {<span class=def id=operation-save><span class="comment">
   &#x2F;&#x2F; state
-  </span><span class=primitive>undefined</span> <strong>save</strong>();</span><span class=def><span class="comment"> &#x2F;&#x2F; push state on state stack
-  </span><span class=primitive>undefined</span> <strong>restore</strong>();</span><span class=def><span class="comment"> &#x2F;&#x2F; pop state stack and restore state
-  </span><span class=primitive>undefined</span> <strong>reset</strong>();</span><span class=def><span class="comment"> &#x2F;&#x2F; reset the rendering context to its default state
+  </span><span class=primitive>undefined</span> <strong>save</strong>();</span><span class=def id=operation-restore><span class="comment"> &#x2F;&#x2F; push state on state stack
+  </span><span class=primitive>undefined</span> <strong>restore</strong>();</span><span class=def id=operation-reset><span class="comment"> &#x2F;&#x2F; pop state stack and restore state
+  </span><span class=primitive>undefined</span> <strong>reset</strong>();</span><span class=def id=operation-isContextLost><span class="comment"> &#x2F;&#x2F; reset the rendering context to its default state
   </span><span class=primitive>boolean</span> <strong>isContextLost</strong>();</span><span class="comment"> &#x2F;&#x2F; return whether context is lost
 </span>};</span></code></pre>
   
   
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li>
-<li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li>
-<li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li>
+    <li><code><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></code></li>
+<li><code><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></code></li>
+<li><code><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></code></li>
 
   </ul>
 </section>

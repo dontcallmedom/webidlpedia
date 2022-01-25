@@ -11,29 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>FontFaceSet</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+interface <strong>FontFaceSet</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-FontFace>
   <strong>constructor</strong>(sequence&lt;<a href='FontFace.html'>FontFace</a>&gt; <strong>initialFaces</strong>);</span><span class=def>
 
-  setlike&lt;<a href='FontFace.html'>FontFace</a>&gt;;</span><span class=def>
-  <a href='FontFaceSet.html'>FontFaceSet</a> <strong>add</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>delete</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def><span class="comment">
+  setlike&lt;<a href='FontFace.html'>FontFace</a>&gt;;</span><span class=def id=operation-add-FontFace>
+  <a href='FontFaceSet.html'>FontFaceSet</a> <strong>add</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);</span><span class=def id=operation-delete-FontFace>
+  <span class=primitive>boolean</span> <strong>delete</strong>(<a href='FontFace.html'>FontFace</a> <strong>font</strong>);</span><span class=def id=operation-clear>
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def id=attribute-onloading><span class="comment">
 
   &#x2F;&#x2F; events for when loading state changes
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloading</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingdone</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingerror</strong>;</span><span class=def><span class="comment">
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloading</strong>;</span><span class=def id=attribute-onloadingdone>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingdone</strong>;</span><span class=def id=attribute-onloadingerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadingerror</strong>;</span><span class=def id=operation-load-CSSOMString-CSSOMString><span class="comment">
 
   &#x2F;&#x2F; check and start loads if appropriate
   &#x2F;&#x2F; and fulfill promise when all loads complete
-  </span>Promise&lt;sequence&lt;<a href='FontFace.html'>FontFace</a>&gt;&gt; <strong>load</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> &#x3D; &quot; &quot;);</span><span class=def><span class="comment">
+  </span>Promise&lt;sequence&lt;<a href='FontFace.html'>FontFace</a>&gt;&gt; <strong>load</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> &#x3D; &quot; &quot;);</span><span class=def id=operation-check-CSSOMString-CSSOMString><span class="comment">
 
   &#x2F;&#x2F; return whether all fonts in the fontlist are loaded
   &#x2F;&#x2F; (does not initiate load if not available)
-  </span><span class=primitive>boolean</span> <strong>check</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> &#x3D; &quot; &quot;);</span><span class=def><span class="comment">
+  </span><span class=primitive>boolean</span> <strong>check</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>font</strong>, optional <a href='CSSOMString.html'>CSSOMString</a> <strong>text</strong> &#x3D; &quot; &quot;);</span><span class=def id=attribute-ready><span class="comment">
 
   &#x2F;&#x2F; async notification that font loading and layout operations are done
-  </span>readonly attribute Promise&lt;<a href='FontFaceSet.html'>FontFaceSet</a>&gt; <strong>ready</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute Promise&lt;<a href='FontFaceSet.html'>FontFaceSet</a>&gt; <strong>ready</strong>;</span><span class=def id=attribute-status><span class="comment">
 
   &#x2F;&#x2F; loading state, &quot;loading&quot; while one or more fonts loading, &quot;loaded&quot; otherwise
   </span>readonly attribute <a href='FontFaceSetLoadStatus.html'>FontFaceSetLoadStatus</a> <strong>status</strong>;</span>
@@ -42,11 +42,22 @@ interface <strong>FontFaceSet</strong> : <a href='EventTarget.html'>EventTarget<
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>FontFaceSet</code></h3>
+
+  <ul>
+    <li><code><a href="FontFaceSet.html">FontFaceSet</a><a href=FontFaceSet.html#constructor-FontFace>()</a></code></li>
+<li><code><a href="FontFaceSet.html">FontFaceSet</a><a href=FontFaceSet.html#operation-add-FontFace>.add()</a></code></li>
+<li><code><a href="FontFaceSet.html">FontFaceSet</a><a href=FontFaceSet.html#attribute-ready>.ready</a></code></li>
+<li><code><a href="FontFaceSource.html">FontFaceSource</a><a href=FontFaceSource.html#attribute-fonts>.fonts</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="FontFaceSet.html">FontFaceSet</a></li>
-<li><a href="FontFaceSource.html">FontFaceSource</a></li>
+    <li><code><a href="FontFaceSet.html">FontFaceSet</a></code></li>
+<li><code><a href="FontFaceSource.html">FontFaceSource</a></code></li>
 
   </ul>
 </section>

@@ -11,46 +11,46 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext,Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>SubtleCrypto</strong> {<span class=def>
+interface <strong>SubtleCrypto</strong> {<span class=def id=operation-encrypt-AlgorithmIdentifier-CryptoKey-BufferSource>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>encrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def id=operation-decrypt-AlgorithmIdentifier-CryptoKey-BufferSource>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>decrypt</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+                       <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def id=operation-sign-AlgorithmIdentifier-CryptoKey-BufferSource>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>sign</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                     <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
-                    <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+                    <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def id=operation-verify-AlgorithmIdentifier-CryptoKey-BufferSource-BufferSource>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>verify</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                       <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
                       <a href='BufferSource.html'>BufferSource</a> <strong>signature</strong>,
-                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def id=operation-digest-AlgorithmIdentifier-BufferSource>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>digest</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
-                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def>
+                      <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>);</span><span class=def id=operation-generateKey-AlgorithmIdentifier-boolean-KeyUsage>
 
   Promise&lt;<span class=primitive>any</span>&gt; <strong>generateKey</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                           <span class=primitive>boolean</span> <strong>extractable</strong>,
-                          sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def>
+                          sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def id=operation-deriveKey-AlgorithmIdentifier-CryptoKey-AlgorithmIdentifier-boolean-KeyUsage>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>deriveKey</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                          <a href='CryptoKey.html'>CryptoKey</a> <strong>baseKey</strong>,
                          <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>derivedKeyType</strong>,
                          <span class=primitive>boolean</span> <strong>extractable</strong>,
-                         sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def>
+                         sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def id=operation-deriveBits-AlgorithmIdentifier-CryptoKey-unsigned long>
   Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>deriveBits</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                           <a href='CryptoKey.html'>CryptoKey</a> <strong>baseKey</strong>,
-                          <span class=primitive>unsigned long</span> <strong>length</strong>);</span><span class=def>
+                          <span class=primitive>unsigned long</span> <strong>length</strong>);</span><span class=def id=operation-importKey-KeyFormat-BufferSource-JsonWebKey-AlgorithmIdentifier-boolean-KeyUsage>
 
   Promise&lt;<a href='CryptoKey.html'>CryptoKey</a>&gt; <strong>importKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
                          (<a href='BufferSource.html'>BufferSource</a> or <a href='JsonWebKey.html'>JsonWebKey</a>) <strong>keyData</strong>,
                          <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>algorithm</strong>,
                          <span class=primitive>boolean</span> <strong>extractable</strong>,
-                         sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def>
-  Promise&lt;<span class=primitive>any</span>&gt; <strong>exportKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>, <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>);</span><span class=def>
+                         sequence&lt;<a href='KeyUsage.html'>KeyUsage</a>&gt; <strong>keyUsages</strong> );</span><span class=def id=operation-exportKey-KeyFormat-CryptoKey>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>exportKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>, <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>);</span><span class=def id=operation-wrapKey-KeyFormat-CryptoKey-CryptoKey-AlgorithmIdentifier>
 
   Promise&lt;<span class=primitive>any</span>&gt; <strong>wrapKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>,
                        <a href='CryptoKey.html'>CryptoKey</a> <strong>wrappingKey</strong>,
-                       <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>wrapAlgorithm</strong>);</span><span class=def>
+                       <a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>wrapAlgorithm</strong>);</span><span class=def id=operation-unwrapKey-KeyFormat-BufferSource-CryptoKey-AlgorithmIdentifier-AlgorithmIdentifier-boolean-KeyUsage>
   Promise&lt;<a href='CryptoKey.html'>CryptoKey</a>&gt; <strong>unwrapKey</strong>(<a href='KeyFormat.html'>KeyFormat</a> <strong>format</strong>,
                          <a href='BufferSource.html'>BufferSource</a> <strong>wrappedKey</strong>,
                          <a href='CryptoKey.html'>CryptoKey</a> <strong>unwrappingKey</strong>,
@@ -63,10 +63,18 @@ interface <strong>SubtleCrypto</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>SubtleCrypto</code></h3>
+
+  <ul>
+    <li><code><a href="Crypto.html">Crypto</a><a href=Crypto.html#attribute-subtle>.subtle</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Crypto.html">Crypto</a></li>
+    <li><code><a href="Crypto.html">Crypto</a></code></li>
 
   </ul>
 </section>

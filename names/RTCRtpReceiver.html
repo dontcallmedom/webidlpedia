@@ -11,20 +11,20 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCRtpReceiver</strong> {<span class=def>
-  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;</span><span class=def>
-  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def>
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def>
-  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def>
+interface <strong>RTCRtpReceiver</strong> {<span class=def id=attribute-track>
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;</span><span class=def id=attribute-transport>
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def id=operation-static>
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-getParameters>
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();</span><span class=def id=operation-getContributingSources>
+  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();</span><span class=def id=operation-getSynchronizationSources>
+  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def id=operation-getStats>
   Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-encoded-transform&#x2F;#attribute">WebRTC Encoded Transform</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>RTCRtpReceiver</strong> {<span class=def>
+partial interface <strong>RTCRtpReceiver</strong> {<span class=def id=attribute-transform>
     attribute <a href='RTCRtpTransform.html'>RTCRtpTransform</a>? <strong>transform</strong>;</span>
 };</span></code></pre></li>
 
@@ -32,25 +32,35 @@ partial interface <strong>RTCRtpReceiver</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCRtpReceiver</strong> {<span class=def>
-  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;</span><span class=def>
-  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def>
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def>
-  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def>
-  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();</span><span class=def>
+interface <strong>RTCRtpReceiver</strong> {<span class=def id=attribute-track>
+  readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>;</span><span class=def id=attribute-transport>
+  readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def id=operation-static>
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-getParameters>
+  <a href='RTCRtpReceiveParameters.html'>RTCRtpReceiveParameters</a> <strong>getParameters</strong>();</span><span class=def id=operation-getContributingSources>
+  sequence&lt;<a href='RTCRtpContributingSource.html'>RTCRtpContributingSource</a>&gt; <strong>getContributingSources</strong>();</span><span class=def id=operation-getSynchronizationSources>
+  sequence&lt;<a href='RTCRtpSynchronizationSource.html'>RTCRtpSynchronizationSource</a>&gt; <strong>getSynchronizationSources</strong>();</span><span class=def id=operation-getStats>
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>();</span><span class=def id=attribute-transform>
     attribute <a href='RTCRtpTransform.html'>RTCRtpTransform</a>? <strong>transform</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>RTCRtpReceiver</code></h3>
+
+  <ul>
+    <li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a><a href=RTCPeerConnection.html#operation-getReceivers>.getReceivers()</a></code></li>
+<li><code><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a><a href=RTCRtpTransceiver.html#attribute-receiver>.receiver</a></code></li>
+<li><code><a href="RTCTrackEvent.html">RTCTrackEvent</a><a href=RTCTrackEvent.html#attribute-receiver>.receiver</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li>
-<li><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></li>
-<li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li>
-<li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li>
+    <li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a></code></li>
+<li><code><a href="RTCRtpTransceiver.html">RTCRtpTransceiver</a></code></li>
+<li><code><a href="RTCTrackEvent.html">RTCTrackEvent</a></code></li>
+<li><code><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></code></li>
 
   </ul>
 </section>

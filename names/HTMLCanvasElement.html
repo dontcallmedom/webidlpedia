@@ -11,23 +11,23 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-width>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def id=operation-getContext-DOMString-any>
 
-  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span class=primitive>DOMString</span> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def>
+  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span class=primitive>DOMString</span> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def id=operation-toDataURL-DOMString-any>
 
-  <span class=primitive>USVString</span> <strong>toDataURL</strong>(optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def>
+  <span class=primitive>USVString</span> <strong>toDataURL</strong>(optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def id=operation-toBlob-BlobCallback-DOMString-any>
+  <span class=primitive>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def id=operation-transferControlToOffscreen>
   <a href='OffscreenCanvas.html'>OffscreenCanvas</a> <strong>transferControlToOffscreen</strong>();</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;#methods-0">Media Capture from DOM Elements</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLCanvasElement</strong> {<span class=def>
+partial interface <strong>HTMLCanvasElement</strong> {<span class=def id=operation-captureStream-double>
     <a href='MediaStream.html'>MediaStream</a> <strong>captureStream</strong> (optional <span class=primitive>double</span> <strong>frameRequestRate</strong>);</span>
 };</span></code></pre></li>
 
@@ -35,30 +35,43 @@ partial interface <strong>HTMLCanvasElement</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLCanvasElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-width>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def id=operation-getContext-DOMString-any>
 
-  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span class=primitive>DOMString</span> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def>
+  <a href='RenderingContext.html'>RenderingContext</a>? <strong>getContext</strong>(<span class=primitive>DOMString</span> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def id=operation-toDataURL-DOMString-any>
 
-  <span class=primitive>USVString</span> <strong>toDataURL</strong>(optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def>
-  <a href='OffscreenCanvas.html'>OffscreenCanvas</a> <strong>transferControlToOffscreen</strong>();</span><span class=def>
+  <span class=primitive>USVString</span> <strong>toDataURL</strong>(optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def id=operation-toBlob-BlobCallback-DOMString-any>
+  <span class=primitive>undefined</span> <strong>toBlob</strong>(<a href='BlobCallback.html'>BlobCallback</a> <strong>_callback</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong> &#x3D; &quot;image&#x2F;png&quot;, optional <span class=primitive>any</span> <strong>quality</strong>);</span><span class=def id=operation-transferControlToOffscreen>
+  <a href='OffscreenCanvas.html'>OffscreenCanvas</a> <strong>transferControlToOffscreen</strong>();</span><span class=def id=operation-captureStream-double>
     <a href='MediaStream.html'>MediaStream</a> <strong>captureStream</strong> (optional <span class=primitive>double</span> <strong>frameRequestRate</strong>);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLCanvasElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a><a href=HTMLCanvasElement.html#constructor>()</a></code></li>
+<li><code><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a><a href=CanvasRenderingContext2D.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a><a href=ImageBitmapRenderingContext.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a><a href=WebGLRenderingContextBase.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a><a href=CanvasCaptureMediaStreamTrack.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="GPUCanvasContext.html">GPUCanvasContext</a><a href=GPUCanvasContext.html#attribute-canvas>.canvas</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></li>
-<li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li>
-<li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li>
-<li><a href="GPUImageCopyExternalImage.html">GPUImageCopyExternalImage</a></li>
-<li><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></li>
-<li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li>
+    <li><code><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></code></li>
+<li><code><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></code></li>
+<li><code><a href="GPUCanvasContext.html">GPUCanvasContext</a></code></li>
+<li><code><a href="GPUImageCopyExternalImage.html">GPUImageCopyExternalImage</a></code></li>
+<li><code><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></code></li>
+<li><code><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></code></li>
 
   </ul>
 </section>

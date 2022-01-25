@@ -11,7 +11,7 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLBodyElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
+interface <strong>HTMLBodyElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
@@ -19,19 +19,19 @@ interface <strong>HTMLBodyElement</strong> : <a href='HTMLElement.html'>HTMLElem
 
 <a href='HTMLBodyElement.html'>HTMLBodyElement</a> includes <a href='WindowEventHandlers.html'>WindowEventHandlers</a>;</span><span class=def>
 
-partial interface <strong>HTMLBodyElement</strong> {<span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>link</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vLink</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>aLink</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def>
+partial interface <strong>HTMLBodyElement</strong> {<span class=def id=attribute-text>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-link>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>link</strong>;</span><span class=def id=attribute-vLink>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vLink</strong>;</span><span class=def id=attribute-aLink>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>aLink</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def id=attribute-background>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>background</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;#windoworientation-interface">Compatibility Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLBodyElement</strong> {<span class=def>
+partial interface <strong>HTMLBodyElement</strong> {<span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span>
 };</span></code></pre></li>
 
@@ -39,34 +39,42 @@ partial interface <strong>HTMLBodyElement</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLBodyElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>link</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vLink</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>aLink</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>background</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def>
-  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def>
+interface <strong>HTMLBodyElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-text>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-link>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>link</strong>;</span><span class=def id=attribute-vLink>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vLink</strong>;</span><span class=def id=attribute-aLink>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>aLink</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def id=attribute-background>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>background</strong>;</span><span class=def id=attribute-onafterprint>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def id=attribute-onbeforeprint>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def id=attribute-onbeforeunload>
+  attribute <a href='OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def id=attribute-onhashchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def id=attribute-onlanguagechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def id=attribute-onmessage>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def id=attribute-onoffline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def id=attribute-ononline>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def id=attribute-onpagehide>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def id=attribute-onpageshow>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def id=attribute-onpopstate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def id=attribute-onrejectionhandled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def id=attribute-onstorage>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def id=attribute-onunhandledrejection>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def id=attribute-onunload>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLBodyElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLBodyElement.html">HTMLBodyElement</a><a href=HTMLBodyElement.html#constructor>()</a></code></li>
+
+  </ul>
 </section>
 
   <section><h3>Referring specifications</h3>

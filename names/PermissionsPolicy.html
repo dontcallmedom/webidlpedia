@@ -9,21 +9,30 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webappsec-permissions-policy&#x2F;#permissionspolicy">Permissions Policy</a> defines <code>PermissionsPolicy</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>PermissionsPolicy</strong> {<span class=def>
-  <span class=primitive>boolean</span> <strong>allowsFeature</strong>(<span class=primitive>DOMString</span> <strong>feature</strong>, optional <span class=primitive>DOMString</span> <strong>origin</strong>);</span><span class=def>
-  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>features</strong>();</span><span class=def>
-  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>allowedFeatures</strong>();</span><span class=def>
+interface <strong>PermissionsPolicy</strong> {<span class=def id=operation-allowsFeature-DOMString-DOMString>
+  <span class=primitive>boolean</span> <strong>allowsFeature</strong>(<span class=primitive>DOMString</span> <strong>feature</strong>, optional <span class=primitive>DOMString</span> <strong>origin</strong>);</span><span class=def id=operation-features>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>features</strong>();</span><span class=def id=operation-allowedFeatures>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>allowedFeatures</strong>();</span><span class=def id=operation-getAllowlistForFeature-DOMString>
   sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getAllowlistForFeature</strong>(<span class=primitive>DOMString</span> <strong>feature</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PermissionsPolicy</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#attribute-permissionsPolicy>.permissionsPolicy</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#attribute-permissionsPolicy>.permissionsPolicy</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
-<li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></code></li>
 
   </ul>
 </section>

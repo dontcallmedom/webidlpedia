@@ -11,102 +11,159 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Node</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  const <span class=primitive>unsigned short</span> <strong>ELEMENT_NODE</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>ATTRIBUTE_NODE</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>TEXT_NODE</strong> &#x3D; 3;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>CDATA_SECTION_NODE</strong> &#x3D; 4;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>ENTITY_REFERENCE_NODE</strong> &#x3D; 5;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
-  </span>const <span class=primitive>unsigned short</span> <strong>ENTITY_NODE</strong> &#x3D; 6;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
-  </span>const <span class=primitive>unsigned short</span> <strong>PROCESSING_INSTRUCTION_NODE</strong> &#x3D; 7;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>COMMENT_NODE</strong> &#x3D; 8;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_NODE</strong> &#x3D; 9;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_TYPE_NODE</strong> &#x3D; 10;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_FRAGMENT_NODE</strong> &#x3D; 11;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>NOTATION_NODE</strong> &#x3D; 12;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
-  </span>readonly attribute <span class=primitive>unsigned short</span> <strong>nodeType</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>nodeName</strong>;</span><span class=def>
+interface <strong>Node</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=const-ELEMENT_NODE>
+  const <span class=primitive>unsigned short</span> <strong>ELEMENT_NODE</strong> &#x3D; 1;</span><span class=def id=const-ATTRIBUTE_NODE>
+  const <span class=primitive>unsigned short</span> <strong>ATTRIBUTE_NODE</strong> &#x3D; 2;</span><span class=def id=const-TEXT_NODE>
+  const <span class=primitive>unsigned short</span> <strong>TEXT_NODE</strong> &#x3D; 3;</span><span class=def id=const-CDATA_SECTION_NODE>
+  const <span class=primitive>unsigned short</span> <strong>CDATA_SECTION_NODE</strong> &#x3D; 4;</span><span class=def id=const-ENTITY_REFERENCE_NODE>
+  const <span class=primitive>unsigned short</span> <strong>ENTITY_REFERENCE_NODE</strong> &#x3D; 5;</span><span class=def id=const-ENTITY_NODE><span class="comment"> &#x2F;&#x2F; legacy
+  </span>const <span class=primitive>unsigned short</span> <strong>ENTITY_NODE</strong> &#x3D; 6;</span><span class=def id=const-PROCESSING_INSTRUCTION_NODE><span class="comment"> &#x2F;&#x2F; legacy
+  </span>const <span class=primitive>unsigned short</span> <strong>PROCESSING_INSTRUCTION_NODE</strong> &#x3D; 7;</span><span class=def id=const-COMMENT_NODE>
+  const <span class=primitive>unsigned short</span> <strong>COMMENT_NODE</strong> &#x3D; 8;</span><span class=def id=const-DOCUMENT_NODE>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_NODE</strong> &#x3D; 9;</span><span class=def id=const-DOCUMENT_TYPE_NODE>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_TYPE_NODE</strong> &#x3D; 10;</span><span class=def id=const-DOCUMENT_FRAGMENT_NODE>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_FRAGMENT_NODE</strong> &#x3D; 11;</span><span class=def id=const-NOTATION_NODE>
+  const <span class=primitive>unsigned short</span> <strong>NOTATION_NODE</strong> &#x3D; 12;</span><span class=def id=attribute-nodeType><span class="comment"> &#x2F;&#x2F; legacy
+  </span>readonly attribute <span class=primitive>unsigned short</span> <strong>nodeType</strong>;</span><span class=def id=attribute-nodeName>
+  readonly attribute <span class=primitive>DOMString</span> <strong>nodeName</strong>;</span><span class=def id=attribute-baseURI>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>baseURI</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>baseURI</strong>;</span><span class=def id=attribute-isConnected>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>isConnected</strong>;</span><span class=def>
-  readonly attribute <a href='Document.html'>Document</a>? <strong>ownerDocument</strong>;</span><span class=def>
-  <a href='Node.html'>Node</a> <strong>getRootNode</strong>(optional <a href='GetRootNodeOptions.html'>GetRootNodeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='Node.html'>Node</a>? <strong>parentNode</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>parentElement</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>hasChildNodes</strong>();</span><span class=def>
-  [SameObject] readonly attribute <a href='NodeList.html'>NodeList</a> <strong>childNodes</strong>;</span><span class=def>
-  readonly attribute <a href='Node.html'>Node</a>? <strong>firstChild</strong>;</span><span class=def>
-  readonly attribute <a href='Node.html'>Node</a>? <strong>lastChild</strong>;</span><span class=def>
-  readonly attribute <a href='Node.html'>Node</a>? <strong>previousSibling</strong>;</span><span class=def>
-  readonly attribute <a href='Node.html'>Node</a>? <strong>nextSibling</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>isConnected</strong>;</span><span class=def id=attribute-ownerDocument>
+  readonly attribute <a href='Document.html'>Document</a>? <strong>ownerDocument</strong>;</span><span class=def id=operation-getRootNode-GetRootNodeOptions>
+  <a href='Node.html'>Node</a> <strong>getRootNode</strong>(optional <a href='GetRootNodeOptions.html'>GetRootNodeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-parentNode>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>parentNode</strong>;</span><span class=def id=attribute-parentElement>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>parentElement</strong>;</span><span class=def id=operation-hasChildNodes>
+  <span class=primitive>boolean</span> <strong>hasChildNodes</strong>();</span><span class=def id=attribute-childNodes>
+  [SameObject] readonly attribute <a href='NodeList.html'>NodeList</a> <strong>childNodes</strong>;</span><span class=def id=attribute-firstChild>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>firstChild</strong>;</span><span class=def id=attribute-lastChild>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>lastChild</strong>;</span><span class=def id=attribute-previousSibling>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>previousSibling</strong>;</span><span class=def id=attribute-nextSibling>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>nextSibling</strong>;</span><span class=def id=attribute-nodeValue>
 
-  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>nodeValue</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>textContent</strong>;</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>normalize</strong>();</span><span class=def>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>nodeValue</strong>;</span><span class=def id=attribute-textContent>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>textContent</strong>;</span><span class=def id=operation-normalize>
+  [CEReactions] <span class=primitive>undefined</span> <strong>normalize</strong>();</span><span class=def id=operation-cloneNode-boolean>
 
-  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>cloneNode</strong>(optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isEqualNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isSameNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of &#x3D;&#x3D;&#x3D;
+  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>cloneNode</strong>(optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def id=operation-isEqualNode-Node>
+  <span class=primitive>boolean</span> <strong>isEqualNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def id=operation-isSameNode-Node>
+  <span class=primitive>boolean</span> <strong>isSameNode</strong>(<a href='Node.html'>Node</a>? <strong>otherNode</strong>);</span><span class=def id=const-DOCUMENT_POSITION_DISCONNECTED><span class="comment"> &#x2F;&#x2F; legacy alias of &#x3D;&#x3D;&#x3D;
 
-  </span>const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_DISCONNECTED</strong> &#x3D; 0x01;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_PRECEDING</strong> &#x3D; 0x02;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_FOLLOWING</strong> &#x3D; 0x04;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINS</strong> &#x3D; 0x08;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINED_BY</strong> &#x3D; 0x10;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</strong> &#x3D; 0x20;</span><span class=def>
-  <span class=primitive>unsigned short</span> <strong>compareDocumentPosition</strong>(<a href='Node.html'>Node</a> <strong>other</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>contains</strong>(<a href='Node.html'>Node</a>? <strong>other</strong>);</span><span class=def>
+  </span>const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_DISCONNECTED</strong> &#x3D; 0x01;</span><span class=def id=const-DOCUMENT_POSITION_PRECEDING>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_PRECEDING</strong> &#x3D; 0x02;</span><span class=def id=const-DOCUMENT_POSITION_FOLLOWING>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_FOLLOWING</strong> &#x3D; 0x04;</span><span class=def id=const-DOCUMENT_POSITION_CONTAINS>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINS</strong> &#x3D; 0x08;</span><span class=def id=const-DOCUMENT_POSITION_CONTAINED_BY>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_CONTAINED_BY</strong> &#x3D; 0x10;</span><span class=def id=const-DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC>
+  const <span class=primitive>unsigned short</span> <strong>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</strong> &#x3D; 0x20;</span><span class=def id=operation-compareDocumentPosition-Node>
+  <span class=primitive>unsigned short</span> <strong>compareDocumentPosition</strong>(<a href='Node.html'>Node</a> <strong>other</strong>);</span><span class=def id=operation-contains-Node>
+  <span class=primitive>boolean</span> <strong>contains</strong>(<a href='Node.html'>Node</a>? <strong>other</strong>);</span><span class=def id=operation-lookupPrefix-DOMString>
 
-  <span class=primitive>DOMString</span>? <strong>lookupPrefix</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def>
-  <span class=primitive>DOMString</span>? <strong>lookupNamespaceURI</strong>(<span class=primitive>DOMString</span>? <strong>prefix</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isDefaultNamespace</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def>
+  <span class=primitive>DOMString</span>? <strong>lookupPrefix</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def id=operation-lookupNamespaceURI-DOMString>
+  <span class=primitive>DOMString</span>? <strong>lookupNamespaceURI</strong>(<span class=primitive>DOMString</span>? <strong>prefix</strong>);</span><span class=def id=operation-isDefaultNamespace-DOMString>
+  <span class=primitive>boolean</span> <strong>isDefaultNamespace</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>);</span><span class=def id=operation-insertBefore-Node-Node>
 
-  [CEReactions] <a href='Node.html'>Node</a> <strong>insertBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a>? <strong>child</strong>);</span><span class=def>
-  [CEReactions] <a href='Node.html'>Node</a> <strong>appendChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def>
-  [CEReactions] <a href='Node.html'>Node</a> <strong>replaceChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a> <strong>child</strong>);</span><span class=def>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>insertBefore</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a>? <strong>child</strong>);</span><span class=def id=operation-appendChild-Node>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>appendChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def id=operation-replaceChild-Node-Node>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>replaceChild</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, <a href='Node.html'>Node</a> <strong>child</strong>);</span><span class=def id=operation-removeChild-Node>
   [CEReactions] <a href='Node.html'>Node</a> <strong>removeChild</strong>(<a href='Node.html'>Node</a> <strong>child</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Node</code></h3>
+
+  <ul class=long>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#operation-importNode-Node-boolean>.importNode()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-adoptNode-Node>.adoptNode()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getSpatialNavigationContainer>.getSpatialNavigationContainer()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-focusableAreas-FocusableAreasOption>.focusableAreas()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>.spatialNavigationSearch()</a></code></li>
+<li><code><a href="NodeList.html">NodeList</a><a href=NodeList.html#operation-getter>.item()</a></code></li>
+<li><code><a href="MutationRecord.html">MutationRecord</a><a href=MutationRecord.html#attribute-target>.target</a></code></li>
+<li><code><a href="MutationRecord.html">MutationRecord</a><a href=MutationRecord.html#attribute-previousSibling>.previousSibling</a></code></li>
+<li><code><a href="MutationRecord.html">MutationRecord</a><a href=MutationRecord.html#attribute-nextSibling>.nextSibling</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-getRootNode-GetRootNodeOptions>.getRootNode()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-parentNode>.parentNode</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-firstChild>.firstChild</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-lastChild>.lastChild</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-previousSibling>.previousSibling</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-nextSibling>.nextSibling</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-cloneNode-boolean>.cloneNode()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-insertBefore-Node-Node>.insertBefore()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-appendChild-Node>.appendChild()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-replaceChild-Node-Node>.replaceChild()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#operation-removeChild-Node>.removeChild()</a></code></li>
+<li><code><a href="AbstractRange.html">AbstractRange</a><a href=AbstractRange.html#attribute-startContainer>.startContainer</a></code></li>
+<li><code><a href="AbstractRange.html">AbstractRange</a><a href=AbstractRange.html#attribute-endContainer>.endContainer</a></code></li>
+<li><code><a href="Range.html">Range</a><a href=Range.html#attribute-commonAncestorContainer>.commonAncestorContainer</a></code></li>
+<li><code><a href="NodeIterator.html">NodeIterator</a><a href=NodeIterator.html#attribute-root>.root</a></code></li>
+<li><code><a href="NodeIterator.html">NodeIterator</a><a href=NodeIterator.html#attribute-referenceNode>.referenceNode</a></code></li>
+<li><code><a href="NodeIterator.html">NodeIterator</a><a href=NodeIterator.html#operation-nextNode>.nextNode()</a></code></li>
+<li><code><a href="NodeIterator.html">NodeIterator</a><a href=NodeIterator.html#operation-previousNode>.previousNode()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#attribute-root>.root</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#attribute-currentNode>.currentNode</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-parentNode>.parentNode()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-firstChild>.firstChild()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-lastChild>.lastChild()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-previousSibling>.previousSibling()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-nextSibling>.nextSibling()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-previousNode>.previousNode()</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a><a href=TreeWalker.html#operation-nextNode>.nextNode()</a></code></li>
+<li><code><a href="XPathResult.html">XPathResult</a><a href=XPathResult.html#attribute-singleNodeValue>.singleNodeValue</a></code></li>
+<li><code><a href="XPathResult.html">XPathResult</a><a href=XPathResult.html#operation-iterateNext>.iterateNext()</a></code></li>
+<li><code><a href="XPathResult.html">XPathResult</a><a href=XPathResult.html#operation-snapshotItem-unsigned long>.snapshotItem()</a></code></li>
+<li><code><a href="HTMLSlotElement.html">HTMLSlotElement</a><a href=HTMLSlotElement.html#operation-assignedNodes-AssignedNodesOptions>.assignedNodes()</a></code></li>
+<li><code><a href="PerformanceEventTiming.html">PerformanceEventTiming</a><a href=PerformanceEventTiming.html#attribute-target>.target</a></code></li>
+<li><code><a href="LayoutShiftAttribution.html">LayoutShiftAttribution</a><a href=LayoutShiftAttribution.html#attribute-node>.node</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getSpatialNavigationContainer>.getSpatialNavigationContainer()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-focusableAreas-FocusableAreasOption>.focusableAreas()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>.spatialNavigationSearch()</a></code></li>
+<li><code><a href="NamedFlow.html">NamedFlow</a><a href=NamedFlow.html#operation-getContent>.getContent()</a></code></li>
+<li><code><a href="CaretPosition.html">CaretPosition</a><a href=CaretPosition.html#attribute-offsetNode>.offsetNode</a></code></li>
+<li><code><a href="Selection.html">Selection</a><a href=Selection.html#attribute-anchorNode>.anchorNode</a></code></li>
+<li><code><a href="Selection.html">Selection</a><a href=Selection.html#attribute-focusNode>.focusNode</a></code></li>
+<li><code><a href="MutationEvent.html">MutationEvent</a><a href=MutationEvent.html#attribute-relatedNode>.relatedNode</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="AbstractRange.html">AbstractRange</a></li>
-<li><a href="Attr.html">Attr</a></li>
-<li><a href="CaretPosition.html">CaretPosition</a></li>
-<li><a href="CharacterData.html">CharacterData</a></li>
-<li><a href="ChildNode.html">ChildNode</a></li>
-<li><a href="CustomElementRegistry.html">CustomElementRegistry</a></li>
-<li><a href="Document.html">Document</a></li>
-<li><a href="DocumentFragment.html">DocumentFragment</a></li>
-<li><a href="DocumentType.html">DocumentType</a></li>
-<li><a href="Element.html">Element</a></li>
-<li><a href="Element.html">Element</a></li>
-<li><a href="HTMLSlotElement.html">HTMLSlotElement</a></li>
-<li><a href="LayoutShiftAttribution.html">LayoutShiftAttribution</a></li>
-<li><a href="MutationEvent.html">MutationEvent</a></li>
-<li><a href="MutationObserver.html">MutationObserver</a></li>
-<li><a href="MutationRecord.html">MutationRecord</a></li>
-<li><a href="NamedFlow.html">NamedFlow</a></li>
-<li><a href="Node.html">Node</a></li>
-<li><a href="NodeFilter.html">NodeFilter</a></li>
-<li><a href="NodeIterator.html">NodeIterator</a></li>
-<li><a href="NodeList.html">NodeList</a></li>
-<li><a href="ParentNode.html">ParentNode</a></li>
-<li><a href="PerformanceEventTiming.html">PerformanceEventTiming</a></li>
-<li><a href="Range.html">Range</a></li>
-<li><a href="Selection.html">Selection</a></li>
-<li><a href="SpatialNavigationSearchOptions.html">SpatialNavigationSearchOptions</a></li>
-<li><a href="StaticRangeInit.html">StaticRangeInit</a></li>
-<li><a href="TreeWalker.html">TreeWalker</a></li>
-<li><a href="XMLSerializer.html">XMLSerializer</a></li>
-<li><a href="XPathEvaluatorBase.html">XPathEvaluatorBase</a></li>
-<li><a href="XPathExpression.html">XPathExpression</a></li>
-<li><a href="XPathResult.html">XPathResult</a></li>
-<li><a href="XSLTProcessor.html">XSLTProcessor</a></li>
+    <li><code><a href="AbstractRange.html">AbstractRange</a></code></li>
+<li><code><a href="Attr.html">Attr</a></code></li>
+<li><code><a href="CaretPosition.html">CaretPosition</a></code></li>
+<li><code><a href="CharacterData.html">CharacterData</a></code></li>
+<li><code><a href="ChildNode.html">ChildNode</a></code></li>
+<li><code><a href="CustomElementRegistry.html">CustomElementRegistry</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="DocumentFragment.html">DocumentFragment</a></code></li>
+<li><code><a href="DocumentType.html">DocumentType</a></code></li>
+<li><code><a href="Element.html">Element</a></code></li>
+<li><code><a href="Element.html">Element</a></code></li>
+<li><code><a href="HTMLSlotElement.html">HTMLSlotElement</a></code></li>
+<li><code><a href="LayoutShiftAttribution.html">LayoutShiftAttribution</a></code></li>
+<li><code><a href="MutationEvent.html">MutationEvent</a></code></li>
+<li><code><a href="MutationObserver.html">MutationObserver</a></code></li>
+<li><code><a href="MutationRecord.html">MutationRecord</a></code></li>
+<li><code><a href="NamedFlow.html">NamedFlow</a></code></li>
+<li><code><a href="Node.html">Node</a></code></li>
+<li><code><a href="NodeFilter.html">NodeFilter</a></code></li>
+<li><code><a href="NodeIterator.html">NodeIterator</a></code></li>
+<li><code><a href="NodeList.html">NodeList</a></code></li>
+<li><code><a href="ParentNode.html">ParentNode</a></code></li>
+<li><code><a href="PerformanceEventTiming.html">PerformanceEventTiming</a></code></li>
+<li><code><a href="Range.html">Range</a></code></li>
+<li><code><a href="Selection.html">Selection</a></code></li>
+<li><code><a href="SpatialNavigationSearchOptions.html">SpatialNavigationSearchOptions</a></code></li>
+<li><code><a href="StaticRangeInit.html">StaticRangeInit</a></code></li>
+<li><code><a href="TreeWalker.html">TreeWalker</a></code></li>
+<li><code><a href="XMLSerializer.html">XMLSerializer</a></code></li>
+<li><code><a href="XPathEvaluatorBase.html">XPathEvaluatorBase</a></code></li>
+<li><code><a href="XPathExpression.html">XPathExpression</a></code></li>
+<li><code><a href="XPathResult.html">XPathResult</a></code></li>
+<li><code><a href="XSLTProcessor.html">XSLTProcessor</a></code></li>
 
   </ul>
 </section>

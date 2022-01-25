@@ -11,66 +11,66 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Global&#x3D;(<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>), Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>]
-interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def>
-  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;</span><span class=def>
+interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def id=attribute-clients>
+  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;</span><span class=def id=attribute-registration>
+  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;</span><span class=def id=attribute-serviceWorker>
+  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;</span><span class=def id=operation-skipWaiting>
 
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>skipWaiting</strong>();</span><span class=def>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>skipWaiting</strong>();</span><span class=def id=attribute-oninstall>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;</span><span class=def id=attribute-onactivate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;</span><span class=def id=attribute-onfetch>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;</span><span class=def id=attribute-onmessage>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;#service-worker-api">Notifications API Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;</span><span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onnotificationclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;</span><span class=def id=attribute-onnotificationclose>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclose</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;#extensions-to-service-worker-global">Background Fetch</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;</span><span class=def>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;#extensions-to-service-worker-global">Background Fetch</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onbackgroundfetchsuccess>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;</span><span class=def id=attribute-onbackgroundfetchfail>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;</span><span class=def id=attribute-onbackgroundfetchabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;</span><span class=def id=attribute-onbackgroundfetchclick>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;#sync-event">Web Background Synchronization</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onsync>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;#extensions-to-service-worker-global">Content Index</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;#extensions-to-service-worker-global">Content Index</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-oncontentdelete>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#ServiceWorkerGlobalScope">Cookie Store API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
-  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-cookieStore>
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=attribute-oncookiechange>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;#extensions-to-serviceworkerglobalscope">Web Periodic Background Synchronization</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;#extensions-to-serviceworkerglobalscope">Web Periodic Background Synchronization</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onperiodicsync>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;#oncanmakepayment-attribute">Payment Handler API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-oncanmakepayment>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span>
 };</span><span class=def>
 
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onpaymentrequest>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;#extensions-to-the-serviceworkerglobalscope-interface">Push API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>, SecureContext]
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def>
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onpush>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def id=attribute-onpushsubscriptionchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
 };</span></code></pre></li>
 
@@ -78,37 +78,38 @@ partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Global&#x3D;(<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>), Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>]
-interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def>
-  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;</span><span class=def>
+interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def id=attribute-clients>
+  [SameObject] readonly attribute <a href='Clients.html'>Clients</a> <strong>clients</strong>;</span><span class=def id=attribute-registration>
+  [SameObject] readonly attribute <a href='ServiceWorkerRegistration.html'>ServiceWorkerRegistration</a> <strong>registration</strong>;</span><span class=def id=attribute-serviceWorker>
+  [SameObject] readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a> <strong>serviceWorker</strong>;</span><span class=def id=operation-skipWaiting>
 
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>skipWaiting</strong>();</span><span class=def>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>skipWaiting</strong>();</span><span class=def id=attribute-oninstall>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninstall</strong>;</span><span class=def id=attribute-onactivate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onactivate</strong>;</span><span class=def id=attribute-onfetch>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfetch</strong>;</span><span class=def id=attribute-onmessage>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclose</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def id=attribute-onnotificationclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclick</strong>;</span><span class=def id=attribute-onnotificationclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnotificationclose</strong>;</span><span class=def id=attribute-onbackgroundfetchsuccess>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchsuccess</strong>;</span><span class=def id=attribute-onbackgroundfetchfail>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchfail</strong>;</span><span class=def id=attribute-onbackgroundfetchabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchabort</strong>;</span><span class=def id=attribute-onbackgroundfetchclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;</span><span class=def id=attribute-onsync>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;</span><span class=def id=attribute-oncontentdelete>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;</span><span class=def id=attribute-cookieStore>
+  [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=attribute-oncookiechange>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncookiechange</strong>;</span><span class=def id=attribute-onperiodicsync>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span><span class=def id=attribute-oncanmakepayment>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span><span class=def id=attribute-onpaymentrequest>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span><span class=def id=attribute-onpush>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def id=attribute-onpushsubscriptionchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
 };</span></code></pre></details>
 </section>
+
 
   <section><h3>Referring specifications</h3>
   <ul>

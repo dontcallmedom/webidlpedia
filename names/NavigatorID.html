@@ -10,45 +10,46 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>NavigatorID</code></p>
 <pre class=webidl><code><span class=def>
 
-interface mixin <strong>NavigatorID</strong> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>appCodeName</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appName</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appVersion</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>platform</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>product</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
-  </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>productSub</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>userAgent</strong>;</span><span class=def>
-  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendor</strong>;</span><span class=def>
+interface mixin <strong>NavigatorID</strong> {<span class=def id=attribute-appCodeName>
+  readonly attribute <span class=primitive>DOMString</span> <strong>appCodeName</strong>;</span><span class=def id=attribute-appName><span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appName</strong>;</span><span class=def id=attribute-appVersion><span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appVersion</strong>;</span><span class=def id=attribute-platform>
+  readonly attribute <span class=primitive>DOMString</span> <strong>platform</strong>;</span><span class=def id=attribute-product>
+  readonly attribute <span class=primitive>DOMString</span> <strong>product</strong>;</span><span class=def id=attribute-productSub><span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
+  </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>productSub</strong>;</span><span class=def id=attribute-userAgent>
+  readonly attribute <span class=primitive>DOMString</span> <strong>userAgent</strong>;</span><span class=def id=attribute-vendor>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendor</strong>;</span><span class=def id=attribute-vendorSub>
   [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendorSub</strong>;</span><span class="comment"> &#x2F;&#x2F; constant &quot;&quot;
 </span>};</span><span class=def>
 
-partial interface mixin <strong>NavigatorID</strong> {<span class=def>
-  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <span class=primitive>boolean</span> <strong>taintEnabled</strong>();</span><span class=def><span class="comment"> &#x2F;&#x2F; constant false
+partial interface mixin <strong>NavigatorID</strong> {<span class=def id=operation-taintEnabled>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <span class=primitive>boolean</span> <strong>taintEnabled</strong>();</span><span class=def id=attribute-oscpu><span class="comment"> &#x2F;&#x2F; constant false
   </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>oscpu</strong>;</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
-interface mixin <strong>NavigatorID</strong> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>appCodeName</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appName</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appVersion</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>platform</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>product</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
-  </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>productSub</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>userAgent</strong>;</span><span class=def>
-  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendor</strong>;</span><span class=def>
-  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendorSub</strong>;</span><span class=def>
-  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <span class=primitive>boolean</span> <strong>taintEnabled</strong>();</span><span class=def><span class="comment"> &#x2F;&#x2F; constant false
+interface mixin <strong>NavigatorID</strong> {<span class=def id=attribute-appCodeName>
+  readonly attribute <span class=primitive>DOMString</span> <strong>appCodeName</strong>;</span><span class=def id=attribute-appName><span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appName</strong>;</span><span class=def id=attribute-appVersion><span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>appVersion</strong>;</span><span class=def id=attribute-platform>
+  readonly attribute <span class=primitive>DOMString</span> <strong>platform</strong>;</span><span class=def id=attribute-product>
+  readonly attribute <span class=primitive>DOMString</span> <strong>product</strong>;</span><span class=def id=attribute-productSub><span class="comment"> &#x2F;&#x2F; constant &quot;Gecko&quot;
+  </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>productSub</strong>;</span><span class=def id=attribute-userAgent>
+  readonly attribute <span class=primitive>DOMString</span> <strong>userAgent</strong>;</span><span class=def id=attribute-vendor>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendor</strong>;</span><span class=def id=attribute-vendorSub>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>vendorSub</strong>;</span><span class=def id=operation-taintEnabled>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <span class=primitive>boolean</span> <strong>taintEnabled</strong>();</span><span class=def id=attribute-oscpu><span class="comment"> &#x2F;&#x2F; constant false
   </span>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <span class=primitive>DOMString</span> <strong>oscpu</strong>;</span><span class="comment"> &#x2F;&#x2F; constant &quot;&quot;
 </span>};</span></code></pre></details>
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Navigator.html">Navigator</a></li>
-<li><a href="WorkerNavigator.html">WorkerNavigator</a></li>
+    <li><code><a href="Navigator.html">Navigator</a></code></li>
+<li><code><a href="WorkerNavigator.html">WorkerNavigator</a></code></li>
 
   </ul>
 </section>

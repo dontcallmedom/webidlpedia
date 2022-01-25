@@ -11,9 +11,9 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-    <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def>
+interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-now>
+    <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();</span><span class=def id=attribute-timeOrigin>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def id=operation-toJSON>
     [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
@@ -21,42 +21,42 @@ interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget<
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;event-timing&#x2F;#sec-extensions">Event Timing API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-partial interface <strong>Performance</strong> {<span class=def>
-    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def>
+partial interface <strong>Performance</strong> {<span class=def id=attribute-eventCounts>
+    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def id=attribute-interactionCounts>
     [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Performance</strong> {<span class=def>
+partial interface <strong>Performance</strong> {<span class=def id=operation-measureUserAgentSpecificMemory>
   [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;navigation-timing-2&#x2F;#extensions-to-the-performance-interface">Navigation Timing Level 2</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-partial interface <strong>Performance</strong> {<span class=def>
+partial interface <strong>Performance</strong> {<span class=def id=attribute-timing>
   [SameObject]
-  readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def>
+  readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def id=attribute-navigation>
   [SameObject]
   readonly attribute <a href='PerformanceNavigation.html'>PerformanceNavigation</a> <strong>navigation</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;performance-timeline&#x2F;#getentries-method">Performance Timeline Level 2</a><pre class=webidl><code><span class=def>partial interface <strong>Performance</strong> {<span class=def>
-  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntries</strong> ();</span><span class=def>
-  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByType</strong> (<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;performance-timeline&#x2F;#getentries-method">Performance Timeline Level 2</a><pre class=webidl><code><span class=def>partial interface <strong>Performance</strong> {<span class=def id=operation-getEntries>
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntries</strong> ();</span><span class=def id=operation-getEntriesByType-DOMString>
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByType</strong> (<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=operation-getEntriesByName-DOMString-DOMString>
   <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByName</strong> (<span class=primitive>DOMString</span> <strong>name</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;resource-timing-2&#x2F;#sec-extensions-performance-interface">Resource Timing Level 2</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Performance</strong> {<span class=def>
-  <span class=primitive>undefined</span> <strong>clearResourceTimings</strong> ();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setResourceTimingBufferSize</strong> (<span class=primitive>unsigned long</span> <strong>maxSize</strong>);</span><span class=def>
+partial interface <strong>Performance</strong> {<span class=def id=operation-clearResourceTimings>
+  <span class=primitive>undefined</span> <strong>clearResourceTimings</strong> ();</span><span class=def id=operation-setResourceTimingBufferSize-unsigned long>
+  <span class=primitive>undefined</span> <strong>setResourceTimingBufferSize</strong> (<span class=primitive>unsigned long</span> <strong>maxSize</strong>);</span><span class=def id=attribute-onresourcetimingbufferfull>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresourcetimingbufferfull</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;user-timing&#x2F;#mark-method">User Timing Level 3</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Performance</strong> {<span class=def>
-    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span class=primitive>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>clearMarks</strong>(optional <span class=primitive>DOMString</span> <strong>markName</strong>);</span><span class=def>
-    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span class=primitive>DOMString</span> <strong>measureName</strong>, optional (<span class=primitive>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> &#x3D; {}, optional <span class=primitive>DOMString</span> <strong>endMark</strong>);</span><span class=def>
+partial interface <strong>Performance</strong> {<span class=def id=operation-mark-DOMString-PerformanceMarkOptions>
+    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span class=primitive>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> &#x3D; {});</span><span class=def id=operation-clearMarks-DOMString>
+    <span class=primitive>undefined</span> <strong>clearMarks</strong>(optional <span class=primitive>DOMString</span> <strong>markName</strong>);</span><span class=def id=operation-measure-DOMString-DOMString-PerformanceMeasureOptions-DOMString>
+    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span class=primitive>DOMString</span> <strong>measureName</strong>, optional (<span class=primitive>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> &#x3D; {}, optional <span class=primitive>DOMString</span> <strong>endMark</strong>);</span><span class=def id=operation-clearMeasures-DOMString>
     <span class=primitive>undefined</span> <strong>clearMeasures</strong>(optional <span class=primitive>DOMString</span> <strong>measureName</strong>);</span>
 };</span></code></pre></li>
 
@@ -64,34 +64,42 @@ partial interface <strong>Performance</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-    <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def>
-    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
-    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def>
-    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span><span class=def>
-  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span><span class=def>
+interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-now>
+    <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();</span><span class=def id=attribute-timeOrigin>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def id=operation-toJSON>
+    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def id=attribute-eventCounts>
+    [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def id=attribute-interactionCounts>
+    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span><span class=def id=operation-measureUserAgentSpecificMemory>
+  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span><span class=def id=attribute-timing>
   [SameObject]
-  readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def>
+  readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def id=attribute-navigation>
   [SameObject]
-  readonly attribute <a href='PerformanceNavigation.html'>PerformanceNavigation</a> <strong>navigation</strong>;</span><span class=def>
-  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntries</strong> ();</span><span class=def>
-  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByType</strong> (<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def>
-  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByName</strong> (<span class=primitive>DOMString</span> <strong>name</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearResourceTimings</strong> ();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setResourceTimingBufferSize</strong> (<span class=primitive>unsigned long</span> <strong>maxSize</strong>);</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresourcetimingbufferfull</strong>;</span><span class=def>
-    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span class=primitive>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>clearMarks</strong>(optional <span class=primitive>DOMString</span> <strong>markName</strong>);</span><span class=def>
-    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span class=primitive>DOMString</span> <strong>measureName</strong>, optional (<span class=primitive>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> &#x3D; {}, optional <span class=primitive>DOMString</span> <strong>endMark</strong>);</span><span class=def>
+  readonly attribute <a href='PerformanceNavigation.html'>PerformanceNavigation</a> <strong>navigation</strong>;</span><span class=def id=operation-getEntries>
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntries</strong> ();</span><span class=def id=operation-getEntriesByType-DOMString>
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByType</strong> (<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=operation-getEntriesByName-DOMString-DOMString>
+  <a href='PerformanceEntryList.html'>PerformanceEntryList</a> <strong>getEntriesByName</strong> (<span class=primitive>DOMString</span> <strong>name</strong>, optional <span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=operation-clearResourceTimings>
+  <span class=primitive>undefined</span> <strong>clearResourceTimings</strong> ();</span><span class=def id=operation-setResourceTimingBufferSize-unsigned long>
+  <span class=primitive>undefined</span> <strong>setResourceTimingBufferSize</strong> (<span class=primitive>unsigned long</span> <strong>maxSize</strong>);</span><span class=def id=attribute-onresourcetimingbufferfull>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresourcetimingbufferfull</strong>;</span><span class=def id=operation-mark-DOMString-PerformanceMarkOptions>
+    <a href='PerformanceMark.html'>PerformanceMark</a> <strong>mark</strong>(<span class=primitive>DOMString</span> <strong>markName</strong>, optional <a href='PerformanceMarkOptions.html'>PerformanceMarkOptions</a> <strong>markOptions</strong> &#x3D; {});</span><span class=def id=operation-clearMarks-DOMString>
+    <span class=primitive>undefined</span> <strong>clearMarks</strong>(optional <span class=primitive>DOMString</span> <strong>markName</strong>);</span><span class=def id=operation-measure-DOMString-DOMString-PerformanceMeasureOptions-DOMString>
+    <a href='PerformanceMeasure.html'>PerformanceMeasure</a> <strong>measure</strong>(<span class=primitive>DOMString</span> <strong>measureName</strong>, optional (<span class=primitive>DOMString</span> or <a href='PerformanceMeasureOptions.html'>PerformanceMeasureOptions</a>) <strong>startOrMeasureOptions</strong> &#x3D; {}, optional <span class=primitive>DOMString</span> <strong>endMark</strong>);</span><span class=def id=operation-clearMeasures-DOMString>
     <span class=primitive>undefined</span> <strong>clearMeasures</strong>(optional <span class=primitive>DOMString</span> <strong>measureName</strong>);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Performance</code></h3>
+
+  <ul>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a><a href=WindowOrWorkerGlobalScope.html#attribute-performance>.performance</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

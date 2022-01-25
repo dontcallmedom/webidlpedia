@@ -9,11 +9,11 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;types.html#InterfaceSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGElement</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<span class=def>
+interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<span class=def id=attribute-className>
 
-  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>className</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>className</strong>;</span><span class=def id=attribute-ownerSVGElement>
 
-  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>ownerSVGElement</strong>;</span><span class=def>
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>ownerSVGElement</strong>;</span><span class=def id=attribute-viewportElement>
   readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>viewportElement</strong>;</span>
 };</span><span class=def>
 
@@ -29,141 +29,153 @@ interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<spa
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<span class=def>
+interface <strong>SVGElement</strong> : <a href='Element.html'>Element</a> {<span class=def id=attribute-className>
 
-  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>className</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>className</strong>;</span><span class=def id=attribute-ownerSVGElement>
 
-  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>ownerSVGElement</strong>;</span><span class=def>
-  readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>viewportElement</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>correspondingElement</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGUseElement.html'>SVGUseElement</a>? <strong>correspondingUseElement</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>nonce</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; intentionally no [CEReactions]
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>ownerSVGElement</strong>;</span><span class=def id=attribute-viewportElement>
+  readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>viewportElement</strong>;</span><span class=def id=attribute-onabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def id=attribute-onauxclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def id=attribute-onblur>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def id=attribute-oncancel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-oncanplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def id=attribute-oncanplaythrough>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def id=attribute-onchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def id=attribute-onclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-oncontextlost>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextmenu>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def id=attribute-oncontextrestored>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncuechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-ondblclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def id=attribute-ondrag>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def id=attribute-ondragend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def id=attribute-ondragenter>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def id=attribute-ondragleave>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def id=attribute-ondragover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def id=attribute-ondragstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def id=attribute-ondrop>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def id=attribute-ondurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def id=attribute-onemptied>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onfocus>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def id=attribute-onformdata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def id=attribute-oninput>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def id=attribute-oninvalid>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def id=attribute-onkeydown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def id=attribute-onkeypress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def id=attribute-onkeyup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def id=attribute-onload>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def id=attribute-onloadeddata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def id=attribute-onloadedmetadata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def id=attribute-onloadstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def id=attribute-onmousedown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def id=attribute-onmouseenter>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def id=attribute-onmouseleave>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def id=attribute-onmousemove>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def id=attribute-onmouseout>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def id=attribute-onmouseover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def id=attribute-onmouseup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpause>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def id=attribute-onplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def id=attribute-onplaying>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def id=attribute-onprogress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def id=attribute-onratechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def id=attribute-onreset>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def id=attribute-onresize>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def id=attribute-onscroll>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def id=attribute-onsecuritypolicyviolation>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def id=attribute-onseeked>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def id=attribute-onseeking>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def id=attribute-onselect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def id=attribute-onslotchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=attribute-onstalled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def id=attribute-onsubmit>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def id=attribute-onsuspend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def id=attribute-ontimeupdate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def id=attribute-ontoggle>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def id=attribute-onvolumechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def id=attribute-onwaiting>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def id=attribute-onwebkitanimationend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def id=attribute-onwebkitanimationiteration>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-oncopy>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncut>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-onpaste>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=attribute-correspondingElement>
+  [SameObject] readonly attribute <a href='SVGElement.html'>SVGElement</a>? <strong>correspondingElement</strong>;</span><span class=def id=attribute-correspondingUseElement>
+  [SameObject] readonly attribute <a href='SVGUseElement.html'>SVGUseElement</a>? <strong>correspondingUseElement</strong>;</span><span class=def id=attribute-dataset>
+  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;</span><span class=def id=attribute-nonce>
+  attribute <span class=primitive>DOMString</span> <strong>nonce</strong>;</span><span class=def id=attribute-autofocus><span class="comment"> &#x2F;&#x2F; intentionally no [CEReactions]
 
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def>
+  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def id=attribute-tabIndex>
+  [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def id=operation-focus-FocusOptions>
+  <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-blur>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-style>
   [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>SVGElement</code></h3>
+
+  <ul>
+    <li><code><a href="SVGAnimationElement.html">SVGAnimationElement</a><a href=SVGAnimationElement.html#attribute-targetElement>.targetElement</a></code></li>
+<li><code><a href="SVGElement.html">SVGElement</a><a href=SVGElement.html#attribute-viewportElement>.viewportElement</a></code></li>
+<li><code><a href="SVGUseElement.html">SVGUseElement</a><a href=SVGUseElement.html#attribute-instanceRoot>.instanceRoot</a></code></li>
+<li><code><a href="SVGUseElement.html">SVGUseElement</a><a href=SVGUseElement.html#attribute-animatedInstanceRoot>.animatedInstanceRoot</a></code></li>
+<li><code><a href="SVGElementInstance.html">SVGElementInstance</a><a href=SVGElementInstance.html#attribute-correspondingElement>.correspondingElement</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="SVGAnimationElement.html">SVGAnimationElement</a></li>
-<li><a href="SVGClipPathElement.html">SVGClipPathElement</a></li>
-<li><a href="SVGComponentTransferFunctionElement.html">SVGComponentTransferFunctionElement</a></li>
-<li><a href="SVGDescElement.html">SVGDescElement</a></li>
-<li><a href="SVGElement.html">SVGElement</a></li>
-<li><a href="SVGElementInstance.html">SVGElementInstance</a></li>
-<li><a href="SVGFEBlendElement.html">SVGFEBlendElement</a></li>
-<li><a href="SVGFEColorMatrixElement.html">SVGFEColorMatrixElement</a></li>
-<li><a href="SVGFEComponentTransferElement.html">SVGFEComponentTransferElement</a></li>
-<li><a href="SVGFECompositeElement.html">SVGFECompositeElement</a></li>
-<li><a href="SVGFEConvolveMatrixElement.html">SVGFEConvolveMatrixElement</a></li>
-<li><a href="SVGFEDiffuseLightingElement.html">SVGFEDiffuseLightingElement</a></li>
-<li><a href="SVGFEDisplacementMapElement.html">SVGFEDisplacementMapElement</a></li>
-<li><a href="SVGFEDistantLightElement.html">SVGFEDistantLightElement</a></li>
-<li><a href="SVGFEDropShadowElement.html">SVGFEDropShadowElement</a></li>
-<li><a href="SVGFEFloodElement.html">SVGFEFloodElement</a></li>
-<li><a href="SVGFEGaussianBlurElement.html">SVGFEGaussianBlurElement</a></li>
-<li><a href="SVGFEImageElement.html">SVGFEImageElement</a></li>
-<li><a href="SVGFEMergeElement.html">SVGFEMergeElement</a></li>
-<li><a href="SVGFEMergeNodeElement.html">SVGFEMergeNodeElement</a></li>
-<li><a href="SVGFEMorphologyElement.html">SVGFEMorphologyElement</a></li>
-<li><a href="SVGFEOffsetElement.html">SVGFEOffsetElement</a></li>
-<li><a href="SVGFEPointLightElement.html">SVGFEPointLightElement</a></li>
-<li><a href="SVGFESpecularLightingElement.html">SVGFESpecularLightingElement</a></li>
-<li><a href="SVGFESpotLightElement.html">SVGFESpotLightElement</a></li>
-<li><a href="SVGFETileElement.html">SVGFETileElement</a></li>
-<li><a href="SVGFETurbulenceElement.html">SVGFETurbulenceElement</a></li>
-<li><a href="SVGFilterElement.html">SVGFilterElement</a></li>
-<li><a href="SVGGradientElement.html">SVGGradientElement</a></li>
-<li><a href="SVGGraphicsElement.html">SVGGraphicsElement</a></li>
-<li><a href="SVGMPathElement.html">SVGMPathElement</a></li>
-<li><a href="SVGMarkerElement.html">SVGMarkerElement</a></li>
-<li><a href="SVGMaskElement.html">SVGMaskElement</a></li>
-<li><a href="SVGMetadataElement.html">SVGMetadataElement</a></li>
-<li><a href="SVGPatternElement.html">SVGPatternElement</a></li>
-<li><a href="SVGSVGElement.html">SVGSVGElement</a></li>
-<li><a href="SVGScriptElement.html">SVGScriptElement</a></li>
-<li><a href="SVGStopElement.html">SVGStopElement</a></li>
-<li><a href="SVGStyleElement.html">SVGStyleElement</a></li>
-<li><a href="SVGTitleElement.html">SVGTitleElement</a></li>
-<li><a href="SVGUseElement.html">SVGUseElement</a></li>
-<li><a href="SVGViewElement.html">SVGViewElement</a></li>
+    <li><code><a href="SVGAnimationElement.html">SVGAnimationElement</a></code></li>
+<li><code><a href="SVGClipPathElement.html">SVGClipPathElement</a></code></li>
+<li><code><a href="SVGComponentTransferFunctionElement.html">SVGComponentTransferFunctionElement</a></code></li>
+<li><code><a href="SVGDescElement.html">SVGDescElement</a></code></li>
+<li><code><a href="SVGElement.html">SVGElement</a></code></li>
+<li><code><a href="SVGElementInstance.html">SVGElementInstance</a></code></li>
+<li><code><a href="SVGFEBlendElement.html">SVGFEBlendElement</a></code></li>
+<li><code><a href="SVGFEColorMatrixElement.html">SVGFEColorMatrixElement</a></code></li>
+<li><code><a href="SVGFEComponentTransferElement.html">SVGFEComponentTransferElement</a></code></li>
+<li><code><a href="SVGFECompositeElement.html">SVGFECompositeElement</a></code></li>
+<li><code><a href="SVGFEConvolveMatrixElement.html">SVGFEConvolveMatrixElement</a></code></li>
+<li><code><a href="SVGFEDiffuseLightingElement.html">SVGFEDiffuseLightingElement</a></code></li>
+<li><code><a href="SVGFEDisplacementMapElement.html">SVGFEDisplacementMapElement</a></code></li>
+<li><code><a href="SVGFEDistantLightElement.html">SVGFEDistantLightElement</a></code></li>
+<li><code><a href="SVGFEDropShadowElement.html">SVGFEDropShadowElement</a></code></li>
+<li><code><a href="SVGFEFloodElement.html">SVGFEFloodElement</a></code></li>
+<li><code><a href="SVGFEGaussianBlurElement.html">SVGFEGaussianBlurElement</a></code></li>
+<li><code><a href="SVGFEImageElement.html">SVGFEImageElement</a></code></li>
+<li><code><a href="SVGFEMergeElement.html">SVGFEMergeElement</a></code></li>
+<li><code><a href="SVGFEMergeNodeElement.html">SVGFEMergeNodeElement</a></code></li>
+<li><code><a href="SVGFEMorphologyElement.html">SVGFEMorphologyElement</a></code></li>
+<li><code><a href="SVGFEOffsetElement.html">SVGFEOffsetElement</a></code></li>
+<li><code><a href="SVGFEPointLightElement.html">SVGFEPointLightElement</a></code></li>
+<li><code><a href="SVGFESpecularLightingElement.html">SVGFESpecularLightingElement</a></code></li>
+<li><code><a href="SVGFESpotLightElement.html">SVGFESpotLightElement</a></code></li>
+<li><code><a href="SVGFETileElement.html">SVGFETileElement</a></code></li>
+<li><code><a href="SVGFETurbulenceElement.html">SVGFETurbulenceElement</a></code></li>
+<li><code><a href="SVGFilterElement.html">SVGFilterElement</a></code></li>
+<li><code><a href="SVGGradientElement.html">SVGGradientElement</a></code></li>
+<li><code><a href="SVGGraphicsElement.html">SVGGraphicsElement</a></code></li>
+<li><code><a href="SVGMPathElement.html">SVGMPathElement</a></code></li>
+<li><code><a href="SVGMarkerElement.html">SVGMarkerElement</a></code></li>
+<li><code><a href="SVGMaskElement.html">SVGMaskElement</a></code></li>
+<li><code><a href="SVGMetadataElement.html">SVGMetadataElement</a></code></li>
+<li><code><a href="SVGPatternElement.html">SVGPatternElement</a></code></li>
+<li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
+<li><code><a href="SVGScriptElement.html">SVGScriptElement</a></code></li>
+<li><code><a href="SVGStopElement.html">SVGStopElement</a></code></li>
+<li><code><a href="SVGStyleElement.html">SVGStyleElement</a></code></li>
+<li><code><a href="SVGTitleElement.html">SVGTitleElement</a></code></li>
+<li><code><a href="SVGUseElement.html">SVGUseElement</a></code></li>
+<li><code><a href="SVGViewElement.html">SVGViewElement</a></code></li>
 
   </ul>
 </section>

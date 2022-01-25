@@ -11,32 +11,75 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, LegacyUnenumerableNamedProperties]
-interface <strong>HTMLCollection</strong> {<span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  getter <a href='Element.html'>Element</a>? <strong>item</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+interface <strong>HTMLCollection</strong> {<span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=operation-getter>
+  getter <a href='Element.html'>Element</a>? <strong>item</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-getter>
   getter <a href='Element.html'>Element</a>? <strong>namedItem</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>HTMLCollection</code></h3>
+
+  <ul class=long>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByTagName-DOMString>.getElementsByTagName()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByTagNameNS-DOMString-DOMString>.getElementsByTagNameNS()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByClassName-DOMString>.getElementsByClassName()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-images>.images</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-embeds>.embeds</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-plugins>.plugins</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-links>.links</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-forms>.forms</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-scripts>.scripts</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-anchors>.anchors</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-applets>.applets</a></code></li>
+<li><code><a href="ParentNode.html">ParentNode</a><a href=ParentNode.html#attribute-children>.children</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getElementsByTagName-DOMString>.getElementsByTagName()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getElementsByTagNameNS-DOMString-DOMString>.getElementsByTagNameNS()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getElementsByClassName-DOMString>.getElementsByClassName()</a></code></li>
+<li><code><a href="HTMLAllCollection.html">HTMLAllCollection</a><a href=HTMLAllCollection.html#operation-getter>.namedItem()</a></code></li>
+<li><code><a href="HTMLAllCollection.html">HTMLAllCollection</a><a href=HTMLAllCollection.html#operation-item-DOMString>.item()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByTagName-DOMString>.getElementsByTagName()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByTagNameNS-DOMString-DOMString>.getElementsByTagNameNS()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-getElementsByClassName-DOMString>.getElementsByClassName()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-images>.images</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-embeds>.embeds</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-plugins>.plugins</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-links>.links</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-forms>.forms</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-scripts>.scripts</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-anchors>.anchors</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#attribute-applets>.applets</a></code></li>
+<li><code><a href="HTMLMapElement.html">HTMLMapElement</a><a href=HTMLMapElement.html#attribute-areas>.areas</a></code></li>
+<li><code><a href="HTMLTableElement.html">HTMLTableElement</a><a href=HTMLTableElement.html#attribute-tBodies>.tBodies</a></code></li>
+<li><code><a href="HTMLTableElement.html">HTMLTableElement</a><a href=HTMLTableElement.html#attribute-rows>.rows</a></code></li>
+<li><code><a href="HTMLTableSectionElement.html">HTMLTableSectionElement</a><a href=HTMLTableSectionElement.html#attribute-rows>.rows</a></code></li>
+<li><code><a href="HTMLTableRowElement.html">HTMLTableRowElement</a><a href=HTMLTableRowElement.html#attribute-cells>.cells</a></code></li>
+<li><code><a href="HTMLSelectElement.html">HTMLSelectElement</a><a href=HTMLSelectElement.html#attribute-selectedOptions>.selectedOptions</a></code></li>
+<li><code><a href="HTMLDataListElement.html">HTMLDataListElement</a><a href=HTMLDataListElement.html#attribute-options>.options</a></code></li>
+<li><code><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a><a href=HTMLFieldSetElement.html#attribute-elements>.elements</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
-<li><a href="Document.html">Document</a></li>
-<li><a href="Element.html">Element</a></li>
-<li><a href="HTMLAllCollection.html">HTMLAllCollection</a></li>
-<li><a href="HTMLDataListElement.html">HTMLDataListElement</a></li>
-<li><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a></li>
-<li><a href="HTMLFormControlsCollection.html">HTMLFormControlsCollection</a></li>
-<li><a href="HTMLMapElement.html">HTMLMapElement</a></li>
-<li><a href="HTMLOptionsCollection.html">HTMLOptionsCollection</a></li>
-<li><a href="HTMLSelectElement.html">HTMLSelectElement</a></li>
-<li><a href="HTMLTableElement.html">HTMLTableElement</a></li>
-<li><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></li>
-<li><a href="HTMLTableSectionElement.html">HTMLTableSectionElement</a></li>
-<li><a href="ParentNode.html">ParentNode</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="Element.html">Element</a></code></li>
+<li><code><a href="HTMLAllCollection.html">HTMLAllCollection</a></code></li>
+<li><code><a href="HTMLDataListElement.html">HTMLDataListElement</a></code></li>
+<li><code><a href="HTMLFieldSetElement.html">HTMLFieldSetElement</a></code></li>
+<li><code><a href="HTMLFormControlsCollection.html">HTMLFormControlsCollection</a></code></li>
+<li><code><a href="HTMLMapElement.html">HTMLMapElement</a></code></li>
+<li><code><a href="HTMLOptionsCollection.html">HTMLOptionsCollection</a></code></li>
+<li><code><a href="HTMLSelectElement.html">HTMLSelectElement</a></code></li>
+<li><code><a href="HTMLTableElement.html">HTMLTableElement</a></code></li>
+<li><code><a href="HTMLTableRowElement.html">HTMLTableRowElement</a></code></li>
+<li><code><a href="HTMLTableSectionElement.html">HTMLTableSectionElement</a></code></li>
+<li><code><a href="ParentNode.html">ParentNode</a></code></li>
 
   </ul>
 </section>

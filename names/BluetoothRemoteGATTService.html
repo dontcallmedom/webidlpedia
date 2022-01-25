@@ -11,17 +11,17 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-device>
   [SameObject]
-  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def>
-  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isPrimary</strong>;</span><span class=def>
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def id=attribute-uuid>
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def id=attribute-isPrimary>
+  readonly attribute <span class=primitive>boolean</span> <strong>isPrimary</strong>;</span><span class=def id=operation-getCharacteristic-BluetoothCharacteristicUUID>
   Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt;
-    <strong>getCharacteristic</strong>(<a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def>
+    <strong>getCharacteristic</strong>(<a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def id=operation-getCharacteristics-BluetoothCharacteristicUUID>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt;&gt;
-    <strong>getCharacteristics</strong>(optional <a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def>
+    <strong>getCharacteristics</strong>(optional <a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def id=operation-getIncludedService-BluetoothServiceUUID>
   Promise&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt;
-    <strong>getIncludedService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def>
+    <strong>getIncludedService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def id=operation-getIncludedServices-BluetoothServiceUUID>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt;&gt;
     <strong>getIncludedServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span>
 };</span><span class=def>
@@ -31,32 +31,44 @@ interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.htm
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+interface <strong>BluetoothRemoteGATTService</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-device>
   [SameObject]
-  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def>
-  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isPrimary</strong>;</span><span class=def>
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def id=attribute-uuid>
+  readonly attribute <a href='UUID.html'>UUID</a> <strong>uuid</strong>;</span><span class=def id=attribute-isPrimary>
+  readonly attribute <span class=primitive>boolean</span> <strong>isPrimary</strong>;</span><span class=def id=operation-getCharacteristic-BluetoothCharacteristicUUID>
   Promise&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt;
-    <strong>getCharacteristic</strong>(<a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def>
+    <strong>getCharacteristic</strong>(<a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def id=operation-getCharacteristics-BluetoothCharacteristicUUID>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTCharacteristic.html'>BluetoothRemoteGATTCharacteristic</a>&gt;&gt;
-    <strong>getCharacteristics</strong>(optional <a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def>
+    <strong>getCharacteristics</strong>(optional <a href='BluetoothCharacteristicUUID.html'>BluetoothCharacteristicUUID</a> <strong>characteristic</strong>);</span><span class=def id=operation-getIncludedService-BluetoothServiceUUID>
   Promise&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt;
-    <strong>getIncludedService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def>
+    <strong>getIncludedService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def id=operation-getIncludedServices-BluetoothServiceUUID>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt;&gt;
-    <strong>getIncludedServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;</span><span class=def>
+    <strong>getIncludedServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def id=attribute-oncharacteristicvaluechanged>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;</span><span class=def id=attribute-onserviceadded>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;</span><span class=def id=attribute-onservicechanged>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;</span><span class=def id=attribute-onserviceremoved>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>BluetoothRemoteGATTService</code></h3>
+
+  <ul>
+    <li><code><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a><a href=BluetoothRemoteGATTServer.html#operation-getPrimaryService-BluetoothServiceUUID>.getPrimaryService()</a></code></li>
+<li><code><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a><a href=BluetoothRemoteGATTServer.html#operation-getPrimaryServices-BluetoothServiceUUID>.getPrimaryServices()</a></code></li>
+<li><code><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a><a href=BluetoothRemoteGATTService.html#operation-getIncludedService-BluetoothServiceUUID>.getIncludedService()</a></code></li>
+<li><code><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a><a href=BluetoothRemoteGATTService.html#operation-getIncludedServices-BluetoothServiceUUID>.getIncludedServices()</a></code></li>
+<li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a><a href=BluetoothRemoteGATTCharacteristic.html#attribute-service>.service</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li>
-<li><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li>
-<li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li>
+    <li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></code></li>
+<li><code><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></code></li>
+<li><code><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></code></li>
 
   </ul>
 </section>

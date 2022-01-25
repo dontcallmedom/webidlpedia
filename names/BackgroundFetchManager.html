@@ -11,19 +11,27 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>BackgroundFetchManager</strong> {<span class=def>
-  Promise&lt;<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>&gt; <strong>fetch</strong>(<span class=primitive>DOMString</span> <strong>id</strong>, (<a href='RequestInfo.html'>RequestInfo</a> or sequence&lt;<a href='RequestInfo.html'>RequestInfo</a>&gt;) <strong>requests</strong>, optional <a href='BackgroundFetchOptions.html'>BackgroundFetchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>?&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def>
+interface <strong>BackgroundFetchManager</strong> {<span class=def id=operation-fetch-DOMString-RequestInfo-RequestInfo-BackgroundFetchOptions>
+  Promise&lt;<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>&gt; <strong>fetch</strong>(<span class=primitive>DOMString</span> <strong>id</strong>, (<a href='RequestInfo.html'>RequestInfo</a> or sequence&lt;<a href='RequestInfo.html'>RequestInfo</a>&gt;) <strong>requests</strong>, optional <a href='BackgroundFetchOptions.html'>BackgroundFetchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-get-DOMString>
+  Promise&lt;<a href='BackgroundFetchRegistration.html'>BackgroundFetchRegistration</a>?&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def id=operation-getIds>
   Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt; <strong>getIds</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>BackgroundFetchManager</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a><a href=ServiceWorkerRegistration.html#attribute-backgroundFetch>.backgroundFetch</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
 
   </ul>
 </section>

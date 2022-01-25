@@ -11,21 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>ScreenOrientation</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>lock</strong>(<a href='OrientationLockType.html'>OrientationLockType</a> <strong>orientation</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>unlock</strong>();</span><span class=def>
-  readonly attribute <a href='OrientationType.html'>OrientationType</a> <strong>type</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>angle</strong>;</span><span class=def>
+interface <strong>ScreenOrientation</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-lock-OrientationLockType>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>lock</strong>(<a href='OrientationLockType.html'>OrientationLockType</a> <strong>orientation</strong>);</span><span class=def id=operation-unlock>
+  <span class=primitive>undefined</span> <strong>unlock</strong>();</span><span class=def id=attribute-type>
+  readonly attribute <a href='OrientationType.html'>OrientationType</a> <strong>type</strong>;</span><span class=def id=attribute-angle>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>angle</strong>;</span><span class=def id=attribute-onchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>ScreenOrientation</code></h3>
+
+  <ul>
+    <li><code><a href="Screen.html">Screen</a><a href=Screen.html#attribute-orientation>.orientation</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Screen.html">Screen</a></li>
+    <li><code><a href="Screen.html">Screen</a></code></li>
 
   </ul>
 </section>

@@ -11,20 +11,28 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>NavigationPreloadManager</strong> {<span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>enable</strong>();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>disable</strong>();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setHeaderValue</strong>(<span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def>
+interface <strong>NavigationPreloadManager</strong> {<span class=def id=operation-enable>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>enable</strong>();</span><span class=def id=operation-disable>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>disable</strong>();</span><span class=def id=operation-setHeaderValue-ByteString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setHeaderValue</strong>(<span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def id=operation-getState>
   Promise&lt;<a href='NavigationPreloadState.html'>NavigationPreloadState</a>&gt; <strong>getState</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>NavigationPreloadManager</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a><a href=ServiceWorkerRegistration.html#attribute-navigationPreload>.navigationPreload</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
 
   </ul>
 </section>

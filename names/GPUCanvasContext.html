@@ -11,17 +11,26 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUCanvasContext</strong> {<span class=def>
-    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def>
+interface <strong>GPUCanvasContext</strong> {<span class=def id=attribute-canvas>
+    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def id=operation-configure-GPUCanvasConfiguration>
 
-    <span class=primitive>undefined</span> <strong>configure</strong>(<a href='GPUCanvasConfiguration.html'>GPUCanvasConfiguration</a> <strong>configuration</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>unconfigure</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>configure</strong>(<a href='GPUCanvasConfiguration.html'>GPUCanvasConfiguration</a> <strong>configuration</strong>);</span><span class=def id=operation-unconfigure>
+    <span class=primitive>undefined</span> <strong>unconfigure</strong>();</span><span class=def id=operation-getPreferredFormat-GPUAdapter>
 
-    <a href='GPUTextureFormat.html'>GPUTextureFormat</a> <strong>getPreferredFormat</strong>(<a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>);</span><span class=def>
+    <a href='GPUTextureFormat.html'>GPUTextureFormat</a> <strong>getPreferredFormat</strong>(<a href='GPUAdapter.html'>GPUAdapter</a> <strong>adapter</strong>);</span><span class=def id=operation-getCurrentTexture>
     <a href='GPUTexture.html'>GPUTexture</a> <strong>getCurrentTexture</strong>();</span>
 };</span></code></pre>
   
   
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>GPUCanvasContext</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a><a href=HTMLCanvasElement.html#operation-getContext-DOMString-any>.getContext()</a></code></li>
+<li><code><a href="OffscreenCanvas.html">OffscreenCanvas</a><a href=OffscreenCanvas.html#operation-getContext-OffscreenRenderingContextId-any>.getContext()</a></code></li>
+
+  </ul>
 </section>
 
   <section><h3>Referring specifications</h3>

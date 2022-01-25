@@ -11,32 +11,32 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>kind</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>label</strong>;</span><span class=def>
-  attribute <span class=primitive>boolean</span> <strong>enabled</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>muted</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmute</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunmute</strong>;</span><span class=def>
-  readonly attribute <a href='MediaStreamTrackState.html'>MediaStreamTrackState</a> <strong>readyState</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>clone</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def>
-  <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong>getCapabilities</strong>();</span><span class=def>
-  <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>getConstraints</strong>();</span><span class=def>
-  <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();</span><span class=def>
+interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-kind>
+  readonly attribute <span class=primitive>DOMString</span> <strong>kind</strong>;</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def id=attribute-label>
+  readonly attribute <span class=primitive>DOMString</span> <strong>label</strong>;</span><span class=def id=attribute-enabled>
+  attribute <span class=primitive>boolean</span> <strong>enabled</strong>;</span><span class=def id=attribute-muted>
+  readonly attribute <span class=primitive>boolean</span> <strong>muted</strong>;</span><span class=def id=attribute-onmute>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmute</strong>;</span><span class=def id=attribute-onunmute>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunmute</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='MediaStreamTrackState.html'>MediaStreamTrackState</a> <strong>readyState</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=operation-clone>
+  <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>clone</strong>();</span><span class=def id=operation-stop>
+  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def id=operation-getCapabilities>
+  <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong>getCapabilities</strong>();</span><span class=def id=operation-getConstraints>
+  <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>getConstraints</strong>();</span><span class=def id=operation-getSettings>
+  <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();</span><span class=def id=operation-applyConstraints-MediaTrackConstraints>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>applyConstraints</strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mst-content-hint&#x2F;#mediastreamtrack-extension">MediaStreamTrack Content Hints</a><pre class=webidl><code><span class=def>partial interface <strong>MediaStreamTrack</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mst-content-hint&#x2F;#mediastreamtrack-extension">MediaStreamTrack Content Hints</a><pre class=webidl><code><span class=def>partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-contentHint>
   attribute <span class=primitive>DOMString</span> <strong>contentHint</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;#attributes-2">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>MediaStreamTrack</strong> {<span class=def>
-    readonly        attribute <span class=primitive>boolean</span>      <strong>isolated</strong>;</span><span class=def>
+partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-isolated>
+    readonly        attribute <span class=primitive>boolean</span>      <strong>isolated</strong>;</span><span class=def id=attribute-onisolationchange>
                     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onisolationchange</strong>;</span>
 };</span></code></pre></li>
 
@@ -44,46 +44,64 @@ partial interface <strong>MediaStreamTrack</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>kind</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>label</strong>;</span><span class=def>
-  attribute <span class=primitive>boolean</span> <strong>enabled</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>muted</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmute</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunmute</strong>;</span><span class=def>
-  readonly attribute <a href='MediaStreamTrackState.html'>MediaStreamTrackState</a> <strong>readyState</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>clone</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def>
-  <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong>getCapabilities</strong>();</span><span class=def>
-  <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>getConstraints</strong>();</span><span class=def>
-  <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>applyConstraints</strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>contentHint</strong>;</span><span class=def>
-    readonly        attribute <span class=primitive>boolean</span>      <strong>isolated</strong>;</span><span class=def>
+interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-kind>
+  readonly attribute <span class=primitive>DOMString</span> <strong>kind</strong>;</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def id=attribute-label>
+  readonly attribute <span class=primitive>DOMString</span> <strong>label</strong>;</span><span class=def id=attribute-enabled>
+  attribute <span class=primitive>boolean</span> <strong>enabled</strong>;</span><span class=def id=attribute-muted>
+  readonly attribute <span class=primitive>boolean</span> <strong>muted</strong>;</span><span class=def id=attribute-onmute>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmute</strong>;</span><span class=def id=attribute-onunmute>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onunmute</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='MediaStreamTrackState.html'>MediaStreamTrackState</a> <strong>readyState</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=operation-clone>
+  <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>clone</strong>();</span><span class=def id=operation-stop>
+  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def id=operation-getCapabilities>
+  <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong>getCapabilities</strong>();</span><span class=def id=operation-getConstraints>
+  <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>getConstraints</strong>();</span><span class=def id=operation-getSettings>
+  <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();</span><span class=def id=operation-applyConstraints-MediaTrackConstraints>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>applyConstraints</strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=attribute-contentHint>
+  attribute <span class=primitive>DOMString</span> <strong>contentHint</strong>;</span><span class=def id=attribute-isolated>
+    readonly        attribute <span class=primitive>boolean</span>      <strong>isolated</strong>;</span><span class=def id=attribute-onisolationchange>
                     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onisolationchange</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>MediaStreamTrack</code></h3>
+
+  <ul>
+    <li><code><a href="VideoTrackGenerator.html">VideoTrackGenerator</a><a href=VideoTrackGenerator.html#attribute-track>.track</a></code></li>
+<li><code><a href="ImageCapture.html">ImageCapture</a><a href=ImageCapture.html#attribute-track>.track</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getAudioTracks>.getAudioTracks()</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getVideoTracks>.getVideoTracks()</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getTracks>.getTracks()</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getTrackById-DOMString>.getTrackById()</a></code></li>
+<li><code><a href="MediaStreamTrack.html">MediaStreamTrack</a><a href=MediaStreamTrack.html#operation-clone>.clone()</a></code></li>
+<li><code><a href="MediaStreamTrackEvent.html">MediaStreamTrackEvent</a><a href=MediaStreamTrackEvent.html#attribute-track>.track</a></code></li>
+<li><code><a href="RTCRtpSender.html">RTCRtpSender</a><a href=RTCRtpSender.html#attribute-track>.track</a></code></li>
+<li><code><a href="RTCRtpReceiver.html">RTCRtpReceiver</a><a href=RTCRtpReceiver.html#attribute-track>.track</a></code></li>
+<li><code><a href="RTCTrackEvent.html">RTCTrackEvent</a><a href=RTCTrackEvent.html#attribute-track>.track</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AudioContext.html">AudioContext</a></li>
-<li><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></li>
-<li><a href="ImageCapture.html">ImageCapture</a></li>
-<li><a href="MediaStream.html">MediaStream</a></li>
-<li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li>
-<li><a href="MediaStreamTrackAudioSourceOptions.html">MediaStreamTrackAudioSourceOptions</a></li>
-<li><a href="MediaStreamTrackEvent.html">MediaStreamTrackEvent</a></li>
-<li><a href="MediaStreamTrackEventInit.html">MediaStreamTrackEventInit</a></li>
-<li><a href="MediaStreamTrackProcessorInit.html">MediaStreamTrackProcessorInit</a></li>
-<li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li>
-<li><a href="RTCRtpReceiver.html">RTCRtpReceiver</a></li>
-<li><a href="RTCRtpSender.html">RTCRtpSender</a></li>
-<li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li>
-<li><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></li>
-<li><a href="VideoTrackGenerator.html">VideoTrackGenerator</a></li>
+    <li><code><a href="AudioContext.html">AudioContext</a></code></li>
+<li><code><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></code></li>
+<li><code><a href="ImageCapture.html">ImageCapture</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a></code></li>
+<li><code><a href="MediaStreamTrack.html">MediaStreamTrack</a></code></li>
+<li><code><a href="MediaStreamTrackAudioSourceOptions.html">MediaStreamTrackAudioSourceOptions</a></code></li>
+<li><code><a href="MediaStreamTrackEvent.html">MediaStreamTrackEvent</a></code></li>
+<li><code><a href="MediaStreamTrackEventInit.html">MediaStreamTrackEventInit</a></code></li>
+<li><code><a href="MediaStreamTrackProcessorInit.html">MediaStreamTrackProcessorInit</a></code></li>
+<li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a></code></li>
+<li><code><a href="RTCRtpReceiver.html">RTCRtpReceiver</a></code></li>
+<li><code><a href="RTCRtpSender.html">RTCRtpSender</a></code></li>
+<li><code><a href="RTCTrackEvent.html">RTCTrackEvent</a></code></li>
+<li><code><a href="RTCTrackEventInit.html">RTCTrackEventInit</a></code></li>
+<li><code><a href="VideoTrackGenerator.html">VideoTrackGenerator</a></code></li>
 
   </ul>
 </section>

@@ -11,21 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>CacheStorage</strong> {<span class=def>
-  [NewObject] Promise&lt;(<a href='Response.html'>Response</a> or <span class=primitive>undefined</span>)&gt; <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='MultiCacheQueryOptions.html'>MultiCacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>has</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<a href='Cache.html'>Cache</a>&gt; <strong>open</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def>
+interface <strong>CacheStorage</strong> {<span class=def id=operation-match-RequestInfo-MultiCacheQueryOptions>
+  [NewObject] Promise&lt;(<a href='Response.html'>Response</a> or <span class=primitive>undefined</span>)&gt; <strong>match</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>request</strong>, optional <a href='MultiCacheQueryOptions.html'>MultiCacheQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-has-DOMString>
+  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>has</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def id=operation-open-DOMString>
+  [NewObject] Promise&lt;<a href='Cache.html'>Cache</a>&gt; <strong>open</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def id=operation-delete-DOMString>
+  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>cacheName</strong>);</span><span class=def id=operation-keys>
   [NewObject] Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt; <strong>keys</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>CacheStorage</code></h3>
+
+  <ul>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a><a href=WindowOrWorkerGlobalScope.html#attribute-caches>.caches</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

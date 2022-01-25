@@ -11,14 +11,14 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>XRHitTestResult</strong> {<span class=def>
+interface <strong>XRHitTestResult</strong> {<span class=def id=operation-getPose-XRSpace>
   <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;anchors&#x2F;">WebXR Anchors Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRHitTestResult</strong> {<span class=def>
+partial interface <strong>XRHitTestResult</strong> {<span class=def id=operation-createAnchor>
   Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>createAnchor</strong>();</span>
 };</span></code></pre></li>
 
@@ -26,17 +26,26 @@ partial interface <strong>XRHitTestResult</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>XRHitTestResult</strong> {<span class=def>
-  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def>
+interface <strong>XRHitTestResult</strong> {<span class=def id=operation-getPose-XRSpace>
+  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def id=operation-createAnchor>
   Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>createAnchor</strong>();</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>XRHitTestResult</code></h3>
+
+  <ul>
+    <li><code><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a><a href=XRTransientInputHitTestResult.html#attribute-results>.results</a></code></li>
+<li><code><a href="XRFrame.html">XRFrame</a><a href=XRFrame.html#operation-getHitTestResults-XRHitTestSource>.getHitTestResults()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="XRFrame.html">XRFrame</a></li>
-<li><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></li>
+    <li><code><a href="XRFrame.html">XRFrame</a></code></li>
+<li><code><a href="XRTransientInputHitTestResult.html">XRTransientInputHitTestResult</a></code></li>
 
   </ul>
 </section>

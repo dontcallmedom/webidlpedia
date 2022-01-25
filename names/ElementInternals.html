@@ -11,24 +11,24 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>ElementInternals</strong> {<span class=def><span class="comment">
+interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadowRoot><span class="comment">
   &#x2F;&#x2F; Shadow root access
-  </span>readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;</span><span class=def id=operation-setFormValue-File-USVString-FormData-File-USVString-FormData><span class="comment">
 
   &#x2F;&#x2F; Form-associated custom elements
   </span><span class=primitive>undefined</span> <strong>setFormValue</strong>((<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>value</strong>,
-                         optional (<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);</span><span class=def>
+                         optional (<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);</span><span class=def id=attribute-form>
 
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def>
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def id=operation-setValidity-ValidityStateFlags-DOMString-HTMLElement>
 
   <span class=primitive>undefined</span> <strong>setValidity</strong>(optional <a href='ValidityStateFlags.html'>ValidityStateFlags</a> <strong>flags</strong> &#x3D; {},
                         optional <span class=primitive>DOMString</span> <strong>message</strong>,
-                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def>
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def>
-  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def>
+                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);</span><span class=def id=attribute-willValidate>
+  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def id=attribute-validity>
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def id=attribute-validationMessage>
+  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def id=operation-checkValidity>
+  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def id=operation-reportValidity>
+  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def id=attribute-labels>
 
   readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span>
 };</span><span class=def><span class="comment">
@@ -37,7 +37,7 @@ interface <strong>ElementInternals</strong> {<span class=def><span class="commen
 </span><a href='ElementInternals.html'>ElementInternals</a> includes <a href='ARIAMixin.html'>ARIAMixin</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;custom-state-pseudo-class&#x2F;#exposing">Custom State Pseudo Class</a><pre class=webidl><code><span class=def>partial interface <strong>ElementInternals</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;custom-state-pseudo-class&#x2F;#exposing">Custom State Pseudo Class</a><pre class=webidl><code><span class=def>partial interface <strong>ElementInternals</strong> {<span class=def id=attribute-states>
   readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span>
 };</span></code></pre></li>
 
@@ -45,84 +45,92 @@ interface <strong>ElementInternals</strong> {<span class=def><span class="commen
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>ElementInternals</strong> {<span class=def><span class="comment">
+interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadowRoot><span class="comment">
   &#x2F;&#x2F; Shadow root access
-  </span>readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute <a href='ShadowRoot.html'>ShadowRoot</a>? <strong>shadowRoot</strong>;</span><span class=def id=operation-setFormValue-File-USVString-FormData-File-USVString-FormData><span class="comment">
 
   &#x2F;&#x2F; Form-associated custom elements
   </span><span class=primitive>undefined</span> <strong>setFormValue</strong>((<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>value</strong>,
-                         optional (<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);</span><span class=def>
+                         optional (<a href='File.html'>File</a> or <span class=primitive>USVString</span> or <a href='FormData.html'>FormData</a>)? <strong>state</strong>);</span><span class=def id=attribute-form>
 
-  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def>
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def id=operation-setValidity-ValidityStateFlags-DOMString-HTMLElement>
 
   <span class=primitive>undefined</span> <strong>setValidity</strong>(optional <a href='ValidityStateFlags.html'>ValidityStateFlags</a> <strong>flags</strong> &#x3D; {},
                         optional <span class=primitive>DOMString</span> <strong>message</strong>,
-                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def>
-  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def>
-  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def>
+                        optional <a href='HTMLElement.html'>HTMLElement</a> <strong>anchor</strong>);</span><span class=def id=attribute-willValidate>
+  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def id=attribute-validity>
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def id=attribute-validationMessage>
+  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def id=operation-checkValidity>
+  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def id=operation-reportValidity>
+  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def id=attribute-labels>
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>role</strong>;</span><span class=def>
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def id=attribute-role>
+  attribute <span class=primitive>DOMString</span>? <strong>role</strong>;</span><span class=def id=attribute-ariaAtomic>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaAtomic</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaAutoComplete</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaBusy</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaChecked</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaColCount</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaColIndex</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaColIndexText</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaColSpan</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaAtomic</strong>;</span><span class=def id=attribute-ariaAutoComplete>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaAutoComplete</strong>;</span><span class=def id=attribute-ariaBusy>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaBusy</strong>;</span><span class=def id=attribute-ariaChecked>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaChecked</strong>;</span><span class=def id=attribute-ariaColCount>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaColCount</strong>;</span><span class=def id=attribute-ariaColIndex>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaColIndex</strong>;</span><span class=def id=attribute-ariaColIndexText>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaColIndexText</strong>;</span><span class=def id=attribute-ariaColSpan>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaColSpan</strong>;</span><span class=def id=attribute-ariaCurrent>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaCurrent</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaCurrent</strong>;</span><span class=def id=attribute-ariaDescription>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaDescription</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaDescription</strong>;</span><span class=def id=attribute-ariaDisabled>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaDisabled</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaDisabled</strong>;</span><span class=def id=attribute-ariaExpanded>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaExpanded</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaExpanded</strong>;</span><span class=def id=attribute-ariaHasPopup>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaHasPopup</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaHidden</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaInvalid</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaKeyShortcuts</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaLabel</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaHasPopup</strong>;</span><span class=def id=attribute-ariaHidden>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaHidden</strong>;</span><span class=def id=attribute-ariaInvalid>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaInvalid</strong>;</span><span class=def id=attribute-ariaKeyShortcuts>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaKeyShortcuts</strong>;</span><span class=def id=attribute-ariaLabel>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaLabel</strong>;</span><span class=def id=attribute-ariaLevel>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaLevel</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaLive</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaModal</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaMultiLine</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaMultiSelectable</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaOrientation</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaLevel</strong>;</span><span class=def id=attribute-ariaLive>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaLive</strong>;</span><span class=def id=attribute-ariaModal>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaModal</strong>;</span><span class=def id=attribute-ariaMultiLine>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaMultiLine</strong>;</span><span class=def id=attribute-ariaMultiSelectable>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaMultiSelectable</strong>;</span><span class=def id=attribute-ariaOrientation>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaOrientation</strong>;</span><span class=def id=attribute-ariaPlaceholder>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaPlaceholder</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaPosInSet</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaPressed</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaReadOnly</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaPlaceholder</strong>;</span><span class=def id=attribute-ariaPosInSet>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaPosInSet</strong>;</span><span class=def id=attribute-ariaPressed>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaPressed</strong>;</span><span class=def id=attribute-ariaReadOnly>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaReadOnly</strong>;</span><span class=def id=attribute-ariaRequired>
 
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRequired</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRoleDescription</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRowCount</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRowIndex</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRowIndexText</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaRowSpan</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaSelected</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaSetSize</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaSort</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaValueMax</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaValueMin</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaValueNow</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span>? <strong>ariaValueText</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRequired</strong>;</span><span class=def id=attribute-ariaRoleDescription>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRoleDescription</strong>;</span><span class=def id=attribute-ariaRowCount>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRowCount</strong>;</span><span class=def id=attribute-ariaRowIndex>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRowIndex</strong>;</span><span class=def id=attribute-ariaRowIndexText>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRowIndexText</strong>;</span><span class=def id=attribute-ariaRowSpan>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaRowSpan</strong>;</span><span class=def id=attribute-ariaSelected>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaSelected</strong>;</span><span class=def id=attribute-ariaSetSize>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaSetSize</strong>;</span><span class=def id=attribute-ariaSort>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaSort</strong>;</span><span class=def id=attribute-ariaValueMax>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaValueMax</strong>;</span><span class=def id=attribute-ariaValueMin>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaValueMin</strong>;</span><span class=def id=attribute-ariaValueNow>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaValueNow</strong>;</span><span class=def id=attribute-ariaValueText>
+  attribute <span class=primitive>DOMString</span>? <strong>ariaValueText</strong>;</span><span class=def id=attribute-states>
   readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>ElementInternals</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLElement.html">HTMLElement</a><a href=HTMLElement.html#operation-attachInternals>.attachInternals()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="HTMLElement.html">HTMLElement</a></li>
+    <li><code><a href="HTMLElement.html">HTMLElement</a></code></li>
 
   </ul>
 </section>

@@ -11,35 +11,35 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>label</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>ordered</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxPacketLifeTime</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxRetransmits</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>negotiated</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>id</strong>;</span><span class=def>
-  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>bufferedAmount</strong>;</span><span class=def>
-  [EnforceRange] attribute <span class=primitive>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def>
+interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-label>
+  readonly attribute <span class=primitive>USVString</span> <strong>label</strong>;</span><span class=def id=attribute-ordered>
+  readonly attribute <span class=primitive>boolean</span> <strong>ordered</strong>;</span><span class=def id=attribute-maxPacketLifeTime>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxPacketLifeTime</strong>;</span><span class=def id=attribute-maxRetransmits>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxRetransmits</strong>;</span><span class=def id=attribute-protocol>
+  readonly attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def id=attribute-negotiated>
+  readonly attribute <span class=primitive>boolean</span> <strong>negotiated</strong>;</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>id</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;</span><span class=def id=attribute-bufferedAmount>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>bufferedAmount</strong>;</span><span class=def id=attribute-bufferedAmountLowThreshold>
+  [EnforceRange] attribute <span class=primitive>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;</span><span class=def id=attribute-onopen>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def id=attribute-onbufferedamountlow>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onclosing>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onmessage>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-binaryType>
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=operation-send-USVString>
+  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def id=operation-send-Blob>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBuffer>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBufferView>
   <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-priority&#x2F;#new-rtcdatachannel-attribute">WebRTC Priority Control API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>RTCDataChannel</strong> {<span class=def>
+partial interface <strong>RTCDataChannel</strong> {<span class=def id=attribute-priority>
   readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;</span>
 };</span></code></pre></li>
 
@@ -47,39 +47,48 @@ partial interface <strong>RTCDataChannel</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>label</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>ordered</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxPacketLifeTime</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxRetransmits</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>negotiated</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>id</strong>;</span><span class=def>
-  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>bufferedAmount</strong>;</span><span class=def>
-  [EnforceRange] attribute <span class=primitive>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span><span class=def>
+interface <strong>RTCDataChannel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-label>
+  readonly attribute <span class=primitive>USVString</span> <strong>label</strong>;</span><span class=def id=attribute-ordered>
+  readonly attribute <span class=primitive>boolean</span> <strong>ordered</strong>;</span><span class=def id=attribute-maxPacketLifeTime>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxPacketLifeTime</strong>;</span><span class=def id=attribute-maxRetransmits>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>maxRetransmits</strong>;</span><span class=def id=attribute-protocol>
+  readonly attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def id=attribute-negotiated>
+  readonly attribute <span class=primitive>boolean</span> <strong>negotiated</strong>;</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>id</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='RTCDataChannelState.html'>RTCDataChannelState</a> <strong>readyState</strong>;</span><span class=def id=attribute-bufferedAmount>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>bufferedAmount</strong>;</span><span class=def id=attribute-bufferedAmountLowThreshold>
+  [EnforceRange] attribute <span class=primitive>unsigned long</span> <strong>bufferedAmountLowThreshold</strong>;</span><span class=def id=attribute-onopen>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onopen</strong>;</span><span class=def id=attribute-onbufferedamountlow>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbufferedamountlow</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onclosing>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclosing</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onmessage>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-binaryType>
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=operation-send-USVString>
+  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def id=operation-send-Blob>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBuffer>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBufferView>
+  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span><span class=def id=attribute-priority>
   readonly attribute <a href='RTCPriorityType.html'>RTCPriorityType</a> <strong>priority</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>RTCDataChannel</code></h3>
+
+  <ul>
+    <li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a><a href=RTCPeerConnection.html#operation-createDataChannel-USVString-RTCDataChannelInit>.createDataChannel()</a></code></li>
+<li><code><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a><a href=RTCDataChannelEvent.html#attribute-channel>.channel</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></li>
-<li><a href="RTCDataChannelEventInit.html">RTCDataChannelEventInit</a></li>
-<li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li>
+    <li><code><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></code></li>
+<li><code><a href="RTCDataChannelEventInit.html">RTCDataChannelEventInit</a></code></li>
+<li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a></code></li>
 
   </ul>
 </section>

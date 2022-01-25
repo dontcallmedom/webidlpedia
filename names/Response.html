@@ -10,20 +10,20 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;fetch.spec.whatwg.org&#x2F;#response">Fetch Standard</a> defines <code>Response</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]interface <strong>Response</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> &#x3D; null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]interface <strong>Response</strong> {<span class=def id=constructor-BodyInit-ResponseInit>
+  <strong>constructor</strong>(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> &#x3D; null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-static>
 
-  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();</span><span class=def>
-  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>unsigned short</span> <strong>status</strong> &#x3D; 302);</span><span class=def>
+  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();</span><span class=def id=operation-static>
+  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>unsigned short</span> <strong>status</strong> &#x3D; 302);</span><span class=def id=attribute-type>
 
-  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;</span><span class=def>
+  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;</span><span class=def id=attribute-url>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>redirected</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>ok</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-redirected>
+  readonly attribute <span class=primitive>boolean</span> <strong>redirected</strong>;</span><span class=def id=attribute-status>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def id=attribute-ok>
+  readonly attribute <span class=primitive>boolean</span> <strong>ok</strong>;</span><span class=def id=attribute-statusText>
+  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def id=attribute-headers>
+  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def id=operation-clone>
 
   [NewObject] <a href='Response.html'>Response</a> <strong>clone</strong>();</span>
 };</span><span class=def>
@@ -31,42 +31,58 @@ base: ../
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]interface <strong>Response</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> &#x3D; null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]interface <strong>Response</strong> {<span class=def id=constructor-BodyInit-ResponseInit>
+  <strong>constructor</strong>(optional <a href='BodyInit.html'>BodyInit</a>? <strong>body</strong> &#x3D; null, optional <a href='ResponseInit.html'>ResponseInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-static>
 
-  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();</span><span class=def>
-  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>unsigned short</span> <strong>status</strong> &#x3D; 302);</span><span class=def>
+  [NewObject] static <a href='Response.html'>Response</a> <strong>error</strong>();</span><span class=def id=operation-static>
+  [NewObject] static <a href='Response.html'>Response</a> <strong>redirect</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <span class=primitive>unsigned short</span> <strong>status</strong> &#x3D; 302);</span><span class=def id=attribute-type>
 
-  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;</span><span class=def>
+  readonly attribute <a href='ResponseType.html'>ResponseType</a> <strong>type</strong>;</span><span class=def id=attribute-url>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>redirected</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>ok</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-redirected>
+  readonly attribute <span class=primitive>boolean</span> <strong>redirected</strong>;</span><span class=def id=attribute-status>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def id=attribute-ok>
+  readonly attribute <span class=primitive>boolean</span> <strong>ok</strong>;</span><span class=def id=attribute-statusText>
+  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def id=attribute-headers>
+  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def id=operation-clone>
 
-  [NewObject] <a href='Response.html'>Response</a> <strong>clone</strong>();</span><span class=def>
-  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>bodyUsed</strong>;</span><span class=def>
-  [NewObject] Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>arrayBuffer</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def>
+  [NewObject] <a href='Response.html'>Response</a> <strong>clone</strong>();</span><span class=def id=attribute-body>
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;</span><span class=def id=attribute-bodyUsed>
+  readonly attribute <span class=primitive>boolean</span> <strong>bodyUsed</strong>;</span><span class=def id=operation-arrayBuffer>
+  [NewObject] Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>arrayBuffer</strong>();</span><span class=def id=operation-blob>
+  [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def id=operation-formData>
+  [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def id=operation-json>
+  [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def id=operation-text>
   [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Response</code></h3>
+
+  <ul>
+    <li><code><a href="Response.html">Response</a><a href=Response.html#constructor-BodyInit-ResponseInit>()</a></code></li>
+<li><code><a href="Response.html">Response</a><a href=Response.html#operation-static>.error()</a></code></li>
+<li><code><a href="Response.html">Response</a><a href=Response.html#operation-static>.redirect()</a></code></li>
+<li><code><a href="Response.html">Response</a><a href=Response.html#operation-clone>.clone()</a></code></li>
+<li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a><a href=WindowOrWorkerGlobalScope.html#operation-fetch-RequestInfo-RequestInit>.fetch()</a></code></li>
+<li><code><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a><a href=BackgroundFetchRecord.html#attribute-responseReady>.responseReady</a></code></li>
+<li><code><a href="Cache.html">Cache</a><a href=Cache.html#operation-match-RequestInfo-CacheQueryOptions>.match()</a></code></li>
+<li><code><a href="Cache.html">Cache</a><a href=Cache.html#operation-matchAll-RequestInfo-CacheQueryOptions>.matchAll()</a></code></li>
+<li><code><a href="CacheStorage.html">CacheStorage</a><a href=CacheStorage.html#operation-match-RequestInfo-MultiCacheQueryOptions>.match()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></li>
-<li><a href="Cache.html">Cache</a></li>
-<li><a href="CacheStorage.html">CacheStorage</a></li>
-<li><a href="FetchEvent.html">FetchEvent</a></li>
-<li><a href="Response.html">Response</a></li>
-<li><a href="WebAssembly.html">WebAssembly</a></li>
-<li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li>
+    <li><code><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></code></li>
+<li><code><a href="Cache.html">Cache</a></code></li>
+<li><code><a href="CacheStorage.html">CacheStorage</a></code></li>
+<li><code><a href="FetchEvent.html">FetchEvent</a></code></li>
+<li><code><a href="Response.html">Response</a></code></li>
+<li><code><a href="WebAssembly.html">WebAssembly</a></code></li>
+<li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

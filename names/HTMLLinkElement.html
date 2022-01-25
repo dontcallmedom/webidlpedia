@@ -11,38 +11,38 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-href>
 
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>as</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; (default &quot;&quot;)
-  </span>[SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>media</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sizes</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>imageSrcset</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def id=attribute-crossOrigin>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def id=attribute-rel>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def id=attribute-as>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>as</strong>;</span><span class=def id=attribute-relList><span class="comment"> &#x2F;&#x2F; (default &quot;&quot;)
+  </span>[SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def id=attribute-media>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>media</strong>;</span><span class=def id=attribute-integrity>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-hreflang>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def id=attribute-type>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-sizes>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sizes</strong>;</span><span class=def id=attribute-imageSrcset>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>imageSrcset</strong>;</span><span class=def id=attribute-imageSizes>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def id=attribute-referrerPolicy>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-disabled>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span><span class=def>
 <a href='HTMLLinkElement.html'>HTMLLinkElement</a> includes <a href='LinkStyle.html'>LinkStyle</a>;</span><span class=def>
 
-partial interface <strong>HTMLLinkElement</strong> {<span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def>
+partial interface <strong>HTMLLinkElement</strong> {<span class=def id=attribute-charset>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-rev>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def id=attribute-target>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#link">Priority Hints</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLLinkElement</strong> {<span class=def>
+partial interface <strong>HTMLLinkElement</strong> {<span class=def id=attribute-importance>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>importance</strong>;</span>
 };</span></code></pre></li>
 
@@ -50,31 +50,39 @@ partial interface <strong>HTMLLinkElement</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-href>
 
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>as</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; (default &quot;&quot;)
-  </span>[SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>media</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sizes</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>imageSrcset</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span><span class=def>
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def id=attribute-crossOrigin>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>crossOrigin</strong>;</span><span class=def id=attribute-rel>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def id=attribute-as>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>as</strong>;</span><span class=def id=attribute-relList><span class="comment"> &#x2F;&#x2F; (default &quot;&quot;)
+  </span>[SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def id=attribute-media>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>media</strong>;</span><span class=def id=attribute-integrity>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-hreflang>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def id=attribute-type>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-sizes>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>sizes</strong>;</span><span class=def id=attribute-imageSrcset>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>imageSrcset</strong>;</span><span class=def id=attribute-imageSizes>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def id=attribute-referrerPolicy>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-disabled>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def id=attribute-charset>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-rev>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def id=attribute-target>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span><span class=def id=attribute-sheet>
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span><span class=def id=attribute-importance>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>importance</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLLinkElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLLinkElement.html">HTMLLinkElement</a><a href=HTMLLinkElement.html#constructor>()</a></code></li>
+
+  </ul>
 </section>
 
   <section><h3>Referring specifications</h3>

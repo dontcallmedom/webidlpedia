@@ -11,28 +11,37 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>TextTrackCue</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <a href='TextTrack.html'>TextTrack</a>? <strong>track</strong>;</span><span class=def>
+interface <strong>TextTrackCue</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-track>
+  readonly attribute <a href='TextTrack.html'>TextTrack</a>? <strong>track</strong>;</span><span class=def id=attribute-id>
 
-  attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def>
-  attribute <span class=primitive>double</span> <strong>startTime</strong>;</span><span class=def>
-  attribute <span class=primitive>unrestricted double</span> <strong>endTime</strong>;</span><span class=def>
-  attribute <span class=primitive>boolean</span> <strong>pauseOnExit</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def id=attribute-startTime>
+  attribute <span class=primitive>double</span> <strong>startTime</strong>;</span><span class=def id=attribute-endTime>
+  attribute <span class=primitive>unrestricted double</span> <strong>endTime</strong>;</span><span class=def id=attribute-pauseOnExit>
+  attribute <span class=primitive>boolean</span> <strong>pauseOnExit</strong>;</span><span class=def id=attribute-onenter>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenter</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenter</strong>;</span><span class=def id=attribute-onexit>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onexit</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>TextTrackCue</code></h3>
+
+  <ul>
+    <li><code><a href="TextTrackCueList.html">TextTrackCueList</a><a href=TextTrackCueList.html#operation-getter>[<var>index</var>]</a></code></li>
+<li><code><a href="TextTrackCueList.html">TextTrackCueList</a><a href=TextTrackCueList.html#operation-getCueById-DOMString>.getCueById()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DataCue.html">DataCue</a></li>
-<li><a href="TextTrack.html">TextTrack</a></li>
-<li><a href="TextTrackCueList.html">TextTrackCueList</a></li>
-<li><a href="VTTCue.html">VTTCue</a></li>
+    <li><code><a href="DataCue.html">DataCue</a></code></li>
+<li><code><a href="TextTrack.html">TextTrack</a></code></li>
+<li><code><a href="TextTrackCueList.html">TextTrackCueList</a></code></li>
+<li><code><a href="VTTCue.html">VTTCue</a></code></li>
 
   </ul>
 </section>

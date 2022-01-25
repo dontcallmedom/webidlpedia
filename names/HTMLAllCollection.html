@@ -10,10 +10,10 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;common-dom-interfaces.html#htmlallcollection">HTML Standard</a> defines <code>HTMLAllCollection</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>,
  LegacyUnenumerableNamedProperties]
-interface <strong>HTMLAllCollection</strong> {<span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  <strong>getter</strong> <a href='Element.html'>Element</a> (<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
-  getter (<a href='HTMLCollection.html'>HTMLCollection</a> or <a href='Element.html'>Element</a>)? <strong>namedItem</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def>
+interface <strong>HTMLAllCollection</strong> {<span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=operation-getter>
+  <strong>getter</strong> <a href='Element.html'>Element</a> (<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-getter>
+  getter (<a href='HTMLCollection.html'>HTMLCollection</a> or <a href='Element.html'>Element</a>)? <strong>namedItem</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-item-DOMString>
   (<a href='HTMLCollection.html'>HTMLCollection</a> or <a href='Element.html'>Element</a>)? <strong>item</strong>(optional <span class=primitive>DOMString</span> <strong>nameOrIndex</strong>);</span><span class="comment">
 
   &#x2F;&#x2F; Note: HTMLAllCollection objects have a custom [[Call]] internal method and an [[IsHTMLDDA]] internal slot.
@@ -22,10 +22,18 @@ interface <strong>HTMLAllCollection</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>HTMLAllCollection</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#attribute-all>.all</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
 
   </ul>
 </section>

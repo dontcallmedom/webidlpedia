@@ -10,12 +10,12 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;layers&#x2F;#xrquadlayer">WebXR Layers API Level 1</a> defines <code>XRQuadLayer</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRQuadLayer</strong> : <a href='XRCompositionLayer.html'>XRCompositionLayer</a> {<span class=def>
-  attribute <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>;</span><span class=def>
-  attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRQuadLayer</strong> : <a href='XRCompositionLayer.html'>XRCompositionLayer</a> {<span class=def id=attribute-space>
+  attribute <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>;</span><span class=def id=attribute-transform>
+  attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;</span><span class=def id=attribute-width>
 
-  attribute <span class=primitive>float</span> <strong>width</strong>;</span><span class=def>
-  attribute <span class=primitive>float</span> <strong>height</strong>;</span><span class=def><span class="comment">
+  attribute <span class=primitive>float</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  attribute <span class=primitive>float</span> <strong>height</strong>;</span><span class=def id=attribute-onredraw><span class="comment">
 
   &#x2F;&#x2F; Events
   </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onredraw</strong>;</span>
@@ -24,11 +24,20 @@ base: ../
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>XRQuadLayer</code></h3>
+
+  <ul>
+    <li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a><a href=XRWebGLBinding.html#operation-createQuadLayer-XRQuadLayerInit>.createQuadLayer()</a></code></li>
+<li><code><a href="XRMediaBinding.html">XRMediaBinding</a><a href=XRMediaBinding.html#operation-createQuadLayer-HTMLVideoElement-XRMediaQuadLayerInit>.createQuadLayer()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="XRMediaBinding.html">XRMediaBinding</a></li>
-<li><a href="XRWebGLBinding.html">XRWebGLBinding</a></li>
+    <li><code><a href="XRMediaBinding.html">XRMediaBinding</a></code></li>
+<li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a></code></li>
 
   </ul>
 </section>

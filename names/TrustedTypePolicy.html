@@ -11,20 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>TrustedTypePolicy</strong> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  <a href='TrustedHTML.html'>TrustedHTML</a> <strong>createHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
-  <a href='TrustedScript.html'>TrustedScript</a> <strong>createScript</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
+interface <strong>TrustedTypePolicy</strong> {<span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=operation-createHTML-DOMString-any>
+  <a href='TrustedHTML.html'>TrustedHTML</a> <strong>createHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-createScript-DOMString-any>
+  <a href='TrustedScript.html'>TrustedScript</a> <strong>createScript</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-createScriptURL-DOMString-any>
   <a href='TrustedScriptURL.html'>TrustedScriptURL</a> <strong>createScriptURL</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, <span class=primitive>any</span>... <strong>arguments</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>TrustedTypePolicy</code></h3>
+
+  <ul>
+    <li><code><a href="TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a><a href=TrustedTypePolicyFactory.html#operation-createPolicy-DOMString-TrustedTypePolicyOptions>.createPolicy()</a></code></li>
+<li><code><a href="TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a><a href=TrustedTypePolicyFactory.html#attribute-defaultPolicy>.defaultPolicy</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a></li>
+    <li><code><a href="TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a></code></li>
 
   </ul>
 </section>

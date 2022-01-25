@@ -9,34 +9,34 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#event">DOM Standard</a> defines <code>Event</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;*]
-interface <strong>Event</strong> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='EventInit.html'>EventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
+interface <strong>Event</strong> {<span class=def id=constructor-DOMString-EventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='EventInit.html'>EventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-type>
 
-  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>target</strong>;</span><span class=def>
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>srcElement</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
-  </span>readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>currentTarget</strong>;</span><span class=def>
-  sequence&lt;<a href='EventTarget.html'>EventTarget</a>&gt; <strong>composedPath</strong>();</span><span class=def>
+  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-target>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>target</strong>;</span><span class=def id=attribute-srcElement>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>srcElement</strong>;</span><span class=def id=attribute-currentTarget><span class="comment"> &#x2F;&#x2F; legacy
+  </span>readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>currentTarget</strong>;</span><span class=def id=operation-composedPath>
+  sequence&lt;<a href='EventTarget.html'>EventTarget</a>&gt; <strong>composedPath</strong>();</span><span class=def id=const-NONE>
 
-  const <span class=primitive>unsigned short</span> <strong>NONE</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>CAPTURING_PHASE</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>AT_TARGET</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>BUBBLING_PHASE</strong> &#x3D; 3;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>eventPhase</strong>;</span><span class=def>
+  const <span class=primitive>unsigned short</span> <strong>NONE</strong> &#x3D; 0;</span><span class=def id=const-CAPTURING_PHASE>
+  const <span class=primitive>unsigned short</span> <strong>CAPTURING_PHASE</strong> &#x3D; 1;</span><span class=def id=const-AT_TARGET>
+  const <span class=primitive>unsigned short</span> <strong>AT_TARGET</strong> &#x3D; 2;</span><span class=def id=const-BUBBLING_PHASE>
+  const <span class=primitive>unsigned short</span> <strong>BUBBLING_PHASE</strong> &#x3D; 3;</span><span class=def id=attribute-eventPhase>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>eventPhase</strong>;</span><span class=def id=operation-stopPropagation>
 
-  <span class=primitive>undefined</span> <strong>stopPropagation</strong>();</span><span class=def>
-           attribute <span class=primitive>boolean</span> <strong>cancelBubble</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .stopPropagation()
-  </span><span class=primitive>undefined</span> <strong>stopImmediatePropagation</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>stopPropagation</strong>();</span><span class=def id=attribute-cancelBubble>
+           attribute <span class=primitive>boolean</span> <strong>cancelBubble</strong>;</span><span class=def id=operation-stopImmediatePropagation><span class="comment"> &#x2F;&#x2F; legacy alias of .stopPropagation()
+  </span><span class=primitive>undefined</span> <strong>stopImmediatePropagation</strong>();</span><span class=def id=attribute-bubbles>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>bubbles</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>cancelable</strong>;</span><span class=def>
-           attribute <span class=primitive>boolean</span> <strong>returnValue</strong>;</span><span class=def><span class="comment">  &#x2F;&#x2F; legacy
-  </span><span class=primitive>undefined</span> <strong>preventDefault</strong>();</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>defaultPrevented</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>composed</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>bubbles</strong>;</span><span class=def id=attribute-cancelable>
+  readonly attribute <span class=primitive>boolean</span> <strong>cancelable</strong>;</span><span class=def id=attribute-returnValue>
+           attribute <span class=primitive>boolean</span> <strong>returnValue</strong>;</span><span class=def id=operation-preventDefault><span class="comment">  &#x2F;&#x2F; legacy
+  </span><span class=primitive>undefined</span> <strong>preventDefault</strong>();</span><span class=def id=attribute-defaultPrevented>
+  readonly attribute <span class=primitive>boolean</span> <strong>defaultPrevented</strong>;</span><span class=def id=attribute-composed>
+  readonly attribute <span class=primitive>boolean</span> <strong>composed</strong>;</span><span class=def id=attribute-isTrusted>
 
-  [LegacyUnforgeable] readonly attribute <span class=primitive>boolean</span> <strong>isTrusted</strong>;</span><span class=def>
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeStamp</strong>;</span><span class=def>
+  [LegacyUnforgeable] readonly attribute <span class=primitive>boolean</span> <strong>isTrusted</strong>;</span><span class=def id=attribute-timeStamp>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeStamp</strong>;</span><span class=def id=operation-initEvent-DOMString-boolean-boolean>
 
   <span class=primitive>undefined</span> <strong>initEvent</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <span class=primitive>boolean</span> <strong>bubbles</strong> &#x3D; false, optional <span class=primitive>boolean</span> <strong>cancelable</strong> &#x3D; false);</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre>
@@ -44,91 +44,101 @@ interface <strong>Event</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Event</code></h3>
+
+  <ul>
+    <li><code><a href="Event.html">Event</a><a href=Event.html#constructor-DOMString-EventInit>()</a></code></li>
+<li><code><a href="Window.html">Window</a><a href=Window.html#attribute-event>.event</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-createEvent-DOMString>.createEvent()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="AnimationEvent.html">AnimationEvent</a></li>
-<li><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a></li>
-<li><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a></li>
-<li><a href="AppHistoryCurrentChangeEvent.html">AppHistoryCurrentChangeEvent</a></li>
-<li><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></li>
-<li><a href="AudioProcessingEvent.html">AudioProcessingEvent</a></li>
-<li><a href="BeforeInstallPromptEvent.html">BeforeInstallPromptEvent</a></li>
-<li><a href="BeforeUnloadEvent.html">BeforeUnloadEvent</a></li>
-<li><a href="BlobEvent.html">BlobEvent</a></li>
-<li><a href="BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></li>
-<li><a href="CharacterBoundsUpdateEvent.html">CharacterBoundsUpdateEvent</a></li>
-<li><a href="ClipboardEvent.html">ClipboardEvent</a></li>
-<li><a href="CloseEvent.html">CloseEvent</a></li>
-<li><a href="CookieChangeEvent.html">CookieChangeEvent</a></li>
-<li><a href="CustomEvent.html">CustomEvent</a></li>
-<li><a href="DeviceMotionEvent.html">DeviceMotionEvent</a></li>
-<li><a href="DeviceOrientationEvent.html">DeviceOrientationEvent</a></li>
-<li><a href="Document.html">Document</a></li>
-<li><a href="ErrorEvent.html">ErrorEvent</a></li>
-<li><a href="EventListener.html">EventListener</a></li>
-<li><a href="EventTarget.html">EventTarget</a></li>
-<li><a href="ExtendableEvent.html">ExtendableEvent</a></li>
-<li><a href="FontFaceSetLoadEvent.html">FontFaceSetLoadEvent</a></li>
-<li><a href="FormDataEvent.html">FormDataEvent</a></li>
-<li><a href="GPUUncapturedErrorEvent.html">GPUUncapturedErrorEvent</a></li>
-<li><a href="GamepadEvent.html">GamepadEvent</a></li>
-<li><a href="HIDConnectionEvent.html">HIDConnectionEvent</a></li>
-<li><a href="HIDInputReportEvent.html">HIDInputReportEvent</a></li>
-<li><a href="HashChangeEvent.html">HashChangeEvent</a></li>
-<li><a href="IDBVersionChangeEvent.html">IDBVersionChangeEvent</a></li>
-<li><a href="MIDIConnectionEvent.html">MIDIConnectionEvent</a></li>
-<li><a href="MIDIMessageEvent.html">MIDIMessageEvent</a></li>
-<li><a href="MediaEncryptedEvent.html">MediaEncryptedEvent</a></li>
-<li><a href="MediaKeyMessageEvent.html">MediaKeyMessageEvent</a></li>
-<li><a href="MediaQueryListEvent.html">MediaQueryListEvent</a></li>
-<li><a href="MediaRecorderErrorEvent.html">MediaRecorderErrorEvent</a></li>
-<li><a href="MediaStreamTrackEvent.html">MediaStreamTrackEvent</a></li>
-<li><a href="MessageEvent.html">MessageEvent</a></li>
-<li><a href="MutationEvent.html">MutationEvent</a></li>
-<li><a href="NDEFReadingEvent.html">NDEFReadingEvent</a></li>
-<li><a href="OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a></li>
-<li><a href="PageTransitionEvent.html">PageTransitionEvent</a></li>
-<li><a href="PaymentRequestUpdateEvent.html">PaymentRequestUpdateEvent</a></li>
-<li><a href="PictureInPictureEvent.html">PictureInPictureEvent</a></li>
-<li><a href="PopStateEvent.html">PopStateEvent</a></li>
-<li><a href="PortalActivateEvent.html">PortalActivateEvent</a></li>
-<li><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li>
-<li><a href="PresentationConnectionCloseEvent.html">PresentationConnectionCloseEvent</a></li>
-<li><a href="ProgressEvent.html">ProgressEvent</a></li>
-<li><a href="PromiseRejectionEvent.html">PromiseRejectionEvent</a></li>
-<li><a href="RTCDTMFToneChangeEvent.html">RTCDTMFToneChangeEvent</a></li>
-<li><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></li>
-<li><a href="RTCErrorEvent.html">RTCErrorEvent</a></li>
-<li><a href="RTCPeerConnectionIceErrorEvent.html">RTCPeerConnectionIceErrorEvent</a></li>
-<li><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></li>
-<li><a href="RTCTrackEvent.html">RTCTrackEvent</a></li>
-<li><a href="RTCTransformEvent.html">RTCTransformEvent</a></li>
-<li><a href="SFrameTransformErrorEvent.html">SFrameTransformErrorEvent</a></li>
-<li><a href="SecurityPolicyViolationEvent.html">SecurityPolicyViolationEvent</a></li>
-<li><a href="SensorErrorEvent.html">SensorErrorEvent</a></li>
-<li><a href="SpeechRecognitionErrorEvent.html">SpeechRecognitionErrorEvent</a></li>
-<li><a href="SpeechRecognitionEvent.html">SpeechRecognitionEvent</a></li>
-<li><a href="SpeechSynthesisEvent.html">SpeechSynthesisEvent</a></li>
-<li><a href="StorageEvent.html">StorageEvent</a></li>
-<li><a href="SubmitEvent.html">SubmitEvent</a></li>
-<li><a href="TaskPriorityChangeEvent.html">TaskPriorityChangeEvent</a></li>
-<li><a href="TextFormatUpdateEvent.html">TextFormatUpdateEvent</a></li>
-<li><a href="TextUpdateEvent.html">TextUpdateEvent</a></li>
-<li><a href="TimeEvent.html">TimeEvent</a></li>
-<li><a href="TrackEvent.html">TrackEvent</a></li>
-<li><a href="TransitionEvent.html">TransitionEvent</a></li>
-<li><a href="UIEvent.html">UIEvent</a></li>
-<li><a href="USBConnectionEvent.html">USBConnectionEvent</a></li>
-<li><a href="ValueEvent.html">ValueEvent</a></li>
-<li><a href="WebGLContextEvent.html">WebGLContextEvent</a></li>
-<li><a href="Window.html">Window</a></li>
-<li><a href="WindowControlsOverlayGeometryChangeEvent.html">WindowControlsOverlayGeometryChangeEvent</a></li>
-<li><a href="XRInputSourceEvent.html">XRInputSourceEvent</a></li>
-<li><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></li>
-<li><a href="XRLayerEvent.html">XRLayerEvent</a></li>
-<li><a href="XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a></li>
-<li><a href="XRSessionEvent.html">XRSessionEvent</a></li>
+    <li><code><a href="AnimationEvent.html">AnimationEvent</a></code></li>
+<li><code><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a></code></li>
+<li><code><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a></code></li>
+<li><code><a href="AppHistoryCurrentChangeEvent.html">AppHistoryCurrentChangeEvent</a></code></li>
+<li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></code></li>
+<li><code><a href="AudioProcessingEvent.html">AudioProcessingEvent</a></code></li>
+<li><code><a href="BeforeInstallPromptEvent.html">BeforeInstallPromptEvent</a></code></li>
+<li><code><a href="BeforeUnloadEvent.html">BeforeUnloadEvent</a></code></li>
+<li><code><a href="BlobEvent.html">BlobEvent</a></code></li>
+<li><code><a href="BluetoothAdvertisingEvent.html">BluetoothAdvertisingEvent</a></code></li>
+<li><code><a href="CharacterBoundsUpdateEvent.html">CharacterBoundsUpdateEvent</a></code></li>
+<li><code><a href="ClipboardEvent.html">ClipboardEvent</a></code></li>
+<li><code><a href="CloseEvent.html">CloseEvent</a></code></li>
+<li><code><a href="CookieChangeEvent.html">CookieChangeEvent</a></code></li>
+<li><code><a href="CustomEvent.html">CustomEvent</a></code></li>
+<li><code><a href="DeviceMotionEvent.html">DeviceMotionEvent</a></code></li>
+<li><code><a href="DeviceOrientationEvent.html">DeviceOrientationEvent</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="ErrorEvent.html">ErrorEvent</a></code></li>
+<li><code><a href="EventListener.html">EventListener</a></code></li>
+<li><code><a href="EventTarget.html">EventTarget</a></code></li>
+<li><code><a href="ExtendableEvent.html">ExtendableEvent</a></code></li>
+<li><code><a href="FontFaceSetLoadEvent.html">FontFaceSetLoadEvent</a></code></li>
+<li><code><a href="FormDataEvent.html">FormDataEvent</a></code></li>
+<li><code><a href="GPUUncapturedErrorEvent.html">GPUUncapturedErrorEvent</a></code></li>
+<li><code><a href="GamepadEvent.html">GamepadEvent</a></code></li>
+<li><code><a href="HIDConnectionEvent.html">HIDConnectionEvent</a></code></li>
+<li><code><a href="HIDInputReportEvent.html">HIDInputReportEvent</a></code></li>
+<li><code><a href="HashChangeEvent.html">HashChangeEvent</a></code></li>
+<li><code><a href="IDBVersionChangeEvent.html">IDBVersionChangeEvent</a></code></li>
+<li><code><a href="MIDIConnectionEvent.html">MIDIConnectionEvent</a></code></li>
+<li><code><a href="MIDIMessageEvent.html">MIDIMessageEvent</a></code></li>
+<li><code><a href="MediaEncryptedEvent.html">MediaEncryptedEvent</a></code></li>
+<li><code><a href="MediaKeyMessageEvent.html">MediaKeyMessageEvent</a></code></li>
+<li><code><a href="MediaQueryListEvent.html">MediaQueryListEvent</a></code></li>
+<li><code><a href="MediaRecorderErrorEvent.html">MediaRecorderErrorEvent</a></code></li>
+<li><code><a href="MediaStreamTrackEvent.html">MediaStreamTrackEvent</a></code></li>
+<li><code><a href="MessageEvent.html">MessageEvent</a></code></li>
+<li><code><a href="MutationEvent.html">MutationEvent</a></code></li>
+<li><code><a href="NDEFReadingEvent.html">NDEFReadingEvent</a></code></li>
+<li><code><a href="OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a></code></li>
+<li><code><a href="PageTransitionEvent.html">PageTransitionEvent</a></code></li>
+<li><code><a href="PaymentRequestUpdateEvent.html">PaymentRequestUpdateEvent</a></code></li>
+<li><code><a href="PictureInPictureEvent.html">PictureInPictureEvent</a></code></li>
+<li><code><a href="PopStateEvent.html">PopStateEvent</a></code></li>
+<li><code><a href="PortalActivateEvent.html">PortalActivateEvent</a></code></li>
+<li><code><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></code></li>
+<li><code><a href="PresentationConnectionCloseEvent.html">PresentationConnectionCloseEvent</a></code></li>
+<li><code><a href="ProgressEvent.html">ProgressEvent</a></code></li>
+<li><code><a href="PromiseRejectionEvent.html">PromiseRejectionEvent</a></code></li>
+<li><code><a href="RTCDTMFToneChangeEvent.html">RTCDTMFToneChangeEvent</a></code></li>
+<li><code><a href="RTCDataChannelEvent.html">RTCDataChannelEvent</a></code></li>
+<li><code><a href="RTCErrorEvent.html">RTCErrorEvent</a></code></li>
+<li><code><a href="RTCPeerConnectionIceErrorEvent.html">RTCPeerConnectionIceErrorEvent</a></code></li>
+<li><code><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></code></li>
+<li><code><a href="RTCTrackEvent.html">RTCTrackEvent</a></code></li>
+<li><code><a href="RTCTransformEvent.html">RTCTransformEvent</a></code></li>
+<li><code><a href="SFrameTransformErrorEvent.html">SFrameTransformErrorEvent</a></code></li>
+<li><code><a href="SecurityPolicyViolationEvent.html">SecurityPolicyViolationEvent</a></code></li>
+<li><code><a href="SensorErrorEvent.html">SensorErrorEvent</a></code></li>
+<li><code><a href="SpeechRecognitionErrorEvent.html">SpeechRecognitionErrorEvent</a></code></li>
+<li><code><a href="SpeechRecognitionEvent.html">SpeechRecognitionEvent</a></code></li>
+<li><code><a href="SpeechSynthesisEvent.html">SpeechSynthesisEvent</a></code></li>
+<li><code><a href="StorageEvent.html">StorageEvent</a></code></li>
+<li><code><a href="SubmitEvent.html">SubmitEvent</a></code></li>
+<li><code><a href="TaskPriorityChangeEvent.html">TaskPriorityChangeEvent</a></code></li>
+<li><code><a href="TextFormatUpdateEvent.html">TextFormatUpdateEvent</a></code></li>
+<li><code><a href="TextUpdateEvent.html">TextUpdateEvent</a></code></li>
+<li><code><a href="TimeEvent.html">TimeEvent</a></code></li>
+<li><code><a href="TrackEvent.html">TrackEvent</a></code></li>
+<li><code><a href="TransitionEvent.html">TransitionEvent</a></code></li>
+<li><code><a href="UIEvent.html">UIEvent</a></code></li>
+<li><code><a href="USBConnectionEvent.html">USBConnectionEvent</a></code></li>
+<li><code><a href="ValueEvent.html">ValueEvent</a></code></li>
+<li><code><a href="WebGLContextEvent.html">WebGLContextEvent</a></code></li>
+<li><code><a href="Window.html">Window</a></code></li>
+<li><code><a href="WindowControlsOverlayGeometryChangeEvent.html">WindowControlsOverlayGeometryChangeEvent</a></code></li>
+<li><code><a href="XRInputSourceEvent.html">XRInputSourceEvent</a></code></li>
+<li><code><a href="XRInputSourcesChangeEvent.html">XRInputSourcesChangeEvent</a></code></li>
+<li><code><a href="XRLayerEvent.html">XRLayerEvent</a></code></li>
+<li><code><a href="XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a></code></li>
+<li><code><a href="XRSessionEvent.html">XRSessionEvent</a></code></li>
 
   </ul>
 </section>

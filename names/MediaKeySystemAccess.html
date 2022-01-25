@@ -10,20 +10,28 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;encrypted-media&#x2F;#dom-mediakeysystemaccess">Encrypted Media Extensions</a> defines <code>MediaKeySystemAccess</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext] interface <strong>MediaKeySystemAccess</strong> {<span class=def>
-    readonly        attribute <span class=primitive>DOMString</span> <strong>keySystem</strong>;</span><span class=def>
-    <a href='MediaKeySystemConfiguration.html'>MediaKeySystemConfiguration</a> <strong>getConfiguration</strong> ();</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext] interface <strong>MediaKeySystemAccess</strong> {<span class=def id=attribute-keySystem>
+    readonly        attribute <span class=primitive>DOMString</span> <strong>keySystem</strong>;</span><span class=def id=operation-getConfiguration>
+    <a href='MediaKeySystemConfiguration.html'>MediaKeySystemConfiguration</a> <strong>getConfiguration</strong> ();</span><span class=def id=operation-createMediaKeys>
     Promise&lt;<a href='MediaKeys.html'>MediaKeys</a>&gt;          <strong>createMediaKeys</strong> ();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>MediaKeySystemAccess</code></h3>
+
+  <ul>
+    <li><code><a href="Navigator.html">Navigator</a><a href=Navigator.html#operation-requestMediaKeySystemAccess-DOMString-MediaKeySystemConfiguration>.requestMediaKeySystemAccess()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="MediaCapabilitiesDecodingInfo.html">MediaCapabilitiesDecodingInfo</a></li>
-<li><a href="Navigator.html">Navigator</a></li>
+    <li><code><a href="MediaCapabilitiesDecodingInfo.html">MediaCapabilitiesDecodingInfo</a></code></li>
+<li><code><a href="Navigator.html">Navigator</a></code></li>
 
   </ul>
 </section>

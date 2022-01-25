@@ -11,23 +11,23 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUQueue</strong> {<span class=def>
-    <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def>
+interface <strong>GPUQueue</strong> {<span class=def id=operation-submit-GPUCommandBuffer>
+    <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def id=operation-onSubmittedWorkDone>
 
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-BufferSource-GPUSize64-GPUSize64>
 
     <span class=primitive>undefined</span> <strong>writeBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
         [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
-        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-BufferSource-GPUImageDataLayout-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>writeTexture</strong>(
         <a href='GPUImageCopyTexture.html'>GPUImageCopyTexture</a> <strong>destination</strong>,
         [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
         <a href='GPUImageDataLayout.html'>GPUImageDataLayout</a> <strong>dataLayout</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def>
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def id=operation-copyExternalImageToTexture-GPUImageCopyExternalImage-GPUImageCopyTextureTagged-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>copyExternalImageToTexture</strong>(
         <a href='GPUImageCopyExternalImage.html'>GPUImageCopyExternalImage</a> <strong>source</strong>,
@@ -39,36 +39,44 @@ interface <strong>GPUQueue</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUQueue</strong> {<span class=def>
-    <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def>
+interface <strong>GPUQueue</strong> {<span class=def id=operation-submit-GPUCommandBuffer>
+    <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def id=operation-onSubmittedWorkDone>
 
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-BufferSource-GPUSize64-GPUSize64>
 
     <span class=primitive>undefined</span> <strong>writeBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
         [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
-        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-BufferSource-GPUImageDataLayout-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>writeTexture</strong>(
         <a href='GPUImageCopyTexture.html'>GPUImageCopyTexture</a> <strong>destination</strong>,
         [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
         <a href='GPUImageDataLayout.html'>GPUImageDataLayout</a> <strong>dataLayout</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def>
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def id=operation-copyExternalImageToTexture-GPUImageCopyExternalImage-GPUImageCopyTextureTagged-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>copyExternalImageToTexture</strong>(
         <a href='GPUImageCopyExternalImage.html'>GPUImageCopyExternalImage</a> <strong>source</strong>,
         <a href='GPUImageCopyTextureTagged.html'>GPUImageCopyTextureTagged</a> <strong>destination</strong>,
-        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def>
+        <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>copySize</strong>);</span><span class=def id=attribute-label>
     attribute (<span class=primitive>USVString</span> or <span class=primitive>undefined</span>) <strong>label</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>GPUQueue</code></h3>
+
+  <ul>
+    <li><code><a href="GPUDevice.html">GPUDevice</a><a href=GPUDevice.html#attribute-queue>.queue</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPUDevice.html">GPUDevice</a></li>
+    <li><code><a href="GPUDevice.html">GPUDevice</a></code></li>
 
   </ul>
 </section>

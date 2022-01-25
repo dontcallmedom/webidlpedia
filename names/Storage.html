@@ -11,25 +11,35 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Storage</strong> {<span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  <span class=primitive>DOMString</span>? <strong>key</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
-  getter <span class=primitive>DOMString</span>? <strong>getItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>);</span><span class=def>
-  setter <span class=primitive>undefined</span> <strong>setItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def>
-  deleter <span class=primitive>undefined</span> <strong>removeItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>);</span><span class=def>
+interface <strong>Storage</strong> {<span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=operation-key-unsigned long>
+  <span class=primitive>DOMString</span>? <strong>key</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-getter>
+  getter <span class=primitive>DOMString</span>? <strong>getItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>);</span><span class=def id=operation-setter>
+  setter <span class=primitive>undefined</span> <strong>setItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def id=operation-deleter>
+  deleter <span class=primitive>undefined</span> <strong>removeItem</strong>(<span class=primitive>DOMString</span> <strong>key</strong>);</span><span class=def id=operation-clear>
   <span class=primitive>undefined</span> <strong>clear</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Storage</code></h3>
+
+  <ul>
+    <li><code><a href="WindowSessionStorage.html">WindowSessionStorage</a><a href=WindowSessionStorage.html#attribute-sessionStorage>.sessionStorage</a></code></li>
+<li><code><a href="WindowLocalStorage.html">WindowLocalStorage</a><a href=WindowLocalStorage.html#attribute-localStorage>.localStorage</a></code></li>
+<li><code><a href="StorageEvent.html">StorageEvent</a><a href=StorageEvent.html#attribute-storageArea>.storageArea</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="StorageEvent.html">StorageEvent</a></li>
-<li><a href="StorageEventInit.html">StorageEventInit</a></li>
-<li><a href="WindowLocalStorage.html">WindowLocalStorage</a></li>
-<li><a href="WindowSessionStorage.html">WindowSessionStorage</a></li>
+    <li><code><a href="StorageEvent.html">StorageEvent</a></code></li>
+<li><code><a href="StorageEventInit.html">StorageEventInit</a></code></li>
+<li><code><a href="WindowLocalStorage.html">WindowLocalStorage</a></code></li>
+<li><code><a href="WindowSessionStorage.html">WindowSessionStorage</a></code></li>
 
   </ul>
 </section>

@@ -9,13 +9,13 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;uievents&#x2F;#uievent">UI Events</a> defines <code>UIEvent</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>UIEvent</strong> : <a href='Event.html'>Event</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='UIEventInit.html'>UIEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='Window.html'>Window</a>? <strong>view</strong>;</span><span class=def>
+interface <strong>UIEvent</strong> : <a href='Event.html'>Event</a> {<span class=def id=constructor-DOMString-UIEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='UIEventInit.html'>UIEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-view>
+  readonly attribute <a href='Window.html'>Window</a>? <strong>view</strong>;</span><span class=def id=attribute-detail>
   readonly attribute <span class=primitive>long</span> <strong>detail</strong>;</span>
 };</span><span class=def>
 
-partial interface <strong>UIEvent</strong> {<span class=def><span class="comment">
+partial interface <strong>UIEvent</strong> {<span class=def id=operation-initUIEvent-DOMString-boolean-boolean-Window-long><span class="comment">
   &#x2F;&#x2F; Deprecated in this specification
   </span><span class=primitive>undefined</span> <strong>initUIEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
     optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
@@ -24,7 +24,7 @@ partial interface <strong>UIEvent</strong> {<span class=def><span class="comment
     optional <span class=primitive>long</span> <strong>detailArg</strong> &#x3D; 0);</span>
 };</span><span class=def>
 
-partial interface <strong>UIEvent</strong> {<span class=def><span class="comment">
+partial interface <strong>UIEvent</strong> {<span class=def id=attribute-which><span class="comment">
   &#x2F;&#x2F; The following support legacy user agents
   </span>readonly attribute <span class=primitive>unsigned long</span> <strong>which</strong>;</span>
 };</span></code></pre>
@@ -32,38 +32,46 @@ partial interface <strong>UIEvent</strong> {<span class=def><span class="comment
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;input-device-capabilities&#x2F;#extensions-to-the-uievent-interface-and-uieventinit-dictionary">Input Device Capabilities</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>UIEvent</strong> {<span class=def>
+partial interface <strong>UIEvent</strong> {<span class=def id=attribute-sourceCapabilities>
   readonly attribute <a href='InputDeviceCapabilities.html'>InputDeviceCapabilities</a>? <strong>sourceCapabilities</strong>;</span>
 };</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>UIEvent</strong> : <a href='Event.html'>Event</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='UIEventInit.html'>UIEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='Window.html'>Window</a>? <strong>view</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span> <strong>detail</strong>;</span><span class=def><span class="comment">
+interface <strong>UIEvent</strong> : <a href='Event.html'>Event</a> {<span class=def id=constructor-DOMString-UIEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='UIEventInit.html'>UIEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-view>
+  readonly attribute <a href='Window.html'>Window</a>? <strong>view</strong>;</span><span class=def id=attribute-detail>
+  readonly attribute <span class=primitive>long</span> <strong>detail</strong>;</span><span class=def id=operation-initUIEvent-DOMString-boolean-boolean-Window-long><span class="comment">
   &#x2F;&#x2F; Deprecated in this specification
   </span><span class=primitive>undefined</span> <strong>initUIEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
     optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
     optional <span class=primitive>boolean</span> <strong>cancelableArg</strong> &#x3D; false,
     optional <a href='Window.html'>Window</a>? <strong>viewArg</strong> &#x3D; null,
-    optional <span class=primitive>long</span> <strong>detailArg</strong> &#x3D; 0);</span><span class=def><span class="comment">
+    optional <span class=primitive>long</span> <strong>detailArg</strong> &#x3D; 0);</span><span class=def id=attribute-which><span class="comment">
   &#x2F;&#x2F; The following support legacy user agents
-  </span>readonly attribute <span class=primitive>unsigned long</span> <strong>which</strong>;</span><span class=def>
+  </span>readonly attribute <span class=primitive>unsigned long</span> <strong>which</strong>;</span><span class=def id=attribute-sourceCapabilities>
   readonly attribute <a href='InputDeviceCapabilities.html'>InputDeviceCapabilities</a>? <strong>sourceCapabilities</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>UIEvent</code></h3>
+
+  <ul>
+    <li><code><a href="UIEvent.html">UIEvent</a><a href=UIEvent.html#constructor-DOMString-UIEventInit>()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CompositionEvent.html">CompositionEvent</a></li>
-<li><a href="FocusEvent.html">FocusEvent</a></li>
-<li><a href="InputEvent.html">InputEvent</a></li>
-<li><a href="KeyboardEvent.html">KeyboardEvent</a></li>
-<li><a href="MouseEvent.html">MouseEvent</a></li>
-<li><a href="NavigationEvent.html">NavigationEvent</a></li>
-<li><a href="TouchEvent.html">TouchEvent</a></li>
+    <li><code><a href="CompositionEvent.html">CompositionEvent</a></code></li>
+<li><code><a href="FocusEvent.html">FocusEvent</a></code></li>
+<li><code><a href="InputEvent.html">InputEvent</a></code></li>
+<li><code><a href="KeyboardEvent.html">KeyboardEvent</a></code></li>
+<li><code><a href="MouseEvent.html">MouseEvent</a></code></li>
+<li><code><a href="NavigationEvent.html">NavigationEvent</a></code></li>
+<li><code><a href="TouchEvent.html">TouchEvent</a></code></li>
 
   </ul>
 </section>

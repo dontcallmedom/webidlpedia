@@ -11,17 +11,17 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MutationEvent</strong> : <a href='Event.html'>Event</a> {<span class=def><span class="comment">
+interface <strong>MutationEvent</strong> : <a href='Event.html'>Event</a> {<span class=def id=const-MODIFICATION><span class="comment">
   &#x2F;&#x2F; attrChangeType
-  </span>const <span class=primitive>unsigned short</span> <strong>MODIFICATION</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>ADDITION</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>REMOVAL</strong> &#x3D; 3;</span><span class=def>
+  </span>const <span class=primitive>unsigned short</span> <strong>MODIFICATION</strong> &#x3D; 1;</span><span class=def id=const-ADDITION>
+  const <span class=primitive>unsigned short</span> <strong>ADDITION</strong> &#x3D; 2;</span><span class=def id=const-REMOVAL>
+  const <span class=primitive>unsigned short</span> <strong>REMOVAL</strong> &#x3D; 3;</span><span class=def id=attribute-relatedNode>
 
-  readonly attribute <a href='Node.html'>Node</a>? <strong>relatedNode</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>prevValue</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>newValue</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>attrName</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>attrChange</strong>;</span><span class=def>
+  readonly attribute <a href='Node.html'>Node</a>? <strong>relatedNode</strong>;</span><span class=def id=attribute-prevValue>
+  readonly attribute <span class=primitive>DOMString</span> <strong>prevValue</strong>;</span><span class=def id=attribute-newValue>
+  readonly attribute <span class=primitive>DOMString</span> <strong>newValue</strong>;</span><span class=def id=attribute-attrName>
+  readonly attribute <span class=primitive>DOMString</span> <strong>attrName</strong>;</span><span class=def id=attribute-attrChange>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>attrChange</strong>;</span><span class=def id=operation-initMutationEvent-DOMString-boolean-boolean-Node-DOMString-DOMString-DOMString-unsigned short>
 
   <span class=primitive>undefined</span> <strong>initMutationEvent</strong>(<span class=primitive>DOMString</span> <strong>typeArg</strong>,
     optional <span class=primitive>boolean</span> <strong>bubblesArg</strong> &#x3D; false,
@@ -35,5 +35,6 @@ interface <strong>MutationEvent</strong> : <a href='Event.html'>Event</a> {<span
   
   
 </section>
+
 
   

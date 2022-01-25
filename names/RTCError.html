@@ -11,19 +11,19 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCError</strong> : <a href='DOMException.html'>DOMException</a> {<span class=def>
-  <strong>constructor</strong>(<a href='RTCErrorInit.html'>RTCErrorInit</a> <strong>init</strong>, optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  readonly attribute <a href='RTCErrorDetailType.html'>RTCErrorDetailType</a> <strong>errorDetail</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span>? <strong>sdpLineNumber</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span>? <strong>sctpCauseCode</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span>? <strong>receivedAlert</strong>;</span><span class=def>
+interface <strong>RTCError</strong> : <a href='DOMException.html'>DOMException</a> {<span class=def id=constructor-RTCErrorInit-DOMString>
+  <strong>constructor</strong>(<a href='RTCErrorInit.html'>RTCErrorInit</a> <strong>init</strong>, optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def id=attribute-errorDetail>
+  readonly attribute <a href='RTCErrorDetailType.html'>RTCErrorDetailType</a> <strong>errorDetail</strong>;</span><span class=def id=attribute-sdpLineNumber>
+  readonly attribute <span class=primitive>long</span>? <strong>sdpLineNumber</strong>;</span><span class=def id=attribute-sctpCauseCode>
+  readonly attribute <span class=primitive>long</span>? <strong>sctpCauseCode</strong>;</span><span class=def id=attribute-receivedAlert>
+  readonly attribute <span class=primitive>unsigned long</span>? <strong>receivedAlert</strong>;</span><span class=def id=attribute-sentAlert>
   readonly attribute <span class=primitive>unsigned long</span>? <strong>sentAlert</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;#attributes">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>RTCError</strong> {<span class=def>
+partial interface <strong>RTCError</strong> {<span class=def id=attribute-httpRequestStatusCode>
   readonly attribute <span class=primitive>long</span>? <strong>httpRequestStatusCode</strong>;</span>
 };</span></code></pre></li>
 
@@ -31,22 +31,31 @@ partial interface <strong>RTCError</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCError</strong> : <a href='DOMException.html'>DOMException</a> {<span class=def>
-  <strong>constructor</strong>(<a href='RTCErrorInit.html'>RTCErrorInit</a> <strong>init</strong>, optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  readonly attribute <a href='RTCErrorDetailType.html'>RTCErrorDetailType</a> <strong>errorDetail</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span>? <strong>sdpLineNumber</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long</span>? <strong>sctpCauseCode</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span>? <strong>receivedAlert</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span>? <strong>sentAlert</strong>;</span><span class=def>
+interface <strong>RTCError</strong> : <a href='DOMException.html'>DOMException</a> {<span class=def id=constructor-RTCErrorInit-DOMString>
+  <strong>constructor</strong>(<a href='RTCErrorInit.html'>RTCErrorInit</a> <strong>init</strong>, optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def id=attribute-errorDetail>
+  readonly attribute <a href='RTCErrorDetailType.html'>RTCErrorDetailType</a> <strong>errorDetail</strong>;</span><span class=def id=attribute-sdpLineNumber>
+  readonly attribute <span class=primitive>long</span>? <strong>sdpLineNumber</strong>;</span><span class=def id=attribute-sctpCauseCode>
+  readonly attribute <span class=primitive>long</span>? <strong>sctpCauseCode</strong>;</span><span class=def id=attribute-receivedAlert>
+  readonly attribute <span class=primitive>unsigned long</span>? <strong>receivedAlert</strong>;</span><span class=def id=attribute-sentAlert>
+  readonly attribute <span class=primitive>unsigned long</span>? <strong>sentAlert</strong>;</span><span class=def id=attribute-httpRequestStatusCode>
   readonly attribute <span class=primitive>long</span>? <strong>httpRequestStatusCode</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>RTCError</code></h3>
+
+  <ul>
+    <li><code><a href="RTCError.html">RTCError</a><a href=RTCError.html#constructor-RTCErrorInit-DOMString>()</a></code></li>
+<li><code><a href="RTCErrorEvent.html">RTCErrorEvent</a><a href=RTCErrorEvent.html#attribute-error>.error</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="RTCErrorEvent.html">RTCErrorEvent</a></li>
-<li><a href="RTCErrorEventInit.html">RTCErrorEventInit</a></li>
+    <li><code><a href="RTCErrorEvent.html">RTCErrorEvent</a></code></li>
+<li><code><a href="RTCErrorEventInit.html">RTCErrorEventInit</a></code></li>
 
   </ul>
 </section>

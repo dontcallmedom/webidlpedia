@@ -11,10 +11,10 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>DOMImplementation</strong> {<span class=def>
-  [NewObject] <a href='DocumentType.html'>DocumentType</a> <strong>createDocumentType</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>, <span class=primitive>DOMString</span> <strong>publicId</strong>, <span class=primitive>DOMString</span> <strong>systemId</strong>);</span><span class=def>
-  [NewObject] <a href='XMLDocument.html'>XMLDocument</a> <strong>createDocument</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong> &#x3D; null);</span><span class=def>
-  [NewObject] <a href='Document.html'>Document</a> <strong>createHTMLDocument</strong>(optional <span class=primitive>DOMString</span> <strong>title</strong>);</span><span class=def>
+interface <strong>DOMImplementation</strong> {<span class=def id=operation-createDocumentType-DOMString-DOMString-DOMString>
+  [NewObject] <a href='DocumentType.html'>DocumentType</a> <strong>createDocumentType</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>, <span class=primitive>DOMString</span> <strong>publicId</strong>, <span class=primitive>DOMString</span> <strong>systemId</strong>);</span><span class=def id=operation-createDocument-DOMString-DOMString-DocumentType>
+  [NewObject] <a href='XMLDocument.html'>XMLDocument</a> <strong>createDocument</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong> &#x3D; null);</span><span class=def id=operation-createHTMLDocument-DOMString>
+  [NewObject] <a href='Document.html'>Document</a> <strong>createHTMLDocument</strong>(optional <span class=primitive>DOMString</span> <strong>title</strong>);</span><span class=def id=operation-hasFeature>
 
   <span class=primitive>boolean</span> <strong>hasFeature</strong>();</span><span class="comment"> &#x2F;&#x2F; useless; always returns true
 </span>};</span></code></pre>
@@ -22,10 +22,18 @@ interface <strong>DOMImplementation</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>DOMImplementation</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#attribute-implementation>.implementation</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
 
   </ul>
 </section>

@@ -11,463 +11,464 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 interface mixin <strong>WebGL2RenderingContextBase</strong>
-{<span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>READ_BUFFER</strong>                                   &#x3D; 0x0C02;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_ROW_LENGTH</strong>                             &#x3D; 0x0CF2;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_ROWS</strong>                              &#x3D; 0x0CF3;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_PIXELS</strong>                            &#x3D; 0x0CF4;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PACK_ROW_LENGTH</strong>                               &#x3D; 0x0D02;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PACK_SKIP_ROWS</strong>                                &#x3D; 0x0D03;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PACK_SKIP_PIXELS</strong>                              &#x3D; 0x0D04;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR</strong>                                         &#x3D; 0x1800;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH</strong>                                         &#x3D; 0x1801;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>STENCIL</strong>                                       &#x3D; 0x1802;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RED</strong>                                           &#x3D; 0x1903;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB8</strong>                                          &#x3D; 0x8051;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8</strong>                                         &#x3D; 0x8058;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB10_A2</strong>                                      &#x3D; 0x8059;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BINDING_3D</strong>                            &#x3D; 0x806A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_IMAGES</strong>                            &#x3D; 0x806D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_IMAGE_HEIGHT</strong>                           &#x3D; 0x806E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_3D</strong>                                    &#x3D; 0x806F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_WRAP_R</strong>                                &#x3D; 0x8072;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_3D_TEXTURE_SIZE</strong>                           &#x3D; 0x8073;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_2_10_10_10_REV</strong>                   &#x3D; 0x8368;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENTS_VERTICES</strong>                         &#x3D; 0x80E8;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENTS_INDICES</strong>                          &#x3D; 0x80E9;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MIN_LOD</strong>                               &#x3D; 0x813A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MAX_LOD</strong>                               &#x3D; 0x813B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BASE_LEVEL</strong>                            &#x3D; 0x813C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MAX_LEVEL</strong>                             &#x3D; 0x813D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MIN</strong>                                           &#x3D; 0x8007;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX</strong>                                           &#x3D; 0x8008;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH_COMPONENT24</strong>                             &#x3D; 0x81A6;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TEXTURE_LOD_BIAS</strong>                          &#x3D; 0x84FD;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_COMPARE_MODE</strong>                          &#x3D; 0x884C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_COMPARE_FUNC</strong>                          &#x3D; 0x884D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>CURRENT_QUERY</strong>                                 &#x3D; 0x8865;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>QUERY_RESULT</strong>                                  &#x3D; 0x8866;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>QUERY_RESULT_AVAILABLE</strong>                        &#x3D; 0x8867;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>STREAM_READ</strong>                                   &#x3D; 0x88E1;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>STREAM_COPY</strong>                                   &#x3D; 0x88E2;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>STATIC_READ</strong>                                   &#x3D; 0x88E5;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>STATIC_COPY</strong>                                   &#x3D; 0x88E6;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DYNAMIC_READ</strong>                                  &#x3D; 0x88E9;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DYNAMIC_COPY</strong>                                  &#x3D; 0x88EA;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_DRAW_BUFFERS</strong>                              &#x3D; 0x8824;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER0</strong>                                  &#x3D; 0x8825;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER1</strong>                                  &#x3D; 0x8826;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER2</strong>                                  &#x3D; 0x8827;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER3</strong>                                  &#x3D; 0x8828;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER4</strong>                                  &#x3D; 0x8829;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER5</strong>                                  &#x3D; 0x882A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER6</strong>                                  &#x3D; 0x882B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER7</strong>                                  &#x3D; 0x882C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER8</strong>                                  &#x3D; 0x882D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER9</strong>                                  &#x3D; 0x882E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER10</strong>                                 &#x3D; 0x882F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER11</strong>                                 &#x3D; 0x8830;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER12</strong>                                 &#x3D; 0x8831;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER13</strong>                                 &#x3D; 0x8832;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER14</strong>                                 &#x3D; 0x8833;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER15</strong>                                 &#x3D; 0x8834;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_UNIFORM_COMPONENTS</strong>               &#x3D; 0x8B49;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_UNIFORM_COMPONENTS</strong>                 &#x3D; 0x8B4A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_3D</strong>                                    &#x3D; 0x8B5F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_SHADOW</strong>                             &#x3D; 0x8B62;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAGMENT_SHADER_DERIVATIVE_HINT</strong>               &#x3D; 0x8B8B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_PACK_BUFFER</strong>                             &#x3D; 0x88EB;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_UNPACK_BUFFER</strong>                           &#x3D; 0x88EC;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_PACK_BUFFER_BINDING</strong>                     &#x3D; 0x88ED;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_UNPACK_BUFFER_BINDING</strong>                   &#x3D; 0x88EF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT2x3</strong>                                  &#x3D; 0x8B65;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT2x4</strong>                                  &#x3D; 0x8B66;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT3x2</strong>                                  &#x3D; 0x8B67;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT3x4</strong>                                  &#x3D; 0x8B68;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT4x2</strong>                                  &#x3D; 0x8B69;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT4x3</strong>                                  &#x3D; 0x8B6A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SRGB</strong>                                          &#x3D; 0x8C40;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SRGB8</strong>                                         &#x3D; 0x8C41;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SRGB8_ALPHA8</strong>                                  &#x3D; 0x8C43;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COMPARE_REF_TO_TEXTURE</strong>                        &#x3D; 0x884E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32F</strong>                                       &#x3D; 0x8814;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB32F</strong>                                        &#x3D; 0x8815;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16F</strong>                                       &#x3D; 0x881A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB16F</strong>                                        &#x3D; 0x881B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ATTRIB_ARRAY_INTEGER</strong>                   &#x3D; 0x88FD;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ARRAY_TEXTURE_LAYERS</strong>                      &#x3D; 0x88FF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MIN_PROGRAM_TEXEL_OFFSET</strong>                      &#x3D; 0x8904;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_PROGRAM_TEXEL_OFFSET</strong>                      &#x3D; 0x8905;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VARYING_COMPONENTS</strong>                        &#x3D; 0x8B4B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_2D_ARRAY</strong>                              &#x3D; 0x8C1A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BINDING_2D_ARRAY</strong>                      &#x3D; 0x8C1D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R11F_G11F_B10F</strong>                                &#x3D; 0x8C3A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_10F_11F_11F_REV</strong>                  &#x3D; 0x8C3B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB9_E5</strong>                                       &#x3D; 0x8C3D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_5_9_9_9_REV</strong>                      &#x3D; 0x8C3E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_MODE</strong>                &#x3D; 0x8C7F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS</strong>    &#x3D; 0x8C80;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_VARYINGS</strong>                   &#x3D; 0x8C83;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_START</strong>               &#x3D; 0x8C84;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_SIZE</strong>                &#x3D; 0x8C85;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</strong>         &#x3D; 0x8C88;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RASTERIZER_DISCARD</strong>                            &#x3D; 0x8C89;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS</strong> &#x3D; 0x8C8A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS</strong>       &#x3D; 0x8C8B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INTERLEAVED_ATTRIBS</strong>                           &#x3D; 0x8C8C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SEPARATE_ATTRIBS</strong>                              &#x3D; 0x8C8D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER</strong>                     &#x3D; 0x8C8E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_BINDING</strong>             &#x3D; 0x8C8F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32UI</strong>                                      &#x3D; 0x8D70;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB32UI</strong>                                       &#x3D; 0x8D71;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16UI</strong>                                      &#x3D; 0x8D76;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB16UI</strong>                                       &#x3D; 0x8D77;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8UI</strong>                                       &#x3D; 0x8D7C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB8UI</strong>                                        &#x3D; 0x8D7D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32I</strong>                                       &#x3D; 0x8D82;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB32I</strong>                                        &#x3D; 0x8D83;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16I</strong>                                       &#x3D; 0x8D88;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB16I</strong>                                        &#x3D; 0x8D89;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8I</strong>                                        &#x3D; 0x8D8E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB8I</strong>                                         &#x3D; 0x8D8F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RED_INTEGER</strong>                                   &#x3D; 0x8D94;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB_INTEGER</strong>                                   &#x3D; 0x8D98;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA_INTEGER</strong>                                  &#x3D; 0x8D99;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_ARRAY</strong>                              &#x3D; 0x8DC1;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_ARRAY_SHADOW</strong>                       &#x3D; 0x8DC4;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_CUBE_SHADOW</strong>                           &#x3D; 0x8DC5;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC2</strong>                             &#x3D; 0x8DC6;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC3</strong>                             &#x3D; 0x8DC7;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC4</strong>                             &#x3D; 0x8DC8;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_2D</strong>                                &#x3D; 0x8DCA;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_3D</strong>                                &#x3D; 0x8DCB;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_CUBE</strong>                              &#x3D; 0x8DCC;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_2D_ARRAY</strong>                          &#x3D; 0x8DCF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_2D</strong>                       &#x3D; 0x8DD2;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_3D</strong>                       &#x3D; 0x8DD3;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_CUBE</strong>                     &#x3D; 0x8DD4;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_2D_ARRAY</strong>                 &#x3D; 0x8DD7;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH_COMPONENT32F</strong>                            &#x3D; 0x8CAC;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH32F_STENCIL8</strong>                             &#x3D; 0x8CAD;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_32_UNSIGNED_INT_24_8_REV</strong>                &#x3D; 0x8DAD;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING</strong>         &#x3D; 0x8210;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE</strong>         &#x3D; 0x8211;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_RED_SIZE</strong>               &#x3D; 0x8212;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_GREEN_SIZE</strong>             &#x3D; 0x8213;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_BLUE_SIZE</strong>              &#x3D; 0x8214;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE</strong>             &#x3D; 0x8215;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE</strong>             &#x3D; 0x8216;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE</strong>           &#x3D; 0x8217;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_DEFAULT</strong>                           &#x3D; 0x8218;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_24_8</strong>                             &#x3D; 0x84FA;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH24_STENCIL8</strong>                              &#x3D; 0x88F0;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_NORMALIZED</strong>                           &#x3D; 0x8C17;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_FRAMEBUFFER_BINDING</strong>                      &#x3D; 0x8CA6;</span><span class=def><span class="comment"> &#x2F;* Same as FRAMEBUFFER_BINDING *&#x2F;
-  </span>const <a href='GLenum.html'>GLenum</a> <strong>READ_FRAMEBUFFER</strong>                              &#x3D; 0x8CA8;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_FRAMEBUFFER</strong>                              &#x3D; 0x8CA9;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>READ_FRAMEBUFFER_BINDING</strong>                      &#x3D; 0x8CAA;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RENDERBUFFER_SAMPLES</strong>                          &#x3D; 0x8CAB;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER</strong>          &#x3D; 0x8CD4;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COLOR_ATTACHMENTS</strong>                         &#x3D; 0x8CDF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT1</strong>                             &#x3D; 0x8CE1;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT2</strong>                             &#x3D; 0x8CE2;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT3</strong>                             &#x3D; 0x8CE3;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT4</strong>                             &#x3D; 0x8CE4;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT5</strong>                             &#x3D; 0x8CE5;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT6</strong>                             &#x3D; 0x8CE6;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT7</strong>                             &#x3D; 0x8CE7;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT8</strong>                             &#x3D; 0x8CE8;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT9</strong>                             &#x3D; 0x8CE9;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT10</strong>                            &#x3D; 0x8CEA;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT11</strong>                            &#x3D; 0x8CEB;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT12</strong>                            &#x3D; 0x8CEC;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT13</strong>                            &#x3D; 0x8CED;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT14</strong>                            &#x3D; 0x8CEE;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT15</strong>                            &#x3D; 0x8CEF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_INCOMPLETE_MULTISAMPLE</strong>            &#x3D; 0x8D56;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_SAMPLES</strong>                                   &#x3D; 0x8D57;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>HALF_FLOAT</strong>                                    &#x3D; 0x140B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG</strong>                                            &#x3D; 0x8227;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG_INTEGER</strong>                                    &#x3D; 0x8228;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R8</strong>                                            &#x3D; 0x8229;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG8</strong>                                           &#x3D; 0x822B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R16F</strong>                                          &#x3D; 0x822D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R32F</strong>                                          &#x3D; 0x822E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG16F</strong>                                         &#x3D; 0x822F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG32F</strong>                                         &#x3D; 0x8230;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R8I</strong>                                           &#x3D; 0x8231;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R8UI</strong>                                          &#x3D; 0x8232;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R16I</strong>                                          &#x3D; 0x8233;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R16UI</strong>                                         &#x3D; 0x8234;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R32I</strong>                                          &#x3D; 0x8235;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R32UI</strong>                                         &#x3D; 0x8236;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG8I</strong>                                          &#x3D; 0x8237;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG8UI</strong>                                         &#x3D; 0x8238;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG16I</strong>                                         &#x3D; 0x8239;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG16UI</strong>                                        &#x3D; 0x823A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG32I</strong>                                         &#x3D; 0x823B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG32UI</strong>                                        &#x3D; 0x823C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ARRAY_BINDING</strong>                          &#x3D; 0x85B5;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>R8_SNORM</strong>                                      &#x3D; 0x8F94;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RG8_SNORM</strong>                                     &#x3D; 0x8F95;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB8_SNORM</strong>                                    &#x3D; 0x8F96;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8_SNORM</strong>                                   &#x3D; 0x8F97;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SIGNED_NORMALIZED</strong>                             &#x3D; 0x8F9C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COPY_READ_BUFFER</strong>                              &#x3D; 0x8F36;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COPY_WRITE_BUFFER</strong>                             &#x3D; 0x8F37;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>COPY_READ_BUFFER_BINDING</strong>                      &#x3D; 0x8F36;</span><span class=def><span class="comment"> &#x2F;* Same as COPY_READ_BUFFER *&#x2F;
-  </span>const <a href='GLenum.html'>GLenum</a> <strong>COPY_WRITE_BUFFER_BINDING</strong>                     &#x3D; 0x8F37;</span><span class=def><span class="comment"> &#x2F;* Same as COPY_WRITE_BUFFER *&#x2F;
-  </span>const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER</strong>                                &#x3D; 0x8A11;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_BINDING</strong>                        &#x3D; 0x8A28;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_START</strong>                          &#x3D; 0x8A29;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_SIZE</strong>                           &#x3D; 0x8A2A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_UNIFORM_BLOCKS</strong>                     &#x3D; 0x8A2B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_UNIFORM_BLOCKS</strong>                   &#x3D; 0x8A2D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_UNIFORM_BLOCKS</strong>                   &#x3D; 0x8A2E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_UNIFORM_BUFFER_BINDINGS</strong>                   &#x3D; 0x8A2F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_UNIFORM_BLOCK_SIZE</strong>                        &#x3D; 0x8A30;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS</strong>        &#x3D; 0x8A31;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS</strong>      &#x3D; 0x8A33;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_OFFSET_ALIGNMENT</strong>               &#x3D; 0x8A34;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>ACTIVE_UNIFORM_BLOCKS</strong>                         &#x3D; 0x8A36;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_TYPE</strong>                                  &#x3D; 0x8A37;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_SIZE</strong>                                  &#x3D; 0x8A38;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_INDEX</strong>                           &#x3D; 0x8A3A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_OFFSET</strong>                                &#x3D; 0x8A3B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_ARRAY_STRIDE</strong>                          &#x3D; 0x8A3C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_MATRIX_STRIDE</strong>                         &#x3D; 0x8A3D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_IS_ROW_MAJOR</strong>                          &#x3D; 0x8A3E;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_BINDING</strong>                         &#x3D; 0x8A3F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_DATA_SIZE</strong>                       &#x3D; 0x8A40;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_ACTIVE_UNIFORMS</strong>                 &#x3D; 0x8A42;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES</strong>          &#x3D; 0x8A43;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER</strong>     &#x3D; 0x8A44;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER</strong>   &#x3D; 0x8A46;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INVALID_INDEX</strong>                                 &#x3D; 0xFFFFFFFF;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_OUTPUT_COMPONENTS</strong>                  &#x3D; 0x9122;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_INPUT_COMPONENTS</strong>                 &#x3D; 0x9125;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_SERVER_WAIT_TIMEOUT</strong>                       &#x3D; 0x9111;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>OBJECT_TYPE</strong>                                   &#x3D; 0x9112;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_CONDITION</strong>                                &#x3D; 0x9113;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_STATUS</strong>                                   &#x3D; 0x9114;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FLAGS</strong>                                    &#x3D; 0x9115;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FENCE</strong>                                    &#x3D; 0x9116;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_GPU_COMMANDS_COMPLETE</strong>                    &#x3D; 0x9117;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNALED</strong>                                    &#x3D; 0x9118;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SIGNALED</strong>                                      &#x3D; 0x9119;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>ALREADY_SIGNALED</strong>                              &#x3D; 0x911A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TIMEOUT_EXPIRED</strong>                               &#x3D; 0x911B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>CONDITION_SATISFIED</strong>                           &#x3D; 0x911C;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>WAIT_FAILED</strong>                                   &#x3D; 0x911D;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FLUSH_COMMANDS_BIT</strong>                       &#x3D; 0x00000001;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ATTRIB_ARRAY_DIVISOR</strong>                   &#x3D; 0x88FE;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>ANY_SAMPLES_PASSED</strong>                            &#x3D; 0x8C2F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>ANY_SAMPLES_PASSED_CONSERVATIVE</strong>               &#x3D; 0x8D6A;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_BINDING</strong>                               &#x3D; 0x8919;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB10_A2UI</strong>                                    &#x3D; 0x906F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>INT_2_10_10_10_REV</strong>                            &#x3D; 0x8D9F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK</strong>                            &#x3D; 0x8E22;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_PAUSED</strong>                     &#x3D; 0x8E23;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_ACTIVE</strong>                     &#x3D; 0x8E24;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BINDING</strong>                    &#x3D; 0x8E25;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_IMMUTABLE_FORMAT</strong>                      &#x3D; 0x912F;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENT_INDEX</strong>                             &#x3D; 0x8D6B;</span><span class=def>
-  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_IMMUTABLE_LEVELS</strong>                      &#x3D; 0x82DF;</span><span class=def>
+{<span class=def id=const-READ_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>READ_BUFFER</strong>                                   &#x3D; 0x0C02;</span><span class=def id=const-UNPACK_ROW_LENGTH>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_ROW_LENGTH</strong>                             &#x3D; 0x0CF2;</span><span class=def id=const-UNPACK_SKIP_ROWS>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_ROWS</strong>                              &#x3D; 0x0CF3;</span><span class=def id=const-UNPACK_SKIP_PIXELS>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_PIXELS</strong>                            &#x3D; 0x0CF4;</span><span class=def id=const-PACK_ROW_LENGTH>
+  const <a href='GLenum.html'>GLenum</a> <strong>PACK_ROW_LENGTH</strong>                               &#x3D; 0x0D02;</span><span class=def id=const-PACK_SKIP_ROWS>
+  const <a href='GLenum.html'>GLenum</a> <strong>PACK_SKIP_ROWS</strong>                                &#x3D; 0x0D03;</span><span class=def id=const-PACK_SKIP_PIXELS>
+  const <a href='GLenum.html'>GLenum</a> <strong>PACK_SKIP_PIXELS</strong>                              &#x3D; 0x0D04;</span><span class=def id=const-COLOR>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR</strong>                                         &#x3D; 0x1800;</span><span class=def id=const-DEPTH>
+  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH</strong>                                         &#x3D; 0x1801;</span><span class=def id=const-STENCIL>
+  const <a href='GLenum.html'>GLenum</a> <strong>STENCIL</strong>                                       &#x3D; 0x1802;</span><span class=def id=const-RED>
+  const <a href='GLenum.html'>GLenum</a> <strong>RED</strong>                                           &#x3D; 0x1903;</span><span class=def id=const-RGB8>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB8</strong>                                          &#x3D; 0x8051;</span><span class=def id=const-RGBA8>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8</strong>                                         &#x3D; 0x8058;</span><span class=def id=const-RGB10_A2>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB10_A2</strong>                                      &#x3D; 0x8059;</span><span class=def id=const-TEXTURE_BINDING_3D>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BINDING_3D</strong>                            &#x3D; 0x806A;</span><span class=def id=const-UNPACK_SKIP_IMAGES>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_IMAGES</strong>                            &#x3D; 0x806D;</span><span class=def id=const-UNPACK_IMAGE_HEIGHT>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_IMAGE_HEIGHT</strong>                           &#x3D; 0x806E;</span><span class=def id=const-TEXTURE_3D>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_3D</strong>                                    &#x3D; 0x806F;</span><span class=def id=const-TEXTURE_WRAP_R>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_WRAP_R</strong>                                &#x3D; 0x8072;</span><span class=def id=const-MAX_3D_TEXTURE_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_3D_TEXTURE_SIZE</strong>                           &#x3D; 0x8073;</span><span class=def id=const-UNSIGNED_INT_2_10_10_10_REV>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_2_10_10_10_REV</strong>                   &#x3D; 0x8368;</span><span class=def id=const-MAX_ELEMENTS_VERTICES>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENTS_VERTICES</strong>                         &#x3D; 0x80E8;</span><span class=def id=const-MAX_ELEMENTS_INDICES>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENTS_INDICES</strong>                          &#x3D; 0x80E9;</span><span class=def id=const-TEXTURE_MIN_LOD>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MIN_LOD</strong>                               &#x3D; 0x813A;</span><span class=def id=const-TEXTURE_MAX_LOD>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MAX_LOD</strong>                               &#x3D; 0x813B;</span><span class=def id=const-TEXTURE_BASE_LEVEL>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BASE_LEVEL</strong>                            &#x3D; 0x813C;</span><span class=def id=const-TEXTURE_MAX_LEVEL>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_MAX_LEVEL</strong>                             &#x3D; 0x813D;</span><span class=def id=const-MIN>
+  const <a href='GLenum.html'>GLenum</a> <strong>MIN</strong>                                           &#x3D; 0x8007;</span><span class=def id=const-MAX>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX</strong>                                           &#x3D; 0x8008;</span><span class=def id=const-DEPTH_COMPONENT24>
+  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH_COMPONENT24</strong>                             &#x3D; 0x81A6;</span><span class=def id=const-MAX_TEXTURE_LOD_BIAS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TEXTURE_LOD_BIAS</strong>                          &#x3D; 0x84FD;</span><span class=def id=const-TEXTURE_COMPARE_MODE>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_COMPARE_MODE</strong>                          &#x3D; 0x884C;</span><span class=def id=const-TEXTURE_COMPARE_FUNC>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_COMPARE_FUNC</strong>                          &#x3D; 0x884D;</span><span class=def id=const-CURRENT_QUERY>
+  const <a href='GLenum.html'>GLenum</a> <strong>CURRENT_QUERY</strong>                                 &#x3D; 0x8865;</span><span class=def id=const-QUERY_RESULT>
+  const <a href='GLenum.html'>GLenum</a> <strong>QUERY_RESULT</strong>                                  &#x3D; 0x8866;</span><span class=def id=const-QUERY_RESULT_AVAILABLE>
+  const <a href='GLenum.html'>GLenum</a> <strong>QUERY_RESULT_AVAILABLE</strong>                        &#x3D; 0x8867;</span><span class=def id=const-STREAM_READ>
+  const <a href='GLenum.html'>GLenum</a> <strong>STREAM_READ</strong>                                   &#x3D; 0x88E1;</span><span class=def id=const-STREAM_COPY>
+  const <a href='GLenum.html'>GLenum</a> <strong>STREAM_COPY</strong>                                   &#x3D; 0x88E2;</span><span class=def id=const-STATIC_READ>
+  const <a href='GLenum.html'>GLenum</a> <strong>STATIC_READ</strong>                                   &#x3D; 0x88E5;</span><span class=def id=const-STATIC_COPY>
+  const <a href='GLenum.html'>GLenum</a> <strong>STATIC_COPY</strong>                                   &#x3D; 0x88E6;</span><span class=def id=const-DYNAMIC_READ>
+  const <a href='GLenum.html'>GLenum</a> <strong>DYNAMIC_READ</strong>                                  &#x3D; 0x88E9;</span><span class=def id=const-DYNAMIC_COPY>
+  const <a href='GLenum.html'>GLenum</a> <strong>DYNAMIC_COPY</strong>                                  &#x3D; 0x88EA;</span><span class=def id=const-MAX_DRAW_BUFFERS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_DRAW_BUFFERS</strong>                              &#x3D; 0x8824;</span><span class=def id=const-DRAW_BUFFER0>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER0</strong>                                  &#x3D; 0x8825;</span><span class=def id=const-DRAW_BUFFER1>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER1</strong>                                  &#x3D; 0x8826;</span><span class=def id=const-DRAW_BUFFER2>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER2</strong>                                  &#x3D; 0x8827;</span><span class=def id=const-DRAW_BUFFER3>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER3</strong>                                  &#x3D; 0x8828;</span><span class=def id=const-DRAW_BUFFER4>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER4</strong>                                  &#x3D; 0x8829;</span><span class=def id=const-DRAW_BUFFER5>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER5</strong>                                  &#x3D; 0x882A;</span><span class=def id=const-DRAW_BUFFER6>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER6</strong>                                  &#x3D; 0x882B;</span><span class=def id=const-DRAW_BUFFER7>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER7</strong>                                  &#x3D; 0x882C;</span><span class=def id=const-DRAW_BUFFER8>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER8</strong>                                  &#x3D; 0x882D;</span><span class=def id=const-DRAW_BUFFER9>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER9</strong>                                  &#x3D; 0x882E;</span><span class=def id=const-DRAW_BUFFER10>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER10</strong>                                 &#x3D; 0x882F;</span><span class=def id=const-DRAW_BUFFER11>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER11</strong>                                 &#x3D; 0x8830;</span><span class=def id=const-DRAW_BUFFER12>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER12</strong>                                 &#x3D; 0x8831;</span><span class=def id=const-DRAW_BUFFER13>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER13</strong>                                 &#x3D; 0x8832;</span><span class=def id=const-DRAW_BUFFER14>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER14</strong>                                 &#x3D; 0x8833;</span><span class=def id=const-DRAW_BUFFER15>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_BUFFER15</strong>                                 &#x3D; 0x8834;</span><span class=def id=const-MAX_FRAGMENT_UNIFORM_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_UNIFORM_COMPONENTS</strong>               &#x3D; 0x8B49;</span><span class=def id=const-MAX_VERTEX_UNIFORM_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_UNIFORM_COMPONENTS</strong>                 &#x3D; 0x8B4A;</span><span class=def id=const-SAMPLER_3D>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_3D</strong>                                    &#x3D; 0x8B5F;</span><span class=def id=const-SAMPLER_2D_SHADOW>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_SHADOW</strong>                             &#x3D; 0x8B62;</span><span class=def id=const-FRAGMENT_SHADER_DERIVATIVE_HINT>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAGMENT_SHADER_DERIVATIVE_HINT</strong>               &#x3D; 0x8B8B;</span><span class=def id=const-PIXEL_PACK_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_PACK_BUFFER</strong>                             &#x3D; 0x88EB;</span><span class=def id=const-PIXEL_UNPACK_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_UNPACK_BUFFER</strong>                           &#x3D; 0x88EC;</span><span class=def id=const-PIXEL_PACK_BUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_PACK_BUFFER_BINDING</strong>                     &#x3D; 0x88ED;</span><span class=def id=const-PIXEL_UNPACK_BUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_UNPACK_BUFFER_BINDING</strong>                   &#x3D; 0x88EF;</span><span class=def id=const-FLOAT_MAT2x3>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT2x3</strong>                                  &#x3D; 0x8B65;</span><span class=def id=const-FLOAT_MAT2x4>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT2x4</strong>                                  &#x3D; 0x8B66;</span><span class=def id=const-FLOAT_MAT3x2>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT3x2</strong>                                  &#x3D; 0x8B67;</span><span class=def id=const-FLOAT_MAT3x4>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT3x4</strong>                                  &#x3D; 0x8B68;</span><span class=def id=const-FLOAT_MAT4x2>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT4x2</strong>                                  &#x3D; 0x8B69;</span><span class=def id=const-FLOAT_MAT4x3>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_MAT4x3</strong>                                  &#x3D; 0x8B6A;</span><span class=def id=const-SRGB>
+  const <a href='GLenum.html'>GLenum</a> <strong>SRGB</strong>                                          &#x3D; 0x8C40;</span><span class=def id=const-SRGB8>
+  const <a href='GLenum.html'>GLenum</a> <strong>SRGB8</strong>                                         &#x3D; 0x8C41;</span><span class=def id=const-SRGB8_ALPHA8>
+  const <a href='GLenum.html'>GLenum</a> <strong>SRGB8_ALPHA8</strong>                                  &#x3D; 0x8C43;</span><span class=def id=const-COMPARE_REF_TO_TEXTURE>
+  const <a href='GLenum.html'>GLenum</a> <strong>COMPARE_REF_TO_TEXTURE</strong>                        &#x3D; 0x884E;</span><span class=def id=const-RGBA32F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32F</strong>                                       &#x3D; 0x8814;</span><span class=def id=const-RGB32F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB32F</strong>                                        &#x3D; 0x8815;</span><span class=def id=const-RGBA16F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16F</strong>                                       &#x3D; 0x881A;</span><span class=def id=const-RGB16F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB16F</strong>                                        &#x3D; 0x881B;</span><span class=def id=const-VERTEX_ATTRIB_ARRAY_INTEGER>
+  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ATTRIB_ARRAY_INTEGER</strong>                   &#x3D; 0x88FD;</span><span class=def id=const-MAX_ARRAY_TEXTURE_LAYERS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ARRAY_TEXTURE_LAYERS</strong>                      &#x3D; 0x88FF;</span><span class=def id=const-MIN_PROGRAM_TEXEL_OFFSET>
+  const <a href='GLenum.html'>GLenum</a> <strong>MIN_PROGRAM_TEXEL_OFFSET</strong>                      &#x3D; 0x8904;</span><span class=def id=const-MAX_PROGRAM_TEXEL_OFFSET>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_PROGRAM_TEXEL_OFFSET</strong>                      &#x3D; 0x8905;</span><span class=def id=const-MAX_VARYING_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VARYING_COMPONENTS</strong>                        &#x3D; 0x8B4B;</span><span class=def id=const-TEXTURE_2D_ARRAY>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_2D_ARRAY</strong>                              &#x3D; 0x8C1A;</span><span class=def id=const-TEXTURE_BINDING_2D_ARRAY>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BINDING_2D_ARRAY</strong>                      &#x3D; 0x8C1D;</span><span class=def id=const-R11F_G11F_B10F>
+  const <a href='GLenum.html'>GLenum</a> <strong>R11F_G11F_B10F</strong>                                &#x3D; 0x8C3A;</span><span class=def id=const-UNSIGNED_INT_10F_11F_11F_REV>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_10F_11F_11F_REV</strong>                  &#x3D; 0x8C3B;</span><span class=def id=const-RGB9_E5>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB9_E5</strong>                                       &#x3D; 0x8C3D;</span><span class=def id=const-UNSIGNED_INT_5_9_9_9_REV>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_5_9_9_9_REV</strong>                      &#x3D; 0x8C3E;</span><span class=def id=const-TRANSFORM_FEEDBACK_BUFFER_MODE>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_MODE</strong>                &#x3D; 0x8C7F;</span><span class=def id=const-MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS</strong>    &#x3D; 0x8C80;</span><span class=def id=const-TRANSFORM_FEEDBACK_VARYINGS>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_VARYINGS</strong>                   &#x3D; 0x8C83;</span><span class=def id=const-TRANSFORM_FEEDBACK_BUFFER_START>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_START</strong>               &#x3D; 0x8C84;</span><span class=def id=const-TRANSFORM_FEEDBACK_BUFFER_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_SIZE</strong>                &#x3D; 0x8C85;</span><span class=def id=const-TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</strong>         &#x3D; 0x8C88;</span><span class=def id=const-RASTERIZER_DISCARD>
+  const <a href='GLenum.html'>GLenum</a> <strong>RASTERIZER_DISCARD</strong>                            &#x3D; 0x8C89;</span><span class=def id=const-MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS</strong> &#x3D; 0x8C8A;</span><span class=def id=const-MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS</strong>       &#x3D; 0x8C8B;</span><span class=def id=const-INTERLEAVED_ATTRIBS>
+  const <a href='GLenum.html'>GLenum</a> <strong>INTERLEAVED_ATTRIBS</strong>                           &#x3D; 0x8C8C;</span><span class=def id=const-SEPARATE_ATTRIBS>
+  const <a href='GLenum.html'>GLenum</a> <strong>SEPARATE_ATTRIBS</strong>                              &#x3D; 0x8C8D;</span><span class=def id=const-TRANSFORM_FEEDBACK_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER</strong>                     &#x3D; 0x8C8E;</span><span class=def id=const-TRANSFORM_FEEDBACK_BUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BUFFER_BINDING</strong>             &#x3D; 0x8C8F;</span><span class=def id=const-RGBA32UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32UI</strong>                                      &#x3D; 0x8D70;</span><span class=def id=const-RGB32UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB32UI</strong>                                       &#x3D; 0x8D71;</span><span class=def id=const-RGBA16UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16UI</strong>                                      &#x3D; 0x8D76;</span><span class=def id=const-RGB16UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB16UI</strong>                                       &#x3D; 0x8D77;</span><span class=def id=const-RGBA8UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8UI</strong>                                       &#x3D; 0x8D7C;</span><span class=def id=const-RGB8UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB8UI</strong>                                        &#x3D; 0x8D7D;</span><span class=def id=const-RGBA32I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA32I</strong>                                       &#x3D; 0x8D82;</span><span class=def id=const-RGB32I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB32I</strong>                                        &#x3D; 0x8D83;</span><span class=def id=const-RGBA16I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA16I</strong>                                       &#x3D; 0x8D88;</span><span class=def id=const-RGB16I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB16I</strong>                                        &#x3D; 0x8D89;</span><span class=def id=const-RGBA8I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8I</strong>                                        &#x3D; 0x8D8E;</span><span class=def id=const-RGB8I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB8I</strong>                                         &#x3D; 0x8D8F;</span><span class=def id=const-RED_INTEGER>
+  const <a href='GLenum.html'>GLenum</a> <strong>RED_INTEGER</strong>                                   &#x3D; 0x8D94;</span><span class=def id=const-RGB_INTEGER>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB_INTEGER</strong>                                   &#x3D; 0x8D98;</span><span class=def id=const-RGBA_INTEGER>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA_INTEGER</strong>                                  &#x3D; 0x8D99;</span><span class=def id=const-SAMPLER_2D_ARRAY>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_ARRAY</strong>                              &#x3D; 0x8DC1;</span><span class=def id=const-SAMPLER_2D_ARRAY_SHADOW>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_2D_ARRAY_SHADOW</strong>                       &#x3D; 0x8DC4;</span><span class=def id=const-SAMPLER_CUBE_SHADOW>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_CUBE_SHADOW</strong>                           &#x3D; 0x8DC5;</span><span class=def id=const-UNSIGNED_INT_VEC2>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC2</strong>                             &#x3D; 0x8DC6;</span><span class=def id=const-UNSIGNED_INT_VEC3>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC3</strong>                             &#x3D; 0x8DC7;</span><span class=def id=const-UNSIGNED_INT_VEC4>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_VEC4</strong>                             &#x3D; 0x8DC8;</span><span class=def id=const-INT_SAMPLER_2D>
+  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_2D</strong>                                &#x3D; 0x8DCA;</span><span class=def id=const-INT_SAMPLER_3D>
+  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_3D</strong>                                &#x3D; 0x8DCB;</span><span class=def id=const-INT_SAMPLER_CUBE>
+  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_CUBE</strong>                              &#x3D; 0x8DCC;</span><span class=def id=const-INT_SAMPLER_2D_ARRAY>
+  const <a href='GLenum.html'>GLenum</a> <strong>INT_SAMPLER_2D_ARRAY</strong>                          &#x3D; 0x8DCF;</span><span class=def id=const-UNSIGNED_INT_SAMPLER_2D>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_2D</strong>                       &#x3D; 0x8DD2;</span><span class=def id=const-UNSIGNED_INT_SAMPLER_3D>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_3D</strong>                       &#x3D; 0x8DD3;</span><span class=def id=const-UNSIGNED_INT_SAMPLER_CUBE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_CUBE</strong>                     &#x3D; 0x8DD4;</span><span class=def id=const-UNSIGNED_INT_SAMPLER_2D_ARRAY>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_SAMPLER_2D_ARRAY</strong>                 &#x3D; 0x8DD7;</span><span class=def id=const-DEPTH_COMPONENT32F>
+  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH_COMPONENT32F</strong>                            &#x3D; 0x8CAC;</span><span class=def id=const-DEPTH32F_STENCIL8>
+  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH32F_STENCIL8</strong>                             &#x3D; 0x8CAD;</span><span class=def id=const-FLOAT_32_UNSIGNED_INT_24_8_REV>
+  const <a href='GLenum.html'>GLenum</a> <strong>FLOAT_32_UNSIGNED_INT_24_8_REV</strong>                &#x3D; 0x8DAD;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING</strong>         &#x3D; 0x8210;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE</strong>         &#x3D; 0x8211;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_RED_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_RED_SIZE</strong>               &#x3D; 0x8212;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_GREEN_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_GREEN_SIZE</strong>             &#x3D; 0x8213;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_BLUE_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_BLUE_SIZE</strong>              &#x3D; 0x8214;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE</strong>             &#x3D; 0x8215;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE</strong>             &#x3D; 0x8216;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE</strong>           &#x3D; 0x8217;</span><span class=def id=const-FRAMEBUFFER_DEFAULT>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_DEFAULT</strong>                           &#x3D; 0x8218;</span><span class=def id=const-UNSIGNED_INT_24_8>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_INT_24_8</strong>                             &#x3D; 0x84FA;</span><span class=def id=const-DEPTH24_STENCIL8>
+  const <a href='GLenum.html'>GLenum</a> <strong>DEPTH24_STENCIL8</strong>                              &#x3D; 0x88F0;</span><span class=def id=const-UNSIGNED_NORMALIZED>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNED_NORMALIZED</strong>                           &#x3D; 0x8C17;</span><span class=def id=const-DRAW_FRAMEBUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_FRAMEBUFFER_BINDING</strong>                      &#x3D; 0x8CA6;</span><span class=def id=const-READ_FRAMEBUFFER><span class="comment"> &#x2F;* Same as FRAMEBUFFER_BINDING *&#x2F;
+  </span>const <a href='GLenum.html'>GLenum</a> <strong>READ_FRAMEBUFFER</strong>                              &#x3D; 0x8CA8;</span><span class=def id=const-DRAW_FRAMEBUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>DRAW_FRAMEBUFFER</strong>                              &#x3D; 0x8CA9;</span><span class=def id=const-READ_FRAMEBUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>READ_FRAMEBUFFER_BINDING</strong>                      &#x3D; 0x8CAA;</span><span class=def id=const-RENDERBUFFER_SAMPLES>
+  const <a href='GLenum.html'>GLenum</a> <strong>RENDERBUFFER_SAMPLES</strong>                          &#x3D; 0x8CAB;</span><span class=def id=const-FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER</strong>          &#x3D; 0x8CD4;</span><span class=def id=const-MAX_COLOR_ATTACHMENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COLOR_ATTACHMENTS</strong>                         &#x3D; 0x8CDF;</span><span class=def id=const-COLOR_ATTACHMENT1>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT1</strong>                             &#x3D; 0x8CE1;</span><span class=def id=const-COLOR_ATTACHMENT2>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT2</strong>                             &#x3D; 0x8CE2;</span><span class=def id=const-COLOR_ATTACHMENT3>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT3</strong>                             &#x3D; 0x8CE3;</span><span class=def id=const-COLOR_ATTACHMENT4>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT4</strong>                             &#x3D; 0x8CE4;</span><span class=def id=const-COLOR_ATTACHMENT5>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT5</strong>                             &#x3D; 0x8CE5;</span><span class=def id=const-COLOR_ATTACHMENT6>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT6</strong>                             &#x3D; 0x8CE6;</span><span class=def id=const-COLOR_ATTACHMENT7>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT7</strong>                             &#x3D; 0x8CE7;</span><span class=def id=const-COLOR_ATTACHMENT8>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT8</strong>                             &#x3D; 0x8CE8;</span><span class=def id=const-COLOR_ATTACHMENT9>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT9</strong>                             &#x3D; 0x8CE9;</span><span class=def id=const-COLOR_ATTACHMENT10>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT10</strong>                            &#x3D; 0x8CEA;</span><span class=def id=const-COLOR_ATTACHMENT11>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT11</strong>                            &#x3D; 0x8CEB;</span><span class=def id=const-COLOR_ATTACHMENT12>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT12</strong>                            &#x3D; 0x8CEC;</span><span class=def id=const-COLOR_ATTACHMENT13>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT13</strong>                            &#x3D; 0x8CED;</span><span class=def id=const-COLOR_ATTACHMENT14>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT14</strong>                            &#x3D; 0x8CEE;</span><span class=def id=const-COLOR_ATTACHMENT15>
+  const <a href='GLenum.html'>GLenum</a> <strong>COLOR_ATTACHMENT15</strong>                            &#x3D; 0x8CEF;</span><span class=def id=const-FRAMEBUFFER_INCOMPLETE_MULTISAMPLE>
+  const <a href='GLenum.html'>GLenum</a> <strong>FRAMEBUFFER_INCOMPLETE_MULTISAMPLE</strong>            &#x3D; 0x8D56;</span><span class=def id=const-MAX_SAMPLES>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_SAMPLES</strong>                                   &#x3D; 0x8D57;</span><span class=def id=const-HALF_FLOAT>
+  const <a href='GLenum.html'>GLenum</a> <strong>HALF_FLOAT</strong>                                    &#x3D; 0x140B;</span><span class=def id=const-RG>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG</strong>                                            &#x3D; 0x8227;</span><span class=def id=const-RG_INTEGER>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG_INTEGER</strong>                                    &#x3D; 0x8228;</span><span class=def id=const-R8>
+  const <a href='GLenum.html'>GLenum</a> <strong>R8</strong>                                            &#x3D; 0x8229;</span><span class=def id=const-RG8>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG8</strong>                                           &#x3D; 0x822B;</span><span class=def id=const-R16F>
+  const <a href='GLenum.html'>GLenum</a> <strong>R16F</strong>                                          &#x3D; 0x822D;</span><span class=def id=const-R32F>
+  const <a href='GLenum.html'>GLenum</a> <strong>R32F</strong>                                          &#x3D; 0x822E;</span><span class=def id=const-RG16F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG16F</strong>                                         &#x3D; 0x822F;</span><span class=def id=const-RG32F>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG32F</strong>                                         &#x3D; 0x8230;</span><span class=def id=const-R8I>
+  const <a href='GLenum.html'>GLenum</a> <strong>R8I</strong>                                           &#x3D; 0x8231;</span><span class=def id=const-R8UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>R8UI</strong>                                          &#x3D; 0x8232;</span><span class=def id=const-R16I>
+  const <a href='GLenum.html'>GLenum</a> <strong>R16I</strong>                                          &#x3D; 0x8233;</span><span class=def id=const-R16UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>R16UI</strong>                                         &#x3D; 0x8234;</span><span class=def id=const-R32I>
+  const <a href='GLenum.html'>GLenum</a> <strong>R32I</strong>                                          &#x3D; 0x8235;</span><span class=def id=const-R32UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>R32UI</strong>                                         &#x3D; 0x8236;</span><span class=def id=const-RG8I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG8I</strong>                                          &#x3D; 0x8237;</span><span class=def id=const-RG8UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG8UI</strong>                                         &#x3D; 0x8238;</span><span class=def id=const-RG16I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG16I</strong>                                         &#x3D; 0x8239;</span><span class=def id=const-RG16UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG16UI</strong>                                        &#x3D; 0x823A;</span><span class=def id=const-RG32I>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG32I</strong>                                         &#x3D; 0x823B;</span><span class=def id=const-RG32UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG32UI</strong>                                        &#x3D; 0x823C;</span><span class=def id=const-VERTEX_ARRAY_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ARRAY_BINDING</strong>                          &#x3D; 0x85B5;</span><span class=def id=const-R8_SNORM>
+  const <a href='GLenum.html'>GLenum</a> <strong>R8_SNORM</strong>                                      &#x3D; 0x8F94;</span><span class=def id=const-RG8_SNORM>
+  const <a href='GLenum.html'>GLenum</a> <strong>RG8_SNORM</strong>                                     &#x3D; 0x8F95;</span><span class=def id=const-RGB8_SNORM>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB8_SNORM</strong>                                    &#x3D; 0x8F96;</span><span class=def id=const-RGBA8_SNORM>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8_SNORM</strong>                                   &#x3D; 0x8F97;</span><span class=def id=const-SIGNED_NORMALIZED>
+  const <a href='GLenum.html'>GLenum</a> <strong>SIGNED_NORMALIZED</strong>                             &#x3D; 0x8F9C;</span><span class=def id=const-COPY_READ_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>COPY_READ_BUFFER</strong>                              &#x3D; 0x8F36;</span><span class=def id=const-COPY_WRITE_BUFFER>
+  const <a href='GLenum.html'>GLenum</a> <strong>COPY_WRITE_BUFFER</strong>                             &#x3D; 0x8F37;</span><span class=def id=const-COPY_READ_BUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>COPY_READ_BUFFER_BINDING</strong>                      &#x3D; 0x8F36;</span><span class=def id=const-COPY_WRITE_BUFFER_BINDING><span class="comment"> &#x2F;* Same as COPY_READ_BUFFER *&#x2F;
+  </span>const <a href='GLenum.html'>GLenum</a> <strong>COPY_WRITE_BUFFER_BINDING</strong>                     &#x3D; 0x8F37;</span><span class=def id=const-UNIFORM_BUFFER><span class="comment"> &#x2F;* Same as COPY_WRITE_BUFFER *&#x2F;
+  </span>const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER</strong>                                &#x3D; 0x8A11;</span><span class=def id=const-UNIFORM_BUFFER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_BINDING</strong>                        &#x3D; 0x8A28;</span><span class=def id=const-UNIFORM_BUFFER_START>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_START</strong>                          &#x3D; 0x8A29;</span><span class=def id=const-UNIFORM_BUFFER_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_SIZE</strong>                           &#x3D; 0x8A2A;</span><span class=def id=const-MAX_VERTEX_UNIFORM_BLOCKS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_UNIFORM_BLOCKS</strong>                     &#x3D; 0x8A2B;</span><span class=def id=const-MAX_FRAGMENT_UNIFORM_BLOCKS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_UNIFORM_BLOCKS</strong>                   &#x3D; 0x8A2D;</span><span class=def id=const-MAX_COMBINED_UNIFORM_BLOCKS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_UNIFORM_BLOCKS</strong>                   &#x3D; 0x8A2E;</span><span class=def id=const-MAX_UNIFORM_BUFFER_BINDINGS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_UNIFORM_BUFFER_BINDINGS</strong>                   &#x3D; 0x8A2F;</span><span class=def id=const-MAX_UNIFORM_BLOCK_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_UNIFORM_BLOCK_SIZE</strong>                        &#x3D; 0x8A30;</span><span class=def id=const-MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS</strong>        &#x3D; 0x8A31;</span><span class=def id=const-MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS</strong>      &#x3D; 0x8A33;</span><span class=def id=const-UNIFORM_BUFFER_OFFSET_ALIGNMENT>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BUFFER_OFFSET_ALIGNMENT</strong>               &#x3D; 0x8A34;</span><span class=def id=const-ACTIVE_UNIFORM_BLOCKS>
+  const <a href='GLenum.html'>GLenum</a> <strong>ACTIVE_UNIFORM_BLOCKS</strong>                         &#x3D; 0x8A36;</span><span class=def id=const-UNIFORM_TYPE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_TYPE</strong>                                  &#x3D; 0x8A37;</span><span class=def id=const-UNIFORM_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_SIZE</strong>                                  &#x3D; 0x8A38;</span><span class=def id=const-UNIFORM_BLOCK_INDEX>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_INDEX</strong>                           &#x3D; 0x8A3A;</span><span class=def id=const-UNIFORM_OFFSET>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_OFFSET</strong>                                &#x3D; 0x8A3B;</span><span class=def id=const-UNIFORM_ARRAY_STRIDE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_ARRAY_STRIDE</strong>                          &#x3D; 0x8A3C;</span><span class=def id=const-UNIFORM_MATRIX_STRIDE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_MATRIX_STRIDE</strong>                         &#x3D; 0x8A3D;</span><span class=def id=const-UNIFORM_IS_ROW_MAJOR>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_IS_ROW_MAJOR</strong>                          &#x3D; 0x8A3E;</span><span class=def id=const-UNIFORM_BLOCK_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_BINDING</strong>                         &#x3D; 0x8A3F;</span><span class=def id=const-UNIFORM_BLOCK_DATA_SIZE>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_DATA_SIZE</strong>                       &#x3D; 0x8A40;</span><span class=def id=const-UNIFORM_BLOCK_ACTIVE_UNIFORMS>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_ACTIVE_UNIFORMS</strong>                 &#x3D; 0x8A42;</span><span class=def id=const-UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES</strong>          &#x3D; 0x8A43;</span><span class=def id=const-UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER</strong>     &#x3D; 0x8A44;</span><span class=def id=const-UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER</strong>   &#x3D; 0x8A46;</span><span class=def id=const-INVALID_INDEX>
+  const <a href='GLenum.html'>GLenum</a> <strong>INVALID_INDEX</strong>                                 &#x3D; 0xFFFFFFFF;</span><span class=def id=const-MAX_VERTEX_OUTPUT_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_VERTEX_OUTPUT_COMPONENTS</strong>                  &#x3D; 0x9122;</span><span class=def id=const-MAX_FRAGMENT_INPUT_COMPONENTS>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_FRAGMENT_INPUT_COMPONENTS</strong>                 &#x3D; 0x9125;</span><span class=def id=const-MAX_SERVER_WAIT_TIMEOUT>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_SERVER_WAIT_TIMEOUT</strong>                       &#x3D; 0x9111;</span><span class=def id=const-OBJECT_TYPE>
+  const <a href='GLenum.html'>GLenum</a> <strong>OBJECT_TYPE</strong>                                   &#x3D; 0x9112;</span><span class=def id=const-SYNC_CONDITION>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_CONDITION</strong>                                &#x3D; 0x9113;</span><span class=def id=const-SYNC_STATUS>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_STATUS</strong>                                   &#x3D; 0x9114;</span><span class=def id=const-SYNC_FLAGS>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FLAGS</strong>                                    &#x3D; 0x9115;</span><span class=def id=const-SYNC_FENCE>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FENCE</strong>                                    &#x3D; 0x9116;</span><span class=def id=const-SYNC_GPU_COMMANDS_COMPLETE>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_GPU_COMMANDS_COMPLETE</strong>                    &#x3D; 0x9117;</span><span class=def id=const-UNSIGNALED>
+  const <a href='GLenum.html'>GLenum</a> <strong>UNSIGNALED</strong>                                    &#x3D; 0x9118;</span><span class=def id=const-SIGNALED>
+  const <a href='GLenum.html'>GLenum</a> <strong>SIGNALED</strong>                                      &#x3D; 0x9119;</span><span class=def id=const-ALREADY_SIGNALED>
+  const <a href='GLenum.html'>GLenum</a> <strong>ALREADY_SIGNALED</strong>                              &#x3D; 0x911A;</span><span class=def id=const-TIMEOUT_EXPIRED>
+  const <a href='GLenum.html'>GLenum</a> <strong>TIMEOUT_EXPIRED</strong>                               &#x3D; 0x911B;</span><span class=def id=const-CONDITION_SATISFIED>
+  const <a href='GLenum.html'>GLenum</a> <strong>CONDITION_SATISFIED</strong>                           &#x3D; 0x911C;</span><span class=def id=const-WAIT_FAILED>
+  const <a href='GLenum.html'>GLenum</a> <strong>WAIT_FAILED</strong>                                   &#x3D; 0x911D;</span><span class=def id=const-SYNC_FLUSH_COMMANDS_BIT>
+  const <a href='GLenum.html'>GLenum</a> <strong>SYNC_FLUSH_COMMANDS_BIT</strong>                       &#x3D; 0x00000001;</span><span class=def id=const-VERTEX_ATTRIB_ARRAY_DIVISOR>
+  const <a href='GLenum.html'>GLenum</a> <strong>VERTEX_ATTRIB_ARRAY_DIVISOR</strong>                   &#x3D; 0x88FE;</span><span class=def id=const-ANY_SAMPLES_PASSED>
+  const <a href='GLenum.html'>GLenum</a> <strong>ANY_SAMPLES_PASSED</strong>                            &#x3D; 0x8C2F;</span><span class=def id=const-ANY_SAMPLES_PASSED_CONSERVATIVE>
+  const <a href='GLenum.html'>GLenum</a> <strong>ANY_SAMPLES_PASSED_CONSERVATIVE</strong>               &#x3D; 0x8D6A;</span><span class=def id=const-SAMPLER_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>SAMPLER_BINDING</strong>                               &#x3D; 0x8919;</span><span class=def id=const-RGB10_A2UI>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB10_A2UI</strong>                                    &#x3D; 0x906F;</span><span class=def id=const-INT_2_10_10_10_REV>
+  const <a href='GLenum.html'>GLenum</a> <strong>INT_2_10_10_10_REV</strong>                            &#x3D; 0x8D9F;</span><span class=def id=const-TRANSFORM_FEEDBACK>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK</strong>                            &#x3D; 0x8E22;</span><span class=def id=const-TRANSFORM_FEEDBACK_PAUSED>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_PAUSED</strong>                     &#x3D; 0x8E23;</span><span class=def id=const-TRANSFORM_FEEDBACK_ACTIVE>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_ACTIVE</strong>                     &#x3D; 0x8E24;</span><span class=def id=const-TRANSFORM_FEEDBACK_BINDING>
+  const <a href='GLenum.html'>GLenum</a> <strong>TRANSFORM_FEEDBACK_BINDING</strong>                    &#x3D; 0x8E25;</span><span class=def id=const-TEXTURE_IMMUTABLE_FORMAT>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_IMMUTABLE_FORMAT</strong>                      &#x3D; 0x912F;</span><span class=def id=const-MAX_ELEMENT_INDEX>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_ELEMENT_INDEX</strong>                             &#x3D; 0x8D6B;</span><span class=def id=const-TEXTURE_IMMUTABLE_LEVELS>
+  const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_IMMUTABLE_LEVELS</strong>                      &#x3D; 0x82DF;</span><span class=def id=const-TIMEOUT_IGNORED>
 
-  const <a href='GLint64.html'>GLint64</a> <strong>TIMEOUT_IGNORED</strong>                              &#x3D; -1;</span><span class=def><span class="comment">
+  const <a href='GLint64.html'>GLint64</a> <strong>TIMEOUT_IGNORED</strong>                              &#x3D; -1;</span><span class=def id=const-MAX_CLIENT_WAIT_TIMEOUT_WEBGL><span class="comment">
 
   &#x2F;* WebGL-specific enums *&#x2F;
-  </span>const <a href='GLenum.html'>GLenum</a> <strong>MAX_CLIENT_WAIT_TIMEOUT_WEBGL</strong>                 &#x3D; 0x9247;</span><span class=def><span class="comment">
+  </span>const <a href='GLenum.html'>GLenum</a> <strong>MAX_CLIENT_WAIT_TIMEOUT_WEBGL</strong>                 &#x3D; 0x9247;</span><span class=def id=operation-copyBufferSubData-GLenum-GLenum-GLintptr-GLintptr-GLsizeiptr><span class="comment">
 
   &#x2F;* Buffer objects *&#x2F;
   </span><span class=primitive>undefined</span> <strong>copyBufferSubData</strong>(<a href='GLenum.html'>GLenum</a> <strong>readTarget</strong>, <a href='GLenum.html'>GLenum</a> <strong>writeTarget</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>readOffset</strong>,
-                              <a href='GLintptr.html'>GLintptr</a> <strong>writeOffset</strong>, <a href='GLsizeiptr.html'>GLsizeiptr</a> <strong>size</strong>);</span><span class=def><span class="comment">
+                              <a href='GLintptr.html'>GLintptr</a> <strong>writeOffset</strong>, <a href='GLsizeiptr.html'>GLsizeiptr</a> <strong>size</strong>);</span><span class=def id=operation-getBufferSubData-GLenum-GLintptr-ArrayBufferView-GLuint-GLuint><span class="comment">
   &#x2F;&#x2F; MapBufferRange, in particular its read-only and write-only modes,
   &#x2F;&#x2F; can not be exposed safely to JavaScript. GetBufferSubData
   &#x2F;&#x2F; replaces it for the purpose of fetching data back from the GPU.
   </span><span class=primitive>undefined</span> <strong>getBufferSubData</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>srcByteOffset</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>dstBuffer</strong>,
-                             optional <a href='GLuint.html'>GLuint</a> <strong>dstOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>length</strong> &#x3D; 0);</span><span class=def><span class="comment">
+                             optional <a href='GLuint.html'>GLuint</a> <strong>dstOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>length</strong> &#x3D; 0);</span><span class=def id=operation-blitFramebuffer-GLint-GLint-GLint-GLint-GLint-GLint-GLint-GLint-GLbitfield-GLenum><span class="comment">
 
   &#x2F;* Framebuffer objects *&#x2F;
   </span><span class=primitive>undefined</span> <strong>blitFramebuffer</strong>(<a href='GLint.html'>GLint</a> <strong>srcX0</strong>, <a href='GLint.html'>GLint</a> <strong>srcY0</strong>, <a href='GLint.html'>GLint</a> <strong>srcX1</strong>, <a href='GLint.html'>GLint</a> <strong>srcY1</strong>, <a href='GLint.html'>GLint</a> <strong>dstX0</strong>, <a href='GLint.html'>GLint</a> <strong>dstY0</strong>,
-                            <a href='GLint.html'>GLint</a> <strong>dstX1</strong>, <a href='GLint.html'>GLint</a> <strong>dstY1</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>mask</strong>, <a href='GLenum.html'>GLenum</a> <strong>filter</strong>);</span><span class=def>
+                            <a href='GLint.html'>GLint</a> <strong>dstX1</strong>, <a href='GLint.html'>GLint</a> <strong>dstY1</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>mask</strong>, <a href='GLenum.html'>GLenum</a> <strong>filter</strong>);</span><span class=def id=operation-framebufferTextureLayer-GLenum-GLenum-WebGLTexture-GLint-GLint>
   <span class=primitive>undefined</span> <strong>framebufferTextureLayer</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>attachment</strong>, <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>texture</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>,
-                                    <a href='GLint.html'>GLint</a> <strong>layer</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>invalidateFramebuffer</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>attachments</strong>);</span><span class=def>
+                                    <a href='GLint.html'>GLint</a> <strong>layer</strong>);</span><span class=def id=operation-invalidateFramebuffer-GLenum-GLenum>
+  <span class=primitive>undefined</span> <strong>invalidateFramebuffer</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>attachments</strong>);</span><span class=def id=operation-invalidateSubFramebuffer-GLenum-GLenum-GLint-GLint-GLsizei-GLsizei>
   <span class=primitive>undefined</span> <strong>invalidateSubFramebuffer</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>attachments</strong>,
-                                     <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>readBuffer</strong>(<a href='GLenum.html'>GLenum</a> <strong>src</strong>);</span><span class=def><span class="comment">
+                                     <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def id=operation-readBuffer-GLenum>
+  <span class=primitive>undefined</span> <strong>readBuffer</strong>(<a href='GLenum.html'>GLenum</a> <strong>src</strong>);</span><span class=def id=operation-getInternalformatParameter-GLenum-GLenum-GLenum><span class="comment">
 
   &#x2F;* Renderbuffer objects *&#x2F;
-  </span><span class=primitive>any</span> <strong>getInternalformatParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def>
+  </span><span class=primitive>any</span> <strong>getInternalformatParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-renderbufferStorageMultisample-GLenum-GLsizei-GLenum-GLsizei-GLsizei>
   <span class=primitive>undefined</span> <strong>renderbufferStorageMultisample</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>samples</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>,
-                                           <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def><span class="comment">
+                                           <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def id=operation-texStorage2D-GLenum-GLsizei-GLenum-GLsizei-GLsizei><span class="comment">
 
   &#x2F;* Texture objects *&#x2F;
   </span><span class=primitive>undefined</span> <strong>texStorage2D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>levels</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>,
-                         <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def>
+                         <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def id=operation-texStorage3D-GLenum-GLsizei-GLenum-GLsizei-GLsizei-GLsizei>
   <span class=primitive>undefined</span> <strong>texStorage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>levels</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>,
-                         <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>);</span><span class=def>
+                         <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>);</span><span class=def id=operation-texImage3D-GLenum-GLint-GLint-GLsizei-GLsizei-GLsizei-GLint-GLenum-GLenum-GLintptr>
 
   <span class=primitive>undefined</span> <strong>texImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
-                       <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>pboOffset</strong>);</span><span class=def>
+                       <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>pboOffset</strong>);</span><span class=def id=operation-texImage3D-GLenum-GLint-GLint-GLsizei-GLsizei-GLsizei-GLint-GLenum-GLenum-TexImageSource>
   <span class=primitive>undefined</span> <strong>texImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
                        <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>,
-                       <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; May throw DOMException
+                       <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>);</span><span class=def id=operation-texImage3D-GLenum-GLint-GLint-GLsizei-GLsizei-GLsizei-GLint-GLenum-GLenum-ArrayBufferView><span class="comment"> &#x2F;&#x2F; May throw DOMException
   </span><span class=primitive>undefined</span> <strong>texImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
-                       <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>srcData</strong>);</span><span class=def>
+                       <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>srcData</strong>);</span><span class=def id=operation-texImage3D-GLenum-GLint-GLint-GLsizei-GLsizei-GLsizei-GLint-GLenum-GLenum-ArrayBufferView-GLuint>
   <span class=primitive>undefined</span> <strong>texImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>,
                        <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>srcData</strong>,
-                       <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong>);</span><span class=def>
+                       <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong>);</span><span class=def id=operation-texSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLsizei-GLsizei-GLsizei-GLenum-GLenum-GLintptr>
 
   <span class=primitive>undefined</span> <strong>texSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>, <a href='GLint.html'>GLint</a> <strong>zoffset</strong>,
                           <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>,
-                          <a href='GLintptr.html'>GLintptr</a> <strong>pboOffset</strong>);</span><span class=def>
+                          <a href='GLintptr.html'>GLintptr</a> <strong>pboOffset</strong>);</span><span class=def id=operation-texSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLsizei-GLsizei-GLsizei-GLenum-GLenum-TexImageSource>
   <span class=primitive>undefined</span> <strong>texSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>, <a href='GLint.html'>GLint</a> <strong>zoffset</strong>,
                           <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>,
-                          <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; May throw DOMException
+                          <a href='TexImageSource.html'>TexImageSource</a> <strong>source</strong>);</span><span class=def id=operation-texSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLsizei-GLsizei-GLsizei-GLenum-GLenum-ArrayBufferView-GLuint><span class="comment"> &#x2F;&#x2F; May throw DOMException
   </span><span class=primitive>undefined</span> <strong>texSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>, <a href='GLint.html'>GLint</a> <strong>zoffset</strong>,
                           <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>,
-                          [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>srcData</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def>
+                          [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>? <strong>srcData</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-copyTexSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLint-GLint-GLsizei-GLsizei>
 
   <span class=primitive>undefined</span> <strong>copyTexSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>, <a href='GLint.html'>GLint</a> <strong>zoffset</strong>,
-                              <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def>
+                              <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>);</span><span class=def id=operation-compressedTexImage3D-GLenum-GLint-GLenum-GLsizei-GLsizei-GLsizei-GLint-GLsizei-GLintptr>
 
   <span class=primitive>undefined</span> <strong>compressedTexImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>,
-                                 <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>imageSize</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def>
+                                 <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>imageSize</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def id=operation-compressedTexImage3D-GLenum-GLint-GLenum-GLsizei-GLsizei-GLsizei-GLint-ArrayBufferView-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>compressedTexImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLenum.html'>GLenum</a> <strong>internalformat</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>,
                                  <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>border</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>srcData</strong>,
-                                 optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLengthOverride</strong> &#x3D; 0);</span><span class=def>
+                                 optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLengthOverride</strong> &#x3D; 0);</span><span class=def id=operation-compressedTexSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLsizei-GLsizei-GLsizei-GLenum-GLsizei-GLintptr>
 
   <span class=primitive>undefined</span> <strong>compressedTexSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>,
                                     <a href='GLint.html'>GLint</a> <strong>zoffset</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>,
-                                    <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>imageSize</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def>
+                                    <a href='GLenum.html'>GLenum</a> <strong>format</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>imageSize</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def id=operation-compressedTexSubImage3D-GLenum-GLint-GLint-GLint-GLint-GLsizei-GLsizei-GLsizei-GLenum-ArrayBufferView-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>compressedTexSubImage3D</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLint.html'>GLint</a> <strong>level</strong>, <a href='GLint.html'>GLint</a> <strong>xoffset</strong>, <a href='GLint.html'>GLint</a> <strong>yoffset</strong>,
                                     <a href='GLint.html'>GLint</a> <strong>zoffset</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>width</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>height</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>depth</strong>,
                                     <a href='GLenum.html'>GLenum</a> <strong>format</strong>, [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>srcData</strong>,
                                     optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0,
-                                    optional <a href='GLuint.html'>GLuint</a> <strong>srcLengthOverride</strong> &#x3D; 0);</span><span class=def><span class="comment">
+                                    optional <a href='GLuint.html'>GLuint</a> <strong>srcLengthOverride</strong> &#x3D; 0);</span><span class=def id=operation-getFragDataLocation-WebGLProgram-DOMString><span class="comment">
 
   &#x2F;* Programs and shaders *&#x2F;
-  </span>[WebGLHandlesContextLoss] <a href='GLint.html'>GLint</a> <strong>getFragDataLocation</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def><span class="comment">
+  </span>[WebGLHandlesContextLoss] <a href='GLint.html'>GLint</a> <strong>getFragDataLocation</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-uniform1ui-WebGLUniformLocation-GLuint><span class="comment">
 
   &#x2F;* Uniforms *&#x2F;
-  </span><span class=primitive>undefined</span> <strong>uniform1ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>uniform2ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>uniform3ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>, <a href='GLuint.html'>GLuint</a> <strong>v2</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>uniform4ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>, <a href='GLuint.html'>GLuint</a> <strong>v2</strong>, <a href='GLuint.html'>GLuint</a> <strong>v3</strong>);</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>uniform1ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>);</span><span class=def id=operation-uniform2ui-WebGLUniformLocation-GLuint-GLuint>
+  <span class=primitive>undefined</span> <strong>uniform2ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>);</span><span class=def id=operation-uniform3ui-WebGLUniformLocation-GLuint-GLuint-GLuint>
+  <span class=primitive>undefined</span> <strong>uniform3ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>, <a href='GLuint.html'>GLuint</a> <strong>v2</strong>);</span><span class=def id=operation-uniform4ui-WebGLUniformLocation-GLuint-GLuint-GLuint-GLuint>
+  <span class=primitive>undefined</span> <strong>uniform4ui</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLuint.html'>GLuint</a> <strong>v0</strong>, <a href='GLuint.html'>GLuint</a> <strong>v1</strong>, <a href='GLuint.html'>GLuint</a> <strong>v2</strong>, <a href='GLuint.html'>GLuint</a> <strong>v3</strong>);</span><span class=def id=operation-uniform1uiv-WebGLUniformLocation-Uint32List-GLuint-GLuint>
 
   <span class=primitive>undefined</span> <strong>uniform1uiv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>data</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0,
-                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniform2uiv-WebGLUniformLocation-Uint32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniform2uiv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>data</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0,
-                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniform3uiv-WebGLUniformLocation-Uint32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniform3uiv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>data</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0,
-                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniform4uiv-WebGLUniformLocation-Uint32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniform4uiv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>data</strong>, optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0,
-                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                        optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix3x2fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniformMatrix3x2fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix4x2fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniformMatrix4x2fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix2x3fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
 
   <span class=primitive>undefined</span> <strong>uniformMatrix2x3fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix4x3fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniformMatrix4x3fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix2x4fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
 
   <span class=primitive>undefined</span> <strong>uniformMatrix2x4fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def>
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-uniformMatrix3x4fv-WebGLUniformLocation-GLboolean-Float32List-GLuint-GLuint>
   <span class=primitive>undefined</span> <strong>uniformMatrix3x4fv</strong>(<a href='WebGLUniformLocation.html'>WebGLUniformLocation</a>? <strong>location</strong>, <a href='GLboolean.html'>GLboolean</a> <strong>transpose</strong>, <a href='Float32List.html'>Float32List</a> <strong>data</strong>,
-                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def><span class="comment">
+                               optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0, optional <a href='GLuint.html'>GLuint</a> <strong>srcLength</strong> &#x3D; 0);</span><span class=def id=operation-vertexAttribI4i-GLuint-GLint-GLint-GLint-GLint><span class="comment">
 
   &#x2F;* Vertex attribs *&#x2F;
-  </span><span class=primitive>undefined</span> <strong>vertexAttribI4i</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLint.html'>GLint</a> <strong>z</strong>, <a href='GLint.html'>GLint</a> <strong>w</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>vertexAttribI4iv</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='Int32List.html'>Int32List</a> <strong>values</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>vertexAttribI4ui</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLuint.html'>GLuint</a> <strong>x</strong>, <a href='GLuint.html'>GLuint</a> <strong>y</strong>, <a href='GLuint.html'>GLuint</a> <strong>z</strong>, <a href='GLuint.html'>GLuint</a> <strong>w</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>vertexAttribI4uiv</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>values</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>vertexAttribIPointer</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLint.html'>GLint</a> <strong>size</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>stride</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>vertexAttribI4i</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLint.html'>GLint</a> <strong>x</strong>, <a href='GLint.html'>GLint</a> <strong>y</strong>, <a href='GLint.html'>GLint</a> <strong>z</strong>, <a href='GLint.html'>GLint</a> <strong>w</strong>);</span><span class=def id=operation-vertexAttribI4iv-GLuint-Int32List>
+  <span class=primitive>undefined</span> <strong>vertexAttribI4iv</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='Int32List.html'>Int32List</a> <strong>values</strong>);</span><span class=def id=operation-vertexAttribI4ui-GLuint-GLuint-GLuint-GLuint-GLuint>
+  <span class=primitive>undefined</span> <strong>vertexAttribI4ui</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLuint.html'>GLuint</a> <strong>x</strong>, <a href='GLuint.html'>GLuint</a> <strong>y</strong>, <a href='GLuint.html'>GLuint</a> <strong>z</strong>, <a href='GLuint.html'>GLuint</a> <strong>w</strong>);</span><span class=def id=operation-vertexAttribI4uiv-GLuint-Uint32List>
+  <span class=primitive>undefined</span> <strong>vertexAttribI4uiv</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>values</strong>);</span><span class=def id=operation-vertexAttribIPointer-GLuint-GLint-GLenum-GLsizei-GLintptr>
+  <span class=primitive>undefined</span> <strong>vertexAttribIPointer</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLint.html'>GLint</a> <strong>size</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>stride</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def id=operation-vertexAttribDivisor-GLuint-GLuint><span class="comment">
 
   &#x2F;* Writing to the drawing buffer *&#x2F;
-  </span><span class=primitive>undefined</span> <strong>vertexAttribDivisor</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLuint.html'>GLuint</a> <strong>divisor</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>drawArraysInstanced</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLint.html'>GLint</a> <strong>first</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>instanceCount</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>drawElementsInstanced</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>instanceCount</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>drawRangeElements</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLuint.html'>GLuint</a> <strong>start</strong>, <a href='GLuint.html'>GLuint</a> <strong>end</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>vertexAttribDivisor</strong>(<a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='GLuint.html'>GLuint</a> <strong>divisor</strong>);</span><span class=def id=operation-drawArraysInstanced-GLenum-GLint-GLsizei-GLsizei>
+  <span class=primitive>undefined</span> <strong>drawArraysInstanced</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLint.html'>GLint</a> <strong>first</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>instanceCount</strong>);</span><span class=def id=operation-drawElementsInstanced-GLenum-GLsizei-GLenum-GLintptr-GLsizei>
+  <span class=primitive>undefined</span> <strong>drawElementsInstanced</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>instanceCount</strong>);</span><span class=def id=operation-drawRangeElements-GLenum-GLuint-GLuint-GLsizei-GLenum-GLintptr>
+  <span class=primitive>undefined</span> <strong>drawRangeElements</strong>(<a href='GLenum.html'>GLenum</a> <strong>mode</strong>, <a href='GLuint.html'>GLuint</a> <strong>start</strong>, <a href='GLuint.html'>GLuint</a> <strong>end</strong>, <a href='GLsizei.html'>GLsizei</a> <strong>count</strong>, <a href='GLenum.html'>GLenum</a> <strong>type</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>);</span><span class=def id=operation-drawBuffers-GLenum><span class="comment">
 
   &#x2F;* Multiple Render Targets *&#x2F;
-  </span><span class=primitive>undefined</span> <strong>drawBuffers</strong>(sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>buffers</strong>);</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>drawBuffers</strong>(sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>buffers</strong>);</span><span class=def id=operation-clearBufferfv-GLenum-GLint-Float32List-GLuint>
 
   <span class=primitive>undefined</span> <strong>clearBufferfv</strong>(<a href='GLenum.html'>GLenum</a> <strong>buffer</strong>, <a href='GLint.html'>GLint</a> <strong>drawbuffer</strong>, <a href='Float32List.html'>Float32List</a> <strong>values</strong>,
-                          optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def>
+                          optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-clearBufferiv-GLenum-GLint-Int32List-GLuint>
   <span class=primitive>undefined</span> <strong>clearBufferiv</strong>(<a href='GLenum.html'>GLenum</a> <strong>buffer</strong>, <a href='GLint.html'>GLint</a> <strong>drawbuffer</strong>, <a href='Int32List.html'>Int32List</a> <strong>values</strong>,
-                          optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def>
+                          optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-clearBufferuiv-GLenum-GLint-Uint32List-GLuint>
   <span class=primitive>undefined</span> <strong>clearBufferuiv</strong>(<a href='GLenum.html'>GLenum</a> <strong>buffer</strong>, <a href='GLint.html'>GLint</a> <strong>drawbuffer</strong>, <a href='Uint32List.html'>Uint32List</a> <strong>values</strong>,
-                           optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def>
+                           optional <a href='GLuint.html'>GLuint</a> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-clearBufferfi-GLenum-GLint-GLfloat-GLint>
 
-  <span class=primitive>undefined</span> <strong>clearBufferfi</strong>(<a href='GLenum.html'>GLenum</a> <strong>buffer</strong>, <a href='GLint.html'>GLint</a> <strong>drawbuffer</strong>, <a href='GLfloat.html'>GLfloat</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>stencil</strong>);</span><span class=def><span class="comment">
+  <span class=primitive>undefined</span> <strong>clearBufferfi</strong>(<a href='GLenum.html'>GLenum</a> <strong>buffer</strong>, <a href='GLint.html'>GLint</a> <strong>drawbuffer</strong>, <a href='GLfloat.html'>GLfloat</a> <strong>depth</strong>, <a href='GLint.html'>GLint</a> <strong>stencil</strong>);</span><span class=def id=operation-createQuery><span class="comment">
 
   &#x2F;* Query Objects *&#x2F;
-  </span><a href='WebGLQuery.html'>WebGLQuery</a>? <strong>createQuery</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteQuery</strong>(<a href='WebGLQuery.html'>WebGLQuery</a>? <strong>query</strong>);</span><span class=def>
-  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isQuery</strong>(<a href='WebGLQuery.html'>WebGLQuery</a>? <strong>query</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>beginQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLQuery.html'>WebGLQuery</a> <strong>query</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>endQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def>
-  <a href='WebGLQuery.html'>WebGLQuery</a>? <strong>getQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getQueryParameter</strong>(<a href='WebGLQuery.html'>WebGLQuery</a> <strong>query</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def><span class="comment">
+  </span><a href='WebGLQuery.html'>WebGLQuery</a>? <strong>createQuery</strong>();</span><span class=def id=operation-deleteQuery-WebGLQuery>
+  <span class=primitive>undefined</span> <strong>deleteQuery</strong>(<a href='WebGLQuery.html'>WebGLQuery</a>? <strong>query</strong>);</span><span class=def id=operation-isQuery-WebGLQuery>
+  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isQuery</strong>(<a href='WebGLQuery.html'>WebGLQuery</a>? <strong>query</strong>);</span><span class=def id=operation-beginQuery-GLenum-WebGLQuery>
+  <span class=primitive>undefined</span> <strong>beginQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLQuery.html'>WebGLQuery</a> <strong>query</strong>);</span><span class=def id=operation-endQuery-GLenum>
+  <span class=primitive>undefined</span> <strong>endQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def id=operation-getQuery-GLenum-GLenum>
+  <a href='WebGLQuery.html'>WebGLQuery</a>? <strong>getQuery</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getQueryParameter-WebGLQuery-GLenum>
+  <span class=primitive>any</span> <strong>getQueryParameter</strong>(<a href='WebGLQuery.html'>WebGLQuery</a> <strong>query</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-createSampler><span class="comment">
 
   &#x2F;* Sampler Objects *&#x2F;
-  </span><a href='WebGLSampler.html'>WebGLSampler</a>? <strong>createSampler</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteSampler</strong>(<a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def>
-  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isSampler</strong>(<a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>bindSampler</strong>(<a href='GLuint.html'>GLuint</a> <strong>unit</strong>, <a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>samplerParameteri</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>, <a href='GLint.html'>GLint</a> <strong>param</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>samplerParameterf</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>, <a href='GLfloat.html'>GLfloat</a> <strong>param</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getSamplerParameter</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def><span class="comment">
+  </span><a href='WebGLSampler.html'>WebGLSampler</a>? <strong>createSampler</strong>();</span><span class=def id=operation-deleteSampler-WebGLSampler>
+  <span class=primitive>undefined</span> <strong>deleteSampler</strong>(<a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def id=operation-isSampler-WebGLSampler>
+  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isSampler</strong>(<a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def id=operation-bindSampler-GLuint-WebGLSampler>
+  <span class=primitive>undefined</span> <strong>bindSampler</strong>(<a href='GLuint.html'>GLuint</a> <strong>unit</strong>, <a href='WebGLSampler.html'>WebGLSampler</a>? <strong>sampler</strong>);</span><span class=def id=operation-samplerParameteri-WebGLSampler-GLenum-GLint>
+  <span class=primitive>undefined</span> <strong>samplerParameteri</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>, <a href='GLint.html'>GLint</a> <strong>param</strong>);</span><span class=def id=operation-samplerParameterf-WebGLSampler-GLenum-GLfloat>
+  <span class=primitive>undefined</span> <strong>samplerParameterf</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>, <a href='GLfloat.html'>GLfloat</a> <strong>param</strong>);</span><span class=def id=operation-getSamplerParameter-WebGLSampler-GLenum>
+  <span class=primitive>any</span> <strong>getSamplerParameter</strong>(<a href='WebGLSampler.html'>WebGLSampler</a> <strong>sampler</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-fenceSync-GLenum-GLbitfield><span class="comment">
 
   &#x2F;* Sync objects *&#x2F;
-  </span><a href='WebGLSync.html'>WebGLSync</a>? <strong>fenceSync</strong>(<a href='GLenum.html'>GLenum</a> <strong>condition</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>);</span><span class=def>
-  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isSync</strong>(<a href='WebGLSync.html'>WebGLSync</a>? <strong>sync</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteSync</strong>(<a href='WebGLSync.html'>WebGLSync</a>? <strong>sync</strong>);</span><span class=def>
-  <a href='GLenum.html'>GLenum</a> <strong>clientWaitSync</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>, <a href='GLuint64.html'>GLuint64</a> <strong>timeout</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>waitSync</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>, <a href='GLint64.html'>GLint64</a> <strong>timeout</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getSyncParameter</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def><span class="comment">
+  </span><a href='WebGLSync.html'>WebGLSync</a>? <strong>fenceSync</strong>(<a href='GLenum.html'>GLenum</a> <strong>condition</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>);</span><span class=def id=operation-isSync-WebGLSync>
+  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isSync</strong>(<a href='WebGLSync.html'>WebGLSync</a>? <strong>sync</strong>);</span><span class=def id=operation-deleteSync-WebGLSync>
+  <span class=primitive>undefined</span> <strong>deleteSync</strong>(<a href='WebGLSync.html'>WebGLSync</a>? <strong>sync</strong>);</span><span class=def id=operation-clientWaitSync-WebGLSync-GLbitfield-GLuint64>
+  <a href='GLenum.html'>GLenum</a> <strong>clientWaitSync</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>, <a href='GLuint64.html'>GLuint64</a> <strong>timeout</strong>);</span><span class=def id=operation-waitSync-WebGLSync-GLbitfield-GLint64>
+  <span class=primitive>undefined</span> <strong>waitSync</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLbitfield.html'>GLbitfield</a> <strong>flags</strong>, <a href='GLint64.html'>GLint64</a> <strong>timeout</strong>);</span><span class=def id=operation-getSyncParameter-WebGLSync-GLenum>
+  <span class=primitive>any</span> <strong>getSyncParameter</strong>(<a href='WebGLSync.html'>WebGLSync</a> <strong>sync</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-createTransformFeedback><span class="comment">
 
   &#x2F;* Transform Feedback *&#x2F;
-  </span><a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>createTransformFeedback</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteTransformFeedback</strong>(<a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def>
-  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isTransformFeedback</strong>(<a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>bindTransformFeedback</strong> (<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>beginTransformFeedback</strong>(<a href='GLenum.html'>GLenum</a> <strong>primitiveMode</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>endTransformFeedback</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>transformFeedbackVaryings</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>varyings</strong>, <a href='GLenum.html'>GLenum</a> <strong>bufferMode</strong>);</span><span class=def>
-  <a href='WebGLActiveInfo.html'>WebGLActiveInfo</a>? <strong>getTransformFeedbackVarying</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>pauseTransformFeedback</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>resumeTransformFeedback</strong>();</span><span class=def><span class="comment">
+  </span><a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>createTransformFeedback</strong>();</span><span class=def id=operation-deleteTransformFeedback-WebGLTransformFeedback>
+  <span class=primitive>undefined</span> <strong>deleteTransformFeedback</strong>(<a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def id=operation-isTransformFeedback-WebGLTransformFeedback>
+  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isTransformFeedback</strong>(<a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def id=operation-bindTransformFeedback-GLenum-WebGLTransformFeedback>
+  <span class=primitive>undefined</span> <strong>bindTransformFeedback</strong> (<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='WebGLTransformFeedback.html'>WebGLTransformFeedback</a>? <strong>tf</strong>);</span><span class=def id=operation-beginTransformFeedback-GLenum>
+  <span class=primitive>undefined</span> <strong>beginTransformFeedback</strong>(<a href='GLenum.html'>GLenum</a> <strong>primitiveMode</strong>);</span><span class=def id=operation-endTransformFeedback>
+  <span class=primitive>undefined</span> <strong>endTransformFeedback</strong>();</span><span class=def id=operation-transformFeedbackVaryings-WebGLProgram-DOMString-GLenum>
+  <span class=primitive>undefined</span> <strong>transformFeedbackVaryings</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>varyings</strong>, <a href='GLenum.html'>GLenum</a> <strong>bufferMode</strong>);</span><span class=def id=operation-getTransformFeedbackVarying-WebGLProgram-GLuint>
+  <a href='WebGLActiveInfo.html'>WebGLActiveInfo</a>? <strong>getTransformFeedbackVarying</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>);</span><span class=def id=operation-pauseTransformFeedback>
+  <span class=primitive>undefined</span> <strong>pauseTransformFeedback</strong>();</span><span class=def id=operation-resumeTransformFeedback>
+  <span class=primitive>undefined</span> <strong>resumeTransformFeedback</strong>();</span><span class=def id=operation-bindBufferBase-GLenum-GLuint-WebGLBuffer><span class="comment">
 
   &#x2F;* Uniform Buffer Objects and Transform Feedback Buffers *&#x2F;
-  </span><span class=primitive>undefined</span> <strong>bindBufferBase</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='WebGLBuffer.html'>WebGLBuffer</a>? <strong>buffer</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>bindBufferRange</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='WebGLBuffer.html'>WebGLBuffer</a>? <strong>buffer</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>, <a href='GLsizeiptr.html'>GLsizeiptr</a> <strong>size</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getIndexedParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>);</span><span class=def>
-  sequence&lt;<a href='GLuint.html'>GLuint</a>&gt;? <strong>getUniformIndices</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>uniformNames</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getActiveUniforms</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<a href='GLuint.html'>GLuint</a>&gt; <strong>uniformIndices</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def>
-  <a href='GLuint.html'>GLuint</a> <strong>getUniformBlockIndex</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>uniformBlockName</strong>);</span><span class=def>
-  <span class=primitive>any</span> <strong>getActiveUniformBlockParameter</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def>
-  <span class=primitive>DOMString</span>? <strong>getActiveUniformBlockName</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>uniformBlockBinding</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockBinding</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>bindBufferBase</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='WebGLBuffer.html'>WebGLBuffer</a>? <strong>buffer</strong>);</span><span class=def id=operation-bindBufferRange-GLenum-GLuint-WebGLBuffer-GLintptr-GLsizeiptr>
+  <span class=primitive>undefined</span> <strong>bindBufferRange</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>, <a href='WebGLBuffer.html'>WebGLBuffer</a>? <strong>buffer</strong>, <a href='GLintptr.html'>GLintptr</a> <strong>offset</strong>, <a href='GLsizeiptr.html'>GLsizeiptr</a> <strong>size</strong>);</span><span class=def id=operation-getIndexedParameter-GLenum-GLuint>
+  <span class=primitive>any</span> <strong>getIndexedParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLuint.html'>GLuint</a> <strong>index</strong>);</span><span class=def id=operation-getUniformIndices-WebGLProgram-DOMString>
+  sequence&lt;<a href='GLuint.html'>GLuint</a>&gt;? <strong>getUniformIndices</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>uniformNames</strong>);</span><span class=def id=operation-getActiveUniforms-WebGLProgram-GLuint-GLenum>
+  <span class=primitive>any</span> <strong>getActiveUniforms</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, sequence&lt;<a href='GLuint.html'>GLuint</a>&gt; <strong>uniformIndices</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getUniformBlockIndex-WebGLProgram-DOMString>
+  <a href='GLuint.html'>GLuint</a> <strong>getUniformBlockIndex</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>uniformBlockName</strong>);</span><span class=def id=operation-getActiveUniformBlockParameter-WebGLProgram-GLuint-GLenum>
+  <span class=primitive>any</span> <strong>getActiveUniformBlockParameter</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getActiveUniformBlockName-WebGLProgram-GLuint>
+  <span class=primitive>DOMString</span>? <strong>getActiveUniformBlockName</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>);</span><span class=def id=operation-uniformBlockBinding-WebGLProgram-GLuint-GLuint>
+  <span class=primitive>undefined</span> <strong>uniformBlockBinding</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockIndex</strong>, <a href='GLuint.html'>GLuint</a> <strong>uniformBlockBinding</strong>);</span><span class=def id=operation-createVertexArray><span class="comment">
 
   &#x2F;* Vertex Array Objects *&#x2F;
-  </span><a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>createVertexArray</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteVertexArray</strong>(<a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>vertexArray</strong>);</span><span class=def>
-  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isVertexArray</strong>(<a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>vertexArray</strong>);</span><span class=def>
+  </span><a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>createVertexArray</strong>();</span><span class=def id=operation-deleteVertexArray-WebGLVertexArrayObject>
+  <span class=primitive>undefined</span> <strong>deleteVertexArray</strong>(<a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>vertexArray</strong>);</span><span class=def id=operation-isVertexArray-WebGLVertexArrayObject>
+  [WebGLHandlesContextLoss] <a href='GLboolean.html'>GLboolean</a> <strong>isVertexArray</strong>(<a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>vertexArray</strong>);</span><span class=def id=operation-bindVertexArray-WebGLVertexArrayObject>
   <span class=primitive>undefined</span> <strong>bindVertexArray</strong>(<a href='WebGLVertexArrayObject.html'>WebGLVertexArrayObject</a>? <strong>array</strong>);</span>
 };</span></code></pre>
   
   
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="WebGL2RenderingContext.html">WebGL2RenderingContext</a></li>
+    <li><code><a href="WebGL2RenderingContext.html">WebGL2RenderingContext</a></code></li>
 
   </ul>
 </section>

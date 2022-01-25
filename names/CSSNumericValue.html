@@ -11,19 +11,19 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>, <a class=realm href='../globals/PaintWorklet.html'>PaintWorklet</a>, <a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>)]
-interface <strong>CSSNumericValue</strong> : <a href='CSSStyleValue.html'>CSSStyleValue</a> {<span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>add</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>sub</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>mul</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>div</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>min</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
-    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>max</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def>
+interface <strong>CSSNumericValue</strong> : <a href='CSSStyleValue.html'>CSSStyleValue</a> {<span class=def id=operation-add-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>add</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-sub-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>sub</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-mul-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>mul</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-div-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>div</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-min-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>min</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-max-CSSNumberish>
+    <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>max</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>values</strong>);</span><span class=def id=operation-equals-CSSNumberish>
 
-    <span class=primitive>boolean</span> <strong>equals</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>value</strong>);</span><span class=def>
+    <span class=primitive>boolean</span> <strong>equals</strong>(<a href='CSSNumberish.html'>CSSNumberish</a>... <strong>value</strong>);</span><span class=def id=operation-to-USVString>
 
-    <a href='CSSUnitValue.html'>CSSUnitValue</a> <strong>to</strong>(<span class=primitive>USVString</span> <strong>unit</strong>);</span><span class=def>
-    <a href='CSSMathSum.html'>CSSMathSum</a> <strong>toSum</strong>(<span class=primitive>USVString</span>... <strong>units</strong>);</span><span class=def>
-    <a href='CSSNumericType.html'>CSSNumericType</a> <strong>type</strong>();</span><span class=def>
+    <a href='CSSUnitValue.html'>CSSUnitValue</a> <strong>to</strong>(<span class=primitive>USVString</span> <strong>unit</strong>);</span><span class=def id=operation-toSum-USVString>
+    <a href='CSSMathSum.html'>CSSMathSum</a> <strong>toSum</strong>(<span class=primitive>USVString</span>... <strong>units</strong>);</span><span class=def id=operation-type>
+    <a href='CSSNumericType.html'>CSSNumericType</a> <strong>type</strong>();</span><span class=def id=operation-static>
 
     [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static <a href='CSSNumericValue.html'>CSSNumericValue</a> <strong>parse</strong>(<span class=primitive>USVString</span> <strong>cssText</strong>);</span>
 };</span></code></pre>
@@ -31,25 +31,91 @@ interface <strong>CSSNumericValue</strong> : <a href='CSSStyleValue.html'>CSSSty
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>CSSNumericValue</code></h3>
+
+  <ul class=long>
+    <li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-add-CSSNumberish>.add()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-sub-CSSNumberish>.sub()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-mul-CSSNumberish>.mul()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-div-CSSNumberish>.div()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-min-CSSNumberish>.min()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-max-CSSNumberish>.max()</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a><a href=CSSNumericValue.html#operation-static>.parse()</a></code></li>
+<li><code><a href="CSSMathNegate.html">CSSMathNegate</a><a href=CSSMathNegate.html#attribute-value>.value</a></code></li>
+<li><code><a href="CSSMathInvert.html">CSSMathInvert</a><a href=CSSMathInvert.html#attribute-value>.value</a></code></li>
+<li><code><a href="CSSMathClamp.html">CSSMathClamp</a><a href=CSSMathClamp.html#attribute-lower>.lower</a></code></li>
+<li><code><a href="CSSMathClamp.html">CSSMathClamp</a><a href=CSSMathClamp.html#attribute-value>.value</a></code></li>
+<li><code><a href="CSSMathClamp.html">CSSMathClamp</a><a href=CSSMathClamp.html#attribute-upper>.upper</a></code></li>
+<li><code><a href="CSSNumericArray.html">CSSNumericArray</a><a href=CSSNumericArray.html#operation-getter>[<var>index</var>]</a></code></li>
+<li><code><a href="CSSTranslate.html">CSSTranslate</a><a href=CSSTranslate.html#attribute-x>.x</a></code></li>
+<li><code><a href="CSSTranslate.html">CSSTranslate</a><a href=CSSTranslate.html#attribute-y>.y</a></code></li>
+<li><code><a href="CSSTranslate.html">CSSTranslate</a><a href=CSSTranslate.html#attribute-z>.z</a></code></li>
+<li><code><a href="CSSRotate.html">CSSRotate</a><a href=CSSRotate.html#attribute-angle>.angle</a></code></li>
+<li><code><a href="CSSSkew.html">CSSSkew</a><a href=CSSSkew.html#attribute-ax>.ax</a></code></li>
+<li><code><a href="CSSSkew.html">CSSSkew</a><a href=CSSSkew.html#attribute-ay>.ay</a></code></li>
+<li><code><a href="CSSSkewX.html">CSSSkewX</a><a href=CSSSkewX.html#attribute-ax>.ax</a></code></li>
+<li><code><a href="CSSSkewY.html">CSSSkewY</a><a href=CSSSkewY.html#attribute-ay>.ay</a></code></li>
+<li><code><a href="CSSHSL.html">CSSHSL</a><a href=CSSHSL.html#attribute-h>.h</a></code></li>
+<li><code><a href="CSSHWB.html">CSSHWB</a><a href=CSSHWB.html#attribute-h>.h</a></code></li>
+<li><code><a href="CSSLCH.html">CSSLCH</a><a href=CSSLCH.html#attribute-h>.h</a></code></li>
+<li><code><a href="AnimationTimeline.html">AnimationTimeline</a><a href=AnimationTimeline.html#attribute-duration>.duration</a></code></li>
+<li><code><a href="Animation.html">Animation</a><a href=Animation.html#attribute-startTime>.startTime</a></code></li>
+<li><code><a href="Animation.html">Animation</a><a href=Animation.html#attribute-currentTime>.currentTime</a></code></li>
+<li><code><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a><a href=AnimationPlaybackEvent.html#attribute-currentTime>.currentTime</a></code></li>
+<li><code><a href="AnimationPlaybackEvent.html">AnimationPlaybackEvent</a><a href=AnimationPlaybackEvent.html#attribute-timelineTime>.timelineTime</a></code></li>
+<li><code><a href="CSSRotate.html">CSSRotate</a><a href=CSSRotate.html#attribute-x>.x</a></code></li>
+<li><code><a href="CSSRotate.html">CSSRotate</a><a href=CSSRotate.html#attribute-y>.y</a></code></li>
+<li><code><a href="CSSRotate.html">CSSRotate</a><a href=CSSRotate.html#attribute-z>.z</a></code></li>
+<li><code><a href="CSSScale.html">CSSScale</a><a href=CSSScale.html#attribute-x>.x</a></code></li>
+<li><code><a href="CSSScale.html">CSSScale</a><a href=CSSScale.html#attribute-y>.y</a></code></li>
+<li><code><a href="CSSScale.html">CSSScale</a><a href=CSSScale.html#attribute-z>.z</a></code></li>
+<li><code><a href="CSSRGB.html">CSSRGB</a><a href=CSSRGB.html#attribute-r>.r</a></code></li>
+<li><code><a href="CSSRGB.html">CSSRGB</a><a href=CSSRGB.html#attribute-g>.g</a></code></li>
+<li><code><a href="CSSRGB.html">CSSRGB</a><a href=CSSRGB.html#attribute-b>.b</a></code></li>
+<li><code><a href="CSSRGB.html">CSSRGB</a><a href=CSSRGB.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSHSL.html">CSSHSL</a><a href=CSSHSL.html#attribute-s>.s</a></code></li>
+<li><code><a href="CSSHSL.html">CSSHSL</a><a href=CSSHSL.html#attribute-l>.l</a></code></li>
+<li><code><a href="CSSHSL.html">CSSHSL</a><a href=CSSHSL.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSHWB.html">CSSHWB</a><a href=CSSHWB.html#attribute-w>.w</a></code></li>
+<li><code><a href="CSSHWB.html">CSSHWB</a><a href=CSSHWB.html#attribute-b>.b</a></code></li>
+<li><code><a href="CSSHWB.html">CSSHWB</a><a href=CSSHWB.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSLCH.html">CSSLCH</a><a href=CSSLCH.html#attribute-l>.l</a></code></li>
+<li><code><a href="CSSLCH.html">CSSLCH</a><a href=CSSLCH.html#attribute-c>.c</a></code></li>
+<li><code><a href="CSSLCH.html">CSSLCH</a><a href=CSSLCH.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSLab.html">CSSLab</a><a href=CSSLab.html#attribute-l>.l</a></code></li>
+<li><code><a href="CSSLab.html">CSSLab</a><a href=CSSLab.html#attribute-a>.a</a></code></li>
+<li><code><a href="CSSLab.html">CSSLab</a><a href=CSSLab.html#attribute-b>.b</a></code></li>
+<li><code><a href="CSSLab.html">CSSLab</a><a href=CSSLab.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSColor.html">CSSColor</a><a href=CSSColor.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSDeviceCMYK.html">CSSDeviceCMYK</a><a href=CSSDeviceCMYK.html#attribute-c>.c</a></code></li>
+<li><code><a href="CSSDeviceCMYK.html">CSSDeviceCMYK</a><a href=CSSDeviceCMYK.html#attribute-m>.m</a></code></li>
+<li><code><a href="CSSDeviceCMYK.html">CSSDeviceCMYK</a><a href=CSSDeviceCMYK.html#attribute-y>.y</a></code></li>
+<li><code><a href="CSSDeviceCMYK.html">CSSDeviceCMYK</a><a href=CSSDeviceCMYK.html#attribute-k>.k</a></code></li>
+<li><code><a href="CSSDeviceCMYK.html">CSSDeviceCMYK</a><a href=CSSDeviceCMYK.html#attribute-alpha>.alpha</a></code></li>
+<li><code><a href="CSSPerspective.html">CSSPerspective</a><a href=CSSPerspective.html#attribute-length>.length</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSHSL.html">CSSHSL</a></li>
-<li><a href="CSSHWB.html">CSSHWB</a></li>
-<li><a href="CSSLCH.html">CSSLCH</a></li>
-<li><a href="CSSMathClamp.html">CSSMathClamp</a></li>
-<li><a href="CSSMathInvert.html">CSSMathInvert</a></li>
-<li><a href="CSSMathNegate.html">CSSMathNegate</a></li>
-<li><a href="CSSMathValue.html">CSSMathValue</a></li>
-<li><a href="CSSNumericArray.html">CSSNumericArray</a></li>
-<li><a href="CSSNumericValue.html">CSSNumericValue</a></li>
-<li><a href="CSSRotate.html">CSSRotate</a></li>
-<li><a href="CSSSkew.html">CSSSkew</a></li>
-<li><a href="CSSSkewX.html">CSSSkewX</a></li>
-<li><a href="CSSSkewY.html">CSSSkewY</a></li>
-<li><a href="CSSTranslate.html">CSSTranslate</a></li>
-<li><a href="CSSUnitValue.html">CSSUnitValue</a></li>
-<li><a href="EffectTiming.html">EffectTiming</a></li>
+    <li><code><a href="CSSHSL.html">CSSHSL</a></code></li>
+<li><code><a href="CSSHWB.html">CSSHWB</a></code></li>
+<li><code><a href="CSSLCH.html">CSSLCH</a></code></li>
+<li><code><a href="CSSMathClamp.html">CSSMathClamp</a></code></li>
+<li><code><a href="CSSMathInvert.html">CSSMathInvert</a></code></li>
+<li><code><a href="CSSMathNegate.html">CSSMathNegate</a></code></li>
+<li><code><a href="CSSMathValue.html">CSSMathValue</a></code></li>
+<li><code><a href="CSSNumericArray.html">CSSNumericArray</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a></code></li>
+<li><code><a href="CSSRotate.html">CSSRotate</a></code></li>
+<li><code><a href="CSSSkew.html">CSSSkew</a></code></li>
+<li><code><a href="CSSSkewX.html">CSSSkewX</a></code></li>
+<li><code><a href="CSSSkewY.html">CSSSkewY</a></code></li>
+<li><code><a href="CSSTranslate.html">CSSTranslate</a></code></li>
+<li><code><a href="CSSUnitValue.html">CSSUnitValue</a></code></li>
+<li><code><a href="EffectTiming.html">EffectTiming</a></code></li>
 
   </ul>
 </section>

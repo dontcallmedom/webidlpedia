@@ -11,8 +11,8 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Path2D</strong> {<span class=def>
-  <strong>constructor</strong>(optional (<a href='Path2D.html'>Path2D</a> or <span class=primitive>DOMString</span>) <strong>path</strong>);</span><span class=def>
+interface <strong>Path2D</strong> {<span class=def id=constructor-Path2D-DOMString>
+  <strong>constructor</strong>(optional (<a href='Path2D.html'>Path2D</a> or <span class=primitive>DOMString</span>) <strong>path</strong>);</span><span class=def id=operation-addPath-Path2D-DOMMatrix2DInit>
 
   <span class=primitive>undefined</span> <strong>addPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> &#x3D; {});</span>
 };</span><span class=def>
@@ -21,30 +21,38 @@ interface <strong>Path2D</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Path2D</strong> {<span class=def>
-  <strong>constructor</strong>(optional (<a href='Path2D.html'>Path2D</a> or <span class=primitive>DOMString</span>) <strong>path</strong>);</span><span class=def>
+interface <strong>Path2D</strong> {<span class=def id=constructor-Path2D-DOMString>
+  <strong>constructor</strong>(optional (<a href='Path2D.html'>Path2D</a> or <span class=primitive>DOMString</span>) <strong>path</strong>);</span><span class=def id=operation-addPath-Path2D-DOMMatrix2DInit>
 
-  <span class=primitive>undefined</span> <strong>addPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> &#x3D; {});</span><span class=def><span class="comment">
+  <span class=primitive>undefined</span> <strong>addPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>transform</strong> &#x3D; {});</span><span class=def id=operation-closePath><span class="comment">
   &#x2F;&#x2F; shared path API methods
-  </span><span class=primitive>undefined</span> <strong>closePath</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>lineTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>quadraticCurveTo</strong>(<span class=primitive>unrestricted double</span> <strong>cpx</strong>, <span class=primitive>unrestricted double</span> <strong>cpy</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>bezierCurveTo</strong>(<span class=primitive>unrestricted double</span> <strong>cp1x</strong>, <span class=primitive>unrestricted double</span> <strong>cp1y</strong>, <span class=primitive>unrestricted double</span> <strong>cp2x</strong>, <span class=primitive>unrestricted double</span> <strong>cp2y</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>arcTo</strong>(<span class=primitive>unrestricted double</span> <strong>x1</strong>, <span class=primitive>unrestricted double</span> <strong>y1</strong>, <span class=primitive>unrestricted double</span> <strong>x2</strong>, <span class=primitive>unrestricted double</span> <strong>y2</strong>, <span class=primitive>unrestricted double</span> <strong>radius</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>rect</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>w</strong>, <span class=primitive>unrestricted double</span> <strong>h</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>roundRect</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>w</strong>, <span class=primitive>unrestricted double</span> <strong>h</strong>, sequence&lt;(<span class=primitive>unrestricted double</span> or <a href='DOMPointInit.html'>DOMPointInit</a>)&gt; <strong>radii</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>arc</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>radius</strong>, <span class=primitive>unrestricted double</span> <strong>startAngle</strong>, <span class=primitive>unrestricted double</span> <strong>endAngle</strong>, optional <span class=primitive>boolean</span> <strong>counterclockwise</strong> &#x3D; false);</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>closePath</strong>();</span><span class=def id=operation-moveTo-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-lineTo-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>lineTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-quadraticCurveTo-unrestricted double-unrestricted double-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>quadraticCurveTo</strong>(<span class=primitive>unrestricted double</span> <strong>cpx</strong>, <span class=primitive>unrestricted double</span> <strong>cpy</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-bezierCurveTo-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>bezierCurveTo</strong>(<span class=primitive>unrestricted double</span> <strong>cp1x</strong>, <span class=primitive>unrestricted double</span> <strong>cp1y</strong>, <span class=primitive>unrestricted double</span> <strong>cp2x</strong>, <span class=primitive>unrestricted double</span> <strong>cp2y</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-arcTo-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>arcTo</strong>(<span class=primitive>unrestricted double</span> <strong>x1</strong>, <span class=primitive>unrestricted double</span> <strong>y1</strong>, <span class=primitive>unrestricted double</span> <strong>x2</strong>, <span class=primitive>unrestricted double</span> <strong>y2</strong>, <span class=primitive>unrestricted double</span> <strong>radius</strong>);</span><span class=def id=operation-rect-unrestricted double-unrestricted double-unrestricted double-unrestricted double>
+  <span class=primitive>undefined</span> <strong>rect</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>w</strong>, <span class=primitive>unrestricted double</span> <strong>h</strong>);</span><span class=def id=operation-roundRect-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double,DOMPointInit>
+  <span class=primitive>undefined</span> <strong>roundRect</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>w</strong>, <span class=primitive>unrestricted double</span> <strong>h</strong>, sequence&lt;(<span class=primitive>unrestricted double</span> or <a href='DOMPointInit.html'>DOMPointInit</a>)&gt; <strong>radii</strong>);</span><span class=def id=operation-arc-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double-boolean>
+  <span class=primitive>undefined</span> <strong>arc</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>radius</strong>, <span class=primitive>unrestricted double</span> <strong>startAngle</strong>, <span class=primitive>unrestricted double</span> <strong>endAngle</strong>, optional <span class=primitive>boolean</span> <strong>counterclockwise</strong> &#x3D; false);</span><span class=def id=operation-ellipse-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double-unrestricted double-boolean>
   <span class=primitive>undefined</span> <strong>ellipse</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, <span class=primitive>unrestricted double</span> <strong>radiusX</strong>, <span class=primitive>unrestricted double</span> <strong>radiusY</strong>, <span class=primitive>unrestricted double</span> <strong>rotation</strong>, <span class=primitive>unrestricted double</span> <strong>startAngle</strong>, <span class=primitive>unrestricted double</span> <strong>endAngle</strong>, optional <span class=primitive>boolean</span> <strong>counterclockwise</strong> &#x3D; false);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Path2D</code></h3>
+
+  <ul>
+    <li><code><a href="Path2D.html">Path2D</a><a href=Path2D.html#constructor-Path2D-DOMString>()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CanvasDrawPath.html">CanvasDrawPath</a></li>
-<li><a href="CanvasUserInterface.html">CanvasUserInterface</a></li>
-<li><a href="Path2D.html">Path2D</a></li>
+    <li><code><a href="CanvasDrawPath.html">CanvasDrawPath</a></code></li>
+<li><code><a href="CanvasUserInterface.html">CanvasUserInterface</a></code></li>
+<li><code><a href="Path2D.html">Path2D</a></code></li>
 
   </ul>
 </section>

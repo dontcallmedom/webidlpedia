@@ -11,21 +11,21 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPURenderPassEncoder</strong> {<span class=def>
+interface <strong>GPURenderPassEncoder</strong> {<span class=def id=operation-setViewport-float-float-float-float-float-float>
     <span class=primitive>undefined</span> <strong>setViewport</strong>(<span class=primitive>float</span> <strong>x</strong>, <span class=primitive>float</span> <strong>y</strong>,
                      <span class=primitive>float</span> <strong>width</strong>, <span class=primitive>float</span> <strong>height</strong>,
-                     <span class=primitive>float</span> <strong>minDepth</strong>, <span class=primitive>float</span> <strong>maxDepth</strong>);</span><span class=def>
+                     <span class=primitive>float</span> <strong>minDepth</strong>, <span class=primitive>float</span> <strong>maxDepth</strong>);</span><span class=def id=operation-setScissorRect-GPUIntegerCoordinate-GPUIntegerCoordinate-GPUIntegerCoordinate-GPUIntegerCoordinate>
 
     <span class=primitive>undefined</span> <strong>setScissorRect</strong>(<a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>x</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>y</strong>,
-                        <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>width</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>height</strong>);</span><span class=def>
+                        <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>width</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>height</strong>);</span><span class=def id=operation-setBlendConstant-GPUColor>
 
-    <span class=primitive>undefined</span> <strong>setBlendConstant</strong>(<a href='GPUColor.html'>GPUColor</a> <strong>color</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>setStencilReference</strong>(<a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>reference</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>setBlendConstant</strong>(<a href='GPUColor.html'>GPUColor</a> <strong>color</strong>);</span><span class=def id=operation-setStencilReference-GPUStencilValue>
+    <span class=primitive>undefined</span> <strong>setStencilReference</strong>(<a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>reference</strong>);</span><span class=def id=operation-beginOcclusionQuery-GPUSize32>
 
-    <span class=primitive>undefined</span> <strong>beginOcclusionQuery</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>endOcclusionQuery</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>beginOcclusionQuery</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def id=operation-endOcclusionQuery>
+    <span class=primitive>undefined</span> <strong>endOcclusionQuery</strong>();</span><span class=def id=operation-executeBundles-GPURenderBundle>
 
-    <span class=primitive>undefined</span> <strong>executeBundles</strong>(sequence&lt;<a href='GPURenderBundle.html'>GPURenderBundle</a>&gt; <strong>bundles</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>executeBundles</strong>(sequence&lt;<a href='GPURenderBundle.html'>GPURenderBundle</a>&gt; <strong>bundles</strong>);</span><span class=def id=operation-endPass>
     <span class=primitive>undefined</span> <strong>endPass</strong>();</span>
 };</span><span class=def>
 <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span><span class=def>
@@ -37,54 +37,62 @@ interface <strong>GPURenderPassEncoder</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPURenderPassEncoder</strong> {<span class=def>
+interface <strong>GPURenderPassEncoder</strong> {<span class=def id=operation-setViewport-float-float-float-float-float-float>
     <span class=primitive>undefined</span> <strong>setViewport</strong>(<span class=primitive>float</span> <strong>x</strong>, <span class=primitive>float</span> <strong>y</strong>,
                      <span class=primitive>float</span> <strong>width</strong>, <span class=primitive>float</span> <strong>height</strong>,
-                     <span class=primitive>float</span> <strong>minDepth</strong>, <span class=primitive>float</span> <strong>maxDepth</strong>);</span><span class=def>
+                     <span class=primitive>float</span> <strong>minDepth</strong>, <span class=primitive>float</span> <strong>maxDepth</strong>);</span><span class=def id=operation-setScissorRect-GPUIntegerCoordinate-GPUIntegerCoordinate-GPUIntegerCoordinate-GPUIntegerCoordinate>
 
     <span class=primitive>undefined</span> <strong>setScissorRect</strong>(<a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>x</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>y</strong>,
-                        <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>width</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>height</strong>);</span><span class=def>
+                        <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>width</strong>, <a href='GPUIntegerCoordinate.html'>GPUIntegerCoordinate</a> <strong>height</strong>);</span><span class=def id=operation-setBlendConstant-GPUColor>
 
-    <span class=primitive>undefined</span> <strong>setBlendConstant</strong>(<a href='GPUColor.html'>GPUColor</a> <strong>color</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>setStencilReference</strong>(<a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>reference</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>setBlendConstant</strong>(<a href='GPUColor.html'>GPUColor</a> <strong>color</strong>);</span><span class=def id=operation-setStencilReference-GPUStencilValue>
+    <span class=primitive>undefined</span> <strong>setStencilReference</strong>(<a href='GPUStencilValue.html'>GPUStencilValue</a> <strong>reference</strong>);</span><span class=def id=operation-beginOcclusionQuery-GPUSize32>
 
-    <span class=primitive>undefined</span> <strong>beginOcclusionQuery</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>endOcclusionQuery</strong>();</span><span class=def>
+    <span class=primitive>undefined</span> <strong>beginOcclusionQuery</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>queryIndex</strong>);</span><span class=def id=operation-endOcclusionQuery>
+    <span class=primitive>undefined</span> <strong>endOcclusionQuery</strong>();</span><span class=def id=operation-executeBundles-GPURenderBundle>
 
-    <span class=primitive>undefined</span> <strong>executeBundles</strong>(sequence&lt;<a href='GPURenderBundle.html'>GPURenderBundle</a>&gt; <strong>bundles</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>endPass</strong>();</span><span class=def>
-    attribute (<span class=primitive>USVString</span> or <span class=primitive>undefined</span>) <strong>label</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
-    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>executeBundles</strong>(sequence&lt;<a href='GPURenderBundle.html'>GPURenderBundle</a>&gt; <strong>bundles</strong>);</span><span class=def id=operation-endPass>
+    <span class=primitive>undefined</span> <strong>endPass</strong>();</span><span class=def id=attribute-label>
+    attribute (<span class=primitive>USVString</span> or <span class=primitive>undefined</span>) <strong>label</strong>;</span><span class=def id=operation-pushDebugGroup-USVString>
+    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def id=operation-popDebugGroup>
+    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def id=operation-insertDebugMarker-USVString>
+    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def id=operation-setBindGroup-GPUIndex32-GPUBindGroup-GPUBufferDynamicOffset>
     <span class=primitive>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
-                      optional sequence&lt;<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>&gt; <strong>dynamicOffsets</strong> &#x3D; []);</span><span class=def>
+                      optional sequence&lt;<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>&gt; <strong>dynamicOffsets</strong> &#x3D; []);</span><span class=def id=operation-setBindGroup-GPUIndex32-GPUBindGroup-Uint32Array-GPUSize64-GPUSize32>
 
     <span class=primitive>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
                       <a href='Uint32Array.html'>Uint32Array</a> <strong>dynamicOffsetsData</strong>,
                       <a href='GPUSize64.html'>GPUSize64</a> <strong>dynamicOffsetsDataStart</strong>,
-                      <a href='GPUSize32.html'>GPUSize32</a> <strong>dynamicOffsetsDataLength</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>pipeline</strong>);</span><span class=def>
+                      <a href='GPUSize32.html'>GPUSize32</a> <strong>dynamicOffsetsDataLength</strong>);</span><span class=def id=operation-setPipeline-GPURenderPipeline>
+    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPURenderPipeline.html'>GPURenderPipeline</a> <strong>pipeline</strong>);</span><span class=def id=operation-setIndexBuffer-GPUBuffer-GPUIndexFormat-GPUSize64-GPUSize64>
 
-    <span class=primitive>undefined</span> <strong>setIndexBuffer</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, <a href='GPUIndexFormat.html'>GPUIndexFormat</a> <strong>indexFormat</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>setVertexBuffer</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>slot</strong>, <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>setIndexBuffer</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, <a href='GPUIndexFormat.html'>GPUIndexFormat</a> <strong>indexFormat</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-setVertexBuffer-GPUIndex32-GPUBuffer-GPUSize64-GPUSize64>
+    <span class=primitive>undefined</span> <strong>setVertexBuffer</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>slot</strong>, <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-draw-GPUSize32-GPUSize32-GPUSize32-GPUSize32>
 
     <span class=primitive>undefined</span> <strong>draw</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>vertexCount</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>instanceCount</strong> &#x3D; 1,
-              optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstVertex</strong> &#x3D; 0, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> &#x3D; 0);</span><span class=def>
+              optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstVertex</strong> &#x3D; 0, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> &#x3D; 0);</span><span class=def id=operation-drawIndexed-GPUSize32-GPUSize32-GPUSize32-GPUSignedOffset32-GPUSize32>
     <span class=primitive>undefined</span> <strong>drawIndexed</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>indexCount</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>instanceCount</strong> &#x3D; 1,
                      optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstIndex</strong> &#x3D; 0,
                      optional <a href='GPUSignedOffset32.html'>GPUSignedOffset32</a> <strong>baseVertex</strong> &#x3D; 0,
-                     optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> &#x3D; 0);</span><span class=def>
+                     optional <a href='GPUSize32.html'>GPUSize32</a> <strong>firstInstance</strong> &#x3D; 0);</span><span class=def id=operation-drawIndirect-GPUBuffer-GPUSize64>
 
-    <span class=primitive>undefined</span> <strong>drawIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>drawIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def id=operation-drawIndexedIndirect-GPUBuffer-GPUSize64>
     <span class=primitive>undefined</span> <strong>drawIndexedIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>GPURenderPassEncoder</code></h3>
+
+  <ul>
+    <li><code><a href="GPUCommandEncoder.html">GPUCommandEncoder</a><a href=GPUCommandEncoder.html#operation-beginRenderPass-GPURenderPassDescriptor>.beginRenderPass()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></li>
+    <li><code><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></code></li>
 
   </ul>
 </section>

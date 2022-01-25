@@ -11,14 +11,14 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Crypto</strong> {<span class=def>
-  [SecureContext] readonly attribute <a href='SubtleCrypto.html'>SubtleCrypto</a> <strong>subtle</strong>;</span><span class=def>
+interface <strong>Crypto</strong> {<span class=def id=attribute-subtle>
+  [SecureContext] readonly attribute <a href='SubtleCrypto.html'>SubtleCrypto</a> <strong>subtle</strong>;</span><span class=def id=operation-getRandomValues-ArrayBufferView>
   <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>getRandomValues</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>array</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;uuid&#x2F;#the-randomuuid-method">uuid</a><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-partial interface <strong>Crypto</strong> {<span class=def>
+partial interface <strong>Crypto</strong> {<span class=def id=operation-randomUUID>
   [SecureContext] <span class=primitive>DOMString</span> <strong>randomUUID</strong>();</span>
 };</span></code></pre></li>
 
@@ -26,17 +26,25 @@ partial interface <strong>Crypto</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Crypto</strong> {<span class=def>
-  [SecureContext] readonly attribute <a href='SubtleCrypto.html'>SubtleCrypto</a> <strong>subtle</strong>;</span><span class=def>
-  <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>getRandomValues</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>array</strong>);</span><span class=def>
+interface <strong>Crypto</strong> {<span class=def id=attribute-subtle>
+  [SecureContext] readonly attribute <a href='SubtleCrypto.html'>SubtleCrypto</a> <strong>subtle</strong>;</span><span class=def id=operation-getRandomValues-ArrayBufferView>
+  <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>getRandomValues</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>array</strong>);</span><span class=def id=operation-randomUUID>
   [SecureContext] <span class=primitive>DOMString</span> <strong>randomUUID</strong>();</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Crypto</code></h3>
+
+  <ul>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a><a href=WindowOrWorkerGlobalScope.html#attribute-crypto>.crypto</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></li>
+    <li><code><a href="WindowOrWorkerGlobalScope.html">WindowOrWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

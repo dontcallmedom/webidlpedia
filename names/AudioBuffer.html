@@ -11,16 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AudioBuffer</strong> {<span class=def>
-  <strong>constructor</strong> (<a href='AudioBufferOptions.html'>AudioBufferOptions</a> <strong>options</strong>);</span><span class=def>
-  readonly attribute <span class=primitive>float</span> <strong>sampleRate</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>duration</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>;</span><span class=def>
-  <a href='Float32Array.html'>Float32Array</a> <strong>getChannelData</strong> (<span class=primitive>unsigned long</span> <strong>channel</strong>);</span><span class=def>
+interface <strong>AudioBuffer</strong> {<span class=def id=constructor-AudioBufferOptions>
+  <strong>constructor</strong> (<a href='AudioBufferOptions.html'>AudioBufferOptions</a> <strong>options</strong>);</span><span class=def id=attribute-sampleRate>
+  readonly attribute <span class=primitive>float</span> <strong>sampleRate</strong>;</span><span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=attribute-duration>
+  readonly attribute <span class=primitive>double</span> <strong>duration</strong>;</span><span class=def id=attribute-numberOfChannels>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>;</span><span class=def id=operation-getChannelData-unsigned long>
+  <a href='Float32Array.html'>Float32Array</a> <strong>getChannelData</strong> (<span class=primitive>unsigned long</span> <strong>channel</strong>);</span><span class=def id=operation-copyFromChannel-Float32Array-unsigned long-unsigned long>
   <span class=primitive>undefined</span> <strong>copyFromChannel</strong> (<a href='Float32Array.html'>Float32Array</a> <strong>destination</strong>,
                              <span class=primitive>unsigned long</span> <strong>channelNumber</strong>,
-                             optional <span class=primitive>unsigned long</span> <strong>bufferOffset</strong> &#x3D; 0);</span><span class=def>
+                             optional <span class=primitive>unsigned long</span> <strong>bufferOffset</strong> &#x3D; 0);</span><span class=def id=operation-copyToChannel-Float32Array-unsigned long-unsigned long>
   <span class=primitive>undefined</span> <strong>copyToChannel</strong> (<a href='Float32Array.html'>Float32Array</a> <strong>source</strong>,
                            <span class=primitive>unsigned long</span> <strong>channelNumber</strong>,
                            optional <span class=primitive>unsigned long</span> <strong>bufferOffset</strong> &#x3D; 0);</span>
@@ -29,19 +29,35 @@ interface <strong>AudioBuffer</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AudioBuffer</code></h3>
+
+  <ul>
+    <li><code><a href="AudioBuffer.html">AudioBuffer</a><a href=AudioBuffer.html#constructor-AudioBufferOptions>()</a></code></li>
+<li><code><a href="BaseAudioContext.html">BaseAudioContext</a><a href=BaseAudioContext.html#operation-createBuffer-unsigned long-unsigned long-float>.createBuffer()</a></code></li>
+<li><code><a href="BaseAudioContext.html">BaseAudioContext</a><a href=BaseAudioContext.html#operation-decodeAudioData-ArrayBuffer-DecodeSuccessCallback-DecodeErrorCallback>.decodeAudioData()</a></code></li>
+<li><code><a href="OfflineAudioContext.html">OfflineAudioContext</a><a href=OfflineAudioContext.html#operation-startRendering>.startRendering()</a></code></li>
+<li><code><a href="OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a><a href=OfflineAudioCompletionEvent.html#attribute-renderedBuffer>.renderedBuffer</a></code></li>
+<li><code><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a><a href=AudioBufferSourceNode.html#attribute-buffer>.buffer</a></code></li>
+<li><code><a href="AudioProcessingEvent.html">AudioProcessingEvent</a><a href=AudioProcessingEvent.html#attribute-inputBuffer>.inputBuffer</a></code></li>
+<li><code><a href="AudioProcessingEvent.html">AudioProcessingEvent</a><a href=AudioProcessingEvent.html#attribute-outputBuffer>.outputBuffer</a></code></li>
+<li><code><a href="ConvolverNode.html">ConvolverNode</a><a href=ConvolverNode.html#attribute-buffer>.buffer</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></li>
-<li><a href="AudioBufferSourceOptions.html">AudioBufferSourceOptions</a></li>
-<li><a href="AudioProcessingEvent.html">AudioProcessingEvent</a></li>
-<li><a href="AudioProcessingEventInit.html">AudioProcessingEventInit</a></li>
-<li><a href="BaseAudioContext.html">BaseAudioContext</a></li>
-<li><a href="ConvolverNode.html">ConvolverNode</a></li>
-<li><a href="ConvolverOptions.html">ConvolverOptions</a></li>
-<li><a href="OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a></li>
-<li><a href="OfflineAudioCompletionEventInit.html">OfflineAudioCompletionEventInit</a></li>
-<li><a href="OfflineAudioContext.html">OfflineAudioContext</a></li>
+    <li><code><a href="AudioBufferSourceNode.html">AudioBufferSourceNode</a></code></li>
+<li><code><a href="AudioBufferSourceOptions.html">AudioBufferSourceOptions</a></code></li>
+<li><code><a href="AudioProcessingEvent.html">AudioProcessingEvent</a></code></li>
+<li><code><a href="AudioProcessingEventInit.html">AudioProcessingEventInit</a></code></li>
+<li><code><a href="BaseAudioContext.html">BaseAudioContext</a></code></li>
+<li><code><a href="ConvolverNode.html">ConvolverNode</a></code></li>
+<li><code><a href="ConvolverOptions.html">ConvolverOptions</a></code></li>
+<li><code><a href="OfflineAudioCompletionEvent.html">OfflineAudioCompletionEvent</a></code></li>
+<li><code><a href="OfflineAudioCompletionEventInit.html">OfflineAudioCompletionEventInit</a></code></li>
+<li><code><a href="OfflineAudioContext.html">OfflineAudioContext</a></code></li>
 
   </ul>
 </section>

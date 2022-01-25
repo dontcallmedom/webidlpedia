@@ -11,35 +11,36 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def><span class="comment">
+interface <strong>SVGTextContentElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=const-LENGTHADJUST_UNKNOWN><span class="comment">
 
   &#x2F;&#x2F; lengthAdjust Types
-  </span>const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> &#x3D; 2;</span><span class=def>
+  </span>const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_UNKNOWN</strong> &#x3D; 0;</span><span class=def id=const-LENGTHADJUST_SPACING>
+  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACING</strong> &#x3D; 1;</span><span class=def id=const-LENGTHADJUST_SPACINGANDGLYPHS>
+  const <span class=primitive>unsigned short</span> <strong>LENGTHADJUST_SPACINGANDGLYPHS</strong> &#x3D; 2;</span><span class=def id=attribute-textLength>
 
-  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='SVGAnimatedLength.html'>SVGAnimatedLength</a> <strong>textLength</strong>;</span><span class=def id=attribute-lengthAdjust>
+  [SameObject] readonly attribute <a href='SVGAnimatedEnumeration.html'>SVGAnimatedEnumeration</a> <strong>lengthAdjust</strong>;</span><span class=def id=operation-getNumberOfChars>
 
-  <span class=primitive>long</span> <strong>getNumberOfChars</strong>();</span><span class=def>
-  <span class=primitive>float</span> <strong>getComputedTextLength</strong>();</span><span class=def>
-  <span class=primitive>float</span> <strong>getSubStringLength</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>, <span class=primitive>unsigned long</span> <strong>nchars</strong>);</span><span class=def>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
-  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
-  <span class=primitive>float</span> <strong>getRotationOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def>
-  <span class=primitive>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>long</span> <strong>getNumberOfChars</strong>();</span><span class=def id=operation-getComputedTextLength>
+  <span class=primitive>float</span> <strong>getComputedTextLength</strong>();</span><span class=def id=operation-getSubStringLength-unsigned long-unsigned long>
+  <span class=primitive>float</span> <strong>getSubStringLength</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>, <span class=primitive>unsigned long</span> <strong>nchars</strong>);</span><span class=def id=operation-getStartPositionOfChar-unsigned long>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getStartPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def id=operation-getEndPositionOfChar-unsigned long>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getEndPositionOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def id=operation-getExtentOfChar-unsigned long>
+  <a href='DOMRect.html'>DOMRect</a> <strong>getExtentOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def id=operation-getRotationOfChar-unsigned long>
+  <span class=primitive>float</span> <strong>getRotationOfChar</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>);</span><span class=def id=operation-getCharNumAtPosition-DOMPointInit>
+  <span class=primitive>long</span> <strong>getCharNumAtPosition</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def id=operation-selectSubString-unsigned long-unsigned long>
   <span class=primitive>undefined</span> <strong>selectSubString</strong>(<span class=primitive>unsigned long</span> <strong>charnum</strong>, <span class=primitive>unsigned long</span> <strong>nchars</strong>);</span>
 };</span></code></pre>
   
   
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGTextPathElement.html">SVGTextPathElement</a></li>
-<li><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></li>
+    <li><code><a href="SVGTextPathElement.html">SVGTextPathElement</a></code></li>
+<li><code><a href="SVGTextPositioningElement.html">SVGTextPositioningElement</a></code></li>
 
   </ul>
 </section>

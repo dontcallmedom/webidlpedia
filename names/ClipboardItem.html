@@ -10,18 +10,18 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;clipboard-apis&#x2F;#clipboarditem">Clipboard API and events</a> defines <code>ClipboardItem</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>ClipboardItem</strong> {<span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>ClipboardItem</strong> {<span class=def id=constructor-DOMString-ClipboardItemData-ClipboardItemOptions>
   <strong>constructor</strong>(record&lt;<span class=primitive>DOMString</span>, <a href='ClipboardItemData.html'>ClipboardItemData</a>&gt; <strong>items</strong>,
-    optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+    optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
   static <a href='ClipboardItem.html'>ClipboardItem</a> <strong>createDelayed</strong>(
       record&lt;<span class=primitive>DOMString</span>, <a href='ClipboardItemDelayedCallback.html'>ClipboardItemDelayedCallback</a>&gt; <strong>items</strong>,
-      optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+      optional <a href='ClipboardItemOptions.html'>ClipboardItemOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-presentationStyle>
 
-  readonly attribute <a href='PresentationStyle.html'>PresentationStyle</a> <strong>presentationStyle</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long long</span> <strong>lastModified</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>delayed</strong>;</span><span class=def>
+  readonly attribute <a href='PresentationStyle.html'>PresentationStyle</a> <strong>presentationStyle</strong>;</span><span class=def id=attribute-lastModified>
+  readonly attribute <span class=primitive>long long</span> <strong>lastModified</strong>;</span><span class=def id=attribute-delayed>
+  readonly attribute <span class=primitive>boolean</span> <strong>delayed</strong>;</span><span class=def id=attribute-types>
 
-  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>types</strong>;</span><span class=def>
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>types</strong>;</span><span class=def id=operation-getType-DOMString>
 
   Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>getType</strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span>
 };</span></code></pre>
@@ -29,10 +29,20 @@ base: ../
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>ClipboardItem</code></h3>
+
+  <ul>
+    <li><code><a href="ClipboardItem.html">ClipboardItem</a><a href=ClipboardItem.html#constructor-DOMString-ClipboardItemData-ClipboardItemOptions>()</a></code></li>
+<li><code><a href="ClipboardItem.html">ClipboardItem</a><a href=ClipboardItem.html#operation-static>.createDelayed()</a></code></li>
+<li><code><a href="Clipboard.html">Clipboard</a><a href=Clipboard.html#operation-read>.read()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ClipboardItem.html">ClipboardItem</a></li>
+    <li><code><a href="ClipboardItem.html">ClipboardItem</a></code></li>
 
   </ul>
 </section>

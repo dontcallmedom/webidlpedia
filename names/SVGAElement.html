@@ -11,16 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>target</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>download</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>ping</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=attribute-target>
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>target</strong>;</span><span class=def id=attribute-download>
+  attribute <span class=primitive>DOMString</span> <strong>download</strong>;</span><span class=def id=attribute-ping>
+  attribute <span class=primitive>USVString</span> <strong>ping</strong>;</span><span class=def id=attribute-rel>
+  attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def id=attribute-relList>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def id=attribute-hreflang>
+  attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def id=attribute-type>
+  attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-text>
 
-  attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-referrerPolicy>
 
   attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span>
 };</span><span class=def>
@@ -31,31 +31,32 @@ interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGr
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>target</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>download</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>ping</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def>
+interface <strong>SVGAElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=attribute-target>
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>target</strong>;</span><span class=def id=attribute-download>
+  attribute <span class=primitive>DOMString</span> <strong>download</strong>;</span><span class=def id=attribute-ping>
+  attribute <span class=primitive>USVString</span> <strong>ping</strong>;</span><span class=def id=attribute-rel>
+  attribute <span class=primitive>DOMString</span> <strong>rel</strong>;</span><span class=def id=attribute-relList>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>relList</strong>;</span><span class=def id=attribute-hreflang>
+  attribute <span class=primitive>DOMString</span> <strong>hreflang</strong>;</span><span class=def id=attribute-type>
+  attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-text>
 
-  attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-referrerPolicy>
 
-  attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>href</strong>;</span><span class=def>
-  [CEReactions] stringifier attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>username</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>password</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>host</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>hostname</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>port</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>pathname</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>search</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-href>
+  [SameObject] readonly attribute <a href='SVGAnimatedString.html'>SVGAnimatedString</a> <strong>href</strong>;</span><span class=def id=attribute-href>
+  [CEReactions] stringifier attribute <span class=primitive>USVString</span> <strong>href</strong>;</span><span class=def id=attribute-origin>
+  readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def id=attribute-protocol>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>protocol</strong>;</span><span class=def id=attribute-username>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>username</strong>;</span><span class=def id=attribute-password>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>password</strong>;</span><span class=def id=attribute-host>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>host</strong>;</span><span class=def id=attribute-hostname>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>hostname</strong>;</span><span class=def id=attribute-port>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>port</strong>;</span><span class=def id=attribute-pathname>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>pathname</strong>;</span><span class=def id=attribute-search>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>search</strong>;</span><span class=def id=attribute-hash>
   [CEReactions] attribute <span class=primitive>USVString</span> <strong>hash</strong>;</span>
 };</span></code></pre></details>
 </section>
+
 
   

@@ -11,20 +11,28 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>]
-interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {<span class=def>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='PaymentRequestEventInit.html'>PaymentRequestEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>topOrigin</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>paymentRequestOrigin</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>paymentRequestId</strong>;</span><span class=def>
-  readonly attribute FrozenArray&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>object</span> <strong>total</strong>;</span><span class=def>
-  readonly attribute FrozenArray&lt;<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>&gt; <strong>modifiers</strong>;</span><span class=def>
-  Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def>
-  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changePaymentMethod</strong>(<span class=primitive>DOMString</span> <strong>methodName</strong>, optional <span class=primitive>object</span>? <strong>methodDetails</strong> &#x3D; null);</span><span class=def>
+interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>ExtendableEvent</a> {<span class=def id=constructor-DOMString-PaymentRequestEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='PaymentRequestEventInit.html'>PaymentRequestEventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-topOrigin>
+  readonly attribute <span class=primitive>USVString</span> <strong>topOrigin</strong>;</span><span class=def id=attribute-paymentRequestOrigin>
+  readonly attribute <span class=primitive>USVString</span> <strong>paymentRequestOrigin</strong>;</span><span class=def id=attribute-paymentRequestId>
+  readonly attribute <span class=primitive>DOMString</span> <strong>paymentRequestId</strong>;</span><span class=def id=attribute-methodData>
+  readonly attribute FrozenArray&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>;</span><span class=def id=attribute-total>
+  readonly attribute <span class=primitive>object</span> <strong>total</strong>;</span><span class=def id=attribute-modifiers>
+  readonly attribute FrozenArray&lt;<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>&gt; <strong>modifiers</strong>;</span><span class=def id=operation-openWindow-USVString>
+  Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def id=operation-changePaymentMethod-DOMString-object>
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changePaymentMethod</strong>(<span class=primitive>DOMString</span> <strong>methodName</strong>, optional <span class=primitive>object</span>? <strong>methodDetails</strong> &#x3D; null);</span><span class=def id=operation-respondWith-PaymentHandlerResponse>
   <span class=primitive>undefined</span> <strong>respondWith</strong>(Promise&lt;<a href='PaymentHandlerResponse.html'>PaymentHandlerResponse</a>&gt; <strong>handlerResponsePromise</strong>);</span>
 };</span></code></pre>
   
   
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>PaymentRequestEvent</code></h3>
+
+  <ul>
+    <li><code><a href="PaymentRequestEvent.html">PaymentRequestEvent</a><a href=PaymentRequestEvent.html#constructor-DOMString-PaymentRequestEventInit>()</a></code></li>
+
+  </ul>
 </section>
 
   

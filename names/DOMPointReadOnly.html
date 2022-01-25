@@ -10,18 +10,18 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;drafts.fxtf.org&#x2F;geometry&#x2F;#dompointreadonly">Geometry Interfaces Module Level 1</a> defines <code>DOMPointReadOnly</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
  Serializable]
-interface <strong>DOMPointReadOnly</strong> {<span class=def>
+interface <strong>DOMPointReadOnly</strong> {<span class=def id=constructor-unrestricted double-unrestricted double-unrestricted double-unrestricted double>
     <strong>constructor</strong>(optional <span class=primitive>unrestricted double</span> <strong>x</strong> &#x3D; 0, optional <span class=primitive>unrestricted double</span> <strong>y</strong> &#x3D; 0,
-            optional <span class=primitive>unrestricted double</span> <strong>z</strong> &#x3D; 0, optional <span class=primitive>unrestricted double</span> <strong>w</strong> &#x3D; 1);</span><span class=def>
+            optional <span class=primitive>unrestricted double</span> <strong>z</strong> &#x3D; 0, optional <span class=primitive>unrestricted double</span> <strong>w</strong> &#x3D; 1);</span><span class=def id=operation-static>
 
-    [NewObject] static <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>fromPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>other</strong> &#x3D; {});</span><span class=def>
+    [NewObject] static <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>fromPoint</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>other</strong> &#x3D; {});</span><span class=def id=attribute-x>
 
-    readonly attribute <span class=primitive>unrestricted double</span> <strong>x</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unrestricted double</span> <strong>y</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unrestricted double</span> <strong>z</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unrestricted double</span> <strong>w</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>x</strong>;</span><span class=def id=attribute-y>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>y</strong>;</span><span class=def id=attribute-z>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>z</strong>;</span><span class=def id=attribute-w>
+    readonly attribute <span class=primitive>unrestricted double</span> <strong>w</strong>;</span><span class=def id=operation-matrixTransform-DOMMatrixInit>
 
-    [NewObject] <a href='DOMPoint.html'>DOMPoint</a> <strong>matrixTransform</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def>
+    [NewObject] <a href='DOMPoint.html'>DOMPoint</a> <strong>matrixTransform</strong>(optional <a href='DOMMatrixInit.html'>DOMMatrixInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-toJSON>
 
     [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
 };</span></code></pre>
@@ -29,19 +29,39 @@ interface <strong>DOMPointReadOnly</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>DOMPointReadOnly</code></h3>
+
+  <ul>
+    <li><code><a href="DOMPointReadOnly.html">DOMPointReadOnly</a><a href=DOMPointReadOnly.html#constructor-unrestricted double-unrestricted double-unrestricted double-unrestricted double>()</a></code></li>
+<li><code><a href="DOMPointReadOnly.html">DOMPointReadOnly</a><a href=DOMPointReadOnly.html#operation-static>.fromPoint()</a></code></li>
+<li><code><a href="SVGSVGElement.html">SVGSVGElement</a><a href=SVGSVGElement.html#attribute-currentTranslate>.currentTranslate</a></code></li>
+<li><code><a href="XRRay.html">XRRay</a><a href=XRRay.html#attribute-origin>.origin</a></code></li>
+<li><code><a href="XRRay.html">XRRay</a><a href=XRRay.html#attribute-direction>.direction</a></code></li>
+<li><code><a href="XRLightEstimate.html">XRLightEstimate</a><a href=XRLightEstimate.html#attribute-primaryLightDirection>.primaryLightDirection</a></code></li>
+<li><code><a href="XRLightEstimate.html">XRLightEstimate</a><a href=XRLightEstimate.html#attribute-primaryLightIntensity>.primaryLightIntensity</a></code></li>
+<li><code><a href="XRBoundedReferenceSpace.html">XRBoundedReferenceSpace</a><a href=XRBoundedReferenceSpace.html#attribute-boundsGeometry>.boundsGeometry</a></code></li>
+<li><code><a href="XRRigidTransform.html">XRRigidTransform</a><a href=XRRigidTransform.html#attribute-position>.position</a></code></li>
+<li><code><a href="XRRigidTransform.html">XRRigidTransform</a><a href=XRRigidTransform.html#attribute-orientation>.orientation</a></code></li>
+<li><code><a href="XRPose.html">XRPose</a><a href=XRPose.html#attribute-linearVelocity>.linearVelocity</a></code></li>
+<li><code><a href="XRPose.html">XRPose</a><a href=XRPose.html#attribute-angularVelocity>.angularVelocity</a></code></li>
+<li><code><a href="XRCubeLayer.html">XRCubeLayer</a><a href=XRCubeLayer.html#attribute-orientation>.orientation</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DOMPoint.html">DOMPoint</a></li>
-<li><a href="DOMPointReadOnly.html">DOMPointReadOnly</a></li>
-<li><a href="SVGSVGElement.html">SVGSVGElement</a></li>
-<li><a href="XRBoundedReferenceSpace.html">XRBoundedReferenceSpace</a></li>
-<li><a href="XRCubeLayer.html">XRCubeLayer</a></li>
-<li><a href="XRCubeLayerInit.html">XRCubeLayerInit</a></li>
-<li><a href="XRLightEstimate.html">XRLightEstimate</a></li>
-<li><a href="XRPose.html">XRPose</a></li>
-<li><a href="XRRay.html">XRRay</a></li>
-<li><a href="XRRigidTransform.html">XRRigidTransform</a></li>
+    <li><code><a href="DOMPoint.html">DOMPoint</a></code></li>
+<li><code><a href="DOMPointReadOnly.html">DOMPointReadOnly</a></code></li>
+<li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
+<li><code><a href="XRBoundedReferenceSpace.html">XRBoundedReferenceSpace</a></code></li>
+<li><code><a href="XRCubeLayer.html">XRCubeLayer</a></code></li>
+<li><code><a href="XRCubeLayerInit.html">XRCubeLayerInit</a></code></li>
+<li><code><a href="XRLightEstimate.html">XRLightEstimate</a></code></li>
+<li><code><a href="XRPose.html">XRPose</a></code></li>
+<li><code><a href="XRRay.html">XRRay</a></code></li>
+<li><code><a href="XRRigidTransform.html">XRRigidTransform</a></code></li>
 
   </ul>
 </section>

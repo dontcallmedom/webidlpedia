@@ -11,34 +11,34 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-width>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>videoWidth</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>videoHeight</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>poster</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def id=attribute-videoWidth>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>videoWidth</strong>;</span><span class=def id=attribute-videoHeight>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>videoHeight</strong>;</span><span class=def id=attribute-poster>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>poster</strong>;</span><span class=def id=attribute-playsInline>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong>playsInline</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-playback-quality&#x2F;#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLVideoElement</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;media-playback-quality&#x2F;#extension-to-the-htmlvideoelement-interface">Media Playback Quality</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLVideoElement</strong> {<span class=def id=operation-getVideoPlaybackQuality>
   <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;video-rvfc&#x2F;">HTMLVideoElement.requestVideoFrameCallback()</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLVideoElement</strong> {<span class=def>
-    <span class=primitive>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
+partial interface <strong>HTMLVideoElement</strong> {<span class=def id=operation-requestVideoFrameCallback-VideoFrameRequestCallback>
+    <span class=primitive>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def id=operation-cancelVideoFrameCallback-unsigned long>
     <span class=primitive>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLVideoElement</strong> {<span class=def>
-  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();</span><span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLVideoElement</strong> {<span class=def id=operation-requestPictureInPicture>
+  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();</span><span class=def id=attribute-onenterpictureinpicture>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;</span><span class=def id=attribute-onleavepictureinpicture>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;</span><span class=def id=attribute-autoPictureInPicture>
 
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>autoPictureInPicture</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>autoPictureInPicture</strong>;</span><span class=def id=attribute-disablePictureInPicture>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong>disablePictureInPicture</strong>;</span>
 };</span></code></pre></li>
 
@@ -46,33 +46,41 @@ partial interface <strong>HTMLVideoElement</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {<span class=def>
-  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def>
+interface <strong>HTMLVideoElement</strong> : <a href='HTMLMediaElement.html'>HTMLMediaElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-width>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>videoWidth</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>videoHeight</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong>poster</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>playsInline</strong>;</span><span class=def>
-  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();</span><span class=def>
-    <span class=primitive>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
-  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();</span><span class=def>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong>height</strong>;</span><span class=def id=attribute-videoWidth>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>videoWidth</strong>;</span><span class=def id=attribute-videoHeight>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>videoHeight</strong>;</span><span class=def id=attribute-poster>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>poster</strong>;</span><span class=def id=attribute-playsInline>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>playsInline</strong>;</span><span class=def id=operation-getVideoPlaybackQuality>
+  <a href='VideoPlaybackQuality.html'>VideoPlaybackQuality</a> <strong>getVideoPlaybackQuality</strong>();</span><span class=def id=operation-requestVideoFrameCallback-VideoFrameRequestCallback>
+    <span class=primitive>unsigned long</span> <strong>requestVideoFrameCallback</strong>(<a href='VideoFrameRequestCallback.html'>VideoFrameRequestCallback</a> <strong>callback</strong>);</span><span class=def id=operation-cancelVideoFrameCallback-unsigned long>
+    <span class=primitive>undefined</span> <strong>cancelVideoFrameCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def id=operation-requestPictureInPicture>
+  [NewObject] Promise&lt;<a href='PictureInPictureWindow.html'>PictureInPictureWindow</a>&gt; <strong>requestPictureInPicture</strong>();</span><span class=def id=attribute-onenterpictureinpicture>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onenterpictureinpicture</strong>;</span><span class=def id=attribute-onleavepictureinpicture>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onleavepictureinpicture</strong>;</span><span class=def id=attribute-autoPictureInPicture>
 
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>autoPictureInPicture</strong>;</span><span class=def>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>autoPictureInPicture</strong>;</span><span class=def id=attribute-disablePictureInPicture>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong>disablePictureInPicture</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLVideoElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLVideoElement.html">HTMLVideoElement</a><a href=HTMLVideoElement.html#constructor>()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPUExternalTextureDescriptor.html">GPUExternalTextureDescriptor</a></li>
-<li><a href="XRMediaBinding.html">XRMediaBinding</a></li>
+    <li><code><a href="GPUExternalTextureDescriptor.html">GPUExternalTextureDescriptor</a></code></li>
+<li><code><a href="XRMediaBinding.html">XRMediaBinding</a></code></li>
 
   </ul>
 </section>

@@ -11,19 +11,27 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>PeriodicSyncManager</strong> {<span class=def>
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>register</strong>(<span class=primitive>DOMString</span> <strong>tag</strong>, optional <a href='BackgroundSyncOptions.html'>BackgroundSyncOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt; <strong>getTags</strong>();</span><span class=def>
+interface <strong>PeriodicSyncManager</strong> {<span class=def id=operation-register-DOMString-BackgroundSyncOptions>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>register</strong>(<span class=primitive>DOMString</span> <strong>tag</strong>, optional <a href='BackgroundSyncOptions.html'>BackgroundSyncOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getTags>
+    Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt; <strong>getTags</strong>();</span><span class=def id=operation-unregister-DOMString>
     Promise&lt;<span class=primitive>undefined</span>&gt; <strong>unregister</strong>(<span class=primitive>DOMString</span> <strong>tag</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PeriodicSyncManager</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a><a href=ServiceWorkerRegistration.html#attribute-periodicSync>.periodicSync</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
 
   </ul>
 </section>

@@ -11,53 +11,68 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {<span class=def>
-  <strong>constructor</strong>(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {<span class=def id=constructor-CSSStyleSheetInit>
+  <strong>constructor</strong>(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-ownerRule>
 
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def>
-  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;</span><span class=def id=attribute-cssRules>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def id=operation-insertRule-CSSOMString-unsigned long>
+  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def id=operation-deleteRule-unsigned long>
+  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-replace-USVString>
 
-  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def>
+  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def id=operation-replaceSync-USVString>
   <span class=primitive>undefined</span> <strong>replaceSync</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>CSSStyleSheet</strong> {<span class=def>
-  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;</span><span class=def>
-  <span class=primitive>long</span> <strong>addRule</strong>(optional <span class=primitive>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+partial interface <strong>CSSStyleSheet</strong> {<span class=def id=attribute-rules>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;</span><span class=def id=operation-addRule-DOMString-DOMString-unsigned long>
+  <span class=primitive>long</span> <strong>addRule</strong>(optional <span class=primitive>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-removeRule-unsigned long>
   <span class=primitive>undefined</span> <strong>removeRule</strong>(optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {<span class=def>
-  <strong>constructor</strong>(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+interface <strong>CSSStyleSheet</strong> : <a href='StyleSheet.html'>StyleSheet</a> {<span class=def id=constructor-CSSStyleSheetInit>
+  <strong>constructor</strong>(optional <a href='CSSStyleSheetInit.html'>CSSStyleSheetInit</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-ownerRule>
 
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def>
-  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>ownerRule</strong>;</span><span class=def id=attribute-cssRules>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>cssRules</strong>;</span><span class=def id=operation-insertRule-CSSOMString-unsigned long>
+  <span class=primitive>unsigned long</span> <strong>insertRule</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>rule</strong>, optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span><span class=def id=operation-deleteRule-unsigned long>
+  <span class=primitive>undefined</span> <strong>deleteRule</strong>(<span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-replace-USVString>
 
-  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>replaceSync</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def>
-  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;</span><span class=def>
-  <span class=primitive>long</span> <strong>addRule</strong>(optional <span class=primitive>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def>
+  Promise&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>replace</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def id=operation-replaceSync-USVString>
+  <span class=primitive>undefined</span> <strong>replaceSync</strong>(<span class=primitive>USVString</span> <strong>text</strong>);</span><span class=def id=attribute-rules>
+  [SameObject] readonly attribute <a href='CSSRuleList.html'>CSSRuleList</a> <strong>rules</strong>;</span><span class=def id=operation-addRule-DOMString-DOMString-unsigned long>
+  <span class=primitive>long</span> <strong>addRule</strong>(optional <span class=primitive>DOMString</span> <strong>selector</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>DOMString</span> <strong>style</strong> &#x3D; &quot;undefined&quot;, optional <span class=primitive>unsigned long</span> <strong>index</strong>);</span><span class=def id=operation-removeRule-unsigned long>
   <span class=primitive>undefined</span> <strong>removeRule</strong>(optional <span class=primitive>unsigned long</span> <strong>index</strong> &#x3D; 0);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>CSSStyleSheet</code></h3>
+
+  <ul>
+    <li><code><a href="CSSStyleSheet.html">CSSStyleSheet</a><a href=CSSStyleSheet.html#constructor-CSSStyleSheetInit>()</a></code></li>
+<li><code><a href="StyleSheet.html">StyleSheet</a><a href=StyleSheet.html#attribute-parentStyleSheet>.parentStyleSheet</a></code></li>
+<li><code><a href="CSSStyleSheet.html">CSSStyleSheet</a><a href=CSSStyleSheet.html#operation-replace-USVString>.replace()</a></code></li>
+<li><code><a href="StyleSheetList.html">StyleSheetList</a><a href=StyleSheetList.html#operation-getter>.item()</a></code></li>
+<li><code><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a><a href=DocumentOrShadowRoot.html#attribute-adoptedStyleSheets>.adoptedStyleSheets</a></code></li>
+<li><code><a href="LinkStyle.html">LinkStyle</a><a href=LinkStyle.html#attribute-sheet>.sheet</a></code></li>
+<li><code><a href="CSSRule.html">CSSRule</a><a href=CSSRule.html#attribute-parentStyleSheet>.parentStyleSheet</a></code></li>
+<li><code><a href="CSSImportRule.html">CSSImportRule</a><a href=CSSImportRule.html#attribute-styleSheet>.styleSheet</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSImportRule.html">CSSImportRule</a></li>
-<li><a href="CSSRule.html">CSSRule</a></li>
-<li><a href="CSSStyleSheet.html">CSSStyleSheet</a></li>
-<li><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></li>
-<li><a href="LinkStyle.html">LinkStyle</a></li>
-<li><a href="StyleSheet.html">StyleSheet</a></li>
-<li><a href="StyleSheetList.html">StyleSheetList</a></li>
+    <li><code><a href="CSSImportRule.html">CSSImportRule</a></code></li>
+<li><code><a href="CSSRule.html">CSSRule</a></code></li>
+<li><code><a href="CSSStyleSheet.html">CSSStyleSheet</a></code></li>
+<li><code><a href="DocumentOrShadowRoot.html">DocumentOrShadowRoot</a></code></li>
+<li><code><a href="LinkStyle.html">LinkStyle</a></code></li>
+<li><code><a href="StyleSheet.html">StyleSheet</a></code></li>
+<li><code><a href="StyleSheetList.html">StyleSheetList</a></code></li>
 
   </ul>
 </section>

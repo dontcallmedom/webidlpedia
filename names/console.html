@@ -9,36 +9,37 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;console.spec.whatwg.org&#x2F;#namespacedef-console">Console Standard</a> defines <code>console</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/Worklet.html'>Worklet</a>)]
-namespace <strong>console</strong> {<span class=def><span class="comment"> &#x2F;&#x2F; but see namespace object requirements below
+namespace <strong>console</strong> {<span class=def id=operation-assert-boolean-any><span class="comment"> &#x2F;&#x2F; but see namespace object requirements below
   &#x2F;&#x2F; Logging
-  </span><span class=primitive>undefined</span> <strong>assert</strong>(optional <span class=primitive>boolean</span> <strong>condition</strong> &#x3D; false, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>debug</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>error</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>info</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>log</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>table</strong>(optional <span class=primitive>any</span> <strong>tabularData</strong>, optional sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>properties</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>trace</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>warn</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>dir</strong>(optional <span class=primitive>any</span> <strong>item</strong>, optional <span class=primitive>object</span>? <strong>options</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>dirxml</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>assert</strong>(optional <span class=primitive>boolean</span> <strong>condition</strong> &#x3D; false, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-clear>
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def id=operation-debug-any>
+  <span class=primitive>undefined</span> <strong>debug</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-error-any>
+  <span class=primitive>undefined</span> <strong>error</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-info-any>
+  <span class=primitive>undefined</span> <strong>info</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-log-any>
+  <span class=primitive>undefined</span> <strong>log</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-table-any-DOMString>
+  <span class=primitive>undefined</span> <strong>table</strong>(optional <span class=primitive>any</span> <strong>tabularData</strong>, optional sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>properties</strong>);</span><span class=def id=operation-trace-any>
+  <span class=primitive>undefined</span> <strong>trace</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-warn-any>
+  <span class=primitive>undefined</span> <strong>warn</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-dir-any-object>
+  <span class=primitive>undefined</span> <strong>dir</strong>(optional <span class=primitive>any</span> <strong>item</strong>, optional <span class=primitive>object</span>? <strong>options</strong>);</span><span class=def id=operation-dirxml-any>
+  <span class=primitive>undefined</span> <strong>dirxml</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-count-DOMString><span class="comment">
 
   &#x2F;&#x2F; Counting
-  </span><span class=primitive>undefined</span> <strong>count</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>countReset</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>count</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def id=operation-countReset-DOMString>
+  <span class=primitive>undefined</span> <strong>countReset</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def id=operation-group-any><span class="comment">
 
   &#x2F;&#x2F; Grouping
-  </span><span class=primitive>undefined</span> <strong>group</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>groupCollapsed</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>groupEnd</strong>();</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>group</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-groupCollapsed-any>
+  <span class=primitive>undefined</span> <strong>groupCollapsed</strong>(<span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-groupEnd>
+  <span class=primitive>undefined</span> <strong>groupEnd</strong>();</span><span class=def id=operation-time-DOMString><span class="comment">
 
   &#x2F;&#x2F; Timing
-  </span><span class=primitive>undefined</span> <strong>time</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>timeLog</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>time</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span><span class=def id=operation-timeLog-DOMString-any>
+  <span class=primitive>undefined</span> <strong>timeLog</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;, <span class=primitive>any</span>... <strong>data</strong>);</span><span class=def id=operation-timeEnd-DOMString>
   <span class=primitive>undefined</span> <strong>timeEnd</strong>(optional <span class=primitive>DOMString</span> <strong>label</strong> &#x3D; &quot;default&quot;);</span>
 };</span></code></pre>
   
   
 </section>
+
 
   

@@ -11,127 +11,143 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-interface <strong>EventTarget</strong> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def>
+interface <strong>EventTarget</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=operation-addEventListener-DOMString-EventListener-AddEventListenerOptions-boolean>
 
-  <span class=primitive>undefined</span> <strong>addEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>removeEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>addEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-removeEventListener-DOMString-EventListener-EventListenerOptions-boolean>
+  <span class=primitive>undefined</span> <strong>removeEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-dispatchEvent-Event>
   <span class=primitive>boolean</span> <strong>dispatchEvent</strong>(<a href='Event.html'>Event</a> <strong>event</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>EventTarget</code></h3>
+
+  <ul>
+    <li><code><a href="EventTarget.html">EventTarget</a><a href=EventTarget.html#constructor>()</a></code></li>
+<li><code><a href="Event.html">Event</a><a href=Event.html#attribute-target>.target</a></code></li>
+<li><code><a href="Event.html">Event</a><a href=Event.html#attribute-srcElement>.srcElement</a></code></li>
+<li><code><a href="Event.html">Event</a><a href=Event.html#attribute-currentTarget>.currentTarget</a></code></li>
+<li><code><a href="Event.html">Event</a><a href=Event.html#operation-composedPath>.composedPath()</a></code></li>
+<li><code><a href="NavigationEvent.html">NavigationEvent</a><a href=NavigationEvent.html#attribute-relatedTarget>.relatedTarget</a></code></li>
+<li><code><a href="Touch.html">Touch</a><a href=Touch.html#attribute-target>.target</a></code></li>
+<li><code><a href="FocusEvent.html">FocusEvent</a><a href=FocusEvent.html#attribute-relatedTarget>.relatedTarget</a></code></li>
+<li><code><a href="MouseEvent.html">MouseEvent</a><a href=MouseEvent.html#attribute-relatedTarget>.relatedTarget</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="AbortSignal.html">AbortSignal</a></li>
-<li><a href="Animation.html">Animation</a></li>
-<li><a href="AppHistory.html">AppHistory</a></li>
-<li><a href="AppHistoryEntry.html">AppHistoryEntry</a></li>
-<li><a href="AudioNode.html">AudioNode</a></li>
-<li><a href="AudioTrackList.html">AudioTrackList</a></li>
-<li><a href="BackgroundFetchRegistration.html">BackgroundFetchRegistration</a></li>
-<li><a href="BaseAudioContext.html">BaseAudioContext</a></li>
-<li><a href="BatteryManager.html">BatteryManager</a></li>
-<li><a href="Bluetooth.html">Bluetooth</a></li>
-<li><a href="BluetoothDevice.html">BluetoothDevice</a></li>
-<li><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></li>
-<li><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></li>
-<li><a href="BroadcastChannel.html">BroadcastChannel</a></li>
-<li><a href="CSSPseudoElement.html">CSSPseudoElement</a></li>
-<li><a href="Clipboard.html">Clipboard</a></li>
-<li><a href="CloseWatcher.html">CloseWatcher</a></li>
-<li><a href="CookieStore.html">CookieStore</a></li>
-<li><a href="DevicePosture.html">DevicePosture</a></li>
-<li><a href="EditContext.html">EditContext</a></li>
-<li><a href="Event.html">Event</a></li>
-<li><a href="EventSource.html">EventSource</a></li>
-<li><a href="FileReader.html">FileReader</a></li>
-<li><a href="FocusEvent.html">FocusEvent</a></li>
-<li><a href="FocusEventInit.html">FocusEventInit</a></li>
-<li><a href="FontFaceSet.html">FontFaceSet</a></li>
-<li><a href="GPUDevice.html">GPUDevice</a></li>
-<li><a href="HID.html">HID</a></li>
-<li><a href="HIDDevice.html">HIDDevice</a></li>
-<li><a href="IDBDatabase.html">IDBDatabase</a></li>
-<li><a href="IDBRequest.html">IDBRequest</a></li>
-<li><a href="IDBTransaction.html">IDBTransaction</a></li>
-<li><a href="IdleDetector.html">IdleDetector</a></li>
-<li><a href="ImageTrack.html">ImageTrack</a></li>
-<li><a href="Keyboard.html">Keyboard</a></li>
-<li><a href="MIDIAccess.html">MIDIAccess</a></li>
-<li><a href="MIDIPort.html">MIDIPort</a></li>
-<li><a href="MediaDevices.html">MediaDevices</a></li>
-<li><a href="MediaKeySession.html">MediaKeySession</a></li>
-<li><a href="MediaQueryList.html">MediaQueryList</a></li>
-<li><a href="MediaRecorder.html">MediaRecorder</a></li>
-<li><a href="MediaSource.html">MediaSource</a></li>
-<li><a href="MediaStream.html">MediaStream</a></li>
-<li><a href="MediaStreamTrack.html">MediaStreamTrack</a></li>
-<li><a href="MessagePort.html">MessagePort</a></li>
-<li><a href="MouseEvent.html">MouseEvent</a></li>
-<li><a href="MouseEventInit.html">MouseEventInit</a></li>
-<li><a href="NDEFReader.html">NDEFReader</a></li>
-<li><a href="NamedFlow.html">NamedFlow</a></li>
-<li><a href="NavigationEvent.html">NavigationEvent</a></li>
-<li><a href="NavigationEventInit.html">NavigationEventInit</a></li>
-<li><a href="NetworkInformation.html">NetworkInformation</a></li>
-<li><a href="Node.html">Node</a></li>
-<li><a href="Notification.html">Notification</a></li>
-<li><a href="OffscreenCanvas.html">OffscreenCanvas</a></li>
-<li><a href="PaymentRequest.html">PaymentRequest</a></li>
-<li><a href="PaymentResponse.html">PaymentResponse</a></li>
-<li><a href="Performance.html">Performance</a></li>
-<li><a href="PermissionStatus.html">PermissionStatus</a></li>
-<li><a href="PictureInPictureWindow.html">PictureInPictureWindow</a></li>
-<li><a href="PortalHost.html">PortalHost</a></li>
-<li><a href="PresentationAvailability.html">PresentationAvailability</a></li>
-<li><a href="PresentationConnection.html">PresentationConnection</a></li>
-<li><a href="PresentationConnectionList.html">PresentationConnectionList</a></li>
-<li><a href="PresentationRequest.html">PresentationRequest</a></li>
-<li><a href="Profiler.html">Profiler</a></li>
-<li><a href="RTCDTMFSender.html">RTCDTMFSender</a></li>
-<li><a href="RTCDataChannel.html">RTCDataChannel</a></li>
-<li><a href="RTCDtlsTransport.html">RTCDtlsTransport</a></li>
-<li><a href="RTCIceTransport.html">RTCIceTransport</a></li>
-<li><a href="RTCPeerConnection.html">RTCPeerConnection</a></li>
-<li><a href="RTCSctpTransport.html">RTCSctpTransport</a></li>
-<li><a href="RemotePlayback.html">RemotePlayback</a></li>
-<li><a href="ScreenOrientation.html">ScreenOrientation</a></li>
-<li><a href="Sensor.html">Sensor</a></li>
-<li><a href="Serial.html">Serial</a></li>
-<li><a href="SerialPort.html">SerialPort</a></li>
-<li><a href="ServiceWorker.html">ServiceWorker</a></li>
-<li><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a></li>
-<li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
-<li><a href="SharedWorker.html">SharedWorker</a></li>
-<li><a href="SourceBuffer.html">SourceBuffer</a></li>
-<li><a href="SourceBufferList.html">SourceBufferList</a></li>
-<li><a href="SpeechRecognition.html">SpeechRecognition</a></li>
-<li><a href="SpeechSynthesis.html">SpeechSynthesis</a></li>
-<li><a href="SpeechSynthesisUtterance.html">SpeechSynthesisUtterance</a></li>
-<li><a href="TextTrack.html">TextTrack</a></li>
-<li><a href="TextTrackCue.html">TextTrackCue</a></li>
-<li><a href="TextTrackList.html">TextTrackList</a></li>
-<li><a href="Touch.html">Touch</a></li>
-<li><a href="TouchInit.html">TouchInit</a></li>
-<li><a href="USB.html">USB</a></li>
-<li><a href="VideoTrackList.html">VideoTrackList</a></li>
-<li><a href="VirtualKeyboard.html">VirtualKeyboard</a></li>
-<li><a href="VisualViewport.html">VisualViewport</a></li>
-<li><a href="WakeLockSentinel.html">WakeLockSentinel</a></li>
-<li><a href="WebSocket.html">WebSocket</a></li>
-<li><a href="Window.html">Window</a></li>
-<li><a href="WindowControlsOverlay.html">WindowControlsOverlay</a></li>
-<li><a href="Worker.html">Worker</a></li>
-<li><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></li>
-<li><a href="XMLHttpRequestEventTarget.html">XMLHttpRequestEventTarget</a></li>
-<li><a href="XRLayer.html">XRLayer</a></li>
-<li><a href="XRLightProbe.html">XRLightProbe</a></li>
-<li><a href="XRSession.html">XRSession</a></li>
-<li><a href="XRSpace.html">XRSpace</a></li>
-<li><a href="XRSystem.html">XRSystem</a></li>
+    <li><code><a href="AbortSignal.html">AbortSignal</a></code></li>
+<li><code><a href="Animation.html">Animation</a></code></li>
+<li><code><a href="AppHistory.html">AppHistory</a></code></li>
+<li><code><a href="AppHistoryEntry.html">AppHistoryEntry</a></code></li>
+<li><code><a href="AudioNode.html">AudioNode</a></code></li>
+<li><code><a href="AudioTrackList.html">AudioTrackList</a></code></li>
+<li><code><a href="BackgroundFetchRegistration.html">BackgroundFetchRegistration</a></code></li>
+<li><code><a href="BaseAudioContext.html">BaseAudioContext</a></code></li>
+<li><code><a href="BatteryManager.html">BatteryManager</a></code></li>
+<li><code><a href="Bluetooth.html">Bluetooth</a></code></li>
+<li><code><a href="BluetoothDevice.html">BluetoothDevice</a></code></li>
+<li><code><a href="BluetoothRemoteGATTCharacteristic.html">BluetoothRemoteGATTCharacteristic</a></code></li>
+<li><code><a href="BluetoothRemoteGATTService.html">BluetoothRemoteGATTService</a></code></li>
+<li><code><a href="BroadcastChannel.html">BroadcastChannel</a></code></li>
+<li><code><a href="CSSPseudoElement.html">CSSPseudoElement</a></code></li>
+<li><code><a href="Clipboard.html">Clipboard</a></code></li>
+<li><code><a href="CloseWatcher.html">CloseWatcher</a></code></li>
+<li><code><a href="CookieStore.html">CookieStore</a></code></li>
+<li><code><a href="DevicePosture.html">DevicePosture</a></code></li>
+<li><code><a href="EditContext.html">EditContext</a></code></li>
+<li><code><a href="Event.html">Event</a></code></li>
+<li><code><a href="EventSource.html">EventSource</a></code></li>
+<li><code><a href="FileReader.html">FileReader</a></code></li>
+<li><code><a href="FocusEvent.html">FocusEvent</a></code></li>
+<li><code><a href="FocusEventInit.html">FocusEventInit</a></code></li>
+<li><code><a href="FontFaceSet.html">FontFaceSet</a></code></li>
+<li><code><a href="GPUDevice.html">GPUDevice</a></code></li>
+<li><code><a href="HID.html">HID</a></code></li>
+<li><code><a href="HIDDevice.html">HIDDevice</a></code></li>
+<li><code><a href="IDBDatabase.html">IDBDatabase</a></code></li>
+<li><code><a href="IDBRequest.html">IDBRequest</a></code></li>
+<li><code><a href="IDBTransaction.html">IDBTransaction</a></code></li>
+<li><code><a href="IdleDetector.html">IdleDetector</a></code></li>
+<li><code><a href="ImageTrack.html">ImageTrack</a></code></li>
+<li><code><a href="Keyboard.html">Keyboard</a></code></li>
+<li><code><a href="MIDIAccess.html">MIDIAccess</a></code></li>
+<li><code><a href="MIDIPort.html">MIDIPort</a></code></li>
+<li><code><a href="MediaDevices.html">MediaDevices</a></code></li>
+<li><code><a href="MediaKeySession.html">MediaKeySession</a></code></li>
+<li><code><a href="MediaQueryList.html">MediaQueryList</a></code></li>
+<li><code><a href="MediaRecorder.html">MediaRecorder</a></code></li>
+<li><code><a href="MediaSource.html">MediaSource</a></code></li>
+<li><code><a href="MediaStream.html">MediaStream</a></code></li>
+<li><code><a href="MediaStreamTrack.html">MediaStreamTrack</a></code></li>
+<li><code><a href="MessagePort.html">MessagePort</a></code></li>
+<li><code><a href="MouseEvent.html">MouseEvent</a></code></li>
+<li><code><a href="MouseEventInit.html">MouseEventInit</a></code></li>
+<li><code><a href="NDEFReader.html">NDEFReader</a></code></li>
+<li><code><a href="NamedFlow.html">NamedFlow</a></code></li>
+<li><code><a href="NavigationEvent.html">NavigationEvent</a></code></li>
+<li><code><a href="NavigationEventInit.html">NavigationEventInit</a></code></li>
+<li><code><a href="NetworkInformation.html">NetworkInformation</a></code></li>
+<li><code><a href="Node.html">Node</a></code></li>
+<li><code><a href="Notification.html">Notification</a></code></li>
+<li><code><a href="OffscreenCanvas.html">OffscreenCanvas</a></code></li>
+<li><code><a href="PaymentRequest.html">PaymentRequest</a></code></li>
+<li><code><a href="PaymentResponse.html">PaymentResponse</a></code></li>
+<li><code><a href="Performance.html">Performance</a></code></li>
+<li><code><a href="PermissionStatus.html">PermissionStatus</a></code></li>
+<li><code><a href="PictureInPictureWindow.html">PictureInPictureWindow</a></code></li>
+<li><code><a href="PortalHost.html">PortalHost</a></code></li>
+<li><code><a href="PresentationAvailability.html">PresentationAvailability</a></code></li>
+<li><code><a href="PresentationConnection.html">PresentationConnection</a></code></li>
+<li><code><a href="PresentationConnectionList.html">PresentationConnectionList</a></code></li>
+<li><code><a href="PresentationRequest.html">PresentationRequest</a></code></li>
+<li><code><a href="Profiler.html">Profiler</a></code></li>
+<li><code><a href="RTCDTMFSender.html">RTCDTMFSender</a></code></li>
+<li><code><a href="RTCDataChannel.html">RTCDataChannel</a></code></li>
+<li><code><a href="RTCDtlsTransport.html">RTCDtlsTransport</a></code></li>
+<li><code><a href="RTCIceTransport.html">RTCIceTransport</a></code></li>
+<li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a></code></li>
+<li><code><a href="RTCSctpTransport.html">RTCSctpTransport</a></code></li>
+<li><code><a href="RemotePlayback.html">RemotePlayback</a></code></li>
+<li><code><a href="ScreenOrientation.html">ScreenOrientation</a></code></li>
+<li><code><a href="Sensor.html">Sensor</a></code></li>
+<li><code><a href="Serial.html">Serial</a></code></li>
+<li><code><a href="SerialPort.html">SerialPort</a></code></li>
+<li><code><a href="ServiceWorker.html">ServiceWorker</a></code></li>
+<li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a></code></li>
+<li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
+<li><code><a href="SharedWorker.html">SharedWorker</a></code></li>
+<li><code><a href="SourceBuffer.html">SourceBuffer</a></code></li>
+<li><code><a href="SourceBufferList.html">SourceBufferList</a></code></li>
+<li><code><a href="SpeechRecognition.html">SpeechRecognition</a></code></li>
+<li><code><a href="SpeechSynthesis.html">SpeechSynthesis</a></code></li>
+<li><code><a href="SpeechSynthesisUtterance.html">SpeechSynthesisUtterance</a></code></li>
+<li><code><a href="TextTrack.html">TextTrack</a></code></li>
+<li><code><a href="TextTrackCue.html">TextTrackCue</a></code></li>
+<li><code><a href="TextTrackList.html">TextTrackList</a></code></li>
+<li><code><a href="Touch.html">Touch</a></code></li>
+<li><code><a href="TouchInit.html">TouchInit</a></code></li>
+<li><code><a href="USB.html">USB</a></code></li>
+<li><code><a href="VideoTrackList.html">VideoTrackList</a></code></li>
+<li><code><a href="VirtualKeyboard.html">VirtualKeyboard</a></code></li>
+<li><code><a href="VisualViewport.html">VisualViewport</a></code></li>
+<li><code><a href="WakeLockSentinel.html">WakeLockSentinel</a></code></li>
+<li><code><a href="WebSocket.html">WebSocket</a></code></li>
+<li><code><a href="Window.html">Window</a></code></li>
+<li><code><a href="WindowControlsOverlay.html">WindowControlsOverlay</a></code></li>
+<li><code><a href="Worker.html">Worker</a></code></li>
+<li><code><a href="WorkerGlobalScope.html">WorkerGlobalScope</a></code></li>
+<li><code><a href="XMLHttpRequestEventTarget.html">XMLHttpRequestEventTarget</a></code></li>
+<li><code><a href="XRLayer.html">XRLayer</a></code></li>
+<li><code><a href="XRLightProbe.html">XRLightProbe</a></code></li>
+<li><code><a href="XRSession.html">XRSession</a></code></li>
+<li><code><a href="XRSpace.html">XRSpace</a></code></li>
+<li><code><a href="XRSystem.html">XRSystem</a></code></li>
 
   </ul>
 </section>

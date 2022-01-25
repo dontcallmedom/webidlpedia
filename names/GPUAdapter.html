@@ -11,11 +11,11 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUAdapter</strong> {<span class=def>
-    readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-    [SameObject] readonly attribute <a href='GPUSupportedFeatures.html'>GPUSupportedFeatures</a> <strong>features</strong>;</span><span class=def>
-    [SameObject] readonly attribute <a href='GPUSupportedLimits.html'>GPUSupportedLimits</a> <strong>limits</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>boolean</span> <strong>isFallbackAdapter</strong>;</span><span class=def>
+interface <strong>GPUAdapter</strong> {<span class=def id=attribute-name>
+    readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-features>
+    [SameObject] readonly attribute <a href='GPUSupportedFeatures.html'>GPUSupportedFeatures</a> <strong>features</strong>;</span><span class=def id=attribute-limits>
+    [SameObject] readonly attribute <a href='GPUSupportedLimits.html'>GPUSupportedLimits</a> <strong>limits</strong>;</span><span class=def id=attribute-isFallbackAdapter>
+    readonly attribute <span class=primitive>boolean</span> <strong>isFallbackAdapter</strong>;</span><span class=def id=operation-requestDevice-GPUDeviceDescriptor>
 
     Promise&lt;<a href='GPUDevice.html'>GPUDevice</a>&gt; <strong>requestDevice</strong>(optional <a href='GPUDeviceDescriptor.html'>GPUDeviceDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>
 };</span></code></pre>
@@ -23,11 +23,19 @@ interface <strong>GPUAdapter</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>GPUAdapter</code></h3>
+
+  <ul>
+    <li><code><a href="GPU.html">GPU</a><a href=GPU.html#operation-requestAdapter-GPURequestAdapterOptions>.requestAdapter()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPU.html">GPU</a></li>
-<li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li>
+    <li><code><a href="GPU.html">GPU</a></code></li>
+<li><code><a href="GPUCanvasContext.html">GPUCanvasContext</a></code></li>
 
   </ul>
 </section>

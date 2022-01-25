@@ -11,21 +11,30 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>), SecureContext]
-interface <strong>USB</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def>
-  Promise&lt;sequence&lt;<a href='USBDevice.html'>USBDevice</a>&gt;&gt; <strong>getDevices</strong>();</span><span class=def>
+interface <strong>USB</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-onconnect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def id=attribute-ondisconnect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def id=operation-getDevices>
+  Promise&lt;sequence&lt;<a href='USBDevice.html'>USBDevice</a>&gt;&gt; <strong>getDevices</strong>();</span><span class=def id=operation-requestDevice-USBDeviceRequestOptions>
   [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] Promise&lt;<a href='USBDevice.html'>USBDevice</a>&gt; <strong>requestDevice</strong>(<a href='USBDeviceRequestOptions.html'>USBDeviceRequestOptions</a> <strong>options</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>USB</code></h3>
+
+  <ul>
+    <li><code><a href="Navigator.html">Navigator</a><a href=Navigator.html#attribute-usb>.usb</a></code></li>
+<li><code><a href="WorkerNavigator.html">WorkerNavigator</a><a href=WorkerNavigator.html#attribute-usb>.usb</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Navigator.html">Navigator</a></li>
-<li><a href="WorkerNavigator.html">WorkerNavigator</a></li>
+    <li><code><a href="Navigator.html">Navigator</a></code></li>
+<li><code><a href="WorkerNavigator.html">WorkerNavigator</a></code></li>
 
   </ul>
 </section>

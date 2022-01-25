@@ -11,43 +11,52 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>EditContext</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-    <strong>constructor</strong>(optional <a href='EditContextInit.html'>EditContextInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+interface <strong>EditContext</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-EditContextInit>
+    <strong>constructor</strong>(optional <a href='EditContextInit.html'>EditContextInit</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-updateText-unsigned long-unsigned long-DOMString>
 
     <span class=primitive>undefined</span> <strong>updateText</strong>(<span class=primitive>unsigned long</span> <strong>rangeStart</strong>, <span class=primitive>unsigned long</span> <strong>rangeEnd</strong>,
-        <span class=primitive>DOMString</span> <strong>text</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>updateSelection</strong>(<span class=primitive>unsigned long</span> <strong>start</strong>, <span class=primitive>unsigned long</span> <strong>end</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>updateControlBound</strong>(<a href='DOMRect.html'>DOMRect</a> <strong>controlBound</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>updateSelectionBound</strong>(<a href='DOMRect.html'>DOMRect</a> <strong>selectionBound</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>updateCharacterBounds</strong>(<span class=primitive>unsigned long</span> <strong>rangeStart</strong>, sequence&lt;<a href='DOMRect.html'>DOMRect</a>&gt; <strong>characterBounds</strong>);</span><span class=def>
+        <span class=primitive>DOMString</span> <strong>text</strong>);</span><span class=def id=operation-updateSelection-unsigned long-unsigned long>
+    <span class=primitive>undefined</span> <strong>updateSelection</strong>(<span class=primitive>unsigned long</span> <strong>start</strong>, <span class=primitive>unsigned long</span> <strong>end</strong>);</span><span class=def id=operation-updateControlBound-DOMRect>
+    <span class=primitive>undefined</span> <strong>updateControlBound</strong>(<a href='DOMRect.html'>DOMRect</a> <strong>controlBound</strong>);</span><span class=def id=operation-updateSelectionBound-DOMRect>
+    <span class=primitive>undefined</span> <strong>updateSelectionBound</strong>(<a href='DOMRect.html'>DOMRect</a> <strong>selectionBound</strong>);</span><span class=def id=operation-updateCharacterBounds-unsigned long-DOMRect>
+    <span class=primitive>undefined</span> <strong>updateCharacterBounds</strong>(<span class=primitive>unsigned long</span> <strong>rangeStart</strong>, sequence&lt;<a href='DOMRect.html'>DOMRect</a>&gt; <strong>characterBounds</strong>);</span><span class=def id=operation-attachedElements>
 
-    sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>attachedElements</strong>();</span><span class=def>
+    sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>attachedElements</strong>();</span><span class=def id=attribute-text>
 
-    readonly attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long</span> <strong>selectionStart</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long</span> <strong>selectionEnd</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long</span> <strong>compositionRangeStart</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long</span> <strong>compositionRangeEnd</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>boolean</span> <strong>isInComposition</strong>;</span><span class=def>
-    readonly attribute <a href='DOMRect.html'>DOMRect</a> <strong>controlBound</strong>;</span><span class=def>
-    readonly attribute <a href='DOMRect.html'>DOMRect</a> <strong>selectionBound</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long</span> <strong>characterBoundsRangeStart</strong>;</span><span class=def>
-    sequence&lt;<a href='DOMRect.html'>DOMRect</a>&gt; <strong>characterBounds</strong>();</span><span class=def>
+    readonly attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-selectionStart>
+    readonly attribute <span class=primitive>unsigned long</span> <strong>selectionStart</strong>;</span><span class=def id=attribute-selectionEnd>
+    readonly attribute <span class=primitive>unsigned long</span> <strong>selectionEnd</strong>;</span><span class=def id=attribute-compositionRangeStart>
+    readonly attribute <span class=primitive>unsigned long</span> <strong>compositionRangeStart</strong>;</span><span class=def id=attribute-compositionRangeEnd>
+    readonly attribute <span class=primitive>unsigned long</span> <strong>compositionRangeEnd</strong>;</span><span class=def id=attribute-isInComposition>
+    readonly attribute <span class=primitive>boolean</span> <strong>isInComposition</strong>;</span><span class=def id=attribute-controlBound>
+    readonly attribute <a href='DOMRect.html'>DOMRect</a> <strong>controlBound</strong>;</span><span class=def id=attribute-selectionBound>
+    readonly attribute <a href='DOMRect.html'>DOMRect</a> <strong>selectionBound</strong>;</span><span class=def id=attribute-characterBoundsRangeStart>
+    readonly attribute <span class=primitive>unsigned long</span> <strong>characterBoundsRangeStart</strong>;</span><span class=def id=operation-characterBounds>
+    sequence&lt;<a href='DOMRect.html'>DOMRect</a>&gt; <strong>characterBounds</strong>();</span><span class=def id=attribute-ontextupdate>
 
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontextupdate</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontextformatupdate</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacterboundsupdate</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompositionstart</strong>;</span><span class=def>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontextupdate</strong>;</span><span class=def id=attribute-ontextformatupdate>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontextformatupdate</strong>;</span><span class=def id=attribute-oncharacterboundsupdate>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacterboundsupdate</strong>;</span><span class=def id=attribute-oncompositionstart>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompositionstart</strong>;</span><span class=def id=attribute-oncompositionend>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncompositionend</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>EditContext</code></h3>
+
+  <ul>
+    <li><code><a href="EditContext.html">EditContext</a><a href=EditContext.html#constructor-EditContextInit>()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#attribute-editContext>.editContext</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Element.html">Element</a></li>
+    <li><code><a href="Element.html">Element</a></code></li>
 
   </ul>
 </section>

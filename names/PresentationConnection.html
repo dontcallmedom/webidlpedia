@@ -11,35 +11,46 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>PresentationConnection</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>id</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  readonly attribute <a href='PresentationConnectionState.html'>PresentationConnectionState</a> <strong>state</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>terminate</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onterminate</strong>;</span><span class=def><span class="comment">
+interface <strong>PresentationConnection</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-id>
+  readonly attribute <span class=primitive>USVString</span> <strong>id</strong>;</span><span class=def id=attribute-url>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-state>
+  readonly attribute <a href='PresentationConnectionState.html'>PresentationConnectionState</a> <strong>state</strong>;</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-terminate>
+  <span class=primitive>undefined</span> <strong>terminate</strong>();</span><span class=def id=attribute-onconnect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-onterminate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onterminate</strong>;</span><span class=def id=attribute-binaryType><span class="comment">
 
   &#x2F;&#x2F; Communication
-  </span>attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong> (<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong> (<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong> (<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def>
+  </span>attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=attribute-onmessage>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=operation-send-DOMString>
+  <span class=primitive>undefined</span> <strong>send</strong> (<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def id=operation-send-Blob>
+  <span class=primitive>undefined</span> <strong>send</strong> (<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBuffer>
+  <span class=primitive>undefined</span> <strong>send</strong> (<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBufferView>
   <span class=primitive>undefined</span> <strong>send</strong> (<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PresentationConnection</code></h3>
+
+  <ul>
+    <li><code><a href="PresentationRequest.html">PresentationRequest</a><a href=PresentationRequest.html#operation-start>.start()</a></code></li>
+<li><code><a href="PresentationRequest.html">PresentationRequest</a><a href=PresentationRequest.html#operation-reconnect-USVString>.reconnect()</a></code></li>
+<li><code><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a><a href=PresentationConnectionAvailableEvent.html#attribute-connection>.connection</a></code></li>
+<li><code><a href="PresentationConnectionList.html">PresentationConnectionList</a><a href=PresentationConnectionList.html#attribute-connections>.connections</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></li>
-<li><a href="PresentationConnectionAvailableEventInit.html">PresentationConnectionAvailableEventInit</a></li>
-<li><a href="PresentationConnectionList.html">PresentationConnectionList</a></li>
-<li><a href="PresentationRequest.html">PresentationRequest</a></li>
+    <li><code><a href="PresentationConnectionAvailableEvent.html">PresentationConnectionAvailableEvent</a></code></li>
+<li><code><a href="PresentationConnectionAvailableEventInit.html">PresentationConnectionAvailableEventInit</a></code></li>
+<li><code><a href="PresentationConnectionList.html">PresentationConnectionList</a></code></li>
+<li><code><a href="PresentationRequest.html">PresentationRequest</a></code></li>
 
   </ul>
 </section>

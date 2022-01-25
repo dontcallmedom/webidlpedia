@@ -11,13 +11,13 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Headers</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='HeadersInit.html'>HeadersInit</a> <strong>init</strong>);</span><span class=def>
+interface <strong>Headers</strong> {<span class=def id=constructor-HeadersInit>
+  <strong>constructor</strong>(optional <a href='HeadersInit.html'>HeadersInit</a> <strong>init</strong>);</span><span class=def id=operation-append-ByteString-ByteString>
 
-  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>ByteString</span> <strong>name</strong>, <span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>ByteString</span>? <strong>get</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>ByteString</span> <strong>name</strong>, <span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def id=operation-delete-ByteString>
+  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def id=operation-get-ByteString>
+  <span class=primitive>ByteString</span>? <strong>get</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def id=operation-has-ByteString>
+  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def id=operation-set-ByteString-ByteString>
   <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>ByteString</span> <strong>name</strong>, <span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def>
   iterable&lt;<span class=primitive>ByteString</span>, <span class=primitive>ByteString</span>&gt;;</span>
 };</span></code></pre>
@@ -25,11 +25,21 @@ interface <strong>Headers</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Headers</code></h3>
+
+  <ul>
+    <li><code><a href="Headers.html">Headers</a><a href=Headers.html#constructor-HeadersInit>()</a></code></li>
+<li><code><a href="Request.html">Request</a><a href=Request.html#attribute-headers>.headers</a></code></li>
+<li><code><a href="Response.html">Response</a><a href=Response.html#attribute-headers>.headers</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Request.html">Request</a></li>
-<li><a href="Response.html">Response</a></li>
+    <li><code><a href="Request.html">Request</a></code></li>
+<li><code><a href="Response.html">Response</a></code></li>
 
   </ul>
 </section>

@@ -11,16 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>FormData</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='HTMLFormElement.html'>HTMLFormElement</a> <strong>form</strong>);</span><span class=def>
+interface <strong>FormData</strong> {<span class=def id=constructor-HTMLFormElement>
+  <strong>constructor</strong>(optional <a href='HTMLFormElement.html'>HTMLFormElement</a> <strong>form</strong>);</span><span class=def id=operation-append-USVString-USVString>
 
-  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <a href='Blob.html'>Blob</a> <strong>blobValue</strong>, optional <span class=primitive>USVString</span> <strong>filename</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <a href='FormDataEntryValue.html'>FormDataEntryValue</a>? <strong>get</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  sequence&lt;<a href='FormDataEntryValue.html'>FormDataEntryValue</a>&gt; <strong>getAll</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def id=operation-append-USVString-Blob-USVString>
+  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <a href='Blob.html'>Blob</a> <strong>blobValue</strong>, optional <span class=primitive>USVString</span> <strong>filename</strong>);</span><span class=def id=operation-delete-USVString>
+  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-get-USVString>
+  <a href='FormDataEntryValue.html'>FormDataEntryValue</a>? <strong>get</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-getAll-USVString>
+  sequence&lt;<a href='FormDataEntryValue.html'>FormDataEntryValue</a>&gt; <strong>getAll</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-has-USVString>
+  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-set-USVString-USVString>
+  <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def id=operation-set-USVString-Blob-USVString>
   <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <a href='Blob.html'>Blob</a> <strong>blobValue</strong>, optional <span class=primitive>USVString</span> <strong>filename</strong>);</span><span class=def>
   iterable&lt;<span class=primitive>USVString</span>, <a href='FormDataEntryValue.html'>FormDataEntryValue</a>&gt;;</span>
 };</span></code></pre>
@@ -28,15 +28,26 @@ interface <strong>FormData</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>FormData</code></h3>
+
+  <ul>
+    <li><code><a href="FormData.html">FormData</a><a href=FormData.html#constructor-HTMLFormElement>()</a></code></li>
+<li><code><a href="Body.html">Body</a><a href=Body.html#operation-formData>.formData()</a></code></li>
+<li><code><a href="FormDataEvent.html">FormDataEvent</a><a href=FormDataEvent.html#attribute-formData>.formData</a></code></li>
+<li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a><a href=AppHistoryNavigateEvent.html#attribute-formData>.formData</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></li>
-<li><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></li>
-<li><a href="Body.html">Body</a></li>
-<li><a href="ElementInternals.html">ElementInternals</a></li>
-<li><a href="FormDataEvent.html">FormDataEvent</a></li>
-<li><a href="FormDataEventInit.html">FormDataEventInit</a></li>
+    <li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></code></li>
+<li><code><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></code></li>
+<li><code><a href="Body.html">Body</a></code></li>
+<li><code><a href="ElementInternals.html">ElementInternals</a></code></li>
+<li><code><a href="FormDataEvent.html">FormDataEvent</a></code></li>
+<li><code><a href="FormDataEventInit.html">FormDataEventInit</a></code></li>
 
   </ul>
 </section>

@@ -10,21 +10,30 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;layers&#x2F;#xrwebglsubimage">WebXR Layers API Level 1</a> defines <code>XRWebGLSubImage</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLSubImage</strong> : <a href='XRSubImage.html'>XRSubImage</a> {<span class=def>
-  [SameObject] readonly attribute <a href='WebGLTexture.html'>WebGLTexture</a> <strong>colorTexture</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>depthStencilTexture</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span>? <strong>imageIndex</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>textureWidth</strong>;</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLSubImage</strong> : <a href='XRSubImage.html'>XRSubImage</a> {<span class=def id=attribute-colorTexture>
+  [SameObject] readonly attribute <a href='WebGLTexture.html'>WebGLTexture</a> <strong>colorTexture</strong>;</span><span class=def id=attribute-depthStencilTexture>
+  [SameObject] readonly attribute <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>depthStencilTexture</strong>;</span><span class=def id=attribute-imageIndex>
+  readonly attribute <span class=primitive>unsigned long</span>? <strong>imageIndex</strong>;</span><span class=def id=attribute-textureWidth>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>textureWidth</strong>;</span><span class=def id=attribute-textureHeight>
   readonly attribute <span class=primitive>unsigned long</span> <strong>textureHeight</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>XRWebGLSubImage</code></h3>
+
+  <ul>
+    <li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a><a href=XRWebGLBinding.html#operation-getSubImage-XRCompositionLayer-XRFrame-XREye>.getSubImage()</a></code></li>
+<li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a><a href=XRWebGLBinding.html#operation-getViewSubImage-XRProjectionLayer-XRView>.getViewSubImage()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="XRWebGLBinding.html">XRWebGLBinding</a></li>
+    <li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a></code></li>
 
   </ul>
 </section>

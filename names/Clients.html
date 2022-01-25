@@ -11,21 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>]
-interface <strong>Clients</strong> {<span class=def><span class="comment">
+interface <strong>Clients</strong> {<span class=def id=operation-get-DOMString><span class="comment">
   &#x2F;&#x2F; The objects returned will be new instances every time
-  </span>[NewObject] Promise&lt;(<a href='Client.html'>Client</a> or <span class=primitive>undefined</span>)&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def>
-  [NewObject] Promise&lt;FrozenArray&lt;<a href='Client.html'>Client</a>&gt;&gt; <strong>matchAll</strong>(optional <a href='ClientQueryOptions.html'>ClientQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def>
+  </span>[NewObject] Promise&lt;(<a href='Client.html'>Client</a> or <span class=primitive>undefined</span>)&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def id=operation-matchAll-ClientQueryOptions>
+  [NewObject] Promise&lt;FrozenArray&lt;<a href='Client.html'>Client</a>&gt;&gt; <strong>matchAll</strong>(optional <a href='ClientQueryOptions.html'>ClientQueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-openWindow-USVString>
+  [NewObject] Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def id=operation-claim>
   [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>claim</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Clients</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a><a href=ServiceWorkerGlobalScope.html#attribute-clients>.clients</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li>
+    <li><code><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

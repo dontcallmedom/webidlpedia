@@ -11,12 +11,12 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/Worklet.html'>Worklet</a>)]
-namespace <strong>WebAssembly</strong> {<span class=def>
-    <span class=primitive>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def>
-    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def>
+namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource>
+    <span class=primitive>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-compile-BufferSource>
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-instantiate-BufferSource-object>
 
     Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiate</strong>(
-        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def>
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-instantiate-Module-object>
 
     Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong>instantiate</strong>(
         <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
@@ -24,8 +24,8 @@ namespace <strong>WebAssembly</strong> {<span class=def>
   <p>This namespace is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wasm-web-api-1&#x2F;">WebAssembly Web API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-partial namespace <strong>WebAssembly</strong> {<span class=def>
-  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def>
+partial namespace <strong>WebAssembly</strong> {<span class=def id=operation-compileStreaming-Response>
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def id=operation-instantiateStreaming-Response-object>
   Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
       Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
 };</span></code></pre></li>
@@ -34,20 +34,21 @@ partial namespace <strong>WebAssembly</strong> {<span class=def>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/Worklet.html'>Worklet</a>)]
-namespace <strong>WebAssembly</strong> {<span class=def>
-    <span class=primitive>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def>
-    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def>
+namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource>
+    <span class=primitive>boolean</span> <strong>validate</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-compile-BufferSource>
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compile</strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-instantiate-BufferSource-object>
 
     Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiate</strong>(
-        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def>
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-instantiate-Module-object>
 
     Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong>instantiate</strong>(
-        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def>
-  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def>
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-compileStreaming-Response>
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def id=operation-instantiateStreaming-Response-object>
   Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
       Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
 };</span></code></pre></details>
 </section>
+
 
   <section><h3>Referring specifications</h3>
   <ul>

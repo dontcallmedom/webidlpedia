@@ -10,21 +10,22 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> defines <code>XPathEvaluatorBase</code></p>
 <pre class=webidl><code><span class=def>
 
-interface mixin <strong>XPathEvaluatorBase</strong> {<span class=def>
-  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def>
-  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def><span class="comment">
+interface mixin <strong>XPathEvaluatorBase</strong> {<span class=def id=operation-createExpression-DOMString-XPathNSResolver>
+  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def id=operation-createNSResolver-Node>
+  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def id=operation-evaluate-DOMString-Node-XPathNSResolver-unsigned short-XPathResult><span class="comment">
   &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
   </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span>
 };</span></code></pre>
   
   
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
-<li><a href="XPathEvaluator.html">XPathEvaluator</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="XPathEvaluator.html">XPathEvaluator</a></code></li>
 
   </ul>
 </section>

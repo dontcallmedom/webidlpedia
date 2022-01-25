@@ -11,32 +11,40 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {<span class=def>
-  <strong>constructor</strong> (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>baseLatency</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def>
-  <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resume</strong> ();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>suspend</strong> ();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong> ();</span><span class=def>
-  <a href='MediaElementAudioSourceNode.html'>MediaElementAudioSourceNode</a> <strong>createMediaElementSource</strong> (<a href='HTMLMediaElement.html'>HTMLMediaElement</a> <strong>mediaElement</strong>);</span><span class=def>
-  <a href='MediaStreamAudioSourceNode.html'>MediaStreamAudioSourceNode</a> <strong>createMediaStreamSource</strong> (<a href='MediaStream.html'>MediaStream</a> <strong>mediaStream</strong>);</span><span class=def>
+interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {<span class=def id=constructor-AudioContextOptions>
+  <strong>constructor</strong> (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> &#x3D; {});</span><span class=def id=attribute-baseLatency>
+  readonly attribute <span class=primitive>double</span> <strong>baseLatency</strong>;</span><span class=def id=attribute-outputLatency>
+  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def id=operation-getOutputTimestamp>
+  <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();</span><span class=def id=operation-resume>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resume</strong> ();</span><span class=def id=operation-suspend>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>suspend</strong> ();</span><span class=def id=operation-close>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong> ();</span><span class=def id=operation-createMediaElementSource-HTMLMediaElement>
+  <a href='MediaElementAudioSourceNode.html'>MediaElementAudioSourceNode</a> <strong>createMediaElementSource</strong> (<a href='HTMLMediaElement.html'>HTMLMediaElement</a> <strong>mediaElement</strong>);</span><span class=def id=operation-createMediaStreamSource-MediaStream>
+  <a href='MediaStreamAudioSourceNode.html'>MediaStreamAudioSourceNode</a> <strong>createMediaStreamSource</strong> (<a href='MediaStream.html'>MediaStream</a> <strong>mediaStream</strong>);</span><span class=def id=operation-createMediaStreamTrackSource-MediaStreamTrack>
   <a href='MediaStreamTrackAudioSourceNode.html'>MediaStreamTrackAudioSourceNode</a> <strong>createMediaStreamTrackSource</strong> (
-    <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>mediaStreamTrack</strong>);</span><span class=def>
+    <a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>mediaStreamTrack</strong>);</span><span class=def id=operation-createMediaStreamDestination>
   <a href='MediaStreamAudioDestinationNode.html'>MediaStreamAudioDestinationNode</a> <strong>createMediaStreamDestination</strong> ();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AudioContext</code></h3>
+
+  <ul>
+    <li><code><a href="AudioContext.html">AudioContext</a><a href=AudioContext.html#constructor-AudioContextOptions>()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li>
-<li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li>
-<li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li>
-<li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li>
-<li><a href="Navigator.html">Navigator</a></li>
+    <li><code><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></code></li>
+<li><code><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></code></li>
+<li><code><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></code></li>
+<li><code><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></code></li>
+<li><code><a href="Navigator.html">Navigator</a></code></li>
 
   </ul>
 </section>

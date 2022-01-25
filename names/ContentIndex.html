@@ -11,19 +11,27 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>ContentIndex</strong> {<span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>add</strong>(<a href='ContentDescription.html'>ContentDescription</a> <strong>description</strong>);</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def>
+interface <strong>ContentIndex</strong> {<span class=def id=operation-add-ContentDescription>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>add</strong>(<a href='ContentDescription.html'>ContentDescription</a> <strong>description</strong>);</span><span class=def id=operation-delete-DOMString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>id</strong>);</span><span class=def id=operation-getAll>
   Promise&lt;sequence&lt;<a href='ContentDescription.html'>ContentDescription</a>&gt;&gt; <strong>getAll</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>ContentIndex</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a><a href=ServiceWorkerRegistration.html#attribute-index>.index</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
 
   </ul>
 </section>

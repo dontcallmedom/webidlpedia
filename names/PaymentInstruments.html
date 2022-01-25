@@ -11,22 +11,30 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>PaymentInstruments</strong> {<span class=def>
-  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def>
-  Promise&lt;<span class=primitive>any</span>&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def>
-  Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt;  <strong>keys</strong>();</span><span class=def>
-  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>has</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>set</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>, <a href='PaymentInstrument.html'>PaymentInstrument</a> <strong>details</strong>);</span><span class=def>
+interface <strong>PaymentInstruments</strong> {<span class=def id=operation-delete-DOMString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def id=operation-get-DOMString>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>get</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def id=operation-keys>
+  Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt;  <strong>keys</strong>();</span><span class=def id=operation-has-DOMString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>has</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>);</span><span class=def id=operation-set-DOMString-PaymentInstrument>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>set</strong>(<span class=primitive>DOMString</span> <strong>instrumentKey</strong>, <a href='PaymentInstrument.html'>PaymentInstrument</a> <strong>details</strong>);</span><span class=def id=operation-clear>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clear</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PaymentInstruments</code></h3>
+
+  <ul>
+    <li><code><a href="PaymentManager.html">PaymentManager</a><a href=PaymentManager.html#attribute-instruments>.instruments</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="PaymentManager.html">PaymentManager</a></li>
+    <li><code><a href="PaymentManager.html">PaymentManager</a></code></li>
 
   </ul>
 </section>

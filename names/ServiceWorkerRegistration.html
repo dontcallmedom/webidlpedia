@@ -11,17 +11,17 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>installing</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>waiting</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>active</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='NavigationPreloadManager.html'>NavigationPreloadManager</a> <strong>navigationPreload</strong>;</span><span class=def>
+interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-installing>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>installing</strong>;</span><span class=def id=attribute-waiting>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>waiting</strong>;</span><span class=def id=attribute-active>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>active</strong>;</span><span class=def id=attribute-navigationPreload>
+  [SameObject] readonly attribute <a href='NavigationPreloadManager.html'>NavigationPreloadManager</a> <strong>navigationPreload</strong>;</span><span class=def id=attribute-scope>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>scope</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorkerUpdateViaCache.html'>ServiceWorkerUpdateViaCache</a> <strong>updateViaCache</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>scope</strong>;</span><span class=def id=attribute-updateViaCache>
+  readonly attribute <a href='ServiceWorkerUpdateViaCache.html'>ServiceWorkerUpdateViaCache</a> <strong>updateViaCache</strong>;</span><span class=def id=operation-update>
 
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>update</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>unregister</strong>();</span><span class=def><span class="comment">
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>update</strong>();</span><span class=def id=operation-unregister>
+  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>unregister</strong>();</span><span class=def id=attribute-onupdatefound><span class="comment">
 
   &#x2F;&#x2F; event
   </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onupdatefound</strong>;</span>
@@ -30,42 +30,42 @@ interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html
   <ul>
     <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=operation-showNotification-DOMString-NotificationOptions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getNotifications-GetNotificationOptions>
   Promise&lt;sequence&lt;<a href='Notification.html'>Notification</a>&gt;&gt; <strong>getNotifications</strong>(optional <a href='GetNotificationOptions.html'>GetNotificationOptions</a> <strong>filter</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;#extensions-to-service-worker-registration">Background Fetch</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-backgroundFetch>
   readonly attribute <a href='BackgroundFetchManager.html'>BackgroundFetchManager</a> <strong>backgroundFetch</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;#service-worker-registration-extensions">Web Background Synchronization</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;#service-worker-registration-extensions">Web Background Synchronization</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-sync>
   readonly attribute <a href='SyncManager.html'>SyncManager</a> <strong>sync</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;#extensions-to-service-worker-registration">Content Index</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-index>
   [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#ServiceWorkerRegistration">Cookie Store API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>)]
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-cookies>
   [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;#extensions-to-serviceworkerregistration">Web Periodic Background Synchronization</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-periodicSync>
   readonly attribute <a href='PeriodicSyncManager.html'>PeriodicSyncManager</a> <strong>periodicSync</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;#extension-to-the-serviceworkerregistration-interface">Payment Handler API</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;#extension-to-the-serviceworkerregistration-interface">Payment Handler API</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-paymentManager>
   [SameObject] readonly attribute <a href='PaymentManager.html'>PaymentManager</a> <strong>paymentManager</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;#extensions-to-the-serviceworkerregistration-interface">Push API</a><pre class=webidl><code><span class=def>
 
 [SecureContext]
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-pushManager>
   readonly attribute <a href='PushManager.html'>PushManager</a> <strong>pushManager</strong>;</span>
 };</span></code></pre></li>
 
@@ -73,37 +73,49 @@ partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>installing</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>waiting</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>active</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='NavigationPreloadManager.html'>NavigationPreloadManager</a> <strong>navigationPreload</strong>;</span><span class=def>
+interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-installing>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>installing</strong>;</span><span class=def id=attribute-waiting>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>waiting</strong>;</span><span class=def id=attribute-active>
+  readonly attribute <a href='ServiceWorker.html'>ServiceWorker</a>? <strong>active</strong>;</span><span class=def id=attribute-navigationPreload>
+  [SameObject] readonly attribute <a href='NavigationPreloadManager.html'>NavigationPreloadManager</a> <strong>navigationPreload</strong>;</span><span class=def id=attribute-scope>
 
-  readonly attribute <span class=primitive>USVString</span> <strong>scope</strong>;</span><span class=def>
-  readonly attribute <a href='ServiceWorkerUpdateViaCache.html'>ServiceWorkerUpdateViaCache</a> <strong>updateViaCache</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>USVString</span> <strong>scope</strong>;</span><span class=def id=attribute-updateViaCache>
+  readonly attribute <a href='ServiceWorkerUpdateViaCache.html'>ServiceWorkerUpdateViaCache</a> <strong>updateViaCache</strong>;</span><span class=def id=operation-update>
 
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>update</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>unregister</strong>();</span><span class=def><span class="comment">
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>update</strong>();</span><span class=def id=operation-unregister>
+  [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong>unregister</strong>();</span><span class=def id=attribute-onupdatefound><span class="comment">
 
   &#x2F;&#x2F; event
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onupdatefound</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;sequence&lt;<a href='Notification.html'>Notification</a>&gt;&gt; <strong>getNotifications</strong>(optional <a href='GetNotificationOptions.html'>GetNotificationOptions</a> <strong>filter</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='BackgroundFetchManager.html'>BackgroundFetchManager</a> <strong>backgroundFetch</strong>;</span><span class=def>
-  readonly attribute <a href='SyncManager.html'>SyncManager</a> <strong>sync</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span><span class=def>
-  readonly attribute <a href='PeriodicSyncManager.html'>PeriodicSyncManager</a> <strong>periodicSync</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='PaymentManager.html'>PaymentManager</a> <strong>paymentManager</strong>;</span><span class=def>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onupdatefound</strong>;</span><span class=def id=operation-showNotification-DOMString-NotificationOptions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getNotifications-GetNotificationOptions>
+  Promise&lt;sequence&lt;<a href='Notification.html'>Notification</a>&gt;&gt; <strong>getNotifications</strong>(optional <a href='GetNotificationOptions.html'>GetNotificationOptions</a> <strong>filter</strong> &#x3D; {});</span><span class=def id=attribute-backgroundFetch>
+  readonly attribute <a href='BackgroundFetchManager.html'>BackgroundFetchManager</a> <strong>backgroundFetch</strong>;</span><span class=def id=attribute-sync>
+  readonly attribute <a href='SyncManager.html'>SyncManager</a> <strong>sync</strong>;</span><span class=def id=attribute-index>
+  [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span><span class=def id=attribute-cookies>
+  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span><span class=def id=attribute-periodicSync>
+  readonly attribute <a href='PeriodicSyncManager.html'>PeriodicSyncManager</a> <strong>periodicSync</strong>;</span><span class=def id=attribute-paymentManager>
+  [SameObject] readonly attribute <a href='PaymentManager.html'>PaymentManager</a> <strong>paymentManager</strong>;</span><span class=def id=attribute-pushManager>
   readonly attribute <a href='PushManager.html'>PushManager</a> <strong>pushManager</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>ServiceWorkerRegistration</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a><a href=ServiceWorkerContainer.html#attribute-ready>.ready</a></code></li>
+<li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a><a href=ServiceWorkerContainer.html#operation-register-USVString-RegistrationOptions>.register()</a></code></li>
+<li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a><a href=ServiceWorkerContainer.html#operation-getRegistration-USVString>.getRegistration()</a></code></li>
+<li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a><a href=ServiceWorkerContainer.html#operation-getRegistrations>.getRegistrations()</a></code></li>
+<li><code><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a><a href=ServiceWorkerGlobalScope.html#attribute-registration>.registration</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a></li>
-<li><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></li>
+    <li><code><a href="ServiceWorkerContainer.html">ServiceWorkerContainer</a></code></li>
+<li><code><a href="ServiceWorkerGlobalScope.html">ServiceWorkerGlobalScope</a></code></li>
 
   </ul>
 </section>

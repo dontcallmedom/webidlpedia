@@ -11,29 +11,38 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-interface <strong>URLSearchParams</strong> {<span class=def>
-  <strong>constructor</strong>(optional (sequence&lt;sequence&lt;<span class=primitive>USVString</span>&gt;&gt; or record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt; or <span class=primitive>USVString</span>) <strong>init</strong> &#x3D; &quot;&quot;);</span><span class=def>
+interface <strong>URLSearchParams</strong> {<span class=def id=constructor-USVString-USVString,USVString-USVString>
+  <strong>constructor</strong>(optional (sequence&lt;sequence&lt;<span class=primitive>USVString</span>&gt;&gt; or record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt; or <span class=primitive>USVString</span>) <strong>init</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-append-USVString-USVString>
 
-  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>USVString</span>? <strong>get</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  sequence&lt;<span class=primitive>USVString</span>&gt; <strong>getAll</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>append</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def id=operation-delete-USVString>
+  <span class=primitive>undefined</span> <strong>delete</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-get-USVString>
+  <span class=primitive>USVString</span>? <strong>get</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-getAll-USVString>
+  sequence&lt;<span class=primitive>USVString</span>&gt; <strong>getAll</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-has-USVString>
+  <span class=primitive>boolean</span> <strong>has</strong>(<span class=primitive>USVString</span> <strong>name</strong>);</span><span class=def id=operation-set-USVString-USVString>
+  <span class=primitive>undefined</span> <strong>set</strong>(<span class=primitive>USVString</span> <strong>name</strong>, <span class=primitive>USVString</span> <strong>value</strong>);</span><span class=def id=operation-sort>
 
   <span class=primitive>undefined</span> <strong>sort</strong>();</span><span class=def>
 
-  iterable&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt;;</span><span class=def>
+  iterable&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt;;</span><span class=def id=operation-stringifier>
   <strong>stringifier</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>URLSearchParams</code></h3>
+
+  <ul>
+    <li><code><a href="URLSearchParams.html">URLSearchParams</a><a href=URLSearchParams.html#constructor-USVString-USVString,USVString-USVString>()</a></code></li>
+<li><code><a href="URL.html">URL</a><a href=URL.html#attribute-searchParams>.searchParams</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="URL.html">URL</a></li>
+    <li><code><a href="URL.html">URL</a></code></li>
 
   </ul>
 </section>

@@ -11,25 +11,25 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Request</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+interface <strong>Request</strong> {<span class=def id=constructor-RequestInfo-RequestInit>
+  <strong>constructor</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-method>
 
-  readonly attribute <span class=primitive>ByteString</span> <strong>method</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>ByteString</span> <strong>method</strong>;</span><span class=def id=attribute-url>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-headers>
+  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def id=attribute-destination>
 
-  readonly attribute <a href='RequestDestination.html'>RequestDestination</a> <strong>destination</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def>
-  readonly attribute <a href='ReferrerPolicy.html'>ReferrerPolicy</a> <strong>referrerPolicy</strong>;</span><span class=def>
-  readonly attribute <a href='RequestMode.html'>RequestMode</a> <strong>mode</strong>;</span><span class=def>
-  readonly attribute <a href='RequestCredentials.html'>RequestCredentials</a> <strong>credentials</strong>;</span><span class=def>
-  readonly attribute <a href='RequestCache.html'>RequestCache</a> <strong>cache</strong>;</span><span class=def>
-  readonly attribute <a href='RequestRedirect.html'>RequestRedirect</a> <strong>redirect</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>keepalive</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isReloadNavigation</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isHistoryNavigation</strong>;</span><span class=def>
-  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def>
+  readonly attribute <a href='RequestDestination.html'>RequestDestination</a> <strong>destination</strong>;</span><span class=def id=attribute-referrer>
+  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def id=attribute-referrerPolicy>
+  readonly attribute <a href='ReferrerPolicy.html'>ReferrerPolicy</a> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-mode>
+  readonly attribute <a href='RequestMode.html'>RequestMode</a> <strong>mode</strong>;</span><span class=def id=attribute-credentials>
+  readonly attribute <a href='RequestCredentials.html'>RequestCredentials</a> <strong>credentials</strong>;</span><span class=def id=attribute-cache>
+  readonly attribute <a href='RequestCache.html'>RequestCache</a> <strong>cache</strong>;</span><span class=def id=attribute-redirect>
+  readonly attribute <a href='RequestRedirect.html'>RequestRedirect</a> <strong>redirect</strong>;</span><span class=def id=attribute-integrity>
+  readonly attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-keepalive>
+  readonly attribute <span class=primitive>boolean</span> <strong>keepalive</strong>;</span><span class=def id=attribute-isReloadNavigation>
+  readonly attribute <span class=primitive>boolean</span> <strong>isReloadNavigation</strong>;</span><span class=def id=attribute-isHistoryNavigation>
+  readonly attribute <span class=primitive>boolean</span> <strong>isHistoryNavigation</strong>;</span><span class=def id=attribute-signal>
+  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def id=operation-clone>
 
   [NewObject] <a href='Request.html'>Request</a> <strong>clone</strong>();</span>
 };</span><span class=def>
@@ -38,7 +38,7 @@ interface <strong>Request</strong> {<span class=def>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#fetch-integration">Priority Hints</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Request</strong> {<span class=def>
+partial interface <strong>Request</strong> {<span class=def id=attribute-importance>
   readonly attribute <a href='Importance.html'>Importance</a> <strong>importance</strong>;</span>
 };</span></code></pre></li>
 
@@ -46,46 +46,58 @@ partial interface <strong>Request</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>Request</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+interface <strong>Request</strong> {<span class=def id=constructor-RequestInfo-RequestInit>
+  <strong>constructor</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-method>
 
-  readonly attribute <span class=primitive>ByteString</span> <strong>method</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>ByteString</span> <strong>method</strong>;</span><span class=def id=attribute-url>
+  readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=attribute-headers>
+  [SameObject] readonly attribute <a href='Headers.html'>Headers</a> <strong>headers</strong>;</span><span class=def id=attribute-destination>
 
-  readonly attribute <a href='RequestDestination.html'>RequestDestination</a> <strong>destination</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def>
-  readonly attribute <a href='ReferrerPolicy.html'>ReferrerPolicy</a> <strong>referrerPolicy</strong>;</span><span class=def>
-  readonly attribute <a href='RequestMode.html'>RequestMode</a> <strong>mode</strong>;</span><span class=def>
-  readonly attribute <a href='RequestCredentials.html'>RequestCredentials</a> <strong>credentials</strong>;</span><span class=def>
-  readonly attribute <a href='RequestCache.html'>RequestCache</a> <strong>cache</strong>;</span><span class=def>
-  readonly attribute <a href='RequestRedirect.html'>RequestRedirect</a> <strong>redirect</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>keepalive</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isReloadNavigation</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isHistoryNavigation</strong>;</span><span class=def>
-  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def>
+  readonly attribute <a href='RequestDestination.html'>RequestDestination</a> <strong>destination</strong>;</span><span class=def id=attribute-referrer>
+  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def id=attribute-referrerPolicy>
+  readonly attribute <a href='ReferrerPolicy.html'>ReferrerPolicy</a> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-mode>
+  readonly attribute <a href='RequestMode.html'>RequestMode</a> <strong>mode</strong>;</span><span class=def id=attribute-credentials>
+  readonly attribute <a href='RequestCredentials.html'>RequestCredentials</a> <strong>credentials</strong>;</span><span class=def id=attribute-cache>
+  readonly attribute <a href='RequestCache.html'>RequestCache</a> <strong>cache</strong>;</span><span class=def id=attribute-redirect>
+  readonly attribute <a href='RequestRedirect.html'>RequestRedirect</a> <strong>redirect</strong>;</span><span class=def id=attribute-integrity>
+  readonly attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-keepalive>
+  readonly attribute <span class=primitive>boolean</span> <strong>keepalive</strong>;</span><span class=def id=attribute-isReloadNavigation>
+  readonly attribute <span class=primitive>boolean</span> <strong>isReloadNavigation</strong>;</span><span class=def id=attribute-isHistoryNavigation>
+  readonly attribute <span class=primitive>boolean</span> <strong>isHistoryNavigation</strong>;</span><span class=def id=attribute-signal>
+  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def id=operation-clone>
 
-  [NewObject] <a href='Request.html'>Request</a> <strong>clone</strong>();</span><span class=def>
-  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>bodyUsed</strong>;</span><span class=def>
-  [NewObject] Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>arrayBuffer</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def>
+  [NewObject] <a href='Request.html'>Request</a> <strong>clone</strong>();</span><span class=def id=attribute-body>
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a>? <strong>body</strong>;</span><span class=def id=attribute-bodyUsed>
+  readonly attribute <span class=primitive>boolean</span> <strong>bodyUsed</strong>;</span><span class=def id=operation-arrayBuffer>
+  [NewObject] Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>arrayBuffer</strong>();</span><span class=def id=operation-blob>
+  [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def id=operation-formData>
+  [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def id=operation-json>
+  [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def id=operation-text>
+  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def id=attribute-importance>
   readonly attribute <a href='Importance.html'>Importance</a> <strong>importance</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Request</code></h3>
+
+  <ul>
+    <li><code><a href="Request.html">Request</a><a href=Request.html#constructor-RequestInfo-RequestInit>()</a></code></li>
+<li><code><a href="Request.html">Request</a><a href=Request.html#operation-clone>.clone()</a></code></li>
+<li><code><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a><a href=BackgroundFetchRecord.html#attribute-request>.request</a></code></li>
+<li><code><a href="FetchEvent.html">FetchEvent</a><a href=FetchEvent.html#attribute-request>.request</a></code></li>
+<li><code><a href="Cache.html">Cache</a><a href=Cache.html#operation-keys-RequestInfo-CacheQueryOptions>.keys()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></li>
-<li><a href="Cache.html">Cache</a></li>
-<li><a href="FetchEvent.html">FetchEvent</a></li>
-<li><a href="FetchEventInit.html">FetchEventInit</a></li>
-<li><a href="Request.html">Request</a></li>
+    <li><code><a href="BackgroundFetchRecord.html">BackgroundFetchRecord</a></code></li>
+<li><code><a href="Cache.html">Cache</a></code></li>
+<li><code><a href="FetchEvent.html">FetchEvent</a></code></li>
+<li><code><a href="FetchEventInit.html">FetchEventInit</a></code></li>
+<li><code><a href="Request.html">Request</a></code></li>
 
   </ul>
 </section>

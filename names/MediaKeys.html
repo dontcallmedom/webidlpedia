@@ -10,19 +10,28 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;encrypted-media&#x2F;#dom-mediakeys">Encrypted Media Extensions</a> defines <code>MediaKeys</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext] interface <strong>MediaKeys</strong> {<span class=def>
-    <a href='MediaKeySession.html'>MediaKeySession</a>  <strong>createSession</strong> (optional <a href='MediaKeySessionType.html'>MediaKeySessionType</a> <strong>sessionType</strong> &#x3D; &quot;temporary&quot;);</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext] interface <strong>MediaKeys</strong> {<span class=def id=operation-createSession-MediaKeySessionType>
+    <a href='MediaKeySession.html'>MediaKeySession</a>  <strong>createSession</strong> (optional <a href='MediaKeySessionType.html'>MediaKeySessionType</a> <strong>sessionType</strong> &#x3D; &quot;temporary&quot;);</span><span class=def id=operation-setServerCertificate-BufferSource>
     Promise&lt;<span class=primitive>boolean</span>&gt; <strong>setServerCertificate</strong> (<a href='BufferSource.html'>BufferSource</a> <strong>serverCertificate</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>MediaKeys</code></h3>
+
+  <ul>
+    <li><code><a href="MediaKeySystemAccess.html">MediaKeySystemAccess</a><a href=MediaKeySystemAccess.html#operation-createMediaKeys>.createMediaKeys()</a></code></li>
+<li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a><a href=HTMLMediaElement.html#attribute-mediaKeys>.mediaKeys</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li>
-<li><a href="MediaKeySystemAccess.html">MediaKeySystemAccess</a></li>
+    <li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a></code></li>
+<li><code><a href="MediaKeySystemAccess.html">MediaKeySystemAccess</a></code></li>
 
   </ul>
 </section>

@@ -9,15 +9,15 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;remote-playback&#x2F;#dom-remoteplayback">Remote Playback API</a> defines <code>RemotePlayback</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  Promise&lt;<span class=primitive>long</span>&gt; <strong>watchAvailability</strong>(<a href='RemotePlaybackAvailabilityCallback.html'>RemotePlaybackAvailabilityCallback</a> <strong>callback</strong>);</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>cancelWatchAvailability</strong>(optional <span class=primitive>long</span> <strong>id</strong>);</span><span class=def>
+interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-watchAvailability-RemotePlaybackAvailabilityCallback>
+  Promise&lt;<span class=primitive>long</span>&gt; <strong>watchAvailability</strong>(<a href='RemotePlaybackAvailabilityCallback.html'>RemotePlaybackAvailabilityCallback</a> <strong>callback</strong>);</span><span class=def id=operation-cancelWatchAvailability-long>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>cancelWatchAvailability</strong>(optional <span class=primitive>long</span> <strong>id</strong>);</span><span class=def id=attribute-state>
 
-  readonly attribute <a href='RemotePlaybackState.html'>RemotePlaybackState</a> <strong>state</strong>;</span><span class=def>
+  readonly attribute <a href='RemotePlaybackState.html'>RemotePlaybackState</a> <strong>state</strong>;</span><span class=def id=attribute-onconnecting>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnecting</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnecting</strong>;</span><span class=def id=attribute-onconnect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def id=attribute-ondisconnect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def id=operation-prompt>
 
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>prompt</strong>();</span>
 };</span></code></pre>
@@ -25,10 +25,18 @@ interface <strong>RemotePlayback</strong> : <a href='EventTarget.html'>EventTarg
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>RemotePlayback</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a><a href=HTMLMediaElement.html#attribute-remote>.remote</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="HTMLMediaElement.html">HTMLMediaElement</a></li>
+    <li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a></code></li>
 
   </ul>
 </section>

@@ -11,55 +11,63 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AudioNode</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
+interface <strong>AudioNode</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-connect-AudioNode-unsigned long-unsigned long>
   <a href='AudioNode.html'>AudioNode</a> <strong>connect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
                      optional <span class=primitive>unsigned long</span> <strong>output</strong> &#x3D; 0,
-                     optional <span class=primitive>unsigned long</span> <strong>input</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>connect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, optional <span class=primitive>unsigned long</span> <strong>output</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> ();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> (<span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>, <span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def>
+                     optional <span class=primitive>unsigned long</span> <strong>input</strong> &#x3D; 0);</span><span class=def id=operation-connect-AudioParam-unsigned long>
+  <span class=primitive>undefined</span> <strong>connect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, optional <span class=primitive>unsigned long</span> <strong>output</strong> &#x3D; 0);</span><span class=def id=operation-disconnect>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> ();</span><span class=def id=operation-disconnect-unsigned long>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> (<span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def id=operation-disconnect-AudioNode>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>);</span><span class=def id=operation-disconnect-AudioNode-unsigned long>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>, <span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def id=operation-disconnect-AudioNode-unsigned long-unsigned long>
   <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioNode.html'>AudioNode</a> <strong>destinationNode</strong>,
                         <span class=primitive>unsigned long</span> <strong>output</strong>,
-                        <span class=primitive>unsigned long</span> <strong>input</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, <span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def>
-  readonly attribute <a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfInputs</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfOutputs</strong>;</span><span class=def>
-  attribute <span class=primitive>unsigned long</span> <strong>channelCount</strong>;</span><span class=def>
-  attribute <a href='ChannelCountMode.html'>ChannelCountMode</a> <strong>channelCountMode</strong>;</span><span class=def>
+                        <span class=primitive>unsigned long</span> <strong>input</strong>);</span><span class=def id=operation-disconnect-AudioParam>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>);</span><span class=def id=operation-disconnect-AudioParam-unsigned long>
+  <span class=primitive>undefined</span> <strong>disconnect</strong> (<a href='AudioParam.html'>AudioParam</a> <strong>destinationParam</strong>, <span class=primitive>unsigned long</span> <strong>output</strong>);</span><span class=def id=attribute-context>
+  readonly attribute <a href='BaseAudioContext.html'>BaseAudioContext</a> <strong>context</strong>;</span><span class=def id=attribute-numberOfInputs>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfInputs</strong>;</span><span class=def id=attribute-numberOfOutputs>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>numberOfOutputs</strong>;</span><span class=def id=attribute-channelCount>
+  attribute <span class=primitive>unsigned long</span> <strong>channelCount</strong>;</span><span class=def id=attribute-channelCountMode>
+  attribute <a href='ChannelCountMode.html'>ChannelCountMode</a> <strong>channelCountMode</strong>;</span><span class=def id=attribute-channelInterpretation>
   attribute <a href='ChannelInterpretation.html'>ChannelInterpretation</a> <strong>channelInterpretation</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AudioNode</code></h3>
+
+  <ul>
+    <li><code><a href="AudioNode.html">AudioNode</a><a href=AudioNode.html#operation-connect-AudioNode-unsigned long-unsigned long>.connect()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="AnalyserNode.html">AnalyserNode</a></li>
-<li><a href="AudioDestinationNode.html">AudioDestinationNode</a></li>
-<li><a href="AudioNode.html">AudioNode</a></li>
-<li><a href="AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></li>
-<li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li>
-<li><a href="BiquadFilterNode.html">BiquadFilterNode</a></li>
-<li><a href="ChannelMergerNode.html">ChannelMergerNode</a></li>
-<li><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></li>
-<li><a href="ConvolverNode.html">ConvolverNode</a></li>
-<li><a href="DelayNode.html">DelayNode</a></li>
-<li><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></li>
-<li><a href="GainNode.html">GainNode</a></li>
-<li><a href="IIRFilterNode.html">IIRFilterNode</a></li>
-<li><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></li>
-<li><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></li>
-<li><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></li>
-<li><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></li>
-<li><a href="PannerNode.html">PannerNode</a></li>
-<li><a href="ScriptProcessorNode.html">ScriptProcessorNode</a></li>
-<li><a href="StereoPannerNode.html">StereoPannerNode</a></li>
-<li><a href="WaveShaperNode.html">WaveShaperNode</a></li>
+    <li><code><a href="AnalyserNode.html">AnalyserNode</a></code></li>
+<li><code><a href="AudioDestinationNode.html">AudioDestinationNode</a></code></li>
+<li><code><a href="AudioNode.html">AudioNode</a></code></li>
+<li><code><a href="AudioScheduledSourceNode.html">AudioScheduledSourceNode</a></code></li>
+<li><code><a href="AudioWorkletNode.html">AudioWorkletNode</a></code></li>
+<li><code><a href="BiquadFilterNode.html">BiquadFilterNode</a></code></li>
+<li><code><a href="ChannelMergerNode.html">ChannelMergerNode</a></code></li>
+<li><code><a href="ChannelSplitterNode.html">ChannelSplitterNode</a></code></li>
+<li><code><a href="ConvolverNode.html">ConvolverNode</a></code></li>
+<li><code><a href="DelayNode.html">DelayNode</a></code></li>
+<li><code><a href="DynamicsCompressorNode.html">DynamicsCompressorNode</a></code></li>
+<li><code><a href="GainNode.html">GainNode</a></code></li>
+<li><code><a href="IIRFilterNode.html">IIRFilterNode</a></code></li>
+<li><code><a href="MediaElementAudioSourceNode.html">MediaElementAudioSourceNode</a></code></li>
+<li><code><a href="MediaStreamAudioDestinationNode.html">MediaStreamAudioDestinationNode</a></code></li>
+<li><code><a href="MediaStreamAudioSourceNode.html">MediaStreamAudioSourceNode</a></code></li>
+<li><code><a href="MediaStreamTrackAudioSourceNode.html">MediaStreamTrackAudioSourceNode</a></code></li>
+<li><code><a href="PannerNode.html">PannerNode</a></code></li>
+<li><code><a href="ScriptProcessorNode.html">ScriptProcessorNode</a></code></li>
+<li><code><a href="StereoPannerNode.html">StereoPannerNode</a></code></li>
+<li><code><a href="WaveShaperNode.html">WaveShaperNode</a></code></li>
 
   </ul>
 </section>

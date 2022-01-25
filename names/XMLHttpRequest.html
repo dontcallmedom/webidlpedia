@@ -11,44 +11,52 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>)]
-interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.html'>XMLHttpRequestEventTarget</a> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def><span class="comment">
+interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.html'>XMLHttpRequestEventTarget</a> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=attribute-onreadystatechange><span class="comment">
 
   &#x2F;&#x2F; event handler
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def><span class="comment">
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def id=const-UNSENT><span class="comment">
 
   &#x2F;&#x2F; states
-  </span>const <span class=primitive>unsigned short</span> <strong>UNSENT</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>OPENED</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>HEADERS_RECEIVED</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>LOADING</strong> &#x3D; 3;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>DONE</strong> &#x3D; 4;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def><span class="comment">
+  </span>const <span class=primitive>unsigned short</span> <strong>UNSENT</strong> &#x3D; 0;</span><span class=def id=const-OPENED>
+  const <span class=primitive>unsigned short</span> <strong>OPENED</strong> &#x3D; 1;</span><span class=def id=const-HEADERS_RECEIVED>
+  const <span class=primitive>unsigned short</span> <strong>HEADERS_RECEIVED</strong> &#x3D; 2;</span><span class=def id=const-LOADING>
+  const <span class=primitive>unsigned short</span> <strong>LOADING</strong> &#x3D; 3;</span><span class=def id=const-DONE>
+  const <span class=primitive>unsigned short</span> <strong>DONE</strong> &#x3D; 4;</span><span class=def id=attribute-readyState>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def id=operation-open-ByteString-USVString><span class="comment">
 
   &#x2F;&#x2F; request
-  </span><span class=primitive>undefined</span> <strong>open</strong>(<span class=primitive>ByteString</span> <strong>method</strong>, <span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>open</strong>(<span class=primitive>ByteString</span> <strong>method</strong>, <span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>boolean</span> <strong>async</strong>, optional <span class=primitive>USVString</span>? <strong>username</strong> &#x3D; null, optional <span class=primitive>USVString</span>? <strong>password</strong> &#x3D; null);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setRequestHeader</strong>(<span class=primitive>ByteString</span> <strong>name</strong>, <span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def>
-           attribute <span class=primitive>unsigned long</span> <strong>timeout</strong>;</span><span class=def>
-           attribute <span class=primitive>boolean</span> <strong>withCredentials</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='XMLHttpRequestUpload.html'>XMLHttpRequestUpload</a> <strong>upload</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>send</strong>(optional (<a href='Document.html'>Document</a> or <a href='XMLHttpRequestBodyInit.html'>XMLHttpRequestBodyInit</a>)? <strong>body</strong> &#x3D; null);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>abort</strong>();</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>open</strong>(<span class=primitive>ByteString</span> <strong>method</strong>, <span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def id=operation-open-ByteString-USVString-boolean-USVString-USVString>
+  <span class=primitive>undefined</span> <strong>open</strong>(<span class=primitive>ByteString</span> <strong>method</strong>, <span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>boolean</span> <strong>async</strong>, optional <span class=primitive>USVString</span>? <strong>username</strong> &#x3D; null, optional <span class=primitive>USVString</span>? <strong>password</strong> &#x3D; null);</span><span class=def id=operation-setRequestHeader-ByteString-ByteString>
+  <span class=primitive>undefined</span> <strong>setRequestHeader</strong>(<span class=primitive>ByteString</span> <strong>name</strong>, <span class=primitive>ByteString</span> <strong>value</strong>);</span><span class=def id=attribute-timeout>
+           attribute <span class=primitive>unsigned long</span> <strong>timeout</strong>;</span><span class=def id=attribute-withCredentials>
+           attribute <span class=primitive>boolean</span> <strong>withCredentials</strong>;</span><span class=def id=attribute-upload>
+  [SameObject] readonly attribute <a href='XMLHttpRequestUpload.html'>XMLHttpRequestUpload</a> <strong>upload</strong>;</span><span class=def id=operation-send-Document-XMLHttpRequestBodyInit>
+  <span class=primitive>undefined</span> <strong>send</strong>(optional (<a href='Document.html'>Document</a> or <a href='XMLHttpRequestBodyInit.html'>XMLHttpRequestBodyInit</a>)? <strong>body</strong> &#x3D; null);</span><span class=def id=operation-abort>
+  <span class=primitive>undefined</span> <strong>abort</strong>();</span><span class=def id=attribute-responseURL><span class="comment">
 
   &#x2F;&#x2F; response
-  </span>readonly attribute <span class=primitive>USVString</span> <strong>responseURL</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def>
-  <span class=primitive>ByteString</span>? <strong>getResponseHeader</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def>
-  <span class=primitive>ByteString</span> <strong>getAllResponseHeaders</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>overrideMimeType</strong>(<span class=primitive>DOMString</span> <strong>mime</strong>);</span><span class=def>
-           attribute <a href='XMLHttpRequestResponseType.html'>XMLHttpRequestResponseType</a> <strong>responseType</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>any</span> <strong>response</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>responseText</strong>;</span><span class=def>
+  </span>readonly attribute <span class=primitive>USVString</span> <strong>responseURL</strong>;</span><span class=def id=attribute-status>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>status</strong>;</span><span class=def id=attribute-statusText>
+  readonly attribute <span class=primitive>ByteString</span> <strong>statusText</strong>;</span><span class=def id=operation-getResponseHeader-ByteString>
+  <span class=primitive>ByteString</span>? <strong>getResponseHeader</strong>(<span class=primitive>ByteString</span> <strong>name</strong>);</span><span class=def id=operation-getAllResponseHeaders>
+  <span class=primitive>ByteString</span> <strong>getAllResponseHeaders</strong>();</span><span class=def id=operation-overrideMimeType-DOMString>
+  <span class=primitive>undefined</span> <strong>overrideMimeType</strong>(<span class=primitive>DOMString</span> <strong>mime</strong>);</span><span class=def id=attribute-responseType>
+           attribute <a href='XMLHttpRequestResponseType.html'>XMLHttpRequestResponseType</a> <strong>responseType</strong>;</span><span class=def id=attribute-response>
+  readonly attribute <span class=primitive>any</span> <strong>response</strong>;</span><span class=def id=attribute-responseText>
+  readonly attribute <span class=primitive>USVString</span> <strong>responseText</strong>;</span><span class=def id=attribute-responseXML>
   [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <a href='Document.html'>Document</a>? <strong>responseXML</strong>;</span>
 };</span></code></pre>
   
   
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>XMLHttpRequest</code></h3>
+
+  <ul>
+    <li><code><a href="XMLHttpRequest.html">XMLHttpRequest</a><a href=XMLHttpRequest.html#constructor>()</a></code></li>
+
+  </ul>
 </section>
 
   

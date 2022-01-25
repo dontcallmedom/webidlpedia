@@ -11,21 +11,29 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
-interface <strong>PushManager</strong> {<span class=def>
-  [SameObject] static readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>supportedContentEncodings</strong>;</span><span class=def>
+interface <strong>PushManager</strong> {<span class=def id=attribute-supportedContentEncodings>
+  [SameObject] static readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>supportedContentEncodings</strong>;</span><span class=def id=operation-subscribe-PushSubscriptionOptionsInit>
 
-  Promise&lt;<a href='PushSubscription.html'>PushSubscription</a>&gt; <strong>subscribe</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='PushSubscription.html'>PushSubscription</a>?&gt; <strong>getSubscription</strong>();</span><span class=def>
+  Promise&lt;<a href='PushSubscription.html'>PushSubscription</a>&gt; <strong>subscribe</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getSubscription>
+  Promise&lt;<a href='PushSubscription.html'>PushSubscription</a>?&gt; <strong>getSubscription</strong>();</span><span class=def id=operation-permissionState-PushSubscriptionOptionsInit>
   Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>permissionState</strong>(optional <a href='PushSubscriptionOptionsInit.html'>PushSubscriptionOptionsInit</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>PushManager</code></h3>
+
+  <ul>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a><a href=ServiceWorkerRegistration.html#attribute-pushManager>.pushManager</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+    <li><code><a href="ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></code></li>
 
   </ul>
 </section>

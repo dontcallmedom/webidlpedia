@@ -10,54 +10,62 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;layers&#x2F;#xrwebglbinding">WebXR Layers API Level 1</a> defines <code>XRWebGLBinding</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLBinding</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='XRSession.html'>XRSession</a> <strong>session</strong>, <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>);</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLBinding</strong> {<span class=def id=constructor-XRSession-XRWebGLRenderingContext>
+  <strong>constructor</strong>(<a href='XRSession.html'>XRSession</a> <strong>session</strong>, <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>);</span><span class=def id=attribute-nativeProjectionScaleFactor>
 
-  readonly attribute <span class=primitive>double</span> <strong>nativeProjectionScaleFactor</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>usesDepthValues</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>double</span> <strong>nativeProjectionScaleFactor</strong>;</span><span class=def id=attribute-usesDepthValues>
+  readonly attribute <span class=primitive>boolean</span> <strong>usesDepthValues</strong>;</span><span class=def id=operation-createProjectionLayer-XRProjectionLayerInit>
 
-  <a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>createProjectionLayer</strong>(optional <a href='XRProjectionLayerInit.html'>XRProjectionLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(optional <a href='XRQuadLayerInit.html'>XRQuadLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(optional <a href='XRCylinderLayerInit.html'>XRCylinderLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(optional <a href='XREquirectLayerInit.html'>XREquirectLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRCubeLayer.html'>XRCubeLayer</a> <strong>createCubeLayer</strong>(optional <a href='XRCubeLayerInit.html'>XRCubeLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+  <a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>createProjectionLayer</strong>(optional <a href='XRProjectionLayerInit.html'>XRProjectionLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createQuadLayer-XRQuadLayerInit>
+  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(optional <a href='XRQuadLayerInit.html'>XRQuadLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createCylinderLayer-XRCylinderLayerInit>
+  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(optional <a href='XRCylinderLayerInit.html'>XRCylinderLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createEquirectLayer-XREquirectLayerInit>
+  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(optional <a href='XREquirectLayerInit.html'>XREquirectLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createCubeLayer-XRCubeLayerInit>
+  <a href='XRCubeLayer.html'>XRCubeLayer</a> <strong>createCubeLayer</strong>(optional <a href='XRCubeLayerInit.html'>XRCubeLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-getSubImage-XRCompositionLayer-XRFrame-XREye>
 
-  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getSubImage</strong>(<a href='XRCompositionLayer.html'>XRCompositionLayer</a> <strong>layer</strong>, <a href='XRFrame.html'>XRFrame</a> <strong>frame</strong>, optional <a href='XREye.html'>XREye</a> <strong>eye</strong> &#x3D; &quot;none&quot;);</span><span class=def>
+  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getSubImage</strong>(<a href='XRCompositionLayer.html'>XRCompositionLayer</a> <strong>layer</strong>, <a href='XRFrame.html'>XRFrame</a> <strong>frame</strong>, optional <a href='XREye.html'>XREye</a> <strong>eye</strong> &#x3D; &quot;none&quot;);</span><span class=def id=operation-getViewSubImage-XRProjectionLayer-XRView>
   <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getViewSubImage</strong>(<a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>layer</strong>, <a href='XRView.html'>XRView</a> <strong>view</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRWebGLBinding</strong> {<span class=def>
+partial interface <strong>XRWebGLBinding</strong> {<span class=def id=operation-getDepthInformation-XRView>
   <a href='XRWebGLDepthInformation.html'>XRWebGLDepthInformation</a>? <strong>getDepthInformation</strong>(<a href='XRView.html'>XRView</a> <strong>view</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-lighting-estimation-1&#x2F;">WebXR Lighting Estimation API Level 1</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>XRWebGLBinding</strong> {<span class=def>
+partial interface <strong>XRWebGLBinding</strong> {<span class=def id=operation-getReflectionCubeMap-XRLightProbe>
   <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>getReflectionCubeMap</strong>(<a href='XRLightProbe.html'>XRLightProbe</a> <strong>lightProbe</strong>);</span>
 };</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLBinding</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='XRSession.html'>XRSession</a> <strong>session</strong>, <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>);</span><span class=def>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRWebGLBinding</strong> {<span class=def id=constructor-XRSession-XRWebGLRenderingContext>
+  <strong>constructor</strong>(<a href='XRSession.html'>XRSession</a> <strong>session</strong>, <a href='XRWebGLRenderingContext.html'>XRWebGLRenderingContext</a> <strong>context</strong>);</span><span class=def id=attribute-nativeProjectionScaleFactor>
 
-  readonly attribute <span class=primitive>double</span> <strong>nativeProjectionScaleFactor</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>usesDepthValues</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>double</span> <strong>nativeProjectionScaleFactor</strong>;</span><span class=def id=attribute-usesDepthValues>
+  readonly attribute <span class=primitive>boolean</span> <strong>usesDepthValues</strong>;</span><span class=def id=operation-createProjectionLayer-XRProjectionLayerInit>
 
-  <a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>createProjectionLayer</strong>(optional <a href='XRProjectionLayerInit.html'>XRProjectionLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(optional <a href='XRQuadLayerInit.html'>XRQuadLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(optional <a href='XRCylinderLayerInit.html'>XRCylinderLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(optional <a href='XREquirectLayerInit.html'>XREquirectLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  <a href='XRCubeLayer.html'>XRCubeLayer</a> <strong>createCubeLayer</strong>(optional <a href='XRCubeLayerInit.html'>XRCubeLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+  <a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>createProjectionLayer</strong>(optional <a href='XRProjectionLayerInit.html'>XRProjectionLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createQuadLayer-XRQuadLayerInit>
+  <a href='XRQuadLayer.html'>XRQuadLayer</a> <strong>createQuadLayer</strong>(optional <a href='XRQuadLayerInit.html'>XRQuadLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createCylinderLayer-XRCylinderLayerInit>
+  <a href='XRCylinderLayer.html'>XRCylinderLayer</a> <strong>createCylinderLayer</strong>(optional <a href='XRCylinderLayerInit.html'>XRCylinderLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createEquirectLayer-XREquirectLayerInit>
+  <a href='XREquirectLayer.html'>XREquirectLayer</a> <strong>createEquirectLayer</strong>(optional <a href='XREquirectLayerInit.html'>XREquirectLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-createCubeLayer-XRCubeLayerInit>
+  <a href='XRCubeLayer.html'>XRCubeLayer</a> <strong>createCubeLayer</strong>(optional <a href='XRCubeLayerInit.html'>XRCubeLayerInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=operation-getSubImage-XRCompositionLayer-XRFrame-XREye>
 
-  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getSubImage</strong>(<a href='XRCompositionLayer.html'>XRCompositionLayer</a> <strong>layer</strong>, <a href='XRFrame.html'>XRFrame</a> <strong>frame</strong>, optional <a href='XREye.html'>XREye</a> <strong>eye</strong> &#x3D; &quot;none&quot;);</span><span class=def>
-  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getViewSubImage</strong>(<a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>layer</strong>, <a href='XRView.html'>XRView</a> <strong>view</strong>);</span><span class=def>
-  <a href='XRWebGLDepthInformation.html'>XRWebGLDepthInformation</a>? <strong>getDepthInformation</strong>(<a href='XRView.html'>XRView</a> <strong>view</strong>);</span><span class=def>
+  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getSubImage</strong>(<a href='XRCompositionLayer.html'>XRCompositionLayer</a> <strong>layer</strong>, <a href='XRFrame.html'>XRFrame</a> <strong>frame</strong>, optional <a href='XREye.html'>XREye</a> <strong>eye</strong> &#x3D; &quot;none&quot;);</span><span class=def id=operation-getViewSubImage-XRProjectionLayer-XRView>
+  <a href='XRWebGLSubImage.html'>XRWebGLSubImage</a> <strong>getViewSubImage</strong>(<a href='XRProjectionLayer.html'>XRProjectionLayer</a> <strong>layer</strong>, <a href='XRView.html'>XRView</a> <strong>view</strong>);</span><span class=def id=operation-getDepthInformation-XRView>
+  <a href='XRWebGLDepthInformation.html'>XRWebGLDepthInformation</a>? <strong>getDepthInformation</strong>(<a href='XRView.html'>XRView</a> <strong>view</strong>);</span><span class=def id=operation-getReflectionCubeMap-XRLightProbe>
   <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>getReflectionCubeMap</strong>(<a href='XRLightProbe.html'>XRLightProbe</a> <strong>lightProbe</strong>);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>XRWebGLBinding</code></h3>
+
+  <ul>
+    <li><code><a href="XRWebGLBinding.html">XRWebGLBinding</a><a href=XRWebGLBinding.html#constructor-XRSession-XRWebGLRenderingContext>()</a></code></li>
+
+  </ul>
 </section>
 
   <section><h3>Referring specifications</h3>

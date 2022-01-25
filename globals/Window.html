@@ -9,231 +9,231 @@ base: ../
   <h3>Definition</h3>
 <p>Realm execution contexts tied to the <code>Window</code> Global name  use <code><a href="../names/Window.html">Window</a></code> as a basis for their global object.</p>
 <p>This means their global object exposes the following members:</p>
-          <pre class=webidl><code><span class=def><span class="comment">
+          <pre class=webidl><code><span class=def id=attribute-window><span class="comment">
   &#x2F;&#x2F; the current browsing context
-  </span>[LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>window</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>self</strong>;</span><span class=def>
-  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Document.html'>Document</a> <strong>document</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  [PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Location.html'>Location</a> <strong>location</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;History.html'>History</a> <strong>history</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>locationbar</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>menubar</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>personalbar</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>scrollbars</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>statusbar</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>toolbar</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>status</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>closed</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>focus</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def><span class="comment">
+  </span>[LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>window</strong>;</span><span class=def id=attribute-self>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>self</strong>;</span><span class=def id=attribute-document>
+  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Document.html'>Document</a> <strong>document</strong>;</span><span class=def id=attribute-name>
+  attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-location>
+  [PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;Location.html'>Location</a> <strong>location</strong>;</span><span class=def id=attribute-history>
+  readonly attribute <a href='..&#x2F;names&#x2F;History.html'>History</a> <strong>history</strong>;</span><span class=def id=attribute-customElements>
+  readonly attribute <a href='..&#x2F;names&#x2F;CustomElementRegistry.html'>CustomElementRegistry</a> <strong>customElements</strong>;</span><span class=def id=attribute-locationbar>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>locationbar</strong>;</span><span class=def id=attribute-menubar>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>menubar</strong>;</span><span class=def id=attribute-personalbar>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>personalbar</strong>;</span><span class=def id=attribute-scrollbars>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>scrollbars</strong>;</span><span class=def id=attribute-statusbar>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>statusbar</strong>;</span><span class=def id=attribute-toolbar>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;BarProp.html'>BarProp</a> <strong>toolbar</strong>;</span><span class=def id=attribute-status>
+  attribute <span class=primitive>DOMString</span> <strong>status</strong>;</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-closed>
+  readonly attribute <span class=primitive>boolean</span> <strong>closed</strong>;</span><span class=def id=operation-stop>
+  <span class=primitive>undefined</span> <strong>stop</strong>();</span><span class=def id=operation-focus>
+  <span class=primitive>undefined</span> <strong>focus</strong>();</span><span class=def id=operation-blur>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-frames><span class="comment">
 
   &#x2F;&#x2F; other browsing contexts
-  </span>[Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;</span><span class=def>
-  attribute <span class=primitive>any</span> <strong>opener</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;Element.html'>Element</a>? <strong>frameElement</strong>;</span><span class=def>
-  <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span class=primitive>USVString</span> <strong>url</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>target</strong> &#x3D; &quot;_blank&quot;, optional [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>features</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  <strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def><span class="comment">
+  </span>[Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a> <strong>frames</strong>;</span><span class=def id=attribute-length>
+  [Replaceable] readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=attribute-top>
+  [LegacyUnforgeable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>top</strong>;</span><span class=def id=attribute-opener>
+  attribute <span class=primitive>any</span> <strong>opener</strong>;</span><span class=def id=attribute-parent>
+  [Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>parent</strong>;</span><span class=def id=attribute-frameElement>
+  readonly attribute <a href='..&#x2F;names&#x2F;Element.html'>Element</a>? <strong>frameElement</strong>;</span><span class=def id=operation-open-USVString-DOMString-DOMString>
+  <a href='..&#x2F;names&#x2F;WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(optional <span class=primitive>USVString</span> <strong>url</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>target</strong> &#x3D; &quot;_blank&quot;, optional [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>features</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-getter>
+  <strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=attribute-navigator><span class="comment">
   &#x2F;&#x2F; Since this is the global object, the IDL named getter adds a NamedPropertiesObject exotic
   &#x2F;&#x2F; object on the prototype chain. Indeed, this does not make the global object an exotic object.
   &#x2F;&#x2F; Indexed access is taken care of by the WindowProxy exotic object.
 
   &#x2F;&#x2F; the user agent
-  </span>readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>navigator</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>clientInformation</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .navigator
-  </span>readonly attribute <span class=primitive>boolean</span> <strong>originAgentCluster</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>navigator</strong>;</span><span class=def id=attribute-clientInformation>
+  readonly attribute <a href='..&#x2F;names&#x2F;Navigator.html'>Navigator</a> <strong>clientInformation</strong>;</span><span class=def id=attribute-originAgentCluster><span class="comment"> &#x2F;&#x2F; legacy alias of .navigator
+  </span>readonly attribute <span class=primitive>boolean</span> <strong>originAgentCluster</strong>;</span><span class=def id=operation-alert><span class="comment">
 
   &#x2F;&#x2F; user prompts
-  </span><span class=primitive>undefined</span> <strong>alert</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>alert</strong>(<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>confirm</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  <span class=primitive>DOMString</span>? <strong>prompt</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>default</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>print</strong>();</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>alert</strong>();</span><span class=def id=operation-alert-DOMString>
+  <span class=primitive>undefined</span> <strong>alert</strong>(<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def id=operation-confirm-DOMString>
+  <span class=primitive>boolean</span> <strong>confirm</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-prompt-DOMString-DOMString>
+  <span class=primitive>DOMString</span>? <strong>prompt</strong>(optional <span class=primitive>DOMString</span> <strong>message</strong> &#x3D; &quot;&quot;, optional <span class=primitive>DOMString</span> <strong>default</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-print>
+  <span class=primitive>undefined</span> <strong>print</strong>();</span><span class=def id=operation-postMessage-any-USVString-object>
 
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, <span class=primitive>USVString</span> <strong>targetOrigin</strong>, optional sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong> &#x3D; []);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='..&#x2F;names&#x2F;WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, <span class=primitive>USVString</span> <strong>targetOrigin</strong>, optional sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong> &#x3D; []);</span><span class=def id=operation-postMessage-any-WindowPostMessageOptions>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='..&#x2F;names&#x2F;WindowPostMessageOptions.html'>WindowPostMessageOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-captureEvents>
+  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def id=operation-releaseEvents>
+  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def id=attribute-external>
 
-  [Replaceable, SameObject] readonly attribute <a href='..&#x2F;names&#x2F;External.html'>External</a> <strong>external</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def>
-  [Replaceable] readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>isSecureContext</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>crossOriginIsolated</strong>;</span><span class=def>
+  [Replaceable, SameObject] readonly attribute <a href='..&#x2F;names&#x2F;External.html'>External</a> <strong>external</strong>;</span><span class=def id=attribute-onabort>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def id=attribute-onauxclick>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def id=attribute-onblur>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def id=attribute-oncancel>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-oncanplay>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def id=attribute-oncanplaythrough>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def id=attribute-onchange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def id=attribute-onclick>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-oncontextlost>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextmenu>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def id=attribute-oncontextrestored>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncuechange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-ondblclick>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def id=attribute-ondrag>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def id=attribute-ondragend>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def id=attribute-ondragenter>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def id=attribute-ondragleave>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def id=attribute-ondragover>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def id=attribute-ondragstart>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def id=attribute-ondrop>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def id=attribute-ondurationchange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def id=attribute-onemptied>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='..&#x2F;names&#x2F;OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onfocus>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def id=attribute-onformdata>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def id=attribute-oninput>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def id=attribute-oninvalid>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def id=attribute-onkeydown>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def id=attribute-onkeypress>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def id=attribute-onkeyup>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def id=attribute-onload>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def id=attribute-onloadeddata>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def id=attribute-onloadedmetadata>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def id=attribute-onloadstart>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def id=attribute-onmousedown>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def id=attribute-onmouseenter>
+  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def id=attribute-onmouseleave>
+  [LegacyLenientThis] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def id=attribute-onmousemove>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def id=attribute-onmouseout>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def id=attribute-onmouseover>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def id=attribute-onmouseup>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpause>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def id=attribute-onplay>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def id=attribute-onplaying>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def id=attribute-onprogress>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def id=attribute-onratechange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def id=attribute-onreset>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def id=attribute-onresize>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def id=attribute-onscroll>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def id=attribute-onsecuritypolicyviolation>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def id=attribute-onseeked>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def id=attribute-onseeking>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def id=attribute-onselect>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def id=attribute-onslotchange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=attribute-onstalled>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def id=attribute-onsubmit>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def id=attribute-onsuspend>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def id=attribute-ontimeupdate>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def id=attribute-ontoggle>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def id=attribute-onvolumechange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def id=attribute-onwaiting>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def id=attribute-onwebkitanimationend>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def id=attribute-onwebkitanimationiteration>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-onafterprint>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def id=attribute-onbeforeprint>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeprint</strong>;</span><span class=def id=attribute-onbeforeunload>
+  attribute <a href='..&#x2F;names&#x2F;OnBeforeUnloadEventHandler.html'>OnBeforeUnloadEventHandler</a> <strong>onbeforeunload</strong>;</span><span class=def id=attribute-onhashchange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onhashchange</strong>;</span><span class=def id=attribute-onlanguagechange>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onlanguagechange</strong>;</span><span class=def id=attribute-onmessage>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def id=attribute-onoffline>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onoffline</strong>;</span><span class=def id=attribute-ononline>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ononline</strong>;</span><span class=def id=attribute-onpagehide>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpagehide</strong>;</span><span class=def id=attribute-onpageshow>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpageshow</strong>;</span><span class=def id=attribute-onpopstate>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onpopstate</strong>;</span><span class=def id=attribute-onrejectionhandled>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onrejectionhandled</strong>;</span><span class=def id=attribute-onstorage>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onstorage</strong>;</span><span class=def id=attribute-onunhandledrejection>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunhandledrejection</strong>;</span><span class=def id=attribute-onunload>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onunload</strong>;</span><span class=def id=attribute-origin>
+  [Replaceable] readonly attribute <span class=primitive>USVString</span> <strong>origin</strong>;</span><span class=def id=attribute-isSecureContext>
+  readonly attribute <span class=primitive>boolean</span> <strong>isSecureContext</strong>;</span><span class=def id=attribute-crossOriginIsolated>
+  readonly attribute <span class=primitive>boolean</span> <strong>crossOriginIsolated</strong>;</span><span class=def id=operation-reportError-any>
 
-  <span class=primitive>undefined</span> <strong>reportError</strong>(<span class=primitive>any</span> <strong>e</strong>);</span><span class=def><span class="comment">
+  <span class=primitive>undefined</span> <strong>reportError</strong>(<span class=primitive>any</span> <strong>e</strong>);</span><span class=def id=operation-btoa-DOMString><span class="comment">
 
   &#x2F;&#x2F; base64 utility methods
-  </span><span class=primitive>DOMString</span> <strong>btoa</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>ByteString</span> <strong>atob</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>DOMString</span> <strong>btoa</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-atob-DOMString>
+  <span class=primitive>ByteString</span> <strong>atob</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-setTimeout-TimerHandler-long-any><span class="comment">
 
   &#x2F;&#x2F; timers
-  </span><span class=primitive>long</span> <strong>setTimeout</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearTimeout</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def>
-  <span class=primitive>long</span> <strong>setInterval</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def><span class="comment">
+  </span><span class=primitive>long</span> <strong>setTimeout</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-clearTimeout-long>
+  <span class=primitive>undefined</span> <strong>clearTimeout</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def id=operation-setInterval-TimerHandler-long-any>
+  <span class=primitive>long</span> <strong>setInterval</strong>(<a href='..&#x2F;names&#x2F;TimerHandler.html'>TimerHandler</a> <strong>handler</strong>, optional <span class=primitive>long</span> <strong>timeout</strong> &#x3D; 0, <span class=primitive>any</span>... <strong>arguments</strong>);</span><span class=def id=operation-clearInterval-long>
+  <span class=primitive>undefined</span> <strong>clearInterval</strong>(optional <span class=primitive>long</span> <strong>id</strong> &#x3D; 0);</span><span class=def id=operation-queueMicrotask-VoidFunction><span class="comment">
 
   &#x2F;&#x2F; microtask queuing
-  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='..&#x2F;names&#x2F;VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def><span class="comment">
+  </span><span class=primitive>undefined</span> <strong>queueMicrotask</strong>(<a href='..&#x2F;names&#x2F;VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def id=operation-createImageBitmap-ImageBitmapSource-ImageBitmapOptions><span class="comment">
 
   &#x2F;&#x2F; ImageBitmap
-  </span>Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span class=primitive>long</span> <strong>sx</strong>, <span class=primitive>long</span> <strong>sy</strong>, <span class=primitive>long</span> <strong>sw</strong>, <span class=primitive>long</span> <strong>sh</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def><span class="comment">
+  </span>Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createImageBitmap-ImageBitmapSource-long-long-long-long-ImageBitmapOptions>
+  Promise&lt;<a href='..&#x2F;names&#x2F;ImageBitmap.html'>ImageBitmap</a>&gt; <strong>createImageBitmap</strong>(<a href='..&#x2F;names&#x2F;ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>, <span class=primitive>long</span> <strong>sx</strong>, <span class=primitive>long</span> <strong>sy</strong>, <span class=primitive>long</span> <strong>sw</strong>, <span class=primitive>long</span> <strong>sh</strong>, optional <a href='..&#x2F;names&#x2F;ImageBitmapOptions.html'>ImageBitmapOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-structuredClone-any-StructuredSerializeOptions><span class="comment">
 
   &#x2F;&#x2F; structured cloning
-  </span><span class=primitive>any</span> <strong>structuredClone</strong>(<span class=primitive>any</span> <strong>value</strong>, optional <a href='..&#x2F;names&#x2F;StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='..&#x2F;names&#x2F;FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>sessionStorage</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def>
-    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def>
-  [Replaceable] readonly attribute (<a href='..&#x2F;names&#x2F;Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;AppHistory.html'>AppHistory</a> <strong>appHistory</strong>;</span><span class=def>
-  readonly attribute <a href='..&#x2F;names&#x2F;AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def>
-    Promise&lt;sequence&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='..&#x2F;names&#x2F;DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def>
-  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def>
-    readonly attribute <a href='..&#x2F;names&#x2F;PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def>
-    [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def>
-  [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='..&#x2F;names&#x2F;SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def>
-  [NewObject] <a href='..&#x2F;names&#x2F;CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='..&#x2F;names&#x2F;Element.html'>Element</a> <strong>elt</strong>, optional <a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span><span class=def>
-    [NewObject] <a href='..&#x2F;names&#x2F;MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def>
-    [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def><span class="comment">
+  </span><span class=primitive>any</span> <strong>structuredClone</strong>(<span class=primitive>any</span> <strong>value</strong>, optional <a href='..&#x2F;names&#x2F;StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-requestAnimationFrame-FrameRequestCallback>
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='..&#x2F;names&#x2F;FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def id=operation-cancelAnimationFrame-unsigned long>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def id=attribute-sessionStorage>
+  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>sessionStorage</strong>;</span><span class=def id=attribute-localStorage>
+  readonly attribute <a href='..&#x2F;names&#x2F;Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def id=attribute-orientation>
+    readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
+    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
+  [Replaceable] readonly attribute (<a href='..&#x2F;names&#x2F;Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-appHistory>
+  readonly attribute <a href='..&#x2F;names&#x2F;AppHistory.html'>AppHistory</a> <strong>appHistory</strong>;</span><span class=def id=attribute-attributionReporting>
+  readonly attribute <a href='..&#x2F;names&#x2F;AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def id=attribute-cookieStore>
+  [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
+    Promise&lt;sequence&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
+    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showDirectoryPicker-DirectoryPickerOptions>
+    Promise&lt;<a href='..&#x2F;names&#x2F;FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='..&#x2F;names&#x2F;DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
+  attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-portalHost>
+    readonly attribute <a href='..&#x2F;names&#x2F;PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-speechSynthesis>
+    [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-visualViewport>
+  [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def id=operation-navigate-SpatialNavigationDirection>
+    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='..&#x2F;names&#x2F;SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def id=operation-getComputedStyle-Element-CSSOMString>
+  [NewObject] <a href='..&#x2F;names&#x2F;CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='..&#x2F;names&#x2F;Element.html'>Element</a> <strong>elt</strong>, optional <a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span><span class=def id=operation-matchMedia-CSSOMString>
+    [NewObject] <a href='..&#x2F;names&#x2F;MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='..&#x2F;names&#x2F;CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def id=attribute-screen>
+    [SameObject, Replaceable] readonly attribute <a href='..&#x2F;names&#x2F;Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def id=operation-moveTo-long-long><span class="comment">
 
     &#x2F;&#x2F; browsing context
-    </span><span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>moveBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeTo</strong>(<span class=primitive>long</span> <strong>width</strong>, <span class=primitive>long</span> <strong>height</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>resizeBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def><span class="comment">
+    </span><span class=primitive>undefined</span> <strong>moveTo</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def id=operation-moveBy-long-long>
+    <span class=primitive>undefined</span> <strong>moveBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def id=operation-resizeTo-long-long>
+    <span class=primitive>undefined</span> <strong>resizeTo</strong>(<span class=primitive>long</span> <strong>width</strong>, <span class=primitive>long</span> <strong>height</strong>);</span><span class=def id=operation-resizeBy-long-long>
+    <span class=primitive>undefined</span> <strong>resizeBy</strong>(<span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def id=attribute-innerWidth><span class="comment">
 
     &#x2F;&#x2F; viewport
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerHeight</strong>;</span><span class=def><span class="comment">
+    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerWidth</strong>;</span><span class=def id=attribute-innerHeight>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>innerHeight</strong>;</span><span class=def id=attribute-scrollX><span class="comment">
 
     &#x2F;&#x2F; viewport scrolling
-    </span>[Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageXOffset</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageYOffset</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def><span class="comment">
+    </span>[Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollX</strong>;</span><span class=def id=attribute-pageXOffset>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageXOffset</strong>;</span><span class=def id=attribute-scrollY>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>scrollY</strong>;</span><span class=def id=attribute-pageYOffset>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>pageYOffset</strong>;</span><span class=def id=operation-scroll-ScrollToOptions>
+    <span class=primitive>undefined</span> <strong>scroll</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-scroll-unrestricted double-unrestricted double>
+    <span class=primitive>undefined</span> <strong>scroll</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-scrollTo-ScrollToOptions>
+    <span class=primitive>undefined</span> <strong>scrollTo</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-scrollTo-unrestricted double-unrestricted double>
+    <span class=primitive>undefined</span> <strong>scrollTo</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-scrollBy-ScrollToOptions>
+    <span class=primitive>undefined</span> <strong>scrollBy</strong>(optional <a href='..&#x2F;names&#x2F;ScrollToOptions.html'>ScrollToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-scrollBy-unrestricted double-unrestricted double>
+    <span class=primitive>undefined</span> <strong>scrollBy</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=attribute-screenX><span class="comment">
 
     &#x2F;&#x2F; client
-    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenLeft</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenTop</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerWidth</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerHeight</strong>;</span><span class=def>
-    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>devicePixelRatio</strong>;</span><span class=def>
-    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;</span><span class=def>
-    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;</span><span class=def>
-    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;</span><span class=def>
-    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;</span><span class=def>
-  <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='..&#x2F;names&#x2F;IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='..&#x2F;names&#x2F;IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
-  <a href='..&#x2F;names&#x2F;Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def>
+    </span>[Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenX</strong>;</span><span class=def id=attribute-screenLeft>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenLeft</strong>;</span><span class=def id=attribute-screenY>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenY</strong>;</span><span class=def id=attribute-screenTop>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>screenTop</strong>;</span><span class=def id=attribute-outerWidth>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerWidth</strong>;</span><span class=def id=attribute-outerHeight>
+    [Replaceable] readonly attribute <span class=primitive>long</span> <strong>outerHeight</strong>;</span><span class=def id=attribute-devicePixelRatio>
+    [Replaceable] readonly attribute <span class=primitive>double</span> <strong>devicePixelRatio</strong>;</span><span class=def id=attribute-ondeviceorientation>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientation</strong>;</span><span class=def id=attribute-ondeviceorientationabsolute>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondeviceorientationabsolute</strong>;</span><span class=def id=attribute-oncompassneedscalibration>
+    attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>oncompassneedscalibration</strong>;</span><span class=def id=attribute-ondevicemotion>
+    [SecureContext] attribute <a href='..&#x2F;names&#x2F;EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;</span><span class=def id=operation-requestIdleCallback-IdleRequestCallback-IdleRequestOptions>
+  <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='..&#x2F;names&#x2F;IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='..&#x2F;names&#x2F;IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cancelIdleCallback-unsigned long>
+  <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def id=operation-getSelection>
+  <a href='..&#x2F;names&#x2F;Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def id=operation-addEventListener-DOMString-EventListener-AddEventListenerOptions-boolean>
 
-  <span class=primitive>undefined</span> <strong>addEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>removeEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>addEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-removeEventListener-DOMString-EventListener-EventListenerOptions-boolean>
+  <span class=primitive>undefined</span> <strong>removeEventListener</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='..&#x2F;names&#x2F;EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='..&#x2F;names&#x2F;EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-dispatchEvent-Event>
   <span class=primitive>boolean</span> <strong>dispatchEvent</strong>(<a href='..&#x2F;names&#x2F;Event.html'>Event</a> <strong>event</strong>);</span></code></pre>
 <p>The following interfaces are exposed exclusively in the corresponding realms:</p>
 

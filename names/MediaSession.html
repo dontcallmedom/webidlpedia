@@ -11,16 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>MediaSession</strong> {<span class=def>
-  attribute <a href='MediaMetadata.html'>MediaMetadata</a>? <strong>metadata</strong>;</span><span class=def>
+interface <strong>MediaSession</strong> {<span class=def id=attribute-metadata>
+  attribute <a href='MediaMetadata.html'>MediaMetadata</a>? <strong>metadata</strong>;</span><span class=def id=attribute-playbackState>
 
-  attribute <a href='MediaSessionPlaybackState.html'>MediaSessionPlaybackState</a> <strong>playbackState</strong>;</span><span class=def>
+  attribute <a href='MediaSessionPlaybackState.html'>MediaSessionPlaybackState</a> <strong>playbackState</strong>;</span><span class=def id=operation-setActionHandler-MediaSessionAction-MediaSessionActionHandler>
 
-  <span class=primitive>undefined</span> <strong>setActionHandler</strong>(<a href='MediaSessionAction.html'>MediaSessionAction</a> <strong>action</strong>, <a href='MediaSessionActionHandler.html'>MediaSessionActionHandler</a>? <strong>handler</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setActionHandler</strong>(<a href='MediaSessionAction.html'>MediaSessionAction</a> <strong>action</strong>, <a href='MediaSessionActionHandler.html'>MediaSessionActionHandler</a>? <strong>handler</strong>);</span><span class=def id=operation-setPositionState-MediaPositionState>
 
-  <span class=primitive>undefined</span> <strong>setPositionState</strong>(optional <a href='MediaPositionState.html'>MediaPositionState</a> <strong>state</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setPositionState</strong>(optional <a href='MediaPositionState.html'>MediaPositionState</a> <strong>state</strong> &#x3D; {});</span><span class=def id=operation-setMicrophoneActive-boolean>
 
-  <span class=primitive>undefined</span> <strong>setMicrophoneActive</strong>(<span class=primitive>boolean</span> <strong>active</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setMicrophoneActive</strong>(<span class=primitive>boolean</span> <strong>active</strong>);</span><span class=def id=operation-setCameraActive-boolean>
 
   <span class=primitive>undefined</span> <strong>setCameraActive</strong>(<span class=primitive>boolean</span> <strong>active</strong>);</span>
 };</span></code></pre>
@@ -28,10 +28,18 @@ interface <strong>MediaSession</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>MediaSession</code></h3>
+
+  <ul>
+    <li><code><a href="Navigator.html">Navigator</a><a href=Navigator.html#attribute-mediaSession>.mediaSession</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Navigator.html">Navigator</a></li>
+    <li><code><a href="Navigator.html">Navigator</a></code></li>
 
   </ul>
 </section>

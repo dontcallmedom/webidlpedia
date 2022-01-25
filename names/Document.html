@@ -14,113 +14,113 @@ base: ../
 <a href='Document.html'>Document</a> includes <a href='ParentNode.html'>ParentNode</a>;</span><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def>
+interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=attribute-implementation>
 
-  [SameObject] readonly attribute <a href='DOMImplementation.html'>DOMImplementation</a> <strong>implementation</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>URL</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>documentURI</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>compatMode</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>characterSet</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>inputEncoding</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>contentType</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='DOMImplementation.html'>DOMImplementation</a> <strong>implementation</strong>;</span><span class=def id=attribute-URL>
+  readonly attribute <span class=primitive>USVString</span> <strong>URL</strong>;</span><span class=def id=attribute-documentURI>
+  readonly attribute <span class=primitive>USVString</span> <strong>documentURI</strong>;</span><span class=def id=attribute-compatMode>
+  readonly attribute <span class=primitive>DOMString</span> <strong>compatMode</strong>;</span><span class=def id=attribute-characterSet>
+  readonly attribute <span class=primitive>DOMString</span> <strong>characterSet</strong>;</span><span class=def id=attribute-charset>
+  readonly attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-inputEncoding><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>inputEncoding</strong>;</span><span class=def id=attribute-contentType><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>contentType</strong>;</span><span class=def id=attribute-doctype>
 
-  readonly attribute <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>documentElement</strong>;</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span class=primitive>DOMString</span> <strong>classNames</strong>);</span><span class=def>
+  readonly attribute <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong>;</span><span class=def id=attribute-documentElement>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>documentElement</strong>;</span><span class=def id=operation-getElementsByTagName-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def id=operation-getElementsByTagNameNS-DOMString-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def id=operation-getElementsByClassName-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span class=primitive>DOMString</span> <strong>classNames</strong>);</span><span class=def id=operation-createElement-DOMString-DOMString-ElementCreationOptions>
 
-  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElement</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElementNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createDocumentFragment</strong>();</span><span class=def>
-  [NewObject] <a href='Text.html'>Text</a> <strong>createTextNode</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='CDATASection.html'>CDATASection</a> <strong>createCDATASection</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='Comment.html'>Comment</a> <strong>createComment</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='ProcessingInstruction.html'>ProcessingInstruction</a> <strong>createProcessingInstruction</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElement</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createElementNS-DOMString-DOMString-DOMString-ElementCreationOptions>
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElementNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createDocumentFragment>
+  [NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createDocumentFragment</strong>();</span><span class=def id=operation-createTextNode-DOMString>
+  [NewObject] <a href='Text.html'>Text</a> <strong>createTextNode</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createCDATASection-DOMString>
+  [NewObject] <a href='CDATASection.html'>CDATASection</a> <strong>createCDATASection</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createComment-DOMString>
+  [NewObject] <a href='Comment.html'>Comment</a> <strong>createComment</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createProcessingInstruction-DOMString-DOMString>
+  [NewObject] <a href='ProcessingInstruction.html'>ProcessingInstruction</a> <strong>createProcessingInstruction</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-importNode-Node-boolean>
 
-  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>importNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def>
-  [CEReactions] <a href='Node.html'>Node</a> <strong>adoptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def>
+  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>importNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def id=operation-adoptNode-Node>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>adoptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def id=operation-createAttribute-DOMString>
 
-  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttribute</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
-  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttribute</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def id=operation-createAttributeNS-DOMString-DOMString>
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def id=operation-createEvent-DOMString>
 
-  [NewObject] <a href='Event.html'>Event</a> <strong>createEvent</strong>(<span class=primitive>DOMString</span> <strong>interface</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  [NewObject] <a href='Event.html'>Event</a> <strong>createEvent</strong>(<span class=primitive>DOMString</span> <strong>interface</strong>);</span><span class=def id=operation-createRange><span class="comment"> &#x2F;&#x2F; legacy
 
-  </span>[NewObject] <a href='Range.html'>Range</a> <strong>createRange</strong>();</span><span class=def><span class="comment">
+  </span>[NewObject] <a href='Range.html'>Range</a> <strong>createRange</strong>();</span><span class=def id=operation-createNodeIterator-Node-unsigned long-NodeFilter><span class="comment">
 
   &#x2F;&#x2F; NodeFilter.SHOW_ALL &#x3D; 0xFFFFFFFF
-  </span>[NewObject] <a href='NodeIterator.html'>NodeIterator</a> <strong>createNodeIterator</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def>
+  </span>[NewObject] <a href='NodeIterator.html'>NodeIterator</a> <strong>createNodeIterator</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def id=operation-createTreeWalker-Node-unsigned long-NodeFilter>
   [NewObject] <a href='TreeWalker.html'>TreeWalker</a> <strong>createTreeWalker</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span>
 };</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='XPathEvaluatorBase.html'>XPathEvaluatorBase</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def>
-    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def>
+    <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-measureElement-Element>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-measureText-DOMString-StylePropertyMapReadOnly>
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;#api">Fullscreen API Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
-  [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def>
-  [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; historical
+partial interface <strong>Document</strong> {<span class=def id=attribute-fullscreenEnabled>
+  [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def id=attribute-fullscreen>
+  [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def id=operation-exitFullscreen><span class="comment"> &#x2F;&#x2F; historical
 
-  </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitFullscreen</strong>();</span><span class=def>
+  </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitFullscreen</strong>();</span><span class=def id=attribute-onfullscreenchange>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;#the-location-interface">HTML Standard</a><pre class=webidl><code><span class=def>
 
 [LegacyOverrideBuiltIns]
-partial interface <strong>Document</strong> {<span class=def><span class="comment">
+partial interface <strong>Document</strong> {<span class=def id=attribute-location><span class="comment">
   &#x2F;&#x2F; resource metadata management
-  </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>cookie</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>lastModified</strong>;</span><span class=def>
-  readonly attribute <a href='DocumentReadyState.html'>DocumentReadyState</a> <strong>readyState</strong>;</span><span class=def><span class="comment">
+  </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
+  attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def id=attribute-referrer>
+  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def id=attribute-cookie>
+  attribute <span class=primitive>USVString</span> <strong>cookie</strong>;</span><span class=def id=attribute-lastModified>
+  readonly attribute <span class=primitive>DOMString</span> <strong>lastModified</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='DocumentReadyState.html'>DocumentReadyState</a> <strong>readyState</strong>;</span><span class=def id=operation-getter><span class="comment">
 
   &#x2F;&#x2F; DOM tree accessors
-  </span><strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def>
-  [CEReactions] attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>body</strong>;</span><span class=def>
-  readonly attribute <a href='HTMLHeadElement.html'>HTMLHeadElement</a>? <strong>head</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>images</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>embeds</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>plugins</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>links</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>forms</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>scripts</strong>;</span><span class=def>
-  <a href='NodeList.html'>NodeList</a> <strong>getElementsByName</strong>(<span class=primitive>DOMString</span> <strong>elementName</strong>);</span><span class=def>
-  readonly attribute <a href='HTMLOrSVGScriptElement.html'>HTMLOrSVGScriptElement</a>? <strong>currentScript</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; classic scripts in a document tree only
+  </span><strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=attribute-title>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def id=attribute-dir>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def id=attribute-body>
+  [CEReactions] attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>body</strong>;</span><span class=def id=attribute-head>
+  readonly attribute <a href='HTMLHeadElement.html'>HTMLHeadElement</a>? <strong>head</strong>;</span><span class=def id=attribute-images>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>images</strong>;</span><span class=def id=attribute-embeds>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>embeds</strong>;</span><span class=def id=attribute-plugins>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>plugins</strong>;</span><span class=def id=attribute-links>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>links</strong>;</span><span class=def id=attribute-forms>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>forms</strong>;</span><span class=def id=attribute-scripts>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>scripts</strong>;</span><span class=def id=operation-getElementsByName-DOMString>
+  <a href='NodeList.html'>NodeList</a> <strong>getElementsByName</strong>(<span class=primitive>DOMString</span> <strong>elementName</strong>);</span><span class=def id=attribute-currentScript>
+  readonly attribute <a href='HTMLOrSVGScriptElement.html'>HTMLOrSVGScriptElement</a>? <strong>currentScript</strong>;</span><span class=def id=operation-open-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; classic scripts in a document tree only
 
   &#x2F;&#x2F; dynamic markup insertion
-  </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; both arguments are ignored
-  </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def><span class="comment">
+  </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
+  </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=operation-writeln-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
-  </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>hasFocus</strong>();</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>designMode</strong>;</span><span class=def>
-  [CEReactions] <span class=primitive>boolean</span> <strong>execCommand</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>, optional <span class=primitive>boolean</span> <strong>showUI</strong> &#x3D; false, optional <span class=primitive>DOMString</span> <strong>value</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandEnabled</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandIndeterm</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandState</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandSupported</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>DOMString</span> <strong>queryCommandValue</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
-  readonly attribute <a href='DocumentVisibilityState.html'>DocumentVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
+  <span class=primitive>boolean</span> <strong>hasFocus</strong>();</span><span class=def id=attribute-designMode>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>designMode</strong>;</span><span class=def id=operation-execCommand-DOMString-boolean-DOMString>
+  [CEReactions] <span class=primitive>boolean</span> <strong>execCommand</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>, optional <span class=primitive>boolean</span> <strong>showUI</strong> &#x3D; false, optional <span class=primitive>DOMString</span> <strong>value</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-queryCommandEnabled-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandEnabled</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandIndeterm-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandIndeterm</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandState-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandState</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandSupported-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandSupported</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandValue-DOMString>
+  <span class=primitive>DOMString</span> <strong>queryCommandValue</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=attribute-hidden>
+  readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def id=attribute-visibilityState>
+  readonly attribute <a href='DocumentVisibilityState.html'>DocumentVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def id=attribute-onreadystatechange><span class="comment">
 
   &#x2F;&#x2F; special event handler IDL attributes that only apply to Document objects
-  </span>[LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def>
+  </span>[LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def id=attribute-onvisibilitychange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
@@ -128,88 +128,88 @@ partial interface <strong>Document</strong> {<span class=def><span class="commen
 <a href='Document.html'>Document</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;</span><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>fgColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>linkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vlinkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>alinkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-fgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>fgColor</strong>;</span><span class=def id=attribute-linkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>linkColor</strong>;</span><span class=def id=attribute-vlinkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vlinkColor</strong>;</span><span class=def id=attribute-alinkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>alinkColor</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def id=attribute-anchors>
 
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>anchors</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>applets</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>anchors</strong>;</span><span class=def id=attribute-applets>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>applets</strong>;</span><span class=def id=operation-clear>
 
-  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def id=operation-captureEvents>
+  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def id=operation-releaseEvents>
+  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def id=attribute-all>
 
   [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def>
-  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def>
+<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-hasStorageAccess>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;floc&#x2F;">Federated Learning of Cohorts</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=operation-interestCohort>
     Promise&lt;<a href='InterestCohort.html'>InterestCohort</a>&gt; <strong>interestCohort</strong>();</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;#sec-api">Page Lifecycle</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;#sec-api">Page Lifecycle</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=attribute-onfreeze>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def id=attribute-onresume>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def id=attribute-wasDiscarded>
     readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;#feature-detectability">Text Fragments</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-fragmentDirective>
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-font-loading-3&#x2F;">CSS Font Loading Module Level 3</a><pre class=webidl><code><span class=def>
 
 <a href='Document.html'>Document</a> includes <a href='FontFaceSource.html'>FontFaceSource</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;#the-namedflow-interface">CSS Regions Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;#the-namedflow-interface">CSS Regions Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=attribute-namedFlows>
   readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
-  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
-  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
-  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
+partial interface <strong>Document</strong> {<span class=def id=operation-elementFromPoint-double-double>
+  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-elementsFromPoint-double-double>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=attribute-scrollingElement>
   readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span>
 };</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;#the-policy-object">Permissions Policy</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-permissionsPolicy>
     [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;#document-extensions">Picture-in-Picture</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>pictureInPictureEnabled</strong>;</span><span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-pictureInPictureEnabled>
+  readonly attribute <span class=primitive>boolean</span> <strong>pictureInPictureEnabled</strong>;</span><span class=def id=operation-exitPictureInPicture>
 
   [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitPictureInPicture</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;#extensions-to-the-document-interface">Pointer Lock 2.0</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-onpointerlockchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockchange</strong>;</span><span class=def id=attribute-onpointerlockerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def id=operation-exitPointerLock>
   <span class=primitive>undefined</span> <strong>exitPointerLock</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;#extensions-to-document-interface">Selection API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=operation-getSelection>
   <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG2&#x2F;">Scalable Vector Graphics (SVG) 2</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-rootElement>
   readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;#extensions-to-the-document-interface">Web Animations</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Document</strong> {<span class=def>
+partial interface <strong>Document</strong> {<span class=def id=attribute-timeline>
     readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;</span>
 };</span></code></pre></li>
 
@@ -217,250 +217,273 @@ partial interface <strong>Document</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def>
+interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=attribute-implementation>
 
-  [SameObject] readonly attribute <a href='DOMImplementation.html'>DOMImplementation</a> <strong>implementation</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>URL</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>documentURI</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>compatMode</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>characterSet</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>inputEncoding</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
-  </span>readonly attribute <span class=primitive>DOMString</span> <strong>contentType</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='DOMImplementation.html'>DOMImplementation</a> <strong>implementation</strong>;</span><span class=def id=attribute-URL>
+  readonly attribute <span class=primitive>USVString</span> <strong>URL</strong>;</span><span class=def id=attribute-documentURI>
+  readonly attribute <span class=primitive>USVString</span> <strong>documentURI</strong>;</span><span class=def id=attribute-compatMode>
+  readonly attribute <span class=primitive>DOMString</span> <strong>compatMode</strong>;</span><span class=def id=attribute-characterSet>
+  readonly attribute <span class=primitive>DOMString</span> <strong>characterSet</strong>;</span><span class=def id=attribute-charset>
+  readonly attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-inputEncoding><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>inputEncoding</strong>;</span><span class=def id=attribute-contentType><span class="comment"> &#x2F;&#x2F; legacy alias of .characterSet
+  </span>readonly attribute <span class=primitive>DOMString</span> <strong>contentType</strong>;</span><span class=def id=attribute-doctype>
 
-  readonly attribute <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>documentElement</strong>;</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
-  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span class=primitive>DOMString</span> <strong>classNames</strong>);</span><span class=def>
+  readonly attribute <a href='DocumentType.html'>DocumentType</a>? <strong>doctype</strong>;</span><span class=def id=attribute-documentElement>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>documentElement</strong>;</span><span class=def id=operation-getElementsByTagName-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagName</strong>(<span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def id=operation-getElementsByTagNameNS-DOMString-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByTagNameNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def id=operation-getElementsByClassName-DOMString>
+  <a href='HTMLCollection.html'>HTMLCollection</a> <strong>getElementsByClassName</strong>(<span class=primitive>DOMString</span> <strong>classNames</strong>);</span><span class=def id=operation-createElement-DOMString-DOMString-ElementCreationOptions>
 
-  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElement</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElementNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def>
-  [NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createDocumentFragment</strong>();</span><span class=def>
-  [NewObject] <a href='Text.html'>Text</a> <strong>createTextNode</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='CDATASection.html'>CDATASection</a> <strong>createCDATASection</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='Comment.html'>Comment</a> <strong>createComment</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  [NewObject] <a href='ProcessingInstruction.html'>ProcessingInstruction</a> <strong>createProcessingInstruction</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElement</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createElementNS-DOMString-DOMString-DOMString-ElementCreationOptions>
+  [CEReactions, NewObject] <a href='Element.html'>Element</a> <strong>createElementNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>, optional (<span class=primitive>DOMString</span> or <a href='ElementCreationOptions.html'>ElementCreationOptions</a>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createDocumentFragment>
+  [NewObject] <a href='DocumentFragment.html'>DocumentFragment</a> <strong>createDocumentFragment</strong>();</span><span class=def id=operation-createTextNode-DOMString>
+  [NewObject] <a href='Text.html'>Text</a> <strong>createTextNode</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createCDATASection-DOMString>
+  [NewObject] <a href='CDATASection.html'>CDATASection</a> <strong>createCDATASection</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createComment-DOMString>
+  [NewObject] <a href='Comment.html'>Comment</a> <strong>createComment</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-createProcessingInstruction-DOMString-DOMString>
+  [NewObject] <a href='ProcessingInstruction.html'>ProcessingInstruction</a> <strong>createProcessingInstruction</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-importNode-Node-boolean>
 
-  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>importNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def>
-  [CEReactions] <a href='Node.html'>Node</a> <strong>adoptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def>
+  [CEReactions, NewObject] <a href='Node.html'>Node</a> <strong>importNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>, optional <span class=primitive>boolean</span> <strong>deep</strong> &#x3D; false);</span><span class=def id=operation-adoptNode-Node>
+  [CEReactions] <a href='Node.html'>Node</a> <strong>adoptNode</strong>(<a href='Node.html'>Node</a> <strong>node</strong>);</span><span class=def id=operation-createAttribute-DOMString>
 
-  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttribute</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def>
-  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def>
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttribute</strong>(<span class=primitive>DOMString</span> <strong>localName</strong>);</span><span class=def id=operation-createAttributeNS-DOMString-DOMString>
+  [NewObject] <a href='Attr.html'>Attr</a> <strong>createAttributeNS</strong>(<span class=primitive>DOMString</span>? <strong>namespace</strong>, <span class=primitive>DOMString</span> <strong>qualifiedName</strong>);</span><span class=def id=operation-createEvent-DOMString>
 
-  [NewObject] <a href='Event.html'>Event</a> <strong>createEvent</strong>(<span class=primitive>DOMString</span> <strong>interface</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; legacy
+  [NewObject] <a href='Event.html'>Event</a> <strong>createEvent</strong>(<span class=primitive>DOMString</span> <strong>interface</strong>);</span><span class=def id=operation-createRange><span class="comment"> &#x2F;&#x2F; legacy
 
-  </span>[NewObject] <a href='Range.html'>Range</a> <strong>createRange</strong>();</span><span class=def><span class="comment">
+  </span>[NewObject] <a href='Range.html'>Range</a> <strong>createRange</strong>();</span><span class=def id=operation-createNodeIterator-Node-unsigned long-NodeFilter><span class="comment">
 
   &#x2F;&#x2F; NodeFilter.SHOW_ALL &#x3D; 0xFFFFFFFF
-  </span>[NewObject] <a href='NodeIterator.html'>NodeIterator</a> <strong>createNodeIterator</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def>
-  [NewObject] <a href='TreeWalker.html'>TreeWalker</a> <strong>createTreeWalker</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def>
-  <a href='Element.html'>Element</a>? <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>children</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>firstElementChild</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>lastElementChild</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>childElementCount</strong>;</span><span class=def>
+  </span>[NewObject] <a href='NodeIterator.html'>NodeIterator</a> <strong>createNodeIterator</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def id=operation-createTreeWalker-Node-unsigned long-NodeFilter>
+  [NewObject] <a href='TreeWalker.html'>TreeWalker</a> <strong>createTreeWalker</strong>(<a href='Node.html'>Node</a> <strong>root</strong>, optional <span class=primitive>unsigned long</span> <strong>whatToShow</strong> &#x3D; 0xFFFFFFFF, optional <a href='NodeFilter.html'>NodeFilter</a>? <strong>filter</strong> &#x3D; null);</span><span class=def id=operation-getElementById-DOMString>
+  <a href='Element.html'>Element</a>? <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def id=attribute-children>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>children</strong>;</span><span class=def id=attribute-firstElementChild>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>firstElementChild</strong>;</span><span class=def id=attribute-lastElementChild>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>lastElementChild</strong>;</span><span class=def id=attribute-childElementCount>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>childElementCount</strong>;</span><span class=def id=operation-prepend-Node-DOMString>
 
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>prepend</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>append</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceChildren</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>prepend</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-append-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>append</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-replaceChildren-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceChildren</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-querySelector-DOMString>
 
-  <a href='Element.html'>Element</a>? <strong>querySelector</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
-  [NewObject] <a href='NodeList.html'>NodeList</a> <strong>querySelectorAll</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def>
-  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def>
-  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def><span class="comment">
+  <a href='Element.html'>Element</a>? <strong>querySelector</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def id=operation-querySelectorAll-DOMString>
+  [NewObject] <a href='NodeList.html'>NodeList</a> <strong>querySelectorAll</strong>(<span class=primitive>DOMString</span> <strong>selectors</strong>);</span><span class=def id=operation-createExpression-DOMString-XPathNSResolver>
+  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def id=operation-createNSResolver-Node>
+  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def id=operation-evaluate-DOMString-Node-XPathNSResolver-unsigned short-XPathResult><span class="comment">
   &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
-  </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span><span class=def>
-    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def>
-    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span><span class=def>
-  [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def>
-  [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; historical
+  </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span><span class=def id=operation-measureElement-Element>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-measureText-DOMString-StylePropertyMapReadOnly>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span><span class=def id=attribute-fullscreenEnabled>
+  [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def id=attribute-fullscreen>
+  [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def id=operation-exitFullscreen><span class="comment"> &#x2F;&#x2F; historical
 
-  </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitFullscreen</strong>();</span><span class=def>
+  </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitFullscreen</strong>();</span><span class=def id=attribute-onfullscreenchange>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def><span class="comment">
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=attribute-location><span class="comment">
   &#x2F;&#x2F; resource metadata management
-  </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def>
-  attribute <span class=primitive>USVString</span> <strong>cookie</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>lastModified</strong>;</span><span class=def>
-  readonly attribute <a href='DocumentReadyState.html'>DocumentReadyState</a> <strong>readyState</strong>;</span><span class=def><span class="comment">
+  </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
+  attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def id=attribute-referrer>
+  readonly attribute <span class=primitive>USVString</span> <strong>referrer</strong>;</span><span class=def id=attribute-cookie>
+  attribute <span class=primitive>USVString</span> <strong>cookie</strong>;</span><span class=def id=attribute-lastModified>
+  readonly attribute <span class=primitive>DOMString</span> <strong>lastModified</strong>;</span><span class=def id=attribute-readyState>
+  readonly attribute <a href='DocumentReadyState.html'>DocumentReadyState</a> <strong>readyState</strong>;</span><span class=def id=operation-getter><span class="comment">
 
   &#x2F;&#x2F; DOM tree accessors
-  </span><strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def>
-  [CEReactions] attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>body</strong>;</span><span class=def>
-  readonly attribute <a href='HTMLHeadElement.html'>HTMLHeadElement</a>? <strong>head</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>images</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>embeds</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>plugins</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>links</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>forms</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>scripts</strong>;</span><span class=def>
-  <a href='NodeList.html'>NodeList</a> <strong>getElementsByName</strong>(<span class=primitive>DOMString</span> <strong>elementName</strong>);</span><span class=def>
-  readonly attribute <a href='HTMLOrSVGScriptElement.html'>HTMLOrSVGScriptElement</a>? <strong>currentScript</strong>;</span><span class=def><span class="comment"> &#x2F;&#x2F; classic scripts in a document tree only
+  </span><strong>getter</strong> <span class=primitive>object</span> (<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=attribute-title>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>title</strong>;</span><span class=def id=attribute-dir>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>dir</strong>;</span><span class=def id=attribute-body>
+  [CEReactions] attribute <a href='HTMLElement.html'>HTMLElement</a>? <strong>body</strong>;</span><span class=def id=attribute-head>
+  readonly attribute <a href='HTMLHeadElement.html'>HTMLHeadElement</a>? <strong>head</strong>;</span><span class=def id=attribute-images>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>images</strong>;</span><span class=def id=attribute-embeds>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>embeds</strong>;</span><span class=def id=attribute-plugins>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>plugins</strong>;</span><span class=def id=attribute-links>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>links</strong>;</span><span class=def id=attribute-forms>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>forms</strong>;</span><span class=def id=attribute-scripts>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>scripts</strong>;</span><span class=def id=operation-getElementsByName-DOMString>
+  <a href='NodeList.html'>NodeList</a> <strong>getElementsByName</strong>(<span class=primitive>DOMString</span> <strong>elementName</strong>);</span><span class=def id=attribute-currentScript>
+  readonly attribute <a href='HTMLOrSVGScriptElement.html'>HTMLOrSVGScriptElement</a>? <strong>currentScript</strong>;</span><span class=def id=operation-open-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; classic scripts in a document tree only
 
   &#x2F;&#x2F; dynamic markup insertion
-  </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def><span class="comment"> &#x2F;&#x2F; both arguments are ignored
-  </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def><span class="comment">
+  </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
+  </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=operation-writeln-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
-  </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>hasFocus</strong>();</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>designMode</strong>;</span><span class=def>
-  [CEReactions] <span class=primitive>boolean</span> <strong>execCommand</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>, optional <span class=primitive>boolean</span> <strong>showUI</strong> &#x3D; false, optional <span class=primitive>DOMString</span> <strong>value</strong> &#x3D; &quot;&quot;);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandEnabled</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandIndeterm</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandState</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>queryCommandSupported</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  <span class=primitive>DOMString</span> <strong>queryCommandValue</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def>
-  readonly attribute <a href='DocumentVisibilityState.html'>DocumentVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def><span class="comment">
+  </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
+  <span class=primitive>boolean</span> <strong>hasFocus</strong>();</span><span class=def id=attribute-designMode>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>designMode</strong>;</span><span class=def id=operation-execCommand-DOMString-boolean-DOMString>
+  [CEReactions] <span class=primitive>boolean</span> <strong>execCommand</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>, optional <span class=primitive>boolean</span> <strong>showUI</strong> &#x3D; false, optional <span class=primitive>DOMString</span> <strong>value</strong> &#x3D; &quot;&quot;);</span><span class=def id=operation-queryCommandEnabled-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandEnabled</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandIndeterm-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandIndeterm</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandState-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandState</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandSupported-DOMString>
+  <span class=primitive>boolean</span> <strong>queryCommandSupported</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=operation-queryCommandValue-DOMString>
+  <span class=primitive>DOMString</span> <strong>queryCommandValue</strong>(<span class=primitive>DOMString</span> <strong>commandId</strong>);</span><span class=def id=attribute-hidden>
+  readonly attribute <span class=primitive>boolean</span> <strong>hidden</strong>;</span><span class=def id=attribute-visibilityState>
+  readonly attribute <a href='DocumentVisibilityState.html'>DocumentVisibilityState</a> <strong>visibilityState</strong>;</span><span class=def id=attribute-onreadystatechange><span class="comment">
 
   &#x2F;&#x2F; special event handler IDL attributes that only apply to Document objects
-  </span>[LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>fgColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>linkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vlinkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>alinkColor</strong>;</span><span class=def>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def>
+  </span>[LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreadystatechange</strong>;</span><span class=def id=attribute-onvisibilitychange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def id=attribute-fgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>fgColor</strong>;</span><span class=def id=attribute-linkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>linkColor</strong>;</span><span class=def id=attribute-vlinkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>vlinkColor</strong>;</span><span class=def id=attribute-alinkColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>alinkColor</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class=def id=attribute-anchors>
 
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>anchors</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>applets</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>anchors</strong>;</span><span class=def id=attribute-applets>
+  [SameObject] readonly attribute <a href='HTMLCollection.html'>HTMLCollection</a> <strong>applets</strong>;</span><span class=def id=operation-clear>
 
-  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>clear</strong>();</span><span class=def id=operation-captureEvents>
+  <span class=primitive>undefined</span> <strong>captureEvents</strong>();</span><span class=def id=operation-releaseEvents>
+  <span class=primitive>undefined</span> <strong>releaseEvents</strong>();</span><span class=def id=attribute-all>
 
-  [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def>
-  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def>
-  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def>
-    Promise&lt;<a href='InterestCohort.html'>InterestCohort</a>&gt; <strong>interestCohort</strong>();</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def>
-    [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def>
-  readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def>
-  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def>
-  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
-  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
-  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span><span class=def>
-  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>pictureInPictureEnabled</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;</span><span class=def id=attribute-onabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def id=attribute-onauxclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onauxclick</strong>;</span><span class=def id=attribute-onblur>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onblur</strong>;</span><span class=def id=attribute-oncancel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-oncanplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplay</strong>;</span><span class=def id=attribute-oncanplaythrough>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanplaythrough</strong>;</span><span class=def id=attribute-onchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onchange</strong>;</span><span class=def id=attribute-onclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclick</strong>;</span><span class=def id=attribute-onclose>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-oncontextlost>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextmenu>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def id=attribute-oncontextrestored>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncuechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-ondblclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def id=attribute-ondrag>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def id=attribute-ondragend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def id=attribute-ondragenter>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragenter</strong>;</span><span class=def id=attribute-ondragleave>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragleave</strong>;</span><span class=def id=attribute-ondragover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragover</strong>;</span><span class=def id=attribute-ondragstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragstart</strong>;</span><span class=def id=attribute-ondrop>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrop</strong>;</span><span class=def id=attribute-ondurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondurationchange</strong>;</span><span class=def id=attribute-onemptied>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onemptied</strong>;</span><span class=def id=attribute-onended>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onended</strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='OnErrorEventHandler.html'>OnErrorEventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onfocus>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfocus</strong>;</span><span class=def id=attribute-onformdata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onformdata</strong>;</span><span class=def id=attribute-oninput>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninput</strong>;</span><span class=def id=attribute-oninvalid>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oninvalid</strong>;</span><span class=def id=attribute-onkeydown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeydown</strong>;</span><span class=def id=attribute-onkeypress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeypress</strong>;</span><span class=def id=attribute-onkeyup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyup</strong>;</span><span class=def id=attribute-onload>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def id=attribute-onloadeddata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadeddata</strong>;</span><span class=def id=attribute-onloadedmetadata>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadedmetadata</strong>;</span><span class=def id=attribute-onloadstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def id=attribute-onmousedown>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousedown</strong>;</span><span class=def id=attribute-onmouseenter>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseenter</strong>;</span><span class=def id=attribute-onmouseleave>
+  [LegacyLenientThis] attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseleave</strong>;</span><span class=def id=attribute-onmousemove>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def id=attribute-onmouseout>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def id=attribute-onmouseover>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def id=attribute-onmouseup>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpause>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def id=attribute-onplay>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def id=attribute-onplaying>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def id=attribute-onprogress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def id=attribute-onratechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratechange</strong>;</span><span class=def id=attribute-onreset>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onreset</strong>;</span><span class=def id=attribute-onresize>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresize</strong>;</span><span class=def id=attribute-onscroll>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onscroll</strong>;</span><span class=def id=attribute-onsecuritypolicyviolation>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsecuritypolicyviolation</strong>;</span><span class=def id=attribute-onseeked>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeked</strong>;</span><span class=def id=attribute-onseeking>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onseeking</strong>;</span><span class=def id=attribute-onselect>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onselect</strong>;</span><span class=def id=attribute-onslotchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=attribute-onstalled>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onstalled</strong>;</span><span class=def id=attribute-onsubmit>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsubmit</strong>;</span><span class=def id=attribute-onsuspend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsuspend</strong>;</span><span class=def id=attribute-ontimeupdate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontimeupdate</strong>;</span><span class=def id=attribute-ontoggle>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontoggle</strong>;</span><span class=def id=attribute-onvolumechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvolumechange</strong>;</span><span class=def id=attribute-onwaiting>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwaiting</strong>;</span><span class=def id=attribute-onwebkitanimationend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationend</strong>;</span><span class=def id=attribute-onwebkitanimationiteration>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-oncopy>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncut>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-onpaste>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=operation-hasStorageAccess>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def id=operation-interestCohort>
+    Promise&lt;<a href='InterestCohort.html'>InterestCohort</a>&gt; <strong>interestCohort</strong>();</span><span class=def id=attribute-onfreeze>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def id=attribute-onresume>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def id=attribute-wasDiscarded>
+    readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def id=attribute-fragmentDirective>
+    [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def id=attribute-fonts>
+  readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def id=attribute-namedFlows>
+  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def id=operation-elementFromPoint-double-double>
+  <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-elementsFromPoint-double-double>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=attribute-scrollingElement>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
+  sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertQuadFromNode-DOMQuadInit-GeometryNode-ConvertCoordinateOptions>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
+  <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertPointFromNode-DOMPointInit-GeometryNode-ConvertCoordinateOptions>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-permissionsPolicy>
+    [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span><span class=def id=attribute-pictureInPictureEnabled>
+  readonly attribute <span class=primitive>boolean</span> <strong>pictureInPictureEnabled</strong>;</span><span class=def id=operation-exitPictureInPicture>
 
-  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitPictureInPicture</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockchange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>exitPointerLock</strong>();</span><span class=def>
-  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def>
-  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span><span class=def>
+  [NewObject] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitPictureInPicture</strong>();</span><span class=def id=attribute-onpointerlockchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockchange</strong>;</span><span class=def id=attribute-onpointerlockerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def id=operation-exitPointerLock>
+  <span class=primitive>undefined</span> <strong>exitPointerLock</strong>();</span><span class=def id=operation-getSelection>
+  <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def id=attribute-rootElement>
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span><span class=def id=attribute-timeline>
     readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Document</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#constructor>()</a></code></li>
+<li><code><a href="Node.html">Node</a><a href=Node.html#attribute-ownerDocument>.ownerDocument</a></code></li>
+<li><code><a href="DOMImplementation.html">DOMImplementation</a><a href=DOMImplementation.html#operation-createHTMLDocument-DOMString>.createHTMLDocument()</a></code></li>
+<li><code><a href="XSLTProcessor.html">XSLTProcessor</a><a href=XSLTProcessor.html#operation-transformToDocument-Node>.transformToDocument()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-open-DOMString-DOMString>.open()</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
+<li><code><a href="HTMLEmbedElement.html">HTMLEmbedElement</a><a href=HTMLEmbedElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
+<li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#attribute-contentDocument>.contentDocument</a></code></li>
+<li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
+<li><code><a href="Window.html">Window</a><a href=Window.html#attribute-document>.document</a></code></li>
+<li><code><a href="DOMParser.html">DOMParser</a><a href=DOMParser.html#operation-parseFromString-DOMString-DOMParserSupportedType>.parseFromString()</a></code></li>
+<li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a><a href=HTMLFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
+<li><code><a href="IntersectionObserver.html">IntersectionObserver</a><a href=IntersectionObserver.html#attribute-root>.root</a></code></li>
+<li><code><a href="GetSVGDocument.html">GetSVGDocument</a><a href=GetSVGDocument.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
+<li><code><a href="XMLHttpRequest.html">XMLHttpRequest</a><a href=XMLHttpRequest.html#attribute-responseXML>.responseXML</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DOMImplementation.html">DOMImplementation</a></li>
-<li><a href="DOMParser.html">DOMParser</a></li>
-<li><a href="Document.html">Document</a></li>
-<li><a href="GetSVGDocument.html">GetSVGDocument</a></li>
-<li><a href="HTMLEmbedElement.html">HTMLEmbedElement</a></li>
-<li><a href="HTMLFrameElement.html">HTMLFrameElement</a></li>
-<li><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></li>
-<li><a href="HTMLObjectElement.html">HTMLObjectElement</a></li>
-<li><a href="IntersectionObserver.html">IntersectionObserver</a></li>
-<li><a href="IntersectionObserverInit.html">IntersectionObserverInit</a></li>
-<li><a href="Node.html">Node</a></li>
-<li><a href="Sanitizer.html">Sanitizer</a></li>
-<li><a href="Window.html">Window</a></li>
-<li><a href="XMLDocument.html">XMLDocument</a></li>
-<li><a href="XMLHttpRequest.html">XMLHttpRequest</a></li>
-<li><a href="XSLTProcessor.html">XSLTProcessor</a></li>
+    <li><code><a href="DOMImplementation.html">DOMImplementation</a></code></li>
+<li><code><a href="DOMParser.html">DOMParser</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="GetSVGDocument.html">GetSVGDocument</a></code></li>
+<li><code><a href="HTMLEmbedElement.html">HTMLEmbedElement</a></code></li>
+<li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a></code></li>
+<li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a></code></li>
+<li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a></code></li>
+<li><code><a href="IntersectionObserver.html">IntersectionObserver</a></code></li>
+<li><code><a href="IntersectionObserverInit.html">IntersectionObserverInit</a></code></li>
+<li><code><a href="Node.html">Node</a></code></li>
+<li><code><a href="Sanitizer.html">Sanitizer</a></code></li>
+<li><code><a href="Window.html">Window</a></code></li>
+<li><code><a href="XMLDocument.html">XMLDocument</a></code></li>
+<li><code><a href="XMLHttpRequest.html">XMLHttpRequest</a></code></li>
+<li><code><a href="XSLTProcessor.html">XSLTProcessor</a></code></li>
 
   </ul>
 </section>

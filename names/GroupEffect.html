@@ -11,28 +11,38 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>GroupEffect</strong> {<span class=def>
+interface <strong>GroupEffect</strong> {<span class=def id=constructor-AnimationEffect-unrestricted double-EffectTiming>
   <strong>constructor</strong>(sequence&lt;<a href='AnimationEffect.html'>AnimationEffect</a>&gt;? <strong>children</strong>,
-              optional (<span class=primitive>unrestricted double</span> or <a href='EffectTiming.html'>EffectTiming</a>) <strong>timing</strong> &#x3D; {});</span><span class=def>
+              optional (<span class=primitive>unrestricted double</span> or <a href='EffectTiming.html'>EffectTiming</a>) <strong>timing</strong> &#x3D; {});</span><span class=def id=attribute-children>
 
-  readonly attribute <a href='AnimationNodeList.html'>AnimationNodeList</a>  <strong>children</strong>;</span><span class=def>
-  readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>?   <strong>firstChild</strong>;</span><span class=def>
-  readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>?   <strong>lastChild</strong>;</span><span class=def>
-  <a href='GroupEffect.html'>GroupEffect</a> <strong>clone</strong> ();</span><span class=def>
+  readonly attribute <a href='AnimationNodeList.html'>AnimationNodeList</a>  <strong>children</strong>;</span><span class=def id=attribute-firstChild>
+  readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>?   <strong>firstChild</strong>;</span><span class=def id=attribute-lastChild>
+  readonly attribute <a href='AnimationEffect.html'>AnimationEffect</a>?   <strong>lastChild</strong>;</span><span class=def id=operation-clone>
+  <a href='GroupEffect.html'>GroupEffect</a> <strong>clone</strong> ();</span><span class=def id=operation-prepend-AnimationEffect>
 
-  <span class=primitive>undefined</span> <strong>prepend</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>prepend</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span><span class=def id=operation-append-AnimationEffect>
   <span class=primitive>undefined</span> <strong>append</strong> (<a href='AnimationEffect.html'>AnimationEffect</a>... <strong>effects</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>GroupEffect</code></h3>
+
+  <ul>
+    <li><code><a href="GroupEffect.html">GroupEffect</a><a href=GroupEffect.html#constructor-AnimationEffect-unrestricted double-EffectTiming>()</a></code></li>
+<li><code><a href="AnimationEffect.html">AnimationEffect</a><a href=AnimationEffect.html#attribute-parent>.parent</a></code></li>
+<li><code><a href="GroupEffect.html">GroupEffect</a><a href=GroupEffect.html#operation-clone>.clone()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AnimationEffect.html">AnimationEffect</a></li>
-<li><a href="GroupEffect.html">GroupEffect</a></li>
-<li><a href="SequenceEffect.html">SequenceEffect</a></li>
+    <li><code><a href="AnimationEffect.html">AnimationEffect</a></code></li>
+<li><code><a href="GroupEffect.html">GroupEffect</a></code></li>
+<li><code><a href="SequenceEffect.html">SequenceEffect</a></code></li>
 
   </ul>
 </section>

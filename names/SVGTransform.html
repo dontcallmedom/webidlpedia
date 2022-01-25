@@ -11,37 +11,54 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGTransform</strong> {<span class=def><span class="comment">
+interface <strong>SVGTransform</strong> {<span class=def id=const-SVG_TRANSFORM_UNKNOWN><span class="comment">
 
   &#x2F;&#x2F; Transform Types
-  </span>const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_UNKNOWN</strong> &#x3D; 0;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_MATRIX</strong> &#x3D; 1;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_TRANSLATE</strong> &#x3D; 2;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SCALE</strong> &#x3D; 3;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_ROTATE</strong> &#x3D; 4;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SKEWX</strong> &#x3D; 5;</span><span class=def>
-  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SKEWY</strong> &#x3D; 6;</span><span class=def>
+  </span>const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_UNKNOWN</strong> &#x3D; 0;</span><span class=def id=const-SVG_TRANSFORM_MATRIX>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_MATRIX</strong> &#x3D; 1;</span><span class=def id=const-SVG_TRANSFORM_TRANSLATE>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_TRANSLATE</strong> &#x3D; 2;</span><span class=def id=const-SVG_TRANSFORM_SCALE>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SCALE</strong> &#x3D; 3;</span><span class=def id=const-SVG_TRANSFORM_ROTATE>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_ROTATE</strong> &#x3D; 4;</span><span class=def id=const-SVG_TRANSFORM_SKEWX>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SKEWX</strong> &#x3D; 5;</span><span class=def id=const-SVG_TRANSFORM_SKEWY>
+  const <span class=primitive>unsigned short</span> <strong>SVG_TRANSFORM_SKEWY</strong> &#x3D; 6;</span><span class=def id=attribute-type>
 
-  readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMMatrix.html'>DOMMatrix</a> <strong>matrix</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>float</span> <strong>angle</strong>;</span><span class=def>
+  readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def id=attribute-matrix>
+  [SameObject] readonly attribute <a href='DOMMatrix.html'>DOMMatrix</a> <strong>matrix</strong>;</span><span class=def id=attribute-angle>
+  readonly attribute <span class=primitive>float</span> <strong>angle</strong>;</span><span class=def id=operation-setMatrix-DOMMatrix2DInit>
 
-  <span class=primitive>undefined</span> <strong>setMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setTranslate</strong>(<span class=primitive>float</span> <strong>tx</strong>, <span class=primitive>float</span> <strong>ty</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setScale</strong>(<span class=primitive>float</span> <strong>sx</strong>, <span class=primitive>float</span> <strong>sy</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setRotate</strong>(<span class=primitive>float</span> <strong>angle</strong>, <span class=primitive>float</span> <strong>cx</strong>, <span class=primitive>float</span> <strong>cy</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setSkewX</strong>(<span class=primitive>float</span> <strong>angle</strong>);</span><span class=def>
+  <span class=primitive>undefined</span> <strong>setMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-setTranslate-float-float>
+  <span class=primitive>undefined</span> <strong>setTranslate</strong>(<span class=primitive>float</span> <strong>tx</strong>, <span class=primitive>float</span> <strong>ty</strong>);</span><span class=def id=operation-setScale-float-float>
+  <span class=primitive>undefined</span> <strong>setScale</strong>(<span class=primitive>float</span> <strong>sx</strong>, <span class=primitive>float</span> <strong>sy</strong>);</span><span class=def id=operation-setRotate-float-float-float>
+  <span class=primitive>undefined</span> <strong>setRotate</strong>(<span class=primitive>float</span> <strong>angle</strong>, <span class=primitive>float</span> <strong>cx</strong>, <span class=primitive>float</span> <strong>cy</strong>);</span><span class=def id=operation-setSkewX-float>
+  <span class=primitive>undefined</span> <strong>setSkewX</strong>(<span class=primitive>float</span> <strong>angle</strong>);</span><span class=def id=operation-setSkewY-float>
   <span class=primitive>undefined</span> <strong>setSkewY</strong>(<span class=primitive>float</span> <strong>angle</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>SVGTransform</code></h3>
+
+  <ul>
+    <li><code><a href="SVGSVGElement.html">SVGSVGElement</a><a href=SVGSVGElement.html#operation-createSVGTransform>.createSVGTransform()</a></code></li>
+<li><code><a href="SVGSVGElement.html">SVGSVGElement</a><a href=SVGSVGElement.html#operation-createSVGTransformFromMatrix-DOMMatrix2DInit>.createSVGTransformFromMatrix()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-initialize-SVGTransform>.initialize()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-getter>.getItem()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-insertItemBefore-SVGTransform-unsigned long>.insertItemBefore()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-replaceItem-SVGTransform-unsigned long>.replaceItem()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-removeItem-unsigned long>.removeItem()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-appendItem-SVGTransform>.appendItem()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-createSVGTransformFromMatrix-DOMMatrix2DInit>.createSVGTransformFromMatrix()</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a><a href=SVGTransformList.html#operation-consolidate>.consolidate()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="SVGSVGElement.html">SVGSVGElement</a></li>
-<li><a href="SVGTransformList.html">SVGTransformList</a></li>
+    <li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
+<li><code><a href="SVGTransformList.html">SVGTransformList</a></code></li>
 
   </ul>
 </section>

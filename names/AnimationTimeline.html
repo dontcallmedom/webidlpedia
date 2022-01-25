@@ -9,36 +9,44 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-1&#x2F;#animationtimeline">Web Animations</a> defines <code>AnimationTimeline</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AnimationTimeline</strong> {<span class=def>
-    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span><span class=def>
+interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-currentTime>
+    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span><span class=def id=attribute-phase>
     readonly attribute <a href='TimelinePhase.html'>TimelinePhase</a> <strong>phase</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;#the-animationtimeline-interface">Web Animations Level 2</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-partial interface <strong>AnimationTimeline</strong> {<span class=def>
-    readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def>
+partial interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-duration>
+    readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def id=operation-play-AnimationEffect>
     <a href='Animation.html'>Animation</a> <strong>play</strong> (optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null);</span>
 };</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AnimationTimeline</strong> {<span class=def>
-    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span><span class=def>
-    readonly attribute <a href='TimelinePhase.html'>TimelinePhase</a> <strong>phase</strong>;</span><span class=def>
-    readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def>
+interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-currentTime>
+    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span><span class=def id=attribute-phase>
+    readonly attribute <a href='TimelinePhase.html'>TimelinePhase</a> <strong>phase</strong>;</span><span class=def id=attribute-duration>
+    readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def id=operation-play-AnimationEffect>
     <a href='Animation.html'>Animation</a> <strong>play</strong> (optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>AnimationTimeline</code></h3>
+
+  <ul>
+    <li><code><a href="Animation.html">Animation</a><a href=Animation.html#attribute-timeline>.timeline</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Animation.html">Animation</a></li>
-<li><a href="DocumentTimeline.html">DocumentTimeline</a></li>
-<li><a href="KeyframeAnimationOptions.html">KeyframeAnimationOptions</a></li>
-<li><a href="ScrollTimeline.html">ScrollTimeline</a></li>
-<li><a href="WorkletAnimation.html">WorkletAnimation</a></li>
+    <li><code><a href="Animation.html">Animation</a></code></li>
+<li><code><a href="DocumentTimeline.html">DocumentTimeline</a></code></li>
+<li><code><a href="KeyframeAnimationOptions.html">KeyframeAnimationOptions</a></code></li>
+<li><code><a href="ScrollTimeline.html">ScrollTimeline</a></code></li>
+<li><code><a href="WorkletAnimation.html">WorkletAnimation</a></code></li>
 
   </ul>
 </section>

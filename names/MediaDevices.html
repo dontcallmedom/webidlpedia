@@ -11,23 +11,23 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;</span><span class=def>
+interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-ondevicechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;</span><span class=def id=operation-enumerateDevices>
   Promise&lt;sequence&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt;&gt; <strong>enumerateDevices</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MediaDevices</strong> {<span class=def>
-  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();</span><span class=def>
+partial interface <strong>MediaDevices</strong> {<span class=def id=operation-getSupportedConstraints>
+  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();</span><span class=def id=operation-getUserMedia-MediaStreamConstraints>
   Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-output&#x2F;#methods-0">Audio Output Devices API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>MediaDevices</strong> {<span class=def>
+partial interface <strong>MediaDevices</strong> {<span class=def id=operation-selectAudioOutput-AudioOutputOptions>
   Promise&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt; <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-capture&#x2F;#mediadevices-additions">Screen Capture</a><pre class=webidl><code><span class=def>partial interface <strong>MediaDevices</strong> {<span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-capture&#x2F;#mediadevices-additions">Screen Capture</a><pre class=webidl><code><span class=def>partial interface <strong>MediaDevices</strong> {<span class=def id=operation-getDisplayMedia-DisplayMediaStreamConstraints>
   Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 
@@ -35,20 +35,28 @@ partial interface <strong>MediaDevices</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;</span><span class=def>
-  Promise&lt;sequence&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt;&gt; <strong>enumerateDevices</strong>();</span><span class=def>
-  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();</span><span class=def>
-  Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt; <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-ondevicechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicechange</strong>;</span><span class=def id=operation-enumerateDevices>
+  Promise&lt;sequence&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt;&gt; <strong>enumerateDevices</strong>();</span><span class=def id=operation-getSupportedConstraints>
+  <a href='MediaTrackSupportedConstraints.html'>MediaTrackSupportedConstraints</a> <strong>getSupportedConstraints</strong>();</span><span class=def id=operation-getUserMedia-MediaStreamConstraints>
+  Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-selectAudioOutput-AudioOutputOptions>
+  Promise&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt; <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getDisplayMedia-DisplayMediaStreamConstraints>
   Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getDisplayMedia</strong>(optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>MediaDevices</code></h3>
+
+  <ul>
+    <li><code><a href="Navigator.html">Navigator</a><a href=Navigator.html#attribute-mediaDevices>.mediaDevices</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Navigator.html">Navigator</a></li>
+    <li><code><a href="Navigator.html">Navigator</a></code></li>
 
   </ul>
 </section>

@@ -9,24 +9,24 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;resource-timing&#x2F;#dom-performanceresourcetiming">Resource Timing Level 2</a> defines <code>PerformanceResourceTiming</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>PerformanceResourceTiming</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def>
-    readonly attribute <span class=primitive>DOMString</span> <strong>initiatorType</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>ByteString</span> <strong>nextHopProtocol</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>workerStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>fetchStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>secureConnectionStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>requestStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseEnd</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>transferSize</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>encodedBodySize</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>decodedBodySize</strong>;</span><span class=def>
+interface <strong>PerformanceResourceTiming</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def id=attribute-initiatorType>
+    readonly attribute <span class=primitive>DOMString</span> <strong>initiatorType</strong>;</span><span class=def id=attribute-nextHopProtocol>
+    readonly attribute <span class=primitive>ByteString</span> <strong>nextHopProtocol</strong>;</span><span class=def id=attribute-workerStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>workerStart</strong>;</span><span class=def id=attribute-redirectStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectStart</strong>;</span><span class=def id=attribute-redirectEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectEnd</strong>;</span><span class=def id=attribute-fetchStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>fetchStart</strong>;</span><span class=def id=attribute-domainLookupStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupStart</strong>;</span><span class=def id=attribute-domainLookupEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupEnd</strong>;</span><span class=def id=attribute-connectStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectStart</strong>;</span><span class=def id=attribute-connectEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectEnd</strong>;</span><span class=def id=attribute-secureConnectionStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>secureConnectionStart</strong>;</span><span class=def id=attribute-requestStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>requestStart</strong>;</span><span class=def id=attribute-responseStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseStart</strong>;</span><span class=def id=attribute-responseEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseEnd</strong>;</span><span class=def id=attribute-transferSize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>transferSize</strong>;</span><span class=def id=attribute-encodedBodySize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>encodedBodySize</strong>;</span><span class=def id=attribute-decodedBodySize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>decodedBodySize</strong>;</span><span class=def id=operation-toJSON>
     [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
@@ -34,39 +34,40 @@ interface <strong>PerformanceResourceTiming</strong> : <a href='PerformanceEntry
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;server-timing&#x2F;#servertiming-attribute">Server Timing</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-partial interface <strong>PerformanceResourceTiming</strong> {<span class=def>
+partial interface <strong>PerformanceResourceTiming</strong> {<span class=def id=attribute-serverTiming>
   readonly attribute FrozenArray&lt;<a href='PerformanceServerTiming.html'>PerformanceServerTiming</a>&gt; <strong>serverTiming</strong>;</span>
 };</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>PerformanceResourceTiming</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def>
-    readonly attribute <span class=primitive>DOMString</span> <strong>initiatorType</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>ByteString</span> <strong>nextHopProtocol</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>workerStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>fetchStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectEnd</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>secureConnectionStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>requestStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseStart</strong>;</span><span class=def>
-    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseEnd</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>transferSize</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>encodedBodySize</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>unsigned long long</span>  <strong>decodedBodySize</strong>;</span><span class=def>
-    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def>
+interface <strong>PerformanceResourceTiming</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def id=attribute-initiatorType>
+    readonly attribute <span class=primitive>DOMString</span> <strong>initiatorType</strong>;</span><span class=def id=attribute-nextHopProtocol>
+    readonly attribute <span class=primitive>ByteString</span> <strong>nextHopProtocol</strong>;</span><span class=def id=attribute-workerStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>workerStart</strong>;</span><span class=def id=attribute-redirectStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectStart</strong>;</span><span class=def id=attribute-redirectEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>redirectEnd</strong>;</span><span class=def id=attribute-fetchStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>fetchStart</strong>;</span><span class=def id=attribute-domainLookupStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupStart</strong>;</span><span class=def id=attribute-domainLookupEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>domainLookupEnd</strong>;</span><span class=def id=attribute-connectStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectStart</strong>;</span><span class=def id=attribute-connectEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>connectEnd</strong>;</span><span class=def id=attribute-secureConnectionStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>secureConnectionStart</strong>;</span><span class=def id=attribute-requestStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>requestStart</strong>;</span><span class=def id=attribute-responseStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseStart</strong>;</span><span class=def id=attribute-responseEnd>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>responseEnd</strong>;</span><span class=def id=attribute-transferSize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>transferSize</strong>;</span><span class=def id=attribute-encodedBodySize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>encodedBodySize</strong>;</span><span class=def id=attribute-decodedBodySize>
+    readonly attribute <span class=primitive>unsigned long long</span>  <strong>decodedBodySize</strong>;</span><span class=def id=operation-toJSON>
+    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def id=attribute-serverTiming>
   readonly attribute FrozenArray&lt;<a href='PerformanceServerTiming.html'>PerformanceServerTiming</a>&gt; <strong>serverTiming</strong>;</span>
 };</span></code></pre></details>
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="PerformanceNavigationTiming.html">PerformanceNavigationTiming</a></li>
+    <li><code><a href="PerformanceNavigationTiming.html">PerformanceNavigationTiming</a></code></li>
 
   </ul>
 </section>

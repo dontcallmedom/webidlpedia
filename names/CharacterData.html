@@ -12,41 +12,42 @@ base: ../
 <a href='CharacterData.html'>CharacterData</a> includes <a href='NonDocumentTypeChildNode.html'>NonDocumentTypeChildNode</a>;</span><span class=def>
 <a href='CharacterData.html'>CharacterData</a> includes <a href='ChildNode.html'>ChildNode</a>;</span><span class=def>
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CharacterData</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>data</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  <span class=primitive>DOMString</span> <strong>substringData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>appendData</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>insertData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def>
+interface <strong>CharacterData</strong> : <a href='Node.html'>Node</a> {<span class=def id=attribute-data>
+  attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>data</strong>;</span><span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=operation-substringData-unsigned long-unsigned long>
+  <span class=primitive>DOMString</span> <strong>substringData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def id=operation-appendData-DOMString>
+  <span class=primitive>undefined</span> <strong>appendData</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-insertData-unsigned long-DOMString>
+  <span class=primitive>undefined</span> <strong>insertData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-deleteData-unsigned long-unsigned long>
+  <span class=primitive>undefined</span> <strong>deleteData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def id=operation-replaceData-unsigned long-unsigned long-DOMString>
   <span class=primitive>undefined</span> <strong>replaceData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CharacterData</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>data</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def>
-  <span class=primitive>DOMString</span> <strong>substringData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>appendData</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>insertData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>deleteData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>replaceData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>previousElementSibling</strong>;</span><span class=def>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>nextElementSibling</strong>;</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>before</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>after</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
-  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceWith</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def>
+interface <strong>CharacterData</strong> : <a href='Node.html'>Node</a> {<span class=def id=attribute-data>
+  attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>data</strong>;</span><span class=def id=attribute-length>
+  readonly attribute <span class=primitive>unsigned long</span> <strong>length</strong>;</span><span class=def id=operation-substringData-unsigned long-unsigned long>
+  <span class=primitive>DOMString</span> <strong>substringData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def id=operation-appendData-DOMString>
+  <span class=primitive>undefined</span> <strong>appendData</strong>(<span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-insertData-unsigned long-DOMString>
+  <span class=primitive>undefined</span> <strong>insertData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-deleteData-unsigned long-unsigned long>
+  <span class=primitive>undefined</span> <strong>deleteData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>);</span><span class=def id=operation-replaceData-unsigned long-unsigned long-DOMString>
+  <span class=primitive>undefined</span> <strong>replaceData</strong>(<span class=primitive>unsigned long</span> <strong>offset</strong>, <span class=primitive>unsigned long</span> <strong>count</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=attribute-previousElementSibling>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>previousElementSibling</strong>;</span><span class=def id=attribute-nextElementSibling>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>nextElementSibling</strong>;</span><span class=def id=operation-before-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>before</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-after-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>after</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-replaceWith-Node-DOMString>
+  [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>replaceWith</strong>((<a href='Node.html'>Node</a> or <span class=primitive>DOMString</span>)... <strong>nodes</strong>);</span><span class=def id=operation-remove>
   [CEReactions, Unscopable] <span class=primitive>undefined</span> <strong>remove</strong>();</span>
 };</span></code></pre></details>
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Comment.html">Comment</a></li>
-<li><a href="ProcessingInstruction.html">ProcessingInstruction</a></li>
-<li><a href="Text.html">Text</a></li>
+    <li><code><a href="Comment.html">Comment</a></code></li>
+<li><code><a href="ProcessingInstruction.html">ProcessingInstruction</a></code></li>
+<li><code><a href="Text.html">Text</a></code></li>
 
   </ul>
 </section>

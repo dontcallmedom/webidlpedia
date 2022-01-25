@@ -11,35 +11,35 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventTarget</a>  {<span class=def>
-  <strong>constructor</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createOffer</strong>(optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createAnswer</strong>(optional <a href='RTCAnswerOptions.html'>RTCAnswerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(optional <a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>localDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentLocalDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingLocalDescription</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>);</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>remoteDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentRemoteDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingRemoteDescription</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='RTCSignalingState.html'>RTCSignalingState</a> <strong>signalingState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceGatheringState.html'>RTCIceGatheringState</a> <strong>iceGatheringState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceConnectionState.html'>RTCIceConnectionState</a> <strong>iceConnectionState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCPeerConnectionState.html'>RTCPeerConnectionState</a> <strong>connectionState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span>? <strong>canTrickleIceCandidates</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>restartIce</strong>();</span><span class=def>
-  <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>getConfiguration</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setConfiguration</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnegotiationneeded</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidateerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsignalingstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oniceconnectionstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicegatheringstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnectionstatechange</strong>;</span><span class=def><span class="comment">
+interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventTarget</a>  {<span class=def id=constructor-RTCConfiguration>
+  <strong>constructor</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def id=operation-createOffer-RTCOfferOptions>
+  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createOffer</strong>(optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createAnswer-RTCAnswerOptions>
+  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createAnswer</strong>(optional <a href='RTCAnswerOptions.html'>RTCAnswerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setLocalDescription-RTCLocalSessionDescriptionInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(optional <a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong> &#x3D; {});</span><span class=def id=attribute-localDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>localDescription</strong>;</span><span class=def id=attribute-currentLocalDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentLocalDescription</strong>;</span><span class=def id=attribute-pendingLocalDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingLocalDescription</strong>;</span><span class=def id=operation-setRemoteDescription-RTCSessionDescriptionInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>);</span><span class=def id=attribute-remoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>remoteDescription</strong>;</span><span class=def id=attribute-currentRemoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentRemoteDescription</strong>;</span><span class=def id=attribute-pendingRemoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingRemoteDescription</strong>;</span><span class=def id=operation-addIceCandidate-RTCIceCandidateInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong> &#x3D; {});</span><span class=def id=attribute-signalingState>
+  readonly attribute <a href='RTCSignalingState.html'>RTCSignalingState</a> <strong>signalingState</strong>;</span><span class=def id=attribute-iceGatheringState>
+  readonly attribute <a href='RTCIceGatheringState.html'>RTCIceGatheringState</a> <strong>iceGatheringState</strong>;</span><span class=def id=attribute-iceConnectionState>
+  readonly attribute <a href='RTCIceConnectionState.html'>RTCIceConnectionState</a> <strong>iceConnectionState</strong>;</span><span class=def id=attribute-connectionState>
+  readonly attribute <a href='RTCPeerConnectionState.html'>RTCPeerConnectionState</a> <strong>connectionState</strong>;</span><span class=def id=attribute-canTrickleIceCandidates>
+  readonly attribute <span class=primitive>boolean</span>? <strong>canTrickleIceCandidates</strong>;</span><span class=def id=operation-restartIce>
+  <span class=primitive>undefined</span> <strong>restartIce</strong>();</span><span class=def id=operation-getConfiguration>
+  <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>getConfiguration</strong>();</span><span class=def id=operation-setConfiguration-RTCConfiguration>
+  <span class=primitive>undefined</span> <strong>setConfiguration</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onnegotiationneeded>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnegotiationneeded</strong>;</span><span class=def id=attribute-onicecandidate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidate</strong>;</span><span class=def id=attribute-onicecandidateerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidateerror</strong>;</span><span class=def id=attribute-onsignalingstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsignalingstatechange</strong>;</span><span class=def id=attribute-oniceconnectionstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oniceconnectionstatechange</strong>;</span><span class=def id=attribute-onicegatheringstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicegatheringstatechange</strong>;</span><span class=def id=attribute-onconnectionstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnectionstatechange</strong>;</span><span class=def id=operation-createOffer-RTCSessionDescriptionCallback-RTCPeerConnectionErrorCallback-RTCOfferOptions><span class="comment">
 
   &#x2F;&#x2F; Legacy Interface Extensions
   &#x2F;&#x2F; Supporting the methods in this section is optional.
@@ -48,55 +48,55 @@ interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventT
   &#x2F;&#x2F; in section &quot;Legacy Interface Extensions&quot;
   </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>createOffer</strong>(<a href='RTCSessionDescriptionCallback.html'>RTCSessionDescriptionCallback</a> <strong>successCallback</strong>,
                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>,
-                            optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+                            optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setLocalDescription-RTCLocalSessionDescriptionInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(<a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong>,
                                     <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
-                                    <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                                    <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-createAnswer-RTCSessionDescriptionCallback-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>createAnswer</strong>(<a href='RTCSessionDescriptionCallback.html'>RTCSessionDescriptionCallback</a> <strong>successCallback</strong>,
-                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-setRemoteDescription-RTCSessionDescriptionInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>,
                                      <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
-                                     <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                                     <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-addIceCandidate-RTCIceCandidateInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(<a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong>,
                                 <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
                                 <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>RTCPeerConnection</strong> {<span class=def>
+partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-static>
   static Promise&lt;<a href='RTCCertificate.html'>RTCCertificate</a>&gt;
       <strong>generateCertificate</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>keygenAlgorithm</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>RTCPeerConnection</strong> {<span class=def>
-  sequence&lt;<a href='RTCRtpSender.html'>RTCRtpSender</a>&gt; <strong>getSenders</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpReceiver.html'>RTCRtpReceiver</a>&gt; <strong>getReceivers</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a>&gt; <strong>getTransceivers</strong>();</span><span class=def>
-  <a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>addTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>, <a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>removeTrack</strong>(<a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>sender</strong>);</span><span class=def>
+partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-getSenders>
+  sequence&lt;<a href='RTCRtpSender.html'>RTCRtpSender</a>&gt; <strong>getSenders</strong>();</span><span class=def id=operation-getReceivers>
+  sequence&lt;<a href='RTCRtpReceiver.html'>RTCRtpReceiver</a>&gt; <strong>getReceivers</strong>();</span><span class=def id=operation-getTransceivers>
+  sequence&lt;<a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a>&gt; <strong>getTransceivers</strong>();</span><span class=def id=operation-addTrack-MediaStreamTrack-MediaStream>
+  <a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>addTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>, <a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def id=operation-removeTrack-RTCRtpSender>
+  <span class=primitive>undefined</span> <strong>removeTrack</strong>(<a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>sender</strong>);</span><span class=def id=operation-addTransceiver-MediaStreamTrack-DOMString-RTCRtpTransceiverInit>
   <a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a> <strong>addTransceiver</strong>((<a href='MediaStreamTrack.html'>MediaStreamTrack</a> or <span class=primitive>DOMString</span>) <strong>trackOrKind</strong>,
-                                   optional <a href='RTCRtpTransceiverInit.html'>RTCRtpTransceiverInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
+                                   optional <a href='RTCRtpTransceiverInit.html'>RTCRtpTransceiverInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-ontrack>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontrack</strong>;</span>
 };</span><span class=def>
 
-partial interface <strong>RTCPeerConnection</strong> {<span class=def>
-  readonly attribute <a href='RTCSctpTransport.html'>RTCSctpTransport</a>? <strong>sctp</strong>;</span><span class=def>
+partial interface <strong>RTCPeerConnection</strong> {<span class=def id=attribute-sctp>
+  readonly attribute <a href='RTCSctpTransport.html'>RTCSctpTransport</a>? <strong>sctp</strong>;</span><span class=def id=operation-createDataChannel-USVString-RTCDataChannelInit>
   <a href='RTCDataChannel.html'>RTCDataChannel</a> <strong>createDataChannel</strong>(<span class=primitive>USVString</span> <strong>label</strong>,
-                                   optional <a href='RTCDataChannelInit.html'>RTCDataChannelInit</a> <strong>dataChannelDict</strong> &#x3D; {});</span><span class=def>
+                                   optional <a href='RTCDataChannelInit.html'>RTCDataChannelInit</a> <strong>dataChannelDict</strong> &#x3D; {});</span><span class=def id=attribute-ondatachannel>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondatachannel</strong>;</span>
 };</span><span class=def>
 
-partial interface <strong>RTCPeerConnection</strong> {<span class=def>
+partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-getStats-MediaStreamTrack>
   Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>(optional <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>selector</strong> &#x3D; null);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;#methods-0">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>RTCPeerConnection</strong> {<span class=def>
-    <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getIdentityAssertion</strong> ();</span><span class=def>
-    readonly        attribute Promise&lt;<a href='RTCIdentityAssertion.html'>RTCIdentityAssertion</a>&gt; <strong>peerIdentity</strong>;</span><span class=def>
-    readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpLoginUrl</strong>;</span><span class=def>
+partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-setIdentityProvider-DOMString-RTCIdentityProviderOptions>
+    <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getIdentityAssertion>
+    Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getIdentityAssertion</strong> ();</span><span class=def id=attribute-peerIdentity>
+    readonly        attribute Promise&lt;<a href='RTCIdentityAssertion.html'>RTCIdentityAssertion</a>&gt; <strong>peerIdentity</strong>;</span><span class=def id=attribute-idpLoginUrl>
+    readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpLoginUrl</strong>;</span><span class=def id=attribute-idpErrorInfo>
     readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpErrorInfo</strong>;</span>
 };</span></code></pre></li>
 
@@ -104,35 +104,35 @@ partial interface <strong>RTCPeerConnection</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventTarget</a>  {<span class=def>
-  <strong>constructor</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createOffer</strong>(optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createAnswer</strong>(optional <a href='RTCAnswerOptions.html'>RTCAnswerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(optional <a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>localDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentLocalDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingLocalDescription</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>);</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>remoteDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentRemoteDescription</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingRemoteDescription</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <a href='RTCSignalingState.html'>RTCSignalingState</a> <strong>signalingState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceGatheringState.html'>RTCIceGatheringState</a> <strong>iceGatheringState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceConnectionState.html'>RTCIceConnectionState</a> <strong>iceConnectionState</strong>;</span><span class=def>
-  readonly attribute <a href='RTCPeerConnectionState.html'>RTCPeerConnectionState</a> <strong>connectionState</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span>? <strong>canTrickleIceCandidates</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>restartIce</strong>();</span><span class=def>
-  <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>getConfiguration</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setConfiguration</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnegotiationneeded</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidate</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidateerror</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsignalingstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oniceconnectionstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicegatheringstatechange</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnectionstatechange</strong>;</span><span class=def><span class="comment">
+interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventTarget</a>  {<span class=def id=constructor-RTCConfiguration>
+  <strong>constructor</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def id=operation-createOffer-RTCOfferOptions>
+  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createOffer</strong>(optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-createAnswer-RTCAnswerOptions>
+  Promise&lt;<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a>&gt; <strong>createAnswer</strong>(optional <a href='RTCAnswerOptions.html'>RTCAnswerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setLocalDescription-RTCLocalSessionDescriptionInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(optional <a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong> &#x3D; {});</span><span class=def id=attribute-localDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>localDescription</strong>;</span><span class=def id=attribute-currentLocalDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentLocalDescription</strong>;</span><span class=def id=attribute-pendingLocalDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingLocalDescription</strong>;</span><span class=def id=operation-setRemoteDescription-RTCSessionDescriptionInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>);</span><span class=def id=attribute-remoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>remoteDescription</strong>;</span><span class=def id=attribute-currentRemoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>currentRemoteDescription</strong>;</span><span class=def id=attribute-pendingRemoteDescription>
+  readonly attribute <a href='RTCSessionDescription.html'>RTCSessionDescription</a>? <strong>pendingRemoteDescription</strong>;</span><span class=def id=operation-addIceCandidate-RTCIceCandidateInit>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong> &#x3D; {});</span><span class=def id=attribute-signalingState>
+  readonly attribute <a href='RTCSignalingState.html'>RTCSignalingState</a> <strong>signalingState</strong>;</span><span class=def id=attribute-iceGatheringState>
+  readonly attribute <a href='RTCIceGatheringState.html'>RTCIceGatheringState</a> <strong>iceGatheringState</strong>;</span><span class=def id=attribute-iceConnectionState>
+  readonly attribute <a href='RTCIceConnectionState.html'>RTCIceConnectionState</a> <strong>iceConnectionState</strong>;</span><span class=def id=attribute-connectionState>
+  readonly attribute <a href='RTCPeerConnectionState.html'>RTCPeerConnectionState</a> <strong>connectionState</strong>;</span><span class=def id=attribute-canTrickleIceCandidates>
+  readonly attribute <span class=primitive>boolean</span>? <strong>canTrickleIceCandidates</strong>;</span><span class=def id=operation-restartIce>
+  <span class=primitive>undefined</span> <strong>restartIce</strong>();</span><span class=def id=operation-getConfiguration>
+  <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>getConfiguration</strong>();</span><span class=def id=operation-setConfiguration-RTCConfiguration>
+  <span class=primitive>undefined</span> <strong>setConfiguration</strong>(optional <a href='RTCConfiguration.html'>RTCConfiguration</a> <strong>configuration</strong> &#x3D; {});</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onnegotiationneeded>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onnegotiationneeded</strong>;</span><span class=def id=attribute-onicecandidate>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidate</strong>;</span><span class=def id=attribute-onicecandidateerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicecandidateerror</strong>;</span><span class=def id=attribute-onsignalingstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsignalingstatechange</strong>;</span><span class=def id=attribute-oniceconnectionstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oniceconnectionstatechange</strong>;</span><span class=def id=attribute-onicegatheringstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onicegatheringstatechange</strong>;</span><span class=def id=attribute-onconnectionstatechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnectionstatechange</strong>;</span><span class=def id=operation-createOffer-RTCSessionDescriptionCallback-RTCPeerConnectionErrorCallback-RTCOfferOptions><span class="comment">
 
   &#x2F;&#x2F; Legacy Interface Extensions
   &#x2F;&#x2F; Supporting the methods in this section is optional.
@@ -141,39 +141,47 @@ interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventT
   &#x2F;&#x2F; in section &quot;Legacy Interface Extensions&quot;
   </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>createOffer</strong>(<a href='RTCSessionDescriptionCallback.html'>RTCSessionDescriptionCallback</a> <strong>successCallback</strong>,
                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>,
-                            optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+                            optional <a href='RTCOfferOptions.html'>RTCOfferOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setLocalDescription-RTCLocalSessionDescriptionInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setLocalDescription</strong>(<a href='RTCLocalSessionDescriptionInit.html'>RTCLocalSessionDescriptionInit</a> <strong>description</strong>,
                                     <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
-                                    <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                                    <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-createAnswer-RTCSessionDescriptionCallback-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>createAnswer</strong>(<a href='RTCSessionDescriptionCallback.html'>RTCSessionDescriptionCallback</a> <strong>successCallback</strong>,
-                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                             <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-setRemoteDescription-RTCSessionDescriptionInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setRemoteDescription</strong>(<a href='RTCSessionDescriptionInit.html'>RTCSessionDescriptionInit</a> <strong>description</strong>,
                                      <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
-                                     <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                                     <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-addIceCandidate-RTCIceCandidateInit-VoidFunction-RTCPeerConnectionErrorCallback>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>addIceCandidate</strong>(<a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidate</strong>,
                                 <a href='VoidFunction.html'>VoidFunction</a> <strong>successCallback</strong>,
-                                <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def>
+                                <a href='RTCPeerConnectionErrorCallback.html'>RTCPeerConnectionErrorCallback</a> <strong>failureCallback</strong>);</span><span class=def id=operation-static>
   static Promise&lt;<a href='RTCCertificate.html'>RTCCertificate</a>&gt;
-      <strong>generateCertificate</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>keygenAlgorithm</strong>);</span><span class=def>
-  sequence&lt;<a href='RTCRtpSender.html'>RTCRtpSender</a>&gt; <strong>getSenders</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpReceiver.html'>RTCRtpReceiver</a>&gt; <strong>getReceivers</strong>();</span><span class=def>
-  sequence&lt;<a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a>&gt; <strong>getTransceivers</strong>();</span><span class=def>
-  <a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>addTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>, <a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>removeTrack</strong>(<a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>sender</strong>);</span><span class=def>
+      <strong>generateCertificate</strong>(<a href='AlgorithmIdentifier.html'>AlgorithmIdentifier</a> <strong>keygenAlgorithm</strong>);</span><span class=def id=operation-getSenders>
+  sequence&lt;<a href='RTCRtpSender.html'>RTCRtpSender</a>&gt; <strong>getSenders</strong>();</span><span class=def id=operation-getReceivers>
+  sequence&lt;<a href='RTCRtpReceiver.html'>RTCRtpReceiver</a>&gt; <strong>getReceivers</strong>();</span><span class=def id=operation-getTransceivers>
+  sequence&lt;<a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a>&gt; <strong>getTransceivers</strong>();</span><span class=def id=operation-addTrack-MediaStreamTrack-MediaStream>
+  <a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>addTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>, <a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def id=operation-removeTrack-RTCRtpSender>
+  <span class=primitive>undefined</span> <strong>removeTrack</strong>(<a href='RTCRtpSender.html'>RTCRtpSender</a> <strong>sender</strong>);</span><span class=def id=operation-addTransceiver-MediaStreamTrack-DOMString-RTCRtpTransceiverInit>
   <a href='RTCRtpTransceiver.html'>RTCRtpTransceiver</a> <strong>addTransceiver</strong>((<a href='MediaStreamTrack.html'>MediaStreamTrack</a> or <span class=primitive>DOMString</span>) <strong>trackOrKind</strong>,
-                                   optional <a href='RTCRtpTransceiverInit.html'>RTCRtpTransceiverInit</a> <strong>init</strong> &#x3D; {});</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontrack</strong>;</span><span class=def>
-  readonly attribute <a href='RTCSctpTransport.html'>RTCSctpTransport</a>? <strong>sctp</strong>;</span><span class=def>
+                                   optional <a href='RTCRtpTransceiverInit.html'>RTCRtpTransceiverInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-ontrack>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ontrack</strong>;</span><span class=def id=attribute-sctp>
+  readonly attribute <a href='RTCSctpTransport.html'>RTCSctpTransport</a>? <strong>sctp</strong>;</span><span class=def id=operation-createDataChannel-USVString-RTCDataChannelInit>
   <a href='RTCDataChannel.html'>RTCDataChannel</a> <strong>createDataChannel</strong>(<span class=primitive>USVString</span> <strong>label</strong>,
-                                   optional <a href='RTCDataChannelInit.html'>RTCDataChannelInit</a> <strong>dataChannelDict</strong> &#x3D; {});</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondatachannel</strong>;</span><span class=def>
-  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>(optional <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>selector</strong> &#x3D; null);</span><span class=def>
-    <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-    Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getIdentityAssertion</strong> ();</span><span class=def>
-    readonly        attribute Promise&lt;<a href='RTCIdentityAssertion.html'>RTCIdentityAssertion</a>&gt; <strong>peerIdentity</strong>;</span><span class=def>
-    readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpLoginUrl</strong>;</span><span class=def>
+                                   optional <a href='RTCDataChannelInit.html'>RTCDataChannelInit</a> <strong>dataChannelDict</strong> &#x3D; {});</span><span class=def id=attribute-ondatachannel>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondatachannel</strong>;</span><span class=def id=operation-getStats-MediaStreamTrack>
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>(optional <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>selector</strong> &#x3D; null);</span><span class=def id=operation-setIdentityProvider-DOMString-RTCIdentityProviderOptions>
+    <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getIdentityAssertion>
+    Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getIdentityAssertion</strong> ();</span><span class=def id=attribute-peerIdentity>
+    readonly        attribute Promise&lt;<a href='RTCIdentityAssertion.html'>RTCIdentityAssertion</a>&gt; <strong>peerIdentity</strong>;</span><span class=def id=attribute-idpLoginUrl>
+    readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpLoginUrl</strong>;</span><span class=def id=attribute-idpErrorInfo>
     readonly        attribute <span class=primitive>DOMString</span>?                    <strong>idpErrorInfo</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>RTCPeerConnection</code></h3>
+
+  <ul>
+    <li><code><a href="RTCPeerConnection.html">RTCPeerConnection</a><a href=RTCPeerConnection.html#constructor-RTCConfiguration>()</a></code></li>
+
+  </ul>
 </section>
 
   <section><h3>Referring specifications</h3>

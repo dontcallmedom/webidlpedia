@@ -11,36 +11,47 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>DataTransfer</strong> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def>
+interface <strong>DataTransfer</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=attribute-dropEffect>
 
-  attribute <span class=primitive>DOMString</span> <strong>dropEffect</strong>;</span><span class=def>
-  attribute <span class=primitive>DOMString</span> <strong>effectAllowed</strong>;</span><span class=def>
+  attribute <span class=primitive>DOMString</span> <strong>dropEffect</strong>;</span><span class=def id=attribute-effectAllowed>
+  attribute <span class=primitive>DOMString</span> <strong>effectAllowed</strong>;</span><span class=def id=attribute-items>
 
-  [SameObject] readonly attribute <a href='DataTransferItemList.html'>DataTransferItemList</a> <strong>items</strong>;</span><span class=def>
+  [SameObject] readonly attribute <a href='DataTransferItemList.html'>DataTransferItemList</a> <strong>items</strong>;</span><span class=def id=operation-setDragImage-Element-long-long>
 
-  <span class=primitive>undefined</span> <strong>setDragImage</strong>(<a href='Element.html'>Element</a> <strong>image</strong>, <span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def><span class="comment">
+  <span class=primitive>undefined</span> <strong>setDragImage</strong>(<a href='Element.html'>Element</a> <strong>image</strong>, <span class=primitive>long</span> <strong>x</strong>, <span class=primitive>long</span> <strong>y</strong>);</span><span class=def id=attribute-types><span class="comment">
 
   &#x2F;* old interface *&#x2F;
-  </span>readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>types</strong>;</span><span class=def>
-  <span class=primitive>DOMString</span> <strong>getData</strong>(<span class=primitive>DOMString</span> <strong>format</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>setData</strong>(<span class=primitive>DOMString</span> <strong>format</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clearData</strong>(optional <span class=primitive>DOMString</span> <strong>format</strong>);</span><span class=def>
+  </span>readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>types</strong>;</span><span class=def id=operation-getData-DOMString>
+  <span class=primitive>DOMString</span> <strong>getData</strong>(<span class=primitive>DOMString</span> <strong>format</strong>);</span><span class=def id=operation-setData-DOMString-DOMString>
+  <span class=primitive>undefined</span> <strong>setData</strong>(<span class=primitive>DOMString</span> <strong>format</strong>, <span class=primitive>DOMString</span> <strong>data</strong>);</span><span class=def id=operation-clearData-DOMString>
+  <span class=primitive>undefined</span> <strong>clearData</strong>(optional <span class=primitive>DOMString</span> <strong>format</strong>);</span><span class=def id=attribute-files>
   [SameObject] readonly attribute <a href='FileList.html'>FileList</a> <strong>files</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>DataTransfer</code></h3>
+
+  <ul>
+    <li><code><a href="DataTransfer.html">DataTransfer</a><a href=DataTransfer.html#constructor>()</a></code></li>
+<li><code><a href="DragEvent.html">DragEvent</a><a href=DragEvent.html#attribute-dataTransfer>.dataTransfer</a></code></li>
+<li><code><a href="ClipboardEvent.html">ClipboardEvent</a><a href=ClipboardEvent.html#attribute-clipboardData>.clipboardData</a></code></li>
+<li><code><a href="InputEvent.html">InputEvent</a><a href=InputEvent.html#attribute-dataTransfer>.dataTransfer</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="ClipboardEvent.html">ClipboardEvent</a></li>
-<li><a href="ClipboardEventInit.html">ClipboardEventInit</a></li>
-<li><a href="DragEvent.html">DragEvent</a></li>
-<li><a href="DragEventInit.html">DragEventInit</a></li>
-<li><a href="InputEvent.html">InputEvent</a></li>
-<li><a href="InputEventInit.html">InputEventInit</a></li>
+    <li><code><a href="ClipboardEvent.html">ClipboardEvent</a></code></li>
+<li><code><a href="ClipboardEventInit.html">ClipboardEventInit</a></code></li>
+<li><code><a href="DragEvent.html">DragEvent</a></code></li>
+<li><code><a href="DragEventInit.html">DragEventInit</a></code></li>
+<li><code><a href="InputEvent.html">InputEvent</a></code></li>
+<li><code><a href="InputEventInit.html">InputEventInit</a></code></li>
 
   </ul>
 </section>

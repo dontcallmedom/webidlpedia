@@ -11,38 +11,54 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>XRRigidTransform</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>position</strong> &#x3D; {}, optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>orientation</strong> &#x3D; {});</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>position</strong>;</span><span class=def>
-  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>orientation</strong>;</span><span class=def>
-  readonly attribute <a href='Float32Array.html'>Float32Array</a> <strong>matrix</strong>;</span><span class=def>
+interface <strong>XRRigidTransform</strong> {<span class=def id=constructor-DOMPointInit-DOMPointInit>
+  <strong>constructor</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>position</strong> &#x3D; {}, optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>orientation</strong> &#x3D; {});</span><span class=def id=attribute-position>
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>position</strong>;</span><span class=def id=attribute-orientation>
+  [SameObject] readonly attribute <a href='DOMPointReadOnly.html'>DOMPointReadOnly</a> <strong>orientation</strong>;</span><span class=def id=attribute-matrix>
+  readonly attribute <a href='Float32Array.html'>Float32Array</a> <strong>matrix</strong>;</span><span class=def id=attribute-inverse>
   [SameObject] readonly attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>inverse</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>XRRigidTransform</code></h3>
+
+  <ul>
+    <li><code><a href="XRRigidTransform.html">XRRigidTransform</a><a href=XRRigidTransform.html#constructor-DOMPointInit-DOMPointInit>()</a></code></li>
+<li><code><a href="XRDepthInformation.html">XRDepthInformation</a><a href=XRDepthInformation.html#attribute-normDepthBufferFromNormView>.normDepthBufferFromNormView</a></code></li>
+<li><code><a href="XRView.html">XRView</a><a href=XRView.html#attribute-transform>.transform</a></code></li>
+<li><code><a href="XRRigidTransform.html">XRRigidTransform</a><a href=XRRigidTransform.html#attribute-inverse>.inverse</a></code></li>
+<li><code><a href="XRPose.html">XRPose</a><a href=XRPose.html#attribute-transform>.transform</a></code></li>
+<li><code><a href="XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a><a href=XRReferenceSpaceEvent.html#attribute-transform>.transform</a></code></li>
+<li><code><a href="XRQuadLayer.html">XRQuadLayer</a><a href=XRQuadLayer.html#attribute-transform>.transform</a></code></li>
+<li><code><a href="XRCylinderLayer.html">XRCylinderLayer</a><a href=XRCylinderLayer.html#attribute-transform>.transform</a></code></li>
+<li><code><a href="XREquirectLayer.html">XREquirectLayer</a><a href=XREquirectLayer.html#attribute-transform>.transform</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="XRCylinderLayer.html">XRCylinderLayer</a></li>
-<li><a href="XRCylinderLayerInit.html">XRCylinderLayerInit</a></li>
-<li><a href="XRDepthInformation.html">XRDepthInformation</a></li>
-<li><a href="XREquirectLayer.html">XREquirectLayer</a></li>
-<li><a href="XREquirectLayerInit.html">XREquirectLayerInit</a></li>
-<li><a href="XRFrame.html">XRFrame</a></li>
-<li><a href="XRMediaCylinderLayerInit.html">XRMediaCylinderLayerInit</a></li>
-<li><a href="XRMediaEquirectLayerInit.html">XRMediaEquirectLayerInit</a></li>
-<li><a href="XRMediaQuadLayerInit.html">XRMediaQuadLayerInit</a></li>
-<li><a href="XRPose.html">XRPose</a></li>
-<li><a href="XRQuadLayer.html">XRQuadLayer</a></li>
-<li><a href="XRQuadLayerInit.html">XRQuadLayerInit</a></li>
-<li><a href="XRRay.html">XRRay</a></li>
-<li><a href="XRReferenceSpace.html">XRReferenceSpace</a></li>
-<li><a href="XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a></li>
-<li><a href="XRReferenceSpaceEventInit.html">XRReferenceSpaceEventInit</a></li>
-<li><a href="XRRigidTransform.html">XRRigidTransform</a></li>
-<li><a href="XRView.html">XRView</a></li>
+    <li><code><a href="XRCylinderLayer.html">XRCylinderLayer</a></code></li>
+<li><code><a href="XRCylinderLayerInit.html">XRCylinderLayerInit</a></code></li>
+<li><code><a href="XRDepthInformation.html">XRDepthInformation</a></code></li>
+<li><code><a href="XREquirectLayer.html">XREquirectLayer</a></code></li>
+<li><code><a href="XREquirectLayerInit.html">XREquirectLayerInit</a></code></li>
+<li><code><a href="XRFrame.html">XRFrame</a></code></li>
+<li><code><a href="XRMediaCylinderLayerInit.html">XRMediaCylinderLayerInit</a></code></li>
+<li><code><a href="XRMediaEquirectLayerInit.html">XRMediaEquirectLayerInit</a></code></li>
+<li><code><a href="XRMediaQuadLayerInit.html">XRMediaQuadLayerInit</a></code></li>
+<li><code><a href="XRPose.html">XRPose</a></code></li>
+<li><code><a href="XRQuadLayer.html">XRQuadLayer</a></code></li>
+<li><code><a href="XRQuadLayerInit.html">XRQuadLayerInit</a></code></li>
+<li><code><a href="XRRay.html">XRRay</a></code></li>
+<li><code><a href="XRReferenceSpace.html">XRReferenceSpace</a></code></li>
+<li><code><a href="XRReferenceSpaceEvent.html">XRReferenceSpaceEvent</a></code></li>
+<li><code><a href="XRReferenceSpaceEventInit.html">XRReferenceSpaceEventInit</a></code></li>
+<li><code><a href="XRRigidTransform.html">XRRigidTransform</a></code></li>
+<li><code><a href="XRView.html">XRView</a></code></li>
 
   </ul>
 </section>

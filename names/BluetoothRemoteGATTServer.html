@@ -11,13 +11,13 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>BluetoothRemoteGATTServer</strong> {<span class=def>
+interface <strong>BluetoothRemoteGATTServer</strong> {<span class=def id=attribute-device>
   [SameObject]
-  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>connected</strong>;</span><span class=def>
-  Promise&lt;<a href='BluetoothRemoteGATTServer.html'>BluetoothRemoteGATTServer</a>&gt; <strong>connect</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>disconnect</strong>();</span><span class=def>
-  Promise&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt; <strong>getPrimaryService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def>
+  readonly attribute <a href='BluetoothDevice.html'>BluetoothDevice</a> <strong>device</strong>;</span><span class=def id=attribute-connected>
+  readonly attribute <span class=primitive>boolean</span> <strong>connected</strong>;</span><span class=def id=operation-connect>
+  Promise&lt;<a href='BluetoothRemoteGATTServer.html'>BluetoothRemoteGATTServer</a>&gt; <strong>connect</strong>();</span><span class=def id=operation-disconnect>
+  <span class=primitive>undefined</span> <strong>disconnect</strong>();</span><span class=def id=operation-getPrimaryService-BluetoothServiceUUID>
+  Promise&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt; <strong>getPrimaryService</strong>(<a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span><span class=def id=operation-getPrimaryServices-BluetoothServiceUUID>
   Promise&lt;sequence&lt;<a href='BluetoothRemoteGATTService.html'>BluetoothRemoteGATTService</a>&gt;&gt;
     <strong>getPrimaryServices</strong>(optional <a href='BluetoothServiceUUID.html'>BluetoothServiceUUID</a> <strong>service</strong>);</span>
 };</span></code></pre>
@@ -25,11 +25,20 @@ interface <strong>BluetoothRemoteGATTServer</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>BluetoothRemoteGATTServer</code></h3>
+
+  <ul>
+    <li><code><a href="BluetoothDevice.html">BluetoothDevice</a><a href=BluetoothDevice.html#attribute-gatt>.gatt</a></code></li>
+<li><code><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a><a href=BluetoothRemoteGATTServer.html#operation-connect>.connect()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="BluetoothDevice.html">BluetoothDevice</a></li>
-<li><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></li>
+    <li><code><a href="BluetoothDevice.html">BluetoothDevice</a></code></li>
+<li><code><a href="BluetoothRemoteGATTServer.html">BluetoothRemoteGATTServer</a></code></li>
 
   </ul>
 </section>

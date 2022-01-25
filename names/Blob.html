@@ -9,49 +9,66 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-Blob">File API</a> defines <code>Blob</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), Serializable]
-interface <strong>Blob</strong> {<span class=def>
+interface <strong>Blob</strong> {<span class=def id=constructor-BlobPart-BlobPropertyBag>
   <strong>constructor</strong>(optional sequence&lt;<a href='BlobPart.html'>BlobPart</a>&gt; <strong>blobParts</strong>,
-              optional <a href='BlobPropertyBag.html'>BlobPropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+              optional <a href='BlobPropertyBag.html'>BlobPropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-size>
 
-  readonly attribute <span class=primitive>unsigned long long</span> <strong>size</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def><span class="comment">
+  readonly attribute <span class=primitive>unsigned long long</span> <strong>size</strong>;</span><span class=def id=attribute-type>
+  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=operation-slice-long long-long long-DOMString><span class="comment">
 
   &#x2F;&#x2F; slice Blob into byte-ranged chunks
   </span><a href='Blob.html'>Blob</a> <strong>slice</strong>(optional [Clamp] <span class=primitive>long long</span> <strong>start</strong>,
             optional [Clamp] <span class=primitive>long long</span> <strong>end</strong>,
-            optional <span class=primitive>DOMString</span> <strong>contentType</strong>);</span><span class=def><span class="comment">
+            optional <span class=primitive>DOMString</span> <strong>contentType</strong>);</span><span class=def id=operation-stream><span class="comment">
 
   &#x2F;&#x2F; read from the Blob.
-  </span>[NewObject] <a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>();</span><span class=def>
-  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def>
+  </span>[NewObject] <a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>();</span><span class=def id=operation-text>
+  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def id=operation-arrayBuffer>
   [NewObject] Promise&lt;<a href='ArrayBuffer.html'>ArrayBuffer</a>&gt; <strong>arrayBuffer</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Blob</code></h3>
+
+  <ul>
+    <li><code><a href="Blob.html">Blob</a><a href=Blob.html#constructor-BlobPart-BlobPropertyBag>()</a></code></li>
+<li><code><a href="Body.html">Body</a><a href=Body.html#operation-blob>.blob()</a></code></li>
+<li><code><a href="OffscreenCanvas.html">OffscreenCanvas</a><a href=OffscreenCanvas.html#operation-convertToBlob-ImageEncodeOptions>.convertToBlob()</a></code></li>
+<li><code><a href="FontMetadata.html">FontMetadata</a><a href=FontMetadata.html#operation-blob>.blob()</a></code></li>
+<li><code><a href="ClipboardItem.html">ClipboardItem</a><a href=ClipboardItem.html#operation-getType-DOMString>.getType()</a></code></li>
+<li><code><a href="Blob.html">Blob</a><a href=Blob.html#operation-slice-long long-long long-DOMString>.slice()</a></code></li>
+<li><code><a href="ImageCapture.html">ImageCapture</a><a href=ImageCapture.html#operation-takePhoto-PhotoSettings>.takePhoto()</a></code></li>
+<li><code><a href="BlobEvent.html">BlobEvent</a><a href=BlobEvent.html#attribute-data>.data</a></code></li>
+<li><code><a href="PushMessageData.html">PushMessageData</a><a href=PushMessageData.html#operation-blob>.blob()</a></code></li>
+<li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a><a href=HTMLMediaElement.html#attribute-srcObject>.srcObject</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Blob.html">Blob</a></li>
-<li><a href="BlobEvent.html">BlobEvent</a></li>
-<li><a href="BlobEventInit.html">BlobEventInit</a></li>
-<li><a href="Body.html">Body</a></li>
-<li><a href="ClipboardItem.html">ClipboardItem</a></li>
-<li><a href="ContactInfo.html">ContactInfo</a></li>
-<li><a href="File.html">File</a></li>
-<li><a href="FileReader.html">FileReader</a></li>
-<li><a href="FileReaderSync.html">FileReaderSync</a></li>
-<li><a href="FontMetadata.html">FontMetadata</a></li>
-<li><a href="FormData.html">FormData</a></li>
-<li><a href="ImageCapture.html">ImageCapture</a></li>
-<li><a href="OffscreenCanvas.html">OffscreenCanvas</a></li>
-<li><a href="PresentationConnection.html">PresentationConnection</a></li>
-<li><a href="PushMessageData.html">PushMessageData</a></li>
-<li><a href="RTCDataChannel.html">RTCDataChannel</a></li>
-<li><a href="URL.html">URL</a></li>
-<li><a href="WebSocket.html">WebSocket</a></li>
-<li><a href="WriteParams.html">WriteParams</a></li>
+    <li><code><a href="Blob.html">Blob</a></code></li>
+<li><code><a href="BlobEvent.html">BlobEvent</a></code></li>
+<li><code><a href="BlobEventInit.html">BlobEventInit</a></code></li>
+<li><code><a href="Body.html">Body</a></code></li>
+<li><code><a href="ClipboardItem.html">ClipboardItem</a></code></li>
+<li><code><a href="ContactInfo.html">ContactInfo</a></code></li>
+<li><code><a href="File.html">File</a></code></li>
+<li><code><a href="FileReader.html">FileReader</a></code></li>
+<li><code><a href="FileReaderSync.html">FileReaderSync</a></code></li>
+<li><code><a href="FontMetadata.html">FontMetadata</a></code></li>
+<li><code><a href="FormData.html">FormData</a></code></li>
+<li><code><a href="ImageCapture.html">ImageCapture</a></code></li>
+<li><code><a href="OffscreenCanvas.html">OffscreenCanvas</a></code></li>
+<li><code><a href="PresentationConnection.html">PresentationConnection</a></code></li>
+<li><code><a href="PushMessageData.html">PushMessageData</a></code></li>
+<li><code><a href="RTCDataChannel.html">RTCDataChannel</a></code></li>
+<li><code><a href="URL.html">URL</a></code></li>
+<li><code><a href="WebSocket.html">WebSocket</a></code></li>
+<li><code><a href="WriteParams.html">WriteParams</a></code></li>
 
   </ul>
 </section>

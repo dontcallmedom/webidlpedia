@@ -11,20 +11,28 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>)]
-interface <strong>WakeLockSentinel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  readonly attribute <span class=primitive>boolean</span> <strong>released</strong>;</span><span class=def>
-  readonly attribute <a href='WakeLockType.html'>WakeLockType</a> <strong>type</strong>;</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>release</strong>();</span><span class=def>
+interface <strong>WakeLockSentinel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-released>
+  readonly attribute <span class=primitive>boolean</span> <strong>released</strong>;</span><span class=def id=attribute-type>
+  readonly attribute <a href='WakeLockType.html'>WakeLockType</a> <strong>type</strong>;</span><span class=def id=operation-release>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>release</strong>();</span><span class=def id=attribute-onrelease>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrelease</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>WakeLockSentinel</code></h3>
+
+  <ul>
+    <li><code><a href="WakeLock.html">WakeLock</a><a href=WakeLock.html#operation-request-WakeLockType>.request()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="WakeLock.html">WakeLock</a></li>
+    <li><code><a href="WakeLock.html">WakeLock</a></code></li>
 
   </ul>
 </section>

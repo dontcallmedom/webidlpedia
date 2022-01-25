@@ -11,10 +11,10 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-interface <strong>ReadableStreamDefaultReader</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def>
+interface <strong>ReadableStreamDefaultReader</strong> {<span class=def id=constructor-ReadableStream>
+  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def id=operation-read>
 
-  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def>
+  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def id=operation-releaseLock>
   <span class=primitive>undefined</span> <strong>releaseLock</strong>();</span>
 };</span><span class=def>
 <a href='ReadableStreamDefaultReader.html'>ReadableStreamDefaultReader</a> includes <a href='ReadableStreamGenericReader.html'>ReadableStreamGenericReader</a>;</span></code></pre>
@@ -22,15 +22,24 @@ interface <strong>ReadableStreamDefaultReader</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-interface <strong>ReadableStreamDefaultReader</strong> {<span class=def>
-  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def>
+interface <strong>ReadableStreamDefaultReader</strong> {<span class=def id=constructor-ReadableStream>
+  <strong>constructor</strong>(<a href='ReadableStream.html'>ReadableStream</a> <strong>stream</strong>);</span><span class=def id=operation-read>
 
-  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>releaseLock</strong>();</span><span class=def>
-  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>closed</strong>;</span><span class=def>
+  Promise&lt;<a href='ReadableStreamDefaultReadResult.html'>ReadableStreamDefaultReadResult</a>&gt; <strong>read</strong>();</span><span class=def id=operation-releaseLock>
+  <span class=primitive>undefined</span> <strong>releaseLock</strong>();</span><span class=def id=attribute-closed>
+  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>closed</strong>;</span><span class=def id=operation-cancel-any>
 
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>cancel</strong>(optional <span class=primitive>any</span> <strong>reason</strong>);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>ReadableStreamDefaultReader</code></h3>
+
+  <ul>
+    <li><code><a href="ReadableStreamDefaultReader.html">ReadableStreamDefaultReader</a><a href=ReadableStreamDefaultReader.html#constructor-ReadableStream>()</a></code></li>
+<li><code><a href="ReadableStream.html">ReadableStream</a><a href=ReadableStream.html#operation-getReader-ReadableStreamGetReaderOptions>.getReader()</a></code></li>
+
+  </ul>
 </section>
 
   

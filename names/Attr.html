@@ -11,14 +11,14 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Attr</strong> : <a href='Node.html'>Node</a> {<span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>namespaceURI</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>prefix</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>localName</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>value</strong>;</span><span class=def>
+interface <strong>Attr</strong> : <a href='Node.html'>Node</a> {<span class=def id=attribute-namespaceURI>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>namespaceURI</strong>;</span><span class=def id=attribute-prefix>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>prefix</strong>;</span><span class=def id=attribute-localName>
+  readonly attribute <span class=primitive>DOMString</span> <strong>localName</strong>;</span><span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-value>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>value</strong>;</span><span class=def id=attribute-ownerElement>
 
-  readonly attribute <a href='Element.html'>Element</a>? <strong>ownerElement</strong>;</span><span class=def>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>ownerElement</strong>;</span><span class=def id=attribute-specified>
 
   readonly attribute <span class=primitive>boolean</span> <strong>specified</strong>;</span><span class="comment"> &#x2F;&#x2F; useless; always returns true
 </span>};</span></code></pre>
@@ -26,12 +26,33 @@ interface <strong>Attr</strong> : <a href='Node.html'>Node</a> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>Attr</code></h3>
+
+  <ul>
+    <li><code><a href="Document.html">Document</a><a href=Document.html#operation-createAttribute-DOMString>.createAttribute()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-createAttributeNS-DOMString-DOMString>.createAttributeNS()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getAttributeNode-DOMString>.getAttributeNode()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-getAttributeNodeNS-DOMString-DOMString>.getAttributeNodeNS()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-setAttributeNode-Attr>.setAttributeNode()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-setAttributeNodeNS-Attr>.setAttributeNodeNS()</a></code></li>
+<li><code><a href="Element.html">Element</a><a href=Element.html#operation-removeAttributeNode-Attr>.removeAttributeNode()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-getter>.item()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-getter>.getNamedItem()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-getNamedItemNS-DOMString-DOMString>.getNamedItemNS()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-setNamedItem-Attr>.setNamedItem()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-setNamedItemNS-Attr>.setNamedItemNS()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-removeNamedItem-DOMString>.removeNamedItem()</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a><a href=NamedNodeMap.html#operation-removeNamedItemNS-DOMString-DOMString>.removeNamedItemNS()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="Document.html">Document</a></li>
-<li><a href="Element.html">Element</a></li>
-<li><a href="NamedNodeMap.html">NamedNodeMap</a></li>
+    <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="Element.html">Element</a></code></li>
+<li><code><a href="NamedNodeMap.html">NamedNodeMap</a></code></li>
 
   </ul>
 </section>

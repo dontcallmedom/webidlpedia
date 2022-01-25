@@ -10,30 +10,31 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> defines <code>CanvasDrawPath</code></p>
 <pre class=webidl><code><span class=def>
 
-interface mixin <strong>CanvasDrawPath</strong> {<span class=def><span class="comment">
+interface mixin <strong>CanvasDrawPath</strong> {<span class=def id=operation-beginPath><span class="comment">
   &#x2F;&#x2F; path API (see also CanvasPath)
-  </span><span class=primitive>undefined</span> <strong>beginPath</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>fill</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>fill</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>stroke</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>stroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clip</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>clip</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isPointInPath</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isPointInPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def>
-  <span class=primitive>boolean</span> <strong>isPointInStroke</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def>
+  </span><span class=primitive>undefined</span> <strong>beginPath</strong>();</span><span class=def id=operation-fill-CanvasFillRule>
+  <span class=primitive>undefined</span> <strong>fill</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-fill-Path2D-CanvasFillRule>
+  <span class=primitive>undefined</span> <strong>fill</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-stroke>
+  <span class=primitive>undefined</span> <strong>stroke</strong>();</span><span class=def id=operation-stroke-Path2D>
+  <span class=primitive>undefined</span> <strong>stroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>);</span><span class=def id=operation-clip-CanvasFillRule>
+  <span class=primitive>undefined</span> <strong>clip</strong>(optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-clip-Path2D-CanvasFillRule>
+  <span class=primitive>undefined</span> <strong>clip</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-isPointInPath-unrestricted double-unrestricted double-CanvasFillRule>
+  <span class=primitive>boolean</span> <strong>isPointInPath</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-isPointInPath-Path2D-unrestricted double-unrestricted double-CanvasFillRule>
+  <span class=primitive>boolean</span> <strong>isPointInPath</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>, optional <a href='CanvasFillRule.html'>CanvasFillRule</a> <strong>fillRule</strong> &#x3D; &quot;nonzero&quot;);</span><span class=def id=operation-isPointInStroke-unrestricted double-unrestricted double>
+  <span class=primitive>boolean</span> <strong>isPointInStroke</strong>(<span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span><span class=def id=operation-isPointInStroke-Path2D-unrestricted double-unrestricted double>
   <span class=primitive>boolean</span> <strong>isPointInStroke</strong>(<a href='Path2D.html'>Path2D</a> <strong>path</strong>, <span class=primitive>unrestricted double</span> <strong>x</strong>, <span class=primitive>unrestricted double</span> <strong>y</strong>);</span>
 };</span></code></pre>
   
   
 </section>
+
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li>
-<li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li>
-<li><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></li>
+    <li><code><a href="CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></code></li>
+<li><code><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></code></li>
+<li><code><a href="PaintRenderingContext2D.html">PaintRenderingContext2D</a></code></li>
 
   </ul>
 </section>

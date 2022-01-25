@@ -11,16 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), Serializable]
-interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {<span class=def>
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {<span class=def id=constructor-BlobPart-USVString-FilePropertyBag>
   <strong>constructor</strong>(sequence&lt;<a href='BlobPart.html'>BlobPart</a>&gt; <strong>fileBits</strong>,
               <span class=primitive>USVString</span> <strong>fileName</strong>,
-              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-lastModified>
   readonly attribute <span class=primitive>long long</span> <strong>lastModified</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;#title">File and Directory Entries API</a><pre class=webidl><code><span class=def>partial interface <strong>File</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;entries-api&#x2F;#title">File and Directory Entries API</a><pre class=webidl><code><span class=def>partial interface <strong>File</strong> {<span class=def id=attribute-webkitRelativePath>
     readonly attribute <span class=primitive>USVString</span> <strong>webkitRelativePath</strong>;</span>
 };</span></code></pre></li>
 
@@ -28,25 +28,38 @@ interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), Serializable]
-interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {<span class=def>
+interface <strong>File</strong> : <a href='Blob.html'>Blob</a> {<span class=def id=constructor-BlobPart-USVString-FilePropertyBag>
   <strong>constructor</strong>(sequence&lt;<a href='BlobPart.html'>BlobPart</a>&gt; <strong>fileBits</strong>,
               <span class=primitive>USVString</span> <strong>fileName</strong>,
-              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>long long</span> <strong>lastModified</strong>;</span><span class=def>
+              optional <a href='FilePropertyBag.html'>FilePropertyBag</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-name>
+  readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-lastModified>
+  readonly attribute <span class=primitive>long long</span> <strong>lastModified</strong>;</span><span class=def id=attribute-webkitRelativePath>
     readonly attribute <span class=primitive>USVString</span> <strong>webkitRelativePath</strong>;</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>File</code></h3>
+
+  <ul>
+    <li><code><a href="File.html">File</a><a href=File.html#constructor-BlobPart-USVString-FilePropertyBag>()</a></code></li>
+<li><code><a href="DataTransferItem.html">DataTransferItem</a><a href=DataTransferItem.html#operation-getAsFile>.getAsFile()</a></code></li>
+<li><code><a href="FileSystemFileHandle.html">FileSystemFileHandle</a><a href=FileSystemFileHandle.html#operation-getFile>.getFile()</a></code></li>
+<li><code><a href="FileList.html">FileList</a><a href=FileList.html#operation-getter>.item()</a></code></li>
+<li><code><a href="FormData.html">FormData</a><a href=FormData.html#operation-get-USVString>.get()</a></code></li>
+<li><code><a href="FormData.html">FormData</a><a href=FormData.html#operation-getAll-USVString>.getAll()</a></code></li>
+
+  </ul>
 </section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="DataTransferItem.html">DataTransferItem</a></li>
-<li><a href="DataTransferItemList.html">DataTransferItemList</a></li>
-<li><a href="ElementInternals.html">ElementInternals</a></li>
-<li><a href="FileList.html">FileList</a></li>
-<li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li>
-<li><a href="ShareData.html">ShareData</a></li>
+    <li><code><a href="DataTransferItem.html">DataTransferItem</a></code></li>
+<li><code><a href="DataTransferItemList.html">DataTransferItemList</a></code></li>
+<li><code><a href="ElementInternals.html">ElementInternals</a></code></li>
+<li><code><a href="FileList.html">FileList</a></code></li>
+<li><code><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></code></li>
+<li><code><a href="ShareData.html">ShareData</a></code></li>
 
   </ul>
 </section>

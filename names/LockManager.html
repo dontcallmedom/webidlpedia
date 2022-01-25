@@ -11,12 +11,12 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>LockManager</strong> {<span class=def>
+interface <strong>LockManager</strong> {<span class=def id=operation-request-DOMString-LockGrantedCallback>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>request</strong>(<span class=primitive>DOMString</span> <strong>name</strong>,
-                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);</span><span class=def>
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);</span><span class=def id=operation-request-DOMString-LockOptions-LockGrantedCallback>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>request</strong>(<span class=primitive>DOMString</span> <strong>name</strong>,
                        <a href='LockOptions.html'>LockOptions</a> <strong>options</strong>,
-                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);</span><span class=def>
+                       <a href='LockGrantedCallback.html'>LockGrantedCallback</a> <strong>callback</strong>);</span><span class=def id=operation-query>
 
   Promise&lt;<a href='LockManagerSnapshot.html'>LockManagerSnapshot</a>&gt; <strong>query</strong>();</span>
 };</span></code></pre>
@@ -24,10 +24,18 @@ interface <strong>LockManager</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>LockManager</code></h3>
+
+  <ul>
+    <li><code><a href="NavigatorLocks.html">NavigatorLocks</a><a href=NavigatorLocks.html#attribute-locks>.locks</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="NavigatorLocks.html">NavigatorLocks</a></li>
+    <li><code><a href="NavigatorLocks.html">NavigatorLocks</a></code></li>
 
   </ul>
 </section>

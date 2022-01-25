@@ -11,35 +11,46 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>RTCIceCandidate</strong> {<span class=def>
-  <strong>constructor</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidateInitDict</strong> &#x3D; {});</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span> <strong>candidate</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>sdpMid</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>sdpMLineIndex</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>foundation</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceComponent.html'>RTCIceComponent</a>? <strong>component</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned long</span>? <strong>priority</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>address</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceProtocol.html'>RTCIceProtocol</a>? <strong>protocol</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>port</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceCandidateType.html'>RTCIceCandidateType</a>? <strong>type</strong>;</span><span class=def>
-  readonly attribute <a href='RTCIceTcpCandidateType.html'>RTCIceTcpCandidateType</a>? <strong>tcpType</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>relatedAddress</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>unsigned short</span>? <strong>relatedPort</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>DOMString</span>? <strong>usernameFragment</strong>;</span><span class=def>
+interface <strong>RTCIceCandidate</strong> {<span class=def id=constructor-RTCIceCandidateInit>
+  <strong>constructor</strong>(optional <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>candidateInitDict</strong> &#x3D; {});</span><span class=def id=attribute-candidate>
+  readonly attribute <span class=primitive>DOMString</span> <strong>candidate</strong>;</span><span class=def id=attribute-sdpMid>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>sdpMid</strong>;</span><span class=def id=attribute-sdpMLineIndex>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>sdpMLineIndex</strong>;</span><span class=def id=attribute-foundation>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>foundation</strong>;</span><span class=def id=attribute-component>
+  readonly attribute <a href='RTCIceComponent.html'>RTCIceComponent</a>? <strong>component</strong>;</span><span class=def id=attribute-priority>
+  readonly attribute <span class=primitive>unsigned long</span>? <strong>priority</strong>;</span><span class=def id=attribute-address>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>address</strong>;</span><span class=def id=attribute-protocol>
+  readonly attribute <a href='RTCIceProtocol.html'>RTCIceProtocol</a>? <strong>protocol</strong>;</span><span class=def id=attribute-port>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>port</strong>;</span><span class=def id=attribute-type>
+  readonly attribute <a href='RTCIceCandidateType.html'>RTCIceCandidateType</a>? <strong>type</strong>;</span><span class=def id=attribute-tcpType>
+  readonly attribute <a href='RTCIceTcpCandidateType.html'>RTCIceTcpCandidateType</a>? <strong>tcpType</strong>;</span><span class=def id=attribute-relatedAddress>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>relatedAddress</strong>;</span><span class=def id=attribute-relatedPort>
+  readonly attribute <span class=primitive>unsigned short</span>? <strong>relatedPort</strong>;</span><span class=def id=attribute-usernameFragment>
+  readonly attribute <span class=primitive>DOMString</span>? <strong>usernameFragment</strong>;</span><span class=def id=operation-toJSON>
   <a href='RTCIceCandidateInit.html'>RTCIceCandidateInit</a> <strong>toJSON</strong>();</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>RTCIceCandidate</code></h3>
+
+  <ul>
+    <li><code><a href="RTCIceCandidate.html">RTCIceCandidate</a><a href=RTCIceCandidate.html#constructor-RTCIceCandidateInit>()</a></code></li>
+<li><code><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a><a href=RTCPeerConnectionIceEvent.html#attribute-candidate>.candidate</a></code></li>
+<li><code><a href="RTCIceTransport.html">RTCIceTransport</a><a href=RTCIceTransport.html#operation-getLocalCandidates>.getLocalCandidates()</a></code></li>
+<li><code><a href="RTCIceTransport.html">RTCIceTransport</a><a href=RTCIceTransport.html#operation-getRemoteCandidates>.getRemoteCandidates()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="RTCIceCandidatePair.html">RTCIceCandidatePair</a></li>
-<li><a href="RTCIceTransport.html">RTCIceTransport</a></li>
-<li><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></li>
-<li><a href="RTCPeerConnectionIceEventInit.html">RTCPeerConnectionIceEventInit</a></li>
+    <li><code><a href="RTCIceCandidatePair.html">RTCIceCandidatePair</a></code></li>
+<li><code><a href="RTCIceTransport.html">RTCIceTransport</a></code></li>
+<li><code><a href="RTCPeerConnectionIceEvent.html">RTCPeerConnectionIceEvent</a></code></li>
+<li><code><a href="RTCPeerConnectionIceEventInit.html">RTCPeerConnectionIceEventInit</a></code></li>
 
   </ul>
 </section>

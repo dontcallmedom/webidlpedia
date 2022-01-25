@@ -12,22 +12,22 @@ base: ../
 <a href='DedicatedWorkerGlobalScope.html'>DedicatedWorkerGlobalScope</a> includes <a href='AnimationFrameProvider.html'>AnimationFrameProvider</a>;</span><span class=def>
 
 [Global&#x3D;(<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>),Exposed&#x3D;<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>]
-interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def>
-  [Replaceable] readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def id=attribute-name>
+  [Replaceable] readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=operation-postMessage-any-object>
 
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def id=operation-postMessage-any-StructuredSerializeOptions>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-close>
 
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onmessage>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-encoded-transform&#x2F;#scriptTransform">WebRTC Encoded Transform</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>DedicatedWorkerGlobalScope</strong> {<span class=def>
+partial interface <strong>DedicatedWorkerGlobalScope</strong> {<span class=def id=attribute-onrtctransform>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrtctransform</strong>;</span>
 };</span></code></pre></li>
 
@@ -35,21 +35,22 @@ partial interface <strong>DedicatedWorkerGlobalScope</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Global&#x3D;(<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>),Exposed&#x3D;<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>]
-interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def>
-  [Replaceable] readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def>
+interface <strong>DedicatedWorkerGlobalScope</strong> : <a href='WorkerGlobalScope.html'>WorkerGlobalScope</a> {<span class=def id=attribute-name>
+  [Replaceable] readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=operation-postMessage-any-object>
 
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def id=operation-postMessage-any-StructuredSerializeOptions>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-close>
 
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onmessage>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def>
-  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span><span class=def id=operation-requestAnimationFrame-FrameRequestCallback>
+  <span class=primitive>unsigned long</span> <strong>requestAnimationFrame</strong>(<a href='FrameRequestCallback.html'>FrameRequestCallback</a> <strong>callback</strong>);</span><span class=def id=operation-cancelAnimationFrame-unsigned long>
+  <span class=primitive>undefined</span> <strong>cancelAnimationFrame</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span><span class=def id=attribute-onrtctransform>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onrtctransform</strong>;</span>
 };</span></code></pre></details>
 </section>
+
 
   <section><h3>Referring specifications</h3>
   <ul>

@@ -11,7 +11,7 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>XPathEvaluator</strong> {<span class=def>
+interface <strong>XPathEvaluator</strong> {<span class=def id=constructor>
   <strong>constructor</strong>();</span>
 };</span><span class=def>
 
@@ -20,13 +20,21 @@ interface <strong>XPathEvaluator</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>XPathEvaluator</strong> {<span class=def>
-  <strong>constructor</strong>();</span><span class=def>
-  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def>
-  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def><span class="comment">
+interface <strong>XPathEvaluator</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=operation-createExpression-DOMString-XPathNSResolver>
+  [NewObject] <a href='XPathExpression.html'>XPathExpression</a> <strong>createExpression</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null);</span><span class=def id=operation-createNSResolver-Node>
+  <a href='XPathNSResolver.html'>XPathNSResolver</a> <strong>createNSResolver</strong>(<a href='Node.html'>Node</a> <strong>nodeResolver</strong>);</span><span class=def id=operation-evaluate-DOMString-Node-XPathNSResolver-unsigned short-XPathResult><span class="comment">
   &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
   </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>XPathEvaluator</code></h3>
+
+  <ul>
+    <li><code><a href="XPathEvaluator.html">XPathEvaluator</a><a href=XPathEvaluator.html#constructor>()</a></code></li>
+
+  </ul>
 </section>
 
   

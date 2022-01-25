@@ -11,14 +11,14 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>]
-interface <strong>LayoutFragment</strong> {<span class=def>
-    readonly attribute <span class=primitive>double</span> <strong>inlineSize</strong>;</span><span class=def>
-    readonly attribute <span class=primitive>double</span> <strong>blockSize</strong>;</span><span class=def>
+interface <strong>LayoutFragment</strong> {<span class=def id=attribute-inlineSize>
+    readonly attribute <span class=primitive>double</span> <strong>inlineSize</strong>;</span><span class=def id=attribute-blockSize>
+    readonly attribute <span class=primitive>double</span> <strong>blockSize</strong>;</span><span class=def id=attribute-inlineOffset>
 
-    attribute <span class=primitive>double</span> <strong>inlineOffset</strong>;</span><span class=def>
-    attribute <span class=primitive>double</span> <strong>blockOffset</strong>;</span><span class=def>
+    attribute <span class=primitive>double</span> <strong>inlineOffset</strong>;</span><span class=def id=attribute-blockOffset>
+    attribute <span class=primitive>double</span> <strong>blockOffset</strong>;</span><span class=def id=attribute-data>
 
-    readonly attribute <span class=primitive>any</span> <strong>data</strong>;</span><span class=def>
+    readonly attribute <span class=primitive>any</span> <strong>data</strong>;</span><span class=def id=attribute-breakToken>
 
     readonly attribute <a href='ChildBreakToken.html'>ChildBreakToken</a>? <strong>breakToken</strong>;</span>
 };</span></code></pre>
@@ -26,11 +26,19 @@ interface <strong>LayoutFragment</strong> {<span class=def>
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>LayoutFragment</code></h3>
+
+  <ul>
+    <li><code><a href="LayoutChild.html">LayoutChild</a><a href=LayoutChild.html#operation-layoutNextFragment-LayoutConstraintsOptions-ChildBreakToken>.layoutNextFragment()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="FragmentResultOptions.html">FragmentResultOptions</a></li>
-<li><a href="LayoutChild.html">LayoutChild</a></li>
+    <li><code><a href="FragmentResultOptions.html">FragmentResultOptions</a></code></li>
+<li><code><a href="LayoutChild.html">LayoutChild</a></code></li>
 
   </ul>
 </section>

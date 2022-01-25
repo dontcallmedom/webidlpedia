@@ -11,296 +11,304 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-interface <strong>MLGraphBuilder</strong> {<span class=def><span class="comment">
+interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLContext><span class="comment">
   &#x2F;&#x2F; Construct the graph builder from the context.
-  </span><strong>constructor</strong>(<a href='MLContext.html'>MLContext</a> <strong>context</strong>);</span><span class=def><span class="comment">
+  </span><strong>constructor</strong>(<a href='MLContext.html'>MLContext</a> <strong>context</strong>);</span><span class=def id=operation-input-DOMString-MLOperandDescriptor><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph input.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>input</strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>input</strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>);</span><span class=def id=operation-constant-MLOperandDescriptor-MLBufferView><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph constant.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>, <a href='MLBufferView.html'>MLBufferView</a> <strong>bufferView</strong>);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>, <a href='MLBufferView.html'>MLBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-double-MLOperandType><span class="comment">
 
   &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
   &#x2F;&#x2F; Compile the graph up to the specified output operands
   </span><a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
                              optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-clamp-MLOperand-MLClampOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-concat-MLOperand-long>
   <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, <span class=primitive>long</span> <strong>axis</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>convTranspose2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
                             optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>div</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>max</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>min</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-add-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-sub-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-mul-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-div-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>div</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-max-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>max</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-min-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>min</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-pow-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>pow</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>abs</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>ceil</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>cos</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>exp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>floor</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>log</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>neg</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-abs-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>abs</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-ceil-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>ceil</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-cos-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>cos</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-exp-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>exp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-floor-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>floor</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-log-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>log</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-neg-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>neg</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-sin-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-tan-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>tan</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>elu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-elu-MLOperand-MLEluOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>elu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-elu-MLEluOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>elu</strong>(optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-long-long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
 
                         <span class=primitive>long</span> <strong>steps</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruOptions.html'>MLGruOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gruCell-MLOperand-MLOperand-MLOperand-MLOperand-long-MLGruCellOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gruCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
 
                   <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruCellOptions.html'>MLGruCellOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>hardSigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-hardSigmoid-MLOperand-MLHardSigmoidOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>hardSigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSigmoid-MLHardSigmoidOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>hardSigmoid</strong>(optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>hardSwish</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-hardSwish-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>hardSwish</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-hardSwish>
   <a href='MLOperator.html'>MLOperator</a> <strong>hardSwish</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-instanceNormalization-MLOperand-MLInstanceNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>instanceNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
 
                                 optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>leakyRelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-leakyRelu-MLOperand-MLLeakyReluOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>leakyRelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLLeakyReluOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>leakyRelu</strong>(optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-matmul-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>matmul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-linear-MLOperand-MLLinearOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-linear-MLLinearOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>linear</strong>(optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-pad-MLOperand-MLOperand-MLPadOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>pad</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>padding</strong>, optional <a href='MLPadOptions.html'>MLPadOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>averagePool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>l2Pool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-averagePool2d-MLOperand-MLPool2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>averagePool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-l2Pool2d-MLOperand-MLPool2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>l2Pool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-maxPool2d-MLOperand-MLPool2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>maxPool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL1</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL2</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSumExp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMean</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceProduct</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-reduceL1-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL1</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceL2-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL2</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceLogSum-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceLogSumExp-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSumExp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMax-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMean-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMean</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMin-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceProduct-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceProduct</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceSum-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceSumSquare-MLOperand-MLReduceOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>reduceSumSquare</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>relu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-relu-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>relu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-relu>
   <a href='MLOperator.html'>MLOperator</a> <strong>relu</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-resample2d-MLOperand-MLResample2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>resample2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLResample2dOptions.html'>MLResample2dOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-reshape-MLOperand-long>
   <a href='MLOperand.html'>MLOperand</a> <strong>reshape</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>newShape</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-sigmoid-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-sigmoid>
   <a href='MLOperator.html'>MLOperator</a> <strong>sigmoid</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-slice-MLOperand-long-long-MLSliceOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>slice</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>starts</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>sizes</strong>,
                 optional <a href='MLSliceOptions.html'>MLSliceOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softmax-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softplus-MLOperand-MLSoftplusOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-softplus-MLSoftplusOptions>
   <a href='MLOperator.html'>MLOperator</a> <strong>softplus</strong>(optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softsign-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-softsign>
   <a href='MLOperator.html'>MLOperator</a> <strong>softsign</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                           (<span class=primitive>unsigned long</span> or sequence&lt;<span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
                           optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-squeeze-MLOperand-MLSqueezeOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>squeeze</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLSqueezeOptions.html'>MLSqueezeOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>tanh</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-tanh-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>tanh</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-tanh>
   <a href='MLOperator.html'>MLOperator</a> <strong>tanh</strong>();</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-transpose-MLOperand-MLTransposeOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>transpose</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLTransposeOptions.html'>MLTransposeOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-interface <strong>MLGraphBuilder</strong> {<span class=def><span class="comment">
+interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLContext><span class="comment">
   &#x2F;&#x2F; Construct the graph builder from the context.
-  </span><strong>constructor</strong>(<a href='MLContext.html'>MLContext</a> <strong>context</strong>);</span><span class=def><span class="comment">
+  </span><strong>constructor</strong>(<a href='MLContext.html'>MLContext</a> <strong>context</strong>);</span><span class=def id=operation-input-DOMString-MLOperandDescriptor><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph input.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>input</strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>input</strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>);</span><span class=def id=operation-constant-MLOperandDescriptor-MLBufferView><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph constant.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>, <a href='MLBufferView.html'>MLBufferView</a> <strong>bufferView</strong>);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>desc</strong>, <a href='MLBufferView.html'>MLBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-double-MLOperandType><span class="comment">
 
   &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
   &#x2F;&#x2F; Compile the graph up to the specified output operands
-  </span><a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def>
+  </span><a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
-                             optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, <span class=primitive>long</span> <strong>axis</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+                             optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-concat-MLOperand-long>
+  <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, <span class=primitive>long</span> <strong>axis</strong>);</span><span class=def id=operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>convTranspose2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
-                            optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>div</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>max</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>min</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>pow</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>abs</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>ceil</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>cos</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>exp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>floor</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>log</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>neg</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>tan</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>elu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>elu</strong>(optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+                            optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-add-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-sub-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sub</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-mul-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>mul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-div-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>div</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-max-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>max</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-min-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>min</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-pow-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>pow</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-abs-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>abs</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-ceil-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>ceil</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-cos-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>cos</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-exp-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>exp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-floor-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>floor</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-log-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>log</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-neg-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>neg</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-sin-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-tan-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>tan</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-elu-MLOperand-MLEluOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>elu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-elu-MLEluOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>elu</strong>(optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-long-long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
 
-                        <span class=primitive>long</span> <strong>steps</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruOptions.html'>MLGruOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+                        <span class=primitive>long</span> <strong>steps</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruOptions.html'>MLGruOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gruCell-MLOperand-MLOperand-MLOperand-MLOperand-long-MLGruCellOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gruCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
 
-                  <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruCellOptions.html'>MLGruCellOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>hardSigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>hardSigmoid</strong>(optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>hardSwish</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>hardSwish</strong>();</span><span class=def>
+                  <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <span class=primitive>long</span> <strong>hiddenSize</strong>, optional <a href='MLGruCellOptions.html'>MLGruCellOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSigmoid-MLOperand-MLHardSigmoidOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>hardSigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSigmoid-MLHardSigmoidOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>hardSigmoid</strong>(optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSwish-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>hardSwish</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-hardSwish>
+  <a href='MLOperator.html'>MLOperator</a> <strong>hardSwish</strong>();</span><span class=def id=operation-instanceNormalization-MLOperand-MLInstanceNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>instanceNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
 
-                                optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>leakyRelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>leakyRelu</strong>(optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>matmul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>linear</strong>(optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>pad</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>padding</strong>, optional <a href='MLPadOptions.html'>MLPadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>averagePool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>l2Pool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>maxPool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL1</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL2</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSumExp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMean</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceProduct</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSumSquare</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>relu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>relu</strong>();</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>resample2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLResample2dOptions.html'>MLResample2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>reshape</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>newShape</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>sigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>sigmoid</strong>();</span><span class=def>
+                                optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLOperand-MLLeakyReluOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>leakyRelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLLeakyReluOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>leakyRelu</strong>(optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-matmul-MLOperand-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>matmul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-linear-MLOperand-MLLinearOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-linear-MLLinearOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>linear</strong>(optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-pad-MLOperand-MLOperand-MLPadOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>pad</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>padding</strong>, optional <a href='MLPadOptions.html'>MLPadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-averagePool2d-MLOperand-MLPool2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>averagePool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-l2Pool2d-MLOperand-MLPool2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>l2Pool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-maxPool2d-MLOperand-MLPool2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>maxPool2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLPool2dOptions.html'>MLPool2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceL1-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL1</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceL2-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceL2</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceLogSum-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceLogSumExp-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceLogSumExp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMax-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMean-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMean</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceMin-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceProduct-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceProduct</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceSum-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSum</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduceSumSquare-MLOperand-MLReduceOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reduceSumSquare</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLReduceOptions.html'>MLReduceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-relu-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>relu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-relu>
+  <a href='MLOperator.html'>MLOperator</a> <strong>relu</strong>();</span><span class=def id=operation-resample2d-MLOperand-MLResample2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>resample2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLResample2dOptions.html'>MLResample2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reshape-MLOperand-long>
+  <a href='MLOperand.html'>MLOperand</a> <strong>reshape</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>newShape</strong>);</span><span class=def id=operation-sigmoid-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>sigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-sigmoid>
+  <a href='MLOperator.html'>MLOperator</a> <strong>sigmoid</strong>();</span><span class=def id=operation-slice-MLOperand-long-long-MLSliceOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>slice</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>starts</strong>, sequence&lt;<span class=primitive>long</span>&gt; <strong>sizes</strong>,
-                optional <a href='MLSliceOptions.html'>MLSliceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>softplus</strong>(optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>softsign</strong>();</span><span class=def>
+                optional <a href='MLSliceOptions.html'>MLSliceOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-softmax-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-softplus-MLOperand-MLSoftplusOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-softplus-MLSoftplusOptions>
+  <a href='MLOperator.html'>MLOperator</a> <strong>softplus</strong>(optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-softsign-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-softsign>
+  <a href='MLOperator.html'>MLOperator</a> <strong>softsign</strong>();</span><span class=def id=operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                           (<span class=primitive>unsigned long</span> or sequence&lt;<span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
-                          optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>squeeze</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLSqueezeOptions.html'>MLSqueezeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <a href='MLOperand.html'>MLOperand</a> <strong>tanh</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def>
-  <a href='MLOperator.html'>MLOperator</a> <strong>tanh</strong>();</span><span class=def>
+                          optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-squeeze-MLOperand-MLSqueezeOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>squeeze</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLSqueezeOptions.html'>MLSqueezeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-tanh-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>tanh</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>);</span><span class=def id=operation-tanh>
+  <a href='MLOperator.html'>MLOperator</a> <strong>tanh</strong>();</span><span class=def id=operation-transpose-MLOperand-MLTransposeOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>transpose</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLTransposeOptions.html'>MLTransposeOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>MLGraphBuilder</code></h3>
+
+  <ul>
+    <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#constructor-MLContext>()</a></code></li>
+
+  </ul>
 </section>
 
   

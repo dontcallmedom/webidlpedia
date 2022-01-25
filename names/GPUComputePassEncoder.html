@@ -11,10 +11,10 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUComputePassEncoder</strong> {<span class=def>
-    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountX</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountY</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountZ</strong> &#x3D; 1);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def>
+interface <strong>GPUComputePassEncoder</strong> {<span class=def id=operation-setPipeline-GPUComputePipeline>
+    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);</span><span class=def id=operation-dispatch-GPUSize32-GPUSize32-GPUSize32>
+    <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountX</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountY</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountZ</strong> &#x3D; 1);</span><span class=def id=operation-dispatchIndirect-GPUBuffer-GPUSize64>
+    <span class=primitive>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def id=operation-endPass>
 
     <span class=primitive>undefined</span> <strong>endPass</strong>();</span>
 };</span><span class=def>
@@ -26,18 +26,18 @@ interface <strong>GPUComputePassEncoder</strong> {<span class=def>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUComputePassEncoder</strong> {<span class=def>
-    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountX</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountY</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountZ</strong> &#x3D; 1);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def>
+interface <strong>GPUComputePassEncoder</strong> {<span class=def id=operation-setPipeline-GPUComputePipeline>
+    <span class=primitive>undefined</span> <strong>setPipeline</strong>(<a href='GPUComputePipeline.html'>GPUComputePipeline</a> <strong>pipeline</strong>);</span><span class=def id=operation-dispatch-GPUSize32-GPUSize32-GPUSize32>
+    <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountX</strong>, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountY</strong> &#x3D; 1, optional <a href='GPUSize32.html'>GPUSize32</a> <strong>workgroupCountZ</strong> &#x3D; 1);</span><span class=def id=operation-dispatchIndirect-GPUBuffer-GPUSize64>
+    <span class=primitive>undefined</span> <strong>dispatchIndirect</strong>(<a href='GPUBuffer.html'>GPUBuffer</a> <strong>indirectBuffer</strong>, <a href='GPUSize64.html'>GPUSize64</a> <strong>indirectOffset</strong>);</span><span class=def id=operation-endPass>
 
-    <span class=primitive>undefined</span> <strong>endPass</strong>();</span><span class=def>
-    attribute (<span class=primitive>USVString</span> or <span class=primitive>undefined</span>) <strong>label</strong>;</span><span class=def>
-    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def>
-    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def>
-    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def>
+    <span class=primitive>undefined</span> <strong>endPass</strong>();</span><span class=def id=attribute-label>
+    attribute (<span class=primitive>USVString</span> or <span class=primitive>undefined</span>) <strong>label</strong>;</span><span class=def id=operation-pushDebugGroup-USVString>
+    <span class=primitive>undefined</span> <strong>pushDebugGroup</strong>(<span class=primitive>USVString</span> <strong>groupLabel</strong>);</span><span class=def id=operation-popDebugGroup>
+    <span class=primitive>undefined</span> <strong>popDebugGroup</strong>();</span><span class=def id=operation-insertDebugMarker-USVString>
+    <span class=primitive>undefined</span> <strong>insertDebugMarker</strong>(<span class=primitive>USVString</span> <strong>markerLabel</strong>);</span><span class=def id=operation-setBindGroup-GPUIndex32-GPUBindGroup-GPUBufferDynamicOffset>
     <span class=primitive>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
-                      optional sequence&lt;<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>&gt; <strong>dynamicOffsets</strong> &#x3D; []);</span><span class=def>
+                      optional sequence&lt;<a href='GPUBufferDynamicOffset.html'>GPUBufferDynamicOffset</a>&gt; <strong>dynamicOffsets</strong> &#x3D; []);</span><span class=def id=operation-setBindGroup-GPUIndex32-GPUBindGroup-Uint32Array-GPUSize64-GPUSize32>
 
     <span class=primitive>undefined</span> <strong>setBindGroup</strong>(<a href='GPUIndex32.html'>GPUIndex32</a> <strong>index</strong>, <a href='GPUBindGroup.html'>GPUBindGroup</a> <strong>bindGroup</strong>,
                       <a href='Uint32Array.html'>Uint32Array</a> <strong>dynamicOffsetsData</strong>,
@@ -46,10 +46,18 @@ interface <strong>GPUComputePassEncoder</strong> {<span class=def>
 };</span></code></pre></details>
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>GPUComputePassEncoder</code></h3>
+
+  <ul>
+    <li><code><a href="GPUCommandEncoder.html">GPUCommandEncoder</a><a href=GPUCommandEncoder.html#operation-beginComputePass-GPUComputePassDescriptor>.beginComputePass()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></li>
+    <li><code><a href="GPUCommandEncoder.html">GPUCommandEncoder</a></code></li>
 
   </ul>
 </section>

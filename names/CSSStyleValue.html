@@ -9,27 +9,38 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;css-typed-om-1&#x2F;#cssstylevalue">CSS Typed OM Level 1</a> defines <code>CSSStyleValue</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>, <a class=realm href='../globals/PaintWorklet.html'>PaintWorklet</a>, <a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>)]
-interface <strong>CSSStyleValue</strong> {<span class=def>
-    <strong>stringifier</strong>;</span><span class=def>
-    [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static <a href='CSSStyleValue.html'>CSSStyleValue</a> <strong>parse</strong>(<span class=primitive>USVString</span> <strong>property</strong>, <span class=primitive>USVString</span> <strong>cssText</strong>);</span><span class=def>
+interface <strong>CSSStyleValue</strong> {<span class=def id=operation-stringifier>
+    <strong>stringifier</strong>;</span><span class=def id=operation-static>
+    [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static <a href='CSSStyleValue.html'>CSSStyleValue</a> <strong>parse</strong>(<span class=primitive>USVString</span> <strong>property</strong>, <span class=primitive>USVString</span> <strong>cssText</strong>);</span><span class=def id=operation-static>
     [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static sequence&lt;<a href='CSSStyleValue.html'>CSSStyleValue</a>&gt; <strong>parseAll</strong>(<span class=primitive>USVString</span> <strong>property</strong>, <span class=primitive>USVString</span> <strong>cssText</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>CSSStyleValue</code></h3>
+
+  <ul>
+    <li><code><a href="CSSStyleValue.html">CSSStyleValue</a><a href=CSSStyleValue.html#operation-static>.parse()</a></code></li>
+<li><code><a href="CSSStyleValue.html">CSSStyleValue</a><a href=CSSStyleValue.html#operation-static>.parseAll()</a></code></li>
+<li><code><a href="StylePropertyMapReadOnly.html">StylePropertyMapReadOnly</a><a href=StylePropertyMapReadOnly.html#operation-getAll-USVString>.getAll()</a></code></li>
+<li><code><a href="CSSColorValue.html">CSSColorValue</a><a href=CSSColorValue.html#operation-static>.parse()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="CSSColorValue.html">CSSColorValue</a></li>
-<li><a href="CSSImageValue.html">CSSImageValue</a></li>
-<li><a href="CSSKeywordValue.html">CSSKeywordValue</a></li>
-<li><a href="CSSNumericValue.html">CSSNumericValue</a></li>
-<li><a href="CSSStyleValue.html">CSSStyleValue</a></li>
-<li><a href="CSSTransformValue.html">CSSTransformValue</a></li>
-<li><a href="CSSUnparsedValue.html">CSSUnparsedValue</a></li>
-<li><a href="StylePropertyMap.html">StylePropertyMap</a></li>
-<li><a href="StylePropertyMapReadOnly.html">StylePropertyMapReadOnly</a></li>
+    <li><code><a href="CSSColorValue.html">CSSColorValue</a></code></li>
+<li><code><a href="CSSImageValue.html">CSSImageValue</a></code></li>
+<li><code><a href="CSSKeywordValue.html">CSSKeywordValue</a></code></li>
+<li><code><a href="CSSNumericValue.html">CSSNumericValue</a></code></li>
+<li><code><a href="CSSStyleValue.html">CSSStyleValue</a></code></li>
+<li><code><a href="CSSTransformValue.html">CSSTransformValue</a></code></li>
+<li><code><a href="CSSUnparsedValue.html">CSSUnparsedValue</a></code></li>
+<li><code><a href="StylePropertyMap.html">StylePropertyMap</a></code></li>
+<li><code><a href="StylePropertyMapReadOnly.html">StylePropertyMapReadOnly</a></code></li>
 
   </ul>
 </section>

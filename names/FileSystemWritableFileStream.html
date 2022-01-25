@@ -11,19 +11,27 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
-interface <strong>FileSystemWritableFileStream</strong> : <a href='WritableStream.html'>WritableStream</a> {<span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>write</strong>(<a href='FileSystemWriteChunkType.html'>FileSystemWriteChunkType</a> <strong>data</strong>);</span><span class=def>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>seek</strong>(<span class=primitive>unsigned long long</span> <strong>position</strong>);</span><span class=def>
+interface <strong>FileSystemWritableFileStream</strong> : <a href='WritableStream.html'>WritableStream</a> {<span class=def id=operation-write-FileSystemWriteChunkType>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>write</strong>(<a href='FileSystemWriteChunkType.html'>FileSystemWriteChunkType</a> <strong>data</strong>);</span><span class=def id=operation-seek-unsigned long long>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>seek</strong>(<span class=primitive>unsigned long long</span> <strong>position</strong>);</span><span class=def id=operation-truncate-unsigned long long>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>truncate</strong>(<span class=primitive>unsigned long long</span> <strong>size</strong>);</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>FileSystemWritableFileStream</code></h3>
+
+  <ul>
+    <li><code><a href="FileSystemFileHandle.html">FileSystemFileHandle</a><a href=FileSystemFileHandle.html#operation-createWritable-FileSystemCreateWritableOptions>.createWritable()</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></li>
+    <li><code><a href="FileSystemFileHandle.html">FileSystemFileHandle</a></code></li>
 
   </ul>
 </section>

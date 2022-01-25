@@ -11,31 +11,48 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>,<a class=realm href='../globals/AudioWorklet.html'>AudioWorklet</a>), Transferable]
-interface <strong>MessagePort</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def>
-  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
-  <span class=primitive>undefined</span> <strong>start</strong>();</span><span class=def>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def><span class="comment">
+interface <strong>MessagePort</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-postMessage-any-object>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, sequence&lt;<span class=primitive>object</span>&gt; <strong>transfer</strong>);</span><span class=def id=operation-postMessage-any-StructuredSerializeOptions>
+  <span class=primitive>undefined</span> <strong>postMessage</strong>(<span class=primitive>any</span> <strong>message</strong>, optional <a href='StructuredSerializeOptions.html'>StructuredSerializeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-start>
+  <span class=primitive>undefined</span> <strong>start</strong>();</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-onmessage><span class="comment">
 
   &#x2F;&#x2F; event handlers
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-onmessageerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessageerror</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>MessagePort</code></h3>
+
+  <ul>
+    <li><code><a href="MessageEvent.html">MessageEvent</a><a href=MessageEvent.html#attribute-ports>.ports</a></code></li>
+<li><code><a href="MessageChannel.html">MessageChannel</a><a href=MessageChannel.html#attribute-port1>.port1</a></code></li>
+<li><code><a href="MessageChannel.html">MessageChannel</a><a href=MessageChannel.html#attribute-port2>.port2</a></code></li>
+<li><code><a href="SharedWorker.html">SharedWorker</a><a href=SharedWorker.html#attribute-port>.port</a></code></li>
+<li><code><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a><a href=ExtendableMessageEvent.html#attribute-source>.source</a></code></li>
+<li><code><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a><a href=ExtendableMessageEvent.html#attribute-ports>.ports</a></code></li>
+<li><code><a href="AudioWorkletNode.html">AudioWorkletNode</a><a href=AudioWorkletNode.html#attribute-port>.port</a></code></li>
+<li><code><a href="AudioWorkletProcessor.html">AudioWorkletProcessor</a><a href=AudioWorkletProcessor.html#attribute-port>.port</a></code></li>
+<li><code><a href="MessageEvent.html">MessageEvent</a><a href=MessageEvent.html#attribute-source>.source</a></code></li>
+<li><code><a href="MessageEvent.html">MessageEvent</a><a href=MessageEvent.html#attribute-source>.source</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="AudioWorkletNode.html">AudioWorkletNode</a></li>
-<li><a href="AudioWorkletProcessor.html">AudioWorkletProcessor</a></li>
-<li><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></li>
-<li><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></li>
-<li><a href="MessageChannel.html">MessageChannel</a></li>
-<li><a href="MessageEvent.html">MessageEvent</a></li>
-<li><a href="MessageEventInit.html">MessageEventInit</a></li>
-<li><a href="SharedWorker.html">SharedWorker</a></li>
+    <li><code><a href="AudioWorkletNode.html">AudioWorkletNode</a></code></li>
+<li><code><a href="AudioWorkletProcessor.html">AudioWorkletProcessor</a></code></li>
+<li><code><a href="ExtendableMessageEvent.html">ExtendableMessageEvent</a></code></li>
+<li><code><a href="ExtendableMessageEventInit.html">ExtendableMessageEventInit</a></code></li>
+<li><code><a href="MessageChannel.html">MessageChannel</a></code></li>
+<li><code><a href="MessageEvent.html">MessageEvent</a></code></li>
+<li><code><a href="MessageEventInit.html">MessageEventInit</a></code></li>
+<li><code><a href="SharedWorker.html">SharedWorker</a></code></li>
 
   </ul>
 </section>

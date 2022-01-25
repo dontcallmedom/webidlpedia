@@ -11,12 +11,12 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-interface <strong>AbortSignal</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  [NewObject] static <a href='AbortSignal.html'>AbortSignal</a> <strong>abort</strong>(optional <span class=primitive>any</span> <strong>reason</strong>);</span><span class=def>
+interface <strong>AbortSignal</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-static>
+  [NewObject] static <a href='AbortSignal.html'>AbortSignal</a> <strong>abort</strong>(optional <span class=primitive>any</span> <strong>reason</strong>);</span><span class=def id=attribute-aborted>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>aborted</strong>;</span><span class=def>
-  readonly attribute <span class=primitive>any</span> <strong>reason</strong>;</span><span class=def>
-  <span class=primitive>undefined</span> <strong>throwIfAborted</strong>();</span><span class=def>
+  readonly attribute <span class=primitive>boolean</span> <strong>aborted</strong>;</span><span class=def id=attribute-reason>
+  readonly attribute <span class=primitive>any</span> <strong>reason</strong>;</span><span class=def id=operation-throwIfAborted>
+  <span class=primitive>undefined</span> <strong>throwIfAborted</strong>();</span><span class=def id=attribute-onabort>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span>
 };</span></code></pre>
@@ -24,30 +24,42 @@ interface <strong>AbortSignal</strong> : <a href='EventTarget.html'>EventTarget<
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>AbortSignal</code></h3>
+
+  <ul>
+    <li><code><a href="AbortController.html">AbortController</a><a href=AbortController.html#attribute-signal>.signal</a></code></li>
+<li><code><a href="AbortSignal.html">AbortSignal</a><a href=AbortSignal.html#operation-static>.abort()</a></code></li>
+<li><code><a href="Request.html">Request</a><a href=Request.html#attribute-signal>.signal</a></code></li>
+<li><code><a href="WritableStreamDefaultController.html">WritableStreamDefaultController</a><a href=WritableStreamDefaultController.html#attribute-signal>.signal</a></code></li>
+<li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a><a href=AppHistoryNavigateEvent.html#attribute-signal>.signal</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul class=long>
-    <li><a href="AbortController.html">AbortController</a></li>
-<li><a href="AbortSignal.html">AbortSignal</a></li>
-<li><a href="AddEventListenerOptions.html">AddEventListenerOptions</a></li>
-<li><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></li>
-<li><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></li>
-<li><a href="ColorSelectionOptions.html">ColorSelectionOptions</a></li>
-<li><a href="CredentialCreationOptions.html">CredentialCreationOptions</a></li>
-<li><a href="CredentialRequestOptions.html">CredentialRequestOptions</a></li>
-<li><a href="IdleOptions.html">IdleOptions</a></li>
-<li><a href="LockOptions.html">LockOptions</a></li>
-<li><a href="NDEFMakeReadOnlyOptions.html">NDEFMakeReadOnlyOptions</a></li>
-<li><a href="NDEFScanOptions.html">NDEFScanOptions</a></li>
-<li><a href="NDEFWriteOptions.html">NDEFWriteOptions</a></li>
-<li><a href="ReadOptions.html">ReadOptions</a></li>
-<li><a href="Request.html">Request</a></li>
-<li><a href="RequestInit.html">RequestInit</a></li>
-<li><a href="SchedulerPostTaskOptions.html">SchedulerPostTaskOptions</a></li>
-<li><a href="StreamPipeOptions.html">StreamPipeOptions</a></li>
-<li><a href="TaskSignal.html">TaskSignal</a></li>
-<li><a href="WatchAdvertisementsOptions.html">WatchAdvertisementsOptions</a></li>
-<li><a href="WritableStreamDefaultController.html">WritableStreamDefaultController</a></li>
+    <li><code><a href="AbortController.html">AbortController</a></code></li>
+<li><code><a href="AbortSignal.html">AbortSignal</a></code></li>
+<li><code><a href="AddEventListenerOptions.html">AddEventListenerOptions</a></code></li>
+<li><code><a href="AppHistoryNavigateEvent.html">AppHistoryNavigateEvent</a></code></li>
+<li><code><a href="AppHistoryNavigateEventInit.html">AppHistoryNavigateEventInit</a></code></li>
+<li><code><a href="ColorSelectionOptions.html">ColorSelectionOptions</a></code></li>
+<li><code><a href="CredentialCreationOptions.html">CredentialCreationOptions</a></code></li>
+<li><code><a href="CredentialRequestOptions.html">CredentialRequestOptions</a></code></li>
+<li><code><a href="IdleOptions.html">IdleOptions</a></code></li>
+<li><code><a href="LockOptions.html">LockOptions</a></code></li>
+<li><code><a href="NDEFMakeReadOnlyOptions.html">NDEFMakeReadOnlyOptions</a></code></li>
+<li><code><a href="NDEFScanOptions.html">NDEFScanOptions</a></code></li>
+<li><code><a href="NDEFWriteOptions.html">NDEFWriteOptions</a></code></li>
+<li><code><a href="ReadOptions.html">ReadOptions</a></code></li>
+<li><code><a href="Request.html">Request</a></code></li>
+<li><code><a href="RequestInit.html">RequestInit</a></code></li>
+<li><code><a href="SchedulerPostTaskOptions.html">SchedulerPostTaskOptions</a></code></li>
+<li><code><a href="StreamPipeOptions.html">StreamPipeOptions</a></code></li>
+<li><code><a href="TaskSignal.html">TaskSignal</a></code></li>
+<li><code><a href="WatchAdvertisementsOptions.html">WatchAdvertisementsOptions</a></code></li>
+<li><code><a href="WritableStreamDefaultController.html">WritableStreamDefaultController</a></code></li>
 
   </ul>
 </section>

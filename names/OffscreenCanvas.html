@@ -11,32 +11,45 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), Transferable]
-interface <strong>OffscreenCanvas</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def>
-  <strong>constructor</strong>([EnforceRange] <span class=primitive>unsigned long long</span> <strong>width</strong>, [EnforceRange] <span class=primitive>unsigned long long</span> <strong>height</strong>);</span><span class=def>
+interface <strong>OffscreenCanvas</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-unsigned long long-unsigned long long>
+  <strong>constructor</strong>([EnforceRange] <span class=primitive>unsigned long long</span> <strong>width</strong>, [EnforceRange] <span class=primitive>unsigned long long</span> <strong>height</strong>);</span><span class=def id=attribute-width>
 
-  attribute [EnforceRange] <span class=primitive>unsigned long long</span> <strong>width</strong>;</span><span class=def>
-  attribute [EnforceRange] <span class=primitive>unsigned long long</span> <strong>height</strong>;</span><span class=def>
+  attribute [EnforceRange] <span class=primitive>unsigned long long</span> <strong>width</strong>;</span><span class=def id=attribute-height>
+  attribute [EnforceRange] <span class=primitive>unsigned long long</span> <strong>height</strong>;</span><span class=def id=operation-getContext-OffscreenRenderingContextId-any>
 
-  <a href='OffscreenRenderingContext.html'>OffscreenRenderingContext</a>? <strong>getContext</strong>(<a href='OffscreenRenderingContextId.html'>OffscreenRenderingContextId</a> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def>
-  <a href='ImageBitmap.html'>ImageBitmap</a> <strong>transferToImageBitmap</strong>();</span><span class=def>
-  Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>convertToBlob</strong>(optional <a href='ImageEncodeOptions.html'>ImageEncodeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def>
+  <a href='OffscreenRenderingContext.html'>OffscreenRenderingContext</a>? <strong>getContext</strong>(<a href='OffscreenRenderingContextId.html'>OffscreenRenderingContextId</a> <strong>contextId</strong>, optional <span class=primitive>any</span> <strong>options</strong> &#x3D; null);</span><span class=def id=operation-transferToImageBitmap>
+  <a href='ImageBitmap.html'>ImageBitmap</a> <strong>transferToImageBitmap</strong>();</span><span class=def id=operation-convertToBlob-ImageEncodeOptions>
+  Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>convertToBlob</strong>(optional <a href='ImageEncodeOptions.html'>ImageEncodeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-oncontextlost>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextrestored>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span>
 };</span></code></pre>
   
   
 </section>
 <section>
+<h3>Methods and attributes that return objects implementing <code>OffscreenCanvas</code></h3>
+
+  <ul>
+    <li><code><a href="OffscreenCanvas.html">OffscreenCanvas</a><a href=OffscreenCanvas.html#constructor-unsigned long long-unsigned long long>()</a></code></li>
+<li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a><a href=HTMLCanvasElement.html#operation-transferControlToOffscreen>.transferControlToOffscreen()</a></code></li>
+<li><code><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a><a href=ImageBitmapRenderingContext.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a><a href=OffscreenCanvasRenderingContext2D.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a><a href=WebGLRenderingContextBase.html#attribute-canvas>.canvas</a></code></li>
+<li><code><a href="GPUCanvasContext.html">GPUCanvasContext</a><a href=GPUCanvasContext.html#attribute-canvas>.canvas</a></code></li>
+
+  </ul>
+</section>
+<section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><a href="GPUCanvasContext.html">GPUCanvasContext</a></li>
-<li><a href="GPUImageCopyExternalImage.html">GPUImageCopyExternalImage</a></li>
-<li><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></li>
-<li><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></li>
-<li><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></li>
-<li><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></li>
+    <li><code><a href="GPUCanvasContext.html">GPUCanvasContext</a></code></li>
+<li><code><a href="GPUImageCopyExternalImage.html">GPUImageCopyExternalImage</a></code></li>
+<li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></code></li>
+<li><code><a href="ImageBitmapRenderingContext.html">ImageBitmapRenderingContext</a></code></li>
+<li><code><a href="OffscreenCanvasRenderingContext2D.html">OffscreenCanvasRenderingContext2D</a></code></li>
+<li><code><a href="WebGLRenderingContextBase.html">WebGLRenderingContextBase</a></code></li>
 
   </ul>
 </section>
