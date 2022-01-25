@@ -8,6 +8,61 @@ const arrayify = arr => Array.isArray(arr) ? arr : [{value: arr}];
 const hasIdlDef = s => s.idlparsed && s.idlparsed.idlNames;
 const defaultSort = (a,b) => a.value < b.value ? -1 : (a.value > b.value ? 1 : 0);
 
+const walkTypeTree = fn => idlType => Array.isArray(idlType) ? idlType.map(walkTypeTree(fn)): (idlType.idlType ? walkTypeTree(fn)(idlType.idlType) : fn(idlType));
+
+const isDerivativeOfType = (idlType, refType) => {
+  if (!idlType) return false;
+  let types = walkTypeTree(t => t)(idlType);
+  types = Array.isArray(types) ? types.flat() : [types];
+  return types.includes(refType);
+}
+
+const generateIdlMemberId = member => {
+  if (member.type === "attribute" || member.type === "const") {
+    return `${member.type}-${member.name}`;
+  } else if (member.type === "operation") {
+    // special ops
+    if (member.special) {
+      return `${member.type}-${member.special}`;
+    } else {
+      // to account for overloaded ops
+      // use the list of type of arguments to further qualify the op
+      const argumentTypes = member.arguments.map(arg => walkTypeTree(t => t)(arg.idlType)).flat();
+      return `${member.type}-${member.name}${argumentTypes.length ? html`-` : ''}${argumentTypes.join('-')}`;
+    }
+  } else if (member.type === "constructor") {
+    const argumentTypes = member.arguments.map(arg => walkTypeTree(t => t)(arg.idlType)).flat();
+      return `${member.type}${argumentTypes.length ? html`-` : ''}${argumentTypes.join('-')}`;
+  }
+};
+
+function findMembersWithType(idlType, results, used_by) {
+  let matchingMembers = [];
+  for (const using of used_by[idlType]) {
+    results.filter(s => s?.idlparsed?.idlNames && s.idlparsed.idlNames[using] && ["interface", "interface mixin"].includes(s.idlparsed.idlNames[using].type))
+      .forEach(s => {
+        const members = s.idlparsed.idlNames[using].members.filter(m => m.idlType && isDerivativeOfType(m.idlType.idlType, idlType));
+        if (members.length) {
+          matchingMembers.push({
+            interface: using,
+            members
+          });
+        }
+      });
+    results.filter(s => s?.idlparsed?.idlExtendedNames && s.idlparsed.idlExtendedNames[using]?.length && ["interface", "interface mixin"].includes(s.idlparsed.idlExtendedNames[using][0].type))
+      .forEach(s => {
+        const members = s.idlparsed.idlExtendedNames[using].map(iface => (iface.members || []).filter(m => m.idlType && isDerivativeOfType(m.idlType.idlType, idlType))).flat();
+        if (members.length) {
+          matchingMembers.push(
+            {interface: using,
+             members
+            });
+        }
+      });
+  }
+  return matchingMembers;
+}
+
 // FIXME: this global variable is filled in interfaceDetails()
 // and used in globalDetails
 let consolidatedIdlMembersByInterface = {};
@@ -145,7 +200,7 @@ function extendedIdlDfnLink(name, spec) {
   return url;
 }
 
-function interfaceDetails(data, name, used_by, templates) {
+function interfaceDetails(data, name, used_by, obtainable_from, templates) {
   let type;
   let mainDefItems = [];
   let mainDefSpecs = [];
@@ -154,6 +209,7 @@ function interfaceDetails(data, name, used_by, templates) {
   let needsConsolidation = false;
   let namespace;
   let displayName = name;
+
   data.filter(hasIdlDef)
     .filter(spec => spec.idlparsed.idlNames[name])
     .forEach(spec => {
@@ -214,10 +270,45 @@ function interfaceDetails(data, name, used_by, templates) {
     consolidatedDef = html`<details><summary>Consolidated IDL (across ${consolidatedIdlDef && consolidatedIdlDef.type === "interface" ? "mixin and " : ""}partials)</summary><pre class=webidl><code>${webidl.write([consolidatedIdlDef], {templates})}</code></pre></details>`;
   }
 
+  let htmlObtainableFrom = html``;
+  let htmlObtainableFromList = [];
+  (obtainable_from[name] || []).forEach(({interface, members}) => {
+    members.forEach(m => {
+      const id = generateIdlMemberId(m);
+      const url = id ? html`${interface}.html#${id}` : '';
+      let handle = '';
+      if (!m.name) {
+        // specialize the representation of constructor()
+        // and  getter
+        if (m.type === "constructor") {
+          handle = html`()`;
+        } else if (m.special === "getter") {
+          handle = html`[<var>${m.arguments[0].name}</var>]`;
+        } else if (m.special === "setter") {
+          // Not particularly useful to list since a setter
+          // at best only gives back the object it takes as input
+          // thus skipping
+        } else {
+          console.error(`Unexpected unnamed member of type ${m.special}: ${JSON.stringify(m, null, 2)}`);
+        }
+      } else {
+        handle = html`.${m.name}${m.type === "operation" ? html`()` : ''}`;
+      }
+      const code = html`<code><a href="${interface}.html">${interface}</a>${url ? html`<a href=${url}>`: ''}${handle}${url ? html`</a>` : ''}</code>`;
+      htmlObtainableFromList.push(code);
+    });
+    if (htmlObtainableFromList.length) {
+      htmlObtainableFrom = html`<section>
+<h3>Methods and attributes that return objects implementing <code>${displayName}</code></h3>
+${htmlList(htmlObtainableFromList)}
+</section>`;
+    }
+  });
+
   let usedBy = html``;
   let usedByList = [];
   (used_by[name].sort() || []).forEach(n => {
-    usedByList.push(html`<a href="${n}.html">${n}</a>`);
+    usedByList.push(html`<code><a href="${n}.html">${n}</a></code>`);
   });
   if (usedByList.length) {
     usedBy = html`<section>
@@ -242,6 +333,7 @@ function interfaceDetails(data, name, used_by, templates) {
   ${partialDef}
   ${consolidatedDef}
 </section>
+${htmlObtainableFrom}
 ${usedBy}
   ${refs}`};
 }
@@ -399,14 +491,27 @@ fs.readFile("./webref/ed/index.json", "utf-8")
     let exposed_on = {};
     let globals = {};
     let used_by = {};
+    let obtainable_from = {};
+    let aliases = {};
     results.forEach(s => {
       if (s.idlparsed && s.idlparsed.idlNames) {
         Object.keys(s.idlparsed.idlNames).forEach(n => {
           if (!used_by[n]) used_by[n] = [];
           // TODO: uses idlparsed.exposed && idlparsed.globals instead
           if (s.idlparsed.idlNames[n].type === "interface") {
+            const iface = s.idlparsed.idlNames[n];
+            if (!obtainable_from[n]) {
+              obtainable_from[n] = [];
+            }
+            if (iface.members.find(m => m.type === "constructor")) {
+              obtainable_from[n].push(
+                {
+                  interface: n,
+                  members: iface.members.filter(m => m.type === "constructor")
+                });
+            }
             exposed_on[n] = ["Window"]; // default if no ext attr specified
-            const exposedEA = s.idlparsed.idlNames[n].extAttrs ? s.idlparsed.idlNames[n].extAttrs.find(ea => ea.name === "Exposed") || {} : {};
+            const exposedEA = iface.extAttrs ? iface.extAttrs.find(ea => ea.name === "Exposed") || {} : {};
             if (exposedEA.rhs) {
               if (Array.isArray(exposedEA.rhs.value)) {
                 exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
@@ -414,7 +519,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
                 exposed_on[n] = [exposedEA.rhs.value];
               }
             }
-            const globalEA = s.idlparsed.idlNames[n].extAttrs ? s.idlparsed.idlNames[n].extAttrs.find(ea => ea.name === "Global") || {} : {};
+            const globalEA = iface.extAttrs ? iface.extAttrs.find(ea => ea.name === "Global") || {} : {};
             if (globalEA.rhs) {
               let globalValues = arrayify(globalEA.rhs.value);
               for (const {value} of globalValues)  {
@@ -425,6 +530,15 @@ fs.readFile("./webref/ed/index.json", "utf-8")
                 }
                 globals[value].components.push(n);
               }
+            }
+          } else if (s.idlparsed.idlNames[n].type === "typedef") {
+            let typedefContains =walkTypeTree(t => t)(s.idlparsed.idlNames[n].idlType);
+            typedefContains = Array.isArray(typedefContains) ? typedefContains.flat() : [typedefContains];
+            for (const idlType of typedefContains) {
+              if (!aliases[idlType]) {
+                aliases[idlType] = [];
+              }
+              aliases[idlType].push(s.idlparsed.idlNames[n].name);
             }
           }
         });
@@ -438,6 +552,16 @@ fs.readFile("./webref/ed/index.json", "utf-8")
         });
       }
     });
+    // Determine which method / attributes allow to obtain interfaces
+    for (const name of Object.keys(obtainable_from)) {
+      // we can restrict the search to IDL names that have a dependency to us
+      // and that are interfaces or interface mixins
+      obtainable_from[name] = obtainable_from[name].concat(findMembersWithType(name, results, used_by));
+      // typedef-aliases may hide other ways to obtain the interface
+      for (const alias of (aliases[name] || [])) {
+        obtainable_from[name] = obtainable_from[name].concat(findMembersWithType(alias, results, used_by));
+      }
+    }
     for (const name of Object.keys(exposed_on)) {
       let globalValues = exposed_on[name];
       if (exposed_on[name].includes('*')) {
@@ -484,11 +608,14 @@ fs.readFile("./webref/ed/index.json", "utf-8")
           }
           return html`<span class="comment">${t}</span>`;
         },
-        definition: content => html`<span class=def>${content}</span>`,
+        definition: (content, {data}) => {
+          let id= generateIdlMemberId(data);
+          return html`<span class=def${id ? html` id=${id}` : ''}>${content}</span>`;
+        },
         name: name => html`<strong>${name}</strong>`,
         nameless: kw => html`<strong>${kw}</strong>`,
         reference: (name, _, context) => {
-          // distinguish case where we're dealing with realm types rather than IDL tyeps
+          // distinguish case where we're dealing with realm types rather than IDL types
           if (context.type === "extended-attribute" && ["Exposed", "Global"].includes(context.name)) {
             return globals[name] ? html`<a class=realm href='../globals/${name}.html'>${name}</a>` : html`<span class=realm>${name}</span>`;
           }
@@ -499,7 +626,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
 
     // Generating referenceable name pages
     for (let n of Object.keys(used_by)) {
-      const {title, content} = interfaceDetails(results, n, used_by, webidlTemplate());
+      const {title, content} = interfaceDetails(results, n, used_by, obtainable_from, webidlTemplate());
       await generatePage("names/" + n + ".html", title, content, 'names/');
     }
 
