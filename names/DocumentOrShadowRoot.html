@@ -24,12 +24,6 @@ partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def i
 partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attribute-activeElement>
   readonly attribute <a href='Element.html'>Element</a>? <strong>activeElement</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;#extensions-to-the-document-or-shadow-root-interface">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
-
-partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attribute-styleSheets>
-  [SameObject] readonly attribute <a href='StyleSheetList.html'>StyleSheetList</a> <strong>styleSheets</strong>;</span><span class=def id=attribute-adoptedStyleSheets>
-  attribute ObservableArray&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>adoptedStyleSheets</strong>;</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;#documentorshadowroot-extension">Picture-in-Picture</a><pre class=webidl><code><span class=def>
 
 partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attribute-pictureInPictureElement>
@@ -40,23 +34,15 @@ partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def i
 partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attribute-pointerLockElement>
   readonly attribute <a href='Element.html'>Element</a> ? <strong>pointerLockElement</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;">Web Animations</a><pre class=webidl><code><span class=def>
-
-partial interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=operation-getAnimations>
-    sequence&lt;<a href='Animation.html'>Animation</a>&gt; <strong>getAnimations</strong>();</span>
-};</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
 interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attribute-fullscreenElement>
   [LegacyLenientSetter] readonly attribute <a href='Element.html'>Element</a>? <strong>fullscreenElement</strong>;</span><span class=def id=attribute-activeElement>
-  readonly attribute <a href='Element.html'>Element</a>? <strong>activeElement</strong>;</span><span class=def id=attribute-styleSheets>
-  [SameObject] readonly attribute <a href='StyleSheetList.html'>StyleSheetList</a> <strong>styleSheets</strong>;</span><span class=def id=attribute-adoptedStyleSheets>
-  attribute ObservableArray&lt;<a href='CSSStyleSheet.html'>CSSStyleSheet</a>&gt; <strong>adoptedStyleSheets</strong>;</span><span class=def id=attribute-pictureInPictureElement>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>activeElement</strong>;</span><span class=def id=attribute-pictureInPictureElement>
   readonly attribute <a href='Element.html'>Element</a>? <strong>pictureInPictureElement</strong>;</span><span class=def id=attribute-pointerLockElement>
-  readonly attribute <a href='Element.html'>Element</a> ? <strong>pointerLockElement</strong>;</span><span class=def id=operation-getAnimations>
-    sequence&lt;<a href='Animation.html'>Animation</a>&gt; <strong>getAnimations</strong>();</span>
+  readonly attribute <a href='Element.html'>Element</a> ? <strong>pointerLockElement</strong>;</span>
 };</span></code></pre></details>
 </section>
 
@@ -73,9 +59,7 @@ interface mixin <strong>DocumentOrShadowRoot</strong> {<span class=def id=attrib
   <ul>
     <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>DocumentOrShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>DocumentOrShadowRoot</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>DocumentOrShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;picture-in-picture&#x2F;">Picture-in-Picture</a> refers to <code>DocumentOrShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerlock-2&#x2F;">Pointer Lock 2.0</a> refers to <code>DocumentOrShadowRoot</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;">Web Animations</a> refers to <code>DocumentOrShadowRoot</code></li>
 
   </ul></section>

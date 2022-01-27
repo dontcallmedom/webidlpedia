@@ -1,5 +1,5 @@
 ---
-title: <code>CSSRule</code> interface
+title: <code>CSSRule</code> undefined
 layout: base
 parent: names/
 base: ../
@@ -7,122 +7,21 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom&#x2F;#cssrule">CSS Object Model (CSSOM)</a> defines <code>CSSRule</code></p>
-<pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CSSRule</strong> {<span class=def id=attribute-cssText>
-  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;</span><span class=def id=attribute-parentRule>
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;</span><span class=def id=attribute-parentStyleSheet>
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;</span><span class=def id=attribute-type><span class="comment">
-
-  &#x2F;&#x2F; the following attribute and constants are historical
-  </span>readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def id=const-STYLE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>STYLE_RULE</strong> &#x3D; 1;</span><span class=def id=const-CHARSET_RULE>
-  const <span class=primitive>unsigned short</span> <strong>CHARSET_RULE</strong> &#x3D; 2;</span><span class=def id=const-IMPORT_RULE>
-  const <span class=primitive>unsigned short</span> <strong>IMPORT_RULE</strong> &#x3D; 3;</span><span class=def id=const-MEDIA_RULE>
-  const <span class=primitive>unsigned short</span> <strong>MEDIA_RULE</strong> &#x3D; 4;</span><span class=def id=const-FONT_FACE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>FONT_FACE_RULE</strong> &#x3D; 5;</span><span class=def id=const-PAGE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>PAGE_RULE</strong> &#x3D; 6;</span><span class=def id=const-MARGIN_RULE>
-  const <span class=primitive>unsigned short</span> <strong>MARGIN_RULE</strong> &#x3D; 9;</span><span class=def id=const-NAMESPACE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>NAMESPACE_RULE</strong> &#x3D; 10;</span>
-};</span></code></pre>
-  <p>This interface is extended in the following specifications:</p>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animations-1&#x2F;#interface-cssrule-idl">CSS Animations Level 1</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>CSSRule</strong> {<span class=def id=const-KEYFRAMES_RULE>
-    const <span class=primitive>unsigned short</span> <strong>KEYFRAMES_RULE</strong> &#x3D; 7;</span><span class=def id=const-KEYFRAME_RULE>
-    const <span class=primitive>unsigned short</span> <strong>KEYFRAME_RULE</strong> &#x3D; 8;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-conditional-3&#x2F;#extensions-to-cssrule-interface">CSS Conditional Rules Module Level 3</a><pre class=webidl><code><span class=def>partial interface <strong>CSSRule</strong> {<span class=def id=const-SUPPORTS_RULE>
-    const <span class=primitive>unsigned short</span> <strong>SUPPORTS_RULE</strong> &#x3D; 12;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-counter-styles-3&#x2F;#extensions-to-cssrule-interface">CSS Counter Styles Level 3</a><pre class=webidl><code><span class=def>partial interface <strong>CSSRule</strong> {<span class=def id=const-COUNTER_STYLE_RULE>
-    const <span class=primitive>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> &#x3D; 11;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-device-adapt-1&#x2F;#css-rule-interface">CSS Device Adaptation Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>CSSRule</strong> {<span class=def id=const-VIEWPORT_RULE>
-    const <span class=primitive>unsigned short</span> <strong>VIEWPORT_RULE</strong> &#x3D; 15;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-fonts-4&#x2F;#om-fontfeaturevalues">CSS Fonts Module Level 4</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>CSSRule</strong> {<span class=def id=const-FONT_FEATURE_VALUES_RULE>  const <span class=primitive>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> &#x3D; 14;</span>
-};</span></code></pre></li>
-
-  </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CSSRule</strong> {<span class=def id=attribute-cssText>
-  attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>cssText</strong>;</span><span class=def id=attribute-parentRule>
-  readonly attribute <a href='CSSRule.html'>CSSRule</a>? <strong>parentRule</strong>;</span><span class=def id=attribute-parentStyleSheet>
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>parentStyleSheet</strong>;</span><span class=def id=attribute-type><span class="comment">
-
-  &#x2F;&#x2F; the following attribute and constants are historical
-  </span>readonly attribute <span class=primitive>unsigned short</span> <strong>type</strong>;</span><span class=def id=const-STYLE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>STYLE_RULE</strong> &#x3D; 1;</span><span class=def id=const-CHARSET_RULE>
-  const <span class=primitive>unsigned short</span> <strong>CHARSET_RULE</strong> &#x3D; 2;</span><span class=def id=const-IMPORT_RULE>
-  const <span class=primitive>unsigned short</span> <strong>IMPORT_RULE</strong> &#x3D; 3;</span><span class=def id=const-MEDIA_RULE>
-  const <span class=primitive>unsigned short</span> <strong>MEDIA_RULE</strong> &#x3D; 4;</span><span class=def id=const-FONT_FACE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>FONT_FACE_RULE</strong> &#x3D; 5;</span><span class=def id=const-PAGE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>PAGE_RULE</strong> &#x3D; 6;</span><span class=def id=const-MARGIN_RULE>
-  const <span class=primitive>unsigned short</span> <strong>MARGIN_RULE</strong> &#x3D; 9;</span><span class=def id=const-NAMESPACE_RULE>
-  const <span class=primitive>unsigned short</span> <strong>NAMESPACE_RULE</strong> &#x3D; 10;</span><span class=def id=const-KEYFRAMES_RULE>
-    const <span class=primitive>unsigned short</span> <strong>KEYFRAMES_RULE</strong> &#x3D; 7;</span><span class=def id=const-KEYFRAME_RULE>
-    const <span class=primitive>unsigned short</span> <strong>KEYFRAME_RULE</strong> &#x3D; 8;</span><span class=def id=const-SUPPORTS_RULE>
-    const <span class=primitive>unsigned short</span> <strong>SUPPORTS_RULE</strong> &#x3D; 12;</span><span class=def id=const-COUNTER_STYLE_RULE>
-    const <span class=primitive>unsigned short</span> <strong>COUNTER_STYLE_RULE</strong> &#x3D; 11;</span><span class=def id=const-VIEWPORT_RULE>
-    const <span class=primitive>unsigned short</span> <strong>VIEWPORT_RULE</strong> &#x3D; 15;</span><span class=def id=const-FONT_FEATURE_VALUES_RULE>  const <span class=primitive>unsigned short</span> <strong>FONT_FEATURE_VALUES_RULE</strong> &#x3D; 14;</span>
-};</span></code></pre></details>
+  
+  
+  
 </section>
-<section>
-<h3>Methods and attributes that return objects implementing <code>CSSRule</code></h3>
 
-  <ul>
-    <li><code><a href="CSSStyleSheet.html">CSSStyleSheet</a><a href=CSSStyleSheet.html#attribute-ownerRule>.ownerRule</a></code></li>
-<li><code><a href="CSSRuleList.html">CSSRuleList</a><a href=CSSRuleList.html#operation-getter>.item()</a></code></li>
-<li><code><a href="CSSRule.html">CSSRule</a><a href=CSSRule.html#attribute-parentRule>.parentRule</a></code></li>
-<li><code><a href="CSSStyleDeclaration.html">CSSStyleDeclaration</a><a href=CSSStyleDeclaration.html#attribute-parentRule>.parentRule</a></code></li>
-
-  </ul>
-</section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><code><a href="CSSCounterStyleRule.html">CSSCounterStyleRule</a></code></li>
-<li><code><a href="CSSFontFaceRule.html">CSSFontFaceRule</a></code></li>
-<li><code><a href="CSSFontFeatureValuesRule.html">CSSFontFeatureValuesRule</a></code></li>
-<li><code><a href="CSSFontPaletteValuesRule.html">CSSFontPaletteValuesRule</a></code></li>
-<li><code><a href="CSSGroupingRule.html">CSSGroupingRule</a></code></li>
-<li><code><a href="CSSImportRule.html">CSSImportRule</a></code></li>
-<li><code><a href="CSSKeyframeRule.html">CSSKeyframeRule</a></code></li>
-<li><code><a href="CSSKeyframesRule.html">CSSKeyframesRule</a></code></li>
-<li><code><a href="CSSLayerStatementRule.html">CSSLayerStatementRule</a></code></li>
-<li><code><a href="CSSMarginRule.html">CSSMarginRule</a></code></li>
-<li><code><a href="CSSNamespaceRule.html">CSSNamespaceRule</a></code></li>
-<li><code><a href="CSSNestingRule.html">CSSNestingRule</a></code></li>
-<li><code><a href="CSSPropertyRule.html">CSSPropertyRule</a></code></li>
-<li><code><a href="CSSRule.html">CSSRule</a></code></li>
-<li><code><a href="CSSRuleList.html">CSSRuleList</a></code></li>
-<li><code><a href="CSSScrollTimelineRule.html">CSSScrollTimelineRule</a></code></li>
-<li><code><a href="CSSStyleDeclaration.html">CSSStyleDeclaration</a></code></li>
-<li><code><a href="CSSStyleRule.html">CSSStyleRule</a></code></li>
-<li><code><a href="CSSStyleSheet.html">CSSStyleSheet</a></code></li>
-<li><code><a href="CSSViewportRule.html">CSSViewportRule</a></code></li>
+    <li><code><a href="CSSPropertyRule.html">CSSPropertyRule</a></code></li>
 
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;scroll-animations-1&#x2F;">Scroll-linked Animations</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animations-1&#x2F;">CSS Animations Level 1</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-cascade-5&#x2F;">CSS Cascading and Inheritance Level 5</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-conditional-3&#x2F;">CSS Conditional Rules Module Level 3</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-counter-styles-3&#x2F;">CSS Counter Styles Level 3</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-device-adapt-1&#x2F;">CSS Device Adaptation Module Level 1</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-fonts-4&#x2F;">CSS Fonts Module Level 4</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nesting-1&#x2F;">CSS Nesting Module</a> refers to <code>CSSRule</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-properties-values-api-1&#x2F;">CSS Properties and Values API Level 1</a> refers to <code>CSSRule</code></li>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-properties-values-api-1&#x2F;">CSS Properties and Values API Level 1</a> refers to <code>CSSRule</code></li>
 
   </ul></section>
