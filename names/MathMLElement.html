@@ -12,7 +12,7 @@ base: ../
 interface <strong>MathMLElement</strong> : <a href='Element.html'>Element</a> { };</span><span class=def>
 <a href='MathMLElement.html'>MathMLElement</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;</span><span class=def>
 <a href='MathMLElement.html'>MathMLElement</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;</span><span class=def>
-<a href='MathMLElement.html'>MathMLElement</a> includes <a href='HTMLOrForeignElement.html'>HTMLOrForeignElement</a>;</span></code></pre>
+<a href='MathMLElement.html'>MathMLElement</a> includes <a href='HTMLOrSVGElement.html'>HTMLOrSVGElement</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
@@ -92,7 +92,14 @@ interface <strong>MathMLElement</strong> : <a href='Element.html'>Element</a> {<
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-oncopy>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncut>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-onpaste>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=attribute-style>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=attribute-dataset>
+  [SameObject] readonly attribute <a href='DOMStringMap.html'>DOMStringMap</a> <strong>dataset</strong>;</span><span class=def id=attribute-nonce>
+  attribute <span class=primitive>DOMString</span> <strong>nonce</strong>;</span><span class=def id=attribute-autofocus><span class="comment"> &#x2F;&#x2F; intentionally no [CEReactions]
+
+  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def id=attribute-tabIndex>
+  [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def id=operation-focus-FocusOptions>
+  <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-blur>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-style>
   [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span> };</span></code></pre></details>
 </section>
 

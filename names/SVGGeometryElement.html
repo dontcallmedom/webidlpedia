@@ -7,7 +7,18 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;types.html#InterfaceSVGGeometryElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGeometryElement</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a> defines <code>SVGGeometryElement</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>SVGGeometryElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=attribute-pathLength>
+  [SameObject] readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>pathLength</strong>;</span><span class=def id=operation-isPointInFill-DOMPointInit>
+
+  <span class=primitive>boolean</span> <strong>isPointInFill</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def id=operation-isPointInStroke-DOMPointInit>
+  <span class=primitive>boolean</span> <strong>isPointInStroke</strong>(optional <a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong> &#x3D; {});</span><span class=def id=operation-getTotalLength>
+  <span class=primitive>float</span> <strong>getTotalLength</strong>();</span><span class=def id=operation-getPointAtLength-float>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getPointAtLength</strong>(<span class=primitive>float</span> <strong>distance</strong>);</span>
+};</span></code></pre><p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;types.html#InterfaceSVGGeometryElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGeometryElement</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -28,11 +39,18 @@ interface <strong>SVGGeometryElement</strong> : <a href='SVGGraphicsElement.html
   
   <ul>
     <li><code><a href="SVGCircleElement.html">SVGCircleElement</a></code></li>
+<li><code><a href="SVGCircleElement.html">SVGCircleElement</a></code></li>
+<li><code><a href="SVGEllipseElement.html">SVGEllipseElement</a></code></li>
 <li><code><a href="SVGEllipseElement.html">SVGEllipseElement</a></code></li>
 <li><code><a href="SVGLineElement.html">SVGLineElement</a></code></li>
+<li><code><a href="SVGLineElement.html">SVGLineElement</a></code></li>
+<li><code><a href="SVGPathElement.html">SVGPathElement</a></code></li>
 <li><code><a href="SVGPathElement.html">SVGPathElement</a></code></li>
 <li><code><a href="SVGPolygonElement.html">SVGPolygonElement</a></code></li>
+<li><code><a href="SVGPolygonElement.html">SVGPolygonElement</a></code></li>
 <li><code><a href="SVGPolylineElement.html">SVGPolylineElement</a></code></li>
+<li><code><a href="SVGPolylineElement.html">SVGPolylineElement</a></code></li>
+<li><code><a href="SVGRectElement.html">SVGRectElement</a></code></li>
 <li><code><a href="SVGRectElement.html">SVGRectElement</a></code></li>
 
   </ul>

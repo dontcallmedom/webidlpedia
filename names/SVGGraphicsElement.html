@@ -7,7 +7,19 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;types.html#InterfaceSVGGraphicsElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGraphicsElement</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;SVG11&#x2F;">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a> defines <code>SVGGraphicsElement</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>SVGGraphicsElement</strong> : <a href='SVGElement.html'>SVGElement</a> {<span class=def id=attribute-transform>
+  [SameObject] readonly attribute <a href='SVGAnimatedTransformList.html'>SVGAnimatedTransformList</a> <strong>transform</strong>;</span><span class=def id=operation-getBBox-SVGBoundingBoxOptions>
+
+  <a href='DOMRect.html'>DOMRect</a> <strong>getBBox</strong>(optional <a href='SVGBoundingBoxOptions.html'>SVGBoundingBoxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getCTM>
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getCTM</strong>();</span><span class=def id=operation-getScreenCTM>
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getScreenCTM</strong>();</span>
+};</span><span class=def>
+
+<a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> includes <a href='SVGTests.html'>SVGTests</a>;</span></code></pre><p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;types.html#InterfaceSVGGraphicsElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGGraphicsElement</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -31,6 +43,17 @@ interface <strong>SVGGraphicsElement</strong> : <a href='SVGElement.html'>SVGEle
   <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getCTM</strong>();</span><span class=def id=operation-getScreenCTM>
   <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getScreenCTM</strong>();</span><span class=def id=attribute-requiredExtensions>
   [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;</span><span class=def id=attribute-systemLanguage>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;</span><span class=def id=attribute-requiredExtensions>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;</span><span class=def id=attribute-systemLanguage>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;</span><span class=def id=attribute-transform>
+  [SameObject] readonly attribute <a href='SVGAnimatedTransformList.html'>SVGAnimatedTransformList</a> <strong>transform</strong>;</span><span class=def id=operation-getBBox-SVGBoundingBoxOptions>
+
+  <a href='DOMRect.html'>DOMRect</a> <strong>getBBox</strong>(optional <a href='SVGBoundingBoxOptions.html'>SVGBoundingBoxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getCTM>
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getCTM</strong>();</span><span class=def id=operation-getScreenCTM>
+  <a href='DOMMatrix.html'>DOMMatrix</a>? <strong>getScreenCTM</strong>();</span><span class=def id=attribute-requiredExtensions>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;</span><span class=def id=attribute-systemLanguage>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;</span><span class=def id=attribute-requiredExtensions>
+  [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>requiredExtensions</strong>;</span><span class=def id=attribute-systemLanguage>
   [SameObject] readonly attribute <a href='SVGStringList.html'>SVGStringList</a> <strong>systemLanguage</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -38,17 +61,28 @@ interface <strong>SVGGraphicsElement</strong> : <a href='SVGElement.html'>SVGEle
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
-  <ul>
+  <ul class=long>
     <li><code><a href="SVGAElement.html">SVGAElement</a></code></li>
+<li><code><a href="SVGAElement.html">SVGAElement</a></code></li>
+<li><code><a href="SVGDefsElement.html">SVGDefsElement</a></code></li>
 <li><code><a href="SVGDefsElement.html">SVGDefsElement</a></code></li>
 <li><code><a href="SVGForeignObjectElement.html">SVGForeignObjectElement</a></code></li>
+<li><code><a href="SVGForeignObjectElement.html">SVGForeignObjectElement</a></code></li>
+<li><code><a href="SVGGElement.html">SVGGElement</a></code></li>
 <li><code><a href="SVGGElement.html">SVGGElement</a></code></li>
 <li><code><a href="SVGGeometryElement.html">SVGGeometryElement</a></code></li>
+<li><code><a href="SVGGeometryElement.html">SVGGeometryElement</a></code></li>
+<li><code><a href="SVGImageElement.html">SVGImageElement</a></code></li>
 <li><code><a href="SVGImageElement.html">SVGImageElement</a></code></li>
 <li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
+<li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
+<li><code><a href="SVGSwitchElement.html">SVGSwitchElement</a></code></li>
 <li><code><a href="SVGSwitchElement.html">SVGSwitchElement</a></code></li>
 <li><code><a href="SVGSymbolElement.html">SVGSymbolElement</a></code></li>
+<li><code><a href="SVGSymbolElement.html">SVGSymbolElement</a></code></li>
 <li><code><a href="SVGTextContentElement.html">SVGTextContentElement</a></code></li>
+<li><code><a href="SVGTextContentElement.html">SVGTextContentElement</a></code></li>
+<li><code><a href="SVGUseElement.html">SVGUseElement</a></code></li>
 <li><code><a href="SVGUseElement.html">SVGUseElement</a></code></li>
 
   </ul>
