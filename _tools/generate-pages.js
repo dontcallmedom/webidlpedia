@@ -513,7 +513,9 @@ fs.readFile("./webref/ed/index.json", "utf-8")
             exposed_on[n] = ["Window"]; // default if no ext attr specified
             const exposedEA = iface.extAttrs ? iface.extAttrs.find(ea => ea.name === "Exposed") || {} : {};
             if (exposedEA.rhs) {
-              if (Array.isArray(exposedEA.rhs.value)) {
+              if (exposedEA.rhs.type === '*') {
+                exposed_on[n] = '*';
+              } else if (Array.isArray(exposedEA.rhs.value)) {
                 exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
               } else if (exposedEA.rhs.value) {
                 exposed_on[n] = [exposedEA.rhs.value];
