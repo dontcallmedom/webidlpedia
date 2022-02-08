@@ -514,7 +514,7 @@ fs.readFile("./webref/ed/index.json", "utf-8")
             const exposedEA = iface.extAttrs ? iface.extAttrs.find(ea => ea.name === "Exposed") || {} : {};
             if (exposedEA.rhs) {
               if (exposedEA.rhs.type === '*') {
-                exposed_on[n] = '*';
+                exposed_on[n] = ['*'];
               } else if (Array.isArray(exposedEA.rhs.value)) {
                 exposed_on[n] = exposedEA.rhs.value.map(v => v.value);
               } else if (exposedEA.rhs.value) {
