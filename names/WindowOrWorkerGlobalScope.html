@@ -55,7 +55,7 @@ partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {<span class=
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scheduling-apis&#x2F;#sec-patches-html-windoworworkerglobalscope">Prioritized Task Scheduling</a><pre class=webidl><code><span class=def>
 
 partial interface mixin <strong>WindowOrWorkerGlobalScope</strong> {<span class=def id=attribute-scheduler>
-  readonly attribute <a href='Scheduler.html'>Scheduler</a> <strong>scheduler</strong>;</span>
+  [Replaceable] readonly attribute <a href='Scheduler.html'>Scheduler</a> <strong>scheduler</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;hr-time-3&#x2F;#the-performance-attribute">High Resolution Time</a><pre class=webidl><code><span class=def>
 
@@ -108,7 +108,7 @@ interface mixin <strong>WindowOrWorkerGlobalScope</strong> {<span class=def id=a
   [NewObject] Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>fetch</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='RequestInit.html'>RequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-trustedTypes>
   readonly attribute <a href='TrustedTypePolicyFactory.html'>TrustedTypePolicyFactory</a> <strong>trustedTypes</strong>;</span><span class=def id=attribute-originPolicyIds>
   readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>originPolicyIds</strong>;</span><span class=def id=attribute-scheduler>
-  readonly attribute <a href='Scheduler.html'>Scheduler</a> <strong>scheduler</strong>;</span><span class=def id=attribute-performance>
+  [Replaceable] readonly attribute <a href='Scheduler.html'>Scheduler</a> <strong>scheduler</strong>;</span><span class=def id=attribute-performance>
   [Replaceable] readonly attribute <a href='Performance.html'>Performance</a> <strong>performance</strong>;</span><span class=def id=attribute-indexedDB>
   [SameObject] readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong>indexedDB</strong>;</span><span class=def id=attribute-caches>
   [SecureContext, SameObject] readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong>caches</strong>;</span><span class=def id=attribute-crypto>
