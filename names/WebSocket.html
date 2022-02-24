@@ -7,12 +7,12 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;web-sockets.html#websocket">HTML Standard</a> defines <code>WebSocket</code></p>
+  <p><a href="https:&#x2F;&#x2F;websockets.spec.whatwg.org&#x2F;#websocket">WebSockets Standard</a> defines <code>WebSocket</code></p>
 <pre class=webidl><code><span class=def>
+
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
 interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-USVString-DOMString-DOMString>
   <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional (<span class=primitive>DOMString</span> or sequence&lt;<span class=primitive>DOMString</span>&gt;) <strong>protocols</strong> &#x3D; []);</span><span class=def id=attribute-url>
-
   readonly attribute <span class=primitive>USVString</span> <strong>url</strong>;</span><span class=def id=const-CONNECTING><span class="comment">
 
   &#x2F;&#x2F; ready state
@@ -33,11 +33,8 @@ interface <strong>WebSocket</strong> : <a href='EventTarget.html'>EventTarget</a
 
   &#x2F;&#x2F; messaging
   </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmessage</strong>;</span><span class=def id=attribute-binaryType>
-  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=operation-send-USVString>
-  <span class=primitive>undefined</span> <strong>send</strong>(<span class=primitive>USVString</span> <strong>data</strong>);</span><span class=def id=operation-send-Blob>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='Blob.html'>Blob</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBuffer>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>data</strong>);</span><span class=def id=operation-send-ArrayBufferView>
-  <span class=primitive>undefined</span> <strong>send</strong>(<a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>data</strong>);</span>
+  attribute <a href='BinaryType.html'>BinaryType</a> <strong>binaryType</strong>;</span><span class=def id=operation-send-BufferSource-Blob-USVString>
+  <span class=primitive>undefined</span> <strong>send</strong>((<a href='BufferSource.html'>BufferSource</a> or <a href='Blob.html'>Blob</a> or <span class=primitive>USVString</span>) <strong>data</strong>);</span>
 };</span></code></pre>
   
   
