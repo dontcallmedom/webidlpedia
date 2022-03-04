@@ -12,14 +12,14 @@ base: ../
 
 [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>), SecureContext]
 interface <strong>ComputePressureObserver</strong> {<span class=def id=constructor-ComputePressureUpdateCallback>
-  <strong>constructor</strong>(<a href='ComputePressureUpdateCallback.html'>ComputePressureUpdateCallback</a> <strong>callback</strong>);</span><span class=def id=operation-observe-ComputePressureTarget-ComputePressureObserverOptions>
+  <strong>constructor</strong>(<a href='ComputePressureUpdateCallback.html'>ComputePressureUpdateCallback</a> <strong>callback</strong>);</span><span class=def id=operation-observe-ComputePressureSource-ComputePressureObserverOptions>
 
-  <span class=primitive>undefined</span> <strong>observe</strong>(<a href='ComputePressureTarget.html'>ComputePressureTarget</a> <strong>target</strong>, optional <a href='ComputePressureObserverOptions.html'>ComputePressureObserverOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-unobserve-ComputePressureTarget>
-  <span class=primitive>undefined</span> <strong>unobserve</strong>(<a href='ComputePressureTarget.html'>ComputePressureTarget</a> <strong>target</strong>);</span><span class=def id=operation-disconnect>
+  <span class=primitive>undefined</span> <strong>observe</strong>(<a href='ComputePressureSource.html'>ComputePressureSource</a> <strong>source</strong>, optional <a href='ComputePressureObserverOptions.html'>ComputePressureObserverOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-unobserve-ComputePressureSource>
+  <span class=primitive>undefined</span> <strong>unobserve</strong>(<a href='ComputePressureSource.html'>ComputePressureSource</a> <strong>source</strong>);</span><span class=def id=operation-disconnect>
   <span class=primitive>undefined</span> <strong>disconnect</strong>();</span><span class=def id=operation-takeRecords>
-  sequence&lt;<a href='ComputePressureRecord.html'>ComputePressureRecord</a>&gt; <strong>takeRecords</strong>();</span><span class=def id=attribute-supportedTargetTypes>
+  sequence&lt;<a href='ComputePressureRecord.html'>ComputePressureRecord</a>&gt; <strong>takeRecords</strong>();</span><span class=def id=attribute-supportedSources>
 
-  [SameObject] static readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>supportedTargetTypes</strong>;</span><span class=def id=operation-static>
+  [SameObject] static readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>supportedSources</strong>;</span><span class=def id=operation-static>
 
   [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>requestPermission</strong>();</span>
 };</span></code></pre>
