@@ -1,6 +1,5 @@
 ---
-deprecated: "March 11, 2022"
-title: <code>AppHistoryEntry</code> interface
+title: <code>NavigationHistoryEntry</code> interface
 layout: base
 parent: names/
 base: ../
@@ -8,11 +7,11 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;#apphistoryentry">App History API</a> defines <code>AppHistoryEntry</code></p>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;#navigationhistoryentry">Navigation API</a> defines <code>NavigationHistoryEntry</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>AppHistoryEntry</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-url>
+interface <strong>NavigationHistoryEntry</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-url>
   readonly attribute <span class=primitive>USVString</span>? <strong>url</strong>;</span><span class=def id=attribute-key>
   readonly attribute <span class=primitive>DOMString</span> <strong>key</strong>;</span><span class=def id=attribute-id>
   readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def id=attribute-index>
@@ -30,13 +29,13 @@ interface <strong>AppHistoryEntry</strong> : <a href='EventTarget.html'>EventTar
   
 </section>
 <section>
-<h3>Methods and attributes that return objects implementing <code>AppHistoryEntry</code></h3>
+<h3>Methods and attributes that return objects implementing <code>NavigationHistoryEntry</code></h3>
 
   <ul>
-    <li><code><a href="AppHistory.html">AppHistory</a><a href=AppHistory.html#operation-entries>.entries()</a></code></li>
-<li><code><a href="AppHistory.html">AppHistory</a><a href=AppHistory.html#attribute-current>.current</a></code></li>
-<li><code><a href="AppHistoryCurrentChangeEvent.html">AppHistoryCurrentChangeEvent</a><a href=AppHistoryCurrentChangeEvent.html#attribute-from>.from</a></code></li>
-<li><code><a href="AppHistoryTransition.html">AppHistoryTransition</a><a href=AppHistoryTransition.html#attribute-from>.from</a></code></li>
+    <li><code><a href="Navigation.html">Navigation</a><a href=Navigation.html#operation-entries>.entries()</a></code></li>
+<li><code><a href="Navigation.html">Navigation</a><a href=Navigation.html#attribute-currentEntry>.currentEntry</a></code></li>
+<li><code><a href="NavigationCurrentEntryChangeEvent.html">NavigationCurrentEntryChangeEvent</a><a href=NavigationCurrentEntryChangeEvent.html#attribute-from>.from</a></code></li>
+<li><code><a href="NavigationTransition.html">NavigationTransition</a><a href=NavigationTransition.html#attribute-from>.from</a></code></li>
 
   </ul>
 </section>
@@ -44,11 +43,11 @@ interface <strong>AppHistoryEntry</strong> : <a href='EventTarget.html'>EventTar
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><code><a href="AppHistory.html">AppHistory</a></code></li>
-<li><code><a href="AppHistoryCurrentChangeEvent.html">AppHistoryCurrentChangeEvent</a></code></li>
-<li><code><a href="AppHistoryCurrentChangeEventInit.html">AppHistoryCurrentChangeEventInit</a></code></li>
-<li><code><a href="AppHistoryResult.html">AppHistoryResult</a></code></li>
-<li><code><a href="AppHistoryTransition.html">AppHistoryTransition</a></code></li>
+    <li><code><a href="Navigation.html">Navigation</a></code></li>
+<li><code><a href="NavigationCurrentEntryChangeEvent.html">NavigationCurrentEntryChangeEvent</a></code></li>
+<li><code><a href="NavigationCurrentEntryChangeEventInit.html">NavigationCurrentEntryChangeEventInit</a></code></li>
+<li><code><a href="NavigationResult.html">NavigationResult</a></code></li>
+<li><code><a href="NavigationTransition.html">NavigationTransition</a></code></li>
 
   </ul>
 </section>

@@ -9,11 +9,11 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;close-watcher&#x2F;#closewatcher">Close Watcher API</a> defines <code>CloseWatcher</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CloseWatcher</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor>
-  <strong>constructor</strong>();</span><span class=def id=operation-destroy>
+interface <strong>CloseWatcher</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-CloseWatcherOptions>
+  <strong>constructor</strong>(optional <a href='CloseWatcherOptions.html'>CloseWatcherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-destroy>
 
-  <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=operation-signalClose>
-  <span class=primitive>undefined</span> <strong>signalClose</strong>();</span><span class=def id=attribute-oncancel>
+  <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-oncancel>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-onclose>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span>
@@ -25,7 +25,7 @@ interface <strong>CloseWatcher</strong> : <a href='EventTarget.html'>EventTarget
 <h3>Methods and attributes that return objects implementing <code>CloseWatcher</code></h3>
 
   <ul>
-    <li><code><a href="CloseWatcher.html">CloseWatcher</a><a href=CloseWatcher.html#constructor>()</a></code></li>
+    <li><code><a href="CloseWatcher.html">CloseWatcher</a><a href=CloseWatcher.html#constructor-CloseWatcherOptions>()</a></code></li>
 
   </ul>
 </section>

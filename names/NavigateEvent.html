@@ -1,0 +1,40 @@
+---
+title: <code>NavigateEvent</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;#navigateevent">Navigation API</a> defines <code>NavigateEvent</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>NavigateEvent</strong> : <a href='Event.html'>Event</a> {<span class=def id=constructor-DOMString-NavigateEventInit>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='NavigateEventInit.html'>NavigateEventInit</a> <strong>eventInit</strong>);</span><span class=def id=attribute-navigationType>
+
+  readonly attribute <a href='NavigationNavigationType.html'>NavigationNavigationType</a> <strong>navigationType</strong>;</span><span class=def id=attribute-destination>
+  readonly attribute <a href='NavigationDestination.html'>NavigationDestination</a> <strong>destination</strong>;</span><span class=def id=attribute-canTransition>
+  readonly attribute <span class=primitive>boolean</span> <strong>canTransition</strong>;</span><span class=def id=attribute-userInitiated>
+  readonly attribute <span class=primitive>boolean</span> <strong>userInitiated</strong>;</span><span class=def id=attribute-hashChange>
+  readonly attribute <span class=primitive>boolean</span> <strong>hashChange</strong>;</span><span class=def id=attribute-signal>
+  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def id=attribute-formData>
+  readonly attribute <a href='FormData.html'>FormData</a>? <strong>formData</strong>;</span><span class=def id=attribute-info>
+  readonly attribute <span class=primitive>any</span> <strong>info</strong>;</span><span class=def id=operation-transitionWhile-undefined>
+
+  <span class=primitive>undefined</span> <strong>transitionWhile</strong>(Promise&lt;<span class=primitive>undefined</span>&gt; <strong>newNavigationAction</strong>);</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>NavigateEvent</code></h3>
+
+  <ul>
+    <li><code><a href="NavigateEvent.html">NavigateEvent</a><a href=NavigateEvent.html#constructor-DOMString-NavigateEventInit>()</a></code></li>
+
+  </ul>
+</section>
+
+  

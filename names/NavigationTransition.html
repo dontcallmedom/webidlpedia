@@ -1,0 +1,40 @@
+---
+title: <code>NavigationTransition</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;#navigationtransition">Navigation API</a> defines <code>NavigationTransition</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>NavigationTransition</strong> {<span class=def id=attribute-navigationType>
+  readonly attribute <a href='NavigationNavigationType.html'>NavigationNavigationType</a> <strong>navigationType</strong>;</span><span class=def id=attribute-from>
+  readonly attribute <a href='NavigationHistoryEntry.html'>NavigationHistoryEntry</a> <strong>from</strong>;</span><span class=def id=attribute-finished>
+  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>finished</strong>;</span><span class=def id=operation-rollback-NavigationOptions>
+
+  <a href='NavigationResult.html'>NavigationResult</a> <strong>rollback</strong>(optional <a href='NavigationOptions.html'>NavigationOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>NavigationTransition</code></h3>
+
+  <ul>
+    <li><code><a href="Navigation.html">Navigation</a><a href=Navigation.html#attribute-transition>.transition</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="Navigation.html">Navigation</a></code></li>
+
+  </ul>
+</section>
+  
