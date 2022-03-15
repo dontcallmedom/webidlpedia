@@ -89,9 +89,6 @@ partial interface <strong>Window</strong> {<span class=def id=operation-captureE
 partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;#global">Navigation API</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-navigation>
-  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;conversion-measurement-api&#x2F;#attribution-reporting-api">Attribution Reporting</a><pre class=webidl><code><span class=def>
 
 [SecureContext]
@@ -117,6 +114,9 @@ partial interface <strong>Window</strong> {<span class=def id=operation-showOpen
 partial interface <strong>Window</strong> {<span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;#global">Navigation API</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-navigation>
+  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;#the-portal-element">Portals</a><pre class=webidl><code><span class=def>
 
@@ -377,15 +377,15 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def id=attribute-orientation>
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
-  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-navigation>
-  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-attributionReporting>
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-attributionReporting>
   readonly attribute <a href='AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
     Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
     Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showDirectoryPicker-DirectoryPickerOptions>
     Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-portalHost>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-navigation>
+  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-portalHost>
     readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-visualViewport>
   [SameObject, Replaceable] readonly attribute <a href='VisualViewport.html'>VisualViewport</a> <strong>visualViewport</strong>;</span><span class=def id=operation-navigate-SpatialNavigationDirection>
@@ -460,11 +460,11 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;">Navigation API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;conversion-measurement-api&#x2F;">Attribution Reporting</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;manifest-incubations&#x2F;">Manifest Incubations</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;">Navigation API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;visual-viewport&#x2F;">Visual Viewport API</a> refers to <code>Window</code></li>
