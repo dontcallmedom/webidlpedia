@@ -90,7 +90,7 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;app-history&#x2F;#global">Navigation API</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-navigation>
-  readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span>
+  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;conversion-measurement-api&#x2F;#attribution-reporting-api">Attribution Reporting</a><pre class=webidl><code><span class=def>
 
@@ -378,7 +378,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-navigation>
-  readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-attributionReporting>
+  [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-attributionReporting>
   readonly attribute <a href='AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
     Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
