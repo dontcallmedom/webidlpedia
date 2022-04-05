@@ -113,6 +113,10 @@ partial interface <strong>Window</strong> {<span class=def id=operation-showOpen
     Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showDirectoryPicker-DirectoryPickerOptions>
     Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a><pre class=webidl><code><span class=def>[SecureContext]
+partial interface <strong>Window</strong> {<span class=def id=operation-queryLocalFonts-QueryOptions>
+  Promise&lt;sequence&lt;<a href='FontData.html'>FontData</a>&gt;&gt; <strong>queryLocalFonts</strong>(optional <a href='QueryOptions.html'>QueryOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;manifest-incubations&#x2F;#onappinstalled-attribute">Manifest Incubations</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-onappinstalled>
@@ -389,7 +393,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
       <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
     Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
     Promise&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt; <strong>showSaveFilePicker</strong>(optional <a href='SaveFilePickerOptions.html'>SaveFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showDirectoryPicker-DirectoryPickerOptions>
-    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
+    Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-queryLocalFonts-QueryOptions>
+  Promise&lt;sequence&lt;<a href='FontData.html'>FontData</a>&gt;&gt; <strong>queryLocalFonts</strong>(optional <a href='QueryOptions.html'>QueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-navigation>
   [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-portalHost>
@@ -471,6 +476,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;manifest-incubations&#x2F;">Manifest Incubations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;">Navigation API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li>
