@@ -1,0 +1,38 @@
+---
+title: <code>PressureObserver</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;compute-pressure&#x2F;#dom-pressureobserver">Compute Pressure Level 1</a> defines <code>PressureObserver</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>), SecureContext]
+interface <strong>PressureObserver</strong> {<span class=def id=constructor-PressureUpdateCallback-PressureObserverOptions>
+  <strong>constructor</strong>(<a href='PressureUpdateCallback.html'>PressureUpdateCallback</a> <strong>callback</strong>, optional <a href='PressureObserverOptions.html'>PressureObserverOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-observe-PressureSource>
+
+  <span class=primitive>undefined</span> <strong>observe</strong>(<a href='PressureSource.html'>PressureSource</a> <strong>source</strong>);</span><span class=def id=operation-unobserve-PressureSource>
+  <span class=primitive>undefined</span> <strong>unobserve</strong>(<a href='PressureSource.html'>PressureSource</a> <strong>source</strong>);</span><span class=def id=operation-disconnect>
+  <span class=primitive>undefined</span> <strong>disconnect</strong>();</span><span class=def id=operation-takeRecords>
+  sequence&lt;<a href='PressureRecord.html'>PressureRecord</a>&gt; <strong>takeRecords</strong>();</span><span class=def id=attribute-supportedSources>
+
+  [SameObject] static readonly attribute FrozenArray&lt;<a href='PressureSource.html'>PressureSource</a>&gt; <strong>supportedSources</strong>;</span><span class=def id=operation-static>
+
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] static Promise&lt;<a href='PermissionState.html'>PermissionState</a>&gt; <strong>requestPermission</strong>();</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>PressureObserver</code></h3>
+
+  <ul>
+    <li><code><a href="PressureObserver.html">PressureObserver</a><a href=PressureObserver.html#constructor-PressureUpdateCallback-PressureObserverOptions>()</a></code></li>
+
+  </ul>
+</section>
+
+  
