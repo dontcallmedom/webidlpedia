@@ -89,6 +89,12 @@ partial interface <strong>Window</strong> {<span class=def id=operation-captureE
 partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;window-placement&#x2F;">Multi-Screen Window Placement</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=operation-getScreenDetails>
+  [SecureContext]
+  Promise&lt;<a href='ScreenDetails.html'>ScreenDetails</a>&gt; <strong>getScreenDetails</strong>();</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;conversion-measurement-api&#x2F;#attribution-reporting-api">Attribution Reporting</a><pre class=webidl><code><span class=def>
 
 [SecureContext]
@@ -122,6 +128,10 @@ partial interface <strong>Window</strong> {<span class=def id=operation-queryLoc
 partial interface <strong>Window</strong> {<span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span>
+};</span><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-launchQueue>
+  readonly attribute <a href='LaunchQueue.html'>LaunchQueue</a> <strong>launchQueue</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;navigation-api&#x2F;#global">Navigation API</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-navigation>
   [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span>
@@ -201,7 +211,7 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-oncompas
 partial interface <strong>Window</strong> {<span class=def id=attribute-ondevicemotion>
     [SecureContext] attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondevicemotion</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;#the-requestidlecallback-method">Cooperative Scheduling of Background Tasks</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=operation-requestIdleCallback-IdleRequestCallback-IdleRequestOptions>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;#the-requestidlecallback-method">requestIdleCallback()</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=operation-requestIdleCallback-IdleRequestCallback-IdleRequestOptions>
   <span class=primitive>unsigned long</span> <strong>requestIdleCallback</strong>(<a href='IdleRequestCallback.html'>IdleRequestCallback</a> <strong>callback</strong>, optional <a href='IdleRequestOptions.html'>IdleRequestOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cancelIdleCallback-unsigned long>
   <span class=primitive>undefined</span> <strong>cancelIdleCallback</strong>(<span class=primitive>unsigned long</span> <strong>handle</strong>);</span>
 };</span></code></pre></li>
@@ -386,7 +396,9 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def id=attribute-orientation>
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
-  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-attributionReporting>
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=operation-getScreenDetails>
+  [SecureContext]
+  Promise&lt;<a href='ScreenDetails.html'>ScreenDetails</a>&gt; <strong>getScreenDetails</strong>();</span><span class=def id=attribute-attributionReporting>
   readonly attribute <a href='AttributionReporting.html'>AttributionReporting</a> <strong>attributionReporting</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
@@ -396,7 +408,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong>showDirectoryPicker</strong>(optional <a href='DirectoryPickerOptions.html'>DirectoryPickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-queryLocalFonts-QueryOptions>
   Promise&lt;sequence&lt;<a href='FontData.html'>FontData</a>&gt;&gt; <strong>queryLocalFonts</strong>(optional <a href='QueryOptions.html'>QueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-navigation>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-launchQueue>
+  readonly attribute <a href='LaunchQueue.html'>LaunchQueue</a> <strong>launchQueue</strong>;</span><span class=def id=attribute-navigation>
   [Replaceable] readonly attribute <a href='Navigation.html'>Navigation</a> <strong>navigation</strong>;</span><span class=def id=attribute-portalHost>
     readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-visualViewport>
@@ -468,10 +481,11 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;window-placement&#x2F;">Multi-Screen Window Placement</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;conversion-measurement-api&#x2F;">Attribution Reporting</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
@@ -486,7 +500,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">DeviceOrientation Event Specification</a> refers to <code>Window</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">Cooperative Scheduling of Background Tasks</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;requestidlecallback&#x2F;">requestIdleCallback()</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;uievents&#x2F;">UI Events</a> refers to <code>Window</code></li>
 
