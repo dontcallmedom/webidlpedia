@@ -18,6 +18,8 @@ jobs:
       run: npm install
     - name: checkout webref repo
       run: git clone --depth 1 -b curated https://github.com/w3c/webref.git
+    - name: configure checkout
+      run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - name: Generate pages
       run: node _tools/generate-pages.js
     - name: Commit updates
