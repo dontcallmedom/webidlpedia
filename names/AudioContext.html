@@ -14,7 +14,8 @@ base: ../
 interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {<span class=def id=constructor-AudioContextOptions>
   <strong>constructor</strong> (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> &#x3D; {});</span><span class=def id=attribute-baseLatency>
   readonly attribute <span class=primitive>double</span> <strong>baseLatency</strong>;</span><span class=def id=attribute-outputLatency>
-  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def id=operation-getOutputTimestamp>
+  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def id=attribute-renderCapacity>
+  [SecureContext] readonly attribute <a href='AudioRenderCapacity.html'>AudioRenderCapacity</a> <strong>renderCapacity</strong>;</span><span class=def id=operation-getOutputTimestamp>
   <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();</span><span class=def id=operation-resume>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resume</strong> ();</span><span class=def id=operation-suspend>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>suspend</strong> ();</span><span class=def id=operation-close>
