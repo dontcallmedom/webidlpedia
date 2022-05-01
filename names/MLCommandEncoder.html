@@ -1,0 +1,52 @@
+---
+title: <code>MLCommandEncoder</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#mlcommandencoder">Web Neural Network API</a> defines <code>MLCommandEncoder</code></p>
+<pre class=webidl><code><span class=def>
+
+[SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>MLCommandEncoder</strong> {};</span><span class=def>
+
+partial interface <strong>MLCommandEncoder</strong> {<span class=def id=operation-initializeGraph-MLGraph>
+  <span class=primitive>undefined</span> <strong>initializeGraph</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>);</span>
+};</span><span class=def>
+
+partial interface <strong>MLCommandEncoder</strong> {<span class=def id=operation-dispatch-MLGraph-MLNamedGPUInputs-MLNamedGPUOutputs>
+  <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedGPUInputs.html'>MLNamedGPUInputs</a> <strong>inputs</strong>, <a href='MLNamedGPUOutputs.html'>MLNamedGPUOutputs</a> <strong>outputs</strong>);</span>
+};</span><span class=def>
+
+partial interface <strong>MLCommandEncoder</strong> {<span class=def id=operation-finish-GPUCommandBufferDescriptor>
+  <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>
+};</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>MLCommandEncoder</strong> {<span class=def id=operation-initializeGraph-MLGraph>
+  <span class=primitive>undefined</span> <strong>initializeGraph</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>);</span><span class=def id=operation-dispatch-MLGraph-MLNamedGPUInputs-MLNamedGPUOutputs>
+  <span class=primitive>undefined</span> <strong>dispatch</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedGPUInputs.html'>MLNamedGPUInputs</a> <strong>inputs</strong>, <a href='MLNamedGPUOutputs.html'>MLNamedGPUOutputs</a> <strong>outputs</strong>);</span><span class=def id=operation-finish-GPUCommandBufferDescriptor>
+  <a href='GPUCommandBuffer.html'>GPUCommandBuffer</a> <strong>finish</strong>(optional <a href='GPUCommandBufferDescriptor.html'>GPUCommandBufferDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>MLCommandEncoder</code></h3>
+
+  <ul>
+    <li><code><a href="MLContext.html">MLContext</a><a href=MLContext.html#operation-createCommandEncoder>.createCommandEncoder()</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="MLContext.html">MLContext</a></code></li>
+
+  </ul>
+</section>
+  

@@ -11,17 +11,41 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-interface <strong>MLContext</strong> {};</span></code></pre>
+interface <strong>MLContext</strong> {};</span><span class=def>
+
+partial interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGraph-MLNamedArrayInputs-MLNamedArrayOutputs>
+  [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+  <span class=primitive>undefined</span> <strong>compute</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayInputs.html'>MLNamedArrayInputs</a> <strong>inputs</strong>, <a href='MLNamedArrayOutputs.html'>MLNamedArrayOutputs</a> <strong>outputs</strong>);</span>
+};</span><span class=def>
+
+partial interface <strong>MLContext</strong> {<span class=def id=operation-computeAsync-MLGraph-MLNamedArrayInputs-MLNamedArrayOutputs>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>computeAsync</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayInputs.html'>MLNamedArrayInputs</a> <strong>inputs</strong>,
+
+                    <a href='MLNamedArrayOutputs.html'>MLNamedArrayOutputs</a> <strong>outputs</strong>);</span>
+};</span><span class=def>
+
+partial interface <strong>MLContext</strong> {<span class=def id=operation-createCommandEncoder>
+  <a href='MLCommandEncoder.html'>MLCommandEncoder</a> <strong>createCommandEncoder</strong>();</span>
+};</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGraph-MLNamedArrayInputs-MLNamedArrayOutputs>
+  [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+  <span class=primitive>undefined</span> <strong>compute</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayInputs.html'>MLNamedArrayInputs</a> <strong>inputs</strong>, <a href='MLNamedArrayOutputs.html'>MLNamedArrayOutputs</a> <strong>outputs</strong>);</span><span class=def id=operation-computeAsync-MLGraph-MLNamedArrayInputs-MLNamedArrayOutputs>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>computeAsync</strong>(<a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayInputs.html'>MLNamedArrayInputs</a> <strong>inputs</strong>,
+
+                    <a href='MLNamedArrayOutputs.html'>MLNamedArrayOutputs</a> <strong>outputs</strong>);</span><span class=def id=operation-createCommandEncoder>
+  <a href='MLCommandEncoder.html'>MLCommandEncoder</a> <strong>createCommandEncoder</strong>();</span>};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>MLContext</code></h3>
 
   <ul>
     <li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-MLContextOptions>.createContext()</a></code></li>
-<li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-WebGLRenderingContext>.createContext()</a></code></li>
 <li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-GPUDevice>.createContext()</a></code></li>
+<li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-WebGLRenderingContext>.createContext()</a></code></li>
 
   </ul>
 </section>
