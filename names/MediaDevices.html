@@ -31,6 +31,10 @@ partial interface <strong>MediaDevices</strong> {<span class=def id=operation-ge
 partial interface <strong>MediaDevices</strong> {<span class=def id=operation-setCaptureHandleConfig-CaptureHandleConfig>
   <span class=primitive>undefined</span> <strong>setCaptureHandleConfig</strong>(optional <a href='CaptureHandleConfig.html'>CaptureHandleConfig</a> <strong>config</strong> &#x3D; {});</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-viewport&#x2F;#mediadevices-additions">Viewport Capture</a><pre class=webidl><code><span class=def>partial interface <strong>MediaDevices</strong> {<span class=def id=operation-getViewportMedia-DisplayMediaStreamConstraints>
+  Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getViewportMedia</strong>(
+      optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-output&#x2F;#methods-0">Audio Output Devices API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>MediaDevices</strong> {<span class=def id=operation-selectAudioOutput-AudioOutputOptions>
@@ -57,7 +61,9 @@ interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget
   Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getUserMedia</strong>(optional <a href='MediaStreamConstraints.html'>MediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-setSupportedCaptureActions-DOMString>
   <span class=primitive>undefined</span> <strong>setSupportedCaptureActions</strong>(sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>actions</strong>);</span><span class=def id=attribute-oncaptureaction>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncaptureaction</strong>;</span><span class=def id=operation-setCaptureHandleConfig-CaptureHandleConfig>
-  <span class=primitive>undefined</span> <strong>setCaptureHandleConfig</strong>(optional <a href='CaptureHandleConfig.html'>CaptureHandleConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-selectAudioOutput-AudioOutputOptions>
+  <span class=primitive>undefined</span> <strong>setCaptureHandleConfig</strong>(optional <a href='CaptureHandleConfig.html'>CaptureHandleConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-getViewportMedia-DisplayMediaStreamConstraints>
+  Promise&lt;<a href='MediaStream.html'>MediaStream</a>&gt; <strong>getViewportMedia</strong>(
+      optional <a href='DisplayMediaStreamConstraints.html'>DisplayMediaStreamConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-selectAudioOutput-AudioOutputOptions>
   Promise&lt;<a href='MediaDeviceInfo.html'>MediaDeviceInfo</a>&gt; <strong>selectAudioOutput</strong>(optional <a href='AudioOutputOptions.html'>AudioOutputOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-produceCropTarget-Element>
   Promise&lt;<a href='CropTarget.html'>CropTarget</a>&gt;
   <strong>produceCropTarget</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-getDisplayMedia-DisplayMediaStreamConstraints>
@@ -84,6 +90,7 @@ interface <strong>MediaDevices</strong> : <a href='EventTarget.html'>EventTarget
   <ul>
     <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;">The Capture-Handle Actions Mechanism</a> refers to <code>MediaDevices</code></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;identity&#x2F;">Capture Handle - Bootstrapping Collaboration when Screensharing</a> refers to <code>MediaDevices</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-viewport&#x2F;">Viewport Capture</a> refers to <code>MediaDevices</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-output&#x2F;">Audio Output Devices API</a> refers to <code>MediaDevices</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-region&#x2F;">Region Capture</a> refers to <code>MediaDevices</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-capture&#x2F;">Screen Capture</a> refers to <code>MediaDevices</code></li>
