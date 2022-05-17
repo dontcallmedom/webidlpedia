@@ -1,5 +1,5 @@
 ---
-title: <code>GPUError</code> typedef
+title: <code>GPUError</code> interface
 layout: base
 parent: names/
 base: ../
@@ -7,21 +7,35 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#typedefdef-gpuerror">WebGPU</a> defines <code>GPUError</code></p>
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpuerror">WebGPU</a> defines <code>GPUError</code></p>
 <pre class=webidl><code><span class=def>
 
-typedef (<a href='GPUOutOfMemoryError.html'>GPUOutOfMemoryError</a> or <a href='GPUValidationError.html'>GPUValidationError</a>) <strong>GPUError</strong>;</span></code></pre>
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
+interface <strong>GPUError</strong> {<span class=def id=constructor-DOMString>
+    <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>message</strong>);</span><span class=def id=attribute-message>
+    readonly attribute <span class=primitive>DOMString</span> <strong>message</strong>;</span>
+};</span></code></pre>
   
   
 </section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>GPUError</code></h3>
 
+  <ul>
+    <li><code><a href="GPUError.html">GPUError</a><a href=GPUError.html#constructor-DOMString>()</a></code></li>
+<li><code><a href="GPUUncapturedErrorEvent.html">GPUUncapturedErrorEvent</a><a href=GPUUncapturedErrorEvent.html#attribute-error>.error</a></code></li>
+
+  </ul>
+</section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
     <li><code><a href="GPUDevice.html">GPUDevice</a></code></li>
+<li><code><a href="GPUOutOfMemoryError.html">GPUOutOfMemoryError</a></code></li>
 <li><code><a href="GPUUncapturedErrorEvent.html">GPUUncapturedErrorEvent</a></code></li>
 <li><code><a href="GPUUncapturedErrorEventInit.html">GPUUncapturedErrorEventInit</a></code></li>
+<li><code><a href="GPUValidationError.html">GPUValidationError</a></code></li>
 
   </ul>
 </section>
