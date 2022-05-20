@@ -36,6 +36,15 @@ partial interface <strong>MediaStreamTrack</strong> {<span class=def id=operatio
   sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getSupportedCaptureActions</strong>();</span><span class=def id=operation-sendCaptureAction-CaptureAction>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendCaptureAction</strong>(<a href='CaptureAction.html'>CaptureAction</a> <strong>action</strong>);</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;capture-handle-identity&#x2F;#capture-handle-via-getcapturehandle">Capture Handle - Bootstrapping Collaboration when Screensharing</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>MediaStreamTrack</strong> {<span class=def id=operation-getCaptureHandle>
+  <a href='CaptureHandle.html'>CaptureHandle</a>? <strong>getCaptureHandle</strong>();</span>
+};</span><span class=def>
+
+partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-oncapturehandlechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncapturehandlechange</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mst-content-hint&#x2F;#mediastreamtrack-extension">MediaStreamTrack Content Hints</a><pre class=webidl><code><span class=def>partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-contentHint>
   attribute <span class=primitive>DOMString</span> <strong>contentHint</strong>;</span>
 };</span></code></pre></li>
@@ -67,7 +76,9 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
   <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong>getSettings</strong>();</span><span class=def id=operation-applyConstraints-MediaTrackConstraints>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>applyConstraints</strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-getSupportedCaptureActions>
   sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getSupportedCaptureActions</strong>();</span><span class=def id=operation-sendCaptureAction-CaptureAction>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendCaptureAction</strong>(<a href='CaptureAction.html'>CaptureAction</a> <strong>action</strong>);</span><span class=def id=attribute-contentHint>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendCaptureAction</strong>(<a href='CaptureAction.html'>CaptureAction</a> <strong>action</strong>);</span><span class=def id=operation-getCaptureHandle>
+  <a href='CaptureHandle.html'>CaptureHandle</a>? <strong>getCaptureHandle</strong>();</span><span class=def id=attribute-oncapturehandlechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncapturehandlechange</strong>;</span><span class=def id=attribute-contentHint>
   attribute <span class=primitive>DOMString</span> <strong>contentHint</strong>;</span><span class=def id=attribute-isolated>
     readonly        attribute <span class=primitive>boolean</span>      <strong>isolated</strong>;</span><span class=def id=attribute-onisolationchange>
                     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onisolationchange</strong>;</span>
@@ -117,6 +128,7 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;">The Capture-Handle Actions Mechanism</a> refers to <code>MediaStreamTrack</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;capture-handle-identity&#x2F;">Capture Handle - Bootstrapping Collaboration when Screensharing</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;">Media Capture from DOM Elements</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-region&#x2F;">Region Capture</a> refers to <code>MediaStreamTrack</code></li>
