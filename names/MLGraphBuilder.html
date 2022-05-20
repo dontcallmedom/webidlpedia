@@ -24,9 +24,12 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
   </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
-  &#x2F;&#x2F; Compile the graph up to the specified output operands
+  &#x2F;&#x2F; Compile the graph up to the specified output operands synchronously.
   </span>[Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-  <a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span>
+  <a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-buildAsync-MLNamedOperands><span class="comment">
+
+  &#x2F;&#x2F; Compile the graph up to the specified output operands asynchronously.
+  </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong>buildAsync</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
@@ -220,9 +223,12 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
   </span><a href='MLOperand.html'>MLOperand</a> <strong>constant</strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandType.html'>MLOperandType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
-  &#x2F;&#x2F; Compile the graph up to the specified output operands
+  &#x2F;&#x2F; Compile the graph up to the specified output operands synchronously.
   </span>[Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-  <a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
+  <a href='MLGraph.html'>MLGraph</a> <strong>build</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-buildAsync-MLNamedOperands><span class="comment">
+
+  &#x2F;&#x2F; Compile the graph up to the specified output operands asynchronously.
+  </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong>buildAsync</strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
                              optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
