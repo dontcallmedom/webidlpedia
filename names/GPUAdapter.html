@@ -11,13 +11,13 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUAdapter</strong> {<span class=def id=attribute-name>
-    readonly attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-features>
+interface <strong>GPUAdapter</strong> {<span class=def id=attribute-features>
     [SameObject] readonly attribute <a href='GPUSupportedFeatures.html'>GPUSupportedFeatures</a> <strong>features</strong>;</span><span class=def id=attribute-limits>
     [SameObject] readonly attribute <a href='GPUSupportedLimits.html'>GPUSupportedLimits</a> <strong>limits</strong>;</span><span class=def id=attribute-isFallbackAdapter>
     readonly attribute <span class=primitive>boolean</span> <strong>isFallbackAdapter</strong>;</span><span class=def id=operation-requestDevice-GPUDeviceDescriptor>
 
-    Promise&lt;<a href='GPUDevice.html'>GPUDevice</a>&gt; <strong>requestDevice</strong>(optional <a href='GPUDeviceDescriptor.html'>GPUDeviceDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span>
+    Promise&lt;<a href='GPUDevice.html'>GPUDevice</a>&gt; <strong>requestDevice</strong>(optional <a href='GPUDeviceDescriptor.html'>GPUDeviceDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def id=operation-requestAdapterInfo-DOMString>
+    Promise&lt;<a href='GPUAdapterInfo.html'>GPUAdapterInfo</a>&gt; <strong>requestAdapterInfo</strong>(optional sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>unmaskHints</strong> &#x3D; []);</span>
 };</span></code></pre>
   
   
