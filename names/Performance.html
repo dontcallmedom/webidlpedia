@@ -18,17 +18,17 @@ interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget<
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;event-timing&#x2F;#sec-extensions">Event Timing API</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Performance</strong> {<span class=def id=operation-measureUserAgentSpecificMemory>
+  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;event-timing&#x2F;#sec-extensions">Event Timing API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 partial interface <strong>Performance</strong> {<span class=def id=attribute-eventCounts>
     [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def id=attribute-interactionCounts>
     [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Performance</strong> {<span class=def id=operation-measureUserAgentSpecificMemory>
-  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;navigation-timing-2&#x2F;#extensions-to-the-performance-interface">Navigation Timing Level 2</a><pre class=webidl><code><span class=def>
 
@@ -67,10 +67,10 @@ partial interface <strong>Performance</strong> {<span class=def id=operation-mar
 interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-now>
     <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>now</strong>();</span><span class=def id=attribute-timeOrigin>
     readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeOrigin</strong>;</span><span class=def id=operation-toJSON>
-    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def id=attribute-eventCounts>
+    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def id=operation-measureUserAgentSpecificMemory>
+  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span><span class=def id=attribute-eventCounts>
     [SameObject] readonly attribute <a href='EventCounts.html'>EventCounts</a> <strong>eventCounts</strong>;</span><span class=def id=attribute-interactionCounts>
-    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span><span class=def id=operation-measureUserAgentSpecificMemory>
-  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), CrossOriginIsolated] Promise&lt;<a href='MemoryMeasurement.html'>MemoryMeasurement</a>&gt; <strong>measureUserAgentSpecificMemory</strong>();</span><span class=def id=attribute-timing>
+    [SameObject] readonly attribute <a href='InteractionCounts.html'>InteractionCounts</a> <strong>interactionCounts</strong>;</span><span class=def id=attribute-timing>
   [SameObject]
   readonly attribute <a href='PerformanceTiming.html'>PerformanceTiming</a> <strong>timing</strong>;</span><span class=def id=attribute-navigation>
   [SameObject]
@@ -105,8 +105,8 @@ interface <strong>Performance</strong> : <a href='EventTarget.html'>EventTarget<
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;event-timing&#x2F;">Event Timing API</a> refers to <code>Performance</code></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a> refers to <code>Performance</code></li>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;performance-measure-memory&#x2F;">Measure Memory API</a> refers to <code>Performance</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;event-timing&#x2F;">Event Timing API</a> refers to <code>Performance</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;navigation-timing-2&#x2F;">Navigation Timing Level 2</a> refers to <code>Performance</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;performance-timeline&#x2F;">Performance Timeline Level 2</a> refers to <code>Performance</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;resource-timing-2&#x2F;">Resource Timing Level 2</a> refers to <code>Performance</code></li>
