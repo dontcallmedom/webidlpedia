@@ -15,17 +15,16 @@ interface <strong>NavigateEvent</strong> : <a href='Event.html'>Event</a> {<span
   <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='NavigateEventInit.html'>NavigateEventInit</a> <strong>eventInit</strong>);</span><span class=def id=attribute-navigationType>
 
   readonly attribute <a href='NavigationType.html'>NavigationType</a> <strong>navigationType</strong>;</span><span class=def id=attribute-destination>
-  readonly attribute <a href='NavigationDestination.html'>NavigationDestination</a> <strong>destination</strong>;</span><span class=def id=attribute-canTransition>
-  readonly attribute <span class=primitive>boolean</span> <strong>canTransition</strong>;</span><span class=def id=attribute-userInitiated>
+  readonly attribute <a href='NavigationDestination.html'>NavigationDestination</a> <strong>destination</strong>;</span><span class=def id=attribute-canIntercept>
+  readonly attribute <span class=primitive>boolean</span> <strong>canIntercept</strong>;</span><span class=def id=attribute-userInitiated>
   readonly attribute <span class=primitive>boolean</span> <strong>userInitiated</strong>;</span><span class=def id=attribute-hashChange>
   readonly attribute <span class=primitive>boolean</span> <strong>hashChange</strong>;</span><span class=def id=attribute-signal>
   readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong>signal</strong>;</span><span class=def id=attribute-formData>
   readonly attribute <a href='FormData.html'>FormData</a>? <strong>formData</strong>;</span><span class=def id=attribute-downloadRequest>
   readonly attribute <span class=primitive>DOMString</span>? <strong>downloadRequest</strong>;</span><span class=def id=attribute-info>
-  readonly attribute <span class=primitive>any</span> <strong>info</strong>;</span><span class=def id=operation-transitionWhile-undefined-NavigationTransitionWhileOptions>
+  readonly attribute <span class=primitive>any</span> <strong>info</strong>;</span><span class=def id=operation-intercept-NavigationInterceptOptions>
 
-  <span class=primitive>undefined</span> <strong>transitionWhile</strong>(Promise&lt;<span class=primitive>undefined</span>&gt; <strong>newNavigationAction</strong>,
-                            optional <a href='NavigationTransitionWhileOptions.html'>NavigationTransitionWhileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-restoreScroll>
+  <span class=primitive>undefined</span> <strong>intercept</strong>(optional <a href='NavigationInterceptOptions.html'>NavigationInterceptOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-restoreScroll>
   <span class=primitive>undefined</span> <strong>restoreScroll</strong>();</span>
 };</span></code></pre>
   
