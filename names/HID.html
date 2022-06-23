@@ -10,7 +10,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;#dom-hid">WebHID API</a> defines <code>HID</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>), SecureContext]
 interface <strong>HID</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-onconnect>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconnect</strong>;</span><span class=def id=attribute-ondisconnect>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondisconnect</strong>;</span><span class=def id=operation-getDevices>
@@ -26,6 +26,7 @@ interface <strong>HID</strong> : <a href='EventTarget.html'>EventTarget</a> {<sp
 
   <ul>
     <li><code><a href="Navigator.html">Navigator</a><a href=Navigator.html#attribute-hid>.hid</a></code></li>
+<li><code><a href="WorkerNavigator.html">WorkerNavigator</a><a href=WorkerNavigator.html#attribute-hid>.hid</a></code></li>
 
   </ul>
 </section>
@@ -34,6 +35,7 @@ interface <strong>HID</strong> : <a href='EventTarget.html'>EventTarget</a> {<sp
   
   <ul>
     <li><code><a href="Navigator.html">Navigator</a></code></li>
+<li><code><a href="WorkerNavigator.html">WorkerNavigator</a></code></li>
 
   </ul>
 </section>

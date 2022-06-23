@@ -34,6 +34,12 @@ partial interface <strong>WorkerNavigator</strong> {<span class=def id=attribute
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 <a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;#hid-attribute-0">WebHID API</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+partial interface <strong>WorkerNavigator</strong> {<span class=def id=attribute-hid>
+    [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;#enumeration">WebUSB API</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), SecureContext]
@@ -90,7 +96,8 @@ interface <strong>WorkerNavigator</strong> {<span class=def id=attribute-appCode
   readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def id=attribute-connection>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def id=attribute-serial>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=attribute-userAgentData>
-  [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-usb>
+  [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-hid>
+    [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def id=attribute-usb>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def id=attribute-deviceMemory>
     readonly attribute <span class=primitive>double</span> <strong>deviceMemory</strong>;</span><span class=def id=attribute-mediaCapabilities>
   [SameObject] readonly attribute <a href='MediaCapabilities.html'>MediaCapabilities</a> <strong>mediaCapabilities</strong>;</span><span class=def id=attribute-permissions>
@@ -118,6 +125,7 @@ interface <strong>WorkerNavigator</strong> {<span class=def id=attribute-appCode
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;">Web Serial API</a> refers to <code>WorkerNavigator</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;">WebHID API</a> refers to <code>WorkerNavigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;">WebUSB API</a> refers to <code>WorkerNavigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;media-capabilities&#x2F;">Media Capabilities</a> refers to <code>WorkerNavigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions&#x2F;">Permissions</a> refers to <code>WorkerNavigator</code></li>
