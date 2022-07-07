@@ -16,10 +16,13 @@ interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTar
 
   readonly attribute <span class=primitive>DOMString</span> <strong>requestId</strong>;</span><span class=def id=attribute-methodName>
   readonly attribute <span class=primitive>DOMString</span> <strong>methodName</strong>;</span><span class=def id=attribute-details>
-  readonly attribute <span class=primitive>object</span> <strong>details</strong>;</span><span class=def id=operation-complete-PaymentComplete>
+  readonly attribute <span class=primitive>object</span> <strong>details</strong>;</span><span class=def id=operation-complete-PaymentComplete-PaymentCompleteDetails>
 
   [NewObject]
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>complete</strong>(optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> &#x3D; &quot;unknown&quot;);</span><span class=def id=operation-retry-PaymentValidationErrors>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>complete</strong>(
+    optional <a href='PaymentComplete.html'>PaymentComplete</a> <strong>result</strong> &#x3D; &quot;unknown&quot;,
+    optional <a href='PaymentCompleteDetails.html'>PaymentCompleteDetails</a> <strong>details</strong> &#x3D; {}
+  );</span><span class=def id=operation-retry-PaymentValidationErrors>
   [NewObject]
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>retry</strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> &#x3D; {});</span>
 };</span></code></pre>
