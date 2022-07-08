@@ -22,9 +22,35 @@ interface <strong>PerformanceNavigationTiming</strong> : <a href='PerformanceRes
     readonly        attribute <span class=primitive>unsigned short</span>       <strong>redirectCount</strong>;</span><span class=def id=operation-toJSON>
     [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;nav-speculation&#x2F;prerendering.html#performance-navigation-timing-extension">Prerendering Revamped</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>PerformanceNavigationTiming</strong> {<span class=def id=attribute-activationStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>activationStart</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>PerformanceNavigationTiming</strong> : <a href='PerformanceResourceTiming.html'>PerformanceResourceTiming</a> {<span class=def id=attribute-unloadEventStart>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>unloadEventStart</strong>;</span><span class=def id=attribute-unloadEventEnd>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>unloadEventEnd</strong>;</span><span class=def id=attribute-domInteractive>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>domInteractive</strong>;</span><span class=def id=attribute-domContentLoadedEventStart>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>domContentLoadedEventStart</strong>;</span><span class=def id=attribute-domContentLoadedEventEnd>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>domContentLoadedEventEnd</strong>;</span><span class=def id=attribute-domComplete>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>domComplete</strong>;</span><span class=def id=attribute-loadEventStart>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>loadEventStart</strong>;</span><span class=def id=attribute-loadEventEnd>
+    readonly        attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>  <strong>loadEventEnd</strong>;</span><span class=def id=attribute-type>
+    readonly        attribute <a href='NavigationTimingType.html'>NavigationTimingType</a> <strong>type</strong>;</span><span class=def id=attribute-redirectCount>
+    readonly        attribute <span class=primitive>unsigned short</span>       <strong>redirectCount</strong>;</span><span class=def id=operation-toJSON>
+    [Default] <span class=primitive>object</span> <strong>toJSON</strong>();</span><span class=def id=attribute-activationStart>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>activationStart</strong>;</span>
+};</span></code></pre></details>
 </section>
 
 
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;nav-speculation&#x2F;prerendering.html">Prerendering Revamped</a> refers to <code>PerformanceNavigationTiming</code></li>
+
+  </ul></section>
