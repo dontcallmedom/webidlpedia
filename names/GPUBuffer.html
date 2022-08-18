@@ -11,30 +11,34 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUBuffer</strong> {<span class=def id=operation-mapAsync-GPUMapModeFlags-GPUSize64-GPUSize64>
+interface <strong>GPUBuffer</strong> {<span class=def id=attribute-size>
+    readonly attribute <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>;</span><span class=def id=attribute-usage>
+    readonly attribute <a href='GPUBufferUsageFlags.html'>GPUBufferUsageFlags</a> <strong>usage</strong>;</span><span class=def id=attribute-mapState>
+
+    readonly attribute <a href='GPUBufferMapState.html'>GPUBufferMapState</a> <strong>mapState</strong>;</span><span class=def id=operation-mapAsync-GPUMapModeFlags-GPUSize64-GPUSize64>
+
     Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-getMappedRange-GPUSize64-GPUSize64>
     <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-unmap>
     <span class=primitive>undefined</span> <strong>unmap</strong>();</span><span class=def id=operation-destroy>
 
-    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=attribute-size>
-
-    readonly attribute <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>;</span><span class=def id=attribute-usage>
-    readonly attribute <a href='GPUBufferUsageFlags.html'>GPUBufferUsageFlags</a> <strong>usage</strong>;</span>
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span>
 };</span><span class=def>
 <a href='GPUBuffer.html'>GPUBuffer</a> includes <a href='GPUObjectBase.html'>GPUObjectBase</a>;</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
-interface <strong>GPUBuffer</strong> {<span class=def id=operation-mapAsync-GPUMapModeFlags-GPUSize64-GPUSize64>
+interface <strong>GPUBuffer</strong> {<span class=def id=attribute-size>
+    readonly attribute <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>;</span><span class=def id=attribute-usage>
+    readonly attribute <a href='GPUBufferUsageFlags.html'>GPUBufferUsageFlags</a> <strong>usage</strong>;</span><span class=def id=attribute-mapState>
+
+    readonly attribute <a href='GPUBufferMapState.html'>GPUBufferMapState</a> <strong>mapState</strong>;</span><span class=def id=operation-mapAsync-GPUMapModeFlags-GPUSize64-GPUSize64>
+
     Promise&lt;<span class=primitive>undefined</span>&gt; <strong>mapAsync</strong>(<a href='GPUMapModeFlags.html'>GPUMapModeFlags</a> <strong>mode</strong>, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-getMappedRange-GPUSize64-GPUSize64>
     <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>getMappedRange</strong>(optional <a href='GPUSize64.html'>GPUSize64</a> <strong>offset</strong> &#x3D; 0, optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-unmap>
     <span class=primitive>undefined</span> <strong>unmap</strong>();</span><span class=def id=operation-destroy>
 
-    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=attribute-size>
-
-    readonly attribute <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>;</span><span class=def id=attribute-usage>
-    readonly attribute <a href='GPUBufferUsageFlags.html'>GPUBufferUsageFlags</a> <strong>usage</strong>;</span><span class=def id=attribute-label>
+    <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=attribute-label>
     attribute <span class=primitive>USVString</span> <strong>label</strong>;</span>
 };</span></code></pre></details>
 </section>
