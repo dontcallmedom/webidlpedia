@@ -452,6 +452,12 @@ function extAttrUsage(data) {
   return html`<p>Extended attributes usage:</p>${htmlList(list)}`;
 }
 
+const idlTypeToDfnType = {
+  "operation": "method",
+  "field": "dict-member",
+  "value": "enum-value"
+};
+
 function memberNames(data, sort) {
   data.filter(hasIdlDef)
   const memberNames = data.filter(hasIdlDef)
@@ -461,7 +467,15 @@ function memberNames(data, sort) {
              .filter(n => ["interface", "interface mixin", "dictionary"].includes(spec.idlparsed.idlNames[n].type))
              .map(n => spec.idlparsed.idlNames[n].members.filter(v => v.name)
                   .map(v =>
-                       {return {url: spec.url,title: spec.title, containerType: spec.idlparsed.idlNames[n].type, containerName: n, value: v.name, type: v.type};})
+                    {
+		      let url = spec.url;
+		      if (spec.dfns && v.type) {
+			const dfnType = idlTypeToDfnType[v.type] || v.type;
+			const dfn = spec.dfns.find(dfn => dfn.type === dfnType && dfn.linkingText.includes(v.name) || (v.type === "operation" && dfn.linkingText.find(t => t.startsWith(v.name + "("))));
+			if (dfn) url = dfn.href;
+		      }
+		      return {url: url,title: spec.title, containerType: spec.idlparsed.idlNames[n].type, containerName: n, value: v.name, type: v.type};
+		    })
                   .reduce((a,b) => a.concat(b), [])))
         .reduce((a,b) => a.concat(b), [])
         .reduce((a,b) => a.concat(b), [])
