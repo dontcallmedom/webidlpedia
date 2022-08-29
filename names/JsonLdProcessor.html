@@ -1,0 +1,86 @@
+---
+title: <code>JsonLdProcessor</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;json-ld-api&#x2F;#dom-jsonldprocessor">JSON-LD 1.1 Processing Algorithms and API</a> defines <code>JsonLdProcessor</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/JsonLd.html'>JsonLd</a>]
+interface <strong>JsonLdProcessor</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>compact</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdContext.html'>JsonLdContext</a> <strong>context</strong> &#x3D; null,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;sequence&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt;&gt; <strong>expand</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>flatten</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdContext.html'>JsonLdContext</a> <strong>context</strong> &#x3D; null,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;sequence&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt;&gt; <strong>fromRdf</strong>(
+    <a href='RdfDataset.html'>RdfDataset</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='RdfDataset.html'>RdfDataset</a>&gt; <strong>toRdf</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre>
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;json-ld11-framing&#x2F;#jsonldprocessor">JSON-LD 1.1 Framing</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/JsonLd.html'>JsonLd</a>]
+partial interface <strong>JsonLdProcessor</strong> {<span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>frame</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>frame</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/JsonLd.html'>JsonLd</a>]
+interface <strong>JsonLdProcessor</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>compact</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdContext.html'>JsonLdContext</a> <strong>context</strong> &#x3D; null,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;sequence&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt;&gt; <strong>expand</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>flatten</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdContext.html'>JsonLdContext</a> <strong>context</strong> &#x3D; null,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;sequence&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt;&gt; <strong>fromRdf</strong>(
+    <a href='RdfDataset.html'>RdfDataset</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='RdfDataset.html'>RdfDataset</a>&gt; <strong>toRdf</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='JsonLdRecord.html'>JsonLdRecord</a>&gt; <strong>frame</strong>(
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>input</strong>,
+    <a href='JsonLdInput.html'>JsonLdInput</a> <strong>frame</strong>,
+    optional <a href='JsonLdOptions.html'>JsonLdOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>JsonLdProcessor</code></h3>
+
+  <ul>
+    <li><code><a href="JsonLdProcessor.html">JsonLdProcessor</a><a href=JsonLdProcessor.html#constructor>()</a></code></li>
+
+  </ul>
+</section>
+
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;json-ld11-framing&#x2F;">JSON-LD 1.1 Framing</a> refers to <code>JsonLdProcessor</code></li>
+
+  </ul></section>

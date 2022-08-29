@@ -1,0 +1,80 @@
+---
+title: <code>JsonLdOptions</code> dictionary
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;json-ld-api&#x2F;#dom-jsonldoptions">JSON-LD 1.1 Processing Algorithms and API</a> defines <code>JsonLdOptions</code></p>
+<pre class=webidl><code><span class=def>
+
+dictionary <strong>JsonLdOptions</strong> {<span class=def>
+  <span class=primitive>USVString</span>?             <strong>base</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>compactArrays</strong> &#x3D; true;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>compactToRelative</strong> &#x3D; true;</span><span class=def>
+  <a href='LoadDocumentCallback.html'>LoadDocumentCallback</a>?  <strong>documentLoader</strong> &#x3D; null;</span><span class=def>
+  (<a href='JsonLdRecord.html'>JsonLdRecord</a>? or <span class=primitive>USVString</span>) <strong>expandContext</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>extractAllScripts</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>frameExpansion</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>ordered</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>USVString</span>              <strong>processingMode</strong> &#x3D; &quot;json-ld-1.1&quot;;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>produceGeneralizedRdf</strong> &#x3D; true;</span><span class=def>
+  <span class=primitive>USVString</span>?             <strong>rdfDirection</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>useNativeTypes</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>useRdfType</strong> &#x3D; false;</span>
+};</span></code></pre>
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;json-ld11-framing&#x2F;">JSON-LD 1.1 Framing</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>JsonLdOptions</strong> {<span class=def>
+  (<a href='JsonLdEmbed.html'>JsonLdEmbed</a> or <span class=primitive>boolean</span>)  <strong>embed</strong>         &#x3D; &quot;@once&quot;;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>explicit</strong>      &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>omitDefault</strong>   &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>omitGraph</strong>;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>requireAll</strong>    &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>frameDefault</strong>  &#x3D; false;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>JsonLdOptions</strong> {<span class=def>
+  <span class=primitive>USVString</span>?             <strong>base</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>compactArrays</strong> &#x3D; true;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>compactToRelative</strong> &#x3D; true;</span><span class=def>
+  <a href='LoadDocumentCallback.html'>LoadDocumentCallback</a>?  <strong>documentLoader</strong> &#x3D; null;</span><span class=def>
+  (<a href='JsonLdRecord.html'>JsonLdRecord</a>? or <span class=primitive>USVString</span>) <strong>expandContext</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>extractAllScripts</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>frameExpansion</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>ordered</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>USVString</span>              <strong>processingMode</strong> &#x3D; &quot;json-ld-1.1&quot;;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>produceGeneralizedRdf</strong> &#x3D; true;</span><span class=def>
+  <span class=primitive>USVString</span>?             <strong>rdfDirection</strong> &#x3D; null;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>useNativeTypes</strong> &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                <strong>useRdfType</strong> &#x3D; false;</span><span class=def>
+  (<a href='JsonLdEmbed.html'>JsonLdEmbed</a> or <span class=primitive>boolean</span>)  <strong>embed</strong>         &#x3D; &quot;@once&quot;;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>explicit</strong>      &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>omitDefault</strong>   &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>omitGraph</strong>;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>requireAll</strong>    &#x3D; false;</span><span class=def>
+  <span class=primitive>boolean</span>                   <strong>frameDefault</strong>  &#x3D; false;</span>
+};</span></code></pre></details>
+</section>
+
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="JsonLdProcessor.html">JsonLdProcessor</a></code></li>
+<li><code><a href="JsonLdProcessor.html">JsonLdProcessor</a></code></li>
+
+  </ul>
+</section>
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;json-ld11-framing&#x2F;">JSON-LD 1.1 Framing</a> refers to <code>JsonLdOptions</code></li>
+
+  </ul></section>
