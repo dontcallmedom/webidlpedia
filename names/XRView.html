@@ -20,7 +20,10 @@ base: ../
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#first-person-observer">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;raw-camera-access&#x2F;#xr-view-section">WebXR Raw Camera Access Module</a><pre class=webidl><code><span class=def>partial interface <strong>XRView</strong> {<span class=def id=attribute-camera>
+  [SameObject] readonly attribute <a href='XRCamera.html'>XRCamera</a>? <strong>camera</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#first-person-observer">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>XRView</strong> {<span class=def id=attribute-isFirstPersonObserver>
   readonly attribute <span class=primitive>boolean</span> <strong>isFirstPersonObserver</strong>;</span>
@@ -35,7 +38,8 @@ partial interface <strong>XRView</strong> {<span class=def id=attribute-isFirstP
   [SameObject] readonly attribute <a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>transform</strong>;</span><span class=def id=attribute-recommendedViewportScale>
   readonly attribute <span class=primitive>double</span>? <strong>recommendedViewportScale</strong>;</span><span class=def id=operation-requestViewportScale-double>
 
-  <span class=primitive>undefined</span> <strong>requestViewportScale</strong>(<span class=primitive>double</span>? <strong>scale</strong>);</span><span class=def id=attribute-isFirstPersonObserver>
+  <span class=primitive>undefined</span> <strong>requestViewportScale</strong>(<span class=primitive>double</span>? <strong>scale</strong>);</span><span class=def id=attribute-camera>
+  [SameObject] readonly attribute <a href='XRCamera.html'>XRCamera</a>? <strong>camera</strong>;</span><span class=def id=attribute-isFirstPersonObserver>
   readonly attribute <span class=primitive>boolean</span> <strong>isFirstPersonObserver</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -61,7 +65,8 @@ partial interface <strong>XRView</strong> {<span class=def id=attribute-isFirstP
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRView</code></li>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;raw-camera-access&#x2F;">WebXR Raw Camera Access Module</a> refers to <code>XRView</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRView</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRView</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxrlayers-1&#x2F;">WebXR Layers API Level 1</a> refers to <code>XRView</code></li>
 
