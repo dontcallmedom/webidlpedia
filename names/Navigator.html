@@ -10,6 +10,10 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;system-state.html#navigator">HTML Standard</a> defines <code>Navigator</code></p>
 <pre class=webidl><code><span class=def>
 
+partial interface <strong>Navigator</strong> {<span class=def id=attribute-userActivation>
+  [SameObject] readonly attribute <a href='UserActivation.html'>UserActivation</a> <strong>userActivation</strong>;</span>
+};</span><span class=def>
+
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>Navigator</strong> {<span class="comment">
   &#x2F;&#x2F; objects implementing this interface also implement the interfaces given below
@@ -213,7 +217,8 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-reque
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>Navigator</strong> {<span class=def id=attribute-appCodeName>
+interface <strong>Navigator</strong> {<span class=def id=attribute-userActivation>
+  [SameObject] readonly attribute <a href='UserActivation.html'>UserActivation</a> <strong>userActivation</strong>;</span><span class=def id=attribute-appCodeName>
   readonly attribute <span class=primitive>DOMString</span> <strong>appCodeName</strong>;</span><span class=def id=attribute-appName><span class="comment"> &#x2F;&#x2F; constant &quot;Mozilla&quot;
   </span>readonly attribute <span class=primitive>DOMString</span> <strong>appName</strong>;</span><span class=def id=attribute-appVersion><span class="comment"> &#x2F;&#x2F; constant &quot;Netscape&quot;
   </span>readonly attribute <span class=primitive>DOMString</span> <strong>appVersion</strong>;</span><span class=def id=attribute-platform>
