@@ -43,7 +43,13 @@ base: ../
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;anchors&#x2F;">WebXR Anchors Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XRSession</strong> {<span class=def id=operation-restorePersistentAnchor-DOMString>
+  Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>restorePersistentAnchor</strong>(<span class=primitive>DOMString</span> <strong>uuid</strong>);</span><span class=def id=operation-deletePersistentAnchor-DOMString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>deletePersistentAnchor</strong>(<span class=primitive>DOMString</span> <strong>uuid</strong>);</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;#xrenvironmentblendmode-enum">WebXR Augmented Reality Module - Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>XRSession</strong> {<span class=def id=attribute-environmentBlendMode><span class="comment">
   &#x2F;&#x2F; Attributes
@@ -110,7 +116,9 @@ partial interface <strong>XRSession</strong> {<span class=def id=operation-reque
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezestart</strong>;</span><span class=def id=attribute-onsqueezeend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsqueezeend</strong>;</span><span class=def id=attribute-onvisibilitychange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvisibilitychange</strong>;</span><span class=def id=attribute-onframeratechange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onframeratechange</strong>;</span><span class=def id=attribute-environmentBlendMode><span class="comment">
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onframeratechange</strong>;</span><span class=def id=operation-restorePersistentAnchor-DOMString>
+  Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>restorePersistentAnchor</strong>(<span class=primitive>DOMString</span> <strong>uuid</strong>);</span><span class=def id=operation-deletePersistentAnchor-DOMString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>deletePersistentAnchor</strong>(<span class=primitive>DOMString</span> <strong>uuid</strong>);</span><span class=def id=attribute-environmentBlendMode><span class="comment">
   &#x2F;&#x2F; Attributes
   </span>readonly attribute <a href='XREnvironmentBlendMode.html'>XREnvironmentBlendMode</a> <strong>environmentBlendMode</strong>;</span><span class=def id=attribute-interactionMode><span class="comment">
   &#x2F;&#x2F; Attributes
@@ -153,7 +161,8 @@ partial interface <strong>XRSession</strong> {<span class=def id=operation-reque
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRSession</code></li>
+    <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;anchors&#x2F;">WebXR Anchors Module</a> refers to <code>XRSession</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-ar-module-1&#x2F;">WebXR Augmented Reality Module - Level 1</a> refers to <code>XRSession</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRSession</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-dom-overlays-1&#x2F;">WebXR DOM Overlays Module</a> refers to <code>XRSession</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hit-test-1&#x2F;">WebXR Hit Test Module</a> refers to <code>XRSession</code></li>
