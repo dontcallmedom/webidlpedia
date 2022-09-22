@@ -13,7 +13,10 @@ base: ../
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
 interface <strong>MediaSource</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor>
     <strong>constructor</strong>();</span><span class=def id=attribute-handle>
-    [SameObject] readonly attribute <a href='MediaSourceHandle.html'>MediaSourceHandle</a>   <strong>handle</strong>;</span><span class=def id=attribute-sourceBuffers>
+
+    [ SameObject, Exposed&#x3D;<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a> ]
+    readonly              attribute <a href='MediaSourceHandle.html'>MediaSourceHandle</a>   <strong>handle</strong>;</span><span class=def id=attribute-sourceBuffers>
+
     readonly              attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>sourceBuffers</strong>;</span><span class=def id=attribute-activeSourceBuffers>
     readonly              attribute <a href='SourceBufferList.html'>SourceBufferList</a>    <strong>activeSourceBuffers</strong>;</span><span class=def id=attribute-readyState>
     readonly              attribute <a href='ReadyState.html'>ReadyState</a>          <strong>readyState</strong>;</span><span class=def id=attribute-duration>
