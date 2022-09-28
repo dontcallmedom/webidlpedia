@@ -38,7 +38,31 @@ partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span 
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.1-ps-20210615&#x2F;fido-client-to-authenticator-protocol-v2.1-ps-errata-20220621.html">Client to Authenticator Protocol (CTAP)</a><pre class=webidl><code><span class=def>partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <span class=primitive>USVString</span> <strong>credentialProtectionPolicy</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>enforceCredentialProtectionPolicy</strong> &#x3D; false;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>credBlob</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <span class=primitive>boolean</span> <strong>getCredBlob</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <span class=primitive>boolean</span> <strong>minPinLength</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <span class=primitive>boolean</span> <strong>hmacCreateSecret</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
+  <a href='HMACGetSecretInput.html'>HMACGetSecretInput</a> <strong>hmacGetSecret</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a><pre class=webidl><code><span class=def>
 
 partial dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=def>
   <a href='AuthenticationExtensionsPaymentInputs.html'>AuthenticationExtensionsPaymentInputs</a> <strong>payment</strong>;</span>
@@ -54,6 +78,13 @@ dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=de
     <a href='AuthenticationExtensionsPRFInputs.html'>AuthenticationExtensionsPRFInputs</a> <strong>prf</strong>;</span><span class=def>
     <a href='AuthenticationExtensionsLargeBlobInputs.html'>AuthenticationExtensionsLargeBlobInputs</a> <strong>largeBlob</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>uvm</strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>credentialProtectionPolicy</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>enforceCredentialProtectionPolicy</strong> &#x3D; false;</span><span class=def>
+  <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>credBlob</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>getCredBlob</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>minPinLength</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>hmacCreateSecret</strong>;</span><span class=def>
+  <a href='HMACGetSecretInput.html'>HMACGetSecretInput</a> <strong>hmacGetSecret</strong>;</span><span class=def>
   <a href='AuthenticationExtensionsPaymentInputs.html'>AuthenticationExtensionsPaymentInputs</a> <strong>payment</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -70,6 +101,7 @@ dictionary <strong>AuthenticationExtensionsClientInputs</strong> {<span class=de
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a> refers to <code>AuthenticationExtensionsClientInputs</code></li>
+    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.1-ps-20210615&#x2F;fido-client-to-authenticator-protocol-v2.1-ps-errata-20220621.html">Client to Authenticator Protocol (CTAP)</a> refers to <code>AuthenticationExtensionsClientInputs</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a> refers to <code>AuthenticationExtensionsClientInputs</code></li>
 
   </ul></section>
