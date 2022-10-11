@@ -1,5 +1,5 @@
 ---
-title: <code>PressureRecord</code> dictionary
+title: <code>PressureRecord</code> interface
 layout: base
 parent: names/
 base: ../
@@ -10,16 +10,24 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;compute-pressure&#x2F;#dom-pressurerecord">Compute Pressure Level 1</a> defines <code>PressureRecord</code></p>
 <pre class=webidl><code><span class=def>
 
-dictionary <strong>PressureRecord</strong> {<span class=def>
-  <a href='PressureSource.html'>PressureSource</a> <strong>source</strong>;</span><span class=def>
-  <a href='PressureState.html'>PressureState</a> <strong>state</strong>;</span><span class=def>
-  sequence&lt;<a href='PressureFactor.html'>PressureFactor</a>&gt; <strong>factors</strong>;</span><span class=def>
-  <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>time</strong>;</span>
+[Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>), SecureContext]
+interface <strong>PressureRecord</strong> {<span class=def id=attribute-source>
+  readonly attribute <a href='PressureSource.html'>PressureSource</a> <strong>source</strong>;</span><span class=def id=attribute-state>
+  readonly attribute <a href='PressureState.html'>PressureState</a> <strong>state</strong>;</span><span class=def id=attribute-factors>
+  readonly attribute FrozenArray&lt;<a href='PressureFactor.html'>PressureFactor</a>&gt; <strong>factors</strong>;</span><span class=def id=attribute-time>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>time</strong>;</span>
 };</span></code></pre>
   
   
 </section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>PressureRecord</code></h3>
 
+  <ul>
+    <li><code><a href="PressureObserver.html">PressureObserver</a><a href=PressureObserver.html#operation-takeRecords>.takeRecords()</a></code></li>
+
+  </ul>
+</section>
 <section>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
