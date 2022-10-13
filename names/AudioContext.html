@@ -14,12 +14,15 @@ base: ../
 interface <strong>AudioContext</strong> : <a href='BaseAudioContext.html'>BaseAudioContext</a> {<span class=def id=constructor-AudioContextOptions>
   <strong>constructor</strong> (optional <a href='AudioContextOptions.html'>AudioContextOptions</a> <strong>contextOptions</strong> &#x3D; {});</span><span class=def id=attribute-baseLatency>
   readonly attribute <span class=primitive>double</span> <strong>baseLatency</strong>;</span><span class=def id=attribute-outputLatency>
-  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def id=attribute-renderCapacity>
-  [SecureContext] readonly attribute <a href='AudioRenderCapacity.html'>AudioRenderCapacity</a> <strong>renderCapacity</strong>;</span><span class=def id=operation-getOutputTimestamp>
+  readonly attribute <span class=primitive>double</span> <strong>outputLatency</strong>;</span><span class=def id=attribute-sinkId>
+  [SecureContext] readonly attribute (<span class=primitive>DOMString</span> or <a href='AudioSinkInfo.html'>AudioSinkInfo</a>) <strong>sinkId</strong>;</span><span class=def id=attribute-renderCapacity>
+  [SecureContext] readonly attribute <a href='AudioRenderCapacity.html'>AudioRenderCapacity</a> <strong>renderCapacity</strong>;</span><span class=def id=attribute-onsinkchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsinkchange</strong>;</span><span class=def id=operation-getOutputTimestamp>
   <a href='AudioTimestamp.html'>AudioTimestamp</a> <strong>getOutputTimestamp</strong> ();</span><span class=def id=operation-resume>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resume</strong> ();</span><span class=def id=operation-suspend>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>suspend</strong> ();</span><span class=def id=operation-close>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong> ();</span><span class=def id=operation-createMediaElementSource-HTMLMediaElement>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong> ();</span><span class=def id=operation-setSinkId-DOMString-AudioSinkOptions>
+  [SecureContext] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setSinkId</strong> ((<span class=primitive>DOMString</span> or <a href='AudioSinkOptions.html'>AudioSinkOptions</a>) <strong>sinkId</strong>);</span><span class=def id=operation-createMediaElementSource-HTMLMediaElement>
   <a href='MediaElementAudioSourceNode.html'>MediaElementAudioSourceNode</a> <strong>createMediaElementSource</strong> (<a href='HTMLMediaElement.html'>HTMLMediaElement</a> <strong>mediaElement</strong>);</span><span class=def id=operation-createMediaStreamSource-MediaStream>
   <a href='MediaStreamAudioSourceNode.html'>MediaStreamAudioSourceNode</a> <strong>createMediaStreamSource</strong> (<a href='MediaStream.html'>MediaStream</a> <strong>mediaStream</strong>);</span><span class=def id=operation-createMediaStreamTrackSource-MediaStreamTrack>
   <a href='MediaStreamTrackAudioSourceNode.html'>MediaStreamTrackAudioSourceNode</a> <strong>createMediaStreamTrackSource</strong> (
