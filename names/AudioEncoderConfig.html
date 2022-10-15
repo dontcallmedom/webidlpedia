@@ -16,8 +16,26 @@ dictionary <strong>AudioEncoderConfig</strong> {<span class=def>
   [EnforceRange] <span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>;</span><span class=def>
   [EnforceRange] <span class=primitive>unsigned long long</span> <strong>bitrate</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webcodecs-aac-codec-registration&#x2F;">AAC WebCodecs Registration</a><pre class=webidl><code><span class=def>partial dictionary <strong>AudioEncoderConfig</strong> {<span class=def>
+  <a href='AacEncoderConfig.html'>AacEncoderConfig</a> <strong>aac</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webcodecs-opus-codec-registration&#x2F;">Opus WebCodecs Registration</a><pre class=webidl><code><span class=def>partial dictionary <strong>AudioEncoderConfig</strong> {<span class=def>
+  <a href='OpusEncoderConfig.html'>OpusEncoderConfig</a> <strong>opus</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>AudioEncoderConfig</strong> {<span class=def>
+  required <span class=primitive>DOMString</span> <strong>codec</strong>;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned long</span> <strong>sampleRate</strong>;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>;</span><span class=def>
+  [EnforceRange] <span class=primitive>unsigned long long</span> <strong>bitrate</strong>;</span><span class=def>
+  <a href='AacEncoderConfig.html'>AacEncoderConfig</a> <strong>aac</strong>;</span><span class=def>
+  <a href='OpusEncoderConfig.html'>OpusEncoderConfig</a> <strong>opus</strong>;</span>
+};</span></code></pre></details>
 </section>
 
 <section>
@@ -29,4 +47,9 @@ dictionary <strong>AudioEncoderConfig</strong> {<span class=def>
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webcodecs-aac-codec-registration&#x2F;">AAC WebCodecs Registration</a> refers to <code>AudioEncoderConfig</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webcodecs-opus-codec-registration&#x2F;">Opus WebCodecs Registration</a> refers to <code>AudioEncoderConfig</code></li>
+
+  </ul></section>
