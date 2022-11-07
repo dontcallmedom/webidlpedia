@@ -13,14 +13,14 @@ base: ../
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
 interface <strong>MLContext</strong> {};</span><span class=def>
 
-partial interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
+partial interface <strong>MLContext</strong> {<span class=def id=operation-computeSync-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
   [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-  <span class=primitive>undefined</span> <strong>compute</strong>(
+  <span class=primitive>undefined</span> <strong>computeSync</strong>(
       <a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>inputs</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>outputs</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLContext</strong> {<span class=def id=operation-computeAsync-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>computeAsync</strong>(
+partial interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>compute</strong>(
       <a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>inputs</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>outputs</strong>);</span>
 };</span><span class=def>
 
@@ -31,11 +31,11 @@ partial interface <strong>MLContext</strong> {<span class=def id=operation-creat
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
+interface <strong>MLContext</strong> {<span class=def id=operation-computeSync-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
   [Exposed&#x3D;(<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-  <span class=primitive>undefined</span> <strong>compute</strong>(
-      <a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>inputs</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>outputs</strong>);</span><span class=def id=operation-computeAsync-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>computeAsync</strong>(
+  <span class=primitive>undefined</span> <strong>computeSync</strong>(
+      <a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>inputs</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>outputs</strong>);</span><span class=def id=operation-compute-MLGraph-MLNamedArrayBufferViews-MLNamedArrayBufferViews>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>compute</strong>(
       <a href='MLGraph.html'>MLGraph</a> <strong>graph</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>inputs</strong>, <a href='MLNamedArrayBufferViews.html'>MLNamedArrayBufferViews</a> <strong>outputs</strong>);</span><span class=def id=operation-createCommandEncoder>
   <a href='MLCommandEncoder.html'>MLCommandEncoder</a> <strong>createCommandEncoder</strong>();</span>};</span></code></pre></details>
 </section>
@@ -45,6 +45,8 @@ interface <strong>MLContext</strong> {<span class=def id=operation-compute-MLGra
   <ul>
     <li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-MLContextOptions>.createContext()</a></code></li>
 <li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContext-GPUDevice>.createContext()</a></code></li>
+<li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContextSync-MLContextOptions>.createContextSync()</a></code></li>
+<li><code><a href="ML.html">ML</a><a href=ML.html#operation-createContextSync-GPUDevice>.createContextSync()</a></code></li>
 
   </ul>
 </section>
