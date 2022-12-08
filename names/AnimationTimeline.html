@@ -7,13 +7,10 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;scroll-animations-1&#x2F;#animationtimeline">Scroll-linked Animations</a> defines <code>AnimationTimeline</code></p>
-<pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-1&#x2F;#animationtimeline">Web Animations</a> defines <code>AnimationTimeline</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-currentTime>
-  readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>currentTime</strong>;</span><span class=def id=operation-getCurrentTime-CSSOMString>
-  <a href='CSSNumericValue.html'>CSSNumericValue</a>? <strong>getCurrentTime</strong>(optional <a href='CSSOMString.html'>CSSOMString</a> <strong>rangeName</strong>);</span>
+    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -22,16 +19,20 @@ partial interface <strong>AnimationTimeline</strong> {<span class=def id=attribu
     readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def id=operation-play-AnimationEffect>
     <a href='Animation.html'>Animation</a> <strong>play</strong> (optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null);</span>
 };</span></code></pre></li>
-
-  </ul>
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;scroll-animations-1&#x2F;">Scroll-linked Animations</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial interface <strong>AnimationTimeline</strong> {<span class=def id=operation-getCurrentTime-CSSOMString>
+  <a href='CSSNumericValue.html'>CSSNumericValue</a>? <strong>getCurrentTime</strong>(optional <a href='CSSOMString.html'>CSSOMString</a> <strong>rangeName</strong>);</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-currentTime>
-  readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>currentTime</strong>;</span><span class=def id=operation-getCurrentTime-CSSOMString>
-  <a href='CSSNumericValue.html'>CSSNumericValue</a>? <strong>getCurrentTime</strong>(optional <a href='CSSOMString.html'>CSSOMString</a> <strong>rangeName</strong>);</span><span class=def id=attribute-duration>
+    readonly attribute <span class=primitive>double</span>? <strong>currentTime</strong>;</span><span class=def id=attribute-duration>
     readonly attribute <a href='CSSNumberish.html'>CSSNumberish</a>? <strong>duration</strong>;</span><span class=def id=operation-play-AnimationEffect>
-    <a href='Animation.html'>Animation</a> <strong>play</strong> (optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null);</span>
+    <a href='Animation.html'>Animation</a> <strong>play</strong> (optional <a href='AnimationEffect.html'>AnimationEffect</a>? <strong>effect</strong> &#x3D; null);</span><span class=def id=operation-getCurrentTime-CSSOMString>
+  <a href='CSSNumericValue.html'>CSSNumericValue</a>? <strong>getCurrentTime</strong>(optional <a href='CSSOMString.html'>CSSOMString</a> <strong>rangeName</strong>);</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -58,6 +59,6 @@ interface <strong>AnimationTimeline</strong> {<span class=def id=attribute-curre
   <ul>
     <li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;web-animations-2&#x2F;">Web Animations Level 2</a> refers to <code>AnimationTimeline</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-animation-worklet-1&#x2F;">CSS Animation Worklet API</a> refers to <code>AnimationTimeline</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;">Web Animations</a> refers to <code>AnimationTimeline</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;scroll-animations-1&#x2F;">Scroll-linked Animations</a> refers to <code>AnimationTimeline</code></li>
 
   </ul></section>
