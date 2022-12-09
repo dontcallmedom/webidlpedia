@@ -12,8 +12,13 @@ base: ../
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>GamepadHapticActuator</strong> {<span class=def id=attribute-type>
-  readonly attribute <a href='GamepadHapticActuatorType.html'>GamepadHapticActuatorType</a> <strong>type</strong>;</span><span class=def id=operation-pulse-double-double>
-  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>pulse</strong>(<span class=primitive>double</span> <strong>value</strong>, <span class=primitive>double</span> <strong>duration</strong>);</span>
+  readonly attribute <a href='GamepadHapticActuatorType.html'>GamepadHapticActuatorType</a> <strong>type</strong>;</span><span class=def id=operation-canPlayEffectType-GamepadHapticEffectType>
+  <span class=primitive>boolean</span> <strong>canPlayEffectType</strong>(<a href='GamepadHapticEffectType.html'>GamepadHapticEffectType</a> <strong>type</strong>);</span><span class=def id=operation-playEffect-GamepadHapticEffectType-GamepadEffectParameters>
+  Promise&lt;<a href='GamepadHapticsResult.html'>GamepadHapticsResult</a>&gt; <strong>playEffect</strong>(
+      <a href='GamepadHapticEffectType.html'>GamepadHapticEffectType</a> <strong>type</strong>,
+      optional <a href='GamepadEffectParameters.html'>GamepadEffectParameters</a> <strong>params</strong> &#x3D; {});</span><span class=def id=operation-pulse-double-double>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>pulse</strong>(<span class=primitive>double</span> <strong>value</strong>, <span class=primitive>double</span> <strong>duration</strong>);</span><span class=def id=operation-reset>
+  Promise&lt;<a href='GamepadHapticsResult.html'>GamepadHapticsResult</a>&gt; <strong>reset</strong>();</span>
 };</span></code></pre>
   
   
@@ -23,6 +28,7 @@ interface <strong>GamepadHapticActuator</strong> {<span class=def id=attribute-t
 
   <ul>
     <li><code><a href="Gamepad.html">Gamepad</a><a href=Gamepad.html#attribute-hapticActuators>.hapticActuators</a></code></li>
+<li><code><a href="Gamepad.html">Gamepad</a><a href=Gamepad.html#attribute-vibrationActuator>.vibrationActuator</a></code></li>
 
   </ul>
 </section>
