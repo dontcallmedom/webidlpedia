@@ -21,13 +21,15 @@ interface <strong>WebTransport</strong> {<span class=def id=constructor-USVStrin
   readonly attribute Promise&lt;<a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a>&gt; <strong>closed</strong>;</span><span class=def id=operation-close-WebTransportCloseInfo>
   <span class=primitive>undefined</span> <strong>close</strong>(optional <a href='WebTransportCloseInfo.html'>WebTransportCloseInfo</a> <strong>closeInfo</strong> &#x3D; {});</span><span class=def id=attribute-datagrams>
 
-  readonly attribute <a href='WebTransportDatagramDuplexStream.html'>WebTransportDatagramDuplexStream</a> <strong>datagrams</strong>;</span><span class=def id=operation-createBidirectionalStream>
+  readonly attribute <a href='WebTransportDatagramDuplexStream.html'>WebTransportDatagramDuplexStream</a> <strong>datagrams</strong>;</span><span class=def id=operation-createBidirectionalStream-WebTransportSendStreamOptions>
 
-  Promise&lt;<a href='WebTransportBidirectionalStream.html'>WebTransportBidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>();</span><span class=def id=attribute-incomingBidirectionalStreams><span class="comment">
+  Promise&lt;<a href='WebTransportBidirectionalStream.html'>WebTransportBidirectionalStream</a>&gt; <strong>createBidirectionalStream</strong>(
+      optional <a href='WebTransportSendStreamOptions.html'>WebTransportSendStreamOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-incomingBidirectionalStreams><span class="comment">
   &#x2F;* a ReadableStream of WebTransportBidirectionalStream objects *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span><span class=def id=operation-createUnidirectionalStream>
+  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingBidirectionalStreams</strong>;</span><span class=def id=operation-createUnidirectionalStream-WebTransportSendStreamOptions>
 
-  Promise&lt;<a href='WebTransportSendStream.html'>WebTransportSendStream</a>&gt; <strong>createUnidirectionalStream</strong>();</span><span class=def id=attribute-incomingUnidirectionalStreams><span class="comment">
+  Promise&lt;<a href='WebTransportSendStream.html'>WebTransportSendStream</a>&gt; <strong>createUnidirectionalStream</strong>(
+      optional <a href='WebTransportSendStreamOptions.html'>WebTransportSendStreamOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-incomingUnidirectionalStreams><span class="comment">
   &#x2F;* a ReadableStream of WebTransportReceiveStream objects *&#x2F;
   </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span>
 };</span></code></pre>
