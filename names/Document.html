@@ -126,7 +126,6 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-locati
   &#x2F;&#x2F; also has obsolete members
 </span>};</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='GlobalEventHandlers.html'>GlobalEventHandlers</a>;</span><span class=def>
-<a href='Document.html'>Document</a> includes <a href='DocumentAndElementEventHandlers.html'>DocumentAndElementEventHandlers</a>;</span><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def id=attribute-fgColor>
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>fgColor</strong>;</span><span class=def id=attribute-linkColor>
@@ -358,8 +357,10 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span><span class=def id=attribute-oncontextlost>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextlost</strong>;</span><span class=def id=attribute-oncontextmenu>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextmenu</strong>;</span><span class=def id=attribute-oncontextrestored>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncuechange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-ondblclick>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontextrestored</strong>;</span><span class=def id=attribute-oncopy>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncuechange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncuechange</strong>;</span><span class=def id=attribute-oncut>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-ondblclick>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondblclick</strong>;</span><span class=def id=attribute-ondrag>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondrag</strong>;</span><span class=def id=attribute-ondragend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondragend</strong>;</span><span class=def id=attribute-ondragenter>
@@ -389,7 +390,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmousemove</strong>;</span><span class=def id=attribute-onmouseout>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseout</strong>;</span><span class=def id=attribute-onmouseover>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseover</strong>;</span><span class=def id=attribute-onmouseup>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpause>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onmouseup</strong>;</span><span class=def id=attribute-onpaste>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=attribute-onpause>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpause</strong>;</span><span class=def id=attribute-onplay>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplay</strong>;</span><span class=def id=attribute-onplaying>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onplaying</strong>;</span><span class=def id=attribute-onprogress>
@@ -415,10 +417,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=attribute-oncopy>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncopy</strong>;</span><span class=def id=attribute-oncut>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncut</strong>;</span><span class=def id=attribute-onpaste>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaste</strong>;</span><span class=def id=operation-hasStorageAccess>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def id=attribute-prerendering>
     readonly attribute <span class=primitive>boolean</span> <strong>prerendering</strong>;</span><span class=def id=attribute-onprerenderingchange><span class="comment">
