@@ -36,12 +36,6 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-setCl
 };</span><span class=def>
 
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorBadge.html'>NavigatorBadge</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;contact-api&#x2F;spec&#x2F;#extensions-to-navigator">Contact Picker API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-partial interface <strong>Navigator</strong> {<span class=def id=attribute-contacts>
-  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
-<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;#navigator-extensions">Web Bluetooth</a><pre class=webidl><code><span class=def>
 
 [SecureContext]
@@ -111,6 +105,10 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-getBa
 
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-clipboard>
   [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker-1&#x2F;#extensions-to-navigator">Contact Picker API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial interface <strong>Navigator</strong> {<span class=def id=attribute-contacts>
+  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;credential-management-1&#x2F;#framework-credential-management">Credential Management Level 1</a><pre class=webidl><code><span class=def>
 
@@ -192,6 +190,8 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-vibra
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;virtual-keyboard&#x2F;#the-virtualkeyboard-interface">VirtualKeyboard API</a><pre class=webidl><code><span class=def>partial interface <strong>Navigator</strong> {<span class=def id=attribute-virtualKeyboard>
     [SecureContext, SameObject] readonly attribute <a href='VirtualKeyboard.html'>VirtualKeyboard</a> <strong>virtualKeyboard</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-locks&#x2F;">Web Locks API</a><pre class=webidl><code><span class=def>
+<a href='Navigator.html'>Navigator</a> includes <a href='NavigatorLocks.html'>NavigatorLocks</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-share&#x2F;#share-method">Web Share API</a><pre class=webidl><code><span class=def>partial interface <strong>Navigator</strong> {<span class=def id=operation-share-ShareData>
   [SecureContext] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>share</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> &#x3D; {});</span><span class=def id=operation-canShare-ShareData>
   [SecureContext] <span class=primitive>boolean</span> <strong>canShare</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> &#x3D; {});</span>
@@ -244,9 +244,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setClientBadge</strong>(optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>contents</strong>);</span><span class=def id=operation-clearClientBadge>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearClientBadge</strong>();</span><span class=def id=operation-setAppBadge-unsigned long long>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setAppBadge</strong>(optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>contents</strong>);</span><span class=def id=operation-clearAppBadge>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearAppBadge</strong>();</span><span class=def id=attribute-contacts>
-  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span><span class=def id=attribute-locks>
-  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def id=attribute-bluetooth>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearAppBadge</strong>();</span><span class=def id=attribute-bluetooth>
   [SameObject]
   readonly attribute <a href='Bluetooth.html'>Bluetooth</a> <strong>bluetooth</strong>;</span><span class=def id=operation-getInstalledRelatedApps>
   [SecureContext] Promise&lt;sequence&lt;<a href='RelatedApplication.html'>RelatedApplication</a>&gt;&gt; <strong>getInstalledRelatedApps</strong>();</span><span class=def id=attribute-ink>
@@ -264,7 +262,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   <a href='AutoplayPolicy.html'>AutoplayPolicy</a> <strong>getAutoplayPolicy</strong>(<a href='AudioContext.html'>AudioContext</a> <strong>context</strong>);</span><span class=def id=operation-getBattery>
   Promise&lt;<a href='BatteryManager.html'>BatteryManager</a>&gt; <strong>getBattery</strong>();</span><span class=def id=operation-sendBeacon-USVString-BodyInit>
     <span class=primitive>boolean</span> <strong>sendBeacon</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='BodyInit.html'>BodyInit</a>? <strong>data</strong> &#x3D; null);</span><span class=def id=attribute-clipboard>
-  [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;</span><span class=def id=attribute-credentials>
+  [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;</span><span class=def id=attribute-contacts>
+  [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span><span class=def id=attribute-credentials>
   [SecureContext, SameObject] readonly attribute <a href='CredentialsContainer.html'>CredentialsContainer</a> <strong>credentials</strong>;</span><span class=def id=attribute-deviceMemory>
     readonly attribute <span class=primitive>double</span> <strong>deviceMemory</strong>;</span><span class=def id=attribute-devicePosture>
   [SameObject] readonly attribute <a href='DevicePosture.html'>DevicePosture</a> <strong>devicePosture</strong>;</span><span class=def id=operation-requestMediaKeySystemAccess-DOMString-MediaKeySystemConfiguration>
@@ -284,7 +283,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SameObject] readonly attribute <a href='WakeLock.html'>WakeLock</a> <strong>wakeLock</strong>;</span><span class=def id=attribute-serviceWorker>
   [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;</span><span class=def id=operation-vibrate-VibratePattern>
     <span class=primitive>boolean</span> <strong>vibrate</strong> (<a href='VibratePattern.html'>VibratePattern</a> <strong>pattern</strong>);</span><span class=def id=attribute-virtualKeyboard>
-    [SecureContext, SameObject] readonly attribute <a href='VirtualKeyboard.html'>VirtualKeyboard</a> <strong>virtualKeyboard</strong>;</span><span class=def id=operation-share-ShareData>
+    [SecureContext, SameObject] readonly attribute <a href='VirtualKeyboard.html'>VirtualKeyboard</a> <strong>virtualKeyboard</strong>;</span><span class=def id=attribute-locks>
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong>locks</strong>;</span><span class=def id=operation-share-ShareData>
   [SecureContext] Promise&lt;<span class=primitive>undefined</span>&gt; <strong>share</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> &#x3D; {});</span><span class=def id=operation-canShare-ShareData>
   [SecureContext] <span class=primitive>boolean</span> <strong>canShare</strong>(optional <a href='ShareData.html'>ShareData</a> <strong>data</strong> &#x3D; {});</span><span class=def id=attribute-webdriver>
   readonly attribute <span class=primitive>boolean</span> <strong>webdriver</strong>;</span><span class=def id=attribute-gpu>
@@ -316,7 +316,6 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   <section><h3>Referring specifications</h3>
   <ul class=long>
     <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;badging&#x2F;">Badging API</a> refers to <code>Navigator</code></li>
-<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;contact-api&#x2F;spec&#x2F;">Contact Picker API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;">Web Bluetooth</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;get-installed-related-apps&#x2F;spec&#x2F;">Get Installed Related Apps API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ink-enhancement&#x2F;">Ink API</a> refers to <code>Navigator</code></li>
@@ -330,6 +329,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;battery-status&#x2F;">Battery Status API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;beacon&#x2F;">Beacon</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;clipboard-apis&#x2F;">Clipboard API and events</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker-1&#x2F;">Contact Picker API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;credential-management-1&#x2F;">Credential Management Level 1</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-posture&#x2F;">Device Posture API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;">Encrypted Media Extensions</a> refers to <code>Navigator</code></li>

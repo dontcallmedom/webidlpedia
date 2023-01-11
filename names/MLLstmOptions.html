@@ -1,5 +1,5 @@
 ---
-title: <code>MLGruOptions</code> dictionary
+title: <code>MLLstmOptions</code> dictionary
 layout: base
 parent: names/
 base: ../
@@ -7,17 +7,18 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dictdef-mlgruoptions">Web Neural Network API</a> defines <code>MLGruOptions</code></p>
+  <p><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dictdef-mllstmoptions">Web Neural Network API</a> defines <code>MLLstmOptions</code></p>
 <pre class=webidl><code><span class=def>
 
-dictionary <strong>MLGruOptions</strong> {<span class=def>
+dictionary <strong>MLLstmOptions</strong> {<span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>bias</strong>;</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>recurrentBias</strong>;</span><span class=def>
+  <a href='MLOperand.html'>MLOperand</a> <strong>peepholeWeight</strong>;</span><span class=def>
   <a href='MLOperand.html'>MLOperand</a> <strong>initialHiddenState</strong>;</span><span class=def>
-  <span class=primitive>boolean</span> <strong>resetAfter</strong> &#x3D; true;</span><span class=def>
+  <a href='MLOperand.html'>MLOperand</a> <strong>initialCellState</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>returnSequence</strong> &#x3D; false;</span><span class=def>
   <a href='MLRecurrentNetworkDirection.html'>MLRecurrentNetworkDirection</a> <strong>direction</strong> &#x3D; &quot;forward&quot;;</span><span class=def>
-  <a href='MLGruWeightLayout.html'>MLGruWeightLayout</a> <strong>layout</strong> &#x3D; &quot;zrn&quot;;</span><span class=def>
+  <a href='MLLstmWeightLayout.html'>MLLstmWeightLayout</a> <strong>layout</strong> &#x3D; &quot;iofg&quot;;</span><span class=def>
   sequence&lt;<a href='MLActivation.html'>MLActivation</a>&gt; <strong>activations</strong>;</span>
 };</span></code></pre>
   
