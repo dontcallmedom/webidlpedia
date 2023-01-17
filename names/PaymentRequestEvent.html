@@ -18,9 +18,13 @@ interface <strong>PaymentRequestEvent</strong> : <a href='ExtendableEvent.html'>
   readonly attribute <span class=primitive>DOMString</span> <strong>paymentRequestId</strong>;</span><span class=def id=attribute-methodData>
   readonly attribute FrozenArray&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>;</span><span class=def id=attribute-total>
   readonly attribute <span class=primitive>object</span> <strong>total</strong>;</span><span class=def id=attribute-modifiers>
-  readonly attribute FrozenArray&lt;<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>&gt; <strong>modifiers</strong>;</span><span class=def id=operation-openWindow-USVString>
+  readonly attribute FrozenArray&lt;<a href='PaymentDetailsModifier.html'>PaymentDetailsModifier</a>&gt; <strong>modifiers</strong>;</span><span class=def id=attribute-paymentOptions>
+  readonly attribute <span class=primitive>object</span>? <strong>paymentOptions</strong>;</span><span class=def id=attribute-shippingOptions>
+  readonly attribute FrozenArray&lt;<a href='PaymentShippingOption.html'>PaymentShippingOption</a>&gt;? <strong>shippingOptions</strong>;</span><span class=def id=operation-openWindow-USVString>
   Promise&lt;<a href='WindowClient.html'>WindowClient</a>?&gt; <strong>openWindow</strong>(<span class=primitive>USVString</span> <strong>url</strong>);</span><span class=def id=operation-changePaymentMethod-DOMString-object>
-  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changePaymentMethod</strong>(<span class=primitive>DOMString</span> <strong>methodName</strong>, optional <span class=primitive>object</span>? <strong>methodDetails</strong> &#x3D; null);</span><span class=def id=operation-respondWith-PaymentHandlerResponse>
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changePaymentMethod</strong>(<span class=primitive>DOMString</span> <strong>methodName</strong>, optional <span class=primitive>object</span>? <strong>methodDetails</strong> &#x3D; null);</span><span class=def id=operation-changeShippingAddress-AddressInit>
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changeShippingAddress</strong>(optional <a href='AddressInit.html'>AddressInit</a> <strong>shippingAddress</strong> &#x3D; {});</span><span class=def id=operation-changeShippingOption-DOMString>
+  Promise&lt;<a href='PaymentRequestDetailsUpdate.html'>PaymentRequestDetailsUpdate</a>?&gt; <strong>changeShippingOption</strong>(<span class=primitive>DOMString</span> <strong>shippingOption</strong>);</span><span class=def id=operation-respondWith-PaymentHandlerResponse>
   <span class=primitive>undefined</span> <strong>respondWith</strong>(Promise&lt;<a href='PaymentHandlerResponse.html'>PaymentHandlerResponse</a>&gt; <strong>handlerResponsePromise</strong>);</span>
 };</span></code></pre>
   
