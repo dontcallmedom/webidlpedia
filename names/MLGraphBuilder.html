@@ -88,16 +88,13 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
-
                           <span class=primitive>unsigned long</span> <strong>steps</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                           optional <a href='MLGruOptions.html'>MLGruOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gruCell-MLOperand-MLOperand-MLOperand-MLOperand-unsigned long-MLGruCellOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gruCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
                     <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                     optional <a href='MLGruCellOptions.html'>MLGruCellOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
@@ -128,16 +125,13 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-lstm-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLLstmOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>lstm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
-
                            <span class=primitive>unsigned long</span> <strong>steps</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                            optional <a href='MLLstmOptions.html'>MLLstmOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-lstmCell-MLOperand-MLOperand-MLOperand-MLOperand-MLOperand-unsigned long-MLLstmCellOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>lstmCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
                                <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>cellState</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                                optional <a href='MLLstmCellOptions.html'>MLLstmCellOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
@@ -275,13 +269,10 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLActivation.html'>MLActivation</a> <strong>elu</strong>(optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
-
                           <span class=primitive>unsigned long</span> <strong>steps</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                           optional <a href='MLGruOptions.html'>MLGruOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gruCell-MLOperand-MLOperand-MLOperand-MLOperand-unsigned long-MLGruCellOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gruCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
                     <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                     optional <a href='MLGruCellOptions.html'>MLGruCellOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSigmoid-MLOperand-MLHardSigmoidOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>hardSigmoid</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSigmoid-MLHardSigmoidOptions>
   <a href='MLActivation.html'>MLActivation</a> <strong>hardSigmoid</strong>(optional <a href='MLHardSigmoidOptions.html'>MLHardSigmoidOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-hardSwish-MLOperand>
@@ -294,13 +285,10 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>x</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-linear-MLLinearOptions>
   <a href='MLActivation.html'>MLActivation</a> <strong>linear</strong>(optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-lstm-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLLstmOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>lstm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
-
                            <span class=primitive>unsigned long</span> <strong>steps</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                            optional <a href='MLLstmOptions.html'>MLLstmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-lstmCell-MLOperand-MLOperand-MLOperand-MLOperand-MLOperand-unsigned long-MLLstmCellOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>lstmCell</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>recurrentWeight</strong>,
                                <a href='MLOperand.html'>MLOperand</a> <strong>hiddenState</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>cellState</strong>, <span class=primitive>unsigned long</span> <strong>hiddenSize</strong>,
-
                                optional <a href='MLLstmCellOptions.html'>MLLstmCellOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-matmul-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>matmul</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-pad-MLOperand-MLOperand-MLPadOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>pad</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>padding</strong>, optional <a href='MLPadOptions.html'>MLPadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-averagePool2d-MLOperand-MLPool2dOptions>
