@@ -33,9 +33,38 @@ interface <strong>HTMLButtonElement</strong> : <a href='HTMLElement.html'>HTMLEl
   <span class=primitive>undefined</span> <strong>setCustomValidity</strong>(<span class=primitive>DOMString</span> <strong>error</strong>);</span><span class=def id=attribute-labels>
 
   readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span>
-};</span></code></pre>
+};</span><span class=def>
+<a href='HTMLButtonElement.html'>HTMLButtonElement</a> includes <a href='PopoverTargetElement.html'>PopoverTargetElement</a>;</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>HTMLButtonElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-disabled>
+
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def id=attribute-form>
+  readonly attribute <a href='HTMLFormElement.html'>HTMLFormElement</a>? <strong>form</strong>;</span><span class=def id=attribute-formAction>
+  [CEReactions] attribute <span class=primitive>USVString</span> <strong>formAction</strong>;</span><span class=def id=attribute-formEnctype>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>formEnctype</strong>;</span><span class=def id=attribute-formMethod>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>formMethod</strong>;</span><span class=def id=attribute-formNoValidate>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>formNoValidate</strong>;</span><span class=def id=attribute-formTarget>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>formTarget</strong>;</span><span class=def id=attribute-name>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>name</strong>;</span><span class=def id=attribute-type>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-value>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>value</strong>;</span><span class=def id=attribute-willValidate>
+
+  readonly attribute <span class=primitive>boolean</span> <strong>willValidate</strong>;</span><span class=def id=attribute-validity>
+  readonly attribute <a href='ValidityState.html'>ValidityState</a> <strong>validity</strong>;</span><span class=def id=attribute-validationMessage>
+  readonly attribute <span class=primitive>DOMString</span> <strong>validationMessage</strong>;</span><span class=def id=operation-checkValidity>
+  <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def id=operation-reportValidity>
+  <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def id=operation-setCustomValidity-DOMString>
+  <span class=primitive>undefined</span> <strong>setCustomValidity</strong>(<span class=primitive>DOMString</span> <strong>error</strong>);</span><span class=def id=attribute-labels>
+
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def id=attribute-popoverToggleTargetElement>
+  [CEReactions] attribute <a href='Element.html'>Element</a>? <strong>popoverToggleTargetElement</strong>;</span><span class=def id=attribute-popoverHideTargetElement>
+  [CEReactions] attribute <a href='Element.html'>Element</a>? <strong>popoverHideTargetElement</strong>;</span><span class=def id=attribute-popoverShowTargetElement>
+  [CEReactions] attribute <a href='Element.html'>Element</a>? <strong>popoverShowTargetElement</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>HTMLButtonElement</code></h3>

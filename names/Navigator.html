@@ -27,7 +27,9 @@ interface <strong>Navigator</strong> {<span class="comment">
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorConcurrentHardware.html'>NavigatorConcurrentHardware</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul class=long>
-    <li><a href="https:&#x2F;&#x2F;storage.spec.whatwg.org&#x2F;">Storage Standard</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;gpc-spec&#x2F;">Global Privacy Control (GPC)</a><pre class=webidl><code><span class=def>
+<a href='Navigator.html'>Navigator</a> includes <a href='GlobalPrivacyControl.html'>GlobalPrivacyControl</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;storage.spec.whatwg.org&#x2F;">Storage Standard</a><pre class=webidl><code><span class=def>
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorStorage.html'>NavigatorStorage</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;badging&#x2F;#setclientbadge-method">Badging API</a><pre class=webidl><code><span class=def>[SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-setClientBadge-unsigned long long>
@@ -106,7 +108,7 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-getBa
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-clipboard>
   [SecureContext, SameObject] readonly attribute <a href='Clipboard.html'>Clipboard</a> <strong>clipboard</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker-1&#x2F;#extensions-to-navigator">Contact Picker API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker&#x2F;#extensions-to-navigator">Contact Picker API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-contacts>
   [SecureContext, SameObject] readonly attribute <a href='ContactsManager.html'>ContactsManager</a> <strong>contacts</strong>;</span>
 };</span></code></pre></li>
@@ -239,7 +241,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SameObject] readonly attribute <a href='MimeTypeArray.html'>MimeTypeArray</a> <strong>mimeTypes</strong>;</span><span class=def id=operation-javaEnabled>
   <span class=primitive>boolean</span> <strong>javaEnabled</strong>();</span><span class=def id=attribute-pdfViewerEnabled>
   readonly attribute <span class=primitive>boolean</span> <strong>pdfViewerEnabled</strong>;</span><span class=def id=attribute-hardwareConcurrency>
-  readonly attribute <span class=primitive>unsigned long long</span> <strong>hardwareConcurrency</strong>;</span><span class=def id=attribute-storage>
+  readonly attribute <span class=primitive>unsigned long long</span> <strong>hardwareConcurrency</strong>;</span><span class=def id=attribute-globalPrivacyControl>
+  readonly attribute <span class=primitive>boolean</span> <strong>globalPrivacyControl</strong>;</span><span class=def id=attribute-storage>
   [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;</span><span class=def id=operation-setClientBadge-unsigned long long>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setClientBadge</strong>(optional [EnforceRange] <span class=primitive>unsigned long long</span> <strong>contents</strong>);</span><span class=def id=operation-clearClientBadge>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearClientBadge</strong>();</span><span class=def id=operation-setAppBadge-unsigned long long>
@@ -329,7 +332,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;battery-status&#x2F;">Battery Status API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;beacon&#x2F;">Beacon</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;clipboard-apis&#x2F;">Clipboard API and events</a> refers to <code>Navigator</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker-1&#x2F;">Contact Picker API</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;contact-picker&#x2F;">Contact Picker API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;credential-management-1&#x2F;">Credential Management Level 1</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;device-posture&#x2F;">Device Posture API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;encrypted-media&#x2F;">Encrypted Media Extensions</a> refers to <code>Navigator</code></li>

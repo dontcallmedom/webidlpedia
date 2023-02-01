@@ -143,6 +143,9 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fgColo
 
   [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;requestStorageAccessForOrigin&#x2F;">requestStorageAccessForOrigin API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-requestStorageAccessForOrigin-USVString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>origin</strong>);</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span>
@@ -170,7 +173,7 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fragme
   readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-view-transitions-1&#x2F;">CSS View Transitions Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-startViewTransition-UpdateCallback>
-  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional <a href='UpdateCallback.html'>UpdateCallback</a>? <strong>callback</strong> &#x3D; null);</span>
+  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional <a href='UpdateCallback.html'>UpdateCallback</a>? <strong>updateCallback</strong> &#x3D; null);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
@@ -417,7 +420,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationiteration</strong>;</span><span class=def id=attribute-onwebkitanimationstart>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=operation-hasStorageAccess>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=operation-requestStorageAccessForOrigin-USVString>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>origin</strong>);</span><span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def id=attribute-prerendering>
     readonly attribute <span class=primitive>boolean</span> <strong>prerendering</strong>;</span><span class=def id=attribute-onprerenderingchange><span class="comment">
@@ -430,7 +434,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def id=attribute-fonts>
   readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def id=attribute-namedFlows>
   readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def id=operation-startViewTransition-UpdateCallback>
-  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional <a href='UpdateCallback.html'>UpdateCallback</a>? <strong>callback</strong> &#x3D; null);</span><span class=def id=operation-elementFromPoint-double-double>
+  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional <a href='UpdateCallback.html'>UpdateCallback</a>? <strong>updateCallback</strong> &#x3D; null);</span><span class=def id=operation-elementFromPoint-double-double>
   <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-elementsFromPoint-double-double>
   sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double>
   <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=attribute-scrollingElement>
@@ -502,6 +506,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Document</code></li>
+<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;requestStorageAccessForOrigin&#x2F;">requestStorageAccessForOrigin API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;nav-speculation&#x2F;prerendering.html">Prerendering Revamped</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Document</code></li>
