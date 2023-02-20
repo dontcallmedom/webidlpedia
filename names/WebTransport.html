@@ -11,7 +11,7 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
-interface <strong>WebTransport</strong> {<span class=def id=constructor-USVString-WebTransportOptions>
+interface <strong>WebTransport</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-USVString-WebTransportOptions>
   <strong>constructor</strong>(<span class=primitive>USVString</span> <strong>url</strong>, optional <a href='WebTransportOptions.html'>WebTransportOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getStats>
 
   Promise&lt;<a href='WebTransportStats.html'>WebTransportStats</a>&gt; <strong>getStats</strong>();</span><span class=def id=attribute-ready>
@@ -31,7 +31,11 @@ interface <strong>WebTransport</strong> {<span class=def id=constructor-USVStrin
   Promise&lt;<a href='WebTransportSendStream.html'>WebTransportSendStream</a>&gt; <strong>createUnidirectionalStream</strong>(
       optional <a href='WebTransportSendStreamOptions.html'>WebTransportSendStreamOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-incomingUnidirectionalStreams><span class="comment">
   &#x2F;* a ReadableStream of WebTransportReceiveStream objects *&#x2F;
-  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span>
+  </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>incomingUnidirectionalStreams</strong>;</span><span class=def id=attribute-rateControlFeedbackMinInterval>
+
+  attribute <span class=primitive>unsigned long</span> <strong>rateControlFeedbackMinInterval</strong>;</span><span class=def id=attribute-onratecontrolfeedback>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onratecontrolfeedback</strong>;</span><span class=def id=attribute-rateControlFeedback>
+  [SameObject] readonly attribute <a href='WebTransportRateControlFeedback.html'>WebTransportRateControlFeedback</a> <strong>rateControlFeedback</strong>;</span>
 };</span></code></pre>
   
   

@@ -23,7 +23,8 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-integrity>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-blocking>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=operation-static>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class=def id=operation-static>
 
   static <span class=primitive>boolean</span> <strong>supports</strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class="comment">
 
@@ -39,11 +40,6 @@ partial interface <strong>HTMLScriptElement</strong> {<span class=def id=attribu
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;attribution-reporting-api&#x2F;">Attribution Reporting</a><pre class=webidl><code><span class=def>
 <a href='HTMLScriptElement.html'>HTMLScriptElement</a> includes <a href='HTMLAttributionSrcElementUtils.html'>HTMLAttributionSrcElementUtils</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#script">Priority Hints</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>HTMLScriptElement</strong> {<span class=def id=attribute-fetchPriority>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span>
-};</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -61,14 +57,14 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>text</strong>;</span><span class=def id=attribute-integrity>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>integrity</strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-blocking>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=operation-static>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class=def id=operation-static>
 
   static <span class=primitive>boolean</span> <strong>supports</strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=attribute-charset>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def id=attribute-htmlFor>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class=def id=attribute-attributionSrc>
-    [CEReactions] attribute <span class=primitive>USVString</span> <strong>attributionSrc</strong>;</span><span class=def id=attribute-fetchPriority>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class="comment">
+    [CEReactions] attribute <span class=primitive>USVString</span> <strong>attributionSrc</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
@@ -83,8 +79,4 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   </ul>
 </section>
 
-  <section><h3>Referring specifications</h3>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;">Priority Hints</a> refers to <code>HTMLScriptElement</code></li>
-
-  </ul></section>
+  

@@ -28,7 +28,8 @@ interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElem
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-blocking>
   [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=attribute-disabled>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class="comment">
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span><span class=def>
@@ -39,15 +40,7 @@ partial interface <strong>HTMLLinkElement</strong> {<span class=def id=attribute
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def id=attribute-target>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span>
 };</span></code></pre>
-  <p>This interface is extended in the following specifications:</p>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;#link">Priority Hints</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>HTMLLinkElement</strong> {<span class=def id=attribute-fetchPriority>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span>
-};</span></code></pre></li>
-
-  </ul>
+  
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -68,12 +61,12 @@ interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElem
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>imageSizes</strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>referrerPolicy</strong>;</span><span class=def id=attribute-blocking>
   [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong>blocking</strong>;</span><span class=def id=attribute-disabled>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def id=attribute-charset>
+  [CEReactions] attribute <span class=primitive>boolean</span> <strong>disabled</strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class=def id=attribute-charset>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-rev>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>rev</strong>;</span><span class=def id=attribute-target>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>target</strong>;</span><span class=def id=attribute-sheet>
-  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span><span class=def id=attribute-fetchPriority>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>fetchPriority</strong>;</span><span class="comment">
+  readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>
@@ -87,8 +80,4 @@ interface <strong>HTMLLinkElement</strong> : <a href='HTMLElement.html'>HTMLElem
   </ul>
 </section>
 
-  <section><h3>Referring specifications</h3>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;priority-hints&#x2F;">Priority Hints</a> refers to <code>HTMLLinkElement</code></li>
-
-  </ul></section>
+  
