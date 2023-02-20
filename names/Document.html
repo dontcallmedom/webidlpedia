@@ -144,7 +144,7 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fgColo
   [SameObject] readonly attribute <a href='HTMLAllCollection.html'>HTMLAllCollection</a> <strong>all</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;requestStorageAccessForOrigin&#x2F;">requestStorageAccessForOrigin API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-requestStorageAccessForOrigin-USVString>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>origin</strong>);</span>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>requestedOrigin</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
@@ -421,7 +421,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=operation-requestStorageAccessForOrigin-USVString>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>origin</strong>);</span><span class=def id=operation-hasStorageAccess>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessForOrigin</strong>(<span class=primitive>USVString</span> <strong>requestedOrigin</strong>);</span><span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def id=attribute-prerendering>
     readonly attribute <span class=primitive>boolean</span> <strong>prerendering</strong>;</span><span class=def id=attribute-onprerenderingchange><span class="comment">
