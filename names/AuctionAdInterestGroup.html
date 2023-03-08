@@ -1,0 +1,44 @@
+---
+title: <code>AuctionAdInterestGroup</code> dictionary
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dictdef-auctionadinterestgroup">FLEDGE</a> defines <code>AuctionAdInterestGroup</code></p>
+<pre class=webidl><code><span class=def>
+
+dictionary <strong>AuctionAdInterestGroup</strong> {<span class=def>
+  required <span class=primitive>USVString</span> <strong>owner</strong>;</span><span class=def>
+  required <span class=primitive>USVString</span> <strong>name</strong>;</span><span class=def>
+
+  <span class=primitive>double</span> <strong>priority</strong> &#x3D; 0.0;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>enableBiddingSignalsPrioritization</strong> &#x3D; false;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <span class=primitive>double</span>&gt; <strong>priorityVector</strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <span class=primitive>double</span>&gt; <strong>prioritySignalsOverrides</strong>;</span><span class=def>
+
+  <a href='WorkletExecutionMode.html'>WorkletExecutionMode</a> <strong>executionMode</strong> &#x3D; &quot;compatibility&quot;;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>biddingLogicUrl</strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>biddingWasmHelperUrl</strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>dailyUpdateUrl</strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong>trustedBiddingSignalsUrl</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>USVString</span>&gt; <strong>trustedBiddingSignalsKeys</strong>;</span><span class=def>
+  <span class=primitive>any</span> <strong>userBiddingSignals</strong>;</span><span class=def>
+  sequence&lt;<a href='AuctionAd.html'>AuctionAd</a>&gt; <strong>ads</strong>;</span><span class=def>
+  sequence&lt;<a href='AuctionAd.html'>AuctionAd</a>&gt; <strong>adComponents</strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="Navigator.html">Navigator</a></code></li>
+
+  </ul>
+</section>
+  

@@ -166,6 +166,12 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fgColo
 partial interface <strong>Document</strong> {<span class=def id=attribute-fragmentDirective>
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def id=operation-hasPrivateTokens-USVString-USVString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasPrivateTokens</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>, <span class=primitive>USVString</span> <strong>type</strong>);</span><span class=def id=operation-hasRedemptionRecord-USVString-USVString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasRedemptionRecord</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>, <span class=primitive>USVString</span> <strong>type</strong>);</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-font-loading-3&#x2F;">CSS Font Loading Module Level 3</a><pre class=webidl><code><span class=def>
 
 <a href='Document.html'>Document</a> includes <a href='FontFaceSource.html'>FontFaceSource</a>;</span></code></pre></li>
@@ -432,7 +438,9 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def id=attribute-onresume>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def id=attribute-wasDiscarded>
     readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def id=attribute-fragmentDirective>
-    [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def id=attribute-fonts>
+    [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def id=operation-hasPrivateTokens-USVString-USVString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasPrivateTokens</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>, <span class=primitive>USVString</span> <strong>type</strong>);</span><span class=def id=operation-hasRedemptionRecord-USVString-USVString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasRedemptionRecord</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>, <span class=primitive>USVString</span> <strong>type</strong>);</span><span class=def id=attribute-fonts>
   readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def id=attribute-namedFlows>
   readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def id=operation-startViewTransition-UpdateCallback>
   <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional <a href='UpdateCallback.html'>UpdateCallback</a>? <strong>updateCallback</strong> &#x3D; null);</span><span class=def id=operation-elementFromPoint-double-double>
@@ -503,7 +511,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Document</code></li>
@@ -513,6 +521,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;">Text Fragments</a> refers to <code>Document</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;">CSS Regions Module Level 1</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-view-transitions-1&#x2F;">CSS View Transitions Module Level 1</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Document</code></li>

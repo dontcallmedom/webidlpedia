@@ -72,6 +72,15 @@ partial interface <strong>Navigator</strong> {<span class=def id=attribute-sched
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-serial>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;">FLEDGE</a><pre class=webidl><code><span class=def>[SecureContext]
+partial interface <strong>Navigator</strong> {<span class=def id=operation-joinAdInterestGroup-AuctionAdInterestGroup-double>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>joinAdInterestGroup</strong>(<a href='AuctionAdInterestGroup.html'>AuctionAdInterestGroup</a> <strong>group</strong>, <span class=primitive>double</span> <strong>durationSeconds</strong>);</span>
+};</span><span class=def>
+
+[SecureContext]
+partial interface <strong>Navigator</strong> {<span class=def id=operation-runAdAuction-AuctionAdConfig>
+  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 
 <a href='Navigator.html'>Navigator</a> includes <a href='NavigatorUA.html'>NavigatorUA</a>;</span></code></pre></li>
@@ -255,7 +264,9 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   readonly attribute <a href='Scheduling.html'>Scheduling</a> <strong>scheduling</strong>;</span><span class=def id=attribute-keyboard>
   [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;</span><span class=def id=attribute-connection>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def id=attribute-serial>
-  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=attribute-userAgentData>
+  [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=operation-joinAdInterestGroup-AuctionAdInterestGroup-double>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>joinAdInterestGroup</strong>(<a href='AuctionAdInterestGroup.html'>AuctionAdInterestGroup</a> <strong>group</strong>, <span class=primitive>double</span> <strong>durationSeconds</strong>);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
+  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=attribute-userAgentData>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-hid>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def id=attribute-usb>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def id=attribute-windowControlsOverlay>
@@ -325,6 +336,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;is-input-pending&#x2F;">Early detection of input events</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;keyboard-lock&#x2F;">Keyboard Lock</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;">Web Serial API</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;">FLEDGE</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;">WebHID API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;">WebUSB API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;window-controls-overlay&#x2F;">Window Controls Overlay</a> refers to <code>Navigator</code></li>
