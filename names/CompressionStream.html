@@ -8,15 +8,19 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;compression&#x2F;#compressionstream">Compression Streams</a> defines <code>CompressionStream</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;*]
-interface <strong>CompressionStream</strong> {<span class=def id=constructor-DOMString>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>format</strong>);</span>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;*]
+interface <strong>CompressionStream</strong> {<span class=def id=constructor-CompressionFormat>
+  <strong>constructor</strong>(<a href='CompressionFormat.html'>CompressionFormat</a> <strong>format</strong>);</span>
 };</span><span class=def>
 <a href='CompressionStream.html'>CompressionStream</a> includes <a href='GenericTransformStream.html'>GenericTransformStream</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;*]
-interface <strong>CompressionStream</strong> {<span class=def id=constructor-DOMString>
-  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>format</strong>);</span><span class=def id=attribute-readable>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;*]
+interface <strong>CompressionStream</strong> {<span class=def id=constructor-CompressionFormat>
+  <strong>constructor</strong>(<a href='CompressionFormat.html'>CompressionFormat</a> <strong>format</strong>);</span><span class=def id=attribute-readable>
   readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def id=attribute-writable>
   readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;</span>
 };</span></code></pre></details>
@@ -25,7 +29,7 @@ interface <strong>CompressionStream</strong> {<span class=def id=constructor-DOM
 <h3>Methods and attributes that return objects implementing <code>CompressionStream</code></h3>
 
   <ul>
-    <li><code><a href="CompressionStream.html">CompressionStream</a><a href=CompressionStream.html#constructor-DOMString>()</a></code></li>
+    <li><code><a href="CompressionStream.html">CompressionStream</a><a href=CompressionStream.html#constructor-CompressionFormat>()</a></code></li>
 
   </ul>
 </section>
