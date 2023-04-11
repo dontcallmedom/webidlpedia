@@ -74,8 +74,18 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-joinA
 };</span><span class=def>
 
 [SecureContext]
+partial interface <strong>Navigator</strong> {<span class=def id=operation-leaveAdInterestGroup-AuctionAdInterestGroupKey>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(<a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong>);</span>
+};</span><span class=def>
+
+[SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-runAdAuction-AuctionAdConfig>
   Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span>
+};</span><span class=def>
+
+[SecureContext]
+partial interface <strong>Navigator</strong> {<span class=def id=operation-updateAdInterestGroups>
+  <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 
@@ -185,6 +195,7 @@ partial interface <strong>Navigator</strong> {<span class=def id=attribute-wakeL
   [SameObject] readonly attribute <a href='WakeLock.html'>WakeLock</a> <strong>wakeLock</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers&#x2F;#navigator-serviceworker">Service Workers Nightly</a><pre class=webidl><code><span class=def>
+
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-serviceWorker>
   [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;</span>
 };</span></code></pre></li>
@@ -260,8 +271,10 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SecureContext, SameObject] readonly attribute <a href='Keyboard.html'>Keyboard</a> <strong>keyboard</strong>;</span><span class=def id=attribute-connection>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def id=attribute-serial>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=operation-joinAdInterestGroup-AuctionAdInterestGroup-double>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>joinAdInterestGroup</strong>(<a href='AuctionAdInterestGroup.html'>AuctionAdInterestGroup</a> <strong>group</strong>, <span class=primitive>double</span> <strong>durationSeconds</strong>);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
-  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=attribute-userAgentData>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>joinAdInterestGroup</strong>(<a href='AuctionAdInterestGroup.html'>AuctionAdInterestGroup</a> <strong>group</strong>, <span class=primitive>double</span> <strong>durationSeconds</strong>);</span><span class=def id=operation-leaveAdInterestGroup-AuctionAdInterestGroupKey>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(<a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong>);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
+  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=operation-updateAdInterestGroups>
+  <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span><span class=def id=attribute-userAgentData>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-hid>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def id=attribute-usb>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def id=attribute-windowControlsOverlay>
