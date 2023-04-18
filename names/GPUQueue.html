@@ -14,18 +14,18 @@ base: ../
 interface <strong>GPUQueue</strong> {<span class=def id=operation-submit-GPUCommandBuffer>
     <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def id=operation-onSubmittedWorkDone>
 
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-BufferSource-GPUSize64-GPUSize64>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-ArrayBuffer-ArrayBufferView-GPUSize64-GPUSize64>
 
     <span class=primitive>undefined</span> <strong>writeBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
-        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        ([AllowShared] <a href='ArrayBuffer.html'>ArrayBuffer</a> or [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>) <strong>data</strong>,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
-        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-BufferSource-GPUImageDataLayout-GPUExtent3D>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-ArrayBuffer-ArrayBufferView-GPUImageDataLayout-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>writeTexture</strong>(
         <a href='GPUImageCopyTexture.html'>GPUImageCopyTexture</a> <strong>destination</strong>,
-        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        ([AllowShared] <a href='ArrayBuffer.html'>ArrayBuffer</a> or [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>) <strong>data</strong>,
         <a href='GPUImageDataLayout.html'>GPUImageDataLayout</a> <strong>dataLayout</strong>,
         <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def id=operation-copyExternalImageToTexture-GPUImageCopyExternalImage-GPUImageCopyTextureTagged-GPUExtent3D>
 
@@ -42,18 +42,18 @@ interface <strong>GPUQueue</strong> {<span class=def id=operation-submit-GPUComm
 interface <strong>GPUQueue</strong> {<span class=def id=operation-submit-GPUCommandBuffer>
     <span class=primitive>undefined</span> <strong>submit</strong>(sequence&lt;<a href='GPUCommandBuffer.html'>GPUCommandBuffer</a>&gt; <strong>commandBuffers</strong>);</span><span class=def id=operation-onSubmittedWorkDone>
 
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-BufferSource-GPUSize64-GPUSize64>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>onSubmittedWorkDone</strong>();</span><span class=def id=operation-writeBuffer-GPUBuffer-GPUSize64-ArrayBuffer-ArrayBufferView-GPUSize64-GPUSize64>
 
     <span class=primitive>undefined</span> <strong>writeBuffer</strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>buffer</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>bufferOffset</strong>,
-        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        ([AllowShared] <a href='ArrayBuffer.html'>ArrayBuffer</a> or [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>) <strong>data</strong>,
         optional <a href='GPUSize64.html'>GPUSize64</a> <strong>dataOffset</strong> &#x3D; 0,
-        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-BufferSource-GPUImageDataLayout-GPUExtent3D>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-writeTexture-GPUImageCopyTexture-ArrayBuffer-ArrayBufferView-GPUImageDataLayout-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong>writeTexture</strong>(
         <a href='GPUImageCopyTexture.html'>GPUImageCopyTexture</a> <strong>destination</strong>,
-        [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>,
+        ([AllowShared] <a href='ArrayBuffer.html'>ArrayBuffer</a> or [AllowShared] <a href='ArrayBufferView.html'>ArrayBufferView</a>) <strong>data</strong>,
         <a href='GPUImageDataLayout.html'>GPUImageDataLayout</a> <strong>dataLayout</strong>,
         <a href='GPUExtent3D.html'>GPUExtent3D</a> <strong>size</strong>);</span><span class=def id=operation-copyExternalImageToTexture-GPUImageCopyExternalImage-GPUImageCopyTextureTagged-GPUExtent3D>
 
