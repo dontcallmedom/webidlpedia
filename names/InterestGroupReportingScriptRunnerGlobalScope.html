@@ -7,12 +7,14 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#interestgroupreportingscriptrunnerglobalscope">FLEDGE</a> defines <code>InterestGroupReportingScriptRunnerGlobalScope</code></p>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#interestgroupreportingscriptrunnerglobalscope">Protected Audience (formerly FLEDGE)</a> defines <code>InterestGroupReportingScriptRunnerGlobalScope</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/InterestGroupReportingScriptRunnerGlobalScope.html'>InterestGroupReportingScriptRunnerGlobalScope</a>,
-Global&#x3D;<a class=realm href='../globals/InterestGroupReportingScriptRunnerGlobalScope.html'>InterestGroupReportingScriptRunnerGlobalScope</a>]
-interface <strong>InterestGroupReportingScriptRunnerGlobalScope</strong> {<span class=def id=operation-sendReportTo-DOMString>
+ Global&#x3D;(<a class=realm href='../globals/InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a>,
+         <a class=realm href='../globals/InterestGroupReportingScriptRunnerGlobalScope.html'>InterestGroupReportingScriptRunnerGlobalScope</a>)]
+interface <strong>InterestGroupReportingScriptRunnerGlobalScope</strong>
+        : <a href='InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a> {<span class=def id=operation-sendReportTo-DOMString>
   <span class=primitive>undefined</span> <strong>sendReportTo</strong>(<span class=primitive>DOMString</span> <strong>url</strong>);</span>
 };</span></code></pre>
   

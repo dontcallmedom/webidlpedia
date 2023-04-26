@@ -7,12 +7,14 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#interestgroupbiddingscriptrunnerglobalscope">FLEDGE</a> defines <code>InterestGroupBiddingScriptRunnerGlobalScope</code></p>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#interestgroupbiddingscriptrunnerglobalscope">Protected Audience (formerly FLEDGE)</a> defines <code>InterestGroupBiddingScriptRunnerGlobalScope</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/InterestGroupBiddingScriptRunnerGlobalScope.html'>InterestGroupBiddingScriptRunnerGlobalScope</a>,
-Global&#x3D;<a class=realm href='../globals/InterestGroupBiddingScriptRunnerGlobalScope.html'>InterestGroupBiddingScriptRunnerGlobalScope</a>]
-interface <strong>InterestGroupBiddingScriptRunnerGlobalScope</strong> {<span class=def id=operation-setBid>
+ Global&#x3D;(<a class=realm href='../globals/InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a>,
+         <a class=realm href='../globals/InterestGroupBiddingScriptRunnerGlobalScope.html'>InterestGroupBiddingScriptRunnerGlobalScope</a>)]
+interface <strong>InterestGroupBiddingScriptRunnerGlobalScope</strong>
+        : <a href='InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a> {<span class=def id=operation-setBid>
   <span class=primitive>boolean</span> <strong>setBid</strong>();</span><span class=def id=operation-setBid-GenerateBidOutput>
   <span class=primitive>boolean</span> <strong>setBid</strong>(<a href='GenerateBidOutput.html'>GenerateBidOutput</a> <strong>generateBidOutput</strong>);</span><span class=def id=operation-setPriority-double>
   <span class=primitive>undefined</span> <strong>setPriority</strong>(<span class=primitive>double</span> <strong>priority</strong>);</span><span class=def id=operation-setPrioritySignalsOverride-DOMString-double>
