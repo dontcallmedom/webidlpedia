@@ -1,5 +1,5 @@
 ---
-title: <code>GPUComputePassTimestampWrites</code> typedef
+title: <code>GPUComputePassTimestampWrites</code> dictionary
 layout: base
 parent: names/
 base: ../
@@ -7,10 +7,14 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#typedefdef-gpucomputepasstimestampwrites">WebGPU</a> defines <code>GPUComputePassTimestampWrites</code></p>
+  <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dictdef-gpucomputepasstimestampwrites">WebGPU</a> defines <code>GPUComputePassTimestampWrites</code></p>
 <pre class=webidl><code><span class=def>
 
-typedef sequence&lt;<a href='GPUComputePassTimestampWrite.html'>GPUComputePassTimestampWrite</a>&gt; <strong>GPUComputePassTimestampWrites</strong>;</span></code></pre>
+dictionary <strong>GPUComputePassTimestampWrites</strong> {<span class=def>
+    required <a href='GPUQuerySet.html'>GPUQuerySet</a> <strong>querySet</strong>;</span><span class=def>
+    <a href='GPUSize32.html'>GPUSize32</a> <strong>beginningOfPassWriteIndex</strong>;</span><span class=def>
+    <a href='GPUSize32.html'>GPUSize32</a> <strong>endOfPassWriteIndex</strong>;</span>
+};</span></code></pre>
   
   
 </section>
