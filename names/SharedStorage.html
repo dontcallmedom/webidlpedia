@@ -1,0 +1,36 @@
+---
+title: <code>SharedStorage</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;#sharedstorage">Shared Storage API</a> defines <code>SharedStorage</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/SharedStorageWorklet.html'>SharedStorageWorklet</a>)]
+interface <strong>SharedStorage</strong> {<span class=def id=operation-set-DOMString-DOMString-SharedStorageSetMethodOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>set</strong>(<span class=primitive>DOMString</span> <strong>key</strong>,
+                   <span class=primitive>DOMString</span> <strong>value</strong>,
+                   optional <a href='SharedStorageSetMethodOptions.html'>SharedStorageSetMethodOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-append-DOMString-DOMString>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>append</strong>(<span class=primitive>DOMString</span> <strong>key</strong>,
+                      <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def id=operation-delete-DOMString>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>key</strong>);</span><span class=def id=operation-clear>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>clear</strong>();</span>
+};</span></code></pre>
+  
+  
+</section>
+
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="WindowSharedStorage.html">WindowSharedStorage</a></code></li>
+<li><code><a href="WorkletSharedStorage.html">WorkletSharedStorage</a></code></li>
+
+  </ul>
+</section>
+  

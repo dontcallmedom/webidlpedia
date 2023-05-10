@@ -188,7 +188,9 @@ base: ../
   [Replaceable] readonly attribute (<a href='..&#x2F;names&#x2F;Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='..&#x2F;names&#x2F;CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='..&#x2F;names&#x2F;DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
-      <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-fence><span class="comment">
+      <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-documentPictureInPicture>
+  [SameObject, SecureContext] readonly attribute <a href='..&#x2F;names&#x2F;DocumentPictureInPicture.html'>DocumentPictureInPicture</a>
+    <strong>documentPictureInPicture</strong>;</span><span class=def id=attribute-fence><span class="comment">
   &#x2F;&#x2F; Collection of fenced frame APIs
   </span>readonly attribute <a href='..&#x2F;names&#x2F;Fence.html'>Fence</a>? <strong>fence</strong>;</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
     Promise&lt;sequence&lt;<a href='..&#x2F;names&#x2F;FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='..&#x2F;names&#x2F;OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
@@ -393,6 +395,8 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;DigitalGoodsService.html">DigitalGoodsService</a></li>
 <li><a href="..&#x2F;names&#x2F;Document.html">Document</a></li>
 <li><a href="..&#x2F;names&#x2F;DocumentFragment.html">DocumentFragment</a></li>
+<li><a href="..&#x2F;names&#x2F;DocumentPictureInPicture.html">DocumentPictureInPicture</a></li>
+<li><a href="..&#x2F;names&#x2F;DocumentPictureInPictureEvent.html">DocumentPictureInPictureEvent</a></li>
 <li><a href="..&#x2F;names&#x2F;DocumentTimeline.html">DocumentTimeline</a></li>
 <li><a href="..&#x2F;names&#x2F;DocumentType.html">DocumentType</a></li>
 <li><a href="..&#x2F;names&#x2F;DragEvent.html">DragEvent</a></li>
@@ -784,6 +788,7 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;SequenceEffect.html">SequenceEffect</a></li>
 <li><a href="..&#x2F;names&#x2F;ShadowAnimation.html">ShadowAnimation</a></li>
 <li><a href="..&#x2F;names&#x2F;ShadowRoot.html">ShadowRoot</a></li>
+<li><a href="..&#x2F;names&#x2F;SharedStorageWorklet.html">SharedStorageWorklet</a></li>
 <li><a href="..&#x2F;names&#x2F;SharedWorker.html">SharedWorker</a></li>
 <li><a href="..&#x2F;names&#x2F;SpeechGrammar.html">SpeechGrammar</a></li>
 <li><a href="..&#x2F;names&#x2F;SpeechGrammarList.html">SpeechGrammarList</a></li>
@@ -855,6 +860,7 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;Window.html">Window</a></li>
 <li><a href="..&#x2F;names&#x2F;WindowControlsOverlay.html">WindowControlsOverlay</a></li>
 <li><a href="..&#x2F;names&#x2F;WindowControlsOverlayGeometryChangeEvent.html">WindowControlsOverlayGeometryChangeEvent</a></li>
+<li><a href="..&#x2F;names&#x2F;WindowSharedStorage.html">WindowSharedStorage</a></li>
 <li><a href="..&#x2F;names&#x2F;Worklet.html">Worklet</a></li>
 <li><a href="..&#x2F;names&#x2F;WorkletAnimation.html">WorkletAnimation</a></li>
 <li><a href="..&#x2F;names&#x2F;WritableStream.html">WritableStream</a></li>
@@ -890,6 +896,8 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;XRLightEstimate.html">XRLightEstimate</a></li>
 <li><a href="..&#x2F;names&#x2F;XRLightProbe.html">XRLightProbe</a></li>
 <li><a href="..&#x2F;names&#x2F;XRMediaBinding.html">XRMediaBinding</a></li>
+<li><a href="..&#x2F;names&#x2F;XRMesh.html">XRMesh</a></li>
+<li><a href="..&#x2F;names&#x2F;XRMeshSet.html">XRMeshSet</a></li>
 <li><a href="..&#x2F;names&#x2F;XRPermissionStatus.html">XRPermissionStatus</a></li>
 <li><a href="..&#x2F;names&#x2F;XRPose.html">XRPose</a></li>
 <li><a href="..&#x2F;names&#x2F;XRProjectionLayer.html">XRProjectionLayer</a></li>
@@ -1145,12 +1153,17 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;ServiceWorker.html">ServiceWorker</a></li>
 <li><a href="..&#x2F;names&#x2F;ServiceWorkerContainer.html">ServiceWorkerContainer</a></li>
 <li><a href="..&#x2F;names&#x2F;ServiceWorkerRegistration.html">ServiceWorkerRegistration</a></li>
+<li><a href="..&#x2F;names&#x2F;SharedStorage.html">SharedStorage</a></li>
 <li><a href="..&#x2F;names&#x2F;SourceBuffer.html">SourceBuffer</a></li>
 <li><a href="..&#x2F;names&#x2F;SourceBufferList.html">SourceBufferList</a></li>
+<li><a href="..&#x2F;names&#x2F;StorageBucket.html">StorageBucket</a></li>
+<li><a href="..&#x2F;names&#x2F;StorageBucketManager.html">StorageBucketManager</a></li>
 <li><a href="..&#x2F;names&#x2F;StorageManager.html">StorageManager</a></li>
 <li><a href="..&#x2F;names&#x2F;StylePropertyMapReadOnly.html">StylePropertyMapReadOnly</a></li>
 <li><a href="..&#x2F;names&#x2F;SubtleCrypto.html">SubtleCrypto</a></li>
 <li><a href="..&#x2F;names&#x2F;SyncManager.html">SyncManager</a></li>
+<li><a href="..&#x2F;names&#x2F;TCPServerSocket.html">TCPServerSocket</a></li>
+<li><a href="..&#x2F;names&#x2F;TCPSocket.html">TCPSocket</a></li>
 <li><a href="..&#x2F;names&#x2F;TaskController.html">TaskController</a></li>
 <li><a href="..&#x2F;names&#x2F;TaskPriorityChangeEvent.html">TaskPriorityChangeEvent</a></li>
 <li><a href="..&#x2F;names&#x2F;TaskSignal.html">TaskSignal</a></li>
@@ -1161,6 +1174,7 @@ base: ../
 <li><a href="..&#x2F;names&#x2F;TrustedScriptURL.html">TrustedScriptURL</a></li>
 <li><a href="..&#x2F;names&#x2F;TrustedTypePolicy.html">TrustedTypePolicy</a></li>
 <li><a href="..&#x2F;names&#x2F;TrustedTypePolicyFactory.html">TrustedTypePolicyFactory</a></li>
+<li><a href="..&#x2F;names&#x2F;UDPSocket.html">UDPSocket</a></li>
 <li><a href="..&#x2F;names&#x2F;URLPattern.html">URLPattern</a></li>
 <li><a href="..&#x2F;names&#x2F;USB.html">USB</a></li>
 <li><a href="..&#x2F;names&#x2F;USBAlternateInterface.html">USBAlternateInterface</a></li>

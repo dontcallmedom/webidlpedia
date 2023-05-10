@@ -1,0 +1,39 @@
+---
+title: <code>StorageBucketManager</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;storage-buckets&#x2F;#storagebucketmanager">Storage Buckets API</a> defines <code>StorageBucketManager</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
+ SecureContext]
+interface <strong>StorageBucketManager</strong> {<span class=def id=operation-open-DOMString-StorageBucketOptions>
+    Promise&lt;<a href='StorageBucket.html'>StorageBucket</a>&gt; <strong>open</strong>(<span class=primitive>DOMString</span> <strong>name</strong>, optional <a href='StorageBucketOptions.html'>StorageBucketOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-keys>
+    Promise&lt;sequence&lt;<span class=primitive>DOMString</span>&gt;&gt; <strong>keys</strong>();</span><span class=def id=operation-delete-DOMString>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>delete</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>StorageBucketManager</code></h3>
+
+  <ul>
+    <li><code><a href="NavigatorStorageBuckets.html">NavigatorStorageBuckets</a><a href=NavigatorStorageBuckets.html#attribute-storageBuckets>.storageBuckets</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="NavigatorStorageBuckets.html">NavigatorStorageBuckets</a></code></li>
+
+  </ul>
+</section>
+  

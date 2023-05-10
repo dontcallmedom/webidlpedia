@@ -1,0 +1,34 @@
+---
+title: <code>TCPSocket</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;direct-sockets&#x2F;#dom-tcpsocket">Direct Sockets API</a> defines <code>TCPSocket</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
+interface <strong>TCPSocket</strong> {<span class=def id=constructor-DOMString-unsigned short-TCPSocketOptions>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>remoteAddress</strong>,
+              <span class=primitive>unsigned short</span> <strong>remotePort</strong>,
+              optional <a href='TCPSocketOptions.html'>TCPSocketOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-opened>
+
+  readonly attribute Promise&lt;<a href='TCPSocketOpenInfo.html'>TCPSocketOpenInfo</a>&gt; <strong>opened</strong>;</span><span class=def id=attribute-closed>
+  readonly attribute Promise&lt;<span class=primitive>undefined</span>&gt; <strong>closed</strong>;</span><span class=def id=operation-close>
+
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>close</strong>();</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>TCPSocket</code></h3>
+
+  <ul>
+    <li><code><a href="TCPSocket.html">TCPSocket</a><a href=TCPSocket.html#constructor-DOMString-unsigned short-TCPSocketOptions>()</a></code></li>
+
+  </ul>
+</section>
+
+  

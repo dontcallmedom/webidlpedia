@@ -28,6 +28,11 @@ partial interface <strong>XRFrame</strong> {<span class=def id=operation-createA
 partial interface <strong>XRFrame</strong> {<span class=def id=attribute-trackedAnchors>
   [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;real-world-meshing&#x2F;#title">WebXR Mesh Detection Module</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XRFrame</strong> {<span class=def id=attribute-detectedMeshs>
+  readonly attribute <a href='XRMeshSet.html'>XRMeshSet</a> <strong>detectedMeshs</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>XRFrame</strong> {<span class=def id=operation-getDepthInformation-XRView>
@@ -63,7 +68,8 @@ partial interface <strong>XRFrame</strong> {<span class=def id=operation-getLigh
   <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);</span><span class=def id=operation-getPose-XRSpace-XRSpace>
   <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def id=operation-createAnchor-XRRigidTransform-XRSpace>
   Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>createAnchor</strong>(<a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>pose</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>);</span><span class=def id=attribute-trackedAnchors>
-  [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;</span><span class=def id=operation-getDepthInformation-XRView>
+  [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;</span><span class=def id=attribute-detectedMeshs>
+  readonly attribute <a href='XRMeshSet.html'>XRMeshSet</a> <strong>detectedMeshs</strong>;</span><span class=def id=operation-getDepthInformation-XRView>
   <a href='XRCPUDepthInformation.html'>XRCPUDepthInformation</a>? <strong>getDepthInformation</strong>(<a href='XRView.html'>XRView</a> <strong>view</strong>);</span><span class=def id=operation-getJointPose-XRJointSpace-XRSpace>
     <a href='XRJointPose.html'>XRJointPose</a>? <strong>getJointPose</strong>(<a href='XRJointSpace.html'>XRJointSpace</a> <strong>joint</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def id=operation-fillJointRadii-XRJointSpace-Float32Array>
     <span class=primitive>boolean</span> <strong>fillJointRadii</strong>(sequence&lt;<a href='XRJointSpace.html'>XRJointSpace</a>&gt; <strong>jointSpaces</strong>, <a href='Float32Array.html'>Float32Array</a> <strong>radii</strong>);</span><span class=def id=operation-fillPoses-XRSpace-XRSpace-Float32Array>
@@ -95,6 +101,7 @@ partial interface <strong>XRFrame</strong> {<span class=def id=operation-getLigh
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;anchors&#x2F;">WebXR Anchors Module</a> refers to <code>XRFrame</code></li>
+<li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;real-world-meshing&#x2F;">WebXR Mesh Detection Module</a> refers to <code>XRFrame</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-depth-sensing-1&#x2F;">WebXR Depth Sensing Module</a> refers to <code>XRFrame</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hand-input-1&#x2F;">WebXR Hand Input Module - Level 1</a> refers to <code>XRFrame</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-hit-test-1&#x2F;">WebXR Hit Test Module</a> refers to <code>XRFrame</code></li>

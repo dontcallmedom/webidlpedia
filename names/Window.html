@@ -100,6 +100,11 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-cookieSt
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
       <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;document-picture-in-picture&#x2F;#title">Document Picture-in-Picture Specification</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial interface <strong>Window</strong> {<span class=def id=attribute-documentPictureInPicture>
+  [SameObject, SecureContext] readonly attribute <a href='DocumentPictureInPicture.html'>DocumentPictureInPicture</a>
+    <strong>documentPictureInPicture</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#title">Fenced frame</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-fence><span class="comment">
@@ -399,7 +404,9 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
-      <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-fence><span class="comment">
+      <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-documentPictureInPicture>
+  [SameObject, SecureContext] readonly attribute <a href='DocumentPictureInPicture.html'>DocumentPictureInPicture</a>
+    <strong>documentPictureInPicture</strong>;</span><span class=def id=attribute-fence><span class="comment">
   &#x2F;&#x2F; Collection of fenced frame APIs
   </span>readonly attribute <a href='Fence.html'>Fence</a>? <strong>fence</strong>;</span><span class=def id=operation-showOpenFilePicker-OpenFilePickerOptions>
     Promise&lt;sequence&lt;<a href='FileSystemFileHandle.html'>FileSystemFileHandle</a>&gt;&gt; <strong>showOpenFilePicker</strong>(optional <a href='OpenFilePickerOptions.html'>OpenFilePickerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-showSaveFilePicker-SaveFilePickerOptions>
@@ -463,7 +470,10 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <h3>Methods and attributes that return objects implementing <code>Window</code></h3>
 
   <ul>
-    <li><code><a href="UIEvent.html">UIEvent</a><a href=UIEvent.html#attribute-view>.view</a></code></li>
+    <li><code><a href="DocumentPictureInPicture.html">DocumentPictureInPicture</a><a href=DocumentPictureInPicture.html#operation-requestWindow-DocumentPictureInPictureOptions>.requestWindow()</a></code></li>
+<li><code><a href="DocumentPictureInPicture.html">DocumentPictureInPicture</a><a href=DocumentPictureInPicture.html#attribute-window>.window</a></code></li>
+<li><code><a href="DocumentPictureInPictureEvent.html">DocumentPictureInPictureEvent</a><a href=DocumentPictureInPictureEvent.html#attribute-window>.window</a></code></li>
+<li><code><a href="UIEvent.html">UIEvent</a><a href=UIEvent.html#attribute-view>.view</a></code></li>
 
   </ul>
 </section>
@@ -471,7 +481,10 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><code><a href="KeyboardEvent.html">KeyboardEvent</a></code></li>
+    <li><code><a href="DocumentPictureInPicture.html">DocumentPictureInPicture</a></code></li>
+<li><code><a href="DocumentPictureInPictureEvent.html">DocumentPictureInPictureEvent</a></code></li>
+<li><code><a href="DocumentPictureInPictureEventInit.html">DocumentPictureInPictureEventInit</a></code></li>
+<li><code><a href="KeyboardEvent.html">KeyboardEvent</a></code></li>
 <li><code><a href="MouseEvent.html">MouseEvent</a></code></li>
 <li><code><a href="TimeEvent.html">TimeEvent</a></code></li>
 <li><code><a href="UIEvent.html">UIEvent</a></code></li>
@@ -480,12 +493,13 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;document-picture-in-picture&#x2F;">Document Picture-in-Picture Specification</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;">Fenced frame</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;file-system-access&#x2F;">File System Access</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a> refers to <code>Window</code></li>
