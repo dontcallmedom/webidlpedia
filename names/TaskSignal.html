@@ -11,7 +11,9 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>)]
-interface <strong>TaskSignal</strong> : <a href='AbortSignal.html'>AbortSignal</a> {<span class=def id=attribute-priority>
+interface <strong>TaskSignal</strong> : <a href='AbortSignal.html'>AbortSignal</a> {<span class=def id=operation-static>
+  [NewObject] static <a href='TaskSignal.html'>TaskSignal</a> <strong>_any</strong>(sequence&lt;<a href='AbortSignal.html'>AbortSignal</a>&gt; <strong>signals</strong>, optional <a href='TaskSignalAnyInit.html'>TaskSignalAnyInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-priority>
+
   readonly attribute <a href='TaskPriority.html'>TaskPriority</a> <strong>priority</strong>;</span><span class=def id=attribute-onprioritychange>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprioritychange</strong>;</span>
@@ -19,6 +21,21 @@ interface <strong>TaskSignal</strong> : <a href='AbortSignal.html'>AbortSignal</
   
   
 </section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>TaskSignal</code></h3>
 
+  <ul>
+    <li><code><a href="TaskSignal.html">TaskSignal</a><a href=TaskSignal.html#operation-static>.any()</a></code></li>
 
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="TaskSignal.html">TaskSignal</a></code></li>
+<li><code><a href="TaskSignalAnyInit.html">TaskSignalAnyInit</a></code></li>
+
+  </ul>
+</section>
   
