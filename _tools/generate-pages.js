@@ -457,7 +457,7 @@ function extAttrUsage(data) {
       let applyList = extAttrIdx[e].map(a =>
         html`used on ${a.applyTo.type} <code>${a.applyTo.name}</code> in <a href="${a.url}">${a.title}</a>`
                                     );
-      list.push(html`<a href="${notInWebIdlSpec[e] ? notInWebIdlSpec[e] : "http://heycam.github.io/webidl/#" + e}">${e}</a> ${htmlList(applyList)}`)
+      list.push(html`<a href="${notInWebIdlSpec[e] ? notInWebIdlSpec[e] : "https://webidl.spec.whatwg.org/#" + e}">${e}</a> ${htmlList(applyList)}`)
     });
   return html`<p>Extended attributes usage:</p>${htmlList(list)}`;
 }
