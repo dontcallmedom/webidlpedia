@@ -426,25 +426,35 @@ function enumNames(data) {
 }
 
 function extAttrUsage(data) {
-  const extAttr = data.filter(hasIdlDef)
-        .map(spec =>
-             Object.keys(spec.idlparsed.idlNames)
-             .filter(n => n!=="_dependencies")
-             .map(n => (spec.idlparsed.idlNames[n].extAttrs || []).map(
-               e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>`, type: spec.idlparsed.idlNames[n].type} };}
-             )
-                  .concat((spec.idlparsed.idlNames[n].members || []).map(
-                    m => (m.extAttrs || []).map( e => {return {url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${n}.html'>${n}</a>${m.name ? "." + m.name : ""}`, type: m.type}};}).reduce((a,b) => a.concat(b), [])))
-                  .reduce((a,b) => a.concat(b), []))
-             // TODO missing extended attributes on arguments, types (?)
-                  ).reduce((a,b) => a.concat(b), [])
-        .reduce((a,b) => a.concat(b), [])
+  const extAttr = [];
+  for (let spec of data) {
+    if (!hasIdlDef(spec)) continue;
+    for (let name in spec.idlparsed.idlNames) {
+      if (name === "_dependencies") continue;
+      for (const e of (spec.idlparsed.idlNames[name].extAttrs || [])) {
+	extAttr.push({url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${name}.html'>${name}</a>`, type: spec.idlparsed.idlNames[name].type} });
+      }
+      for (const m of (spec.idlparsed.idlNames[name].members || [])) {
+	for (const e of (m.extAttrs || [])) {
+	  extAttr.push({url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`<a href='names/${name}.html'>${name}</a>${m.name ? "." + m.name : ""}`, type: m.type} });
+	}
+	for (const a of (m.arguments || [])) {
+	  for (const e of (a.extAttrs || [])) {
+	    extAttr.push({url: spec.url, title: spec.title, extAttr: e.name, extAttrArgs: e.args, applyTo: {name: html`${a.name} of <a href='names/${name}.html'>${name}</a>${m.name ? "." + m.name : ""}()`, type: a.type} });
+	  }
+	}
+      }
+      // TODO missing extended attributes on types (?)
+    }
+  }
+  console.log(JSON.stringify(extAttr, null, 2));
+  const extAttrIdx = extAttr
         .reduce((a,b) => {a[b.extAttr] = a[b.extAttr] ? a[b.extAttr].concat(b) : [b]; return a;}, {});
   let list = [];
-  Object.keys(extAttr).forEach(
+  Object.keys(extAttrIdx).forEach(
     e => {
       const notInWebIdlSpec = {"CEReactions": "https://html.spec.whatwg.org/multipage/custom-elements.html#cereactions", "WebGLHandlesContextLoss": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14", "HTMLConstructor": "https://html.spec.whatwg.org/multipage/dom.html#htmlconstructor"};
-      let applyList = extAttr[e].map(a =>
+      let applyList = extAttrIdx[e].map(a =>
         html`used on ${a.applyTo.type} <code>${a.applyTo.name}</code> in <a href="${a.url}">${a.title}</a>`
                                     );
       list.push(html`<a href="${notInWebIdlSpec[e] ? notInWebIdlSpec[e] : "http://heycam.github.io/webidl/#" + e}">${e}</a> ${htmlList(applyList)}`)
