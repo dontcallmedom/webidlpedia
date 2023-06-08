@@ -10,7 +10,9 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;streams.spec.whatwg.org&#x2F;#readablestream">Streams Standard</a> defines <code>ReadableStream</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;*, Transferable]
 interface <strong>ReadableStream</strong> {<span class=def id=constructor-object-QueuingStrategy>
-  <strong>constructor</strong>(optional <span class=primitive>object</span> <strong>underlyingSource</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> &#x3D; {});</span><span class=def id=attribute-locked>
+  <strong>constructor</strong>(optional <span class=primitive>object</span> <strong>underlyingSource</strong>, optional <a href='QueuingStrategy.html'>QueuingStrategy</a> <strong>strategy</strong> &#x3D; {});</span><span class=def id=operation-static>
+
+  static <a href='ReadableStream.html'>ReadableStream</a> <strong>from</strong>(<span class=primitive>any</span> <strong>asyncIterable</strong>);</span><span class=def id=attribute-locked>
 
   readonly attribute <span class=primitive>boolean</span> <strong>locked</strong>;</span><span class=def id=operation-cancel-any>
 
@@ -31,6 +33,7 @@ interface <strong>ReadableStream</strong> {<span class=def id=constructor-object
   <ul>
     <li><code><a href="ReadableStream.html">ReadableStream</a><a href=ReadableStream.html#constructor-object-QueuingStrategy>()</a></code></li>
 <li><code><a href="Body.html">Body</a><a href=Body.html#attribute-body>.body</a></code></li>
+<li><code><a href="ReadableStream.html">ReadableStream</a><a href=ReadableStream.html#operation-static>.from()</a></code></li>
 <li><code><a href="ReadableStream.html">ReadableStream</a><a href=ReadableStream.html#operation-pipeThrough-ReadableWritablePair-StreamPipeOptions>.pipeThrough()</a></code></li>
 <li><code><a href="ReadableStream.html">ReadableStream</a><a href=ReadableStream.html#operation-tee>.tee()</a></code></li>
 <li><code><a href="TransformStream.html">TransformStream</a><a href=TransformStream.html#attribute-readable>.readable</a></code></li>
