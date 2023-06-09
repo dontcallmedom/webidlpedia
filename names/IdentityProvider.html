@@ -1,5 +1,4 @@
 ---
-deprecated: "February 8, 2023"
 title: <code>IdentityProvider</code> interface
 layout: base
 parent: names/
@@ -11,10 +10,8 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;fedidcg.github.io&#x2F;FedCM&#x2F;#identityprovider">Federated Credential Management API</a> defines <code>IdentityProvider</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
-interface <strong>IdentityProvider</strong> {<span class=def id=operation-static>
-  static <span class=primitive>undefined</span> <strong>login</strong>();</span><span class=def id=operation-static>
-  static <span class=primitive>undefined</span> <strong>logout</strong>();</span>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext] interface <strong>IdentityProvider</strong> {<span class=def id=operation-static>
+    static Promise&lt;sequence&lt;<a href='IdentityUserInfo.html'>IdentityUserInfo</a>&gt;&gt; <strong>getUserInfo</strong>(<a href='IdentityProviderConfig.html'>IdentityProviderConfig</a> <strong>config</strong>);</span>
 };</span></code></pre>
   
   
