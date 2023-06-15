@@ -74,12 +74,12 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-joinA
 
 [SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-leaveAdInterestGroup-AuctionAdInterestGroupKey>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(<a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong>);</span>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(optional <a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 [SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-runAdAuction-AuctionAdConfig>
-  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span>
+  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span>
 };</span><span class=def>
 
 [SecureContext]
@@ -271,8 +271,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=attribute-storageBuckets>
   [SameObject] readonly attribute <a href='StorageBucketManager.html'>StorageBucketManager</a> <strong>storageBuckets</strong>;</span><span class=def id=operation-joinAdInterestGroup-AuctionAdInterestGroup>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>joinAdInterestGroup</strong>(<a href='AuctionAdInterestGroup.html'>AuctionAdInterestGroup</a> <strong>group</strong>);</span><span class=def id=operation-leaveAdInterestGroup-AuctionAdInterestGroupKey>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(<a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong>);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
-  Promise&lt;<span class=primitive>USVString</span>?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=operation-updateAdInterestGroups>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(optional <a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong> &#x3D; {});</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
+  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=operation-updateAdInterestGroups>
   <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span><span class=def id=attribute-userAgentData>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-hid>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def id=attribute-usb>
