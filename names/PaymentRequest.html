@@ -25,8 +25,33 @@ interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarg
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>PaymentRequest</strong> {<span class=def id=operation-static>
+    static Promise&lt;<span class=primitive>boolean</span>&gt; <strong>isSecurePaymentConfirmationAvailable</strong>();</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-PaymentMethodData-PaymentDetailsInit>
+  <strong>constructor</strong>(
+    sequence&lt;<a href='PaymentMethodData.html'>PaymentMethodData</a>&gt; <strong>methodData</strong>,
+    <a href='PaymentDetailsInit.html'>PaymentDetailsInit</a> <strong>details</strong>
+  );</span><span class=def id=operation-show-PaymentDetailsUpdate>
+  [NewObject]
+  Promise&lt;<a href='PaymentResponse.html'>PaymentResponse</a>&gt; <strong>show</strong>(optional Promise&lt;<a href='PaymentDetailsUpdate.html'>PaymentDetailsUpdate</a>&gt; <strong>detailsPromise</strong>);</span><span class=def id=operation-abort>
+  [NewObject]
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>abort</strong>();</span><span class=def id=operation-canMakePayment>
+  [NewObject]
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>canMakePayment</strong>();</span><span class=def id=attribute-id>
+
+  readonly attribute <span class=primitive>DOMString</span> <strong>id</strong>;</span><span class=def id=attribute-onpaymentmethodchange>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentmethodchange</strong>;</span><span class=def id=operation-static>
+    static Promise&lt;<span class=primitive>boolean</span>&gt; <strong>isSecurePaymentConfirmationAvailable</strong>();</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>PaymentRequest</code></h3>
@@ -37,4 +62,8 @@ interface <strong>PaymentRequest</strong> : <a href='EventTarget.html'>EventTarg
   </ul>
 </section>
 
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a> refers to <code>PaymentRequest</code></li>
+
+  </ul></section>
