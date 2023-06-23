@@ -12,8 +12,8 @@ base: ../
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), Serializable, Transferable]
 interface <strong>VideoFrame</strong> {<span class=def id=constructor-CanvasImageSource-VideoFrameInit>
-  <strong>constructor</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=constructor-BufferSource-VideoFrameBufferInit>
-  <strong>constructor</strong>([AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>data</strong>, <a href='VideoFrameBufferInit.html'>VideoFrameBufferInit</a> <strong>init</strong>);</span><span class=def id=attribute-format>
+  <strong>constructor</strong>(<a href='CanvasImageSource.html'>CanvasImageSource</a> <strong>image</strong>, optional <a href='VideoFrameInit.html'>VideoFrameInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=constructor-AllowSharedBufferSource-VideoFrameBufferInit>
+  <strong>constructor</strong>(<a href='AllowSharedBufferSource.html'>AllowSharedBufferSource</a> <strong>data</strong>, <a href='VideoFrameBufferInit.html'>VideoFrameBufferInit</a> <strong>init</strong>);</span><span class=def id=attribute-format>
 
   readonly attribute <a href='VideoPixelFormat.html'>VideoPixelFormat</a>? <strong>format</strong>;</span><span class=def id=attribute-codedWidth>
   readonly attribute <span class=primitive>unsigned long</span> <strong>codedWidth</strong>;</span><span class=def id=attribute-codedHeight>
@@ -29,9 +29,9 @@ interface <strong>VideoFrame</strong> {<span class=def id=constructor-CanvasImag
   <a href='VideoFrameMetadata.html'>VideoFrameMetadata</a> <strong>metadata</strong>();</span><span class=def id=operation-allocationSize-VideoFrameCopyToOptions>
 
   <span class=primitive>unsigned long</span> <strong>allocationSize</strong>(
-      optional <a href='VideoFrameCopyToOptions.html'>VideoFrameCopyToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-copyTo-BufferSource-VideoFrameCopyToOptions>
+      optional <a href='VideoFrameCopyToOptions.html'>VideoFrameCopyToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-copyTo-AllowSharedBufferSource-VideoFrameCopyToOptions>
   Promise&lt;sequence&lt;<a href='PlaneLayout.html'>PlaneLayout</a>&gt;&gt; <strong>copyTo</strong>(
-      [AllowShared] <a href='BufferSource.html'>BufferSource</a> <strong>destination</strong>,
+      <a href='AllowSharedBufferSource.html'>AllowSharedBufferSource</a> <strong>destination</strong>,
       optional <a href='VideoFrameCopyToOptions.html'>VideoFrameCopyToOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clone>
   <a href='VideoFrame.html'>VideoFrame</a> <strong>clone</strong>();</span><span class=def id=operation-close>
   <span class=primitive>undefined</span> <strong>close</strong>();</span>
@@ -44,7 +44,7 @@ interface <strong>VideoFrame</strong> {<span class=def id=constructor-CanvasImag
 
   <ul>
     <li><code><a href="VideoFrame.html">VideoFrame</a><a href=VideoFrame.html#constructor-CanvasImageSource-VideoFrameInit>()</a></code></li>
-<li><code><a href="VideoFrame.html">VideoFrame</a><a href=VideoFrame.html#constructor-BufferSource-VideoFrameBufferInit>()</a></code></li>
+<li><code><a href="VideoFrame.html">VideoFrame</a><a href=VideoFrame.html#constructor-AllowSharedBufferSource-VideoFrameBufferInit>()</a></code></li>
 <li><code><a href="VideoFrame.html">VideoFrame</a><a href=VideoFrame.html#operation-clone>.clone()</a></code></li>
 
   </ul>
