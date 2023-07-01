@@ -16,17 +16,17 @@ dictionary <strong>AuctionAdConfig</strong> {<span class=def>
   <span class=primitive>USVString</span> <strong>trustedScoringSignalsURL</strong>;</span><span class=def>
   sequence&lt;<span class=primitive>USVString</span>&gt; <strong>interestGroupBuyers</strong>;</span><span class=def>
   Promise&lt;<span class=primitive>any</span>&gt; <strong>auctionSignals</strong>;</span><span class=def>
-  <span class=primitive>any</span> <strong>sellerSignals</strong>;</span><span class=def>
-  <span class=primitive>USVString</span> <strong>directFromSellerSignals</strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong>sellerSignals</strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>USVString</span>&gt; <strong>directFromSellerSignals</strong>;</span><span class=def>
   <span class=primitive>unsigned long long</span> <strong>sellerTimeout</strong>;</span><span class=def>
   <span class=primitive>unsigned short</span> <strong>sellerExperimentGroupId</strong>;</span><span class=def>
   <span class=primitive>USVString</span> <strong>sellerCurrency</strong>;</span><span class=def>
   Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>any</span>&gt;&gt; <strong>perBuyerSignals</strong>;</span><span class=def>
-  record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned long long</span>&gt; <strong>perBuyerTimeouts</strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned long long</span>&gt;&gt; <strong>perBuyerTimeouts</strong>;</span><span class=def>
   record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned short</span>&gt; <strong>perBuyerGroupLimits</strong>;</span><span class=def>
   record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned short</span>&gt; <strong>perBuyerExperimentGroupIds</strong>;</span><span class=def>
   record&lt;<span class=primitive>USVString</span>, record&lt;<span class=primitive>USVString</span>, <span class=primitive>double</span>&gt;&gt; <strong>perBuyerPrioritySignals</strong>;</span><span class=def>
-  record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt; <strong>perBuyerCurrencies</strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt;&gt; <strong>perBuyerCurrencies</strong>;</span><span class=def>
   sequence&lt;<a href='AuctionAdConfig.html'>AuctionAdConfig</a>&gt; <strong>componentAuctions</strong> &#x3D; [];</span><span class=def>
   <a href='AbortSignal.html'>AbortSignal</a>? <strong>signal</strong>;</span><span class=def>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>resolveToConfig</strong>;</span>
