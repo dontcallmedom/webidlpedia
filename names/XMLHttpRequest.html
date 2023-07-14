@@ -55,6 +55,11 @@ partial interface <strong>XMLHttpRequest</strong> {<span class=def id=operation-
   [SecureContext]
   <span class=primitive>undefined</span> <strong>setAttributionReporting</strong>(<a href='AttributionReportingRequestOptions.html'>AttributionReportingRequestOptions</a> <strong>options</strong>);</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>XMLHttpRequest</strong> {<span class=def id=operation-setPrivateToken-PrivateToken>
+  <span class=primitive>undefined</span> <strong>setPrivateToken</strong>(<a href='PrivateToken.html'>PrivateToken</a> <strong>privateToken</strong>);</span>
+};</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -96,7 +101,8 @@ interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.h
   readonly attribute <span class=primitive>USVString</span> <strong>responseText</strong>;</span><span class=def id=attribute-responseXML>
   [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] readonly attribute <a href='Document.html'>Document</a>? <strong>responseXML</strong>;</span><span class=def id=operation-setAttributionReporting-AttributionReportingRequestOptions>
   [SecureContext]
-  <span class=primitive>undefined</span> <strong>setAttributionReporting</strong>(<a href='AttributionReportingRequestOptions.html'>AttributionReportingRequestOptions</a> <strong>options</strong>);</span>
+  <span class=primitive>undefined</span> <strong>setAttributionReporting</strong>(<a href='AttributionReportingRequestOptions.html'>AttributionReportingRequestOptions</a> <strong>options</strong>);</span><span class=def id=operation-setPrivateToken-PrivateToken>
+  <span class=primitive>undefined</span> <strong>setPrivateToken</strong>(<a href='PrivateToken.html'>PrivateToken</a> <strong>privateToken</strong>);</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -111,5 +117,6 @@ interface <strong>XMLHttpRequest</strong> : <a href='XMLHttpRequestEventTarget.h
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;attribution-reporting-api&#x2F;">Attribution Reporting</a> refers to <code>XMLHttpRequest</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a> refers to <code>XMLHttpRequest</code></li>
 
   </ul></section>
