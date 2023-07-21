@@ -14,8 +14,9 @@ base: ../
 interface <strong>RTCRtpSender</strong> {<span class=def id=attribute-track>
   readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>track</strong>;</span><span class=def id=attribute-transport>
   readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def id=operation-static>
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-setParameters-RTCRtpSendParameters>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>);</span><span class=def id=operation-getParameters>
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-setParameters-RTCRtpSendParameters-RTCSetParameterOptions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>,
+      optional <a href='RTCSetParameterOptions.html'>RTCSetParameterOptions</a> <strong>setParameterOptions</strong> &#x3D; {});</span><span class=def id=operation-getParameters>
   <a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>getParameters</strong>();</span><span class=def id=operation-replaceTrack-MediaStreamTrack>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>replaceTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>withTrack</strong>);</span><span class=def id=operation-setStreams-MediaStream>
   <span class=primitive>undefined</span> <strong>setStreams</strong>(<a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def id=operation-getStats>
@@ -45,8 +46,9 @@ partial interface <strong>RTCRtpSender</strong> {<span class=def id=operation-ge
 interface <strong>RTCRtpSender</strong> {<span class=def id=attribute-track>
   readonly attribute <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>track</strong>;</span><span class=def id=attribute-transport>
   readonly attribute <a href='RTCDtlsTransport.html'>RTCDtlsTransport</a>? <strong>transport</strong>;</span><span class=def id=operation-static>
-  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-setParameters-RTCRtpSendParameters>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>);</span><span class=def id=operation-getParameters>
+  static <a href='RTCRtpCapabilities.html'>RTCRtpCapabilities</a>? <strong>getCapabilities</strong>(<span class=primitive>DOMString</span> <strong>kind</strong>);</span><span class=def id=operation-setParameters-RTCRtpSendParameters-RTCSetParameterOptions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setParameters</strong>(<a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>parameters</strong>,
+      optional <a href='RTCSetParameterOptions.html'>RTCSetParameterOptions</a> <strong>setParameterOptions</strong> &#x3D; {});</span><span class=def id=operation-getParameters>
   <a href='RTCRtpSendParameters.html'>RTCRtpSendParameters</a> <strong>getParameters</strong>();</span><span class=def id=operation-replaceTrack-MediaStreamTrack>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>replaceTrack</strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>withTrack</strong>);</span><span class=def id=operation-setStreams-MediaStream>
   <span class=primitive>undefined</span> <strong>setStreams</strong>(<a href='MediaStream.html'>MediaStream</a>... <strong>streams</strong>);</span><span class=def id=operation-getStats>
