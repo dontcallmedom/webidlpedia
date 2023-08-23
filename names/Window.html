@@ -135,6 +135,11 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-onappins
 partial interface <strong>Window</strong> {<span class=def id=attribute-portalHost>
     readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;#extension">Shared Storage API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-sharedStorage>
+  [SecureContext] readonly attribute <a href='WindowSharedStorage.html'>WindowSharedStorage</a>? <strong>sharedStorage</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-speechSynthesis>
@@ -417,7 +422,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   Promise&lt;sequence&lt;<a href='FontData.html'>FontData</a>&gt;&gt; <strong>queryLocalFonts</strong>(optional <a href='QueryOptions.html'>QueryOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onappinstalled>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-portalHost>
-    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-speechSynthesis>
+    readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-sharedStorage>
+  [SecureContext] readonly attribute <a href='WindowSharedStorage.html'>WindowSharedStorage</a>? <strong>sharedStorage</strong>;</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-launchQueue>
   readonly attribute <a href='LaunchQueue.html'>LaunchQueue</a> <strong>launchQueue</strong>;</span><span class=def id=operation-navigate-SpatialNavigationDirection>
     <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def id=operation-getComputedStyle-Element-CSSOMString>
@@ -507,6 +513,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;local-font-access&#x2F;">Local Font Access API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;manifest-incubations&#x2F;">Manifest Incubations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;">Shared Storage API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-app-launch&#x2F;">Web App Launch Handler API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li>
