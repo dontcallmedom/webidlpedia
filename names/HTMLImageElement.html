@@ -52,6 +52,8 @@ partial interface <strong>HTMLImageElement</strong> {<span class=def id=attribut
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;attribution-reporting-api&#x2F;">Attribution Reporting</a><pre class=webidl><code><span class=def>
 <a href='HTMLImageElement.html'>HTMLImageElement</a> includes <a href='HTMLAttributionSrcElementUtils.html'>HTMLAttributionSrcElementUtils</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;">Shared Storage API</a><pre class=webidl><code><span class=def>
+<a href='HTMLImageElement.html'>HTMLImageElement</a> includes <a href='HTMLSharedStorageWritableElementUtils.html'>HTMLSharedStorageWritableElementUtils</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-htmlimageelement-interface">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>HTMLImageElement</strong> {<span class=def id=attribute-x>
@@ -94,7 +96,8 @@ interface <strong>HTMLImageElement</strong> : <a href='HTMLElement.html'>HTMLEle
   [CEReactions] attribute <span class=primitive>USVString</span> <strong>longDesc</strong>;</span><span class=def id=attribute-border>
 
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>border</strong>;</span><span class=def id=attribute-attributionSrc>
-    [CEReactions, SecureContext] attribute <span class=primitive>USVString</span> <strong>attributionSrc</strong>;</span><span class=def id=attribute-x>
+    [CEReactions, SecureContext] attribute <span class=primitive>USVString</span> <strong>attributionSrc</strong>;</span><span class=def id=attribute-sharedStorageWritable>
+  [CEReactions, SecureContext] attribute <span class=primitive>boolean</span> <strong>sharedStorageWritable</strong>;</span><span class=def id=attribute-x>
   readonly attribute <span class=primitive>long</span> <strong>x</strong>;</span><span class=def id=attribute-y>
   readonly attribute <span class=primitive>long</span> <strong>y</strong>;</span><span class="comment">
 

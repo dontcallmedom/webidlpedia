@@ -42,7 +42,10 @@ partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribu
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;#title">Private State Token API</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;">Shared Storage API</a><pre class=webidl><code><span class=def>
+
+<a href='HTMLIFrameElement.html'>HTMLIFrameElement</a> includes <a href='HTMLSharedStorageWritableElementUtils.html'>HTMLSharedStorageWritableElementUtils</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;#title">Private State Token API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribute-privateToken>
   [SecureContext] attribute <span class=primitive>DOMString</span> <strong>privateToken</strong>;</span>
@@ -82,7 +85,8 @@ interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [CEReactions] attribute <span class=primitive>USVString</span> <strong>longDesc</strong>;</span><span class=def id=attribute-marginHeight>
 
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginHeight</strong>;</span><span class=def id=attribute-marginWidth>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginWidth</strong>;</span><span class=def id=attribute-privateToken>
+  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginWidth</strong>;</span><span class=def id=attribute-sharedStorageWritable>
+  [CEReactions, SecureContext] attribute <span class=primitive>boolean</span> <strong>sharedStorageWritable</strong>;</span><span class=def id=attribute-privateToken>
   [SecureContext] attribute <span class=primitive>DOMString</span> <strong>privateToken</strong>;</span><span class=def id=attribute-csp>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>csp</strong>;</span><span class=def id=attribute-permissionsPolicy>
     [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span><span class="comment">
