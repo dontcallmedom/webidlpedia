@@ -21,7 +21,12 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;">DOM Parsing and Serialization</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setHTMLUnsafe-DOMString>
+  <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;">DOM Parsing and Serialization</a><pre class=webidl><code><span class=def>
 <a href='ShadowRoot.html'>ShadowRoot</a> includes <a href='InnerHTML.html'>InnerHTML</a>;</span></code></pre></li>
 
   </ul>
@@ -33,7 +38,8 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   readonly attribute <span class=primitive>boolean</span> <strong>delegatesFocus</strong>;</span><span class=def id=attribute-slotAssignment>
   readonly attribute <a href='SlotAssignmentMode.html'>SlotAssignmentMode</a> <strong>slotAssignment</strong>;</span><span class=def id=attribute-host>
   readonly attribute <a href='Element.html'>Element</a> <strong>host</strong>;</span><span class=def id=attribute-onslotchange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=attribute-innerHTML>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onslotchange</strong>;</span><span class=def id=operation-setHTMLUnsafe-DOMString>
+  <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-innerHTML>
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerHTML</strong>;</span>
 };</span></code></pre></details>
 </section>

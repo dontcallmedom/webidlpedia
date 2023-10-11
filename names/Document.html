@@ -72,10 +72,12 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fullsc
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;#the-location-interface">HTML Standard</a><pre class=webidl><code><span class=def>
+<li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
 
 [LegacyOverrideBuiltIns]
-partial interface <strong>Document</strong> {<span class=def id=attribute-location><span class="comment">
+partial interface <strong>Document</strong> {<span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
   attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def id=attribute-referrer>
@@ -292,7 +294,9 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   </span>Promise&lt;<span class=primitive>undefined</span>&gt; <strong>exitFullscreen</strong>();</span><span class=def id=attribute-onfullscreenchange>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=attribute-location><span class="comment">
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
   attribute <span class=primitive>USVString</span> <strong>domain</strong>;</span><span class=def id=attribute-referrer>
@@ -472,6 +476,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <li><code><a href="Node.html">Node</a><a href=Node.html#attribute-ownerDocument>.ownerDocument</a></code></li>
 <li><code><a href="DOMImplementation.html">DOMImplementation</a><a href=DOMImplementation.html#operation-createHTMLDocument-DOMString>.createHTMLDocument()</a></code></li>
 <li><code><a href="XSLTProcessor.html">XSLTProcessor</a><a href=XSLTProcessor.html#operation-transformToDocument-Node>.transformToDocument()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTMLUnsafe()</a></code></li>
 <li><code><a href="Document.html">Document</a><a href=Document.html#operation-open-DOMString-DOMString>.open()</a></code></li>
 <li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
 <li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
