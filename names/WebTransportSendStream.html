@@ -11,8 +11,9 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext, Transferable]
-interface <strong>WebTransportSendStream</strong> : <a href='WritableStream.html'>WritableStream</a> {<span class=def id=attribute-sendOrder>
-  attribute <span class=primitive>long long</span>? <strong>sendOrder</strong>;</span><span class=def id=operation-getStats>
+interface <strong>WebTransportSendStream</strong> : <a href='WritableStream.html'>WritableStream</a> {<span class=def id=attribute-sendGroup>
+  attribute <a href='WebTransportSendGroup.html'>WebTransportSendGroup</a>? <strong>sendGroup</strong>;</span><span class=def id=attribute-sendOrder>
+  attribute <span class=primitive>long long</span> <strong>sendOrder</strong>;</span><span class=def id=operation-getStats>
   Promise&lt;<a href='WebTransportSendStreamStats.html'>WebTransportSendStreamStats</a>&gt; <strong>getStats</strong>();</span>
 };</span></code></pre>
   
