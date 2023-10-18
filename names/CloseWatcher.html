@@ -1,5 +1,4 @@
 ---
-deprecated: "July 26, 2023"
 title: <code>CloseWatcher</code> interface
 layout: base
 parent: names/
@@ -8,13 +7,16 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;close-watcher&#x2F;#closewatcher">Close Watcher API</a> defines <code>CloseWatcher</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>CloseWatcher</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-CloseWatcherOptions>
-  <strong>constructor</strong>(optional <a href='CloseWatcherOptions.html'>CloseWatcherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-destroy>
+  <p><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;interaction.html#closewatcher">HTML Standard</a> defines <code>CloseWatcher</code></p>
+<pre class=webidl><code><span class=def>
 
-  <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=operation-close>
-  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=attribute-oncancel>
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>CloseWatcher</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-CloseWatcherOptions>
+  <strong>constructor</strong>(optional <a href='CloseWatcherOptions.html'>CloseWatcherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-requestClose>
+
+  <span class=primitive>undefined</span> <strong>requestClose</strong>();</span><span class=def id=operation-close>
+  <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-destroy>
+  <span class=primitive>undefined</span> <strong>destroy</strong>();</span><span class=def id=attribute-oncancel>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncancel</strong>;</span><span class=def id=attribute-onclose>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onclose</strong>;</span>
