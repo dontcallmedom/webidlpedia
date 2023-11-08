@@ -23,7 +23,16 @@ interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a
 <a href='Bluetooth.html'>Bluetooth</a> includes <a href='BluetoothDeviceEventHandlers.html'>BluetoothDeviceEventHandlers</a>;</span><span class=def>
 <a href='Bluetooth.html'>Bluetooth</a> includes <a href='CharacteristicEventHandlers.html'>CharacteristicEventHandlers</a>;</span><span class=def>
 <a href='Bluetooth.html'>Bluetooth</a> includes <a href='ServiceEventHandlers.html'>ServiceEventHandlers</a>;</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;scanning.html">Web Bluetooth Scanning</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Bluetooth</strong> {<span class=def id=operation-requestLEScan-BluetoothLEScanOptions>
+  [SecureContext]
+  Promise&lt;<a href='BluetoothLEScan.html'>BluetoothLEScan</a>&gt; <strong>requestLEScan</strong>(optional <a href='BluetoothLEScanOptions.html'>BluetoothLEScanOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></li>
+
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
@@ -39,7 +48,9 @@ interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncharacteristicvaluechanged</strong>;</span><span class=def id=attribute-onserviceadded>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceadded</strong>;</span><span class=def id=attribute-onservicechanged>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onservicechanged</strong>;</span><span class=def id=attribute-onserviceremoved>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;</span>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onserviceremoved</strong>;</span><span class=def id=operation-requestLEScan-BluetoothLEScanOptions>
+  [SecureContext]
+  Promise&lt;<a href='BluetoothLEScan.html'>BluetoothLEScan</a>&gt; <strong>requestLEScan</strong>(optional <a href='BluetoothLEScanOptions.html'>BluetoothLEScanOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -58,4 +69,8 @@ interface <strong>Bluetooth</strong> : <a href='EventTarget.html'>EventTarget</a
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;webbluetoothcg.github.io&#x2F;web-bluetooth&#x2F;scanning.html">Web Bluetooth Scanning</a> refers to <code>Bluetooth</code></li>
+
+  </ul></section>
