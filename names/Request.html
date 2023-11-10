@@ -35,7 +35,15 @@ interface <strong>Request</strong> {<span class=def id=constructor-RequestInfo-R
   [NewObject] <a href='Request.html'>Request</a> <strong>clone</strong>();</span>
 };</span><span class=def>
 <a href='Request.html'>Request</a> includes <a href='Body.html'>Body</a>;</span></code></pre>
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;private-network-access&#x2F;#integrations">Private Network Access</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Request</strong> {<span class=def id=attribute-targetAddressSpace>
+  readonly attribute <a href='IPAddressSpace.html'>IPAddressSpace</a> <strong>targetAddressSpace</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
@@ -67,7 +75,8 @@ interface <strong>Request</strong> {<span class=def id=constructor-RequestInfo-R
   [NewObject] Promise&lt;<a href='Blob.html'>Blob</a>&gt; <strong>blob</strong>();</span><span class=def id=operation-formData>
   [NewObject] Promise&lt;<a href='FormData.html'>FormData</a>&gt; <strong>formData</strong>();</span><span class=def id=operation-json>
   [NewObject] Promise&lt;<span class=primitive>any</span>&gt; <strong>json</strong>();</span><span class=def id=operation-text>
-  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span>
+  [NewObject] Promise&lt;<span class=primitive>USVString</span>&gt; <strong>text</strong>();</span><span class=def id=attribute-targetAddressSpace>
+  readonly attribute <a href='IPAddressSpace.html'>IPAddressSpace</a> <strong>targetAddressSpace</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -97,6 +106,7 @@ interface <strong>Request</strong> {<span class=def id=constructor-RequestInfo-R
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;">Background Fetch</a> refers to <code>Request</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;private-network-access&#x2F;">Private Network Access</a> refers to <code>Request</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers&#x2F;">Service Workers Nightly</a> refers to <code>Request</code></li>
 
   </ul></section>
