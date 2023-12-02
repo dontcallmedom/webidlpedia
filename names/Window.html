@@ -81,7 +81,7 @@ partial interface <strong>Window</strong> {<span class=def id=operation-captureE
   [Replaceable, SameObject] readonly attribute <a href='External.html'>External</a> <strong>external</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;#dom-window-orientation">Compatibility Standard</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-orientation>
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span>
@@ -90,6 +90,13 @@ partial interface <strong>Window</strong> {<span class=def id=operation-captureE
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
+</span>};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;#title">Iframe credentialless</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-credentialless><span class="comment">
+  &#x2F;&#x2F; ...
+  </span>readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class="comment">
+  &#x2F;&#x2F; ...
 </span>};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#title">Cookie Store API</a><pre class=webidl><code><span class=def>
 
@@ -408,7 +415,9 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def id=attribute-orientation>
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
-  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-cookieStore>
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-credentialless><span class="comment">
+  &#x2F;&#x2F; ...
+  </span>readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
       <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-documentPictureInPicture>
@@ -505,6 +514,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;">Iframe credentialless</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;document-picture-in-picture&#x2F;">Document Picture-in-Picture Specification</a> refers to <code>Window</code></li>
