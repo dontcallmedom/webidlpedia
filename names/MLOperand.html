@@ -11,9 +11,22 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
-interface <strong>MLOperand</strong> {};</span></code></pre>
+interface <strong>MLOperand</strong> {};</span><span class=def>
+
+partial interface <strong>MLOperand</strong> {<span class=def id=operation-dataType>
+  <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>();</span>
+};</span><span class=def>
+
+partial interface <strong>MLOperand</strong> {<span class=def id=operation-shape>
+  sequence&lt;<span class=primitive>unsigned long</span>&gt; <strong>shape</strong>();</span>
+};</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[SecureContext, Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>MLOperand</strong> {<span class=def id=operation-dataType>
+  <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>();</span><span class=def id=operation-shape>
+  sequence&lt;<span class=primitive>unsigned long</span>&gt; <strong>shape</strong>();</span>};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>MLOperand</code></h3>
@@ -22,7 +35,10 @@ interface <strong>MLOperand</strong> {};</span></code></pre>
     <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-input-DOMString-MLOperandDescriptor>.input()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-constant-MLOperandDescriptor-MLBufferView>.constant()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-constant-double-MLOperandDataType>.constant()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-argMin-MLOperand-MLArgMinMaxOptions>.argMin()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-argMax-MLOperand-MLArgMinMaxOptions>.argMax()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>.batchNormalization()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-cast-MLOperand-MLOperandDataType>.cast()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-clamp-MLOperand-MLClampOptions>.clamp()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-concat-MLOperand-unsigned long>.concat()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>.conv2d()</a></code></li>
@@ -34,22 +50,35 @@ interface <strong>MLOperand</strong> {};</span></code></pre>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-max-MLOperand-MLOperand>.max()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-min-MLOperand-MLOperand>.min()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-pow-MLOperand-MLOperand>.pow()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-equal-MLOperand-MLOperand>.equal()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-greater-MLOperand-MLOperand>.greater()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-greaterOrEqual-MLOperand-MLOperand>.greaterOrEqual()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-lesser-MLOperand-MLOperand>.lesser()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-lesserOrEqual-MLOperand-MLOperand>.lesserOrEqual()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-not-MLOperand>.not()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-abs-MLOperand>.abs()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-ceil-MLOperand>.ceil()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-cos-MLOperand>.cos()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-erf-MLOperand>.erf()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-exp-MLOperand>.exp()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-floor-MLOperand>.floor()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-identity-MLOperand>.identity()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-log-MLOperand>.log()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-neg-MLOperand>.neg()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-reciprocal-MLOperand>.reciprocal()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sin-MLOperand>.sin()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sqrt-MLOperand>.sqrt()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-tan-MLOperand>.tan()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-elu-MLOperand-MLEluOptions>.elu()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-expand-MLOperand-unsigned long>.expand()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gather-MLOperand-MLOperand-MLGatherOptions>.gather()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gemm-MLOperand-MLOperand-MLGemmOptions>.gemm()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>.gru()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gruCell-MLOperand-MLOperand-MLOperand-MLOperand-unsigned long-MLGruCellOptions>.gruCell()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-hardSigmoid-MLOperand-MLHardSigmoidOptions>.hardSigmoid()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-hardSwish-MLOperand>.hardSwish()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-instanceNormalization-MLOperand-MLInstanceNormalizationOptions>.instanceNormalization()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-layerNormalization-MLOperand-MLLayerNormalizationOptions>.layerNormalization()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-leakyRelu-MLOperand-MLLeakyReluOptions>.leakyRelu()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-linear-MLOperand-MLLinearOptions>.linear()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-lstm-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLLstmOptions>.lstm()</a></code></li>
@@ -79,9 +108,10 @@ interface <strong>MLOperand</strong> {};</span></code></pre>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-softplus-MLOperand-MLSoftplusOptions>.softplus()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-softsign-MLOperand>.softsign()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>.split()</a></code></li>
-<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-squeeze-MLOperand-MLSqueezeOptions>.squeeze()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-tanh-MLOperand>.tanh()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-transpose-MLOperand-MLTransposeOptions>.transpose()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-triangular-MLOperand-MLTriangularOptions>.triangular()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-where-MLOperand-MLOperand-MLOperand>.where()</a></code></li>
 
   </ul>
 </section>
@@ -97,6 +127,7 @@ interface <strong>MLOperand</strong> {};</span></code></pre>
 <li><code><a href="MLGruCellOptions.html">MLGruCellOptions</a></code></li>
 <li><code><a href="MLGruOptions.html">MLGruOptions</a></code></li>
 <li><code><a href="MLInstanceNormalizationOptions.html">MLInstanceNormalizationOptions</a></code></li>
+<li><code><a href="MLLayerNormalizationOptions.html">MLLayerNormalizationOptions</a></code></li>
 <li><code><a href="MLLstmCellOptions.html">MLLstmCellOptions</a></code></li>
 <li><code><a href="MLLstmOptions.html">MLLstmOptions</a></code></li>
 
