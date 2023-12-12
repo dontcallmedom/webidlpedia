@@ -11,12 +11,16 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>]
-interface <strong>RTCRtpScriptTransformer</strong> {<span class=def id=attribute-readable>
-    readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def id=attribute-writable>
-    readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;</span><span class=def id=attribute-options>
-    readonly attribute <span class=primitive>any</span> <strong>options</strong>;</span><span class=def id=operation-generateKeyFrame-DOMString>
+interface <strong>RTCRtpScriptTransformer</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-readable><span class="comment">
+    &#x2F;&#x2F; Attributes and methods related to the transformer source
+    </span>readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def id=operation-generateKeyFrame-DOMString>
     Promise&lt;<span class=primitive>unsigned long long</span>&gt; <strong>generateKeyFrame</strong>(optional <span class=primitive>DOMString</span> <strong>rid</strong>);</span><span class=def id=operation-sendKeyFrameRequest>
-    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendKeyFrameRequest</strong>();</span>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendKeyFrameRequest</strong>();</span><span class=def id=attribute-writable><span class="comment">
+    &#x2F;&#x2F; Attributes and methods related to the transformer sink
+    </span>readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;</span><span class=def id=attribute-onkeyframerequest>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onkeyframerequest</strong>;</span><span class=def id=attribute-options><span class="comment">
+    &#x2F;&#x2F; Attributes for configuring the Javascript code
+    </span>readonly attribute <span class=primitive>any</span> <strong>options</strong>;</span>
 };</span></code></pre>
   
   
