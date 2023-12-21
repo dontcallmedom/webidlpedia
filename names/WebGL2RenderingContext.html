@@ -395,7 +395,8 @@ interface <strong>WebGL2RenderingContext</strong>
     const <a href='GLenum.html'>GLenum</a> <strong>RENDERBUFFER</strong>                   &#x3D; 0x8D41;</span><span class=def id=const-RGBA4>
 
     const <a href='GLenum.html'>GLenum</a> <strong>RGBA4</strong>                          &#x3D; 0x8056;</span><span class=def id=const-RGB5_A1>
-    const <a href='GLenum.html'>GLenum</a> <strong>RGB5_A1</strong>                        &#x3D; 0x8057;</span><span class=def id=const-RGB565>
+    const <a href='GLenum.html'>GLenum</a> <strong>RGB5_A1</strong>                        &#x3D; 0x8057;</span><span class=def id=const-RGBA8>
+    const <a href='GLenum.html'>GLenum</a> <strong>RGBA8</strong>                          &#x3D; 0x8058;</span><span class=def id=const-RGB565>
     const <a href='GLenum.html'>GLenum</a> <strong>RGB565</strong>                         &#x3D; 0x8D62;</span><span class=def id=const-DEPTH_COMPONENT16>
     const <a href='GLenum.html'>GLenum</a> <strong>DEPTH_COMPONENT16</strong>              &#x3D; 0x81A5;</span><span class=def id=const-STENCIL_INDEX8>
     const <a href='GLenum.html'>GLenum</a> <strong>STENCIL_INDEX8</strong>                 &#x3D; 0x8D48;</span><span class=def id=const-DEPTH_STENCIL>
@@ -444,7 +445,8 @@ interface <strong>WebGL2RenderingContext</strong>
 
     readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def id=attribute-drawingBufferWidth>
     readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferWidth</strong>;</span><span class=def id=attribute-drawingBufferHeight>
-    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferHeight</strong>;</span><span class=def id=attribute-drawingBufferColorSpace>
+    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferHeight</strong>;</span><span class=def id=attribute-drawingBufferFormat>
+    readonly attribute <a href='GLenum.html'>GLenum</a> <strong>drawingBufferFormat</strong>;</span><span class=def id=attribute-drawingBufferColorSpace>
     attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>drawingBufferColorSpace</strong>;</span><span class=def id=attribute-unpackColorSpace>
     attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>unpackColorSpace</strong>;</span><span class=def id=operation-getContextAttributes>
 
@@ -452,7 +454,9 @@ interface <strong>WebGL2RenderingContext</strong>
     [WebGLHandlesContextLoss] <span class=primitive>boolean</span> <strong>isContextLost</strong>();</span><span class=def id=operation-getSupportedExtensions>
 
     sequence&lt;<span class=primitive>DOMString</span>&gt;? <strong>getSupportedExtensions</strong>();</span><span class=def id=operation-getExtension-DOMString>
-    <span class=primitive>object</span>? <strong>getExtension</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-activeTexture-GLenum>
+    <span class=primitive>object</span>? <strong>getExtension</strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-drawingBufferStorage-GLenum-unsigned long-unsigned long>
+
+    <span class=primitive>undefined</span> <strong>drawingBufferStorage</strong>(<a href='GLenum.html'>GLenum</a> <strong>sizedFormat</strong>, <span class=primitive>unsigned long</span> <strong>width</strong>, <span class=primitive>unsigned long</span> <strong>height</strong>);</span><span class=def id=operation-activeTexture-GLenum>
 
     <span class=primitive>undefined</span> <strong>activeTexture</strong>(<a href='GLenum.html'>GLenum</a> <strong>texture</strong>);</span><span class=def id=operation-attachShader-WebGLProgram-WebGLShader>
     <span class=primitive>undefined</span> <strong>attachShader</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <a href='WebGLShader.html'>WebGLShader</a> <strong>shader</strong>);</span><span class=def id=operation-bindAttribLocation-WebGLProgram-GLuint-DOMString>
@@ -620,8 +624,7 @@ interface <strong>WebGL2RenderingContext</strong>
   const <a href='GLenum.html'>GLenum</a> <strong>DEPTH</strong>                                         &#x3D; 0x1801;</span><span class=def id=const-STENCIL>
   const <a href='GLenum.html'>GLenum</a> <strong>STENCIL</strong>                                       &#x3D; 0x1802;</span><span class=def id=const-RED>
   const <a href='GLenum.html'>GLenum</a> <strong>RED</strong>                                           &#x3D; 0x1903;</span><span class=def id=const-RGB8>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGB8</strong>                                          &#x3D; 0x8051;</span><span class=def id=const-RGBA8>
-  const <a href='GLenum.html'>GLenum</a> <strong>RGBA8</strong>                                         &#x3D; 0x8058;</span><span class=def id=const-RGB10_A2>
+  const <a href='GLenum.html'>GLenum</a> <strong>RGB8</strong>                                          &#x3D; 0x8051;</span><span class=def id=const-RGB10_A2>
   const <a href='GLenum.html'>GLenum</a> <strong>RGB10_A2</strong>                                      &#x3D; 0x8059;</span><span class=def id=const-TEXTURE_BINDING_3D>
   const <a href='GLenum.html'>GLenum</a> <strong>TEXTURE_BINDING_3D</strong>                            &#x3D; 0x806A;</span><span class=def id=const-UNPACK_SKIP_IMAGES>
   const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_SKIP_IMAGES</strong>                            &#x3D; 0x806D;</span><span class=def id=const-UNPACK_IMAGE_HEIGHT>
