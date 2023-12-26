@@ -30,18 +30,15 @@ interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadow
   <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def id=operation-reportValidity>
   <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def id=attribute-labels>
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span>
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def id=attribute-states><span class="comment">
+
+  &#x2F;&#x2F; Custom state pseudo-class
+  </span>[SameObject] readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span>
 };</span><span class=def><span class="comment">
 
 &#x2F;&#x2F; Accessibility semantics
 </span><a href='ElementInternals.html'>ElementInternals</a> includes <a href='ARIAMixin.html'>ARIAMixin</a>;</span></code></pre>
-  <p>This interface is extended in the following specifications:</p>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;custom-state-pseudo-class&#x2F;#exposing">Custom State Pseudo Class</a><pre class=webidl><code><span class=def>partial interface <strong>ElementInternals</strong> {<span class=def id=attribute-states>
-  readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span>
-};</span></code></pre></li>
-
-  </ul>
+  
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -64,7 +61,10 @@ interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadow
   <span class=primitive>boolean</span> <strong>checkValidity</strong>();</span><span class=def id=operation-reportValidity>
   <span class=primitive>boolean</span> <strong>reportValidity</strong>();</span><span class=def id=attribute-labels>
 
-  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def id=attribute-role>
+  readonly attribute <a href='NodeList.html'>NodeList</a> <strong>labels</strong>;</span><span class=def id=attribute-states><span class="comment">
+
+  &#x2F;&#x2F; Custom state pseudo-class
+  </span>[SameObject] readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span><span class=def id=attribute-role>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>role</strong>;</span><span class=def id=attribute-ariaActiveDescendantElement>
   [CEReactions] attribute <a href='Element.html'>Element</a>? <strong>ariaActiveDescendantElement</strong>;</span><span class=def id=attribute-ariaAtomic>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaAtomic</strong>;</span><span class=def id=attribute-ariaAutoComplete>
@@ -114,8 +114,7 @@ interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadow
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaValueMax</strong>;</span><span class=def id=attribute-ariaValueMin>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaValueMin</strong>;</span><span class=def id=attribute-ariaValueNow>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaValueNow</strong>;</span><span class=def id=attribute-ariaValueText>
-  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaValueText</strong>;</span><span class=def id=attribute-states>
-  readonly attribute <a href='CustomStateSet.html'>CustomStateSet</a> <strong>states</strong>;</span>
+  [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>ariaValueText</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -134,8 +133,4 @@ interface <strong>ElementInternals</strong> {<span class=def id=attribute-shadow
 
   </ul>
 </section>
-  <section><h3>Referring specifications</h3>
-  <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;custom-state-pseudo-class&#x2F;">Custom State Pseudo Class</a> refers to <code>ElementInternals</code></li>
-
-  </ul></section>
+  
