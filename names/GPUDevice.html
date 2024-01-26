@@ -10,7 +10,7 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#gpudevice">WebGPU</a> defines <code>GPUDevice</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>, <a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>), SecureContext]
 interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-features>
     [SameObject] readonly attribute <a href='GPUSupportedFeatures.html'>GPUSupportedFeatures</a> <strong>features</strong>;</span><span class=def id=attribute-limits>
     [SameObject] readonly attribute <a href='GPUSupportedLimits.html'>GPUSupportedLimits</a> <strong>limits</strong>;</span><span class=def id=attribute-queue>
@@ -51,13 +51,13 @@ partial interface <strong>GPUDevice</strong> {<span class=def id=operation-pushE
 };</span><span class=def>
 
 partial interface <strong>GPUDevice</strong> {<span class=def id=attribute-onuncapturederror>
-    [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+    [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>, <a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>)]
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), SecureContext]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>, <a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>), SecureContext]
 interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-features>
     [SameObject] readonly attribute <a href='GPUSupportedFeatures.html'>GPUSupportedFeatures</a> <strong>features</strong>;</span><span class=def id=attribute-limits>
     [SameObject] readonly attribute <a href='GPUSupportedLimits.html'>GPUSupportedLimits</a> <strong>limits</strong>;</span><span class=def id=attribute-queue>
@@ -88,7 +88,7 @@ interface <strong>GPUDevice</strong> : <a href='EventTarget.html'>EventTarget</a
     readonly attribute Promise&lt;<a href='GPUDeviceLostInfo.html'>GPUDeviceLostInfo</a>&gt; <strong>lost</strong>;</span><span class=def id=operation-pushErrorScope-GPUErrorFilter>
     <span class=primitive>undefined</span> <strong>pushErrorScope</strong>(<a href='GPUErrorFilter.html'>GPUErrorFilter</a> <strong>filter</strong>);</span><span class=def id=operation-popErrorScope>
     Promise&lt;<a href='GPUError.html'>GPUError</a>?&gt; <strong>popErrorScope</strong>();</span><span class=def id=attribute-onuncapturederror>
-    [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+    [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>, <a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>)]
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onuncapturederror</strong>;</span><span class=def id=attribute-label>
     attribute <span class=primitive>USVString</span> <strong>label</strong>;</span>
 };</span></code></pre></details>
