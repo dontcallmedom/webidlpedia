@@ -112,6 +112,11 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-creat
 [SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-updateAdInterestGroups>
   <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span>
+};</span><span class=def>
+
+[SecureContext]
+partial interface <strong>Navigator</strong> {<span class=def id=attribute-protectedAudience>
+  [SameObject] readonly attribute <a href='ProtectedAudience.html'>ProtectedAudience</a> <strong>protectedAudience</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ua-client-hints&#x2F;">User-Agent Client Hints</a><pre class=webidl><code><span class=def>
 
@@ -313,7 +318,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
       <span class=primitive>USVString</span> <strong>owner</strong>, optional sequence&lt;<span class=primitive>USVString</span>&gt; <strong>interestGroupsToKeep</strong> &#x3D; []);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
   Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=operation-createAuctionNonce>
   Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>createAuctionNonce</strong>();</span><span class=def id=operation-updateAdInterestGroups>
-  <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span><span class=def id=attribute-userAgentData>
+  <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span><span class=def id=attribute-protectedAudience>
+  [SameObject] readonly attribute <a href='ProtectedAudience.html'>ProtectedAudience</a> <strong>protectedAudience</strong>;</span><span class=def id=attribute-userAgentData>
   [SecureContext] readonly attribute <a href='NavigatorUAData.html'>NavigatorUAData</a> <strong>userAgentData</strong>;</span><span class=def id=attribute-managed>
   [SecureContext, SameObject]
   readonly attribute <a href='NavigatorManagedData.html'>NavigatorManagedData</a> <strong>managed</strong>;</span><span class=def id=attribute-hid>
