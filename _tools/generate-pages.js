@@ -173,16 +173,7 @@ ${htmlList(Object.keys(globals).map(g => htmlLink(g, g + ".html")))}`;
 }
 
 function idlDfnLink(name, spec) {
-  let url = spec.url;
-  const type = (spec.idlparsed.idlNames[name] || {}).type;
-  // Look for anchor among definitions to give more specific link if possible
-  if (spec.dfns && type) {
-    const dfn = spec.dfns.find(dfn => dfn.type === type.replace("callback interface", "callback") && dfn.linkingText.includes(name));
-    if (dfn) {
-      url = dfn.href;
-    }
-  }
-  return url;
+  return spec.idlparsed.idlNames[name]?.href || spec.url;
 }
 
 function extendedIdlDfnLink(name, spec) {
@@ -200,6 +191,18 @@ function extendedIdlDfnLink(name, spec) {
   return url;
 }
 
+function decorateWithHref(sourceArr) {
+  return (m, i) => {
+    return new Proxy(m, {
+      get(target, propKey, receiver) {
+	if (propKey === "href") return sourceArr[i].href;
+	return Reflect.get(...arguments);
+      }
+    });
+  };
+}
+
+
 function interfaceDetails(data, name, used_by, obtainable_from, templates) {
   let type;
   let mainDefItems = [];
@@ -209,7 +212,6 @@ function interfaceDetails(data, name, used_by, obtainable_from, templates) {
   let needsConsolidation = false;
   let namespace;
   let displayName = name;
-
   data.filter(hasIdlDef)
     .filter(spec => spec.idlparsed.idlNames[name])
     .forEach(spec => {
@@ -221,6 +223,7 @@ function interfaceDetails(data, name, used_by, obtainable_from, templates) {
       const mainIdlDef = idlparsed.find(i => !i.partial && !i.includes);
       if (mainIdlDef) {
         namespace = mainIdlDef.extAttrs?.find(ea => ea.name === "LegacyNamespace")?.rhs?.value || undefined;
+	mainIdlDef.members = mainIdlDef.members?.map(decorateWithHref(spec.idlparsed.idlNames[name].members));
         displayName = namespace ? namespace + '.' + name : displayName;
         consolidatedIdlDef = new Proxy(mainIdlDef, {
           get(target, propKey, receiver) {
@@ -447,7 +450,7 @@ function extAttrUsage(data) {
       // TODO missing extended attributes on types (?)
     }
   }
-  console.log(JSON.stringify(extAttr, null, 2));
+
   const extAttrIdx = extAttr
         .reduce((a,b) => {a[b.extAttr] = a[b.extAttr] ? a[b.extAttr].concat(b) : [b]; return a;}, {});
   let list = [];
@@ -638,7 +641,12 @@ fs.readFile("./webref/ed/index.json", "utf-8")
           let id= generateIdlMemberId(data);
           return html`<span class=def${id ? html` id=${id}` : ''}>${content}</span>`;
         },
-        name: name => html`<strong>${name}</strong>`,
+        name: (name, {data}) => {
+	  if (data.href) {
+	    return html`<strong><a href="${data.href}">${name}</a></strong>`;
+	  }
+	  return html`<strong>${name}</strong>` ;
+	},
         nameless: kw => html`<strong>${kw}</strong>`,
         reference: (name, _, context) => {
           // distinguish case where we're dealing with realm types rather than IDL types
