@@ -14,32 +14,32 @@ base: ../
 interface <strong>FileReader</strong>: <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor>
   <strong>constructor</strong>();</span><span class=def id=operation-readAsArrayBuffer-Blob><span class="comment">
   &#x2F;&#x2F; async read methods
-  </span><span class=primitive>undefined</span> <strong>readAsArrayBuffer</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-readAsBinaryString-Blob>
-  <span class=primitive>undefined</span> <strong>readAsBinaryString</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-readAsText-Blob-DOMString>
-  <span class=primitive>undefined</span> <strong>readAsText</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span class=primitive>DOMString</span> <strong>encoding</strong>);</span><span class=def id=operation-readAsDataURL-Blob>
-  <span class=primitive>undefined</span> <strong>readAsDataURL</strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-abort>
+  </span><span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-readAsArrayBuffer">readAsArrayBuffer</a></strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-readAsBinaryString-Blob>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-readAsBinaryString">readAsBinaryString</a></strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-readAsText-Blob-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-readAsText">readAsText</a></strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>, optional <span class=primitive>DOMString</span> <strong>encoding</strong>);</span><span class=def id=operation-readAsDataURL-Blob>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-readAsDataURL">readAsDataURL</a></strong>(<a href='Blob.html'>Blob</a> <strong>blob</strong>);</span><span class=def id=operation-abort>
 
-  <span class=primitive>undefined</span> <strong>abort</strong>();</span><span class=def id=const-EMPTY><span class="comment">
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-abort">abort</a></strong>();</span><span class=def id=const-EMPTY><span class="comment">
 
   &#x2F;&#x2F; states
-  </span>const <span class=primitive>unsigned short</span> <strong>EMPTY</strong> &#x3D; 0;</span><span class=def id=const-LOADING>
-  const <span class=primitive>unsigned short</span> <strong>LOADING</strong> &#x3D; 1;</span><span class=def id=const-DONE>
-  const <span class=primitive>unsigned short</span> <strong>DONE</strong> &#x3D; 2;</span><span class=def id=attribute-readyState>
+  </span>const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-empty">EMPTY</a></strong> &#x3D; 0;</span><span class=def id=const-LOADING>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-loading">LOADING</a></strong> &#x3D; 1;</span><span class=def id=const-DONE>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-done">DONE</a></strong> &#x3D; 2;</span><span class=def id=attribute-readyState>
 
-  readonly attribute <span class=primitive>unsigned short</span> <strong>readyState</strong>;</span><span class=def id=attribute-result><span class="comment">
+  readonly attribute <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-readystate">readyState</a></strong>;</span><span class=def id=attribute-result><span class="comment">
 
   &#x2F;&#x2F; File or Blob data
-  </span>readonly attribute (<span class=primitive>DOMString</span> or <a href='ArrayBuffer.html'>ArrayBuffer</a>)? <strong>result</strong>;</span><span class=def id=attribute-error>
+  </span>readonly attribute (<span class=primitive>DOMString</span> or <a href='ArrayBuffer.html'>ArrayBuffer</a>)? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-result">result</a></strong>;</span><span class=def id=attribute-error>
 
-  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong>error</strong>;</span><span class=def id=attribute-onloadstart><span class="comment">
+  readonly attribute <a href='DOMException.html'>DOMException</a>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dom-filereader-error">error</a></strong>;</span><span class=def id=attribute-onloadstart><span class="comment">
 
   &#x2F;&#x2F; event handler content attributes
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadstart</strong>;</span><span class=def id=attribute-onprogress>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprogress</strong>;</span><span class=def id=attribute-onload>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onload</strong>;</span><span class=def id=attribute-onabort>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onabort</strong>;</span><span class=def id=attribute-onerror>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span><span class=def id=attribute-onloadend>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onloadend</strong>;</span>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onloadstart">onloadstart</a></strong>;</span><span class=def id=attribute-onprogress>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onprogress">onprogress</a></strong>;</span><span class=def id=attribute-onload>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onload">onload</a></strong>;</span><span class=def id=attribute-onabort>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onabort">onabort</a></strong>;</span><span class=def id=attribute-onerror>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onerror">onerror</a></strong>;</span><span class=def id=attribute-onloadend>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;FileAPI&#x2F;#dfn-onloadend">onloadend</a></strong>;</span>
 };</span></code></pre>
   
   

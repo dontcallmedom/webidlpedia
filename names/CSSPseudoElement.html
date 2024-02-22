@@ -10,10 +10,10 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#csspseudoelement">CSS Pseudo-Elements Module Level 4</a> defines <code>CSSPseudoElement</code></p>
 <pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>CSSPseudoElement</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-type>
-    readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>;</span><span class=def id=attribute-element>
-    readonly attribute <a href='Element.html'>Element</a> <strong>element</strong>;</span><span class=def id=attribute-parent>
-    readonly attribute (<a href='Element.html'>Element</a> or <a href='CSSPseudoElement.html'>CSSPseudoElement</a>) <strong>parent</strong>;</span><span class=def id=operation-pseudo-CSSOMString>
-    <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong>pseudo</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);</span>
+    readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-type">type</a></strong>;</span><span class=def id=attribute-element>
+    readonly attribute <a href='Element.html'>Element</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-element">element</a></strong>;</span><span class=def id=attribute-parent>
+    readonly attribute (<a href='Element.html'>Element</a> or <a href='CSSPseudoElement.html'>CSSPseudoElement</a>) <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-parent">parent</a></strong>;</span><span class=def id=operation-pseudo-CSSOMString>
+    <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-pseudo">pseudo</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -23,10 +23,10 @@ interface <strong>CSSPseudoElement</strong> : <a href='EventTarget.html'>EventTa
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>CSSPseudoElement</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=attribute-type>
-    readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>;</span><span class=def id=attribute-element>
-    readonly attribute <a href='Element.html'>Element</a> <strong>element</strong>;</span><span class=def id=attribute-parent>
-    readonly attribute (<a href='Element.html'>Element</a> or <a href='CSSPseudoElement.html'>CSSPseudoElement</a>) <strong>parent</strong>;</span><span class=def id=operation-pseudo-CSSOMString>
-    <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong>pseudo</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
+    readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-type">type</a></strong>;</span><span class=def id=attribute-element>
+    readonly attribute <a href='Element.html'>Element</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-element">element</a></strong>;</span><span class=def id=attribute-parent>
+    readonly attribute (<a href='Element.html'>Element</a> or <a href='CSSPseudoElement.html'>CSSPseudoElement</a>) <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-parent">parent</a></strong>;</span><span class=def id=operation-pseudo-CSSOMString>
+    <a href='CSSPseudoElement.html'>CSSPseudoElement</a>? <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-pseudo-4&#x2F;#dom-csspseudoelement-pseudo">pseudo</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>);</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
   sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertQuadFromNode-DOMQuadInit-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertPointFromNode-DOMPointInit-GeometryNode-ConvertCoordinateOptions>

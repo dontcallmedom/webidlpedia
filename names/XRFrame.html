@@ -11,11 +11,11 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRFrame</strong> {<span class=def id=attribute-session>
-  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong>session</strong>;</span><span class=def id=attribute-predictedDisplayTime>
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>predictedDisplayTime</strong>;</span><span class=def id=operation-getViewerPose-XRReferenceSpace>
+  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-session">session</a></strong>;</span><span class=def id=attribute-predictedDisplayTime>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-predicteddisplaytime">predictedDisplayTime</a></strong>;</span><span class=def id=operation-getViewerPose-XRReferenceSpace>
 
-  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);</span><span class=def id=operation-getPose-XRSpace-XRSpace>
-  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span>
+  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-getviewerpose">getViewerPose</a></strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);</span><span class=def id=operation-getPose-XRSpace-XRSpace>
+  <a href='XRPose.html'>XRPose</a>? <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-getpose">getPose</a></strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -67,11 +67,11 @@ partial interface <strong>XRFrame</strong> {<span class=def id=operation-getLigh
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [SecureContext, Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] interface <strong>XRFrame</strong> {<span class=def id=attribute-session>
-  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong>session</strong>;</span><span class=def id=attribute-predictedDisplayTime>
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>predictedDisplayTime</strong>;</span><span class=def id=operation-getViewerPose-XRReferenceSpace>
+  [SameObject] readonly attribute <a href='XRSession.html'>XRSession</a> <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-session">session</a></strong>;</span><span class=def id=attribute-predictedDisplayTime>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-predicteddisplaytime">predictedDisplayTime</a></strong>;</span><span class=def id=operation-getViewerPose-XRReferenceSpace>
 
-  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong>getViewerPose</strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);</span><span class=def id=operation-getPose-XRSpace-XRSpace>
-  <a href='XRPose.html'>XRPose</a>? <strong>getPose</strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def id=operation-createAnchor-XRRigidTransform-XRSpace>
+  <a href='XRViewerPose.html'>XRViewerPose</a>? <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-getviewerpose">getViewerPose</a></strong>(<a href='XRReferenceSpace.html'>XRReferenceSpace</a> <strong>referenceSpace</strong>);</span><span class=def id=operation-getPose-XRSpace-XRSpace>
+  <a href='XRPose.html'>XRPose</a>? <strong><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;webxr&#x2F;#dom-xrframe-getpose">getPose</a></strong>(<a href='XRSpace.html'>XRSpace</a> <strong>space</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>baseSpace</strong>);</span><span class=def id=operation-createAnchor-XRRigidTransform-XRSpace>
   Promise&lt;<a href='XRAnchor.html'>XRAnchor</a>&gt; <strong>createAnchor</strong>(<a href='XRRigidTransform.html'>XRRigidTransform</a> <strong>pose</strong>, <a href='XRSpace.html'>XRSpace</a> <strong>space</strong>);</span><span class=def id=attribute-trackedAnchors>
   [SameObject] readonly attribute <a href='XRAnchorSet.html'>XRAnchorSet</a> <strong>trackedAnchors</strong>;</span><span class=def id=attribute-detectedPlanes>
   readonly attribute <a href='XRPlaneSet.html'>XRPlaneSet</a> <strong>detectedPlanes</strong>;</span><span class=def id=attribute-detectedMeshes>

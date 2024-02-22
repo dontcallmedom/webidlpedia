@@ -12,33 +12,33 @@ base: ../
 interface <strong>Event</strong> {<span class=def id=constructor-DOMString-EventInit>
   <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='EventInit.html'>EventInit</a> <strong>eventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-type>
 
-  readonly attribute <span class=primitive>DOMString</span> <strong>type</strong>;</span><span class=def id=attribute-target>
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>target</strong>;</span><span class=def id=attribute-srcElement>
-  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>srcElement</strong>;</span><span class=def id=attribute-currentTarget><span class="comment"> &#x2F;&#x2F; legacy
-  </span>readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong>currentTarget</strong>;</span><span class=def id=operation-composedPath>
-  sequence&lt;<a href='EventTarget.html'>EventTarget</a>&gt; <strong>composedPath</strong>();</span><span class=def id=const-NONE>
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-type">type</a></strong>;</span><span class=def id=attribute-target>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-target">target</a></strong>;</span><span class=def id=attribute-srcElement>
+  readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-srcelement">srcElement</a></strong>;</span><span class=def id=attribute-currentTarget><span class="comment"> &#x2F;&#x2F; legacy
+  </span>readonly attribute <a href='EventTarget.html'>EventTarget</a>? <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-currenttarget">currentTarget</a></strong>;</span><span class=def id=operation-composedPath>
+  sequence&lt;<a href='EventTarget.html'>EventTarget</a>&gt; <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-composedpath">composedPath</a></strong>();</span><span class=def id=const-NONE>
 
-  const <span class=primitive>unsigned short</span> <strong>NONE</strong> &#x3D; 0;</span><span class=def id=const-CAPTURING_PHASE>
-  const <span class=primitive>unsigned short</span> <strong>CAPTURING_PHASE</strong> &#x3D; 1;</span><span class=def id=const-AT_TARGET>
-  const <span class=primitive>unsigned short</span> <strong>AT_TARGET</strong> &#x3D; 2;</span><span class=def id=const-BUBBLING_PHASE>
-  const <span class=primitive>unsigned short</span> <strong>BUBBLING_PHASE</strong> &#x3D; 3;</span><span class=def id=attribute-eventPhase>
-  readonly attribute <span class=primitive>unsigned short</span> <strong>eventPhase</strong>;</span><span class=def id=operation-stopPropagation>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-none">NONE</a></strong> &#x3D; 0;</span><span class=def id=const-CAPTURING_PHASE>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-capturing_phase">CAPTURING_PHASE</a></strong> &#x3D; 1;</span><span class=def id=const-AT_TARGET>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-at_target">AT_TARGET</a></strong> &#x3D; 2;</span><span class=def id=const-BUBBLING_PHASE>
+  const <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-bubbling_phase">BUBBLING_PHASE</a></strong> &#x3D; 3;</span><span class=def id=attribute-eventPhase>
+  readonly attribute <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-eventphase">eventPhase</a></strong>;</span><span class=def id=operation-stopPropagation>
 
-  <span class=primitive>undefined</span> <strong>stopPropagation</strong>();</span><span class=def id=attribute-cancelBubble>
-           attribute <span class=primitive>boolean</span> <strong>cancelBubble</strong>;</span><span class=def id=operation-stopImmediatePropagation><span class="comment"> &#x2F;&#x2F; legacy alias of .stopPropagation()
-  </span><span class=primitive>undefined</span> <strong>stopImmediatePropagation</strong>();</span><span class=def id=attribute-bubbles>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-stoppropagation">stopPropagation</a></strong>();</span><span class=def id=attribute-cancelBubble>
+           attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-cancelbubble">cancelBubble</a></strong>;</span><span class=def id=operation-stopImmediatePropagation><span class="comment"> &#x2F;&#x2F; legacy alias of .stopPropagation()
+  </span><span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-stopimmediatepropagation">stopImmediatePropagation</a></strong>();</span><span class=def id=attribute-bubbles>
 
-  readonly attribute <span class=primitive>boolean</span> <strong>bubbles</strong>;</span><span class=def id=attribute-cancelable>
-  readonly attribute <span class=primitive>boolean</span> <strong>cancelable</strong>;</span><span class=def id=attribute-returnValue>
-           attribute <span class=primitive>boolean</span> <strong>returnValue</strong>;</span><span class=def id=operation-preventDefault><span class="comment">  &#x2F;&#x2F; legacy
-  </span><span class=primitive>undefined</span> <strong>preventDefault</strong>();</span><span class=def id=attribute-defaultPrevented>
-  readonly attribute <span class=primitive>boolean</span> <strong>defaultPrevented</strong>;</span><span class=def id=attribute-composed>
-  readonly attribute <span class=primitive>boolean</span> <strong>composed</strong>;</span><span class=def id=attribute-isTrusted>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-bubbles">bubbles</a></strong>;</span><span class=def id=attribute-cancelable>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-cancelable">cancelable</a></strong>;</span><span class=def id=attribute-returnValue>
+           attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-returnvalue">returnValue</a></strong>;</span><span class=def id=operation-preventDefault><span class="comment">  &#x2F;&#x2F; legacy
+  </span><span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-preventdefault">preventDefault</a></strong>();</span><span class=def id=attribute-defaultPrevented>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-defaultprevented">defaultPrevented</a></strong>;</span><span class=def id=attribute-composed>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-composed">composed</a></strong>;</span><span class=def id=attribute-isTrusted>
 
-  [LegacyUnforgeable] readonly attribute <span class=primitive>boolean</span> <strong>isTrusted</strong>;</span><span class=def id=attribute-timeStamp>
-  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>timeStamp</strong>;</span><span class=def id=operation-initEvent-DOMString-boolean-boolean>
+  [LegacyUnforgeable] readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-istrusted">isTrusted</a></strong>;</span><span class=def id=attribute-timeStamp>
+  readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-timestamp">timeStamp</a></strong>;</span><span class=def id=operation-initEvent-DOMString-boolean-boolean>
 
-  <span class=primitive>undefined</span> <strong>initEvent</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <span class=primitive>boolean</span> <strong>bubbles</strong> &#x3D; false, optional <span class=primitive>boolean</span> <strong>cancelable</strong> &#x3D; false);</span><span class="comment"> &#x2F;&#x2F; legacy
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-event-initevent">initEvent</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <span class=primitive>boolean</span> <strong>bubbles</strong> &#x3D; false, optional <span class=primitive>boolean</span> <strong>cancelable</strong> &#x3D; false);</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre>
   
   
