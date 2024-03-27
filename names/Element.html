@@ -71,18 +71,17 @@ partial interface <strong>Element</strong> {<span class=def id=operation-request
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span>
+partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;element-timing&#x2F;#sec-modifications-DOM">Element Timing API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=attribute-elementTiming>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>
-[SecureContext]
-partial interface <strong>Element</strong> {<span class=def id=operation-setHTML-DOMString-SetHTMLOptions>
-  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code><span class=def>
 
@@ -129,7 +128,8 @@ partial interface <strong>Element</strong> {<span class=def id=operation-getClie
   readonly attribute <span class=primitive>long</span> <strong>clientTop</strong>;</span><span class=def id=attribute-clientLeft>
   readonly attribute <span class=primitive>long</span> <strong>clientLeft</strong>;</span><span class=def id=attribute-clientWidth>
   readonly attribute <span class=primitive>long</span> <strong>clientWidth</strong>;</span><span class=def id=attribute-clientHeight>
-  readonly attribute <span class=primitive>long</span> <strong>clientHeight</strong>;</span>
+  readonly attribute <span class=primitive>long</span> <strong>clientHeight</strong>;</span><span class=def id=attribute-currentCSSZoom>
+  readonly attribute <span class=primitive>double</span> <strong>currentCSSZoom</strong>;</span>
 };</span><span class=def><span class="comment"> &#x2F;&#x2F; like Range
 </span><a href='Element.html'>Element</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;">DOM Parsing and Serialization</a><pre class=webidl><code><span class=def>
@@ -224,10 +224,11 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestFullscreen</strong>(optional <a href='FullscreenOptions.html'>FullscreenOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onfullscreenchange>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-elementTiming>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-setHTML-DOMString-SetHTMLOptions>
-  <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>input</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getSpatialNavigationContainer>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-elementTiming>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>
     <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-pseudo-CSSOMString>
@@ -255,7 +256,8 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   readonly attribute <span class=primitive>long</span> <strong>clientTop</strong>;</span><span class=def id=attribute-clientLeft>
   readonly attribute <span class=primitive>long</span> <strong>clientLeft</strong>;</span><span class=def id=attribute-clientWidth>
   readonly attribute <span class=primitive>long</span> <strong>clientWidth</strong>;</span><span class=def id=attribute-clientHeight>
-  readonly attribute <span class=primitive>long</span> <strong>clientHeight</strong>;</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
+  readonly attribute <span class=primitive>long</span> <strong>clientHeight</strong>;</span><span class=def id=attribute-currentCSSZoom>
+  readonly attribute <span class=primitive>double</span> <strong>currentCSSZoom</strong>;</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
   sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertQuadFromNode-DOMQuadInit-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertPointFromNode-DOMPointInit-GeometryNode-ConvertCoordinateOptions>
@@ -373,7 +375,6 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
 <li><code><a href="Window.html">Window</a><a href=Window.html#attribute-frameElement>.frameElement</a></code></li>
 <li><code><a href="PerformanceElementTiming.html">PerformanceElementTiming</a><a href=PerformanceElementTiming.html#attribute-element>.element</a></code></li>
 <li><code><a href="InkPresenter.html">InkPresenter</a><a href=InkPresenter.html#attribute-presentationArea>.presentationArea</a></code></li>
-<li><code><a href="Sanitizer.html">Sanitizer</a><a href=Sanitizer.html#operation-sanitizeFor-DOMString-DOMString>.sanitizeFor()</a></code></li>
 <li><code><a href="CSSPseudoElement.html">CSSPseudoElement</a><a href=CSSPseudoElement.html#attribute-element>.element</a></code></li>
 <li><code><a href="CSSPseudoElement.html">CSSPseudoElement</a><a href=CSSPseudoElement.html#attribute-parent>.parent</a></code></li>
 <li><code><a href="NamedFlow.html">NamedFlow</a><a href=NamedFlow.html#operation-getRegions>.getRegions()</a></code></li>
@@ -460,7 +461,6 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
 <li><code><a href="RestrictionTarget.html">RestrictionTarget</a></code></li>
 <li><code><a href="SVGElement.html">SVGElement</a></code></li>
 <li><code><a href="SVGSVGElement.html">SVGSVGElement</a></code></li>
-<li><code><a href="Sanitizer.html">Sanitizer</a></code></li>
 <li><code><a href="ScrollTimeline.html">ScrollTimeline</a></code></li>
 <li><code><a href="ScrollTimelineOptions.html">ScrollTimelineOptions</a></code></li>
 <li><code><a href="ShadowAnimation.html">ShadowAnimation</a></code></li>

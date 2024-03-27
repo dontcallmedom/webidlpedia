@@ -82,7 +82,7 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fullsc
 
 [LegacyOverrideBuiltIns]
 partial interface <strong>Document</strong> {<span class=def id=operation-static>
-  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
 
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
@@ -110,9 +110,9 @@ partial interface <strong>Document</strong> {<span class=def id=operation-static
   &#x2F;&#x2F; dynamic markup insertion
   </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
   </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=operation-writeln-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=operation-writeln-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
   </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
@@ -168,6 +168,12 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fgColo
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def id=attribute-onresume>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def id=attribute-wasDiscarded>
     readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;#title">URL Fragment Text Directives</a><pre class=webidl><code><span class=def>
 
@@ -300,7 +306,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-static>
-  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<span class=primitive>DOMString</span> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
 
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
@@ -328,9 +334,9 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   &#x2F;&#x2F; dynamic markup insertion
   </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
   </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=operation-writeln-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<span class=primitive>DOMString</span>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=operation-writeln-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
   </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
@@ -446,7 +452,9 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong>onprerenderingchange</strong>;</span><span class=def id=attribute-onfreeze>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfreeze</strong>;</span><span class=def id=attribute-onresume>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onresume</strong>;</span><span class=def id=attribute-wasDiscarded>
-    readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def id=attribute-fragmentDirective>
+    readonly attribute <span class=primitive>boolean</span> <strong>wasDiscarded</strong>;</span><span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static <a href='Document.html'>Document</a> <strong>parseHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=attribute-fragmentDirective>
     [SameObject] readonly attribute <a href='FragmentDirective.html'>FragmentDirective</a> <strong>fragmentDirective</strong>;</span><span class=def id=operation-hasPrivateToken-USVString>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasPrivateToken</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>);</span><span class=def id=operation-hasRedemptionRecord-USVString>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasRedemptionRecord</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>);</span><span class=def id=attribute-fonts>
@@ -475,21 +483,27 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <section>
 <h3>Methods and attributes that return objects implementing <code>Document</code></h3>
 
-  <ul>
+  <ul class=long>
     <li><code><a href="Document.html">Document</a><a href=Document.html#constructor>()</a></code></li>
 <li><code><a href="Node.html">Node</a><a href=Node.html#attribute-ownerDocument>.ownerDocument</a></code></li>
 <li><code><a href="DOMImplementation.html">DOMImplementation</a><a href=DOMImplementation.html#operation-createHTMLDocument-DOMString>.createHTMLDocument()</a></code></li>
 <li><code><a href="XSLTProcessor.html">XSLTProcessor</a><a href=XSLTProcessor.html#operation-transformToDocument-Node>.transformToDocument()</a></code></li>
 <li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTMLUnsafe()</a></code></li>
 <li><code><a href="Document.html">Document</a><a href=Document.html#operation-open-DOMString-DOMString>.open()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTMLUnsafe__TO_BE_MERGED()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTML()</a></code></li>
 <li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
 <li><code><a href="HTMLIFrameElement.html">HTMLIFrameElement</a><a href=HTMLIFrameElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
 <li><code><a href="HTMLEmbedElement.html">HTMLEmbedElement</a><a href=HTMLEmbedElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
 <li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#attribute-contentDocument>.contentDocument</a></code></li>
 <li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
 <li><code><a href="Window.html">Window</a><a href=Window.html#attribute-document>.document</a></code></li>
-<li><code><a href="DOMParser.html">DOMParser</a><a href=DOMParser.html#operation-parseFromString-DOMString-DOMParserSupportedType>.parseFromString()</a></code></li>
+<li><code><a href="DOMParser.html">DOMParser</a><a href=DOMParser.html#operation-parseFromString-HTMLString-DOMParserSupportedType>.parseFromString()</a></code></li>
 <li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a><a href=HTMLFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTMLUnsafe()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-open-DOMString-DOMString>.open()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTMLUnsafe__TO_BE_MERGED()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-static>.parseHTML()</a></code></li>
 <li><code><a href="IntersectionObserver.html">IntersectionObserver</a><a href=IntersectionObserver.html#attribute-root>.root</a></code></li>
 <li><code><a href="GetSVGDocument.html">GetSVGDocument</a><a href=GetSVGDocument.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
 <li><code><a href="XMLHttpRequest.html">XMLHttpRequest</a><a href=XMLHttpRequest.html#attribute-responseXML>.responseXML</a></code></li>
@@ -503,6 +517,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     <li><code><a href="DOMImplementation.html">DOMImplementation</a></code></li>
 <li><code><a href="DOMParser.html">DOMParser</a></code></li>
 <li><code><a href="Document.html">Document</a></code></li>
+<li><code><a href="Document.html">Document</a></code></li>
 <li><code><a href="GetSVGDocument.html">GetSVGDocument</a></code></li>
 <li><code><a href="HTMLEmbedElement.html">HTMLEmbedElement</a></code></li>
 <li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a></code></li>
@@ -511,7 +526,6 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <li><code><a href="IntersectionObserver.html">IntersectionObserver</a></code></li>
 <li><code><a href="IntersectionObserverInit.html">IntersectionObserverInit</a></code></li>
 <li><code><a href="Node.html">Node</a></code></li>
-<li><code><a href="Sanitizer.html">Sanitizer</a></code></li>
 <li><code><a href="Window.html">Window</a></code></li>
 <li><code><a href="XMLDocument.html">XMLDocument</a></code></li>
 <li><code><a href="XMLHttpRequest.html">XMLHttpRequest</a></code></li>
