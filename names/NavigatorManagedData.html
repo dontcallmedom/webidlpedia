@@ -18,8 +18,34 @@ base: ../
   </span>Promise&lt;record&lt;<span class=primitive>DOMString</span>, <span class=primitive>object</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;managed_config&#x2F;#dom-navigatormanageddata-getmanagedconfiguration">getManagedConfiguration</a></strong>(sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>keys</strong>);</span><span class=def id=attribute-onmanagedconfigurationchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;managed_config&#x2F;#dom-navigatormanageddata-onmanagedconfigurationchange">onmanagedconfigurationchange</a></strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;device_attributes&#x2F;">Device Attributes API</a><pre class=webidl><code><span class=def>partial interface <strong>NavigatorManagedData</strong> {<span class=def id=operation-getAnnotatedAssetId><span class="comment">
+  &#x2F;&#x2F; Device Attributes API.
+  </span>Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getAnnotatedAssetId</strong>();</span><span class=def id=operation-getAnnotatedLocation>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getAnnotatedLocation</strong>();</span><span class=def id=operation-getDirectoryId>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getDirectoryId</strong>();</span><span class=def id=operation-getHostname>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getHostname</strong>();</span><span class=def id=operation-getSerialNumber>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getSerialNumber</strong>();</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[
+  SecureContext,
+  Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>
+] interface <strong>NavigatorManagedData</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-getManagedConfiguration-DOMString><span class="comment">
+  &#x2F;&#x2F; Managed Configuration API.
+  </span>Promise&lt;record&lt;<span class=primitive>DOMString</span>, <span class=primitive>object</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;managed_config&#x2F;#dom-navigatormanageddata-getmanagedconfiguration">getManagedConfiguration</a></strong>(sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>keys</strong>);</span><span class=def id=attribute-onmanagedconfigurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;managed_config&#x2F;#dom-navigatormanageddata-onmanagedconfigurationchange">onmanagedconfigurationchange</a></strong>;</span><span class=def id=operation-getAnnotatedAssetId><span class="comment">
+  &#x2F;&#x2F; Device Attributes API.
+  </span>Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getAnnotatedAssetId</strong>();</span><span class=def id=operation-getAnnotatedLocation>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getAnnotatedLocation</strong>();</span><span class=def id=operation-getDirectoryId>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getDirectoryId</strong>();</span><span class=def id=operation-getHostname>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getHostname</strong>();</span><span class=def id=operation-getSerialNumber>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getSerialNumber</strong>();</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>NavigatorManagedData</code></h3>
@@ -37,4 +63,8 @@ base: ../
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;WebApiDevice&#x2F;device_attributes&#x2F;">Device Attributes API</a> refers to <code>NavigatorManagedData</code></li>
+
+  </ul></section>

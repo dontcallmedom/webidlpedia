@@ -35,7 +35,7 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
-                             optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
+                               optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-cast-MLOperand-MLOperandDataType>
@@ -52,7 +52,9 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                   <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
+                   optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>
@@ -105,7 +107,9 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gather-MLOperand-MLOperand-MLGatherOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>gather</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>indices</strong>, optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>gather</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                   <a href='MLOperand.html'>MLOperand</a> <strong>indices</strong>,
+                   optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
@@ -142,11 +146,12 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-instanceNormalization-MLOperand-MLInstanceNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>instanceNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                                optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
+                                  optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-layerNormalization-MLOperand-MLLayerNormalizationOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>layerNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLLayerNormalizationOptions.html'>MLLayerNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>layerNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                               optional <a href='MLLayerNormalizationOptions.html'>MLLayerNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-leakyRelu-MLOperand-MLLeakyReluOptions>
@@ -252,9 +257,10 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>
-  sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                          ([EnforceRange] <span class=primitive>unsigned long</span> or sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
-                          optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span>
+  sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(
+      <a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+      ([EnforceRange] <span class=primitive>unsigned long</span> or sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
+      optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-tanh-MLOperand>
@@ -295,12 +301,14 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>argMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-argMax-MLOperand-MLArgMinMaxOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>argMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
-                             optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cast-MLOperand-MLOperandDataType>
+                               optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cast-MLOperand-MLOperandDataType>
   <a href='MLOperand.html'>MLOperand</a> <strong>cast</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>);</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
   <a href='MLActivation.html'>MLActivation</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-concat-MLOperand-unsigned long>
   <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>, optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                   <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
+                   optional <a href='MLConv2dOptions.html'>MLConv2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>convTranspose2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
                             optional <a href='MLConvTranspose2dOptions.html'>MLConvTranspose2dOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-add-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>add</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-sub-MLOperand-MLOperand>
@@ -332,7 +340,9 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>elu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-elu-MLEluOptions>
   <a href='MLActivation.html'>MLActivation</a> <strong>elu</strong>(optional <a href='MLEluOptions.html'>MLEluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-expand-MLOperand-unsigned long>
   <a href='MLOperand.html'>MLOperand</a> <strong>expand</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>newShape</strong>);</span><span class=def id=operation-gather-MLOperand-MLOperand-MLGatherOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>gather</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>indices</strong>, optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>gather</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                   <a href='MLOperand.html'>MLOperand</a> <strong>indices</strong>,
+                   optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                           <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>,
@@ -351,8 +361,9 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>hardSwish</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-hardSwish>
   <a href='MLActivation.html'>MLActivation</a> <strong>hardSwish</strong>();</span><span class=def id=operation-instanceNormalization-MLOperand-MLInstanceNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>instanceNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                                optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-layerNormalization-MLOperand-MLLayerNormalizationOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>layerNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLLayerNormalizationOptions.html'>MLLayerNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLOperand-MLLeakyReluOptions>
+                                  optional <a href='MLInstanceNormalizationOptions.html'>MLInstanceNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-layerNormalization-MLOperand-MLLayerNormalizationOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>layerNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+                               optional <a href='MLLayerNormalizationOptions.html'>MLLayerNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLOperand-MLLeakyReluOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>leakyRelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-leakyRelu-MLLeakyReluOptions>
   <a href='MLActivation.html'>MLActivation</a> <strong>leakyRelu</strong>(optional <a href='MLLeakyReluOptions.html'>MLLeakyReluOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-linear-MLOperand-MLLinearOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>linear</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLLinearOptions.html'>MLLinearOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-linear-MLLinearOptions>
@@ -404,9 +415,10 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLActivation.html'>MLActivation</a> <strong>softplus</strong>(optional <a href='MLSoftplusOptions.html'>MLSoftplusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-softsign-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softsign>
   <a href='MLActivation.html'>MLActivation</a> <strong>softsign</strong>();</span><span class=def id=operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>
-  sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                          ([EnforceRange] <span class=primitive>unsigned long</span> or sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
-                          optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-tanh-MLOperand>
+  sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>split</strong>(
+      <a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
+      ([EnforceRange] <span class=primitive>unsigned long</span> or sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt;) <strong>splits</strong>,
+      optional <a href='MLSplitOptions.html'>MLSplitOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-tanh-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>tanh</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-tanh>
   <a href='MLActivation.html'>MLActivation</a> <strong>tanh</strong>();</span><span class=def id=operation-transpose-MLOperand-MLTransposeOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>transpose</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLTransposeOptions.html'>MLTransposeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-triangular-MLOperand-MLTriangularOptions>
