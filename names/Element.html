@@ -72,15 +72,16 @@ partial interface <strong>Element</strong> {<span class=def id=operation-request
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+  <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;element-timing&#x2F;#sec-modifications-DOM">Element Timing API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=attribute-elementTiming>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code><span class=def>
@@ -225,9 +226,10 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-elementTiming>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+  <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-elementTiming>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>

@@ -16,7 +16,8 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   readonly attribute <a href='ShadowRootMode.html'>ShadowRootMode</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-mode">mode</a></strong>;</span><span class=def id=attribute-delegatesFocus>
   readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-delegatesfocus">delegatesFocus</a></strong>;</span><span class=def id=attribute-slotAssignment>
   readonly attribute <a href='SlotAssignmentMode.html'>SlotAssignmentMode</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-slotassignment">slotAssignment</a></strong>;</span><span class=def id=attribute-clonable>
-  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-clonable">clonable</a></strong>;</span><span class=def id=attribute-host>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-clonable">clonable</a></strong>;</span><span class=def id=attribute-serializable>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-serializable">serializable</a></strong>;</span><span class=def id=attribute-host>
   readonly attribute <a href='Element.html'>Element</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-host">host</a></strong>;</span><span class=def id=attribute-onslotchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-onslotchange">onslotchange</a></strong>;</span>
 };</span></code></pre>
@@ -25,12 +26,13 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
     <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+  <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;">DOM Parsing and Serialization</a><pre class=webidl><code><span class=def>
@@ -44,11 +46,13 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   readonly attribute <a href='ShadowRootMode.html'>ShadowRootMode</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-mode">mode</a></strong>;</span><span class=def id=attribute-delegatesFocus>
   readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-delegatesfocus">delegatesFocus</a></strong>;</span><span class=def id=attribute-slotAssignment>
   readonly attribute <a href='SlotAssignmentMode.html'>SlotAssignmentMode</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-slotassignment">slotAssignment</a></strong>;</span><span class=def id=attribute-clonable>
-  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-clonable">clonable</a></strong>;</span><span class=def id=attribute-host>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-clonable">clonable</a></strong>;</span><span class=def id=attribute-serializable>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-serializable">serializable</a></strong>;</span><span class=def id=attribute-host>
   readonly attribute <a href='Element.html'>Element</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-host">host</a></strong>;</span><span class=def id=attribute-onslotchange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-shadowroot-onslotchange">onslotchange</a></strong>;</span><span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+  <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
   [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerHTML</strong>;</span>
 };</span></code></pre></details>
@@ -69,6 +73,7 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   <ul>
     <li><code><a href="Element.html">Element</a></code></li>
 <li><code><a href="ElementInternals.html">ElementInternals</a></code></li>
+<li><code><a href="GetHTMLOptions.html">GetHTMLOptions</a></code></li>
 <li><code><a href="SVGUseElementShadowRoot.html">SVGUseElementShadowRoot</a></code></li>
 <li><code><a href="Selection.html">Selection</a></code></li>
 
