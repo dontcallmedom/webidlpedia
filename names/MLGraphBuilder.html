@@ -112,6 +112,11 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
                    optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gelu-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>gelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-gelu>
+  <a href='MLActivation.html'>MLActivation</a> <strong>gelu</strong>();</span>
+};</span><span class=def>
+
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
@@ -342,7 +347,9 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>expand</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>newShape</strong>);</span><span class=def id=operation-gather-MLOperand-MLOperand-MLGatherOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gather</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                    <a href='MLOperand.html'>MLOperand</a> <strong>indices</strong>,
-                   optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
+                   optional <a href='MLGatherOptions.html'>MLGatherOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gelu-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>gelu</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-gelu>
+  <a href='MLActivation.html'>MLActivation</a> <strong>gelu</strong>();</span><span class=def id=operation-gemm-MLOperand-MLOperand-MLGemmOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>gemm</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>, optional <a href='MLGemmOptions.html'>MLGemmOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>
   sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>gru</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                           <a href='MLOperand.html'>MLOperand</a> <strong>weight</strong>,
