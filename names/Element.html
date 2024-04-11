@@ -80,10 +80,6 @@ partial interface <strong>Element</strong> {<span class=def id=operation-setHTML
 partial interface <strong>Element</strong> {<span class=def id=attribute-elementTiming>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=operation-getSpatialNavigationContainer>
@@ -138,8 +134,8 @@ partial interface <strong>Element</strong> {<span class=def id=operation-getClie
 <a href='Element.html'>Element</a> includes <a href='InnerHTML.html'>InnerHTML</a>;</span><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <span class=primitive>DOMString</span> <strong>text</strong>);</span>
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>text</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerevents3&#x2F;#extensions-to-the-element-interface">Pointer Events</a><pre class=webidl><code><span class=def>
 
@@ -228,9 +224,7 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-HTMLString>
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-elementTiming>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-setHTMLUnsafe__TO_BE_MERGED-HTMLString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe__TO_BE_MERGED</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-setHTML-DOMString-SanitizerConfig>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-getSpatialNavigationContainer>
+    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>
     <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-pseudo-CSSOMString>
@@ -264,9 +258,9 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertPointFromNode-DOMPointInit-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-DOMString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <span class=primitive>DOMString</span> <strong>text</strong>);</span><span class=def id=attribute-innerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>innerHTML</strong>;</span><span class=def id=operation-setPointerCapture-long>
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>text</strong>);</span><span class=def id=attribute-innerHTML>
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>innerHTML</strong>;</span><span class=def id=operation-setPointerCapture-long>
   <span class=primitive>undefined</span> <strong>setPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-releasePointerCapture-long>
   <span class=primitive>undefined</span> <strong>releasePointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-hasPointerCapture-long>
   <span class=primitive>boolean</span> <strong>hasPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-requestPointerLock>
@@ -484,7 +478,6 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
 <li><a href="https:&#x2F;&#x2F;screen-share.github.io&#x2F;element-capture&#x2F;">Element Capture</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;element-timing&#x2F;">Element Timing API</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;ink-enhancement&#x2F;">Ink API</a> refers to <code>Element</code></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-pseudo-4&#x2F;">CSS Pseudo-Elements Module Level 4</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;">CSS Regions Module Level 1</a> refers to <code>Element</code></li>
