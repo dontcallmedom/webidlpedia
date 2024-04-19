@@ -76,7 +76,8 @@ partial interface <strong>Element</strong> {<span class=def id=operation-setHTML
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
 
   [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span>
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>string</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;element-timing&#x2F;#sec-modifications-DOM">Element Timing API</a><pre class=webidl><code><span class=def>
 
@@ -132,11 +133,6 @@ partial interface <strong>Element</strong> {<span class=def id=operation-getClie
   readonly attribute <span class=primitive>double</span> <strong>currentCSSZoom</strong>;</span>
 };</span><span class=def><span class="comment"> &#x2F;&#x2F; like Range
 </span><a href='Element.html'>Element</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;#extensions-to-the-element-interface">DOM Parsing and Serialization</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Element</strong> {<span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>text</strong>);</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerevents3&#x2F;#extensions-to-the-element-interface">Pointer Events</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Element</strong> {<span class=def id=operation-setPointerCapture-long>
@@ -226,7 +222,8 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
 
   [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=attribute-elementTiming>
+  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>string</strong>);</span><span class=def id=attribute-elementTiming>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>
@@ -260,8 +257,7 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertQuadFromNode-DOMQuadInit-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertRectFromNode</strong>(<a href='DOMRectReadOnly.html'>DOMRectReadOnly</a> <strong>rect</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertPointFromNode-DOMPointInit-GeometryNode-ConvertCoordinateOptions>
-  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>text</strong>);</span><span class=def id=operation-setPointerCapture-long>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>convertPointFromNode</strong>(<a href='DOMPointInit.html'>DOMPointInit</a> <strong>point</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setPointerCapture-long>
   <span class=primitive>undefined</span> <strong>setPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-releasePointerCapture-long>
   <span class=primitive>undefined</span> <strong>releasePointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-hasPointerCapture-long>
   <span class=primitive>boolean</span> <strong>hasPointerCapture</strong> (<span class=primitive>long</span> <strong>pointerId</strong>);</span><span class=def id=operation-requestPointerLock>
@@ -486,7 +482,6 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;">CSS Typed OM Level 1</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Element</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;DOM-Parsing&#x2F;">DOM Parsing and Serialization</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;intersection-observer&#x2F;">Intersection Observer</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;largest-contentful-paint&#x2F;">Largest Contentful Paint</a> refers to <code>Element</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mathml-core&#x2F;">MathML Core</a> refers to <code>Element</code></li>
