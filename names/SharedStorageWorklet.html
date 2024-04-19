@@ -8,8 +8,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;#sharedstorageworklet">Shared Storage API</a> defines <code>SharedStorageWorklet</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>)]
-interface <strong>SharedStorageWorklet</strong> : <a href='Worklet.html'>Worklet</a> {
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>)]
+interface <strong>SharedStorageWorklet</strong> : <a href='Worklet.html'>Worklet</a> {<span class=def id=operation-selectURL-DOMString-SharedStorageUrlWithMetadata-SharedStorageRunOperationMethodOptions>
+  Promise&lt;<a href='SharedStorageResponse.html'>SharedStorageResponse</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;#dom-sharedstorageworklet-selecturl">selectURL</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>,
+                               FrozenArray&lt;<a href='SharedStorageUrlWithMetadata.html'>SharedStorageUrlWithMetadata</a>&gt; <strong>urls</strong>,
+                               optional <a href='SharedStorageRunOperationMethodOptions.html'>SharedStorageRunOperationMethodOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-run-DOMString-SharedStorageRunOperationMethodOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;#dom-sharedstorageworklet-run">run</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>,
+                   optional <a href='SharedStorageRunOperationMethodOptions.html'>SharedStorageRunOperationMethodOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre>
   
   
@@ -18,7 +25,8 @@ interface <strong>SharedStorageWorklet</strong> : <a href='Worklet.html'>Worklet
 <h3>Methods and attributes that return objects implementing <code>SharedStorageWorklet</code></h3>
 
   <ul>
-    <li><code><a href="WindowSharedStorage.html">WindowSharedStorage</a><a href=WindowSharedStorage.html#attribute-worklet>.worklet</a></code></li>
+    <li><code><a href="WindowSharedStorage.html">WindowSharedStorage</a><a href=WindowSharedStorage.html#operation-createWorklet-USVString-WorkletOptions>.createWorklet()</a></code></li>
+<li><code><a href="WindowSharedStorage.html">WindowSharedStorage</a><a href=WindowSharedStorage.html#attribute-worklet>.worklet</a></code></li>
 
   </ul>
 </section>
