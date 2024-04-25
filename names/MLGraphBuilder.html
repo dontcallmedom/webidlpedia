@@ -246,9 +246,9 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
                   sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>sizes</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softmax-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softmax>
-  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>();</span>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softmax-MLOperand-unsigned long>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softmax-unsigned long>
+  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>(<span class=primitive>unsigned long</span> <strong>axis</strong>);</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softplus-MLOperand>
@@ -415,9 +415,9 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLActivation.html'>MLActivation</a> <strong>sigmoid</strong>();</span><span class=def id=operation-slice-MLOperand-unsigned long-unsigned long>
   <a href='MLOperand.html'>MLOperand</a> <strong>slice</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                   sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>starts</strong>,
-                  sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>sizes</strong>);</span><span class=def id=operation-softmax-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softmax>
-  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>();</span><span class=def id=operation-softplus-MLOperand>
+                  sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>sizes</strong>);</span><span class=def id=operation-softmax-MLOperand-unsigned long>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softmax-unsigned long>
+  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>(<span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softplus-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softplus>
   <a href='MLActivation.html'>MLActivation</a> <strong>softplus</strong>();</span><span class=def id=operation-softsign-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softsign>
