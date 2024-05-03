@@ -20,10 +20,17 @@ dictionary <strong>FenceEvent</strong> {<span class=def><span class="comment">
   <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-eventdata">eventData</a></strong>;</span><span class=def>
   sequence&lt;<a href='FenceReportingDestination.html'>FenceReportingDestination</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-destination">destination</a></strong>;</span><span class=def><span class="comment">
 
+  &#x2F;&#x2F; Determines if this data can be sent in a reportEvent() beacon or automatic
+  &#x2F;&#x2F; beacon that originates from a document that is cross-origin to the mapped
+  &#x2F;&#x2F; URL of the fenced frame config that loaded this frame tree.
+  &#x2F;&#x2F; Note that automatic beacon data can only be set from documents that are
+  &#x2F;&#x2F; same-origin to the fenced frame config’s mapped URL, so this effectively
+  &#x2F;&#x2F; opts in the data to being used in a cross-origin subframe.
+  </span><span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-crossoriginexposed">crossOriginExposed</a></strong> &#x3D; false;</span><span class=def><span class="comment">
+
   &#x2F;&#x2F; When setting event data to be used later in an automatic beacon, the
   &#x2F;&#x2F; following properties are used:
-  </span><span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-once">once</a></strong> &#x3D; false;</span><span class=def>
-  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-crossoriginexposed">crossOriginExposed</a></strong> &#x3D; false;</span><span class=def><span class="comment">
+  </span><span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;#dom-fenceevent-once">once</a></strong> &#x3D; false;</span><span class=def><span class="comment">
 
   &#x2F;&#x2F; When reporting to a custom destination URL (with substitution of macros defined by
   &#x2F;&#x2F; the Protected Audience buyer), the following property is used:
