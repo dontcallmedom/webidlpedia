@@ -61,12 +61,6 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-measureText-DOMString-StylePropertyMapReadOnly>
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-view-transitions-2&#x2F;">CSS View Transitions Module Level 2</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Document</strong> {<span class=def id=operation-startViewTransition-UpdateCallback-StartViewTransitionOptions>
-
-  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional (<a href='UpdateCallback.html'>UpdateCallback</a> or <a href='StartViewTransitionOptions.html'>StartViewTransitionOptions</a>) <strong>callbackOptions</strong> &#x3D; {});</span>
-};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;#api">Fullscreen API Standard</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def id=attribute-fullscreenEnabled>
@@ -110,9 +104,9 @@ partial interface <strong>Document</strong> {<span class=def id=operation-static
   &#x2F;&#x2F; dynamic markup insertion
   </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
   </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=operation-writeln-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>)... <strong>text</strong>);</span><span class=def id=operation-writeln-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>)... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
   </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
@@ -154,6 +148,11 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fgColo
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;requestStorageAccessFor&#x2F;">requestStorageAccessFor API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-requestStorageAccessFor-USVString>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessFor</strong>(<span class=primitive>USVString</span> <strong>requestedOrigin</strong>);</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;">Extending Storage Access API (SAA) to non-cookie storage</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def id=operation-hasUnpartitionedCookieAccess>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasUnpartitionedCookieAccess</strong>();</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span>
@@ -186,12 +185,18 @@ partial interface <strong>Document</strong> {<span class=def id=operation-hasPri
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;#the-namedflow-interface">CSS Regions Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=attribute-namedFlows>
   readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-view-transitions-2&#x2F;">CSS View Transitions Module Level 2</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Document</strong> {<span class=def id=operation-startViewTransition-UpdateCallback-StartViewTransitionOptions>
+
+  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional (<a href='UpdateCallback.html'>UpdateCallback</a> or <a href='StartViewTransitionOptions.html'>StartViewTransitionOptions</a>) <strong>callbackOptions</strong> &#x3D; {});</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def id=operation-elementFromPoint-double-double>
   <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-elementsFromPoint-double-double>
-  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double-ShadowRoot>
-  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>, <a href='ShadowRoot.html'>ShadowRoot</a>... <strong>shadowRoots</strong>);</span><span class=def id=attribute-scrollingElement>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double-CaretPositionFromPointOptions>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>, optional <a href='CaretPositionFromPointOptions.html'>CaretPositionFromPointOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-scrollingElement>
   readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span>
 };</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='GeometryUtils.html'>GeometryUtils</a>;</span></code></pre></li>
@@ -290,9 +295,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   &#x2F;&#x2F; XPathResult.ANY_TYPE &#x3D; 0
   </span><a href='XPathResult.html'>XPathResult</a> <strong>evaluate</strong>(<span class=primitive>DOMString</span> <strong>expression</strong>, <a href='Node.html'>Node</a> <strong>contextNode</strong>, optional <a href='XPathNSResolver.html'>XPathNSResolver</a>? <strong>resolver</strong> &#x3D; null, optional <span class=primitive>unsigned short</span> <strong>type</strong> &#x3D; 0, optional <a href='XPathResult.html'>XPathResult</a>? <strong>result</strong> &#x3D; null);</span><span class=def id=operation-measureElement-Element>
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-measureText-DOMString-StylePropertyMapReadOnly>
-    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span><span class=def id=operation-startViewTransition-UpdateCallback-StartViewTransitionOptions>
-
-  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional (<a href='UpdateCallback.html'>UpdateCallback</a> or <a href='StartViewTransitionOptions.html'>StartViewTransitionOptions</a>) <strong>callbackOptions</strong> &#x3D; {});</span><span class=def id=attribute-fullscreenEnabled>
+    <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span><span class=def id=attribute-fullscreenEnabled>
   [LegacyLenientSetter] readonly attribute <span class=primitive>boolean</span> <strong>fullscreenEnabled</strong>;</span><span class=def id=attribute-fullscreen>
   [LegacyLenientSetter, Unscopable] readonly attribute <span class=primitive>boolean</span> <strong>fullscreen</strong>;</span><span class=def id=operation-exitFullscreen><span class="comment"> &#x2F;&#x2F; historical
 
@@ -328,9 +331,9 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   &#x2F;&#x2F; dynamic markup insertion
   </span>[CEReactions] <a href='Document.html'>Document</a> <strong>open</strong>(optional <span class=primitive>DOMString</span> <strong>unused1</strong>, optional <span class=primitive>DOMString</span> <strong>unused2</strong>);</span><span class=def id=operation-open-USVString-DOMString-DOMString><span class="comment"> &#x2F;&#x2F; both arguments are ignored
   </span><a href='WindowProxy.html'>WindowProxy</a>? <strong>open</strong>(<span class=primitive>USVString</span> <strong>url</strong>, <span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>features</strong>);</span><span class=def id=operation-close>
-  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=operation-writeln-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>(<a href='HTMLString.html'>HTMLString</a>... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
+  [CEReactions] <span class=primitive>undefined</span> <strong>close</strong>();</span><span class=def id=operation-write-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>write</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>)... <strong>text</strong>);</span><span class=def id=operation-writeln-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>writeln</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>)... <strong>text</strong>);</span><span class=def id=attribute-defaultView><span class="comment">
 
   &#x2F;&#x2F; user interaction
   </span>readonly attribute <a href='WindowProxy.html'>WindowProxy</a>? <strong>defaultView</strong>;</span><span class=def id=operation-hasFocus>
@@ -437,7 +440,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkitanimationstart</strong>;</span><span class=def id=attribute-onwebkittransitionend>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwebkittransitionend</strong>;</span><span class=def id=attribute-onwheel>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onwheel</strong>;</span><span class=def id=operation-requestStorageAccessFor-USVString>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessFor</strong>(<span class=primitive>USVString</span> <strong>requestedOrigin</strong>);</span><span class=def id=operation-hasStorageAccess>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccessFor</strong>(<span class=primitive>USVString</span> <strong>requestedOrigin</strong>);</span><span class=def id=operation-hasUnpartitionedCookieAccess>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasUnpartitionedCookieAccess</strong>();</span><span class=def id=operation-hasStorageAccess>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasStorageAccess</strong>();</span><span class=def id=operation-requestStorageAccess>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestStorageAccess</strong>();</span><span class=def id=attribute-prerendering>
     readonly attribute <span class=primitive>boolean</span> <strong>prerendering</strong>;</span><span class=def id=attribute-onprerenderingchange><span class="comment">
@@ -451,10 +455,12 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasPrivateToken</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>);</span><span class=def id=operation-hasRedemptionRecord-USVString>
   Promise&lt;<span class=primitive>boolean</span>&gt; <strong>hasRedemptionRecord</strong>(<span class=primitive>USVString</span> <strong>issuer</strong>);</span><span class=def id=attribute-fonts>
   readonly attribute <a href='FontFaceSet.html'>FontFaceSet</a> <strong>fonts</strong>;</span><span class=def id=attribute-namedFlows>
-  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def id=operation-elementFromPoint-double-double>
+  readonly attribute <a href='NamedFlowMap.html'>NamedFlowMap</a> <strong>namedFlows</strong>;</span><span class=def id=operation-startViewTransition-UpdateCallback-StartViewTransitionOptions>
+
+  <a href='ViewTransition.html'>ViewTransition</a> <strong>startViewTransition</strong>(optional (<a href='UpdateCallback.html'>UpdateCallback</a> or <a href='StartViewTransitionOptions.html'>StartViewTransitionOptions</a>) <strong>callbackOptions</strong> &#x3D; {});</span><span class=def id=operation-elementFromPoint-double-double>
   <a href='Element.html'>Element</a>? <strong>elementFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-elementsFromPoint-double-double>
-  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double-ShadowRoot>
-  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>, <a href='ShadowRoot.html'>ShadowRoot</a>... <strong>shadowRoots</strong>);</span><span class=def id=attribute-scrollingElement>
+  sequence&lt;<a href='Element.html'>Element</a>&gt; <strong>elementsFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>);</span><span class=def id=operation-caretPositionFromPoint-double-double-CaretPositionFromPointOptions>
+  <a href='CaretPosition.html'>CaretPosition</a>? <strong>caretPositionFromPoint</strong>(<span class=primitive>double</span> <strong>x</strong>, <span class=primitive>double</span> <strong>y</strong>, optional <a href='CaretPositionFromPointOptions.html'>CaretPositionFromPointOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-scrollingElement>
   readonly attribute <a href='Element.html'>Element</a>? <strong>scrollingElement</strong>;</span><span class=def id=operation-getBoxQuads-BoxQuadOptions>
   sequence&lt;<a href='DOMQuad.html'>DOMQuad</a>&gt; <strong>getBoxQuads</strong>(optional <a href='BoxQuadOptions.html'>BoxQuadOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertQuadFromNode-DOMQuadInit-GeometryNode-ConvertCoordinateOptions>
   <a href='DOMQuad.html'>DOMQuad</a> <strong>convertQuadFromNode</strong>(<a href='DOMQuadInit.html'>DOMQuadInit</a> <strong>quad</strong>, <a href='GeometryNode.html'>GeometryNode</a> <strong>from</strong>, optional <a href='ConvertCoordinateOptions.html'>ConvertCoordinateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-convertRectFromNode-DOMRectReadOnly-GeometryNode-ConvertCoordinateOptions>
@@ -519,18 +525,19 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a> refers to <code>Document</code></li>
-<li><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-view-transitions-2&#x2F;">CSS View Transitions Module Level 2</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;fullscreen.spec.whatwg.org&#x2F;">Fullscreen API Standard</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;requestStorageAccessFor&#x2F;">requestStorageAccessFor API</a> refers to <code>Document</code></li>
+<li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;">Extending Storage Access API (SAA) to non-cookie storage</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;storage-access&#x2F;">The Storage Access API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;nav-speculation&#x2F;prerendering.html">Prerendering Revamped</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;page-lifecycle&#x2F;">Page Lifecycle</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;scroll-to-text-fragment&#x2F;">URL Fragment Text Directives</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-regions-1&#x2F;">CSS Regions Module Level 1</a> refers to <code>Document</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-view-transitions-2&#x2F;">CSS View Transitions Module Level 2</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;intersection-observer&#x2F;">Intersection Observer</a> refers to <code>Document</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>Document</code></li>

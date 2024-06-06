@@ -19,10 +19,10 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-input">input</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>);</span><span class=def id=operation-constant-MLOperandDescriptor-ArrayBufferView><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph constant.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant">constant</a></strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>, <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-double-MLOperandDataType><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant">constant</a></strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>, <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-MLOperandDataType-double><span class="comment">
 
-  &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-value-type">constant</a></strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
+  &#x2F;&#x2F; Create a scalar operand from the specified number of the specified type.
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-type-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>, <span class=primitive>double</span> <strong>value</strong>);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
   &#x2F;&#x2F; Compile the graph up to the specified output operands asynchronously.
   </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-build">build</a></strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span>
@@ -77,8 +77,8 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
   <a href='MLOperand.html'>MLOperand</a> <strong>greater</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-greaterOrEqual-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>greaterOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-lesser-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>lesser</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-lesserOrEqual-MLOperand-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>lesserOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-not-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>not</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>);</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>lesserOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-logicalNot-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>logicalNot</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>);</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-abs-MLOperand>
@@ -296,10 +296,10 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-input">input</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>);</span><span class=def id=operation-constant-MLOperandDescriptor-ArrayBufferView><span class="comment">
 
   &#x2F;&#x2F; Create an operand for a graph constant.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant">constant</a></strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>, <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-double-MLOperandDataType><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant">constant</a></strong>(<a href='MLOperandDescriptor.html'>MLOperandDescriptor</a> <strong>descriptor</strong>, <a href='ArrayBufferView.html'>ArrayBufferView</a> <strong>bufferView</strong>);</span><span class=def id=operation-constant-MLOperandDataType-double><span class="comment">
 
-  &#x2F;&#x2F; Create a single-value operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-value-type">constant</a></strong>(<span class=primitive>double</span> <strong>value</strong>, optional <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong> &#x3D; &quot;float32&quot;);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
+  &#x2F;&#x2F; Create a scalar operand from the specified number of the specified type.
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-type-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>, <span class=primitive>double</span> <strong>value</strong>);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
   &#x2F;&#x2F; Compile the graph up to the specified output operands asynchronously.
   </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-build">build</a></strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-argMin-MLOperand-MLArgMinMaxOptions>
@@ -327,8 +327,8 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>greater</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-greaterOrEqual-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>greaterOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-lesser-MLOperand-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>lesser</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-lesserOrEqual-MLOperand-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>lesserOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-not-MLOperand>
-  <a href='MLOperand.html'>MLOperand</a> <strong>not</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>);</span><span class=def id=operation-abs-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>lesserOrEqual</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>b</strong>);</span><span class=def id=operation-logicalNot-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>logicalNot</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>a</strong>);</span><span class=def id=operation-abs-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>abs</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-ceil-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>ceil</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-cos-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>cos</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-erf-MLOperand>

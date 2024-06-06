@@ -1,0 +1,32 @@
+---
+title: <code>StorageAccessHandle</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#storageaccesshandle">Extending Storage Access API (SAA) to non-cookie storage</a> defines <code>StorageAccessHandle</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>StorageAccessHandle</strong> {<span class=def id=attribute-sessionStorage>
+  readonly attribute <a href='Storage.html'>Storage</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-sessionstorage">sessionStorage</a></strong>;</span><span class=def id=attribute-localStorage>
+  readonly attribute <a href='Storage.html'>Storage</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-localstorage">localStorage</a></strong>;</span><span class=def id=attribute-indexedDB>
+  readonly attribute <a href='IDBFactory.html'>IDBFactory</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-indexeddb">indexedDB</a></strong>;</span><span class=def id=attribute-locks>
+  readonly attribute <a href='LockManager.html'>LockManager</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-locks">locks</a></strong>;</span><span class=def id=attribute-caches>
+  readonly attribute <a href='CacheStorage.html'>CacheStorage</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-caches">caches</a></strong>;</span><span class=def id=operation-getDirectory>
+  Promise&lt;<a href='FileSystemDirectoryHandle.html'>FileSystemDirectoryHandle</a>&gt; <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-getdirectory">getDirectory</a></strong>();</span><span class=def id=operation-estimate>
+  Promise&lt;<a href='StorageEstimate.html'>StorageEstimate</a>&gt; <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-estimate">estimate</a></strong>();</span><span class=def id=operation-createObjectURL-Blob-MediaSource>
+  <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-createobjecturl">createObjectURL</a></strong>((<a href='Blob.html'>Blob</a> or <a href='MediaSource.html'>MediaSource</a>) <strong>obj</strong>);</span><span class=def id=operation-revokeObjectURL-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-revokeobjecturl">revokeObjectURL</a></strong>(<span class=primitive>DOMString</span> <strong>url</strong>);</span><span class=def id=operation-BroadcastChannel-DOMString>
+  <a href='BroadcastChannel.html'>BroadcastChannel</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-broadcastchannel">BroadcastChannel</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-SharedWorker-USVString-DOMString-SharedWorkerOptions>
+  <a href='SharedWorker.html'>SharedWorker</a> <strong><a href="https:&#x2F;&#x2F;privacycg.github.io&#x2F;saa-non-cookie-storage&#x2F;#dom-storageaccesshandle-sharedworker">SharedWorker</a></strong>(<span class=primitive>USVString</span> <strong>scriptURL</strong>, optional (<span class=primitive>DOMString</span> or <a href='SharedWorkerOptions.html'>SharedWorkerOptions</a>) <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre>
+  
+  
+</section>
+
+
+  
