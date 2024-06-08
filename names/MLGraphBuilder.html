@@ -43,8 +43,7 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-clamp-MLOperand-MLClampOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
-  <a href='MLActivation.html'>MLActivation</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-concat-MLOperand-unsigned long>
@@ -247,8 +246,7 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softmax-MLOperand-unsigned long>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softmax-unsigned long>
-  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>(<span class=primitive>unsigned long</span> <strong>axis</strong>);</span>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-softplus-MLOperand>
@@ -308,8 +306,7 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
                                optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cast-MLOperand-MLOperandDataType>
   <a href='MLOperand.html'>MLOperand</a> <strong>cast</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>);</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLClampOptions>
-  <a href='MLActivation.html'>MLActivation</a> <strong>clamp</strong>(optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-concat-MLOperand-unsigned long>
+  <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-concat-MLOperand-unsigned long>
   <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>conv2d</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                    <a href='MLOperand.html'>MLOperand</a> <strong>filter</strong>,
@@ -416,8 +413,7 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>slice</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
                   sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>starts</strong>,
                   sequence&lt;[EnforceRange] <span class=primitive>unsigned long</span>&gt; <strong>sizes</strong>);</span><span class=def id=operation-softmax-MLOperand-unsigned long>
-  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softmax-unsigned long>
-  <a href='MLActivation.html'>MLActivation</a> <strong>softmax</strong>(<span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softplus-MLOperand>
+  <a href='MLOperand.html'>MLOperand</a> <strong>softmax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <span class=primitive>unsigned long</span> <strong>axis</strong>);</span><span class=def id=operation-softplus-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softplus</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softplus>
   <a href='MLActivation.html'>MLActivation</a> <strong>softplus</strong>();</span><span class=def id=operation-softsign-MLOperand>
   <a href='MLOperand.html'>MLOperand</a> <strong>softsign</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>);</span><span class=def id=operation-softsign>
