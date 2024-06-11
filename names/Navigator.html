@@ -107,7 +107,8 @@ partial interface <strong>Navigator</strong> {<span class=def id=operation-clear
 
 [SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=operation-runAdAuction-AuctionAdConfig>
-  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span>
+  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=attribute-deprecatedRunAdAuctionEnforcesKAnonymity>
+  readonly attribute <span class=primitive>boolean</span> <strong>deprecatedRunAdAuctionEnforcesKAnonymity</strong>;</span>
 };</span><span class=def>
 
 [SecureContext]
@@ -322,7 +323,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>leaveAdInterestGroup</strong>(optional <a href='AuctionAdInterestGroupKey.html'>AuctionAdInterestGroupKey</a> <strong>group</strong> &#x3D; {});</span><span class=def id=operation-clearOriginJoinedAdInterestGroups-USVString-USVString>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>clearOriginJoinedAdInterestGroups</strong>(
       <span class=primitive>USVString</span> <strong>owner</strong>, optional sequence&lt;<span class=primitive>USVString</span>&gt; <strong>interestGroupsToKeep</strong> &#x3D; []);</span><span class=def id=operation-runAdAuction-AuctionAdConfig>
-  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=operation-createAuctionNonce>
+  Promise&lt;(<span class=primitive>USVString</span> or <a href='FencedFrameConfig.html'>FencedFrameConfig</a>)?&gt; <strong>runAdAuction</strong>(<a href='AuctionAdConfig.html'>AuctionAdConfig</a> <strong>config</strong>);</span><span class=def id=attribute-deprecatedRunAdAuctionEnforcesKAnonymity>
+  readonly attribute <span class=primitive>boolean</span> <strong>deprecatedRunAdAuctionEnforcesKAnonymity</strong>;</span><span class=def id=operation-createAuctionNonce>
   Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>createAuctionNonce</strong>();</span><span class=def id=operation-updateAdInterestGroups>
   <span class=primitive>undefined</span> <strong>updateAdInterestGroups</strong>();</span><span class=def id=attribute-protectedAudience>
   [SameObject] readonly attribute <a href='ProtectedAudience.html'>ProtectedAudience</a> <strong>protectedAudience</strong>;</span><span class=def id=attribute-userAgentData>
