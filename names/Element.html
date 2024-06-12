@@ -71,13 +71,13 @@ partial interface <strong>Element</strong> {<span class=def id=operation-request
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+partial interface <strong>Element</strong> {<span class=def id=operation-setHTMLUnsafe-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>string</strong>);</span>
+  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
+  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, (<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>string</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;element-timing&#x2F;#sec-modifications-DOM">Element Timing API</a><pre class=webidl><code><span class=def>
 
@@ -217,13 +217,13 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>requestFullscreen</strong>(optional <a href='FullscreenOptions.html'>FullscreenOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-onfullscreenchange>
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-setHTMLUnsafe-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
-  [CEReactions] attribute [LegacyNullToEmptyString] <a href='HTMLString.html'>HTMLString</a> <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-HTMLString>
-  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, <a href='HTMLString.html'>HTMLString</a> <strong>string</strong>);</span><span class=def id=attribute-elementTiming>
+  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
+  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-TrustedHTML-DOMString>
+  [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, (<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>string</strong>);</span><span class=def id=attribute-elementTiming>
     [CEReactions] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>

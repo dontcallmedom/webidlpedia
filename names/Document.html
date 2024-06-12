@@ -76,7 +76,7 @@ partial interface <strong>Document</strong> {<span class=def id=attribute-fullsc
 
 [LegacyOverrideBuiltIns]
 partial interface <strong>Document</strong> {<span class=def id=operation-static>
-  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
 
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
@@ -303,7 +303,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenchange</strong>;</span><span class=def id=attribute-onfullscreenerror>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onfullscreenerror</strong>;</span><span class=def id=operation-static>
-  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>(<a href='HTMLString.html'>HTMLString</a> <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
+  static <a href='Document.html'>Document</a> <strong>parseHTMLUnsafe</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>html</strong>);</span><span class=def id=attribute-location><span class="comment">
 
   &#x2F;&#x2F; resource metadata management
   </span>[PutForwards&#x3D;<span class=primitive>href</span>, LegacyUnforgeable] readonly attribute <a href='Location.html'>Location</a>? <strong>location</strong>;</span><span class=def id=attribute-domain>
@@ -494,7 +494,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 <li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#attribute-contentDocument>.contentDocument</a></code></li>
 <li><code><a href="HTMLObjectElement.html">HTMLObjectElement</a><a href=HTMLObjectElement.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>
 <li><code><a href="Window.html">Window</a><a href=Window.html#attribute-document>.document</a></code></li>
-<li><code><a href="DOMParser.html">DOMParser</a><a href=DOMParser.html#operation-parseFromString-HTMLString-DOMParserSupportedType>.parseFromString()</a></code></li>
+<li><code><a href="DOMParser.html">DOMParser</a><a href=DOMParser.html#operation-parseFromString-TrustedHTML-DOMString-DOMParserSupportedType>.parseFromString()</a></code></li>
 <li><code><a href="HTMLFrameElement.html">HTMLFrameElement</a><a href=HTMLFrameElement.html#attribute-contentDocument>.contentDocument</a></code></li>
 <li><code><a href="IntersectionObserver.html">IntersectionObserver</a><a href=IntersectionObserver.html#attribute-root>.root</a></code></li>
 <li><code><a href="GetSVGDocument.html">GetSVGDocument</a><a href=GetSVGDocument.html#operation-getSVGDocument>.getSVGDocument()</a></code></li>

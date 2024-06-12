@@ -11,8 +11,8 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>)]
-interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-ScriptURLString-WorkerOptions>
-  <strong>constructor</strong>(<a href='ScriptURLString.html'>ScriptURLString</a> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-terminate>
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-TrustedScriptURL-USVString-WorkerOptions>
+  <strong>constructor</strong>((<a href='TrustedScriptURL.html'>TrustedScriptURL</a> or <span class=primitive>USVString</span>) <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-terminate>
 
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;workers.html#dom-worker-terminate">terminate</a></strong>();</span><span class=def id=operation-postMessage-any-object>
 
@@ -27,8 +27,8 @@ interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>)]
-interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-ScriptURLString-WorkerOptions>
-  <strong>constructor</strong>(<a href='ScriptURLString.html'>ScriptURLString</a> <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-terminate>
+interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-TrustedScriptURL-USVString-WorkerOptions>
+  <strong>constructor</strong>((<a href='TrustedScriptURL.html'>TrustedScriptURL</a> or <span class=primitive>USVString</span>) <strong>scriptURL</strong>, optional <a href='WorkerOptions.html'>WorkerOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-terminate>
 
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;workers.html#dom-worker-terminate">terminate</a></strong>();</span><span class=def id=operation-postMessage-any-object>
 
@@ -43,7 +43,7 @@ interface <strong>Worker</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <h3>Methods and attributes that return objects implementing <code>Worker</code></h3>
 
   <ul>
-    <li><code><a href="Worker.html">Worker</a><a href=Worker.html#constructor-ScriptURLString-WorkerOptions>()</a></code></li>
+    <li><code><a href="Worker.html">Worker</a><a href=Worker.html#constructor-TrustedScriptURL-USVString-WorkerOptions>()</a></code></li>
 
   </ul>
 </section>
