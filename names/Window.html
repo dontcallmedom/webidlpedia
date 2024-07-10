@@ -160,6 +160,9 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-launchQu
 partial interface <strong>Window</strong> {<span class=def id=operation-navigate-SpatialNavigationDirection>
     <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-viewport-1&#x2F;#extensions-to-the-window-interface">CSS Viewport Module Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=attribute-viewport>
+[SameObject, Replaceable] readonly attribute <a href='Viewport.html'>Viewport</a>? <strong>viewport</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=operation-getComputedStyle-Element-CSSOMString>
@@ -434,7 +437,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   [SecureContext] readonly attribute <a href='WindowSharedStorage.html'>WindowSharedStorage</a>? <strong>sharedStorage</strong>;</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-launchQueue>
   readonly attribute <a href='LaunchQueue.html'>LaunchQueue</a> <strong>launchQueue</strong>;</span><span class=def id=operation-navigate-SpatialNavigationDirection>
-    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def id=operation-getComputedStyle-Element-CSSOMString>
+    <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def id=attribute-viewport>
+[SameObject, Replaceable] readonly attribute <a href='Viewport.html'>Viewport</a>? <strong>viewport</strong>;</span><span class=def id=operation-getComputedStyle-Element-CSSOMString>
   [NewObject] <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>getComputedStyle</strong>(<a href='Element.html'>Element</a> <strong>elt</strong>, optional <a href='CSSOMString.html'>CSSOMString</a>? <strong>pseudoElt</strong>);</span><span class=def id=operation-matchMedia-CSSOMString>
     [NewObject] <a href='MediaQueryList.html'>MediaQueryList</a> <strong>matchMedia</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>query</strong>);</span><span class=def id=attribute-screen>
     [SameObject, Replaceable] readonly attribute <a href='Screen.html'>Screen</a> <strong>screen</strong>;</span><span class=def id=attribute-visualViewport>
@@ -530,6 +534,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-app-launch&#x2F;">Web App Launch Handler API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-viewport-1&#x2F;">CSS Viewport Module Level 1</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM)</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;orientation-event&#x2F;">Device Orientation and Motion</a> refers to <code>Window</code></li>
