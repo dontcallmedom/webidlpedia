@@ -28,9 +28,11 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-build">build</a></strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span>
 };</span><span class=def>
 
-partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-argMin-MLOperand-MLArgMinMaxOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>argMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-argMax-MLOperand-MLArgMinMaxOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>argMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span>
+partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-argMin-MLOperand-unsigned long-MLArgMinMaxOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>argMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>,
+                   optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-argMax-MLOperand-unsigned long-MLArgMinMaxOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>argMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>,
+                   optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
@@ -300,9 +302,11 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-type-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>, <a href='MLNumber.html'>MLNumber</a> <strong>value</strong>);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
 
   &#x2F;&#x2F; Compile the graph up to the specified output operands asynchronously.
-  </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-build">build</a></strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-argMin-MLOperand-MLArgMinMaxOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>argMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-argMax-MLOperand-MLArgMinMaxOptions>
-  <a href='MLOperand.html'>MLOperand</a> <strong>argMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
+  </span>Promise&lt;<a href='MLGraph.html'>MLGraph</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-build">build</a></strong>(<a href='MLNamedOperands.html'>MLNamedOperands</a> <strong>outputs</strong>);</span><span class=def id=operation-argMin-MLOperand-unsigned long-MLArgMinMaxOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>argMin</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>,
+                   optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-argMax-MLOperand-unsigned long-MLArgMinMaxOptions>
+  <a href='MLOperand.html'>MLOperand</a> <strong>argMax</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, [EnforceRange] <span class=primitive>unsigned long</span> <strong>axis</strong>,
+                   optional <a href='MLArgMinMaxOptions.html'>MLArgMinMaxOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-batchNormalization-MLOperand-MLOperand-MLOperand-MLBatchNormalizationOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
                                optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cast-MLOperand-MLOperandDataType>
   <a href='MLOperand.html'>MLOperand</a> <strong>cast</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>);</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
