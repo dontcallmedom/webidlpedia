@@ -16,7 +16,12 @@ interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTar
 
   readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-requestid">requestId</a></strong>;</span><span class=def id=attribute-methodName>
   readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-methodname">methodName</a></strong>;</span><span class=def id=attribute-details>
-  readonly attribute <span class=primitive>object</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-details">details</a></strong>;</span><span class=def id=operation-complete-PaymentComplete-PaymentCompleteDetails>
+  readonly attribute <span class=primitive>object</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-details">details</a></strong>;</span><span class=def id=attribute-shippingAddress>
+  readonly attribute <a href='ContactAddress.html'>ContactAddress</a>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-shippingaddress">shippingAddress</a></strong>;</span><span class=def id=attribute-shippingOption>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-shippingoption">shippingOption</a></strong>;</span><span class=def id=attribute-payerName>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-payername">payerName</a></strong>;</span><span class=def id=attribute-payerEmail>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-payeremail">payerEmail</a></strong>;</span><span class=def id=attribute-payerPhone>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-payerphone">payerPhone</a></strong>;</span><span class=def id=operation-complete-PaymentComplete-PaymentCompleteDetails>
 
   [NewObject]
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-complete">complete</a></strong>(
@@ -24,7 +29,9 @@ interface <strong>PaymentResponse</strong> : <a href='EventTarget.html'>EventTar
     optional <a href='PaymentCompleteDetails.html'>PaymentCompleteDetails</a> <strong>details</strong> &#x3D; {}
   );</span><span class=def id=operation-retry-PaymentValidationErrors>
   [NewObject]
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-retry">retry</a></strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> &#x3D; {});</span>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-retry">retry</a></strong>(optional <a href='PaymentValidationErrors.html'>PaymentValidationErrors</a> <strong>errorFields</strong> &#x3D; {});</span><span class=def id=attribute-onpayerdetailchange>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;payment-request&#x2F;#dom-paymentresponse-onpayerdetailchange">onpayerdetailchange</a></strong>;</span>
 };</span></code></pre>
   
   
