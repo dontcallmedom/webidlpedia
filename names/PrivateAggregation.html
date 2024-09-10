@@ -1,0 +1,55 @@
+---
+title: <code>PrivateAggregation</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;#privateaggregation">Private Aggregation API</a> defines <code>PrivateAggregation</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a>,<a class=realm href='../globals/SharedStorageWorklet.html'>SharedStorageWorklet</a>),
+ SecureContext]
+interface <strong>PrivateAggregation</strong> {<span class=def id=operation-contributeToHistogram-PAHistogramContribution>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;#dom-privateaggregation-contributetohistogram">contributeToHistogram</a></strong>(<a href='PAHistogramContribution.html'>PAHistogramContribution</a> <strong>contribution</strong>);</span><span class=def id=operation-enableDebugMode-PADebugModeOptions>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;#dom-privateaggregation-enabledebugmode">enableDebugMode</a></strong>(optional <a href='PADebugModeOptions.html'>PADebugModeOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a>, SecureContext]
+partial interface <strong>PrivateAggregation</strong> {<span class=def id=operation-contributeToHistogramOnEvent-DOMString-PAExtendedHistogramContribution>
+  <span class=primitive>undefined</span> <strong>contributeToHistogramOnEvent</strong>(
+      <span class=primitive>DOMString</span> <strong>event</strong>, <a href='PAExtendedHistogramContribution.html'>PAExtendedHistogramContribution</a> <strong>contribution</strong>);</span>
+};</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/InterestGroupScriptRunnerGlobalScope.html'>InterestGroupScriptRunnerGlobalScope</a>,<a class=realm href='../globals/SharedStorageWorklet.html'>SharedStorageWorklet</a>),
+ SecureContext]
+interface <strong>PrivateAggregation</strong> {<span class=def id=operation-contributeToHistogram-PAHistogramContribution>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;#dom-privateaggregation-contributetohistogram">contributeToHistogram</a></strong>(<a href='PAHistogramContribution.html'>PAHistogramContribution</a> <strong>contribution</strong>);</span><span class=def id=operation-enableDebugMode-PADebugModeOptions>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;#dom-privateaggregation-enabledebugmode">enableDebugMode</a></strong>(optional <a href='PADebugModeOptions.html'>PADebugModeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-contributeToHistogramOnEvent-DOMString-PAExtendedHistogramContribution>
+  <span class=primitive>undefined</span> <strong>contributeToHistogramOnEvent</strong>(
+      <span class=primitive>DOMString</span> <strong>event</strong>, <a href='PAExtendedHistogramContribution.html'>PAExtendedHistogramContribution</a> <strong>contribution</strong>);</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>PrivateAggregation</code></h3>
+
+  <ul>
+    <li><code><a href="InterestGroupScriptRunnerGlobalScope.html">InterestGroupScriptRunnerGlobalScope</a><a href=InterestGroupScriptRunnerGlobalScope.html#attribute-privateAggregation>.privateAggregation</a></code></li>
+<li><code><a href="SharedStorageWorkletGlobalScope.html">SharedStorageWorkletGlobalScope</a><a href=SharedStorageWorkletGlobalScope.html#attribute-privateAggregation>.privateAggregation</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="InterestGroupScriptRunnerGlobalScope.html">InterestGroupScriptRunnerGlobalScope</a></code></li>
+<li><code><a href="SharedStorageWorkletGlobalScope.html">SharedStorageWorkletGlobalScope</a></code></li>
+
+  </ul>
+</section>
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;">Shared Storage API</a> refers to <code>PrivateAggregation</code></li>
+
+  </ul></section>

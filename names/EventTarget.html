@@ -18,8 +18,26 @@ interface <strong>EventTarget</strong> {<span class=def id=constructor>
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-eventtarget-removeeventlistener">removeEventListener</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-dispatchEvent-Event>
   <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-eventtarget-dispatchevent">dispatchEvent</a></strong>(<a href='Event.html'>Event</a> <strong>event</strong>);</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;">Observable</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>EventTarget</strong> {<span class=def id=operation-when-DOMString-ObservableEventListenerOptions>
+  <a href='Observable.html'>Observable</a> <strong>when</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='ObservableEventListenerOptions.html'>ObservableEventListenerOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;*]
+interface <strong>EventTarget</strong> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=operation-addEventListener-DOMString-EventListener-AddEventListenerOptions-boolean>
+
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-eventtarget-addeventlistener">addEventListener</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='AddEventListenerOptions.html'>AddEventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-removeEventListener-DOMString-EventListener-EventListenerOptions-boolean>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-eventtarget-removeeventlistener">removeEventListener</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>, <a href='EventListener.html'>EventListener</a>? <strong>callback</strong>, optional (<a href='EventListenerOptions.html'>EventListenerOptions</a> or <span class=primitive>boolean</span>) <strong>options</strong> &#x3D; {});</span><span class=def id=operation-dispatchEvent-Event>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-eventtarget-dispatchevent">dispatchEvent</a></strong>(<a href='Event.html'>Event</a> <strong>event</strong>);</span><span class=def id=operation-when-DOMString-ObservableEventListenerOptions>
+  <a href='Observable.html'>Observable</a> <strong>when</strong>(<span class=primitive>DOMString</span> <strong>type</strong>, optional <a href='ObservableEventListenerOptions.html'>ObservableEventListenerOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>EventTarget</code></h3>
@@ -177,6 +195,7 @@ interface <strong>EventTarget</strong> {<span class=def id=constructor>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;js-self-profiling&#x2F;">JS Self-Profiling API</a> refers to <code>EventTarget</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;keyboard-lock&#x2F;">Keyboard Lock</a> refers to <code>EventTarget</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;netinfo&#x2F;">Network Information API</a> refers to <code>EventTarget</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;">Observable</a> refers to <code>EventTarget</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>EventTarget</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;">Web Serial API</a> refers to <code>EventTarget</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>EventTarget</code></li>

@@ -47,8 +47,64 @@ dictionary <strong>AuctionAdConfig</strong> {<span class=def>
   Promise&lt;<a href='Uint8Array.html'>Uint8Array</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-serverresponse">serverResponse</a></strong>;</span><span class=def>
   <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-requestid">requestId</a></strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;">Private Aggregation API</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>AuctionAdConfig</strong> {<span class=def>
+  sequence&lt;<span class=primitive>bigint</span>&gt; <strong>auctionReportBuyerKeys</strong>;</span><span class=def>
+  record&lt;<span class=primitive>DOMString</span>, <a href='AuctionReportBuyersConfig.html'>AuctionReportBuyersConfig</a>&gt; <strong>auctionReportBuyers</strong>;</span><span class=def>
+  <a href='AuctionReportBuyerDebugModeConfig.html'>AuctionReportBuyerDebugModeConfig</a> <strong>auctionReportBuyerDebugModeConfig</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuctionAdConfig</strong> {<span class=def>
+  <a href='ProtectedAudiencePrivateAggregationConfig.html'>ProtectedAudiencePrivateAggregationConfig</a> <strong>privateAggregationConfig</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>AuctionAdConfig</strong> {<span class=def>
+  required <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-seller">seller</a></strong>;</span><span class=def>
+  required <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-decisionlogicurl">decisionLogicURL</a></strong>;</span><span class=def>
+
+  <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-trustedscoringsignalsurl">trustedScoringSignalsURL</a></strong>;</span><span class=def>
+  <span class=primitive>long</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-maxtrustedscoringsignalsurllength">maxTrustedScoringSignalsURLLength</a></strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>USVString</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-interestgroupbuyers">interestGroupBuyers</a></strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-auctionsignals">auctionSignals</a></strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-sellersignals">sellerSignals</a></strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-directfromsellersignalsheaderadslot">directFromSellerSignalsHeaderAdSlot</a></strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-deprecatedrenderurlreplacements">deprecatedRenderURLReplacements</a></strong>;</span><span class=def>
+  <span class=primitive>unsigned long long</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-sellertimeout">sellerTimeout</a></strong>;</span><span class=def>
+  <span class=primitive>unsigned short</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-sellerexperimentgroupid">sellerExperimentGroupId</a></strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>any</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyersignals">perBuyerSignals</a></strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned long long</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyertimeouts">perBuyerTimeouts</a></strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned long long</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyercumulativetimeouts">perBuyerCumulativeTimeouts</a></strong>;</span><span class=def>
+  <span class=primitive>unsigned long long</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-reportingtimeout">reportingTimeout</a></strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-sellercurrency">sellerCurrency</a></strong>;</span><span class=def>
+  Promise&lt;record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyercurrencies">perBuyerCurrencies</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned short</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyermultibidlimits">perBuyerMultiBidLimits</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned short</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyergrouplimits">perBuyerGroupLimits</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <span class=primitive>unsigned short</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyerexperimentgroupids">perBuyerExperimentGroupIds</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, record&lt;<span class=primitive>USVString</span>, <span class=primitive>double</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyerprioritysignals">perBuyerPrioritySignals</a></strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-requiredsellercapabilities">requiredSellerCapabilities</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>DOMString</span>, <span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-requestedsize">requestedSize</a></strong>;</span><span class=def>
+  sequence&lt;record&lt;<span class=primitive>DOMString</span>, <span class=primitive>DOMString</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-allslotsrequestedsizes">allSlotsRequestedSizes</a></strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-additionalbids">additionalBids</a></strong>;</span><span class=def>
+  <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-auctionnonce">auctionNonce</a></strong>;</span><span class=def>
+  <a href='AuctionRealTimeReportingConfig.html'>AuctionRealTimeReportingConfig</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-sellerrealtimereportingconfig">sellerRealTimeReportingConfig</a></strong>;</span><span class=def>
+  record&lt;<span class=primitive>USVString</span>, <a href='AuctionRealTimeReportingConfig.html'>AuctionRealTimeReportingConfig</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-perbuyerrealtimereportingconfig">perBuyerRealTimeReportingConfig</a></strong>;</span><span class=def>
+  sequence&lt;<a href='AuctionAdConfig.html'>AuctionAdConfig</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-componentauctions">componentAuctions</a></strong> &#x3D; [];</span><span class=def>
+  <a href='AbortSignal.html'>AbortSignal</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-signal">signal</a></strong>;</span><span class=def>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-resolvetoconfig">resolveToConfig</a></strong>;</span><span class=def>
+
+  Promise&lt;<a href='Uint8Array.html'>Uint8Array</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-serverresponse">serverResponse</a></strong>;</span><span class=def>
+  <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;turtledove&#x2F;#dom-auctionadconfig-requestid">requestId</a></strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>bigint</span>&gt; <strong>auctionReportBuyerKeys</strong>;</span><span class=def>
+  record&lt;<span class=primitive>DOMString</span>, <a href='AuctionReportBuyersConfig.html'>AuctionReportBuyersConfig</a>&gt; <strong>auctionReportBuyers</strong>;</span><span class=def>
+  <a href='AuctionReportBuyerDebugModeConfig.html'>AuctionReportBuyerDebugModeConfig</a> <strong>auctionReportBuyerDebugModeConfig</strong>;</span><span class=def>
+  <a href='ProtectedAudiencePrivateAggregationConfig.html'>ProtectedAudiencePrivateAggregationConfig</a> <strong>privateAggregationConfig</strong>;</span>
+};</span></code></pre></details>
 </section>
 
 <section>
@@ -60,4 +116,8 @@ dictionary <strong>AuctionAdConfig</strong> {<span class=def>
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;patcg-individual-drafts.github.io&#x2F;private-aggregation-api&#x2F;">Private Aggregation API</a> refers to <code>AuctionAdConfig</code></li>
+
+  </ul></section>

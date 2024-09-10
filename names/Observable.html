@@ -1,0 +1,82 @@
+---
+title: <code>Observable</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#observable">Observable</a> defines <code>Observable</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;*]
+interface <strong>Observable</strong> {<span class=def id=constructor-SubscribeCallback>
+  <strong>constructor</strong>(<a href='SubscribeCallback.html'>SubscribeCallback</a> <strong>callback</strong>);</span><span class=def id=operation-subscribe-ObserverUnion-SubscribeOptions>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-subscribe">subscribe</a></strong>(optional <a href='ObserverUnion.html'>ObserverUnion</a> <strong>observer</strong> &#x3D; {}, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static><span class="comment">
+
+  &#x2F;&#x2F; Constructs a native Observable from value if it’s any of the following:
+  &#x2F;&#x2F;   - Observable
+  &#x2F;&#x2F;   - AsyncIterable
+  &#x2F;&#x2F;   - Iterable
+  &#x2F;&#x2F;   - Promise
+  </span>static <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-from">from</a></strong>(<span class=primitive>any</span> <strong>value</strong>);</span><span class=def id=operation-takeUntil-any><span class="comment">
+
+  &#x2F;&#x2F; Observable-returning operators. See &quot;Operators&quot; section in the spec.
+  &#x2F;&#x2F;
+  &#x2F;&#x2F; takeUntil() can consume promises, iterables, async iterables, and other
+  &#x2F;&#x2F; observables.
+  </span><a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-takeuntil">takeUntil</a></strong>(<span class=primitive>any</span> <strong>notifier</strong>);</span><span class=def id=operation-map-Mapper>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-map">map</a></strong>(<a href='Mapper.html'>Mapper</a> <strong>mapper</strong>);</span><span class=def id=operation-filter-Predicate>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-filter">filter</a></strong>(<a href='Predicate.html'>Predicate</a> <strong>predicate</strong>);</span><span class=def id=operation-take-unsigned long long>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-take">take</a></strong>(<span class=primitive>unsigned long long</span> <strong>amount</strong>);</span><span class=def id=operation-drop-unsigned long long>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-drop">drop</a></strong>(<span class=primitive>unsigned long long</span> <strong>amount</strong>);</span><span class=def id=operation-flatMap-Mapper>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-flatmap">flatMap</a></strong>(<a href='Mapper.html'>Mapper</a> <strong>mapper</strong>);</span><span class=def id=operation-switchMap-Mapper>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-switchmap">switchMap</a></strong>(<a href='Mapper.html'>Mapper</a> <strong>mapper</strong>);</span><span class=def id=operation-inspect-ObservableInspectorUnion>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-inspect">inspect</a></strong>(optional <a href='ObservableInspectorUnion.html'>ObservableInspectorUnion</a> <strong>inspect_observer</strong> &#x3D; {});</span><span class=def id=operation-catch-CatchCallback>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-catch">catch</a></strong>(<a href='CatchCallback.html'>CatchCallback</a> <strong>callback</strong>);</span><span class=def id=operation-finally-VoidFunction>
+  <a href='Observable.html'>Observable</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-finally">finally</a></strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>callback</strong>);</span><span class=def id=operation-toArray-SubscribeOptions><span class="comment">
+
+  &#x2F;&#x2F; Promise-returning operators.
+  </span>Promise&lt;sequence&lt;<span class=primitive>any</span>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-toarray">toArray</a></strong>(optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-forEach-Visitor-SubscribeOptions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-foreach">forEach</a></strong>(<a href='Visitor.html'>Visitor</a> <strong>callback</strong>, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-every-Predicate-SubscribeOptions>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-every">every</a></strong>(<a href='Predicate.html'>Predicate</a> <strong>predicate</strong>, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-first-SubscribeOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-first">first</a></strong>(optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-last-SubscribeOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-last">last</a></strong>(optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-find-Predicate-SubscribeOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-find">find</a></strong>(<a href='Predicate.html'>Predicate</a> <strong>predicate</strong>, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-some-Predicate-SubscribeOptions>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-some">some</a></strong>(<a href='Predicate.html'>Predicate</a> <strong>predicate</strong>, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-reduce-Reducer-any-SubscribeOptions>
+  Promise&lt;<span class=primitive>any</span>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-observable-reduce">reduce</a></strong>(<a href='Reducer.html'>Reducer</a> <strong>reducer</strong>, optional <span class=primitive>any</span> <strong>initialValue</strong>, optional <a href='SubscribeOptions.html'>SubscribeOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Observable</code></h3>
+
+  <ul>
+    <li><code><a href="Observable.html">Observable</a><a href=Observable.html#constructor-SubscribeCallback>()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-static>.from()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-takeUntil-any>.takeUntil()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-map-Mapper>.map()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-filter-Predicate>.filter()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-take-unsigned long long>.take()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-drop-unsigned long long>.drop()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-flatMap-Mapper>.flatMap()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-switchMap-Mapper>.switchMap()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-inspect-ObservableInspectorUnion>.inspect()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-catch-CatchCallback>.catch()</a></code></li>
+<li><code><a href="Observable.html">Observable</a><a href=Observable.html#operation-finally-VoidFunction>.finally()</a></code></li>
+<li><code><a href="EventTarget.html">EventTarget</a><a href=EventTarget.html#operation-when-DOMString-ObservableEventListenerOptions>.when()</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="EventTarget.html">EventTarget</a></code></li>
+<li><code><a href="Observable.html">Observable</a></code></li>
+
+  </ul>
+</section>
+  

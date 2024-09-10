@@ -1,0 +1,30 @@
+---
+title: <code>Subscriber</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#subscriber">Observable</a> defines <code>Subscriber</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;*]
+interface <strong>Subscriber</strong> {<span class=def id=operation-next-any>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-next">next</a></strong>(<span class=primitive>any</span> <strong>value</strong>);</span><span class=def id=operation-error-any>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-error">error</a></strong>(<span class=primitive>any</span> <strong>error</strong>);</span><span class=def id=operation-complete>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-complete">complete</a></strong>();</span><span class=def id=operation-addTeardown-VoidFunction>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-addteardown">addTeardown</a></strong>(<a href='VoidFunction.html'>VoidFunction</a> <strong>teardown</strong>);</span><span class=def id=attribute-active><span class="comment">
+
+  &#x2F;&#x2F; True after the Subscriber is created, up until either
+  &#x2F;&#x2F; complete()&#x2F;error() are invoked, or the subscriber unsubscribes. Inside
+  &#x2F;&#x2F; complete()&#x2F;error(), this attribute is true.
+  </span>readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-active">active</a></strong>;</span><span class=def id=attribute-signal>
+
+  readonly attribute <a href='AbortSignal.html'>AbortSignal</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;observable&#x2F;#dom-subscriber-signal">signal</a></strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+
+
+  
