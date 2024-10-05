@@ -7,7 +7,7 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#BaseAudioContext">Web Audio API</a> defines <code>BaseAudioContext</code></p>
+  <p><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#BaseAudioContext">Web Audio API 1.1</a> defines <code>BaseAudioContext</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -25,8 +25,8 @@ interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTa
     <a href='AnalyserNode.html'>AnalyserNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createanalyser">createAnalyser</a></strong> ();</span><span class=def id=operation-createBiquadFilter>
     <a href='BiquadFilterNode.html'>BiquadFilterNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createbiquadfilter">createBiquadFilter</a></strong> ();</span><span class=def id=operation-createBuffer-unsigned long-unsigned long-float>
     <a href='AudioBuffer.html'>AudioBuffer</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createbuffer">createBuffer</a></strong> (<span class=primitive>unsigned long</span> <strong>numberOfChannels</strong>,
-                              <span class=primitive>unsigned long</span> <strong>length</strong>,
-                              <span class=primitive>float</span> <strong>sampleRate</strong>);</span><span class=def id=operation-createBufferSource>
+                                <span class=primitive>unsigned long</span> <strong>length</strong>,
+                                <span class=primitive>float</span> <strong>sampleRate</strong>);</span><span class=def id=operation-createBufferSource>
     <a href='AudioBufferSourceNode.html'>AudioBufferSourceNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createbuffersource">createBufferSource</a></strong> ();</span><span class=def id=operation-createChannelMerger-unsigned long>
     <a href='ChannelMergerNode.html'>ChannelMergerNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createchannelmerger">createChannelMerger</a></strong> (optional <span class=primitive>unsigned long</span> <strong>numberOfInputs</strong> &#x3D; 6);</span><span class=def id=operation-createChannelSplitter-unsigned long>
     <a href='ChannelSplitterNode.html'>ChannelSplitterNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createchannelsplitter">createChannelSplitter</a></strong> (
@@ -37,12 +37,12 @@ interface <strong>BaseAudioContext</strong> : <a href='EventTarget.html'>EventTa
     <a href='DynamicsCompressorNode.html'>DynamicsCompressorNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createdynamicscompressor">createDynamicsCompressor</a></strong> ();</span><span class=def id=operation-createGain>
     <a href='GainNode.html'>GainNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-creategain">createGain</a></strong> ();</span><span class=def id=operation-createIIRFilter-double-double>
     <a href='IIRFilterNode.html'>IIRFilterNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createiirfilter">createIIRFilter</a></strong> (sequence&lt;<span class=primitive>double</span>&gt; <strong>feedforward</strong>,
-                                   sequence&lt;<span class=primitive>double</span>&gt; <strong>feedback</strong>);</span><span class=def id=operation-createOscillator>
+                                    sequence&lt;<span class=primitive>double</span>&gt; <strong>feedback</strong>);</span><span class=def id=operation-createOscillator>
     <a href='OscillatorNode.html'>OscillatorNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createoscillator">createOscillator</a></strong> ();</span><span class=def id=operation-createPanner>
     <a href='PannerNode.html'>PannerNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createpanner">createPanner</a></strong> ();</span><span class=def id=operation-createPeriodicWave-float-float-PeriodicWaveConstraints>
     <a href='PeriodicWave.html'>PeriodicWave</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createperiodicwave">createPeriodicWave</a></strong> (sequence&lt;<span class=primitive>float</span>&gt; <strong>real</strong>,
-                                     sequence&lt;<span class=primitive>float</span>&gt; <strong>imag</strong>,
-                                     optional <a href='PeriodicWaveConstraints.html'>PeriodicWaveConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-createScriptProcessor-unsigned long-unsigned long-unsigned long>
+                                        sequence&lt;<span class=primitive>float</span>&gt; <strong>imag</strong>,
+                                        optional <a href='PeriodicWaveConstraints.html'>PeriodicWaveConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-createScriptProcessor-unsigned long-unsigned long-unsigned long>
     <a href='ScriptProcessorNode.html'>ScriptProcessorNode</a> <strong><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-audio-api&#x2F;#dom-baseaudiocontext-createscriptprocessor">createScriptProcessor</a></strong>(
         optional <span class=primitive>unsigned long</span> <strong>bufferSize</strong> &#x3D; 0,
         optional <span class=primitive>unsigned long</span> <strong>numberOfInputChannels</strong> &#x3D; 2,
