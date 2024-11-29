@@ -12,9 +12,22 @@ base: ../
 
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
 interface <strong>Sanitizer</strong> {<span class=def id=constructor-SanitizerConfig>
-  <strong>constructor</strong>(optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>config</strong> &#x3D; {});</span><span class=def id=operation-get>
-  <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-get">get</a></strong>();</span><span class=def id=operation-getUnsafe>
-  <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-getunsafe">getUnsafe</a></strong>();</span>
+  <strong>constructor</strong>(optional <a href='SanitizerConfig.html'>SanitizerConfig</a> <strong>configuration</strong> &#x3D; {});</span><span class=def id=operation-get><span class="comment">
+
+  &#x2F;&#x2F; Query configuration:
+  </span><a href='SanitizerConfig.html'>SanitizerConfig</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-get">get</a></strong>();</span><span class=def id=operation-allowElement-SanitizerElementWithAttributes><span class="comment">
+
+  &#x2F;&#x2F; Modify a Sanitizer’s lists and fields:
+  </span><span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-allowelement">allowElement</a></strong>(<a href='SanitizerElementWithAttributes.html'>SanitizerElementWithAttributes</a> <strong>element</strong>);</span><span class=def id=operation-removeElement-SanitizerElement>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-removeelement">removeElement</a></strong>(<a href='SanitizerElement.html'>SanitizerElement</a> <strong>element</strong>);</span><span class=def id=operation-replaceElementWithChildren-SanitizerElement>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-replaceelementwithchildren">replaceElementWithChildren</a></strong>(<a href='SanitizerElement.html'>SanitizerElement</a> <strong>element</strong>);</span><span class=def id=operation-allowAttribute-SanitizerAttribute>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-allowattribute">allowAttribute</a></strong>(<a href='SanitizerAttribute.html'>SanitizerAttribute</a> <strong>attribute</strong>);</span><span class=def id=operation-removeAttribute-SanitizerAttribute>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-removeattribute">removeAttribute</a></strong>(<a href='SanitizerAttribute.html'>SanitizerAttribute</a> <strong>attribute</strong>);</span><span class=def id=operation-setComments-boolean>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-setcomments">setComments</a></strong>(<span class=primitive>boolean</span> <strong>allow</strong>);</span><span class=def id=operation-setDataAttributes-boolean>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-setdataattributes">setDataAttributes</a></strong>(<span class=primitive>boolean</span> <strong>allow</strong>);</span><span class=def id=operation-removeUnsafe><span class="comment">
+
+  &#x2F;&#x2F; Remove markup that executes script. May modify multiple lists:
+  </span><span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;#dom-sanitizer-removeunsafe">removeUnsafe</a></strong>();</span>
 };</span></code></pre>
   
   
