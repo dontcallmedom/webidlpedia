@@ -24,9 +24,11 @@ partial interface <strong>CaptureController</strong> {<span class=def id=attribu
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-surface-control&#x2F;#zoom-control-apis">Captured Surface Control</a><pre class=webidl><code><span class=def>partial interface <strong>CaptureController</strong> {<span class=def id=operation-getSupportedZoomLevels>
   sequence&lt;<span class=primitive>long</span>&gt; <strong>getSupportedZoomLevels</strong>();</span><span class=def id=operation-getZoomLevel>
-  <span class=primitive>long</span> <strong>getZoomLevel</strong>();</span><span class=def id=operation-setZoomLevel-long>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setZoomLevel</strong>(<span class=primitive>long</span> <strong>zoomLevel</strong>);</span><span class=def id=attribute-oncapturedzoomlevelchange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncapturedzoomlevelchange</strong>;</span>
+  <span class=primitive>long</span> <strong>getZoomLevel</strong>();</span><span class=def id=operation-increaseZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>increaseZoomLevel</strong>();</span><span class=def id=operation-decreaseZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>decreaseZoomLevel</strong>();</span><span class=def id=operation-resetZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resetZoomLevel</strong>();</span><span class=def id=attribute-onzoomlevelchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onzoomlevelchange</strong>;</span>
 };</span><span class=def>
 
 partial interface <strong>CaptureController</strong> {<span class=def id=constructor>
@@ -43,9 +45,11 @@ interface <strong>CaptureController</strong> : <a href='EventTarget.html'>EventT
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-screen-share&#x2F;#dom-capturecontroller-setfocusbehavior">setFocusBehavior</a></strong>(<a href='CaptureStartFocusBehavior.html'>CaptureStartFocusBehavior</a> <strong>focusBehavior</strong>);</span><span class=def id=attribute-oncapturedmousechange>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncapturedmousechange</strong>;</span><span class=def id=operation-getSupportedZoomLevels>
   sequence&lt;<span class=primitive>long</span>&gt; <strong>getSupportedZoomLevels</strong>();</span><span class=def id=operation-getZoomLevel>
-  <span class=primitive>long</span> <strong>getZoomLevel</strong>();</span><span class=def id=operation-setZoomLevel-long>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setZoomLevel</strong>(<span class=primitive>long</span> <strong>zoomLevel</strong>);</span><span class=def id=attribute-oncapturedzoomlevelchange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncapturedzoomlevelchange</strong>;</span><span class=def id=constructor>
+  <span class=primitive>long</span> <strong>getZoomLevel</strong>();</span><span class=def id=operation-increaseZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>increaseZoomLevel</strong>();</span><span class=def id=operation-decreaseZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>decreaseZoomLevel</strong>();</span><span class=def id=operation-resetZoomLevel>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong>resetZoomLevel</strong>();</span><span class=def id=attribute-onzoomlevelchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onzoomlevelchange</strong>;</span><span class=def id=constructor>
   <strong>constructor</strong>();</span><span class=def id=operation-forwardWheel-HTMLElement>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>forwardWheel</strong>(<a href='HTMLElement.html'>HTMLElement</a>? <strong>element</strong>);</span>
 };</span></code></pre></details>
