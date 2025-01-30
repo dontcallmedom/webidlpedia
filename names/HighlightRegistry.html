@@ -7,15 +7,25 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-highlight-api-1&#x2F;#highlightregistry">CSS Custom Highlight API Module Level 1</a> defines <code>HighlightRegistry</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-highlight-api-1&#x2F;">CSS Custom Highlight API Module Level 1</a> defines <code>HighlightRegistry</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>HighlightRegistry</strong> {<span class=def>
   maplike&lt;<span class=primitive>DOMString</span>, <a href='Highlight.html'>Highlight</a>&gt;;</span>
+};</span><span class=def>
+
+partial interface <strong>HighlightRegistry</strong> {<span class=def id=operation-highlightsFromPoint-float-float-HighlightsFromPointOptions>
+  sequence&lt;<a href='Highlight.html'>Highlight</a>&gt; <strong>highlightsFromPoint</strong>(<span class=primitive>float</span> <strong>x</strong>, <span class=primitive>float</span> <strong>y</strong>, optional <a href='HighlightsFromPointOptions.html'>HighlightsFromPointOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>HighlightRegistry</strong> {<span class=def>
+  maplike&lt;<span class=primitive>DOMString</span>, <a href='Highlight.html'>Highlight</a>&gt;;</span><span class=def id=operation-highlightsFromPoint-float-float-HighlightsFromPointOptions>
+  sequence&lt;<a href='Highlight.html'>Highlight</a>&gt; <strong>highlightsFromPoint</strong>(<span class=primitive>float</span> <strong>x</strong>, <span class=primitive>float</span> <strong>y</strong>, optional <a href='HighlightsFromPointOptions.html'>HighlightsFromPointOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></details>
 </section>
 
 <section>
