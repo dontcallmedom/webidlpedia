@@ -91,6 +91,11 @@ partial interface <strong>Window</strong> {<span class=def id=operation-captureE
 partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-speechSynthesis>
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;#spec-window-attribute">Iframe credentialless</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-credentialless>
@@ -144,11 +149,6 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-portalHo
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-sharedStorage>
   [SecureContext] readonly attribute <a href='SharedStorage.html'>SharedStorage</a>? <strong>sharedStorage</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
-
-partial interface <strong>Window</strong> {<span class=def id=attribute-speechSynthesis>
-    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-app-launch&#x2F;#launchqueue-interface">Web App Launch Handler API</a><pre class=webidl><code><span class=def>
 
@@ -418,7 +418,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   readonly attribute <a href='Storage.html'>Storage</a> <strong>localStorage</strong>;</span><span class=def id=attribute-orientation>
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-event>
-  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-credentialless>
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-speechSynthesis>
+    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-credentialless>
   readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
@@ -434,8 +435,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onappinstalled</strong>;</span><span class=def id=attribute-onbeforeinstallprompt>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbeforeinstallprompt</strong>;</span><span class=def id=attribute-portalHost>
     readonly attribute <a href='PortalHost.html'>PortalHost</a>? <strong>portalHost</strong>;</span><span class=def id=attribute-sharedStorage>
-  [SecureContext] readonly attribute <a href='SharedStorage.html'>SharedStorage</a>? <strong>sharedStorage</strong>;</span><span class=def id=attribute-speechSynthesis>
-    [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-launchQueue>
+  [SecureContext] readonly attribute <a href='SharedStorage.html'>SharedStorage</a>? <strong>sharedStorage</strong>;</span><span class=def id=attribute-launchQueue>
   readonly attribute <a href='LaunchQueue.html'>LaunchQueue</a> <strong>launchQueue</strong>;</span><span class=def id=operation-navigate-SpatialNavigationDirection>
     <span class=primitive>undefined</span> <strong>navigate</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>);</span><span class=def id=attribute-viewport>
 [SameObject, Replaceable] readonly attribute <a href='Viewport.html'>Viewport</a> <strong>viewport</strong>;</span><span class=def id=operation-getComputedStyle-Element-CSSOMString>
@@ -521,6 +521,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;long-animation-frames&#x2F;">Long Animation Frames API</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;">Iframe credentialless</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
@@ -531,7 +532,6 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;manifest-incubations&#x2F;">Manifest Incubations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shared-storage&#x2F;">Shared Storage API</a> refers to <code>Window</code></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;web-app-launch&#x2F;">Web App Launch Handler API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Level 1</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-viewport-1&#x2F;">CSS Viewport Module Level 1</a> refers to <code>Window</code></li>
