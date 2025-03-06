@@ -7,14 +7,34 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;svg2-draft&#x2F;paths.html#InterfaceSVGPathElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGPathElement</code></p>
+  <p><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;svg-paths&#x2F;">SVG Paths</a> defines <code>SVGPathElement</code></p>
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>SVGPathElement</strong> : <a href='SVGGeometryElement.html'>SVGGeometryElement</a> {
-};</span></code></pre>
+interface <strong>SVGPathElement</strong> : <a href='SVGGeometryElement.html'>SVGGeometryElement</a> {<span class=def id=attribute-pathLength>
+
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>pathLength</strong>;</span><span class=def id=operation-getTotalLength>
+
+  <span class=primitive>float</span> <strong>getTotalLength</strong>();</span><span class=def id=operation-getPointAtLength-float>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getPointAtLength</strong>(<span class=primitive>float</span> <strong>distance</strong>);</span><span class=def id=operation-getPathSegmentAtLength-float>
+  <a href='SVGPathSegment.html'>SVGPathSegment</a>? <strong>getPathSegmentAtLength</strong>(<span class=primitive>float</span> <strong>distance</strong>);</span>
+};</span><span class=def>
+
+<a href='SVGPathElement.html'>SVGPathElement</a> includes <a href='SVGPathData.html'>SVGPathData</a>;</span></code></pre>
   
-  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>SVGPathElement</strong> : <a href='SVGGeometryElement.html'>SVGGeometryElement</a> {<span class=def id=attribute-pathLength>
+
+  readonly attribute <a href='SVGAnimatedNumber.html'>SVGAnimatedNumber</a> <strong>pathLength</strong>;</span><span class=def id=operation-getTotalLength>
+
+  <span class=primitive>float</span> <strong>getTotalLength</strong>();</span><span class=def id=operation-getPointAtLength-float>
+  <a href='DOMPoint.html'>DOMPoint</a> <strong>getPointAtLength</strong>(<span class=primitive>float</span> <strong>distance</strong>);</span><span class=def id=operation-getPathSegmentAtLength-float>
+  <a href='SVGPathSegment.html'>SVGPathSegment</a>? <strong>getPathSegmentAtLength</strong>(<span class=primitive>float</span> <strong>distance</strong>);</span><span class=def id=operation-getPathData-SVGPathDataSettings>
+   sequence&lt;<a href='SVGPathSegment.html'>SVGPathSegment</a>&gt; <strong>getPathData</strong>(optional <a href='SVGPathDataSettings.html'>SVGPathDataSettings</a> <strong>settings</strong> &#x3D; {});</span><span class=def id=operation-setPathData-SVGPathSegment>
+   <span class=primitive>undefined</span> <strong>setPathData</strong>(sequence&lt;<a href='SVGPathSegment.html'>SVGPathSegment</a>&gt; <strong>pathData</strong>);</span>
+};</span></code></pre></details>
 </section>
 
 
