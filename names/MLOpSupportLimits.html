@@ -47,6 +47,10 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>cumulativeSum</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>add</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>sub</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>mul</strong>;</span><span class=def>
@@ -58,11 +62,15 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>equal</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>notEqual</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>greater</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>greaterOrEqual</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>lesser</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>lesserOrEqual</strong>;</span><span class=def>
-  <a href='MLLogicalNotSupportLimits.html'>MLLogicalNotSupportLimits</a> <strong>logicalNot</strong>;</span>
+  <a href='MLLogicalNotSupportLimits.html'>MLLogicalNotSupportLimits</a> <strong>logicalNot</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalAnd</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalOr</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalXor</strong>;</span>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
@@ -77,8 +85,17 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>neg</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>reciprocal</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sin</strong>;</span><span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sign</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sqrt</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tan</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLQuantizationSupportLimits.html'>MLQuantizationSupportLimits</a> <strong>dequantizeLinear</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLQuantizationSupportLimits.html'>MLQuantizationSupportLimits</a> <strong>quantizeLinear</strong>;</span>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
@@ -91,6 +108,14 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gather</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gatherElements</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gatherND</strong>;</span>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
@@ -185,10 +210,22 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>reverse</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLScatterSupportLimits.html'>MLScatterSupportLimits</a> <strong>scatterElements</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLScatterSupportLimits.html'>MLScatterSupportLimits</a> <strong>scatterND</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sigmoid</strong>;</span>
 };</span><span class=def>
 
-partial  dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>slice</strong>;</span>
 };</span><span class=def>
 
@@ -210,6 +247,10 @@ partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tanh</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tile</strong>;</span>
 };</span><span class=def>
 
 partial dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
@@ -239,6 +280,7 @@ dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLConcatSupportLimits.html'>MLConcatSupportLimits</a> <strong>concat</strong>;</span><span class=def>
   <a href='MLConv2dSupportLimits.html'>MLConv2dSupportLimits</a> <strong>conv2d</strong>;</span><span class=def>
   <a href='MLConv2dSupportLimits.html'>MLConv2dSupportLimits</a> <strong>convTranspose2d</strong>;</span><span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>cumulativeSum</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>add</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>sub</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>mul</strong>;</span><span class=def>
@@ -247,11 +289,15 @@ dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>min</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>pow</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>equal</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>notEqual</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>greater</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>greaterOrEqual</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>lesser</strong>;</span><span class=def>
   <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>lesserOrEqual</strong>;</span><span class=def>
   <a href='MLLogicalNotSupportLimits.html'>MLLogicalNotSupportLimits</a> <strong>logicalNot</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalAnd</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalOr</strong>;</span><span class=def>
+  <a href='MLBinarySupportLimits.html'>MLBinarySupportLimits</a> <strong>logicalXor</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>abs</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>ceil</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>cos</strong>;</span><span class=def>
@@ -263,11 +309,16 @@ dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>neg</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>reciprocal</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sin</strong>;</span><span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sign</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sqrt</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tan</strong>;</span><span class=def>
+  <a href='MLQuantizationSupportLimits.html'>MLQuantizationSupportLimits</a> <strong>dequantizeLinear</strong>;</span><span class=def>
+  <a href='MLQuantizationSupportLimits.html'>MLQuantizationSupportLimits</a> <strong>quantizeLinear</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>elu</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>expand</strong>;</span><span class=def>
   <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gather</strong>;</span><span class=def>
+  <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gatherElements</strong>;</span><span class=def>
+  <a href='MLGatherSupportLimits.html'>MLGatherSupportLimits</a> <strong>gatherND</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>gelu</strong>;</span><span class=def>
   <a href='MLGemmSupportLimits.html'>MLGemmSupportLimits</a> <strong>gemm</strong>;</span><span class=def>
   <a href='MLGruSupportLimits.html'>MLGruSupportLimits</a> <strong>gru</strong>;</span><span class=def>
@@ -299,6 +350,9 @@ dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>relu</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>resample2d</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>reshape</strong>;</span><span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>reverse</strong>;</span><span class=def>
+  <a href='MLScatterSupportLimits.html'>MLScatterSupportLimits</a> <strong>scatterElements</strong>;</span><span class=def>
+  <a href='MLScatterSupportLimits.html'>MLScatterSupportLimits</a> <strong>scatterND</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>sigmoid</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>slice</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>softmax</strong>;</span><span class=def>
@@ -306,6 +360,7 @@ dictionary <strong>MLOpSupportLimits</strong> {<span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>softsign</strong>;</span><span class=def>
   <a href='MLSplitSupportLimits.html'>MLSplitSupportLimits</a> <strong>split</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tanh</strong>;</span><span class=def>
+  <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>tile</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>transpose</strong>;</span><span class=def>
   <a href='MLSingleInputSupportLimits.html'>MLSingleInputSupportLimits</a> <strong>triangular</strong>;</span><span class=def>
   <a href='MLWhereSupportLimits.html'>MLWhereSupportLimits</a> <strong>where</strong>;</span>

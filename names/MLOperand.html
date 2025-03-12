@@ -33,6 +33,7 @@ interface <strong>MLOperand</strong> {<span class=def id=attribute-dataType>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-concat-MLOperand-unsigned long-MLOperatorOptions>.concat()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-conv2d-MLOperand-MLOperand-MLConv2dOptions>.conv2d()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-convTranspose2d-MLOperand-MLOperand-MLConvTranspose2dOptions>.convTranspose2d()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-cumulativeSum-MLOperand-unsigned long-MLCumulativeSumOptions>.cumulativeSum()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-add-MLOperand-MLOperand-MLOperatorOptions>.add()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sub-MLOperand-MLOperand-MLOperatorOptions>.sub()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-mul-MLOperand-MLOperand-MLOperatorOptions>.mul()</a></code></li>
@@ -41,11 +42,15 @@ interface <strong>MLOperand</strong> {<span class=def id=attribute-dataType>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-min-MLOperand-MLOperand-MLOperatorOptions>.min()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-pow-MLOperand-MLOperand-MLOperatorOptions>.pow()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-equal-MLOperand-MLOperand-MLOperatorOptions>.equal()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-notEqual-MLOperand-MLOperand-MLOperatorOptions>.notEqual()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-greater-MLOperand-MLOperand-MLOperatorOptions>.greater()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-greaterOrEqual-MLOperand-MLOperand-MLOperatorOptions>.greaterOrEqual()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-lesser-MLOperand-MLOperand-MLOperatorOptions>.lesser()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-lesserOrEqual-MLOperand-MLOperand-MLOperatorOptions>.lesserOrEqual()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-logicalNot-MLOperand-MLOperatorOptions>.logicalNot()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-logicalAnd-MLOperand-MLOperand-MLOperatorOptions>.logicalAnd()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-logicalOr-MLOperand-MLOperand-MLOperatorOptions>.logicalOr()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-logicalXor-MLOperand-MLOperand-MLOperatorOptions>.logicalXor()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-abs-MLOperand-MLOperatorOptions>.abs()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-ceil-MLOperand-MLOperatorOptions>.ceil()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-cos-MLOperand-MLOperatorOptions>.cos()</a></code></li>
@@ -57,11 +62,16 @@ interface <strong>MLOperand</strong> {<span class=def id=attribute-dataType>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-neg-MLOperand-MLOperatorOptions>.neg()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-reciprocal-MLOperand-MLOperatorOptions>.reciprocal()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sin-MLOperand-MLOperatorOptions>.sin()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sign-MLOperand-MLOperatorOptions>.sign()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sqrt-MLOperand-MLOperatorOptions>.sqrt()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-tan-MLOperand-MLOperatorOptions>.tan()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-dequantizeLinear-MLOperand-MLOperand-MLOperand-MLOperatorOptions>.dequantizeLinear()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-quantizeLinear-MLOperand-MLOperand-MLOperand-MLOperatorOptions>.quantizeLinear()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-elu-MLOperand-MLEluOptions>.elu()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-expand-MLOperand-unsigned long-MLOperatorOptions>.expand()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gather-MLOperand-MLOperand-MLGatherOptions>.gather()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gatherElements-MLOperand-MLOperand-MLGatherOptions>.gatherElements()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gatherND-MLOperand-MLOperand-MLOperatorOptions>.gatherND()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gelu-MLOperand-MLOperatorOptions>.gelu()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gemm-MLOperand-MLOperand-MLGemmOptions>.gemm()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-gru-MLOperand-MLOperand-MLOperand-unsigned long-unsigned long-MLGruOptions>.gru()</a></code></li>
@@ -93,13 +103,17 @@ interface <strong>MLOperand</strong> {<span class=def id=attribute-dataType>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-relu-MLOperand-MLOperatorOptions>.relu()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-resample2d-MLOperand-MLResample2dOptions>.resample2d()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-reshape-MLOperand-unsigned long-MLOperatorOptions>.reshape()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-reverse-MLOperand-MLReverseOptions>.reverse()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-scatterElements-MLOperand-MLOperand-MLOperand-MLScatterOptions>.scatterElements()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-scatterND-MLOperand-MLOperand-MLOperand-MLOperatorOptions>.scatterND()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-sigmoid-MLOperand-MLOperatorOptions>.sigmoid()</a></code></li>
-<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-slice-MLOperand-unsigned long-unsigned long-MLOperatorOptions>.slice()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-slice-MLOperand-unsigned long-unsigned long-MLSliceOptions>.slice()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-softmax-MLOperand-unsigned long-MLOperatorOptions>.softmax()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-softplus-MLOperand-MLOperatorOptions>.softplus()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-softsign-MLOperand-MLOperatorOptions>.softsign()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-split-MLOperand-unsigned long-unsigned long-MLSplitOptions>.split()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-tanh-MLOperand-MLOperatorOptions>.tanh()</a></code></li>
+<li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-tile-MLOperand-unsigned long-MLOperatorOptions>.tile()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-transpose-MLOperand-MLTransposeOptions>.transpose()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-triangular-MLOperand-MLTriangularOptions>.triangular()</a></code></li>
 <li><code><a href="MLGraphBuilder.html">MLGraphBuilder</a><a href=MLGraphBuilder.html#operation-where-MLOperand-MLOperand-MLOperand-MLOperatorOptions>.where()</a></code></li>
