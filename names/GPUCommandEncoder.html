@@ -13,14 +13,18 @@ base: ../
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
 interface <strong>GPUCommandEncoder</strong> {<span class=def id=operation-beginRenderPass-GPURenderPassDescriptor>
     <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-beginrenderpass">beginRenderPass</a></strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);</span><span class=def id=operation-beginComputePass-GPUComputePassDescriptor>
-    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-begincomputepass">beginComputePass</a></strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUSize64-GPUBuffer-GPUSize64-GPUSize64>
+    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-begincomputepass">beginComputePass</a></strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUBuffer-GPUSize64>
 
     <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertobuffer">copyBufferToBuffer</a></strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUSize64-GPUBuffer-GPUSize64-GPUSize64>
+    <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertobuffer-source-sourceoffset-destination-destinationoffset-size">copyBufferToBuffer</a></strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>sourceOffset</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToTexture-GPUTexelCopyBufferInfo-GPUTexelCopyTextureInfo-GPUExtent3D>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToTexture-GPUTexelCopyBufferInfo-GPUTexelCopyTextureInfo-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertotexture">copyBufferToTexture</a></strong>(
         <a href='GPUTexelCopyBufferInfo.html'>GPUTexelCopyBufferInfo</a> <strong>source</strong>,
@@ -60,14 +64,18 @@ interface <strong>GPUCommandEncoder</strong> {<span class=def id=operation-begin
 [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>), SecureContext]
 interface <strong>GPUCommandEncoder</strong> {<span class=def id=operation-beginRenderPass-GPURenderPassDescriptor>
     <a href='GPURenderPassEncoder.html'>GPURenderPassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-beginrenderpass">beginRenderPass</a></strong>(<a href='GPURenderPassDescriptor.html'>GPURenderPassDescriptor</a> <strong>descriptor</strong>);</span><span class=def id=operation-beginComputePass-GPUComputePassDescriptor>
-    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-begincomputepass">beginComputePass</a></strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUSize64-GPUBuffer-GPUSize64-GPUSize64>
+    <a href='GPUComputePassEncoder.html'>GPUComputePassEncoder</a> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-begincomputepass">beginComputePass</a></strong>(optional <a href='GPUComputePassDescriptor.html'>GPUComputePassDescriptor</a> <strong>descriptor</strong> &#x3D; {});</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUBuffer-GPUSize64>
 
     <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertobuffer">copyBufferToBuffer</a></strong>(
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
+        <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToBuffer-GPUBuffer-GPUSize64-GPUBuffer-GPUSize64-GPUSize64>
+    <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertobuffer-source-sourceoffset-destination-destinationoffset-size">copyBufferToBuffer</a></strong>(
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>source</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>sourceOffset</strong>,
         <a href='GPUBuffer.html'>GPUBuffer</a> <strong>destination</strong>,
         <a href='GPUSize64.html'>GPUSize64</a> <strong>destinationOffset</strong>,
-        <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToTexture-GPUTexelCopyBufferInfo-GPUTexelCopyTextureInfo-GPUExtent3D>
+        optional <a href='GPUSize64.html'>GPUSize64</a> <strong>size</strong>);</span><span class=def id=operation-copyBufferToTexture-GPUTexelCopyBufferInfo-GPUTexelCopyTextureInfo-GPUExtent3D>
 
     <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;gpuweb.github.io&#x2F;gpuweb&#x2F;#dom-gpucommandencoder-copybuffertotexture">copyBufferToTexture</a></strong>(
         <a href='GPUTexelCopyBufferInfo.html'>GPUTexelCopyBufferInfo</a> <strong>source</strong>,
