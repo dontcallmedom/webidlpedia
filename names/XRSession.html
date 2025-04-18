@@ -74,7 +74,11 @@ partial interface <strong>XRSession</strong> {<span class=def id=attribute-inter
 partial interface <strong>XRSession</strong> {<span class=def id=attribute-depthUsage>
   readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def id=attribute-depthDataFormat>
   readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span><span class=def id=attribute-depthType>
-  readonly attribute <a href='XRDepthType.html'>XRDepthType</a>? <strong>depthType</strong>;</span>
+  readonly attribute <a href='XRDepthType.html'>XRDepthType</a>? <strong>depthType</strong>;</span><span class=def id=attribute-depthActive>
+  readonly attribute <span class=primitive>boolean</span>? <strong>depthActive</strong>;</span><span class=def id=operation-pauseDepthSensing>
+
+  <span class=primitive>undefined</span> <strong>pauseDepthSensing</strong>();</span><span class=def id=operation-resumeDepthSensing>
+  <span class=primitive>undefined</span> <strong>resumeDepthSensing</strong>();</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webxr-dom-overlays-1&#x2F;#xrsession">WebXR DOM Overlays Module</a><pre class=webidl><code><span class=def>
 
@@ -140,7 +144,11 @@ partial interface <strong>XRSession</strong> {<span class=def id=operation-reque
   </span>readonly attribute <a href='XRInteractionMode.html'>XRInteractionMode</a> <strong>interactionMode</strong>;</span><span class=def id=attribute-depthUsage>
   readonly attribute <a href='XRDepthUsage.html'>XRDepthUsage</a> <strong>depthUsage</strong>;</span><span class=def id=attribute-depthDataFormat>
   readonly attribute <a href='XRDepthDataFormat.html'>XRDepthDataFormat</a> <strong>depthDataFormat</strong>;</span><span class=def id=attribute-depthType>
-  readonly attribute <a href='XRDepthType.html'>XRDepthType</a>? <strong>depthType</strong>;</span><span class=def id=attribute-domOverlayState>
+  readonly attribute <a href='XRDepthType.html'>XRDepthType</a>? <strong>depthType</strong>;</span><span class=def id=attribute-depthActive>
+  readonly attribute <span class=primitive>boolean</span>? <strong>depthActive</strong>;</span><span class=def id=operation-pauseDepthSensing>
+
+  <span class=primitive>undefined</span> <strong>pauseDepthSensing</strong>();</span><span class=def id=operation-resumeDepthSensing>
+  <span class=primitive>undefined</span> <strong>resumeDepthSensing</strong>();</span><span class=def id=attribute-domOverlayState>
   readonly attribute <a href='XRDOMOverlayState.html'>XRDOMOverlayState</a>? <strong>domOverlayState</strong>;</span><span class=def id=operation-requestHitTestSource-XRHitTestOptionsInit>
   Promise&lt;<a href='XRHitTestSource.html'>XRHitTestSource</a>&gt; <strong>requestHitTestSource</strong>(<a href='XRHitTestOptionsInit.html'>XRHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def id=operation-requestHitTestSourceForTransientInput-XRTransientInputHitTestOptionsInit>
   Promise&lt;<a href='XRTransientInputHitTestSource.html'>XRTransientInputHitTestSource</a>&gt; <strong>requestHitTestSourceForTransientInput</strong>(<a href='XRTransientInputHitTestOptionsInit.html'>XRTransientInputHitTestOptionsInit</a> <strong>options</strong>);</span><span class=def id=operation-requestLightProbe-XRLightProbeInit>
