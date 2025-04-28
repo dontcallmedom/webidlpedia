@@ -1,0 +1,93 @@
+---
+title: <code>Rewriter</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#rewriter">Writing Assistance APIs</a> defines <code>Rewriter</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
+interface <strong>Rewriter</strong> {<span class=def id=operation-static>
+  static Promise&lt;<a href='Rewriter.html'>Rewriter</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-create">create</a></strong>(optional <a href='RewriterCreateOptions.html'>RewriterCreateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='Availability.html'>Availability</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-availability">availability</a></strong>(optional <a href='RewriterCreateCoreOptions.html'>RewriterCreateCoreOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-rewrite-DOMString-RewriterRewriteOptions>
+
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-rewrite">rewrite</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=operation-rewriteStreaming-DOMString-RewriterRewriteOptions>
+  <a href='ReadableStream.html'>ReadableStream</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-rewritestreaming">rewriteStreaming</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=attribute-sharedContext>
+
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-sharedcontext">sharedContext</a></strong>;</span><span class=def id=attribute-tone>
+  readonly attribute <a href='RewriterTone.html'>RewriterTone</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-tone">tone</a></strong>;</span><span class=def id=attribute-format>
+  readonly attribute <a href='RewriterFormat.html'>RewriterFormat</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-format">format</a></strong>;</span><span class=def id=attribute-length>
+  readonly attribute <a href='RewriterLength.html'>RewriterLength</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-length">length</a></strong>;</span><span class=def id=attribute-expectedInputLanguages>
+
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt;? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-expectedinputlanguages">expectedInputLanguages</a></strong>;</span><span class=def id=attribute-expectedContextLanguages>
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt;? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-expectedcontextlanguages">expectedContextLanguages</a></strong>;</span><span class=def id=attribute-outputLanguage>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-outputlanguage">outputLanguage</a></strong>;</span><span class=def id=operation-measureInputUsage-DOMString-RewriterRewriteOptions>
+
+  Promise&lt;<span class=primitive>double</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-measureinputusage">measureInputUsage</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=attribute-inputQuota>
+  readonly attribute <span class=primitive>unrestricted double</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-inputquota">inputQuota</a></strong>;</span>
+};</span><span class=def>
+<a href='Rewriter.html'>Rewriter</a> includes <a href='DestroyableModel.html'>DestroyableModel</a>;</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
+interface <strong>Rewriter</strong> {<span class=def id=operation-static>
+  static Promise&lt;<a href='Rewriter.html'>Rewriter</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-create">create</a></strong>(optional <a href='RewriterCreateOptions.html'>RewriterCreateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<a href='Availability.html'>Availability</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-availability">availability</a></strong>(optional <a href='RewriterCreateCoreOptions.html'>RewriterCreateCoreOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-rewrite-DOMString-RewriterRewriteOptions>
+
+  Promise&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-rewrite">rewrite</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=operation-rewriteStreaming-DOMString-RewriterRewriteOptions>
+  <a href='ReadableStream.html'>ReadableStream</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-rewritestreaming">rewriteStreaming</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=attribute-sharedContext>
+
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-sharedcontext">sharedContext</a></strong>;</span><span class=def id=attribute-tone>
+  readonly attribute <a href='RewriterTone.html'>RewriterTone</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-tone">tone</a></strong>;</span><span class=def id=attribute-format>
+  readonly attribute <a href='RewriterFormat.html'>RewriterFormat</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-format">format</a></strong>;</span><span class=def id=attribute-length>
+  readonly attribute <a href='RewriterLength.html'>RewriterLength</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-length">length</a></strong>;</span><span class=def id=attribute-expectedInputLanguages>
+
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt;? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-expectedinputlanguages">expectedInputLanguages</a></strong>;</span><span class=def id=attribute-expectedContextLanguages>
+  readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt;? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-expectedcontextlanguages">expectedContextLanguages</a></strong>;</span><span class=def id=attribute-outputLanguage>
+  readonly attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-outputlanguage">outputLanguage</a></strong>;</span><span class=def id=operation-measureInputUsage-DOMString-RewriterRewriteOptions>
+
+  Promise&lt;<span class=primitive>double</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-measureinputusage">measureInputUsage</a></strong>(
+    <span class=primitive>DOMString</span> <strong>input</strong>,
+    optional <a href='RewriterRewriteOptions.html'>RewriterRewriteOptions</a> <strong>options</strong> &#x3D; {}
+  );</span><span class=def id=attribute-inputQuota>
+  readonly attribute <span class=primitive>unrestricted double</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;writing-assistance-apis&#x2F;#dom-rewriter-inputquota">inputQuota</a></strong>;</span><span class=def id=operation-destroy>
+  <span class=primitive>undefined</span> <strong>destroy</strong>();</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Rewriter</code></h3>
+
+  <ul>
+    <li><code><a href="Rewriter.html">Rewriter</a><a href=Rewriter.html#operation-static>.create()</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="Rewriter.html">Rewriter</a></code></li>
+
+  </ul>
+</section>
+  
