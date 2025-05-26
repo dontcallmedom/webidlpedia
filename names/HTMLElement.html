@@ -54,7 +54,8 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
 <a href='HTMLElement.html'>HTMLElement</a> includes <a href='ElementCSSInlineStyle.html'>ElementCSSInlineStyle</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-htmlelement-interface">CSSOM View Module</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>HTMLElement</strong> {<span class=def id=attribute-offsetParent>
+partial interface <strong>HTMLElement</strong> {<span class=def id=attribute-scrollParent>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollParent</strong>;</span><span class=def id=attribute-offsetParent>
   readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def id=attribute-offsetTop>
   readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def id=attribute-offsetLeft>
   readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def id=attribute-offsetWidth>
@@ -187,7 +188,8 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
   [CEReactions] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def id=operation-focus-FocusOptions>
   <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-blur>
   <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-style>
-  [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span><span class=def id=attribute-offsetParent>
+  [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleDeclaration.html'>CSSStyleDeclaration</a> <strong>style</strong>;</span><span class=def id=attribute-scrollParent>
+  readonly attribute <a href='Element.html'>Element</a>? <strong>scrollParent</strong>;</span><span class=def id=attribute-offsetParent>
   readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def id=attribute-offsetTop>
   readonly attribute <span class=primitive>long</span> <strong>offsetTop</strong>;</span><span class=def id=attribute-offsetLeft>
   readonly attribute <span class=primitive>long</span> <strong>offsetLeft</strong>;</span><span class=def id=attribute-offsetWidth>
