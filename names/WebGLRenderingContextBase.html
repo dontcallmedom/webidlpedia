@@ -432,15 +432,15 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_COLORSPACE_CONVERSION_WEBGL</strong> &#x3D; 0x9243;</span><span class=def id=const-BROWSER_DEFAULT_WEBGL>
     const <a href='GLenum.html'>GLenum</a> <strong>BROWSER_DEFAULT_WEBGL</strong>          &#x3D; 0x9244;</span><span class=def id=attribute-canvas>
 
-    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def id=attribute-drawingBufferWidth>
-    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferWidth</strong>;</span><span class=def id=attribute-drawingBufferHeight>
-    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferHeight</strong>;</span><span class=def id=attribute-drawingBufferFormat>
-    readonly attribute <a href='GLenum.html'>GLenum</a> <strong>drawingBufferFormat</strong>;</span><span class=def id=attribute-drawingBufferColorSpace><span class="comment">
+    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-canvas">canvas</a></strong>;</span><span class=def id=attribute-drawingBufferWidth>
+    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferWidth">drawingBufferWidth</a></strong>;</span><span class=def id=attribute-drawingBufferHeight>
+    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferHeight">drawingBufferHeight</a></strong>;</span><span class=def id=attribute-drawingBufferFormat>
+    readonly attribute <a href='GLenum.html'>GLenum</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferFormat">drawingBufferFormat</a></strong>;</span><span class=def id=attribute-drawingBufferColorSpace><span class="comment">
 
     &#x2F;* Upon context creation, drawingBufferColorSpace and unpackColorSpace both
        default to the value &quot;srgb&quot;. *&#x2F;
-    </span>attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>drawingBufferColorSpace</strong>;</span><span class=def id=attribute-unpackColorSpace>
-    attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>unpackColorSpace</strong>;</span><span class=def id=operation-getContextAttributes>
+    </span>attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferColorSpace">drawingBufferColorSpace</a></strong>;</span><span class=def id=attribute-unpackColorSpace>
+    attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-unpackColorSpace">unpackColorSpace</a></strong>;</span><span class=def id=operation-getContextAttributes>
 
     [WebGLHandlesContextLoss] <a href='WebGLContextAttributes.html'>WebGLContextAttributes</a>? <strong>getContextAttributes</strong>();</span><span class=def id=operation-isContextLost>
     [WebGLHandlesContextLoss] <span class=primitive>boolean</span> <strong>isContextLost</strong>();</span><span class=def id=operation-getSupportedExtensions>
@@ -464,7 +464,7 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     <span class=primitive>undefined</span> <strong>blendFuncSeparate</strong>(<a href='GLenum.html'>GLenum</a> <strong>srcRGB</strong>, <a href='GLenum.html'>GLenum</a> <strong>dstRGB</strong>,
                                 <a href='GLenum.html'>GLenum</a> <strong>srcAlpha</strong>, <a href='GLenum.html'>GLenum</a> <strong>dstAlpha</strong>);</span><span class=def id=operation-checkFramebufferStatus-GLenum>
 
-    [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong>checkFramebufferStatus</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def id=operation-clear-GLbitfield>
+    [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#CHECK_FRAMEBUFFER_STATUS">checkFramebufferStatus</a></strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def id=operation-clear-GLbitfield>
     <span class=primitive>undefined</span> <strong>clear</strong>(<a href='GLbitfield.html'>GLbitfield</a> <strong>mask</strong>);</span><span class=def id=operation-clearColor-GLclampf-GLclampf-GLclampf-GLclampf>
     <span class=primitive>undefined</span> <strong>clearColor</strong>(<a href='GLclampf.html'>GLclampf</a> <strong>red</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>green</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>blue</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>alpha</strong>);</span><span class=def id=operation-clearDepth-GLclampf>
     <span class=primitive>undefined</span> <strong>clearDepth</strong>(<a href='GLclampf.html'>GLclampf</a> <strong>depth</strong>);</span><span class=def id=operation-clearStencil-GLint>
@@ -523,7 +523,7 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     [WebGLHandlesContextLoss] <a href='GLint.html'>GLint</a> <strong>getAttribLocation</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-getBufferParameter-GLenum-GLenum>
 
     <span class=primitive>any</span> <strong>getBufferParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getParameter-GLenum>
-    <span class=primitive>any</span> <strong>getParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getError>
+    <span class=primitive>any</span> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#GETPARAMETER">getParameter</a></strong>(<a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getError>
 
     [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong>getError</strong>();</span><span class=def id=operation-getFramebufferAttachmentParameter-GLenum-GLenum-GLenum>
 
@@ -1039,15 +1039,15 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     const <a href='GLenum.html'>GLenum</a> <strong>UNPACK_COLORSPACE_CONVERSION_WEBGL</strong> &#x3D; 0x9243;</span><span class=def id=const-BROWSER_DEFAULT_WEBGL>
     const <a href='GLenum.html'>GLenum</a> <strong>BROWSER_DEFAULT_WEBGL</strong>          &#x3D; 0x9244;</span><span class=def id=attribute-canvas>
 
-    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong>canvas</strong>;</span><span class=def id=attribute-drawingBufferWidth>
-    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferWidth</strong>;</span><span class=def id=attribute-drawingBufferHeight>
-    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong>drawingBufferHeight</strong>;</span><span class=def id=attribute-drawingBufferFormat>
-    readonly attribute <a href='GLenum.html'>GLenum</a> <strong>drawingBufferFormat</strong>;</span><span class=def id=attribute-drawingBufferColorSpace><span class="comment">
+    readonly attribute (<a href='HTMLCanvasElement.html'>HTMLCanvasElement</a> or <a href='OffscreenCanvas.html'>OffscreenCanvas</a>) <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-canvas">canvas</a></strong>;</span><span class=def id=attribute-drawingBufferWidth>
+    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferWidth">drawingBufferWidth</a></strong>;</span><span class=def id=attribute-drawingBufferHeight>
+    readonly attribute <a href='GLsizei.html'>GLsizei</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferHeight">drawingBufferHeight</a></strong>;</span><span class=def id=attribute-drawingBufferFormat>
+    readonly attribute <a href='GLenum.html'>GLenum</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferFormat">drawingBufferFormat</a></strong>;</span><span class=def id=attribute-drawingBufferColorSpace><span class="comment">
 
     &#x2F;* Upon context creation, drawingBufferColorSpace and unpackColorSpace both
        default to the value &quot;srgb&quot;. *&#x2F;
-    </span>attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>drawingBufferColorSpace</strong>;</span><span class=def id=attribute-unpackColorSpace>
-    attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong>unpackColorSpace</strong>;</span><span class=def id=operation-getContextAttributes>
+    </span>attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-drawingBufferColorSpace">drawingBufferColorSpace</a></strong>;</span><span class=def id=attribute-unpackColorSpace>
+    attribute <a href='PredefinedColorSpace.html'>PredefinedColorSpace</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#DOM-WebGLRenderingContext-unpackColorSpace">unpackColorSpace</a></strong>;</span><span class=def id=operation-getContextAttributes>
 
     [WebGLHandlesContextLoss] <a href='WebGLContextAttributes.html'>WebGLContextAttributes</a>? <strong>getContextAttributes</strong>();</span><span class=def id=operation-isContextLost>
     [WebGLHandlesContextLoss] <span class=primitive>boolean</span> <strong>isContextLost</strong>();</span><span class=def id=operation-getSupportedExtensions>
@@ -1071,7 +1071,7 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     <span class=primitive>undefined</span> <strong>blendFuncSeparate</strong>(<a href='GLenum.html'>GLenum</a> <strong>srcRGB</strong>, <a href='GLenum.html'>GLenum</a> <strong>dstRGB</strong>,
                                 <a href='GLenum.html'>GLenum</a> <strong>srcAlpha</strong>, <a href='GLenum.html'>GLenum</a> <strong>dstAlpha</strong>);</span><span class=def id=operation-checkFramebufferStatus-GLenum>
 
-    [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong>checkFramebufferStatus</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def id=operation-clear-GLbitfield>
+    [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#CHECK_FRAMEBUFFER_STATUS">checkFramebufferStatus</a></strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>);</span><span class=def id=operation-clear-GLbitfield>
     <span class=primitive>undefined</span> <strong>clear</strong>(<a href='GLbitfield.html'>GLbitfield</a> <strong>mask</strong>);</span><span class=def id=operation-clearColor-GLclampf-GLclampf-GLclampf-GLclampf>
     <span class=primitive>undefined</span> <strong>clearColor</strong>(<a href='GLclampf.html'>GLclampf</a> <strong>red</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>green</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>blue</strong>, <a href='GLclampf.html'>GLclampf</a> <strong>alpha</strong>);</span><span class=def id=operation-clearDepth-GLclampf>
     <span class=primitive>undefined</span> <strong>clearDepth</strong>(<a href='GLclampf.html'>GLclampf</a> <strong>depth</strong>);</span><span class=def id=operation-clearStencil-GLint>
@@ -1130,7 +1130,7 @@ interface mixin <strong>WebGLRenderingContextBase</strong>
     [WebGLHandlesContextLoss] <a href='GLint.html'>GLint</a> <strong>getAttribLocation</strong>(<a href='WebGLProgram.html'>WebGLProgram</a> <strong>program</strong>, <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-getBufferParameter-GLenum-GLenum>
 
     <span class=primitive>any</span> <strong>getBufferParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>target</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getParameter-GLenum>
-    <span class=primitive>any</span> <strong>getParameter</strong>(<a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getError>
+    <span class=primitive>any</span> <strong><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;specs&#x2F;latest&#x2F;1.0&#x2F;#GETPARAMETER">getParameter</a></strong>(<a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span><span class=def id=operation-getError>
 
     [WebGLHandlesContextLoss] <a href='GLenum.html'>GLenum</a> <strong>getError</strong>();</span><span class=def id=operation-getFramebufferAttachmentParameter-GLenum-GLenum-GLenum>
 

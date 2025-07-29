@@ -28,7 +28,13 @@ interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;cookiestore.spec.whatwg.org&#x2F;#ServiceWorkerRegistration">Cookie Store API Standard</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>)]
+partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-cookies>
+  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=operation-showNotification-DOMString-NotificationOptions>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getNotifications-GetNotificationOptions>
@@ -46,12 +52,6 @@ partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id
 
 partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-index>
   [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;#ServiceWorkerRegistration">Cookie Store API</a><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;(<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>,<a class=realm href='../globals/Window.html'>Window</a>)]
-partial interface <strong>ServiceWorkerRegistration</strong> {<span class=def id=attribute-cookies>
-  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;#extensions-to-serviceworkerregistration">Web Periodic Background Synchronization</a><pre class=webidl><code><span class=def>
 
@@ -86,13 +86,13 @@ interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html
   [NewObject] Promise&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#dom-serviceworkerregistration-unregister">unregister</a></strong>();</span><span class=def id=attribute-onupdatefound><span class="comment">
 
   &#x2F;&#x2F; event
-  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#dom-serviceworkerregistration-onupdatefound">onupdatefound</a></strong>;</span><span class=def id=operation-showNotification-DOMString-NotificationOptions>
+  </span>attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;ServiceWorker&#x2F;#dom-serviceworkerregistration-onupdatefound">onupdatefound</a></strong>;</span><span class=def id=attribute-cookies>
+  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span><span class=def id=operation-showNotification-DOMString-NotificationOptions>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>showNotification</strong>(<span class=primitive>DOMString</span> <strong>title</strong>, optional <a href='NotificationOptions.html'>NotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getNotifications-GetNotificationOptions>
   Promise&lt;sequence&lt;<a href='Notification.html'>Notification</a>&gt;&gt; <strong>getNotifications</strong>(optional <a href='GetNotificationOptions.html'>GetNotificationOptions</a> <strong>filter</strong> &#x3D; {});</span><span class=def id=attribute-backgroundFetch>
   readonly attribute <a href='BackgroundFetchManager.html'>BackgroundFetchManager</a> <strong>backgroundFetch</strong>;</span><span class=def id=attribute-sync>
   readonly attribute <a href='SyncManager.html'>SyncManager</a> <strong>sync</strong>;</span><span class=def id=attribute-index>
-  [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span><span class=def id=attribute-cookies>
-  [SameObject] readonly attribute <a href='CookieStoreManager.html'>CookieStoreManager</a> <strong>cookies</strong>;</span><span class=def id=attribute-periodicSync>
+  [SameObject] readonly attribute <a href='ContentIndex.html'>ContentIndex</a> <strong>index</strong>;</span><span class=def id=attribute-periodicSync>
   readonly attribute <a href='PeriodicSyncManager.html'>PeriodicSyncManager</a> <strong>periodicSync</strong>;</span><span class=def id=attribute-paymentManager>
   [SameObject] readonly attribute <a href='PaymentManager.html'>PaymentManager</a> <strong>paymentManager</strong>;</span><span class=def id=attribute-pushManager>
   readonly attribute <a href='PushManager.html'>PushManager</a> <strong>pushManager</strong>;</span>
@@ -123,11 +123,11 @@ interface <strong>ServiceWorkerRegistration</strong> : <a href='EventTarget.html
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a> refers to <code>ServiceWorkerRegistration</code></li>
+    <li><a href="https:&#x2F;&#x2F;cookiestore.spec.whatwg.org&#x2F;">Cookie Store API Standard</a> refers to <code>ServiceWorkerRegistration</code></li>
+<li><a href="https:&#x2F;&#x2F;notifications.spec.whatwg.org&#x2F;">Notifications API Standard</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-fetch&#x2F;">Background Fetch</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;">Web Background Synchronization</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;">Content Index</a> refers to <code>ServiceWorkerRegistration</code></li>
-<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cookie-store&#x2F;">Cookie Store API</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;">Payment Handler API</a> refers to <code>ServiceWorkerRegistration</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;">Push API</a> refers to <code>ServiceWorkerRegistration</code></li>
