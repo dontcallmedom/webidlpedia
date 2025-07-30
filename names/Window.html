@@ -97,6 +97,11 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-cookieSt
 partial interface <strong>Window</strong> {<span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class="comment"> &#x2F;&#x2F; legacy
 </span>};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;fetch.spec.whatwg.org&#x2F;">Fetch Standard</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=operation-fetchLater-RequestInfo-DeferredRequestInit>
+  [NewObject] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-speechSynthesis>
@@ -420,7 +425,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     readonly attribute <span class=primitive>short</span> <strong>orientation</strong>;</span><span class=def id=attribute-onorientationchange>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=attribute-event>
-  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=attribute-speechSynthesis>
+  [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=operation-fetchLater-RequestInfo-DeferredRequestInit>
+  [NewObject] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-credentialless>
   readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
@@ -521,6 +527,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     <li><a href="https:&#x2F;&#x2F;compat.spec.whatwg.org&#x2F;">Compatibility Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;cookiestore.spec.whatwg.org&#x2F;">Cookie Store API Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;fetch.spec.whatwg.org&#x2F;">Fetch Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;long-animation-frames&#x2F;">Long Animation Frames API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
