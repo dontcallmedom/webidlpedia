@@ -14,29 +14,29 @@ base: ../
 interface <strong>HTMLTableCellElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-colSpan>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-colspan">colSpan</a></strong>;</span><span class=def id=attribute-rowSpan>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-rowspan">rowSpan</a></strong>;</span><span class=def id=attribute-headers>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-headers">headers</a></strong>;</span><span class=def id=attribute-cellIndex>
+  [CEReactions, Reflect, ReflectDefault&#x3D;<span class=primitive>1</span>, ReflectRange&#x3D;(1, 1000)] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-colspan">colSpan</a></strong>;</span><span class=def id=attribute-rowSpan>
+  [CEReactions, Reflect, ReflectDefault&#x3D;<span class=primitive>1</span>, ReflectRange&#x3D;(0, 65534)] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-rowspan">rowSpan</a></strong>;</span><span class=def id=attribute-headers>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>headers</strong>;</span><span class=def id=attribute-cellIndex>
   readonly attribute <span class=primitive>long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-cellindex">cellIndex</a></strong>;</span><span class=def id=attribute-scope>
 
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-scope">scope</a></strong>;</span><span class=def id=attribute-abbr><span class="comment"> &#x2F;&#x2F; only conforming for th elements
-  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-abbr">abbr</a></strong>;</span><span class="comment">  &#x2F;&#x2F; only conforming for th elements
+  </span>[CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-abbr">abbr</a></strong>;</span><span class="comment">  &#x2F;&#x2F; only conforming for th elements
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span><span class=def>
 
 partial interface <strong>HTMLTableCellElement</strong> {<span class=def id=attribute-align>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def id=attribute-axis>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>axis</strong>;</span><span class=def id=attribute-height>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def id=attribute-width>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def id=attribute-ch>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def id=attribute-axis>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>axis</strong>;</span><span class=def id=attribute-height>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def id=attribute-width>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def id=attribute-ch>
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>ch</strong>;</span><span class=def id=attribute-chOff>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>chOff</strong>;</span><span class=def id=attribute-noWrap>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>noWrap</strong>;</span><span class=def id=attribute-vAlign>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>vAlign</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;char&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>ch</strong>;</span><span class=def id=attribute-chOff>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;charoff&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>chOff</strong>;</span><span class=def id=attribute-noWrap>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>noWrap</strong>;</span><span class=def id=attribute-vAlign>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>vAlign</strong>;</span><span class=def id=attribute-bgColor>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span>
+  [CEReactions, Reflect] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span>
 };</span></code></pre>
   
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -45,24 +45,24 @@ partial interface <strong>HTMLTableCellElement</strong> {<span class=def id=attr
 interface <strong>HTMLTableCellElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-colSpan>
 
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-colspan">colSpan</a></strong>;</span><span class=def id=attribute-rowSpan>
-  [CEReactions] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-rowspan">rowSpan</a></strong>;</span><span class=def id=attribute-headers>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-headers">headers</a></strong>;</span><span class=def id=attribute-cellIndex>
+  [CEReactions, Reflect, ReflectDefault&#x3D;<span class=primitive>1</span>, ReflectRange&#x3D;(1, 1000)] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-colspan">colSpan</a></strong>;</span><span class=def id=attribute-rowSpan>
+  [CEReactions, Reflect, ReflectDefault&#x3D;<span class=primitive>1</span>, ReflectRange&#x3D;(0, 65534)] attribute <span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-rowspan">rowSpan</a></strong>;</span><span class=def id=attribute-headers>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>headers</strong>;</span><span class=def id=attribute-cellIndex>
   readonly attribute <span class=primitive>long</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-tdth-cellindex">cellIndex</a></strong>;</span><span class=def id=attribute-scope>
 
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-scope">scope</a></strong>;</span><span class=def id=attribute-abbr><span class="comment"> &#x2F;&#x2F; only conforming for th elements
-  </span>[CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-abbr">abbr</a></strong>;</span><span class=def id=attribute-align>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def id=attribute-axis>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>axis</strong>;</span><span class=def id=attribute-height>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def id=attribute-width>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def id=attribute-ch>
+  </span>[CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;tables.html#dom-th-abbr">abbr</a></strong>;</span><span class=def id=attribute-align>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>align</strong>;</span><span class=def id=attribute-axis>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>axis</strong>;</span><span class=def id=attribute-height>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>height</strong>;</span><span class=def id=attribute-width>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>width</strong>;</span><span class=def id=attribute-ch>
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>ch</strong>;</span><span class=def id=attribute-chOff>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>chOff</strong>;</span><span class=def id=attribute-noWrap>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong>noWrap</strong>;</span><span class=def id=attribute-vAlign>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>vAlign</strong>;</span><span class=def id=attribute-bgColor>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;char&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>ch</strong>;</span><span class=def id=attribute-chOff>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;charoff&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>chOff</strong>;</span><span class=def id=attribute-noWrap>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>noWrap</strong>;</span><span class=def id=attribute-vAlign>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>vAlign</strong>;</span><span class=def id=attribute-bgColor>
 
-  [CEReactions] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class="comment">  &#x2F;&#x2F; only conforming for th elements
+  [CEReactions, Reflect] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>bgColor</strong>;</span><span class="comment">  &#x2F;&#x2F; only conforming for th elements
 
   &#x2F;&#x2F; also has obsolete members
 </span>};</span></code></pre></details>

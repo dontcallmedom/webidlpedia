@@ -14,15 +14,15 @@ base: ../
 interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
+  [CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-async">async</a></strong>;</span><span class=def id=attribute-defer>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-blocking">blocking</a></strong>;</span><span class=def id=attribute-crossOrigin>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>, Reflect] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-blocking">blocking</a></strong>;</span><span class=def id=attribute-crossOrigin>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-crossorigin">crossOrigin</a></strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-referrerpolicy">referrerPolicy</a></strong>;</span><span class=def id=attribute-integrity>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-text>
 
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
@@ -33,9 +33,9 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
 </span>};</span><span class=def>
 
 partial interface <strong>HTMLScriptElement</strong> {<span class=def id=attribute-charset>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def id=attribute-htmlFor>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def id=attribute-htmlFor>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;for&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -49,23 +49,23 @@ partial interface <strong>HTMLScriptElement</strong> {<span class=def id=attribu
 interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
-  [CEReactions] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
+  [CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-async">async</a></strong>;</span><span class=def id=attribute-defer>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
-  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-blocking">blocking</a></strong>;</span><span class=def id=attribute-crossOrigin>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
+  [SameObject, PutForwards&#x3D;<span class=primitive>value</span>, Reflect] readonly attribute <a href='DOMTokenList.html'>DOMTokenList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-blocking">blocking</a></strong>;</span><span class=def id=attribute-crossOrigin>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-crossorigin">crossOrigin</a></strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-referrerpolicy">referrerPolicy</a></strong>;</span><span class=def id=attribute-integrity>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-text>
 
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
 
   static <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-supports">supports</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=attribute-charset>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def id=attribute-htmlFor>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class=def id=attribute-attributionSrc>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>event</strong>;</span><span class=def id=attribute-htmlFor>
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;for&quot;</span>] attribute <span class=primitive>DOMString</span> <strong>htmlFor</strong>;</span><span class=def id=attribute-attributionSrc>
     [CEReactions, SecureContext] attribute <span class=primitive>USVString</span> <strong>attributionSrc</strong>;</span><span class="comment">
 
   &#x2F;&#x2F; also has obsolete members

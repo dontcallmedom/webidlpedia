@@ -17,7 +17,7 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   </span>readonly attribute <a href='MediaError.html'>MediaError</a>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-error">error</a></strong>;</span><span class=def id=attribute-src><span class="comment">
 
   &#x2F;&#x2F; network state
-  </span>[CEReactions] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-src">src</a></strong>;</span><span class=def id=attribute-srcObject>
+  </span>[CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong>src</strong>;</span><span class=def id=attribute-srcObject>
   attribute <a href='MediaProvider.html'>MediaProvider</a>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-srcobject">srcObject</a></strong>;</span><span class=def id=attribute-currentSrc>
   readonly attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-currentsrc">currentSrc</a></strong>;</span><span class=def id=attribute-crossOrigin>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-crossorigin">crossOrigin</a></strong>;</span><span class=def id=const-NETWORK_EMPTY>
@@ -52,16 +52,16 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-played">played</a></strong>;</span><span class=def id=attribute-seekable>
   readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-seekable">seekable</a></strong>;</span><span class=def id=attribute-ended>
   readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-ended">ended</a></strong>;</span><span class=def id=attribute-autoplay>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-autoplay">autoplay</a></strong>;</span><span class=def id=attribute-loop>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-loop">loop</a></strong>;</span><span class=def id=operation-play>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-autoplay">autoplay</a></strong>;</span><span class=def id=attribute-loop>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-loop">loop</a></strong>;</span><span class=def id=operation-play>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-play">play</a></strong>();</span><span class=def id=operation-pause>
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-pause">pause</a></strong>();</span><span class=def id=attribute-controls><span class="comment">
 
   &#x2F;&#x2F; controls
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-controls">controls</a></strong>;</span><span class=def id=attribute-volume>
+  </span>[CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-controls">controls</a></strong>;</span><span class=def id=attribute-volume>
   attribute <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-volume">volume</a></strong>;</span><span class=def id=attribute-muted>
   attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-muted">muted</a></strong>;</span><span class=def id=attribute-defaultMuted>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-defaultmuted">defaultMuted</a></strong>;</span><span class=def id=attribute-audioTracks><span class="comment">
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;muted&quot;</span>] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-defaultmuted">defaultMuted</a></strong>;</span><span class=def id=attribute-audioTracks><span class="comment">
 
   &#x2F;&#x2F; tracks
   </span>[SameObject] readonly attribute <a href='AudioTrackList.html'>AudioTrackList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-audiotracks">audioTracks</a></strong>;</span><span class=def id=attribute-videoTracks>
@@ -104,7 +104,7 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   </span>readonly attribute <a href='MediaError.html'>MediaError</a>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-error">error</a></strong>;</span><span class=def id=attribute-src><span class="comment">
 
   &#x2F;&#x2F; network state
-  </span>[CEReactions] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-src">src</a></strong>;</span><span class=def id=attribute-srcObject>
+  </span>[CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong>src</strong>;</span><span class=def id=attribute-srcObject>
   attribute <a href='MediaProvider.html'>MediaProvider</a>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-srcobject">srcObject</a></strong>;</span><span class=def id=attribute-currentSrc>
   readonly attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-currentsrc">currentSrc</a></strong>;</span><span class=def id=attribute-crossOrigin>
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-crossorigin">crossOrigin</a></strong>;</span><span class=def id=const-NETWORK_EMPTY>
@@ -139,16 +139,16 @@ interface <strong>HTMLMediaElement</strong> : <a href='HTMLElement.html'>HTMLEle
   readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-played">played</a></strong>;</span><span class=def id=attribute-seekable>
   readonly attribute <a href='TimeRanges.html'>TimeRanges</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-seekable">seekable</a></strong>;</span><span class=def id=attribute-ended>
   readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-ended">ended</a></strong>;</span><span class=def id=attribute-autoplay>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-autoplay">autoplay</a></strong>;</span><span class=def id=attribute-loop>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-loop">loop</a></strong>;</span><span class=def id=operation-play>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-autoplay">autoplay</a></strong>;</span><span class=def id=attribute-loop>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-loop">loop</a></strong>;</span><span class=def id=operation-play>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-play">play</a></strong>();</span><span class=def id=operation-pause>
   <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-pause">pause</a></strong>();</span><span class=def id=attribute-controls><span class="comment">
 
   &#x2F;&#x2F; controls
-  </span>[CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-controls">controls</a></strong>;</span><span class=def id=attribute-volume>
+  </span>[CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-controls">controls</a></strong>;</span><span class=def id=attribute-volume>
   attribute <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-volume">volume</a></strong>;</span><span class=def id=attribute-muted>
   attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-muted">muted</a></strong>;</span><span class=def id=attribute-defaultMuted>
-  [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-defaultmuted">defaultMuted</a></strong>;</span><span class=def id=attribute-audioTracks><span class="comment">
+  [CEReactions, Reflect&#x3D;<span class=primitive>&quot;muted&quot;</span>] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-defaultmuted">defaultMuted</a></strong>;</span><span class=def id=attribute-audioTracks><span class="comment">
 
   &#x2F;&#x2F; tracks
   </span>[SameObject] readonly attribute <a href='AudioTrackList.html'>AudioTrackList</a> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;media.html#dom-media-audiotracks">audioTracks</a></strong>;</span><span class=def id=attribute-videoTracks>
