@@ -23,7 +23,7 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
                      <a href='AllowSharedBufferSource.html'>AllowSharedBufferSource</a> <strong>buffer</strong>);</span><span class=def id=operation-constant-MLOperandDataType-MLNumber><span class="comment">
 
   &#x2F;&#x2F; Create a scalar operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-type-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>, <a href='MLNumber.html'>MLNumber</a> <strong>value</strong>);</span><span class=def id=operation-constant-MLTensor><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-datatype-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>, <a href='MLNumber.html'>MLNumber</a> <strong>value</strong>);</span><span class=def id=operation-constant-MLTensor><span class="comment">
 
   &#x2F;&#x2F; Create an operand from a specified constant tensor.
   </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-tensor">constant</a></strong>(<a href='MLTensor.html'>MLTensor</a> <strong>tensor</strong>);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
@@ -46,7 +46,7 @@ partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-
 
 partial interface <strong>MLGraphBuilder</strong> {<span class=def id=operation-cast-MLOperand-MLOperandDataType-MLOperatorOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>cast</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                 <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>,
+                 <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>,
                  optional <a href='MLOperatorOptions.html'>MLOperatorOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span><span class=def>
 
@@ -391,7 +391,7 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
                      <a href='AllowSharedBufferSource.html'>AllowSharedBufferSource</a> <strong>buffer</strong>);</span><span class=def id=operation-constant-MLOperandDataType-MLNumber><span class="comment">
 
   &#x2F;&#x2F; Create a scalar operand from the specified number of the specified type.
-  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-type-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>, <a href='MLNumber.html'>MLNumber</a> <strong>value</strong>);</span><span class=def id=operation-constant-MLTensor><span class="comment">
+  </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-datatype-value">constant</a></strong>(<a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>, <a href='MLNumber.html'>MLNumber</a> <strong>value</strong>);</span><span class=def id=operation-constant-MLTensor><span class="comment">
 
   &#x2F;&#x2F; Create an operand from a specified constant tensor.
   </span><a href='MLOperand.html'>MLOperand</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webnn&#x2F;#dom-mlgraphbuilder-constant-tensor">constant</a></strong>(<a href='MLTensor.html'>MLTensor</a> <strong>tensor</strong>);</span><span class=def id=operation-build-MLNamedOperands><span class="comment">
@@ -405,7 +405,7 @@ interface <strong>MLGraphBuilder</strong> {<span class=def id=constructor-MLCont
   <a href='MLOperand.html'>MLOperand</a> <strong>batchNormalization</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>mean</strong>, <a href='MLOperand.html'>MLOperand</a> <strong>variance</strong>,
                                optional <a href='MLBatchNormalizationOptions.html'>MLBatchNormalizationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-cast-MLOperand-MLOperandDataType-MLOperatorOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>cast</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>,
-                 <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>type</strong>,
+                 <a href='MLOperandDataType.html'>MLOperandDataType</a> <strong>dataType</strong>,
                  optional <a href='MLOperatorOptions.html'>MLOperatorOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-clamp-MLOperand-MLClampOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>clamp</strong>(<a href='MLOperand.html'>MLOperand</a> <strong>input</strong>, optional <a href='MLClampOptions.html'>MLClampOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-concat-MLOperand-unsigned long-MLOperatorOptions>
   <a href='MLOperand.html'>MLOperand</a> <strong>concat</strong>(sequence&lt;<a href='MLOperand.html'>MLOperand</a>&gt; <strong>inputs</strong>,

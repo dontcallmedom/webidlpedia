@@ -11,41 +11,45 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource>
-    <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-validate">validate</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-compile-BufferSource>
-    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-compile">compile</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-instantiate-BufferSource-object>
+namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource-WebAssemblyCompileOptions>
+    <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-validate">validate</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-compile-BufferSource-WebAssemblyCompileOptions>
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-compile">compile</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiate-BufferSource-object-WebAssemblyCompileOptions>
 
     Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-instantiate">instantiate</a></strong>(
-        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-instantiate-Module-object>
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiate-Module-object>
 
     Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-instantiate-moduleobject-importobject">instantiate</a></strong>(
-        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=attribute-JSTag>
+
+    readonly attribute <a href='Tag.html'>Tag</a> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-jstag">JSTag</a></strong>;</span>
 };</span></code></pre>
   <p>This namespace is extended in the following specifications:</p>
   <ul>
     <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wasm-web-api-2&#x2F;">WebAssembly Web API</a><pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
-partial namespace <strong>WebAssembly</strong> {<span class=def id=operation-compileStreaming-Response>
-  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def id=operation-instantiateStreaming-Response-object>
+partial namespace <strong>WebAssembly</strong> {<span class=def id=operation-compileStreaming-Response-WebAssemblyCompileOptions>
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiateStreaming-Response-object-WebAssemblyCompileOptions>
   Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
-      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
+      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;*]
-namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource>
-    <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-validate">validate</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-compile-BufferSource>
-    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-compile">compile</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>);</span><span class=def id=operation-instantiate-BufferSource-object>
+namespace <strong>WebAssembly</strong> {<span class=def id=operation-validate-BufferSource-WebAssemblyCompileOptions>
+    <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-validate">validate</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-compile-BufferSource-WebAssemblyCompileOptions>
+    Promise&lt;<a href='Module.html'>Module</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-compile">compile</a></strong>(<a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiate-BufferSource-object-WebAssemblyCompileOptions>
 
     Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-instantiate">instantiate</a></strong>(
-        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-instantiate-Module-object>
+        <a href='BufferSource.html'>BufferSource</a> <strong>bytes</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiate-Module-object>
 
     Promise&lt;<a href='Instance.html'>Instance</a>&gt; <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-instantiate-moduleobject-importobject">instantiate</a></strong>(
-        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=operation-compileStreaming-Response>
-  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>);</span><span class=def id=operation-instantiateStreaming-Response-object>
+        <a href='Module.html'>Module</a> <strong>moduleObject</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span><span class=def id=attribute-JSTag>
+
+    readonly attribute <a href='Tag.html'>Tag</a> <strong><a href="https:&#x2F;&#x2F;webassembly.github.io&#x2F;spec&#x2F;js-api&#x2F;#dom-webassembly-jstag">JSTag</a></strong>;</span><span class=def id=operation-compileStreaming-Response-WebAssemblyCompileOptions>
+  Promise&lt;<a href='Module.html'>Module</a>&gt; <strong>compileStreaming</strong>(Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-instantiateStreaming-Response-object-WebAssemblyCompileOptions>
   Promise&lt;<a href='WebAssemblyInstantiatedSource.html'>WebAssemblyInstantiatedSource</a>&gt; <strong>instantiateStreaming</strong>(
-      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>);</span>
+      Promise&lt;<a href='Response.html'>Response</a>&gt; <strong>source</strong>, optional <span class=primitive>object</span> <strong>importObject</strong>, optional <a href='WebAssemblyCompileOptions.html'>WebAssemblyCompileOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></details>
 </section>
 
