@@ -1,0 +1,40 @@
+---
+title: <code>SFrameEncrypterStream</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-encoded-transform&#x2F;#sframeencrypterstream">WebRTC Encoded Transform</a> defines <code>SFrameEncrypterStream</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>SFrameEncrypterStream</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-SFrameTransformOptions>
+    <strong>constructor</strong>(optional <a href='SFrameTransformOptions.html'>SFrameTransformOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span><span class=def>
+<a href='SFrameEncrypterStream.html'>SFrameEncrypterStream</a> includes <a href='GenericTransformStream.html'>GenericTransformStream</a>;</span><span class=def>
+<a href='SFrameEncrypterStream.html'>SFrameEncrypterStream</a> includes <a href='SFrameKeyManagement.html'>SFrameKeyManagement</a>;</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+interface <strong>SFrameEncrypterStream</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor-SFrameTransformOptions>
+    <strong>constructor</strong>(optional <a href='SFrameTransformOptions.html'>SFrameTransformOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-readable>
+  readonly attribute <a href='ReadableStream.html'>ReadableStream</a> <strong>readable</strong>;</span><span class=def id=attribute-writable>
+  readonly attribute <a href='WritableStream.html'>WritableStream</a> <strong>writable</strong>;</span><span class=def id=operation-setEncryptionKey-CryptoKey-CryptoKeyID>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setEncryptionKey</strong>(<a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>, optional <a href='CryptoKeyID.html'>CryptoKeyID</a> <strong>keyID</strong>);</span><span class=def id=attribute-onerror>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>SFrameEncrypterStream</code></h3>
+
+  <ul>
+    <li><code><a href="SFrameEncrypterStream.html">SFrameEncrypterStream</a><a href=SFrameEncrypterStream.html#constructor-SFrameTransformOptions>()</a></code></li>
+
+  </ul>
+</section>
+
+  
