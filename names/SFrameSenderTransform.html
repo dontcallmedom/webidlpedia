@@ -1,0 +1,38 @@
+---
+title: <code>SFrameSenderTransform</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webrtc-encoded-transform&#x2F;#sframesendertransform">WebRTC Encoded Transform</a> defines <code>SFrameSenderTransform</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>SFrameSenderTransform</strong> {<span class=def id=constructor-SFrameTransformOptions>
+    <strong>constructor</strong>(optional <a href='SFrameTransformOptions.html'>SFrameTransformOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span><span class=def>
+<a href='SFrameSenderTransform.html'>SFrameSenderTransform</a> includes <a href='SFrameEncrypterManager.html'>SFrameEncrypterManager</a>;</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>SFrameSenderTransform</strong> {<span class=def id=constructor-SFrameTransformOptions>
+    <strong>constructor</strong>(optional <a href='SFrameTransformOptions.html'>SFrameTransformOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-setEncryptionKey-CryptoKey-CryptoKeyID>
+    Promise&lt;<span class=primitive>undefined</span>&gt; <strong>setEncryptionKey</strong>(<a href='CryptoKey.html'>CryptoKey</a> <strong>key</strong>, <a href='CryptoKeyID.html'>CryptoKeyID</a> <strong>keyId</strong>);</span><span class=def id=attribute-onerror>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onerror</strong>;</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>SFrameSenderTransform</code></h3>
+
+  <ul>
+    <li><code><a href="SFrameSenderTransform.html">SFrameSenderTransform</a><a href=SFrameSenderTransform.html#constructor-SFrameTransformOptions>()</a></code></li>
+<li><code><a href="RTCRtpSender.html">RTCRtpSender</a><a href=RTCRtpSender.html#attribute-transform>.transform</a></code></li>
+
+  </ul>
+</section>
+
+  
