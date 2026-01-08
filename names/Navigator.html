@@ -158,6 +158,9 @@ partial interface <strong>Navigator</strong> {<span class=def id=attribute-usb>
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-windowControlsOverlay>
   [SameObject] readonly attribute <a href='WindowControlsOverlay.html'>WindowControlsOverlay</a> <strong>windowControlsOverlay</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;attribution&#x2F;#navigator-interface">Attribution Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Navigator</strong> {<span class=def id=attribute-attribution>
+  [SecureContext, SameObject] readonly attribute <a href='Attribution.html'>Attribution</a> <strong>attribution</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-session&#x2F;#extensions-to-navigator">Audio Session</a><pre class=webidl><code><span class=def>
 
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
@@ -258,9 +261,6 @@ partial interface <strong>Navigator</strong> {<span class=def id=attribute-maxTo
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;presentation-api&#x2F;#interface-presentation">Presentation API</a><pre class=webidl><code><span class=def>partial interface <strong>Navigator</strong> {<span class=def id=attribute-presentation>
   [SecureContext, SameObject] readonly attribute <a href='Presentation.html'>Presentation</a> <strong>presentation</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;privacy-preserving-attribution&#x2F;#navigator-interface">Attribution Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Navigator</strong> {<span class=def id=attribute-attribution>
-  [SecureContext, SameObject] readonly attribute <a href='Attribution.html'>Attribution</a> <strong>attribution</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-wake-lock&#x2F;#extensions-to-the-navigator-interface">Screen Wake Lock API</a><pre class=webidl><code><span class=def>[SecureContext]
 partial interface <strong>Navigator</strong> {<span class=def id=attribute-wakeLock>
@@ -365,7 +365,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   readonly attribute <a href='NavigatorManagedData.html'>NavigatorManagedData</a> <strong>managed</strong>;</span><span class=def id=attribute-hid>
     [SameObject] readonly attribute <a href='HID.html'>HID</a> <strong>hid</strong>;</span><span class=def id=attribute-usb>
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def id=attribute-windowControlsOverlay>
-  [SameObject] readonly attribute <a href='WindowControlsOverlay.html'>WindowControlsOverlay</a> <strong>windowControlsOverlay</strong>;</span><span class=def id=attribute-audioSession><span class="comment">
+  [SameObject] readonly attribute <a href='WindowControlsOverlay.html'>WindowControlsOverlay</a> <strong>windowControlsOverlay</strong>;</span><span class=def id=attribute-attribution>
+  [SecureContext, SameObject] readonly attribute <a href='Attribution.html'>Attribution</a> <strong>attribution</strong>;</span><span class=def id=attribute-audioSession><span class="comment">
   &#x2F;&#x2F; The default audio session that the user agent will use when media elements start&#x2F;stop playing.
   </span>readonly attribute <a href='AudioSession.html'>AudioSession</a> <strong>audioSession</strong>;</span><span class=def id=operation-getAutoplayPolicy-AutoplayPolicyMediaType>
   <a href='AutoplayPolicy.html'>AutoplayPolicy</a> <strong>getAutoplayPolicy</strong>(<a href='AutoplayPolicyMediaType.html'>AutoplayPolicyMediaType</a> <strong>type</strong>);</span><span class=def id=operation-getAutoplayPolicy-HTMLMediaElement>
@@ -395,8 +396,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SameObject] readonly attribute <a href='MediaSession.html'>MediaSession</a> <strong>mediaSession</strong>;</span><span class=def id=attribute-permissions>
   [SameObject] readonly attribute <a href='Permissions.html'>Permissions</a> <strong>permissions</strong>;</span><span class=def id=attribute-maxTouchPoints>
     readonly  attribute <span class=primitive>long</span> <strong>maxTouchPoints</strong>;</span><span class=def id=attribute-presentation>
-  [SecureContext, SameObject] readonly attribute <a href='Presentation.html'>Presentation</a> <strong>presentation</strong>;</span><span class=def id=attribute-attribution>
-  [SecureContext, SameObject] readonly attribute <a href='Attribution.html'>Attribution</a> <strong>attribution</strong>;</span><span class=def id=attribute-wakeLock>
+  [SecureContext, SameObject] readonly attribute <a href='Presentation.html'>Presentation</a> <strong>presentation</strong>;</span><span class=def id=attribute-wakeLock>
   [SameObject] readonly attribute <a href='WakeLock.html'>WakeLock</a> <strong>wakeLock</strong>;</span><span class=def id=attribute-serviceWorker>
   [SecureContext, SameObject] readonly attribute <a href='ServiceWorkerContainer.html'>ServiceWorkerContainer</a> <strong>serviceWorker</strong>;</span><span class=def id=operation-vibrate-VibratePattern>
     <span class=primitive>boolean</span> <strong>vibrate</strong> (<a href='VibratePattern.html'>VibratePattern</a> <strong>pattern</strong>);</span><span class=def id=attribute-virtualKeyboard>
@@ -446,6 +446,7 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webhid&#x2F;">WebHID API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webusb&#x2F;">WebUSB API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;window-controls-overlay&#x2F;">Window Controls Overlay</a> refers to <code>Navigator</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;attribution&#x2F;">Attribution Level 1</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;audio-session&#x2F;">Audio Session</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;autoplay-detection&#x2F;">Autoplay Policy Detection</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;battery-status&#x2F;">Battery Status API</a> refers to <code>Navigator</code></li>
@@ -465,7 +466,6 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions&#x2F;">Permissions</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;pointerevents4&#x2F;">Pointer Events</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;presentation-api&#x2F;">Presentation API</a> refers to <code>Navigator</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;privacy-preserving-attribution&#x2F;">Attribution Level 1</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-wake-lock&#x2F;">Screen Wake Lock API</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;service-workers&#x2F;">Service Workers Nightly</a> refers to <code>Navigator</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;vibration&#x2F;">Vibration API</a> refers to <code>Navigator</code></li>
