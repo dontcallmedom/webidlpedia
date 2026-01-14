@@ -1,0 +1,47 @@
+---
+title: <code>HTMLPermissionElement</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#htmlpermissionelement">The HTML Permission Elements</a> defines <code>HTMLPermissionElement</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>HTMLPermissionElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlpermissionelement-type">type</a></strong>;</span><span class=def id=operation-static>
+  static <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlpermissionelement-istypesupported">isTypeSupported</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span>
+};</span><span class=def>
+<a href='HTMLPermissionElement.html'>HTMLPermissionElement</a> includes <a href='InPagePermissionMixin.html'>InPagePermissionMixin</a>;</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>HTMLPermissionElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
+  [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
+  [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlpermissionelement-type">type</a></strong>;</span><span class=def id=operation-static>
+  static <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlpermissionelement-istypesupported">isTypeSupported</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=attribute-isValid>
+  readonly attribute <span class=primitive>boolean</span> <strong>isValid</strong>;</span><span class=def id=attribute-invalidReason>
+  readonly attribute <a href='InPagePermissionMixinBlockerReason.html'>InPagePermissionMixinBlockerReason</a> <strong>invalidReason</strong>;</span><span class=def id=attribute-initialPermissionStatus>
+  readonly attribute <a href='PermissionState.html'>PermissionState</a> <strong>initialPermissionStatus</strong>;</span><span class=def id=attribute-permissionStatus>
+  readonly attribute <a href='PermissionState.html'>PermissionState</a> <strong>permissionStatus</strong>;</span><span class=def id=attribute-onpromptaction>
+
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpromptaction</strong>;</span><span class=def id=attribute-onpromptdismiss>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpromptdismiss</strong>;</span><span class=def id=attribute-onvalidationstatuschange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvalidationstatuschange</strong>;</span>
+};</span></code></pre></details>
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>HTMLPermissionElement</code></h3>
+
+  <ul>
+    <li><code><a href="HTMLPermissionElement.html">HTMLPermissionElement</a><a href=HTMLPermissionElement.html#constructor>()</a></code></li>
+
+  </ul>
+</section>
+
+  
