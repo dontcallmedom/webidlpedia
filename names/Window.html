@@ -112,6 +112,11 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-speechSy
 partial interface <strong>Window</strong> {<span class=def id=attribute-credentialless>
   readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;crash-reporting&#x2F;#crash-report-storage">Crash Reporting</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-crashReport>
+  readonly attribute <a href='CrashReportContext.html'>CrashReportContext</a> <strong>crashReport</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a><pre class=webidl><code><span class=def>partial interface <strong>Window</strong> {<span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
       <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span>
@@ -430,7 +435,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=operation-fetchLater-RequestInfo-DeferredRequestInit>
   [NewObject, SecureContext] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-credentialless>
-  readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
+  readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-crashReport>
+  readonly attribute <a href='CrashReportContext.html'>CrashReportContext</a> <strong>crashReport</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
   [SecureContext] Promise&lt;<a href='DigitalGoodsService.html'>DigitalGoodsService</a>&gt; <strong>getDigitalGoodsService</strong>(
       <span class=primitive>DOMString</span> <strong>serviceProvider</strong>);</span><span class=def id=attribute-documentPictureInPicture>
   [SameObject, SecureContext] readonly attribute <a href='DocumentPictureInPicture.html'>DocumentPictureInPicture</a>
@@ -535,6 +541,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;long-animation-frames&#x2F;">Long Animation Frames API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;">Iframe credentialless</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;crash-reporting&#x2F;">Crash Reporting</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;digital-goods&#x2F;">Digital Goods API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;document-picture-in-picture&#x2F;">Document Picture-in-Picture Specification</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;">Fenced Frame</a> refers to <code>Window</code></li>
