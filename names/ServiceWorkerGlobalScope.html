@@ -57,7 +57,14 @@ partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;#extensions-to-serviceworkerglobalscope">Web Periodic Background Synchronization</a><pre class=webidl><code><span class=def>partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onperiodicsync>
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;#oncanmakepayment-attribute">Payment Handler API</a><pre class=webidl><code><span class=def>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;#extensions-to-the-serviceworkerglobalscope-interface">Push API</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>, SecureContext]
+partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onpush>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def id=attribute-onpushsubscriptionchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-based-payment-handler&#x2F;#oncanmakepayment-attribute">Web-based Payment Handler API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-oncanmakepayment>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span>
@@ -65,13 +72,6 @@ partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=
 
 partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onpaymentrequest>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span>
-};</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;#extensions-to-the-serviceworkerglobalscope-interface">Push API</a><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/ServiceWorker.html'>ServiceWorker</a>, SecureContext]
-partial interface <strong>ServiceWorkerGlobalScope</strong> {<span class=def id=attribute-onpush>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def id=attribute-onpushsubscriptionchange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
 };</span></code></pre></li>
 
   </ul>
@@ -102,11 +102,11 @@ interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onbackgroundfetchclick</strong>;</span><span class=def id=attribute-onsync>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onsync</strong>;</span><span class=def id=attribute-oncontentdelete>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncontentdelete</strong>;</span><span class=def id=attribute-onperiodicsync>
-    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span><span class=def id=attribute-oncanmakepayment>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span><span class=def id=attribute-onpaymentrequest>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span><span class=def id=attribute-onpush>
+    attribute <a href='EventHandler.html'>EventHandler</a> <strong>onperiodicsync</strong>;</span><span class=def id=attribute-onpush>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpush</strong>;</span><span class=def id=attribute-onpushsubscriptionchange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpushsubscriptionchange</strong>;</span><span class=def id=attribute-oncanmakepayment>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>oncanmakepayment</strong>;</span><span class=def id=attribute-onpaymentrequest>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpaymentrequest</strong>;</span>
 };</span></code></pre></details>
 </section>
 
@@ -119,7 +119,7 @@ interface <strong>ServiceWorkerGlobalScope</strong> : <a href='WorkerGlobalScope
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;background-sync&#x2F;spec&#x2F;">Web Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;content-index&#x2F;spec&#x2F;">Content Index</a> refers to <code>ServiceWorkerGlobalScope</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;periodic-background-sync&#x2F;">Web Periodic Background Synchronization</a> refers to <code>ServiceWorkerGlobalScope</code></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;payment-handler&#x2F;">Payment Handler API</a> refers to <code>ServiceWorkerGlobalScope</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;push-api&#x2F;">Push API</a> refers to <code>ServiceWorkerGlobalScope</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-based-payment-handler&#x2F;">Web-based Payment Handler API</a> refers to <code>ServiceWorkerGlobalScope</code></li>
 
   </ul></section>

@@ -56,7 +56,7 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
 };</span><span class=def>
 <a href='Document.html'>Document</a> includes <a href='XPathEvaluatorBase.html'>XPathEvaluatorBase</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
-  <ul>
+  <ul class=long>
     <li><a href="https:&#x2F;&#x2F;drafts.css-houdini.org&#x2F;font-metrics-api-1&#x2F;">Font Metrics API Level 1</a><pre class=webidl><code><span class=def>partial interface <strong>Document</strong> {<span class=def id=operation-measureElement-Element>
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureElement</strong>(<a href='Element.html'>Element</a> <strong>element</strong>);</span><span class=def id=operation-measureText-DOMString-StylePropertyMapReadOnly>
     <a href='FontMetrics.html'>FontMetrics</a> <strong>measureText</strong>(<span class=primitive>DOMString</span> <strong>text</strong>, <a href='StylePropertyMapReadOnly.html'>StylePropertyMapReadOnly</a> <strong>styleMap</strong>);</span>
@@ -229,6 +229,8 @@ partial interface <strong>Document</strong> {<span class=def id=operation-getSel
 partial interface <strong>Document</strong> {<span class=def id=attribute-rootElement>
   readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;wai-aria-1.3&#x2F;">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a><pre class=webidl><code><span class=def>
+<a href='Document.html'>Document</a> includes <a href='ARIANotifyMixin.html'>ARIANotifyMixin</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;web-animations-1&#x2F;#extensions-to-the-document-interface">Web Animations Module Level 1</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Document</strong> {<span class=def id=attribute-timeline>
@@ -480,7 +482,8 @@ interface <strong>Document</strong> : <a href='Node.html'>Node</a> {<span class=
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpointerlockerror</strong>;</span><span class=def id=operation-exitPointerLock>
   <span class=primitive>undefined</span> <strong>exitPointerLock</strong>();</span><span class=def id=operation-getSelection>
   <a href='Selection.html'>Selection</a>? <strong>getSelection</strong>();</span><span class=def id=attribute-rootElement>
-  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span><span class=def id=attribute-timeline>
+  readonly attribute <a href='SVGSVGElement.html'>SVGSVGElement</a>? <strong>rootElement</strong>;</span><span class=def id=operation-ariaNotify-DOMString-AriaNotificationOptions>
+  <span class=primitive>undefined</span> <strong>ariaNotify</strong>(<span class=primitive>DOMString</span> <strong>announcement</strong>, optional <a href='AriaNotificationOptions.html'>AriaNotificationOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-timeline>
     readonly attribute <a href='DocumentTimeline.html'>DocumentTimeline</a> <strong>timeline</strong>;</span>
 };</span></code></pre></details>
 </section>
