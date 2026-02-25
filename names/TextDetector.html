@@ -8,11 +8,15 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shape-detection-api&#x2F;text.html#textdetector">Accelerated Text Detection in Images</a> defines <code>TextDetector</code></p>
-<pre class=webidl><code><span class=def>[
+<pre class=webidl><code><span class=def>
+
+[
     Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>),
     SecureContext
 ] interface <strong>TextDetector</strong> {<span class=def id=constructor>
-    <strong>constructor</strong>();</span><span class=def id=operation-detect-ImageBitmapSource>
+    <strong>constructor</strong>();</span><span class=def id=operation-static>
+    static Promise&lt;<a href='Availability.html'>Availability</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shape-detection-api&#x2F;text.html#dom-textdetector-availability">availability</a></strong>(<a href='TextDetectorOptions.html'>TextDetectorOptions</a> <strong>options</strong>);</span><span class=def id=operation-static>
+    static Promise&lt;<a href='TextDetector.html'>TextDetector</a>&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shape-detection-api&#x2F;text.html#dom-textdetector-create">create</a></strong>(optional <a href='TextDetectorCreateOptions.html'>TextDetectorCreateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-detect-ImageBitmapSource>
     Promise&lt;sequence&lt;<a href='DetectedText.html'>DetectedText</a>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;shape-detection-api&#x2F;text.html#dom-textdetector-detect">detect</a></strong>(<a href='ImageBitmapSource.html'>ImageBitmapSource</a> <strong>image</strong>);</span>
 };</span></code></pre>
   
@@ -23,8 +27,16 @@ base: ../
 
   <ul>
     <li><code><a href="TextDetector.html">TextDetector</a><a href=TextDetector.html#constructor>()</a></code></li>
+<li><code><a href="TextDetector.html">TextDetector</a><a href=TextDetector.html#operation-static>.create()</a></code></li>
 
   </ul>
 </section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="TextDetector.html">TextDetector</a></code></li>
 
+  </ul>
+</section>
   
