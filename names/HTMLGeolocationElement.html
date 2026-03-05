@@ -7,42 +7,38 @@ base: ../
 
 <section>
   <h3>Definition</h3>
-  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#htmlgeolocationelement">The HTML Permission Elements</a> defines <code>HTMLGeolocationElement</code></p>
-<pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#htmlgeolocationelement">The HTML Geolocation Element</a> defines <code>HTMLGeolocationElement</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>HTMLGeolocationElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-position>
 
-  readonly attribute <a href='GeolocationPosition.html'>GeolocationPosition</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-position">position</a></strong>;</span><span class=def id=attribute-error>
-  readonly attribute <a href='GeolocationPositionError.html'>GeolocationPositionError</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-error">error</a></strong>;</span><span class=def id=attribute-autolocate>
-  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-autolocate">autolocate</a></strong>;</span><span class=def id=attribute-watch>
-  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-watch">watch</a></strong>;</span><span class=def id=attribute-onlocation>
+  readonly attribute <a href='GeolocationPosition.html'>GeolocationPosition</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-position">position</a></strong>;</span><span class=def id=attribute-error>
+  readonly attribute <a href='GeolocationPositionError.html'>GeolocationPositionError</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-error">error</a></strong>;</span><span class=def id=attribute-autolocate>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-autolocate">autolocate</a></strong>;</span><span class=def id=attribute-watch>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-watch">watch</a></strong>;</span><span class=def id=attribute-onlocation>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-onlocation">onlocation</a></strong>;</span>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-onlocation">onlocation</a></strong>;</span>
 };</span><span class=def>
-<a href='HTMLGeolocationElement.html'>HTMLGeolocationElement</a> includes <a href='InPagePermissionMixin.html'>InPagePermissionMixin</a>;</span></code></pre>
+<a href='HTMLGeolocationElement.html'>HTMLGeolocationElement</a> includes <a href='ActivationBlockersMixin.html'>ActivationBlockersMixin</a>;</span><span class=def>
+<a href='HTMLGeolocationElement.html'>HTMLGeolocationElement</a> includes <a href='PowerfulFeatureObserver.html'>PowerfulFeatureObserver</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>HTMLGeolocationElement</strong> : <a href='HTMLElement.html'>HTMLElement</a> {<span class=def id=constructor>
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-position>
 
-  readonly attribute <a href='GeolocationPosition.html'>GeolocationPosition</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-position">position</a></strong>;</span><span class=def id=attribute-error>
-  readonly attribute <a href='GeolocationPositionError.html'>GeolocationPositionError</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-error">error</a></strong>;</span><span class=def id=attribute-autolocate>
-  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-autolocate">autolocate</a></strong>;</span><span class=def id=attribute-watch>
-  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-watch">watch</a></strong>;</span><span class=def id=attribute-onlocation>
+  readonly attribute <a href='GeolocationPosition.html'>GeolocationPosition</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-position">position</a></strong>;</span><span class=def id=attribute-error>
+  readonly attribute <a href='GeolocationPositionError.html'>GeolocationPositionError</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-error">error</a></strong>;</span><span class=def id=attribute-autolocate>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-autolocate">autolocate</a></strong>;</span><span class=def id=attribute-watch>
+  [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-watch">watch</a></strong>;</span><span class=def id=attribute-onlocation>
 
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;permission-elements.html#dom-htmlgeolocationelement-onlocation">onlocation</a></strong>;</span><span class=def id=attribute-isValid>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html#dom-htmlgeolocationelement-onlocation">onlocation</a></strong>;</span><span class=def id=attribute-isValid>
   readonly attribute <span class=primitive>boolean</span> <strong>isValid</strong>;</span><span class=def id=attribute-invalidReason>
-  readonly attribute <a href='InPagePermissionMixinBlockerReason.html'>InPagePermissionMixinBlockerReason</a> <strong>invalidReason</strong>;</span><span class=def id=attribute-initialPermissionStatus>
+  readonly attribute <a href='ActivationBlockersMixinBlockerReason.html'>ActivationBlockersMixinBlockerReason</a> <strong>invalidReason</strong>;</span><span class=def id=attribute-onvalidationstatuschange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvalidationstatuschange</strong>;</span><span class=def id=attribute-initialPermissionStatus>
   readonly attribute <a href='PermissionState.html'>PermissionState</a> <strong>initialPermissionStatus</strong>;</span><span class=def id=attribute-permissionStatus>
   readonly attribute <a href='PermissionState.html'>PermissionState</a> <strong>permissionStatus</strong>;</span><span class=def id=attribute-onpromptaction>
-
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpromptaction</strong>;</span><span class=def id=attribute-onpromptdismiss>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpromptdismiss</strong>;</span><span class=def id=attribute-onvalidationstatuschange>
-  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onvalidationstatuschange</strong>;</span>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onpromptdismiss</strong>;</span>
 };</span></code></pre></details>
 </section>
 <section>
