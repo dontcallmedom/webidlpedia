@@ -11,7 +11,10 @@ base: ../
 <pre class=webidl><code><span class=def>
 
 dictionary <strong>ModelContextTool</strong> {<span class=def>
-  required <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-name">name</a></strong>;</span><span class=def>
+  required <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-name">name</a></strong>;</span><span class=def><span class="comment">
+  &#x2F;&#x2F; Because &#x60;title&#x60; is for display in possibly native UIs, this must be a &#x60;USVString&#x60;.
+  &#x2F;&#x2F; See https:&#x2F;&#x2F;w3ctag.github.io&#x2F;design-principles&#x2F;#idl-string-types.
+  </span><span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-title">title</a></strong>;</span><span class=def>
   required <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-description">description</a></strong>;</span><span class=def>
   <span class=primitive>object</span> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-inputschema">inputSchema</a></strong>;</span><span class=def>
   required <a href='ToolExecuteCallback.html'>ToolExecuteCallback</a> <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;#dom-modelcontexttool-execute">execute</a></strong>;</span><span class=def>
