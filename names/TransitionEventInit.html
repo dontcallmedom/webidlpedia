@@ -15,8 +15,23 @@ dictionary <strong>TransitionEventInit</strong> : <a href='EventInit.html'>Event
   <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#dom-transitioneventinit-elapsedtime">elapsedTime</a></strong> &#x3D; 0.0;</span><span class=def>
   <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#dom-transitioneventinit-pseudoelement">pseudoElement</a></strong> &#x3D; &quot;&quot;;</span>
 };</span></code></pre>
-  
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-transitions-2&#x2F;">CSS Transitions Module Level 2</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>TransitionEventInit</strong> {<span class=def>
+  <a href='CSSTransition.html'>CSSTransition</a>? <strong>animation</strong> &#x3D; null;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>TransitionEventInit</strong> : <a href='EventInit.html'>EventInit</a> {<span class=def>
+  <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#dom-transitioneventinit-propertyname">propertyName</a></strong> &#x3D; &quot;&quot;;</span><span class=def>
+  <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#dom-transitioneventinit-elapsedtime">elapsedTime</a></strong> &#x3D; 0.0;</span><span class=def>
+  <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#dom-transitioneventinit-pseudoelement">pseudoElement</a></strong> &#x3D; &quot;&quot;;</span><span class=def>
+  <a href='CSSTransition.html'>CSSTransition</a>? <strong>animation</strong> &#x3D; null;</span>
+};</span></code></pre></details>
 </section>
 
 <section>
@@ -27,4 +42,8 @@ dictionary <strong>TransitionEventInit</strong> : <a href='EventInit.html'>Event
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-transitions-2&#x2F;">CSS Transitions Module Level 2</a> refers to <code>TransitionEventInit</code></li>
+
+  </ul></section>

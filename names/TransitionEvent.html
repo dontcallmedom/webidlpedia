@@ -15,8 +15,24 @@ interface <strong>TransitionEvent</strong> : <a href='Event.html'>Event</a> {<sp
   readonly attribute <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#Events-TransitionEvent-elapsedTime">elapsedTime</a></strong>;</span><span class=def id=attribute-pseudoElement>
   readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#Events-TransitionEvent-pseudoElement">pseudoElement</a></strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-transitions-2&#x2F;#interface-transitionevent-attributes">CSS Transitions Module Level 2</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial interface <strong>TransitionEvent</strong> {<span class=def id=attribute-animation>
+  readonly attribute <a href='CSSTransition.html'>CSSTransition</a>? <strong>animation</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>TransitionEvent</strong> : <a href='Event.html'>Event</a> {<span class=def id=constructor-CSSOMString-TransitionEventInit>
+  <strong>constructor</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>type</strong>, optional <a href='TransitionEventInit.html'>TransitionEventInit</a> <strong>transitionEventInitDict</strong> &#x3D; {});</span><span class=def id=attribute-propertyName>
+  readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#Events-TransitionEvent-propertyName">propertyName</a></strong>;</span><span class=def id=attribute-elapsedTime>
+  readonly attribute <span class=primitive>double</span> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#Events-TransitionEvent-elapsedTime">elapsedTime</a></strong>;</span><span class=def id=attribute-pseudoElement>
+  readonly attribute <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;css-transitions-1&#x2F;#Events-TransitionEvent-pseudoElement">pseudoElement</a></strong>;</span><span class=def id=attribute-animation>
+  readonly attribute <a href='CSSTransition.html'>CSSTransition</a>? <strong>animation</strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>TransitionEvent</code></h3>
@@ -27,4 +43,8 @@ interface <strong>TransitionEvent</strong> : <a href='Event.html'>Event</a> {<sp
   </ul>
 </section>
 
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-transitions-2&#x2F;">CSS Transitions Module Level 2</a> refers to <code>TransitionEvent</code></li>
+
+  </ul></section>
