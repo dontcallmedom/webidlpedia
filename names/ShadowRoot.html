@@ -32,6 +32,11 @@ partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setH
 
   [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>ShadowRoot</strong> {<span class=def id=operation-setHTML-DOMString-SetHTMLOptions>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
+};</span></code></pre></li>
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
@@ -50,7 +55,8 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   [CEReactions] <span class=primitive>undefined</span> <strong>setHTMLUnsafe</strong>((<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>html</strong>);</span><span class=def id=operation-getHTML-GetHTMLOptions>
   <span class=primitive>DOMString</span> <strong>getHTML</strong>(optional <a href='GetHTMLOptions.html'>GetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=attribute-innerHTML>
 
-  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span>
+  [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span><span class=def id=operation-setHTML-DOMString-SetHTMLOptions>
+  [CEReactions] <span class=primitive>undefined</span> <strong>setHTML</strong>(<span class=primitive>DOMString</span> <strong>html</strong>, optional <a href='SetHTMLOptions.html'>SetHTMLOptions</a> <strong>options</strong> &#x3D; {});</span>
 };</span></code></pre></details>
 </section>
 <section>
@@ -80,6 +86,7 @@ interface <strong>ShadowRoot</strong> : <a href='DocumentFragment.html'>Document
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>ShadowRoot</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;sanitizer-api&#x2F;">HTML Sanitizer API</a> refers to <code>ShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-highlight-api-1&#x2F;">CSS Custom Highlight API Module Level 1</a> refers to <code>ShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;">CSSOM View Module Level 1</a> refers to <code>ShadowRoot</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;selection-api&#x2F;">Selection API</a> refers to <code>ShadowRoot</code></li>
