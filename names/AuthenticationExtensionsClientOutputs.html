@@ -38,7 +38,15 @@ partial dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.1-ps-20210615&#x2F;fido-client-to-authenticator-protocol-v2.1-ps-errata-20220621.html">Client to Authenticator Protocol (CTAP)</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.2-ps-20250714&#x2F;fido-client-to-authenticator-protocol-v2.2-ps-20250714.html">Client to Authenticator Protocol (CTAP)</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span class=def>
+  <span class=primitive>boolean</span> <strong>credBlob</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span class=def>
+  <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>getCredBlob</strong>;</span>
+};</span><span class=def>
 
 partial dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span class=def>
   <span class=primitive>boolean</span> <strong>hmacCreateSecret</strong>;</span>
@@ -63,6 +71,8 @@ dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span class=d
     <a href='AuthenticationExtensionsPRFOutputs.html'>AuthenticationExtensionsPRFOutputs</a> <strong>prf</strong>;</span><span class=def>
     <a href='AuthenticationExtensionsLargeBlobOutputs.html'>AuthenticationExtensionsLargeBlobOutputs</a> <strong>largeBlob</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>remoteClientDataJSON</strong>;</span><span class=def>
+  <span class=primitive>boolean</span> <strong>credBlob</strong>;</span><span class=def>
+  <a href='ArrayBuffer.html'>ArrayBuffer</a> <strong>getCredBlob</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>hmacCreateSecret</strong>;</span><span class=def>
   <a href='HMACGetSecretOutput.html'>HMACGetSecretOutput</a> <strong>hmacGetSecret</strong>;</span><span class=def>
   <a href='AuthenticationExtensionsPaymentOutputs.html'>AuthenticationExtensionsPaymentOutputs</a> <strong>payment</strong>;</span>
@@ -79,7 +89,7 @@ dictionary <strong>AuthenticationExtensionsClientOutputs</strong> {<span class=d
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.1-ps-20210615&#x2F;fido-client-to-authenticator-protocol-v2.1-ps-errata-20220621.html">Client to Authenticator Protocol (CTAP)</a> refers to <code>AuthenticationExtensionsClientOutputs</code></li>
+    <li><a href="https:&#x2F;&#x2F;fidoalliance.org&#x2F;specs&#x2F;fido-v2.2-ps-20250714&#x2F;fido-client-to-authenticator-protocol-v2.2-ps-20250714.html">Client to Authenticator Protocol (CTAP)</a> refers to <code>AuthenticationExtensionsClientOutputs</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;secure-payment-confirmation&#x2F;">Secure Payment Confirmation</a> refers to <code>AuthenticationExtensionsClientOutputs</code></li>
 
   </ul></section>
