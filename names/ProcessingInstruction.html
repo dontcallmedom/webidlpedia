@@ -10,8 +10,18 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#processinginstruction">DOM Standard</a> defines <code>ProcessingInstruction</code></p>
 <pre class=webidl><code><span class=def>
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def id=attribute-target>
-  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-target">target</a></strong>;</span>
+interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def id=constructor-DOMString-DOMString>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, optional <span class=primitive>DOMString</span> <strong>data</strong> &#x3D; &quot;&quot;);</span><span class=def id=attribute-target>
+
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-target">target</a></strong>;</span><span class=def id=operation-hasAttributes>
+
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-hasattributes">hasAttributes</a></strong>();</span><span class=def id=operation-getAttributeNames>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-getattributenames">getAttributeNames</a></strong>();</span><span class=def id=operation-getAttribute-DOMString>
+  <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-getattribute">getAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-setAttribute-DOMString-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-setattribute">setAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def id=operation-removeAttribute-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-removeattribute">removeAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-toggleAttribute-DOMString-boolean>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-toggleattribute">toggleAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, optional <span class=primitive>boolean</span> <strong>force</strong>);</span><span class=def id=operation-hasAttribute-DOMString>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-hasattribute">hasAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span>
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
@@ -22,8 +32,18 @@ interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
-interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def id=attribute-target>
-  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-target">target</a></strong>;</span><span class=def id=attribute-sheet>
+interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>CharacterData</a> {<span class=def id=constructor-DOMString-DOMString>
+  <strong>constructor</strong>(<span class=primitive>DOMString</span> <strong>target</strong>, optional <span class=primitive>DOMString</span> <strong>data</strong> &#x3D; &quot;&quot;);</span><span class=def id=attribute-target>
+
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-target">target</a></strong>;</span><span class=def id=operation-hasAttributes>
+
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-hasattributes">hasAttributes</a></strong>();</span><span class=def id=operation-getAttributeNames>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-getattributenames">getAttributeNames</a></strong>();</span><span class=def id=operation-getAttribute-DOMString>
+  <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-getattribute">getAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-setAttribute-DOMString-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-setattribute">setAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, <span class=primitive>DOMString</span> <strong>value</strong>);</span><span class=def id=operation-removeAttribute-DOMString>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-removeattribute">removeAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-toggleAttribute-DOMString-boolean>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-toggleattribute">toggleAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, optional <span class=primitive>boolean</span> <strong>force</strong>);</span><span class=def id=operation-hasAttribute-DOMString>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;#dom-processinginstruction-hasattribute">hasAttribute</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=attribute-sheet>
   readonly attribute <a href='CSSStyleSheet.html'>CSSStyleSheet</a>? <strong>sheet</strong>;</span>
 };</span></code></pre></details>
 </section>
@@ -31,7 +51,8 @@ interface <strong>ProcessingInstruction</strong> : <a href='CharacterData.html'>
 <h3>Methods and attributes that return objects implementing <code>ProcessingInstruction</code></h3>
 
   <ul>
-    <li><code><a href="Document.html">Document</a><a href=Document.html#operation-createProcessingInstruction-DOMString-DOMString>.createProcessingInstruction()</a></code></li>
+    <li><code><a href="ProcessingInstruction.html">ProcessingInstruction</a><a href=ProcessingInstruction.html#constructor-DOMString-DOMString>()</a></code></li>
+<li><code><a href="Document.html">Document</a><a href=Document.html#operation-createProcessingInstruction-DOMString-DOMString>.createProcessingInstruction()</a></code></li>
 <li><code><a href="StyleSheet.html">StyleSheet</a><a href=StyleSheet.html#attribute-ownerNode>.ownerNode</a></code></li>
 
   </ul>
