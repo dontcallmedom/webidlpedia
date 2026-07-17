@@ -20,6 +20,8 @@ interface <strong>WorkerNavigator</strong> {};</span><span class=def>
   <ul>
     <li><a href="https:&#x2F;&#x2F;storage.spec.whatwg.org&#x2F;">Storage Standard</a><pre class=webidl><code><span class=def>
 <a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorStorage.html'>NavigatorStorage</a>;</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;cross-origin-storage&#x2F;">Cross-Origin Storage</a><pre class=webidl><code><span class=def>
+<a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorCrossOriginStorage.html'>NavigatorCrossOriginStorage</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;netinfo&#x2F;">Network Information API</a><pre class=webidl><code><span class=def>
 <a href='WorkerNavigator.html'>WorkerNavigator</a> includes <a href='NavigatorNetworkInformation.html'>NavigatorNetworkInformation</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;serial&#x2F;#serial-attribute-0">Web Serial API</a><pre class=webidl><code><span class=def>
@@ -94,7 +96,8 @@ interface <strong>WorkerNavigator</strong> {<span class=def id=attribute-appCode
   readonly attribute FrozenArray&lt;<span class=primitive>DOMString</span>&gt; <strong>languages</strong>;</span><span class=def id=attribute-onLine>
   readonly attribute <span class=primitive>boolean</span> <strong>onLine</strong>;</span><span class=def id=attribute-hardwareConcurrency>
   readonly attribute <span class=primitive>unsigned long long</span> <strong>hardwareConcurrency</strong>;</span><span class=def id=attribute-storage>
-  [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;</span><span class=def id=attribute-connection>
+  [SameObject] readonly attribute <a href='StorageManager.html'>StorageManager</a> <strong>storage</strong>;</span><span class=def id=attribute-crossOriginStorage>
+  [SameObject, SecureContext] readonly attribute <a href='CrossOriginStorageManager.html'>CrossOriginStorageManager</a> <strong>crossOriginStorage</strong>;</span><span class=def id=attribute-connection>
   [SameObject] readonly attribute <a href='NetworkInformation.html'>NetworkInformation</a> <strong>connection</strong>;</span><span class=def id=attribute-serial>
   [SameObject] readonly attribute <a href='Serial.html'>Serial</a> <strong>serial</strong>;</span><span class=def id=attribute-storageBuckets>
   [SameObject] readonly attribute <a href='StorageBucketManager.html'>StorageBucketManager</a> <strong>storageBuckets</strong>;</span><span class=def id=attribute-userAgentData>
