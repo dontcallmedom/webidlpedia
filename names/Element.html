@@ -92,9 +92,9 @@ partial interface <strong>Element</strong> {<span class=def id=attribute-element
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;container-timing&#x2F;#extensions-to-element">Container Timing API</a><pre class=webidl><code><span class=def>
 
-partial interface <strong>Element</strong> {<span class=def id=attribute-containertiming>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>containertiming</strong>;</span><span class=def id=attribute-containertimingIgnore>
-    [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>containertimingIgnore</strong>;</span>
+partial interface <strong>Element</strong> {<span class=def id=attribute-containerTiming>
+    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>containerTiming</strong>;</span><span class=def id=attribute-containerTimingIgnore>
+    [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>containerTimingIgnore</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-nav-1&#x2F;">CSS Spatial Navigation Module Level 1</a><pre class=webidl><code><span class=def>
 
@@ -250,9 +250,9 @@ interface <strong>Element</strong> : <a href='Node.html'>Node</a> {<span class=d
   [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>innerHTML</strong>;</span><span class=def id=attribute-outerHTML>
   [CEReactions] attribute (<a href='TrustedHTML.html'>TrustedHTML</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong>outerHTML</strong>;</span><span class=def id=operation-insertAdjacentHTML-DOMString-TrustedHTML-DOMString>
   [CEReactions] <span class=primitive>undefined</span> <strong>insertAdjacentHTML</strong>(<span class=primitive>DOMString</span> <strong>position</strong>, (<a href='TrustedHTML.html'>TrustedHTML</a> or <span class=primitive>DOMString</span>) <strong>string</strong>);</span><span class=def id=attribute-elementTiming>
-    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=attribute-containertiming>
-    [CEReactions] attribute <span class=primitive>DOMString</span> <strong>containertiming</strong>;</span><span class=def id=attribute-containertimingIgnore>
-    [CEReactions] attribute <span class=primitive>DOMString</span>? <strong>containertimingIgnore</strong>;</span><span class=def id=operation-getSpatialNavigationContainer>
+    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>elementTiming</strong>;</span><span class=def id=attribute-containerTiming>
+    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>containerTiming</strong>;</span><span class=def id=attribute-containerTimingIgnore>
+    [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>containerTimingIgnore</strong>;</span><span class=def id=operation-getSpatialNavigationContainer>
     <a href='Node.html'>Node</a> <strong>getSpatialNavigationContainer</strong>();</span><span class=def id=operation-focusableAreas-FocusableAreasOption>
     sequence&lt;<a href='Node.html'>Node</a>&gt; <strong>focusableAreas</strong>(optional <a href='FocusableAreasOption.html'>FocusableAreasOption</a> <strong>option</strong> &#x3D; {});</span><span class=def id=operation-spatialNavigationSearch-SpatialNavigationDirection-SpatialNavigationSearchOptions>
     <a href='Node.html'>Node</a>? <strong>spatialNavigationSearch</strong>(<a href='SpatialNavigationDirection.html'>SpatialNavigationDirection</a> <strong>dir</strong>, optional <a href='SpatialNavigationSearchOptions.html'>SpatialNavigationSearchOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-pseudo-CSSOMString>
