@@ -45,6 +45,11 @@ partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribu
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;#title">Iframe credentialless</a><pre class=webidl><code><span class=def>partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribute-credentialless>
   attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;connection-allowlists&#x2F;#connection-allowlist-attribute">Connection Allowlists</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribute-connectionAllowlist>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>connectionAllowlist</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;#title">Private State Token API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>HTMLIFrameElement</strong> {<span class=def id=attribute-privateToken>
@@ -86,7 +91,8 @@ interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLEl
 
   [CEReactions, Reflect] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginHeight</strong>;</span><span class=def id=attribute-marginWidth>
   [CEReactions, Reflect] attribute [LegacyNullToEmptyString] <span class=primitive>DOMString</span> <strong>marginWidth</strong>;</span><span class=def id=attribute-credentialless>
-  attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-privateToken>
+  attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-connectionAllowlist>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong>connectionAllowlist</strong>;</span><span class=def id=attribute-privateToken>
   [SecureContext] attribute <span class=primitive>DOMString</span> <strong>privateToken</strong>;</span><span class=def id=attribute-csp>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong>csp</strong>;</span><span class=def id=attribute-permissionsPolicy>
     [SameObject] readonly attribute <a href='PermissionsPolicy.html'>PermissionsPolicy</a> <strong>permissionsPolicy</strong>;</span><span class="comment">
@@ -106,6 +112,7 @@ interface <strong>HTMLIFrameElement</strong> : <a href='HTMLElement.html'>HTMLEl
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;">Iframe credentialless</a> refers to <code>HTMLIFrameElement</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;connection-allowlists&#x2F;">Connection Allowlists</a> refers to <code>HTMLIFrameElement</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;trust-token-api&#x2F;">Private State Token API</a> refers to <code>HTMLIFrameElement</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;csp-embedded-enforcement&#x2F;">Content Security Policy: Embedded Enforcement</a> refers to <code>HTMLIFrameElement</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;permissions-policy-1&#x2F;">Permissions Policy</a> refers to <code>HTMLIFrameElement</code></li>
