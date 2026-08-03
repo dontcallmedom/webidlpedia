@@ -52,7 +52,13 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
 <a href='HTMLElement.html'>HTMLElement</a> includes <a href='HTMLOrSVGOrMathMLElement.html'>HTMLOrSVGOrMathMLElement</a>;</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM) Module Level 1</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;container-timing&#x2F;#extensions-to-element">Container Timing API</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>HTMLElement</strong> {<span class=def id=attribute-containerTiming>
+    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>containerTiming</strong>;</span><span class=def id=attribute-containerTimingIgnore>
+    [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>containerTimingIgnore</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-1&#x2F;">CSS Object Model (CSSOM) Module Level 1</a><pre class=webidl><code><span class=def>
 
 <a href='HTMLElement.html'>HTMLElement</a> includes <a href='ElementCSSInlineStyle.html'>ElementCSSInlineStyle</a>;</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;cssom-view-1&#x2F;#extensions-to-the-htmlelement-interface">CSSOM View Module Level 1</a><pre class=webidl><code><span class=def>
@@ -193,7 +199,9 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
   </span>[CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>autofocus</strong>;</span><span class=def id=attribute-tabIndex>
   [CEReactions, ReflectSetter] attribute <span class=primitive>long</span> <strong>tabIndex</strong>;</span><span class=def id=operation-focus-FocusOptions>
   <span class=primitive>undefined</span> <strong>focus</strong>(optional <a href='FocusOptions.html'>FocusOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-blur>
-  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-style>
+  <span class=primitive>undefined</span> <strong>blur</strong>();</span><span class=def id=attribute-containerTiming>
+    [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>containerTiming</strong>;</span><span class=def id=attribute-containerTimingIgnore>
+    [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong>containerTimingIgnore</strong>;</span><span class=def id=attribute-style>
   [SameObject, PutForwards&#x3D;<span class=primitive>cssText</span>] readonly attribute <a href='CSSStyleProperties.html'>CSSStyleProperties</a> <strong>style</strong>;</span><span class=def id=attribute-scrollParent>
   readonly attribute <a href='Element.html'>Element</a>? <strong>scrollParent</strong>;</span><span class=def id=attribute-offsetParent>
   readonly attribute <a href='Element.html'>Element</a>? <strong>offsetParent</strong>;</span><span class=def id=attribute-offsetTop>
@@ -212,6 +220,8 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
 <li><code><a href="Document.html">Document</a><a href=Document.html#attribute-body>.body</a></code></li>
 <li><code><a href="HTMLLabelElement.html">HTMLLabelElement</a><a href=HTMLLabelElement.html#attribute-control>.control</a></code></li>
 <li><code><a href="SubmitEvent.html">SubmitEvent</a><a href=SubmitEvent.html#attribute-submitter>.submitter</a></code></li>
+<li><code><a href="PerformanceContainerTiming.html">PerformanceContainerTiming</a><a href=PerformanceContainerTiming.html#attribute-lastPaintedElement>.lastPaintedElement</a></code></li>
+<li><code><a href="PerformanceContainerTiming.html">PerformanceContainerTiming</a><a href=PerformanceContainerTiming.html#attribute-rootElement>.rootElement</a></code></li>
 <li><code><a href="EditContext.html">EditContext</a><a href=EditContext.html#operation-attachedElements>.attachedElements()</a></code></li>
 
   </ul>
@@ -299,6 +309,7 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
 <li><code><a href="HTMLTrackElement.html">HTMLTrackElement</a></code></li>
 <li><code><a href="HTMLUListElement.html">HTMLUListElement</a></code></li>
 <li><code><a href="HTMLUnknownElement.html">HTMLUnknownElement</a></code></li>
+<li><code><a href="PerformanceContainerTiming.html">PerformanceContainerTiming</a></code></li>
 <li><code><a href="ShowPopoverOptions.html">ShowPopoverOptions</a></code></li>
 <li><code><a href="SubmitEvent.html">SubmitEvent</a></code></li>
 <li><code><a href="SubmitEventInit.html">SubmitEventInit</a></code></li>
@@ -309,6 +320,7 @@ interface <strong>HTMLElement</strong> : <a href='Element.html'>Element</a> {<sp
   <ul>
     <li><a href="https:&#x2F;&#x2F;immersive-web.github.io&#x2F;model-element&#x2F;">The &lt;model&gt; element</a> refers to <code>HTMLElement</code></li>
 <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-surface-control&#x2F;">Captured Surface Control</a> refers to <code>HTMLElement</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;container-timing&#x2F;">Container Timing API</a> refers to <code>HTMLElement</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;fenced-frame&#x2F;">Fenced Frame</a> refers to <code>HTMLElement</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;PEPC&#x2F;geolocation-element.html">The HTML Geolocation Element</a> refers to <code>HTMLElement</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;portals&#x2F;">Portals</a> refers to <code>HTMLElement</code></li>
