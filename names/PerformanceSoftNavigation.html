@@ -1,0 +1,35 @@
+---
+title: <code>PerformanceSoftNavigation</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#performancesoftnavigation">Soft Navigations and Interaction Contentful Paint</a> defines <code>PerformanceSoftNavigation</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>PerformanceSoftNavigation</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def id=attribute-navigationType>
+    readonly attribute <a href='NavigationType.html'>NavigationType</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-navigationtype">navigationType</a></strong>;</span><span class=def id=attribute-interactionId>
+    readonly attribute <span class=primitive>unsigned long long</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-interactionid">interactionId</a></strong>;</span><span class=def id=operation-getLargestInteractionContentfulPaint>
+    <a href='InteractionContentfulPaint.html'>InteractionContentfulPaint</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-getlargestinteractioncontentfulpaint">getLargestInteractionContentfulPaint</a></strong>();</span>
+};</span><span class=def>
+
+<a href='PerformanceSoftNavigation.html'>PerformanceSoftNavigation</a> includes <a href='PaintTimingMixin.html'>PaintTimingMixin</a>;</span></code></pre>
+  
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>PerformanceSoftNavigation</strong> : <a href='PerformanceEntry.html'>PerformanceEntry</a> {<span class=def id=attribute-navigationType>
+    readonly attribute <a href='NavigationType.html'>NavigationType</a> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-navigationtype">navigationType</a></strong>;</span><span class=def id=attribute-interactionId>
+    readonly attribute <span class=primitive>unsigned long long</span> <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-interactionid">interactionId</a></strong>;</span><span class=def id=operation-getLargestInteractionContentfulPaint>
+    <a href='InteractionContentfulPaint.html'>InteractionContentfulPaint</a>? <strong><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;soft-navigations&#x2F;#dom-performancesoftnavigation-getlargestinteractioncontentfulpaint">getLargestInteractionContentfulPaint</a></strong>();</span><span class=def id=attribute-paintTime>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a> <strong>paintTime</strong>;</span><span class=def id=attribute-presentationTime>
+    readonly attribute <a href='DOMHighResTimeStamp.html'>DOMHighResTimeStamp</a>? <strong>presentationTime</strong>;</span>
+};</span></code></pre></details>
+</section>
+
+
+  
