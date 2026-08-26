@@ -30,7 +30,21 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;#capture-handle-get-supported-actions">The Capture-Handle Actions Mechanism</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>), Transferable]
+partial interface <strong>MediaStreamTrack</strong> {
+};</span><span class=def>
+
+partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-stats>
+  [SameObject] readonly attribute
+      (<a href='MediaStreamTrackAudioStats.html'>MediaStreamTrackAudioStats</a> or <a href='MediaStreamTrackVideoStats.html'>MediaStreamTrackVideoStats</a>)? <strong>stats</strong>;</span>
+};</span><span class=def>
+
+partial interface <strong>MediaStreamTrack</strong> {<span class=def id=attribute-onconfigurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconfigurationchange</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;#capture-handle-get-supported-actions">The Capture-Handle Actions Mechanism</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>MediaStreamTrack</strong> {<span class=def id=operation-getSupportedCaptureActions>
   sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getSupportedCaptureActions</strong>();</span><span class=def id=operation-sendCaptureAction-CaptureAction>
@@ -74,7 +88,10 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
   <a href='MediaTrackCapabilities.html'>MediaTrackCapabilities</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamtrack-getcapabilities">getCapabilities</a></strong>();</span><span class=def id=operation-getConstraints>
   <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamtrack-getconstraints">getConstraints</a></strong>();</span><span class=def id=operation-getSettings>
   <a href='MediaTrackSettings.html'>MediaTrackSettings</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamtrack-getsettings">getSettings</a></strong>();</span><span class=def id=operation-applyConstraints-MediaTrackConstraints>
-  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamtrack-applyconstraints">applyConstraints</a></strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=operation-getSupportedCaptureActions>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamtrack-applyconstraints">applyConstraints</a></strong>(optional <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a> <strong>constraints</strong> &#x3D; {});</span><span class=def id=attribute-stats>
+  [SameObject] readonly attribute
+      (<a href='MediaStreamTrackAudioStats.html'>MediaStreamTrackAudioStats</a> or <a href='MediaStreamTrackVideoStats.html'>MediaStreamTrackVideoStats</a>)? <strong>stats</strong>;</span><span class=def id=attribute-onconfigurationchange>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong>onconfigurationchange</strong>;</span><span class=def id=operation-getSupportedCaptureActions>
   sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>getSupportedCaptureActions</strong>();</span><span class=def id=operation-sendCaptureAction-CaptureAction>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>sendCaptureAction</strong>(<a href='CaptureAction.html'>CaptureAction</a> <strong>action</strong>);</span><span class=def id=operation-getCaptureHandle>
   <a href='CaptureHandle.html'>CaptureHandle</a>? <strong>getCaptureHandle</strong>();</span><span class=def id=attribute-oncapturehandlechange>
@@ -88,7 +105,9 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
 <h3>Methods and attributes that return objects implementing <code>MediaStreamTrack</code></h3>
 
   <ul>
-    <li><code><a href="ImageCapture.html">ImageCapture</a><a href=ImageCapture.html#attribute-track>.track</a></code></li>
+    <li><code><a href="HTMLCameraElement.html">HTMLCameraElement</a><a href=HTMLCameraElement.html#attribute-track>.track</a></code></li>
+<li><code><a href="HTMLMicrophoneElement.html">HTMLMicrophoneElement</a><a href=HTMLMicrophoneElement.html#attribute-track>.track</a></code></li>
+<li><code><a href="ImageCapture.html">ImageCapture</a><a href=ImageCapture.html#attribute-track>.track</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getAudioTracks>.getAudioTracks()</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getVideoTracks>.getVideoTracks()</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-getTracks>.getTracks()</a></code></li>
@@ -109,6 +128,8 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
     <li><code><a href="AudioContext.html">AudioContext</a></code></li>
 <li><code><a href="BrowserCaptureMediaStreamTrack.html">BrowserCaptureMediaStreamTrack</a></code></li>
 <li><code><a href="CanvasCaptureMediaStreamTrack.html">CanvasCaptureMediaStreamTrack</a></code></li>
+<li><code><a href="HTMLCameraElement.html">HTMLCameraElement</a></code></li>
+<li><code><a href="HTMLMicrophoneElement.html">HTMLMicrophoneElement</a></code></li>
 <li><code><a href="ImageCapture.html">ImageCapture</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a></code></li>
 <li><code><a href="MediaStreamTrack.html">MediaStreamTrack</a></code></li>
@@ -128,7 +149,8 @@ interface <strong>MediaStreamTrack</strong> : <a href='EventTarget.html'>EventTa
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;">The Capture-Handle Actions Mechanism</a> refers to <code>MediaStreamTrack</code></li>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>MediaStreamTrack</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-handle&#x2F;actions&#x2F;">The Capture-Handle Actions Mechanism</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;">Web Speech API</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;capture-handle-identity&#x2F;">Capture Handle - Bootstrapping Collaboration when Screensharing</a> refers to <code>MediaStreamTrack</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaStreamTrack</code></li>

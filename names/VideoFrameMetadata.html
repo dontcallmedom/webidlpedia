@@ -13,8 +13,31 @@ base: ../
 dictionary <strong>VideoFrameMetadata</strong> {<span class="comment">
   &#x2F;&#x2F; Possible members are recorded in the VideoFrame Metadata Registry.
 </span>};</span></code></pre>
-  
-  
+  <p>This dictionary is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>VideoFrameMetadata</strong> {<span class=def>
+  sequence&lt;<a href='Segment.html'>Segment</a>&gt; <strong>segments</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>VideoFrameMetadata</strong> {<span class=def>
+  <a href='BackgroundBlur.html'>BackgroundBlur</a> <strong>backgroundBlur</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>VideoFrameMetadata</strong> {<span class=def>
+  <a href='ImageBitmap.html'>ImageBitmap</a> <strong>backgroundSegmentationMask</strong>;</span>
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
+
+dictionary <strong>VideoFrameMetadata</strong> {<span class=def>
+  sequence&lt;<a href='Segment.html'>Segment</a>&gt; <strong>segments</strong>;</span><span class=def>
+  <a href='BackgroundBlur.html'>BackgroundBlur</a> <strong>backgroundBlur</strong>;</span><span class=def>
+  <a href='ImageBitmap.html'>ImageBitmap</a> <strong>backgroundSegmentationMask</strong>;</span><span class="comment">
+  &#x2F;&#x2F; Possible members are recorded in the VideoFrame Metadata Registry.
+</span>};</span></code></pre></details>
 </section>
 
 <section>
@@ -27,4 +50,8 @@ dictionary <strong>VideoFrameMetadata</strong> {<span class="comment">
 
   </ul>
 </section>
-  
+  <section><h3>Referring specifications</h3>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>VideoFrameMetadata</code></li>
+
+  </ul></section>

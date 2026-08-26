@@ -30,7 +30,32 @@ dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>gestureReactions</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>faceFraming</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>eyeGazeCorrection</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>voiceIsolation</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>humanFaceDetectionMode</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>backgroundSegmentationMask</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a><pre class=webidl><code><span class=def>
 
 partial dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>whiteBalanceMode</strong>;</span><span class=def>
@@ -85,6 +110,12 @@ dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackconstraintset-deviceid">deviceId</a></strong>;</span><span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackconstraintset-groupid">groupId</a></strong>;</span><span class=def>
   <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackconstraintset-backgroundblur">backgroundBlur</a></strong>;</span><span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>gestureReactions</strong>;</span><span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>faceFraming</strong>;</span><span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>eyeGazeCorrection</strong>;</span><span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>voiceIsolation</strong>;</span><span class=def>
+  <a href='ConstrainDOMString.html'>ConstrainDOMString</a> <strong>humanFaceDetectionMode</strong>;</span><span class=def>
+  <a href='ConstrainBoolean.html'>ConstrainBoolean</a> <strong>backgroundSegmentationMask</strong>;</span><span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>whiteBalanceMode</strong>;</span><span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>exposureMode</strong>;</span><span class=def>
   <a href='ConstrainDOMString.html'>ConstrainDOMString</a>           <strong>focusMode</strong>;</span><span class=def>
@@ -118,13 +149,17 @@ dictionary <strong>MediaTrackConstraintSet</strong> {<span class=def>
   <h3>Referring IDL interfaces/dictionaries</h3>
   
   <ul>
-    <li><code><a href="MediaTrackConstraints.html">MediaTrackConstraints</a></code></li>
+    <li><code><a href="HTMLCameraElement.html">HTMLCameraElement</a></code></li>
+<li><code><a href="HTMLMediaStreamConstraints.html">HTMLMediaStreamConstraints</a></code></li>
+<li><code><a href="HTMLMicrophoneElement.html">HTMLMicrophoneElement</a></code></li>
+<li><code><a href="MediaTrackConstraints.html">MediaTrackConstraints</a></code></li>
 
   </ul>
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaTrackConstraintSet</code></li>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>MediaTrackConstraintSet</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaTrackConstraintSet</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-capture&#x2F;">Screen Capture</a> refers to <code>MediaTrackConstraintSet</code></li>
 
   </ul></section>

@@ -25,16 +25,41 @@ interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget<
   attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-onaddtrack">onaddtrack</a></strong>;</span><span class=def id=attribute-onremovetrack>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-onremovetrack">onremovetrack</a></strong>;</span>
 };</span></code></pre>
-  
-  
+  <p>This interface is extended in the following specifications:</p>
+  <ul>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>)]
+partial interface <strong>MediaStream</strong> {
+};</span></code></pre></li>
+
+  </ul>
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=constructor>
+  <strong>constructor</strong>();</span><span class=def id=constructor-MediaStream>
+  <strong>constructor</strong>(<a href='MediaStream.html'>MediaStream</a> <strong>stream</strong>);</span><span class=def id=constructor-MediaStreamTrack>
+  <strong>constructor</strong>(sequence&lt;<a href='MediaStreamTrack.html'>MediaStreamTrack</a>&gt; <strong>tracks</strong>);</span><span class=def id=attribute-id>
+  readonly attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-id">id</a></strong>;</span><span class=def id=operation-getAudioTracks>
+  sequence&lt;<a href='MediaStreamTrack.html'>MediaStreamTrack</a>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-getaudiotracks">getAudioTracks</a></strong>();</span><span class=def id=operation-getVideoTracks>
+  sequence&lt;<a href='MediaStreamTrack.html'>MediaStreamTrack</a>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-getvideotracks">getVideoTracks</a></strong>();</span><span class=def id=operation-getTracks>
+  sequence&lt;<a href='MediaStreamTrack.html'>MediaStreamTrack</a>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-gettracks">getTracks</a></strong>();</span><span class=def id=operation-getTrackById-DOMString>
+  <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-gettrackbyid">getTrackById</a></strong>(<span class=primitive>DOMString</span> <strong>trackId</strong>);</span><span class=def id=operation-addTrack-MediaStreamTrack>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-addtrack">addTrack</a></strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>);</span><span class=def id=operation-removeTrack-MediaStreamTrack>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-removetrack">removeTrack</a></strong>(<a href='MediaStreamTrack.html'>MediaStreamTrack</a> <strong>track</strong>);</span><span class=def id=operation-clone>
+  <a href='MediaStream.html'>MediaStream</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-clone">clone</a></strong>();</span><span class=def id=attribute-active>
+  readonly attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-active">active</a></strong>;</span><span class=def id=attribute-onaddtrack>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-onaddtrack">onaddtrack</a></strong>;</span><span class=def id=attribute-onremovetrack>
+  attribute <a href='EventHandler.html'>EventHandler</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastream-onremovetrack">onremovetrack</a></strong>;</span>
+};</span></code></pre></details>
 </section>
 <section>
 <h3>Methods and attributes that return objects implementing <code>MediaStream</code></h3>
 
-  <ul>
+  <ul class=long>
     <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#constructor>()</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#constructor-MediaStream>()</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#constructor-MediaStreamTrack>()</a></code></li>
+<li><code><a href="HTMLUserMediaElement.html">HTMLUserMediaElement</a><a href=HTMLUserMediaElement.html#attribute-stream>.stream</a></code></li>
 <li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a><a href=HTMLMediaElement.html#operation-captureStream>.captureStream()</a></code></li>
 <li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a><a href=HTMLCanvasElement.html#operation-captureStream-double>.captureStream()</a></code></li>
 <li><code><a href="MediaStream.html">MediaStream</a><a href=MediaStream.html#operation-clone>.clone()</a></code></li>
@@ -62,6 +87,7 @@ interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget<
     <li><code><a href="AudioContext.html">AudioContext</a></code></li>
 <li><code><a href="HTMLCanvasElement.html">HTMLCanvasElement</a></code></li>
 <li><code><a href="HTMLMediaElement.html">HTMLMediaElement</a></code></li>
+<li><code><a href="HTMLUserMediaElement.html">HTMLUserMediaElement</a></code></li>
 <li><code><a href="MediaDevices.html">MediaDevices</a></code></li>
 <li><code><a href="MediaDevices.html">MediaDevices</a></code></li>
 <li><code><a href="MediaDevices.html">MediaDevices</a></code></li>
@@ -81,6 +107,7 @@ interface <strong>MediaStream</strong> : <a href='EventTarget.html'>EventTarget<
   <section><h3>Referring specifications</h3>
   <ul>
     <li><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;">HTML Standard</a> refers to <code>MediaStream</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>MediaStream</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-fromelement&#x2F;">Media Capture from DOM Elements</a> refers to <code>MediaStream</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediacapture-viewport&#x2F;">Viewport Capture</a> refers to <code>MediaStream</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;mediastream-recording&#x2F;">MediaStream Recording</a> refers to <code>MediaStream</code></li>

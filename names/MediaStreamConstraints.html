@@ -16,7 +16,12 @@ dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;prefer-current-tab&#x2F;">preferCurrentTab</a><pre class=webidl><code><span class=def>partial dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
+  <a href='GetUserMediaSemantics.html'>GetUserMediaSemantics</a> <strong>semantics</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;prefer-current-tab&#x2F;">preferCurrentTab</a><pre class=webidl><code><span class=def>partial dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
   <span class=primitive>boolean</span> <strong>preferCurrentTab</strong> &#x3D; false;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
@@ -31,6 +36,7 @@ partial dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
 dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
   (<span class=primitive>boolean</span> or <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a>) <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamconstraints-video">video</a></strong> &#x3D; false;</span><span class=def>
   (<span class=primitive>boolean</span> or <a href='MediaTrackConstraints.html'>MediaTrackConstraints</a>) <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediastreamconstraints-audio">audio</a></strong> &#x3D; false;</span><span class=def>
+  <a href='GetUserMediaSemantics.html'>GetUserMediaSemantics</a> <strong>semantics</strong>;</span><span class=def>
   <span class=primitive>boolean</span> <strong>preferCurrentTab</strong> &#x3D; false;</span><span class=def>
              <span class=primitive>DOMString</span> <strong>peerIdentity</strong>;</span>
 };</span></code></pre></details>
@@ -46,7 +52,8 @@ dictionary <strong>MediaStreamConstraints</strong> {<span class=def>
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;prefer-current-tab&#x2F;">preferCurrentTab</a> refers to <code>MediaStreamConstraints</code></li>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>MediaStreamConstraints</code></li>
+<li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;prefer-current-tab&#x2F;">preferCurrentTab</a> refers to <code>MediaStreamConstraints</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;">Identity for WebRTC 1.0</a> refers to <code>MediaStreamConstraints</code></li>
 
   </ul></section>

@@ -30,7 +30,40 @@ dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
 };</span></code></pre>
   <p>This dictionary is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a><pre class=webidl><code><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>powerEfficient</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>powerEfficientPixelFormat</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>gestureReactions</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>faceFraming</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>eyeGazeCorrection</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>voiceIsolation</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>humanFaceDetectionMode</strong>;</span>
+};</span><span class=def>
+
+partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>backgroundSegmentationMask</strong>;</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a><pre class=webidl><code><span class=def>
 
 partial dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
   sequence&lt;<span class=primitive>DOMString</span>&gt;  <strong>whiteBalanceMode</strong>;</span><span class=def>
@@ -82,6 +115,14 @@ dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
   <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackcapabilities-deviceid">deviceId</a></strong>;</span><span class=def>
   <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackcapabilities-groupid">groupId</a></strong>;</span><span class=def>
   sequence&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-main&#x2F;#dom-mediatrackcapabilities-backgroundblur">backgroundBlur</a></strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>powerEfficient</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>powerEfficientPixelFormat</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>gestureReactions</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>faceFraming</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>eyeGazeCorrection</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>voiceIsolation</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>DOMString</span>&gt; <strong>humanFaceDetectionMode</strong>;</span><span class=def>
+  sequence&lt;<span class=primitive>boolean</span>&gt; <strong>backgroundSegmentationMask</strong>;</span><span class=def>
   sequence&lt;<span class=primitive>DOMString</span>&gt;  <strong>whiteBalanceMode</strong>;</span><span class=def>
   sequence&lt;<span class=primitive>DOMString</span>&gt;  <strong>exposureMode</strong>;</span><span class=def>
   sequence&lt;<span class=primitive>DOMString</span>&gt;  <strong>focusMode</strong>;</span><span class=def>
@@ -119,7 +160,8 @@ dictionary <strong>MediaTrackCapabilities</strong> {<span class=def>
 </section>
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaTrackCapabilities</code></li>
+    <li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;mediacapture-extensions&#x2F;">Media Capture and Streams Extensions</a> refers to <code>MediaTrackCapabilities</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;image-capture&#x2F;">MediaStream Image Capture</a> refers to <code>MediaTrackCapabilities</code></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;screen-capture&#x2F;">Screen Capture</a> refers to <code>MediaTrackCapabilities</code></li>
 
   </ul></section>
