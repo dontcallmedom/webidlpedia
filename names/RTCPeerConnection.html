@@ -90,7 +90,14 @@ partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operati
 };</span></code></pre>
   <p>This interface is extended in the following specifications:</p>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;#methods-0">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webrtc-diagnostic-logging&#x2F;">WebRTC Diagnostic Logging API</a><pre class=webidl><code><span class=def>[
+  Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>
+] partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>startDiagnosticLogging</strong>(optional <a href='RTCDiagnosticLoggingOptions.html'>RTCDiagnosticLoggingOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>undefined</span>&gt; <strong>finishDiagnosticLogging</strong>(optional <a href='RTCDiagnosticLoggingOptions.html'>RTCDiagnosticLoggingOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>undefined</span>&gt; <strong>discardDiagnosticLogging</strong>();</span>
+};</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;#methods-0">Identity for WebRTC 1.0</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>RTCPeerConnection</strong> {<span class=def id=operation-setIdentityProvider-DOMString-RTCIdentityProviderOptions>
     <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getIdentityAssertion>
@@ -167,7 +174,10 @@ interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventT
   <a href='RTCDataChannel.html'>RTCDataChannel</a> <strong>createDataChannel</strong>(<span class=primitive>USVString</span> <strong>label</strong>,
                                    optional <a href='RTCDataChannelInit.html'>RTCDataChannelInit</a> <strong>dataChannelDict</strong> &#x3D; {});</span><span class=def id=attribute-ondatachannel>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>ondatachannel</strong>;</span><span class=def id=operation-getStats-MediaStreamTrack>
-  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>(optional <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>selector</strong> &#x3D; null);</span><span class=def id=operation-setIdentityProvider-DOMString-RTCIdentityProviderOptions>
+  Promise&lt;<a href='RTCStatsReport.html'>RTCStatsReport</a>&gt; <strong>getStats</strong>(optional <a href='MediaStreamTrack.html'>MediaStreamTrack</a>? <strong>selector</strong> &#x3D; null);</span><span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>startDiagnosticLogging</strong>(optional <a href='RTCDiagnosticLoggingOptions.html'>RTCDiagnosticLoggingOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>undefined</span>&gt; <strong>finishDiagnosticLogging</strong>(optional <a href='RTCDiagnosticLoggingOptions.html'>RTCDiagnosticLoggingOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
+  static Promise&lt;<span class=primitive>undefined</span>&gt; <strong>discardDiagnosticLogging</strong>();</span><span class=def id=operation-setIdentityProvider-DOMString-RTCIdentityProviderOptions>
     <span class=primitive>undefined</span>               <strong>setIdentityProvider</strong> (<span class=primitive>DOMString</span> <strong>provider</strong>, optional <a href='RTCIdentityProviderOptions.html'>RTCIdentityProviderOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-getIdentityAssertion>
     Promise&lt;<span class=primitive>DOMString</span>&gt; <strong>getIdentityAssertion</strong> ();</span><span class=def id=attribute-peerIdentity>
     readonly        attribute Promise&lt;<a href='RTCIdentityAssertion.html'>RTCIdentityAssertion</a>&gt; <strong>peerIdentity</strong>;</span><span class=def id=attribute-idpLoginUrl>
@@ -186,6 +196,7 @@ interface <strong>RTCPeerConnection</strong> : <a href='EventTarget.html'>EventT
 
   <section><h3>Referring specifications</h3>
   <ul>
-    <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;">Identity for WebRTC 1.0</a> refers to <code>RTCPeerConnection</code></li>
+    <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;webrtc-diagnostic-logging&#x2F;">WebRTC Diagnostic Logging API</a> refers to <code>RTCPeerConnection</code></li>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;webrtc-identity&#x2F;">Identity for WebRTC 1.0</a> refers to <code>RTCPeerConnection</code></li>
 
   </ul></section>
