@@ -8,15 +8,17 @@ base: ../
 <section>
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#languagemodel">Prompt API</a> defines <code>LanguageModel</code></p>
-<pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
 interface <strong>LanguageModel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-static>
   static Promise&lt;<a href='LanguageModel.html'>LanguageModel</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-create">create</a></strong>(optional <a href='LanguageModelCreateOptions.html'>LanguageModelCreateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
   static Promise&lt;<a href='Availability.html'>Availability</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-availability">availability</a></strong>(optional <a href='LanguageModelCreateCoreOptions.html'>LanguageModelCreateCoreOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static><span class="comment">
   &#x2F;&#x2F; **EXPERIMENTAL**: Only available in extension and experimental contexts.
   </span>static Promise&lt;<a href='LanguageModelParams.html'>LanguageModelParams</a>?&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-params">params</a></strong>();</span><span class=def id=operation-prompt-LanguageModelPrompt-LanguageModelPromptOptions><span class="comment">
 
-  &#x2F;&#x2F; These will throw &quot;NotSupportedError&quot; DOMExceptions if role &#x3D; &quot;system&quot;
-  </span>Promise&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-prompt">prompt</a></strong>(
+  &#x2F;&#x2F; These will throw a TypeError if role &#x3D; &quot;system&quot;
+  </span>Promise&lt;<a href='LanguageModelPromptResult.html'>LanguageModelPromptResult</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-prompt">prompt</a></strong>(
     <a href='LanguageModelPrompt.html'>LanguageModelPrompt</a> <strong>input</strong>,
     optional <a href='LanguageModelPromptOptions.html'>LanguageModelPromptOptions</a> <strong>options</strong> &#x3D; {}
   );</span><span class=def id=operation-promptStreaming-LanguageModelPrompt-LanguageModelPromptOptions>
@@ -61,15 +63,17 @@ interface <strong>LanguageModel</strong> : <a href='EventTarget.html'>EventTarge
 };</span><span class=def>
 <a href='LanguageModel.html'>LanguageModel</a> includes <a href='DestroyableModel.html'>DestroyableModel</a>;</span></code></pre>
   
-  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
+  <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>, SecureContext]
 interface <strong>LanguageModel</strong> : <a href='EventTarget.html'>EventTarget</a> {<span class=def id=operation-static>
   static Promise&lt;<a href='LanguageModel.html'>LanguageModel</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-create">create</a></strong>(optional <a href='LanguageModelCreateOptions.html'>LanguageModelCreateOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static>
   static Promise&lt;<a href='Availability.html'>Availability</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-availability">availability</a></strong>(optional <a href='LanguageModelCreateCoreOptions.html'>LanguageModelCreateCoreOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-static><span class="comment">
   &#x2F;&#x2F; **EXPERIMENTAL**: Only available in extension and experimental contexts.
   </span>static Promise&lt;<a href='LanguageModelParams.html'>LanguageModelParams</a>?&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-params">params</a></strong>();</span><span class=def id=operation-prompt-LanguageModelPrompt-LanguageModelPromptOptions><span class="comment">
 
-  &#x2F;&#x2F; These will throw &quot;NotSupportedError&quot; DOMExceptions if role &#x3D; &quot;system&quot;
-  </span>Promise&lt;<span class=primitive>DOMString</span>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-prompt">prompt</a></strong>(
+  &#x2F;&#x2F; These will throw a TypeError if role &#x3D; &quot;system&quot;
+  </span>Promise&lt;<a href='LanguageModelPromptResult.html'>LanguageModelPromptResult</a>&gt; <strong><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;prompt-api&#x2F;#dom-languagemodel-prompt">prompt</a></strong>(
     <a href='LanguageModelPrompt.html'>LanguageModelPrompt</a> <strong>input</strong>,
     optional <a href='LanguageModelPromptOptions.html'>LanguageModelPromptOptions</a> <strong>options</strong> &#x3D; {}
   );</span><span class=def id=operation-promptStreaming-LanguageModelPrompt-LanguageModelPromptOptions>
