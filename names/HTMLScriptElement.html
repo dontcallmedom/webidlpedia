@@ -15,7 +15,7 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
 
   [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
-  [CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
+  [CEReactions] attribute (<a href='TrustedScriptURL.html'>TrustedScriptURL</a> or <span class=primitive>USVString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
   [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-async">async</a></strong>;</span><span class=def id=attribute-defer>
   [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
@@ -23,9 +23,12 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-crossorigin">crossOrigin</a></strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-referrerpolicy">referrerPolicy</a></strong>;</span><span class=def id=attribute-integrity>
   [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-text>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-innerText><span class="comment">
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
+  &#x2F;&#x2F; innerText and textContent shadow HTMLElement&#39;s and Node&#39;s, to add Trusted Types checks
+  </span>[CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-innertext">innerText</a></strong>;</span><span class=def id=attribute-textContent>
+  [CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or <span class=primitive>DOMString</span>)? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-textcontent">textContent</a></strong>;</span><span class=def id=attribute-text>
+  [CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or <span class=primitive>DOMString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
 
   static <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-supports">supports</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class="comment">
 
@@ -45,7 +48,7 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [HTMLConstructor] <strong>constructor</strong>();</span><span class=def id=attribute-type>
 
   [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-type">type</a></strong>;</span><span class=def id=attribute-src>
-  [CEReactions, ReflectURL] attribute <span class=primitive>USVString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
+  [CEReactions] attribute (<a href='TrustedScriptURL.html'>TrustedScriptURL</a> or <span class=primitive>USVString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-src">src</a></strong>;</span><span class=def id=attribute-noModule>
   [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-nomodule">noModule</a></strong>;</span><span class=def id=attribute-async>
   [CEReactions] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-async">async</a></strong>;</span><span class=def id=attribute-defer>
   [CEReactions, Reflect] attribute <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-defer">defer</a></strong>;</span><span class=def id=attribute-blocking>
@@ -53,9 +56,12 @@ interface <strong>HTMLScriptElement</strong> : <a href='HTMLElement.html'>HTMLEl
   [CEReactions] attribute <span class=primitive>DOMString</span>? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-crossorigin">crossOrigin</a></strong>;</span><span class=def id=attribute-referrerPolicy>
   [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-referrerpolicy">referrerPolicy</a></strong>;</span><span class=def id=attribute-integrity>
   [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-integrity">integrity</a></strong>;</span><span class=def id=attribute-fetchPriority>
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-text>
+  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-fetchpriority">fetchPriority</a></strong>;</span><span class=def id=attribute-innerText><span class="comment">
 
-  [CEReactions] attribute <span class=primitive>DOMString</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
+  &#x2F;&#x2F; innerText and textContent shadow HTMLElement&#39;s and Node&#39;s, to add Trusted Types checks
+  </span>[CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or [LegacyNullToEmptyString] <span class=primitive>DOMString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-innertext">innerText</a></strong>;</span><span class=def id=attribute-textContent>
+  [CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or <span class=primitive>DOMString</span>)? <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-textcontent">textContent</a></strong>;</span><span class=def id=attribute-text>
+  [CEReactions] attribute (<a href='TrustedScript.html'>TrustedScript</a> or <span class=primitive>DOMString</span>) <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-text">text</a></strong>;</span><span class=def id=operation-static>
 
   static <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;html.spec.whatwg.org&#x2F;multipage&#x2F;scripting.html#dom-script-supports">supports</a></strong>(<span class=primitive>DOMString</span> <strong>type</strong>);</span><span class=def id=attribute-charset>
   [CEReactions, Reflect] attribute <span class=primitive>DOMString</span> <strong>charset</strong>;</span><span class=def id=attribute-event>
