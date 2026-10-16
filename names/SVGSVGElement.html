@@ -9,7 +9,6 @@ base: ../
   <h3>Definition</h3>
   <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#InterfaceSVGSVGElement">Scalable Vector Graphics (SVG) 2</a> defines <code>SVGSVGElement</code></p>
 <pre class=webidl><code><span class=def>
-
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=attribute-x>
 
@@ -21,30 +20,30 @@ interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVG
   attribute <span class=primitive>float</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__currentScale">currentScale</a></strong>;</span><span class=def id=attribute-currentTranslate>
   [SameObject] readonly attribute <a href='SVGPoint.html'>SVGPoint</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__currentTranslate">currentTranslate</a></strong>;</span><span class=def id=operation-getIntersectionList-SVGRect-SVGElement>
 
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-getEnclosureList-SVGRect-SVGElement>
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-checkIntersection-SVGElement-SVGRect>
-  <span class=primitive>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-checkEnclosure-SVGElement-SVGRect>
-  <span class=primitive>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-deselectAll>
+  <a href='NodeList.html'>NodeList</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getIntersectionList">getIntersectionList</a></strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-getEnclosureList-SVGRect-SVGElement>
+  <a href='NodeList.html'>NodeList</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getEnclosureList">getEnclosureList</a></strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-checkIntersection-SVGElement-SVGRect>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__checkIntersection">checkIntersection</a></strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-checkEnclosure-SVGElement-SVGRect>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__checkEnclosure">checkEnclosure</a></strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-deselectAll>
 
-  <span class=primitive>undefined</span> <strong>deselectAll</strong>();</span><span class=def id=operation-createSVGNumber>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__deselectAll">deselectAll</a></strong>();</span><span class=def id=operation-createSVGNumber>
 
-  [NewObject] <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();</span><span class=def id=operation-createSVGLength>
-  [NewObject] <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();</span><span class=def id=operation-createSVGAngle>
-  [NewObject] <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();</span><span class=def id=operation-createSVGPoint>
-  [NewObject] <a href='SVGPoint.html'>SVGPoint</a> <strong>createSVGPoint</strong>();</span><span class=def id=operation-createSVGMatrix>
-  [NewObject] <a href='SVGMatrix.html'>SVGMatrix</a> <strong>createSVGMatrix</strong>();</span><span class=def id=operation-createSVGRect>
-  [NewObject] <a href='SVGRect.html'>SVGRect</a> <strong>createSVGRect</strong>();</span><span class=def id=operation-createSVGTransform>
-  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();</span><span class=def id=operation-createSVGTransformFromMatrix-DOMMatrix2DInit>
-  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-getElementById-DOMString>
+  [NewObject] <a href='SVGNumber.html'>SVGNumber</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGNumber">createSVGNumber</a></strong>();</span><span class=def id=operation-createSVGLength>
+  [NewObject] <a href='SVGLength.html'>SVGLength</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGLength">createSVGLength</a></strong>();</span><span class=def id=operation-createSVGAngle>
+  [NewObject] <a href='SVGAngle.html'>SVGAngle</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGAngle">createSVGAngle</a></strong>();</span><span class=def id=operation-createSVGPoint>
+  [NewObject] <a href='SVGPoint.html'>SVGPoint</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGPoint">createSVGPoint</a></strong>();</span><span class=def id=operation-createSVGMatrix>
+  [NewObject] <a href='SVGMatrix.html'>SVGMatrix</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGMatrix">createSVGMatrix</a></strong>();</span><span class=def id=operation-createSVGRect>
+  [NewObject] <a href='SVGRect.html'>SVGRect</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGRect">createSVGRect</a></strong>();</span><span class=def id=operation-createSVGTransform>
+  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGTransform">createSVGTransform</a></strong>();</span><span class=def id=operation-createSVGTransformFromMatrix-DOMMatrix2DInit>
+  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGTransformFromMatrix">createSVGTransformFromMatrix</a></strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-getElementById-DOMString>
 
-  <a href='Element.html'>Element</a>? <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def id=operation-suspendRedraw-unsigned long><span class="comment">
+  <a href='Element.html'>Element</a>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getElementById">getElementById</a></strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def id=operation-suspendRedraw-unsigned long><span class="comment">
 
   &#x2F;&#x2F; Deprecated methods that have no effect when called,
   &#x2F;&#x2F; but which are kept for compatibility reasons.
-  </span><span class=primitive>unsigned long</span> <strong>suspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def id=operation-unsuspendRedraw-unsigned long>
-  <span class=primitive>undefined</span> <strong>unsuspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def id=operation-unsuspendRedrawAll>
-  <span class=primitive>undefined</span> <strong>unsuspendRedrawAll</strong>();</span><span class=def id=operation-forceRedraw>
-  <span class=primitive>undefined</span> <strong>forceRedraw</strong>();</span>
+  </span><span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__suspendRedraw">suspendRedraw</a></strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def id=operation-unsuspendRedraw-unsigned long>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__unsuspendRedraw">unsuspendRedraw</a></strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def id=operation-unsuspendRedrawAll>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__unsuspendRedrawAll">unsuspendRedrawAll</a></strong>();</span><span class=def id=operation-forceRedraw>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__forceRedraw">forceRedraw</a></strong>();</span>
 };</span><span class=def>
 
 <a href='SVGSVGElement.html'>SVGSVGElement</a> includes <a href='SVGFitToViewBox.html'>SVGFitToViewBox</a>;</span><span class=def>
@@ -63,7 +62,6 @@ partial interface <strong>SVGSVGElement</strong> {<span class=def id=operation-p
 
   </ul>
   <details><summary>Consolidated IDL (across mixin and partials)</summary><pre class=webidl><code><span class=def>
-
 [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVGGraphicsElement</a> {<span class=def id=attribute-x>
 
@@ -75,30 +73,30 @@ interface <strong>SVGSVGElement</strong> : <a href='SVGGraphicsElement.html'>SVG
   attribute <span class=primitive>float</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__currentScale">currentScale</a></strong>;</span><span class=def id=attribute-currentTranslate>
   [SameObject] readonly attribute <a href='SVGPoint.html'>SVGPoint</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__currentTranslate">currentTranslate</a></strong>;</span><span class=def id=operation-getIntersectionList-SVGRect-SVGElement>
 
-  <a href='NodeList.html'>NodeList</a> <strong>getIntersectionList</strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-getEnclosureList-SVGRect-SVGElement>
-  <a href='NodeList.html'>NodeList</a> <strong>getEnclosureList</strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-checkIntersection-SVGElement-SVGRect>
-  <span class=primitive>boolean</span> <strong>checkIntersection</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-checkEnclosure-SVGElement-SVGRect>
-  <span class=primitive>boolean</span> <strong>checkEnclosure</strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-deselectAll>
+  <a href='NodeList.html'>NodeList</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getIntersectionList">getIntersectionList</a></strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-getEnclosureList-SVGRect-SVGElement>
+  <a href='NodeList.html'>NodeList</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getEnclosureList">getEnclosureList</a></strong>(<a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>, <a href='SVGElement.html'>SVGElement</a>? <strong>referenceElement</strong>);</span><span class=def id=operation-checkIntersection-SVGElement-SVGRect>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__checkIntersection">checkIntersection</a></strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-checkEnclosure-SVGElement-SVGRect>
+  <span class=primitive>boolean</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__checkEnclosure">checkEnclosure</a></strong>(<a href='SVGElement.html'>SVGElement</a> <strong>element</strong>, <a href='SVGRect.html'>SVGRect</a> <strong>rect</strong>);</span><span class=def id=operation-deselectAll>
 
-  <span class=primitive>undefined</span> <strong>deselectAll</strong>();</span><span class=def id=operation-createSVGNumber>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__deselectAll">deselectAll</a></strong>();</span><span class=def id=operation-createSVGNumber>
 
-  [NewObject] <a href='SVGNumber.html'>SVGNumber</a> <strong>createSVGNumber</strong>();</span><span class=def id=operation-createSVGLength>
-  [NewObject] <a href='SVGLength.html'>SVGLength</a> <strong>createSVGLength</strong>();</span><span class=def id=operation-createSVGAngle>
-  [NewObject] <a href='SVGAngle.html'>SVGAngle</a> <strong>createSVGAngle</strong>();</span><span class=def id=operation-createSVGPoint>
-  [NewObject] <a href='SVGPoint.html'>SVGPoint</a> <strong>createSVGPoint</strong>();</span><span class=def id=operation-createSVGMatrix>
-  [NewObject] <a href='SVGMatrix.html'>SVGMatrix</a> <strong>createSVGMatrix</strong>();</span><span class=def id=operation-createSVGRect>
-  [NewObject] <a href='SVGRect.html'>SVGRect</a> <strong>createSVGRect</strong>();</span><span class=def id=operation-createSVGTransform>
-  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransform</strong>();</span><span class=def id=operation-createSVGTransformFromMatrix-DOMMatrix2DInit>
-  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong>createSVGTransformFromMatrix</strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-getElementById-DOMString>
+  [NewObject] <a href='SVGNumber.html'>SVGNumber</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGNumber">createSVGNumber</a></strong>();</span><span class=def id=operation-createSVGLength>
+  [NewObject] <a href='SVGLength.html'>SVGLength</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGLength">createSVGLength</a></strong>();</span><span class=def id=operation-createSVGAngle>
+  [NewObject] <a href='SVGAngle.html'>SVGAngle</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGAngle">createSVGAngle</a></strong>();</span><span class=def id=operation-createSVGPoint>
+  [NewObject] <a href='SVGPoint.html'>SVGPoint</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGPoint">createSVGPoint</a></strong>();</span><span class=def id=operation-createSVGMatrix>
+  [NewObject] <a href='SVGMatrix.html'>SVGMatrix</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGMatrix">createSVGMatrix</a></strong>();</span><span class=def id=operation-createSVGRect>
+  [NewObject] <a href='SVGRect.html'>SVGRect</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGRect">createSVGRect</a></strong>();</span><span class=def id=operation-createSVGTransform>
+  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGTransform">createSVGTransform</a></strong>();</span><span class=def id=operation-createSVGTransformFromMatrix-DOMMatrix2DInit>
+  [NewObject] <a href='SVGTransform.html'>SVGTransform</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__createSVGTransformFromMatrix">createSVGTransformFromMatrix</a></strong>(optional <a href='DOMMatrix2DInit.html'>DOMMatrix2DInit</a> <strong>matrix</strong> &#x3D; {});</span><span class=def id=operation-getElementById-DOMString>
 
-  <a href='Element.html'>Element</a>? <strong>getElementById</strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def id=operation-suspendRedraw-unsigned long><span class="comment">
+  <a href='Element.html'>Element</a>? <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__getElementById">getElementById</a></strong>(<span class=primitive>DOMString</span> <strong>elementId</strong>);</span><span class=def id=operation-suspendRedraw-unsigned long><span class="comment">
 
   &#x2F;&#x2F; Deprecated methods that have no effect when called,
   &#x2F;&#x2F; but which are kept for compatibility reasons.
-  </span><span class=primitive>unsigned long</span> <strong>suspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def id=operation-unsuspendRedraw-unsigned long>
-  <span class=primitive>undefined</span> <strong>unsuspendRedraw</strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def id=operation-unsuspendRedrawAll>
-  <span class=primitive>undefined</span> <strong>unsuspendRedrawAll</strong>();</span><span class=def id=operation-forceRedraw>
-  <span class=primitive>undefined</span> <strong>forceRedraw</strong>();</span><span class=def id=attribute-viewBox>
+  </span><span class=primitive>unsigned long</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__suspendRedraw">suspendRedraw</a></strong>(<span class=primitive>unsigned long</span> <strong>maxWaitMilliseconds</strong>);</span><span class=def id=operation-unsuspendRedraw-unsigned long>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__unsuspendRedraw">unsuspendRedraw</a></strong>(<span class=primitive>unsigned long</span> <strong>suspendHandleID</strong>);</span><span class=def id=operation-unsuspendRedrawAll>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__unsuspendRedrawAll">unsuspendRedrawAll</a></strong>();</span><span class=def id=operation-forceRedraw>
+  <span class=primitive>undefined</span> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;svgwg&#x2F;svg2-draft&#x2F;struct.html#__svg__SVGSVGElement__forceRedraw">forceRedraw</a></strong>();</span><span class=def id=attribute-viewBox>
   [SameObject] readonly attribute <a href='SVGAnimatedRect.html'>SVGAnimatedRect</a> <strong>viewBox</strong>;</span><span class=def id=attribute-preserveAspectRatio>
   [SameObject] readonly attribute <a href='SVGAnimatedPreserveAspectRatio.html'>SVGAnimatedPreserveAspectRatio</a> <strong>preserveAspectRatio</strong>;</span><span class=def id=attribute-onafterprint>
   attribute <a href='EventHandler.html'>EventHandler</a> <strong>onafterprint</strong>;</span><span class=def id=attribute-onbeforeprint>
