@@ -1,0 +1,54 @@
+---
+title: <code>WEBGL_shader_pixel_local_storage</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;registry.khronos.org&#x2F;webgl&#x2F;extensions&#x2F;WEBGL_shader_pixel_local_storage&#x2F;">WebGL WEBGL_shader_pixel_local_storage Extension Specification</a> defines <code>WEBGL_shader_pixel_local_storage</code></p>
+<pre class=webidl><code><span class=def>[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>), LegacyNoInterfaceObject]
+interface <strong>WEBGL_shader_pixel_local_storage</strong> {<span class=def id=const-MAX_PIXEL_LOCAL_STORAGE_PLANES_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_PIXEL_LOCAL_STORAGE_PLANES_WEBGL</strong> &#x3D; 0x96E0;</span><span class=def id=const-MAX_COMBINED_DRAW_BUFFERS_AND_PIXEL_LOCAL_STORAGE_PLANES_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>MAX_COMBINED_DRAW_BUFFERS_AND_PIXEL_LOCAL_STORAGE_PLANES_WEBGL</strong> &#x3D; 0x96E1;</span><span class=def id=const-PIXEL_LOCAL_STORAGE_ACTIVE_PLANES_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_STORAGE_ACTIVE_PLANES_WEBGL</strong> &#x3D; 0x96E2;</span><span class=def id=const-LOAD_OP_ZERO_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>LOAD_OP_ZERO_WEBGL</strong> &#x3D; 0x96E3;</span><span class=def id=const-LOAD_OP_CLEAR_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>LOAD_OP_CLEAR_WEBGL</strong> &#x3D; 0x96E4;</span><span class=def id=const-LOAD_OP_LOAD_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>LOAD_OP_LOAD_WEBGL</strong> &#x3D; 0x96E5;</span><span class=def id=const-STORE_OP_STORE_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>STORE_OP_STORE_WEBGL</strong> &#x3D; 0x96E6;</span><span class=def id=const-PIXEL_LOCAL_INTERNAL_FORMAT_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_INTERNAL_FORMAT_WEBGL</strong> &#x3D; 0x96E7;</span><span class=def id=const-PIXEL_LOCAL_TEXTURE_NAME_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_TEXTURE_NAME_WEBGL</strong> &#x3D; 0x96E8;</span><span class=def id=const-PIXEL_LOCAL_TEXTURE_LEVEL_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_TEXTURE_LEVEL_WEBGL</strong> &#x3D; 0x96E9;</span><span class=def id=const-PIXEL_LOCAL_TEXTURE_LAYER_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_TEXTURE_LAYER_WEBGL</strong> &#x3D; 0x96EA;</span><span class=def id=const-PIXEL_LOCAL_USAGE_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_USAGE_WEBGL</strong> &#x3D; 0x96EB;</span><span class=def id=const-PIXEL_LOCAL_CLEAR_VALUE_FLOAT_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_CLEAR_VALUE_FLOAT_WEBGL</strong> &#x3D; 0x96EC;</span><span class=def id=const-PIXEL_LOCAL_CLEAR_VALUE_INT_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_CLEAR_VALUE_INT_WEBGL</strong> &#x3D; 0x96ED;</span><span class=def id=const-PIXEL_LOCAL_CLEAR_VALUE_UNSIGNED_INT_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_CLEAR_VALUE_UNSIGNED_INT_WEBGL</strong> &#x3D; 0x96EE;</span><span class=def id=const-PIXEL_LOCAL_USAGE_ALWAYS_NONCOHERENT_BIT_WEBGL>
+  const <a href='GLenum.html'>GLenum</a> <strong>PIXEL_LOCAL_USAGE_ALWAYS_NONCOHERENT_BIT_WEBGL</strong> &#x3D; 0x1;</span><span class=def id=operation-isCoherent>
+  <a href='GLboolean.html'>GLboolean</a> <strong>isCoherent</strong>();</span><span class=def id=operation-framebufferTexturePixelLocalStorageWEBGL-GLint-WebGLTexture-GLint-GLint-GLbitfield>
+  <span class=primitive>undefined</span> <strong>framebufferTexturePixelLocalStorageWEBGL</strong>(<a href='GLint.html'>GLint</a> <strong>plane</strong>,
+                                                     <a href='WebGLTexture.html'>WebGLTexture</a>? <strong>texture</strong>,
+                                                     <a href='GLint.html'>GLint</a> <strong>level</strong>,
+                                                     <a href='GLint.html'>GLint</a> <strong>layer</strong>,
+                                                     <a href='GLbitfield.html'>GLbitfield</a> <strong>usage</strong>);</span><span class=def id=operation-framebufferPixelLocalClearValuefvWEBGL-GLint-Float32List-unsigned long long>
+  <span class=primitive>undefined</span> <strong>framebufferPixelLocalClearValuefvWEBGL</strong>(<a href='GLint.html'>GLint</a> <strong>plane</strong>,
+                                                   <a href='Float32List.html'>Float32List</a> <strong>value</strong>,
+                                                   optional <span class=primitive>unsigned long long</span> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-framebufferPixelLocalClearValueivWEBGL-GLint-Int32List-unsigned long long>
+  <span class=primitive>undefined</span> <strong>framebufferPixelLocalClearValueivWEBGL</strong>(<a href='GLint.html'>GLint</a> <strong>plane</strong>,
+                                                   <a href='Int32List.html'>Int32List</a> <strong>value</strong>,
+                                                   optional <span class=primitive>unsigned long long</span> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-framebufferPixelLocalClearValueuivWEBGL-GLint-Uint32List-unsigned long long>
+  <span class=primitive>undefined</span> <strong>framebufferPixelLocalClearValueuivWEBGL</strong>(<a href='GLint.html'>GLint</a> <strong>plane</strong>,
+                                                    <a href='Uint32List.html'>Uint32List</a> <strong>value</strong>,
+                                                    optional <span class=primitive>unsigned long long</span> <strong>srcOffset</strong> &#x3D; 0);</span><span class=def id=operation-beginPixelLocalStorageWEBGL-GLenum>
+  <span class=primitive>undefined</span> <strong>beginPixelLocalStorageWEBGL</strong>(sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>loadops</strong>);</span><span class=def id=operation-endPixelLocalStorageWEBGL-GLenum>
+  <span class=primitive>undefined</span> <strong>endPixelLocalStorageWEBGL</strong>(sequence&lt;<a href='GLenum.html'>GLenum</a>&gt; <strong>storeops</strong>);</span><span class=def id=operation-pixelLocalStorageBarrierWEBGL>
+  <span class=primitive>undefined</span> <strong>pixelLocalStorageBarrierWEBGL</strong>();</span><span class=def id=operation-getFramebufferPixelLocalStorageParameterWEBGL-GLint-GLenum>
+  <span class=primitive>any</span> <strong>getFramebufferPixelLocalStorageParameterWEBGL</strong>(<a href='GLint.html'>GLint</a> <strong>plane</strong>, <a href='GLenum.html'>GLenum</a> <strong>pname</strong>);</span>
+};</span></code></pre>
+  
+  
+</section>
+
+
+  
