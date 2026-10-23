@@ -300,7 +300,8 @@ interface <strong>Navigator</strong> {<span class=def id=attribute-userActivatio
   [SameObject] readonly attribute <a href='USB.html'>USB</a> <strong>usb</strong>;</span><span class=def id=attribute-login>
   [SecureContext] readonly attribute <a href='NavigatorLogin.html'>NavigatorLogin</a> <strong>login</strong>;</span><span class=def id=attribute-cpuPerformance>
     readonly attribute <span class=primitive>unsigned short</span> <strong>cpuPerformance</strong>;</span><span class=def id=attribute-crossOriginStorage>
-  [SameObject, SecureContext] readonly attribute <a href='CrossOriginStorageManager.html'>CrossOriginStorageManager</a> <strong>crossOriginStorage</strong>;</span><span class=def id=operation-deprecatedReplaceInURN-UrnOrConfig-USVString-USVString>
+  [Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/DedicatedWorker.html'>DedicatedWorker</a>,<a class=realm href='../globals/SharedWorker.html'>SharedWorker</a>), SameObject, SecureContext]
+  readonly attribute <a href='CrossOriginStorageManager.html'>CrossOriginStorageManager</a> <strong>crossOriginStorage</strong>;</span><span class=def id=operation-deprecatedReplaceInURN-UrnOrConfig-USVString-USVString>
   Promise&lt;<span class=primitive>undefined</span>&gt; <strong>deprecatedReplaceInURN</strong>(
     <a href='UrnOrConfig.html'>UrnOrConfig</a> <strong>urnOrConfig</strong>, record&lt;<span class=primitive>USVString</span>, <span class=primitive>USVString</span>&gt; <strong>replacements</strong>);</span><span class=def id=operation-deprecatedURNtoURL-UrnOrConfig-boolean>
   Promise&lt;<span class=primitive>USVString</span>&gt; <strong>deprecatedURNtoURL</strong>(
