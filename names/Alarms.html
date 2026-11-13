@@ -1,0 +1,44 @@
+---
+title: <code>Alarms</code> interface
+layout: base
+parent: names/
+base: ../
+---
+
+<section>
+  <h3>Definition</h3>
+  <p><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#alarms">Web Extensions</a> defines <code>Alarms</code></p>
+<pre class=webidl><code><span class=def>
+
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>,<a class=realm href='../globals/Worker.html'>Worker</a>)]
+interface <strong>Alarms</strong> {<span class=def id=operation-create-AlarmCreateInfo>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-create">create</a></strong>(optional <a href='AlarmCreateInfo.html'>AlarmCreateInfo</a> <strong>alarmInfo</strong> &#x3D; {});</span><span class=def id=operation-create-DOMString-AlarmCreateInfo>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-create-name-alarminfo">create</a></strong>(<span class=primitive>DOMString</span> <strong>name</strong>, optional <a href='AlarmCreateInfo.html'>AlarmCreateInfo</a> <strong>alarmInfo</strong> &#x3D; {});</span><span class=def id=operation-get-DOMString>
+
+  Promise&lt;(<a href='Alarm.html'>Alarm</a> or <span class=primitive>undefined</span>)&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-get">get</a></strong>(optional <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-getAll>
+  Promise&lt;sequence&lt;<a href='Alarm.html'>Alarm</a>&gt;&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-getall">getAll</a></strong>();</span><span class=def id=operation-clear-DOMString>
+  Promise&lt;<span class=primitive>boolean</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-clear">clear</a></strong>(optional <span class=primitive>DOMString</span> <strong>name</strong>);</span><span class=def id=operation-clearAll>
+  Promise&lt;<span class=primitive>undefined</span>&gt; <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-clearall">clearAll</a></strong>();</span><span class=def id=attribute-onAlarm>
+
+  attribute <a href='OnAlarmEvent.html'>OnAlarmEvent</a> <strong><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;#dom-alarms-onalarm">onAlarm</a></strong>;</span>
+};</span></code></pre>
+  
+  
+</section>
+<section>
+<h3>Methods and attributes that return objects implementing <code>Alarms</code></h3>
+
+  <ul>
+    <li><code><a href="Browser.html">Browser</a><a href=Browser.html#attribute-alarms>.alarms</a></code></li>
+
+  </ul>
+</section>
+<section>
+  <h3>Referring IDL interfaces/dictionaries</h3>
+  
+  <ul>
+    <li><code><a href="Browser.html">Browser</a></code></li>
+
+  </ul>
+</section>
+  

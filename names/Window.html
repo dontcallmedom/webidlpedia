@@ -102,6 +102,11 @@ partial interface <strong>Window</strong> {<span class=def id=attribute-event>
 partial interface <strong>Window</strong> {<span class=def id=operation-fetchLater-RequestInfo-DeferredRequestInit>
   [NewObject, SecureContext] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span>
 };</span></code></pre></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;window.browser.html#title">window.browser</a><pre class=webidl><code><span class=def>
+
+partial interface <strong>Window</strong> {<span class=def id=attribute-browser>
+ attribute <a href='Browser.html'>Browser</a> <strong>browser</strong>;</span>
+};</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;#tts-section">Web Speech API</a><pre class=webidl><code><span class=def>
 
 partial interface <strong>Window</strong> {<span class=def id=attribute-speechSynthesis>
@@ -443,7 +448,8 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
     attribute <a href='EventHandler.html'>EventHandler</a> <strong>onorientationchange</strong>;</span><span class=def id=attribute-cookieStore>
   [SameObject] readonly attribute <a href='CookieStore.html'>CookieStore</a> <strong>cookieStore</strong>;</span><span class=def id=attribute-event>
   [Replaceable] readonly attribute (<a href='Event.html'>Event</a> or <span class=primitive>undefined</span>) <strong>event</strong>;</span><span class=def id=operation-fetchLater-RequestInfo-DeferredRequestInit>
-  [NewObject, SecureContext] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-speechSynthesis>
+  [NewObject, SecureContext] <a href='FetchLaterResult.html'>FetchLaterResult</a> <strong>fetchLater</strong>(<a href='RequestInfo.html'>RequestInfo</a> <strong>input</strong>, optional <a href='DeferredRequestInit.html'>DeferredRequestInit</a> <strong>init</strong> &#x3D; {});</span><span class=def id=attribute-browser>
+ attribute <a href='Browser.html'>Browser</a> <strong>browser</strong>;</span><span class=def id=attribute-speechSynthesis>
     [SameObject] readonly attribute <a href='SpeechSynthesis.html'>SpeechSynthesis</a> <strong>speechSynthesis</strong>;</span><span class=def id=attribute-credentialless>
   readonly attribute <span class=primitive>boolean</span> <strong>credentialless</strong>;</span><span class=def id=attribute-crashReport>
   readonly attribute <a href='CrashReportContext.html'>CrashReportContext</a> <strong>crashReport</strong>;</span><span class=def id=operation-getDigitalGoodsService-DOMString>
@@ -561,6 +567,7 @@ interface <strong>Window</strong> : <a href='EventTarget.html'>EventTarget</a> {
 <li><a href="https:&#x2F;&#x2F;dom.spec.whatwg.org&#x2F;">DOM Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;fetch.spec.whatwg.org&#x2F;">Fetch Standard</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;svgwg.org&#x2F;specs&#x2F;animations&#x2F;">SVG Animations</a> refers to <code>Window</code></li>
+<li><a href="https:&#x2F;&#x2F;w3c.github.io&#x2F;webextensions&#x2F;specification&#x2F;window.browser.html">window.browser</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;webaudio.github.io&#x2F;web-speech-api&#x2F;">Web Speech API</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;webmachinelearning.github.io&#x2F;webmcp&#x2F;">WebMCP</a> refers to <code>Window</code></li>
 <li><a href="https:&#x2F;&#x2F;wicg.github.io&#x2F;anonymous-iframe&#x2F;">Iframe credentialless</a> refers to <code>Window</code></li>
