@@ -10,9 +10,9 @@ base: ../
   <p><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom-1&#x2F;#namespacedef-css">CSS Object Model (CSSOM) Module Level 1</a> defines <code>CSS</code></p>
 <pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>, <a class=realm href='../globals/PaintWorklet.html'>PaintWorklet</a>, <a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>)]
 namespace <strong>CSS</strong> {<span class=def id=operation-escape-CSSOMString>
-  <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom-1&#x2F;#dom-css-escape">escape</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);</span>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom-1&#x2F;#dom-css-escape">escape</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);</span>
 };</span></code></pre>
   <p>This namespace is extended in the following specifications:</p>
   <ul>
@@ -34,31 +34,38 @@ partial namespace <strong>CSS</strong> {<span class=def id=attribute-animationWo
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-conditional-3&#x2F;">CSS Conditional Rules Module Level 3</a><pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 partial namespace <strong>CSS</strong> {<span class=def id=operation-supports-CSSOMString-CSSOMString>
   <span class=primitive>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>property</strong>, <a href='CSSOMString.html'>CSSOMString</a> <strong>value</strong>);</span><span class=def id=operation-supports-CSSOMString>
   <span class=primitive>boolean</span> <strong>supports</strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>conditionText</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-highlight-api-1&#x2F;#registration">CSS Custom Highlight API Module Level 1</a><pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 partial namespace <strong>CSS</strong> {<span class=def id=attribute-highlights>
   readonly attribute <a href='HighlightRegistry.html'>HighlightRegistry</a> <strong>highlights</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-images-4&#x2F;#elementsources">CSS Images Module Level 4</a><pre class=webidl><code><span class=def>partial namespace <strong>CSS</strong> {<span class=def id=attribute-elementSources>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-images-4&#x2F;#elementsources">CSS Images Module Level 4</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial namespace <strong>CSS</strong> {<span class=def id=attribute-elementSources>
   [SameObject] readonly attribute <span class=primitive>any</span> <strong>elementSources</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-layout-api-1&#x2F;#layout-worklet">CSS Layout API Level 1</a><pre class=webidl><code><span class=def>partial namespace <strong>CSS</strong> {<span class=def id=attribute-layoutWorklet>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-layout-api-1&#x2F;#layout-worklet">CSS Layout API Level 1</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial namespace <strong>CSS</strong> {<span class=def id=attribute-layoutWorklet>
     [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>layoutWorklet</strong>;</span>
 };</span></code></pre></li>
-<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-paint-api-1&#x2F;#paint-worklet">CSS Painting API Level 1</a><pre class=webidl><code><span class=def>partial namespace <strong>CSS</strong> {<span class=def id=attribute-paintWorklet>
+<li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-paint-api-1&#x2F;#paint-worklet">CSS Painting API Level 1</a><pre class=webidl><code><span class=def>[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+partial namespace <strong>CSS</strong> {<span class=def id=attribute-paintWorklet>
     [SameObject] readonly attribute <a href='Worklet.html'>Worklet</a> <strong>paintWorklet</strong>;</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-properties-values-api-1&#x2F;">CSS Properties and Values API Level 1</a><pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
 partial namespace <strong>CSS</strong> {<span class=def id=operation-registerProperty-PropertyDefinition>
   <span class=primitive>undefined</span> <strong>registerProperty</strong>(<a href='PropertyDefinition.html'>PropertyDefinition</a> <strong>definition</strong>);</span>
 };</span></code></pre></li>
 <li><a href="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;css-typed-om-1&#x2F;">CSS Typed OM Level 1</a><pre class=webidl><code><span class=def>
 
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>, <a class=realm href='../globals/PaintWorklet.html'>PaintWorklet</a>, <a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>)]
 partial namespace <strong>CSS</strong> {<span class=def id=operation-number-double>
     <a href='CSSUnitValue.html'>CSSUnitValue</a> <strong>number</strong>(<span class=primitive>double</span> <strong>value</strong>);</span><span class=def id=operation-percent-double>
     <a href='CSSUnitValue.html'>CSSUnitValue</a> <strong>percent</strong>(<span class=primitive>double</span> <strong>value</strong>);</span><span class=def id=operation-cap-double><span class="comment">
@@ -140,9 +147,9 @@ partial namespace <strong>CSS</strong> {<span class=def id=operation-number-doub
   </ul>
   <details><summary>Consolidated IDL (across partials)</summary><pre class=webidl><code><span class=def>
 
-[Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>]
+[Exposed&#x3D;(<a class=realm href='../globals/Window.html'>Window</a>, <a class=realm href='../globals/Worker.html'>Worker</a>, <a class=realm href='../globals/PaintWorklet.html'>PaintWorklet</a>, <a class=realm href='../globals/LayoutWorklet.html'>LayoutWorklet</a>)]
 namespace <strong>CSS</strong> {<span class=def id=operation-escape-CSSOMString>
-  <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom-1&#x2F;#dom-css-escape">escape</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);</span><span class=def id=operation-parseStylesheet-CSSStringSource-CSSParserOptions>
+  [Exposed&#x3D;<a class=realm href='../globals/Window.html'>Window</a>] <a href='CSSOMString.html'>CSSOMString</a> <strong><a href="https:&#x2F;&#x2F;drafts.csswg.org&#x2F;cssom-1&#x2F;#dom-css-escape">escape</a></strong>(<a href='CSSOMString.html'>CSSOMString</a> <strong>ident</strong>);</span><span class=def id=operation-parseStylesheet-CSSStringSource-CSSParserOptions>
   Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseStylesheet</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-parseRuleList-CSSStringSource-CSSParserOptions>
   Promise&lt;sequence&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt;&gt; <strong>parseRuleList</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-parseRule-CSSStringSource-CSSParserOptions>
   Promise&lt;<a href='CSSParserRule.html'>CSSParserRule</a>&gt; <strong>parseRule</strong>(<a href='CSSStringSource.html'>CSSStringSource</a> <strong>css</strong>, optional <a href='CSSParserOptions.html'>CSSParserOptions</a> <strong>options</strong> &#x3D; {});</span><span class=def id=operation-parseDeclarationList-CSSStringSource-CSSParserOptions>
